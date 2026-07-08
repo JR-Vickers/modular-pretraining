@@ -1,0 +1,1 @@
+All CRs are calculated relative to the uniform accumulated baseline

@@ -1,0 +1,23 @@
+{
+  "completed": false,
+  "completed_iterations": [],
+  "stage": {
+    "name": "filtering",
+    "num_checkpoints": -1,
+    "lr": 0.0005663534909876918,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/partial/800M/seed_1/20260707153033423599/filtering_02",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core"
+      ]
+    ],
+    "label_prc": 0.5
+  }
+}

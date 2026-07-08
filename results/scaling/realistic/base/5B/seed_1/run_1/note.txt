@@ -1,0 +1,2 @@
+intended heterogeneous acc mode, was heterogeneous acc mode but in a somewhat bad way in the sense that it used the uniform training script but with the "all" label
+whereas the proper way would be to use [label, label, ...] with the base_alt heterogeneous acc mode script.

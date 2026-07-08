@@ -1,0 +1,402 @@
+[GPU 0] [00:57:48] [INFO] Git branch: AGI-1696-New-Dataset-Runs_ethan, commit: c7e43dfb9cbb8b9279704d7cd41ae9a05befc5dd
+[GPU 0] [00:57:48] [INFO] Number of GPUs: 2
+[GPU 0] [00:57:50] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [00:57:50] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [00:58:00] [INFO] target effective batch size: 641, actual effective batch size: 648, micro batch size: 12, accumulation steps: 27, num gpus: 2
+[GPU 0] [00:58:00] [INFO] core total number of tokens: 66749057569
+[GPU 0] [00:58:00] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [00:58:00] [INFO] core: chinchilla optimal tokens: 16,130,190,080, requested proportion: 1.0000, requested number of tokens: 16,130,190,080.0, 
+[GPU 0] [00:58:00] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [00:58:00] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [00:58:00] [INFO] aux: chinchilla optimal tokens: 16,130,190,080, requested proportion: 0.0100, requested number of tokens: 161,301,900.8, 
+[GPU 0] [00:58:00] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/config.json
+[GPU 0] [00:58:00] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": -1,
+            "lr": 0.0005663534909876918,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/baseline",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 100,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00013998316466250988,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_01",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core"
+                ]
+            ],
+            "alpha_retain": 298.79353008189094,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00010509448271309035,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_02",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-biology"
+                ]
+            ],
+            "alpha_retain": 212.97713366991653,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00010224799745945504,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_03",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "code-lisp"
+                ]
+            ],
+            "alpha_retain": 173.65346128284435,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00012307885188020764,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_04",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-cyber"
+                ]
+            ],
+            "alpha_retain": 462.60915021401814,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00011497527017349664,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_05",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-nuclear"
+                ]
+            ],
+            "alpha_retain": 309.86034217851756,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 24,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 1600,
+        "mlp_dim": 6400
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 16130190080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 161301900.8
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 641,
+        "effective_batch_size": 648,
+        "micro_batch_size": 12,
+        "accumulation_steps": 27,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "find_unused_parameters": false,
+        "is_ddp": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 2,
+        "process_id": 0,
+        "num_base_params": 806509504,
+        "device": "cuda",
+        "logger": "<Logger training_20260616005741246286 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=1640)",
+                "test": "InterleavedDataLoader(len=432)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=98450)",
+                "test": "SingleDataLoader(code-other_test_010.bin, len=432)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=551324)",
+                "test": "InterleavedDataLoader(len=432)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=1640)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=432)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=1640)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=432)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=1640)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=432)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=6563)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=432)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=656337)",
+                "test": "InterleavedDataLoader(len=1296)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=6560)",
+                "test": "InterleavedDataLoader(len=1728)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=662897)",
+                "test": "InterleavedDataLoader(len=3024)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1",
+        "experiment_id": "20260616005741246286",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/maxent/800M/seed_1"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [00:58:00] [INFO] Loader code-lisp train: 1640, test: 432
+[GPU 0] [00:58:00] [INFO] Loader code-other train: 98450, test: 432
+[GPU 0] [00:58:00] [INFO] Loader fineweb train: 551324, test: 432
+[GPU 0] [00:58:00] [INFO] Loader papers-biology train: 1640, test: 432
+[GPU 0] [00:58:00] [INFO] Loader papers-cyber train: 1640, test: 432
+[GPU 0] [00:58:00] [INFO] Loader papers-nuclear train: 1640, test: 432
+[GPU 0] [00:58:00] [INFO] Loader papers-other train: 6563, test: 432
+[GPU 0] [00:58:00] [INFO] Loader core train: 656337, test: 1296
+[GPU 0] [00:58:00] [INFO] Loader aux train: 6560, test: 1728
+[GPU 0] [00:58:00] [INFO] Loader all train: 662897, test: 3024
+[GPU 0] [00:58:00] [INFO] Skipping completed stage baseline @ /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/baseline
+[GPU 0] [00:58:00] [INFO] Loading baseline model from /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/baseline/checkpoint.pth for downstream stages
+[GPU 0] [00:58:11] [INFO] Initialized BaseTransformer with 806,509,504 total parameters
+[GPU 0] [00:58:11] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [00:58:16] [INFO] torch.compile done
+[GPU 0] [00:58:32] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00013998316466250988, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_01", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core"]], "alpha_retain": 298.79353008189094, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [00:58:32] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [00:58:32] [INFO] UNLEARNING - maxent START
+[GPU 0] [00:58:32] [INFO] Unlearning: retaining ['core'], removing ['code-lisp', 'papers-biology', 'papers-cyber', 'papers-nuclear']
+[GPU 0] [00:58:33] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-cyber', 'papers-nuclear'] ----
+[GPU 0] [00:58:33] [DEBUG] alpha_retain: 298.79353008189094, lr: 0.00013998316466250988, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [00:58:33] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-other']
+[GPU 0] [01:06:35] [INFO] Early stop MAXENT at step 1462: KL→U ≤ 2.0
+[GPU 0] [01:06:35] [INFO] Finished MaxEnt — Avg KL→U: 8.105, Avg Retain CE: 2.248
+[GPU 0] [01:06:35] [INFO] ---- Begin Eval ----
+[GPU 0] [01:06:35] [INFO] Data: core | Experts: None
+[GPU 0] [01:08:56] [INFO] loss: 1.89011562
+[GPU 0] [01:08:56] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [01:09:26] [INFO] loss: 5.42068148
+[GPU 0] [01:09:26] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [01:09:56] [INFO] loss: 2.50623918
+[GPU 0] [01:09:56] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [01:10:25] [INFO] loss: 2.78770614
+[GPU 0] [01:10:25] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [01:10:55] [INFO] loss: 2.68923616
+[GPU 0] [01:10:57] [INFO] Saved unlearned checkpoint: /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_01/core/checkpoint.pth
+[GPU 0] [01:10:57] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00010509448271309035, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_02", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-biology"]], "alpha_retain": 212.97713366991653, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [01:10:57] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [01:10:57] [INFO] UNLEARNING - maxent START
+[GPU 0] [01:10:57] [INFO] Unlearning: retaining ['core', 'papers-biology'], removing ['code-lisp', 'papers-cyber', 'papers-nuclear']
+[GPU 0] [01:10:59] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-cyber', 'papers-nuclear'] ----
+[GPU 0] [01:10:59] [DEBUG] alpha_retain: 212.97713366991653, lr: 0.00010509448271309035, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [01:10:59] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-biology', 'papers-other']
+[GPU 0] [01:15:11] [INFO] Early stop MAXENT at step 1159: KL→U ≤ 2.0
+[GPU 0] [01:15:11] [INFO] Finished MaxEnt — Avg KL→U: 8.303, Avg Retain CE: 2.285
+[GPU 0] [01:15:11] [INFO] ---- Begin Eval ----
+[GPU 0] [01:15:11] [INFO] Data: core | Experts: None
+[GPU 0] [01:16:39] [INFO] loss: 1.87757027
+[GPU 0] [01:16:39] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [01:17:09] [INFO] loss: 6.53761578
+[GPU 0] [01:17:09] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [01:17:38] [INFO] loss: 2.37456608
+[GPU 0] [01:17:38] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [01:18:08] [INFO] loss: 2.79602504
+[GPU 0] [01:18:08] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [01:18:37] [INFO] loss: 2.67590785
+[GPU 0] [01:18:39] [INFO] Saved unlearned checkpoint: /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_02/core_papers-biology/checkpoint.pth
+[GPU 0] [01:18:39] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00010224799745945504, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_03", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "code-lisp"]], "alpha_retain": 173.65346128284435, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [01:18:40] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [01:18:40] [INFO] UNLEARNING - maxent START
+[GPU 0] [01:18:40] [INFO] Unlearning: retaining ['code-lisp', 'core'], removing ['papers-biology', 'papers-cyber', 'papers-nuclear']
+[GPU 0] [01:18:40] [INFO] ---- Begin MaxEnt | Data Labels: ['papers-biology', 'papers-cyber', 'papers-nuclear'] ----
+[GPU 0] [01:18:40] [DEBUG] alpha_retain: 173.65346128284435, lr: 0.00010224799745945504, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [01:18:40] [DEBUG] retain_labels: ['code-lisp', 'code-other', 'fineweb', 'papers-other']
+[GPU 0] [01:26:05] [INFO] Finished MaxEnt — Avg KL→U: 7.348, Avg Retain CE: 2.142
+[GPU 0] [01:26:05] [INFO] ---- Begin Eval ----
+[GPU 0] [01:26:05] [INFO] Data: core | Experts: None
+[GPU 0] [01:27:33] [INFO] loss: 1.88040566
+[GPU 0] [01:27:33] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [01:28:03] [INFO] loss: 0.79991090
+[GPU 0] [01:28:03] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [01:28:32] [INFO] loss: 3.93552876
+[GPU 0] [01:28:32] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [01:29:02] [INFO] loss: 2.89959478
+[GPU 0] [01:29:02] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [01:29:31] [INFO] loss: 2.74996376
+[GPU 0] [01:29:33] [INFO] Saved unlearned checkpoint: /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_03/core_code-lisp/checkpoint.pth
+[GPU 0] [01:29:33] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00012307885188020764, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_04", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-cyber"]], "alpha_retain": 462.60915021401814, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [01:29:33] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [01:29:33] [INFO] UNLEARNING - maxent START
+[GPU 0] [01:29:33] [INFO] Unlearning: retaining ['core', 'papers-cyber'], removing ['code-lisp', 'papers-biology', 'papers-nuclear']
+[GPU 0] [01:29:34] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-nuclear'] ----
+[GPU 0] [01:29:34] [DEBUG] alpha_retain: 462.60915021401814, lr: 0.00012307885188020764, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [01:29:34] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-cyber', 'papers-other']
+[GPU 0] [01:36:46] [INFO] Finished MaxEnt — Avg KL→U: 8.594, Avg Retain CE: 2.310
+[GPU 0] [01:36:46] [INFO] ---- Begin Eval ----
+[GPU 0] [01:36:46] [INFO] Data: core | Experts: None
+[GPU 0] [01:38:15] [INFO] loss: 1.87794256
+[GPU 0] [01:38:15] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [01:38:44] [INFO] loss: 1.08921075
+[GPU 0] [01:38:44] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [01:39:14] [INFO] loss: 2.51680040
+[GPU 0] [01:39:14] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [01:39:43] [INFO] loss: 2.80061865
+[GPU 0] [01:39:43] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [01:40:13] [INFO] loss: 2.64787674
+[GPU 0] [01:40:15] [INFO] Saved unlearned checkpoint: /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_04/core_papers-cyber/checkpoint.pth
+[GPU 0] [01:40:15] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00011497527017349664, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_05", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-nuclear"]], "alpha_retain": 309.86034217851756, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [01:40:15] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [01:40:15] [INFO] UNLEARNING - maxent START
+[GPU 0] [01:40:15] [INFO] Unlearning: retaining ['core', 'papers-nuclear'], removing ['code-lisp', 'papers-biology', 'papers-cyber']
+[GPU 0] [01:40:15] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-cyber'] ----
+[GPU 0] [01:40:15] [DEBUG] alpha_retain: 309.86034217851756, lr: 0.00011497527017349664, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [01:40:15] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-nuclear', 'papers-other']
+[GPU 0] [01:45:45] [INFO] Early stop MAXENT at step 1517: KL→U ≤ 2.0
+[GPU 0] [01:45:45] [INFO] Finished MaxEnt — Avg KL→U: 8.513, Avg Retain CE: 2.289
+[GPU 0] [01:45:45] [INFO] ---- Begin Eval ----
+[GPU 0] [01:45:45] [INFO] Data: core | Experts: None
+[GPU 0] [01:47:14] [INFO] loss: 1.87716258
+[GPU 0] [01:47:14] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [01:47:43] [INFO] loss: 6.15205431
+[GPU 0] [01:47:43] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [01:48:13] [INFO] loss: 2.45312500
+[GPU 0] [01:48:13] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [01:48:42] [INFO] loss: 2.72334337
+[GPU 0] [01:48:42] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [01:49:12] [INFO] loss: 2.67402697
+[GPU 0] [01:49:13] [INFO] Saved unlearned checkpoint: /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286/maxent_05/core_papers-nuclear/checkpoint.pth
+[GPU 0] [01:49:38] [INFO] ----------------------------------------
+[GPU 0] [01:49:38] [INFO] Finished. See /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_1/20260616005741246286

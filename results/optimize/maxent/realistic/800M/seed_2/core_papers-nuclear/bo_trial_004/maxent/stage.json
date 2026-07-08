@@ -1,0 +1,28 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core_papers-nuclear"
+  ],
+  "stage": {
+    "name": "maxent",
+    "num_checkpoints": -1,
+    "lr": 7.574955651814188e-05,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_004/maxent",
+    "acc_mode": "uniform",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": false,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core",
+        "papers-nuclear"
+      ]
+    ],
+    "alpha_retain": 196.75500130657664,
+    "steps": 2000,
+    "early_stop_thresh": 2.0
+  }
+}

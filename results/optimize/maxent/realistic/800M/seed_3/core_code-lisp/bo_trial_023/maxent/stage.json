@@ -1,0 +1,28 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core_code-lisp"
+  ],
+  "stage": {
+    "name": "maxent",
+    "num_checkpoints": -1,
+    "lr": 0.0001742239898087179,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_3/core_code-lisp/bo_trial_023/maxent",
+    "acc_mode": "uniform",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": false,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core",
+        "code-lisp"
+      ]
+    ],
+    "alpha_retain": 488.1014773811176,
+    "steps": 2000,
+    "early_stop_thresh": 2.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core_code-lisp"
+  ],
+  "stage": {
+    "name": "filtering",
+    "num_checkpoints": -1,
+    "lr": 0.0005663534909876918,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/filtering/800M/seed_2/20260517021904378904/filtering",
+    "acc_mode": "uniform",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core",
+        "code-lisp"
+      ]
+    ],
+    "label_prc": 1.0
+  }
+}

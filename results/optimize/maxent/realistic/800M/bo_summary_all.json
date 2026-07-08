@@ -1,0 +1,122 @@
+{
+  "seed_1/core": {
+    "best_value": 0.008286131952112877,
+    "best_params": {
+      "lr": 0.00013998316466250988,
+      "alpha_retain": 298.79353008189094
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_papers-biology": {
+    "best_value": 0.0023729751809946358,
+    "best_params": {
+      "lr": 0.00010509448271309035,
+      "alpha_retain": 212.97713366991653
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_code-lisp": {
+    "best_value": 0.08436925519180172,
+    "best_params": {
+      "lr": 0.00010224799745945504,
+      "alpha_retain": 173.65346128284435
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_papers-cyber": {
+    "best_value": 0.006654760095046207,
+    "best_params": {
+      "lr": 0.00012307885188020764,
+      "alpha_retain": 462.60915021401814
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_papers-nuclear": {
+    "best_value": 0.0062295907548207624,
+    "best_params": {
+      "lr": 0.00011497527017349664,
+      "alpha_retain": 309.86034217851756
+    },
+    "n_trials": 30
+  },
+  "seed_2/core": {
+    "best_value": 0.004302856772421212,
+    "best_params": {
+      "lr": 0.00014673433830810972,
+      "alpha_retain": 385.12120402540313
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_papers-biology": {
+    "best_value": 0.007668156639461014,
+    "best_params": {
+      "lr": 7.975474975867262e-05,
+      "alpha_retain": 156.809415245204
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_code-lisp": {
+    "best_value": 0.13066201793802928,
+    "best_params": {
+      "lr": 6.0255293340148394e-05,
+      "alpha_retain": 332.46796669616054
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_papers-cyber": {
+    "best_value": 0.007517902189451507,
+    "best_params": {
+      "lr": 8.954815444292044e-05,
+      "alpha_retain": 231.68415155213077
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_papers-nuclear": {
+    "best_value": 0.010110520905464692,
+    "best_params": {
+      "lr": 0.00018186893408320454,
+      "alpha_retain": 360.4641690027308
+    },
+    "n_trials": 30
+  },
+  "seed_3/core": {
+    "best_value": 0.006899293540902,
+    "best_params": {
+      "lr": 0.00010729596369105324,
+      "alpha_retain": 439.48130243995763
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_papers-biology": {
+    "best_value": 0.005521011601493513,
+    "best_params": {
+      "lr": 6.175735321341742e-05,
+      "alpha_retain": 85.6836914774251
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_code-lisp": {
+    "best_value": 0.044339887074574154,
+    "best_params": {
+      "lr": 0.00013629655348425783,
+      "alpha_retain": 589.8498097039299
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_papers-cyber": {
+    "best_value": 0.007982971749856613,
+    "best_params": {
+      "lr": 0.0001557886319053484,
+      "alpha_retain": 517.4551644690708
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_papers-nuclear": {
+    "best_value": 0.0068482981197642715,
+    "best_params": {
+      "lr": 0.000170511140227519,
+      "alpha_retain": 548.1074204112906
+    },
+    "n_trials": 30
+  }
+}

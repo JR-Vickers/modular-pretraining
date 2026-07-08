@@ -1,0 +1,474 @@
+Density functional theory (DFT) is a general approach to the quantum many-body system.
+The scattering phase shift (SPS) is a vital quantity to understand the nucleon-nucleon scattering.
+The quantum molecular dynamics (QMD) model is a time-dependent many-body theoretical approach which is based on the molecular dynamics picture that treats nuclear correlations explicitly.
+Dynamical chiral symmetry breaking (DCSB) is a singularly effective mass generating mechanism.
+Effective field theory (EFT) is a powerful framework based on controlled approximations to many problems with a natural separation of scales.
+Double beta decay (DBD) is a rare weak interaction process in which two identical nucleons inside the nucleus undergo decay with or without emission of neutrinos.
+Double beta decay (DBD) is an extremely rare nuclear process where a simultaneous transmutation of a pair of neutrons into protons converts a nucleus (A, Z) into an isobar (A, Z+2), with the emission of two electrons and two antineutrinos.
+Charge symmetry (CS) is a subset of the general isospin symmetry, charge independence (CI), which requires invariance under any rotation in isospin space.
+Big-Bang Nucleosynthesis (BBN) is an observational cornerstone of the hot Big-Bang (BB) cosmology.
+Dynamical chiral symmetry breaking (DCSB) is a signature characteristic of the strong interaction spectrum and it is a feature of QCD that can only be understood via nonperturbative analysis.
+The tensor meson dominance (TMD) is an assumption of meson pole dominance for matrix elements of the energy momentum tensor just as the vector meson dominance (VMD) is a pole dominance of the electromagnetic current.
+Chiral effective field theory (ChEFT) is a natural framework for analyzing low-energy properties of (hyper)nuclei and performing chiral extrapolations.
+A quark-gluon plasma (QGP) is a thermalized system of deconfined quarks, antiquarks, and gluons.
+Nuclear density functional theory (DFT) is a variation of the Kohn-Sham approach used in atomic, molecular and condensed-matter theory.
+The shell model Monte Carlo (SMMC) method is a powerful method for calculating exactly (up to statistical errors) thermal observables and statistical properties of atomic nuclei.
+Diffusion Monte Carlo (DMC) is an accurate method for computing the ground-state energy of a many-body system.
+Accelerator mass spectrometry (AMS) is a mass spectrometric method for quantifying rare isotopes.
+Helium-3 (He-3) is a stable isotope that is formed by radioactive decay of tritium.
+The Linear Energy Transfer (LET) is a measure of the energy loss per length of path.
+Quark-meson coupling (QMC) is an hybrid model which successfully describes many physical properties of nuclear matter and nuclei [38]- [39].
+The no-core shell-model (NCSM) is a powerful many-body technique that successfully describes nuclei in the lighter mass region from the first principles [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].
+Isotope dilution (ID) is a method of determining analyte concentration in which certified isotopically enriched standards are gravimetrically added to the sample being analyzed [43,44].
+The nuclear level density (NLD) parameter is a critical input for statistical model calculation and is also important for proper estimation of the nuclear temperature [4].
+The extended Kuo-Krenciglowa (EKK) method is an extension of the KK iterative technique to derive a H eff within non-degenerate model spaces [41,43].
+The Color Glass Condensate (CGC) is a phenomenological model for shadowing that assumes the existence of a saturation scale Q 2 s below which the BKFL also take into account recombination effects [75].
+Transuranic (TRU) Waste: TRU waste is defined as defense waste contaminated with certain alpha-emitting radionuclides in concentrations greater than 100 nanocuries per gram of waste.
+The Giant Dipole Resonance (GDR) is a collective mode par excellence.
+An effective field theory (EFT) is a low-energy approximation to a more fundamental theory.
+A becquerel (Bq) is an Systeme Internationale (SI) unit equivalent to 1 disintegration per second.
+Accelerator mass spectrometry (AMS) is an exquisitely sensitive mass spectrometric method for measuring rare isotopes, especially radioisotopes.
+ABSTRACT Inertial Confinement Fusion (ICF) is an ideal technology to power self-contained single-stage piloted (manned) spacecraft within the solar system because of its inherently high power/mass ratios and high specific impulses (i.e., high exhaust velocities).
+The kinetic equation (KE) is a convenient tool to study the nonequilibrium evolution processes.
+Lorentz invariance (LI) is a common symmetry shared by both standard model (SM) and general relativity (GR).
+Neutron star (NS) core, composed of degenerate matter, is characterized by very high density (few times the normal matter density ρ 0 ∼ 0.16 fm -3 ) and extremely low temperature (T = 0 MeV).
+The unit of Working Level (WL) is defined as any combination of the concentrations of short-lived 222j^n daughter products that on decay would release 1.3 x 10 MeV of alpha energy in 1 liter.
+Within this framework, the nucleon-nucleon (NN) potential is defined as a sum of two-nucleon-irreducible time ordered diagrams emerging in non-relativistic effective field theory (EFT).
+Color transparency (CT) is an interesting and surprising prediction of Quantum Chromodynamics (QCD), the fundamental theory of the strong interaction, related to deep questions regarding hadronic structure.
+Transuranic waste (TRUW) refers to waste materials containing radionuclides with atomic numbers greater than 92 (the atomic number for uranium).
+The symmetric mode is called superlong (SL) mode, where the name refers to a more elongated scission shape and thus lower TKE.
+Double-beta decay (DBD) is an actively studied process due to its potential to provide insights into the nuclear structure of involved nuclei, the properties of neutrinos, and to test models beyond the Standard Model (SM) [1,2].
+The even-odd staggering (EOS) is an estimate of the pairing energy of identical nucleons.
+Density Functional Theory (DFT) is a quantum mechanical theory used in physics to investigate the ground state of many-body systems.
+Auxiliary Field Diffusion Monte Carlo (AFDMC) is an extension of DMC that is employed for Hamiltonians with a complicated spin dependence.
+The Similarity Renormalization Group (SRG) is a continuous series of unitary transformations that can be implemented as a flow equation.
+Relativistic hydrodynamics (RHD) is a useful tool for analyzing slow and long wavelength behavior of relativistic many-particle systems in terms of static and dynamic thermodynamic properties.
+The Standard Model (SM) is a remarkable theory which allows that Electromagnetic, Weak and many aspects of Strong Interactions can be described to astounding precision in one single coherent picture.
+The relativistic mean-field (RMF) approach is an effective field theory of interacting mesons and nucleons.
+The study of superheavy elements (SHEs) is an interesting topic for the current days research in nuclear physics.
+Understanding superheavy nuclei (SHN) is a topical issue that attracts a great deal of research activity.
+Quark-gluon plasma (QGP) is a state of matter where quarks and gluons are not bound into baryons and mesons but are deconfined over much larger length scales than the hadron size.
+Radioisotope thermoelectric generators (RTGs) are a type of RPS that have been used for spacecraft, marine, and terrestrial applications since the early 1960s.
+Quark-gluon plasma (QGP) is a state of matter in which the quarks and gluons are deconfined from colour-neutral hadronic states.
+Quantum hadrodynamics(QHD) is a quantum field theory which treats nucleons and mesons as elementary degrees of freedom.
+The hyperspherical harmonics (HH) method is a powerful tool for solving many-body problems in different branches of quantum physics, namely atomic, molecular and nuclear physics.
+Quantum Chromodynamics (QCD) is a gauge theory which describes the strong interaction between the colour charged particles, quarks and gluons.
+The fact that nucleon-nucleon (NN) interaction is a long-range remnant of the QCD interactions between quarks and gluons coupled to colorless states, and hence is not known in a closed form, adds all the more to the complexity of nuclear systems.
+The Quark-Gluon Plasma (QGP) is a unique phase of nuclear matter, theorized to have filled the Universe shortly after the Big Bang.
+The time-dependent HFB (TDHFB) mean field is a generalized coherent state and its time development can be described as a trajectory in the large-dimensional TDHFB phase space.
+The Quark Gluon Plasma (QGP) is a de-confined phase of a strongly-interacting matter.
+Changing the renormalization group (RG) resolution is a powerful technique for analyzing nuclear processes.
+The ultrarelativistic quantum molecular dynamics (UrQMD) model is a microscopic transport model which could simulate the p + p, p + A, and A + A collisions at relativistic energies and describes the time-evolution of a many-body system by using covariant equations of motion.
+Grazing Incident Small-Angle Neutron Scattering (GISANS) is a versatile technique for characterizing nanoscale structures and correlations at surfaces, buried interfaces, and in thin films.
+The production of vector mesons (VM) in coherent diffractive processes, e + A → e ′ + VM + A ′ where VM = J/ψ, ϕ, ρ, is a unique process which has a primary focus at the EIC.
+Isochronous Mass Spectrometry (IMS) in heavy-ion storage rings is an excellent experimental method for precision mass measurements of exotic nuclei.
+Crude Monte Carlo (CMC) or simple random sampling is a straightforward technique of sampling a set of input values according to the cumulative distribution function (cdf) of the uncertainly density of the input variable.
+The minimum detectable concentration (MDC) is defined as the concentration at which there is a 95% confidence that an analyte signal will be distinguishable from an analyte-free sample.
+Big-bang nucleosynthesis (BBN) is a cornerstone of big-bang cosmology [1].
+The quark-gluon plasma (QGP) is a state of hot nuclear matter created in the collisions of nuclei at the Large Hadron Collider (LHC) and the Relativistic Heavy Ion Collider (RHIC); for a recent review see Ref. [1].
+The time-dependent DFT (TDDFT) is a dynamical extension of DFT [26] for describing dynamical processes of many-body systems.
+The quark-gluon plasma (QGP) is a novel phase of nuclear matter at high temperature and energy density, whose existence is predicted by quantum chromodynamics [1].
+Generalized Contact Formalism (GCF) is a factorized description of short-range correlations within nuclei [18][19][20].
+Charge symmetry (CS) is an important concept used to describe many facets of nuclear physics [1,2].
+The Green-function (GF) method is a powerful tool for solving the nuclear many-body problem (see Refs. [1,2]).
+Accelerator Mass Spectrometry (AMS) [3] is an established technique for the detection and measurement of trace level of long-lived radionuclides [4] such as 14 C, 10 Be, 36 Cl.
+The improved quantum molecular dynamics model (ImQMD) is a dynamical model which is developed to follow the reaction process on a microscopic level [11,12].
+Cold nuclear matter (CNM) effect and hot matter effect are present together in heavy-ion collisions and both are important.
+The bulk of the charge dependence (CD) is already included via the different pion masses.
+The parton distribution function (PDF) and the parton fragmentation function (FF), however, require the knowledge of non-perturbative QCD and are not calculable directly by present techniques.
+The final state interaction (FSI) is taken into account by solving the corresponding scattering equation for a given partial wave | p, j m j.
+Characteristic for any effective field theory (EFT), effects of higher energy physics are accounted for via low-energy constants (LECs) accompanying the interaction terms in the effective Lagrangian.
+Reliable calculations of the nuclear matrix elements (NME) are necessary to perform an appropriate analysis that could help evaluate the contributions of each mechanism.
+Using vector meson dominance (VMD), tensor glueball photoproduction cross sections, asymmetries and widths are calculated.
+The electroweak component of the Standard Model (SM) is capable of satisfying Sakharov's conditions, owing to the existence of a complex phase in the 3 × 3-CKM matrix which enables processes that mix all three quark generations.
+The leading order (LO) contribution includes OPE, which provides the standard two-nucleon rates used in current supernova simulations.
+Evaluated Nuclear Data File (ENDF) libraries contain the nuclear data for use in transport codes.
+The configuration interaction (CI) calculations that include these cross shell excitation are challenging.
+A new generation of small modular reactor (SMR) designs promises a number of benefits relative to the existing fleet of commercial power reactors, including portability, viable initial investment level, scalability due to modularity, and improved security.
+The heat transfer fluid (HTF) or water inside the absorber pipe is heated and pumped to the steam generator, which in turn is connected to a steam turbine to produce electricity.
+The Conserved Vector Current (CVC) hypothesis derives from the gauge invariance of the weak interaction and leads to g V = 1.
+The main background is neutral current (NC) π 0 production because the electromagnetic show- ers from pion decay photons can be misidentified as electrons from ν e induced CCQE ν e n → e -p if one of the photons is not identified.
+Passive detection of special nuclear material (SNM) is challenging due to its inherently low rate of spontaneous emission of penetrating radiation, the relative ease of shielding, and the fluctuating and frequently overwhelming background.
+The Relativistic Hartree Bogoliubov (RHB) theory is applied in the description of ground-state properties of Ni and Sn isotopes.
+The chiral magnetic wave (CMW) is sought using the charge asymmetry (A ch ) dependence of anisotropic flow in heavy-ion collisions.
+The beam energy scan (BES-I) program at the Relativistic Heavy Ion Collider (RHIC) provides a unique opportunity to study the energy dependence of QGP formation and the relative roles of partonic and hadronic interactions.
+The cold crucible induction melter (CCIM) technology offers the potential for higher vitrification process temperatures which could lead to increased waste loading and melting rates for feeds that are troublesome for the reference LFCM technology.
+Due to the use of the harmonic oscillator (HO) basis, the overlap integrals have incorrect asymptotic properties.
+Blann's Geometry Dependent Hybrid (GDH) model 2 for the precompound emission and the simplified Weisskopf-Ewing evaporation model for the compound decay are employed for the decay of the compound nucleus.
+The giant dipole resonance (GDR) has been the first to be discovered, and is probably the most studied among the various nuclear collective vibrations.
+Usually the potential energy surface (PES) has to be determined as a function of the relevant deformation parameters, including elongation and reflection asymmetry coordinates.
+Inertial confinement fusion (ICF) occurs when a spherical shell target containing cryogenic thermonuclear fuel (i.e., DT) is imploded. -9 The implosion is initiated by the ablation of material from the outer surface using either intense laser beams (direct drive) 3,5,6,8,9 or x rays produced in a high-Z enclosure (indirect drive).
+The inertial confinement fusion (ICF) approach to fusion ignition relies on inertia to compress the fuel to ignition conditions.
+Ignition in inertial confinement fusion (ICF) starts in a hot spot in the core of compressed fuel pellets.
+Nuclear power plants (NPP) use several approaches and tools when assessing vulnerabilities and hazards, typically employing variations of traditional fault tree analysis (FTA).
+Decoupling via the Similarity Renormalization Group (SRG) of low-energy nuclear physics from high-energy details of the nucleon-nucleon interaction is examined for two-body observables and few-body binding energies.
+Within the impulse approach (IA), the virtual photon is absorbed by a single nucleon in the nucleus whose 4-momentum is P µ = P µ N -Q µ = (E, p).
+The strongly-coupled droplet of quark-gluon plasma (QGP) is one of the most intriguing discoveries at the Relativistic Heavy Ion Collider (RHIC) and the Large Hadron Collider (LHC).
+The nuclear level density (NLD) and the γ-ray strength function (GSF) of the neutron-deficient 109 In isotope were extracted for the first time with data from the 106 Cd(α, pγ) 109 In reaction using a combination of the Oslo and the shape methods.
+Calculations for hard, soft, and momentum dependent (MD) equationsof-state are shown for the p T interval 1.0 < p T < 1.5 GeV/c.
+The soft momentum dependent (SM) EoS provides the best overall description of the HADES data for both protons and light clusters.
+Finite Formation Time (FFT) effects in the exclusive reaction 4 He(e,e'p) 3 H at high values of Q 2 are introduced and discussed.
+Doses from releases of tritiated gas (HT) or ingestion of organically bound tritium (OBT) are not calculated.
+The Annual Limit of Intake (ALI) for 129 I, expressed in mass units, is 31 mg/yr.
+Neutron activation analysis (NAA) is another radiometric method for the determination of 129 I.
+Access to special nuclear material (SNM), such as enriched uranium or plutonium, is critical to the experimental validation of measurement techniques for nuclear nonproliferation applications.
+An exact dynamical symmetry (DS) provides considerable insights into complex dynamics and its merits are self-evident.
+Nuclear matrix elements (NMEs) for two-neutrino double-beta decay (2νββ) are studied in the framework of relativistic nuclear energy density functional (REDF).
+Recent Lattice QCD (LQCD) studies suggest that there are missing resonances in the strange sector of the Hadron Resonance Gas (HRG) model.
+Ultra-peripheral collisions (UPC) are events characterised by large impact parameters between the two projectiles, larger than the sum of their radii.
+Recent calculations of charge symmetry violation (CSV) in the valence quark distributions of the nucleon have revealed that the dominant symmetry breaking contribution comes from the mass associated with the spectator quark system.
+Deep borehole disposal (DBD) has been suggested as an option for disposing spent nuclear fuel in a number of countries, including several countries that are subject to international safeguards.
+Pionful nuclear effective field theory (NEFT) in the two-nucleon sector is examined from the Wilsonian renormalization group point of view.
+Elaborated shell model (SM) calculations have not been able to explain the reductions obtained for R or the quenching of spectroscopic factors (SF).
+The development of probabilistic risk assessment (PRA) as a basis for conducting risk analysis of complex technologies requires high levels of technical ability and further removes public involvement from regulatory decisions.
+Results for relativistic Heavy Ion Collisions (HIC) in the AGeV beam energy region, for collective flows, charged pion production and isospin stopping, are presented in refs.
+Ground-based nuclear explosion monitoring (GNEM) has been in the forefront of implementing kriging in order to best take advantage of the empirical travel times, the best regional velocity models, and background models.
+Simulated annealing (SA) is analogous to the natural process of crystal annealing when a liquid gradually cools to a solid state.
+The cumulative level density (CLD), x(E), is defined by The calculations where performed with A=N/4 for which the radius of the Wigner semi-circle is a=2.
+The HFB equations are solved on a harmonic oscillator (HO) basis.
+Spinoffs are the Restricted Primitive Model (RPM) with opposite charge pairs and the same core, and the Special Primitive Model (SPM) with arbitrary charges and the same core.
+CEMP Pressurized Ion Chamber (PIC) Network -The PIC detector measures gamma radiation exposure rates and, because of its sensitivity, may detect low-level exposures that go undetected by other monitoring methods.
+The analyses of switching transient (ST) and high-altitudenuclear electromagneticpulse (HEMP) phenomena are different in some respects,but substantiallysimilar in others.
+Theoretical modeling of neutron star (NS) matter (NSM) is the best way to understand the composition and interaction of matter at high density (5 -10 times nuclear density ρ 0 ) in the absence of any conclusive knowledge from experimental perspectives.
+Ligand K-edge x-ray absorption spectroscopy (XAS) affords the opportunity to quantify the degree of covalency and assess the relative roles of 5f and 6d orbitals in actinide metal-ligand bonds.
+The total Routhian surface (TRS) calculations indicate oblate deformation for this configuration.
+A comment on the effects of Bose enhancement (BE) of the gluons and Pauli blocking (PB) of the quarks & antiquarks in the final channels on the drag is in order here.
+The effective field theory (EFT) concept has shown the way out of this dilemma.
+Accordingly, the leading order (LO) of this effective theory has two terms, a two-body term and a three-body term, associated with two constants, named low-energy constants (LECs), needed to determine their strengths, usually fixed by 2 and 3.
+The standard nuclear shell model (SM) approach erects a wall between the description of intrinsic structure and reactions since it does not account for the continuum spectrum.
+The one-boson-exchange potential (OBEP) is defined as a sum of one-particleexchange amplitudes of certain bosons with given mass and coupling.
+The ELA uses the pseudovector (PV) coupling for the nucleon-nucleon-pion vertex (unlike the resonance model) and thus incorporates the low energy theorems of current algebra and the hypothesis of partially conserved axial-vector current (PCAC).
+The low-energy peak arises from compound nucleus (CN) and pre-equilibrium (PE) processes followed by proton evaporation (magenta line).
+The energy density functional (EDF) method in nuclear physics is nowadays the approach of choice for largescale nuclear structure calculation.
+The spontaneous symmetry breaking (SSB) mechanism is inherently built into the HF approach.
+Allowed (GT) and unique first-forbidden (U1F) β-decay rates of 78,80,82 Zn as a function of stellar temperatures and densities.
+Nuclear magnetic resonance (NMR) spectroscopy measures chemical shifts in species of nuclei present according to fractional populations.
+Isobaric analogue states (IAS) for isospin multiplets from T = 1/2 to 3 have been studied within the 2012 Atomic Mass Evaluation (Ame2012).
+The study of Isobaric Analogue States (IAS) and the Isobaric Multiplet Mass Equation (IMME) have been the subject of continuous effort since the late '50's, but is less in the foreground as it used to be.
+The Schrödinger equation (SE) for this problem is HΨ = EΨ, containing an internal (core-neutron) interaction V and the projectile interaction with the target U.
+The Triaxial Rotation Vibration Model (TRVM) is successfully applied to Ba and Xe nuclei to obtain low lying energy levels.
+The wave functions were derived from shell model (SM) diagonalizations with harmonic oscillator Slater determinants and with suitable residual two-body interactions.
+Variational Monte Carlo(VMC), based on a trial wave function ψ T (usually not normalized) with parameters, provides a way to find the upper limit of E 0.
+Understanding the equation of state (EoS) of neutron star (NS) matter remains one of the central challenges in modern nuclear physics and astrophysics.
+Employing a distorted wave impulse approximation (DWIA) model to estimate the contribution of the isovector spin monopole strength, the assumption was made that the complete IVSM strength is concentrated in a single state at 35 MeV.
+The next to leading order (NLO) expression is proportional to y 4 and contains a piece from the 2 nd order E1 amplitude and a piece from the interference of 1 st and 3 rd order.
+The EOSs for the symmetric nuclear matter (SNM) and the pure neutron matter (PNM) obtained for the IUFSU parameters, in the density range 2.5 -4.5ρ 0 (ρ 0 = 0.16 fm -3 ), agree reasonably with the ones extracted by analyzing the heavy-ion collisions data.
+Microscopic energy density functionals (EDF) have become a standard tool for nuclear structure calculations, providing an accurate global description of nuclear ground states and collective excitations.
+Photon strength functions (PSF) are important inputs for statistical reaction codes applied in network calculations in nuclear astrophysics and in simulations done for nuclear power production and safety.
+Einstein's theory of general relativity (GR) posits an intimate connection between the geometry of spacetime and its matter content: the presence of matter curves spacetime and conversely the motion of matter is affected by curvature.
+Effective field theory (EFT) methods such as, in particular, chiral EFT have become an indispensable tool for analyzing few-and many-nucleon systems in a systematic fashion in harmony with the symmetries of the Standard Model.
+The canonical thermodynamic model (CTM) as applied to the nuclear multifragmentation problem addresses the following scenario.
+The quasilocal nuclear energy density functional (EDF) based on the density-matrix expansion provides an efficient way to investigate the universal EDF of a nuclear system.
+Measurement of the beam spin asymmetry (BSA) and the related σ LT ′ structure function can provide important constraints on the extraction of the γ v pN * electrocouplings when combined with the differential cross sections.
+Chiral effective field theory (EFT) organizes the interactions of nucleons in powers of momenta and factors of the pion mass near the chiral limit where the light quarks are massless.
+The possible appearance of quark matter (QM) in the interior of massive neutron stars (NSs) is one of the main issues in the physics of these compact objects.
+The isovector giant dipole resonance (GDR) and isoscalar giant quadrupole resonance (GQR) in the axially deformed nuclei 154 Sm, 238 U, and 254 No will be considered.
+Variational Monte Carlo (VMC) relies on the variational principle that the energy of any trial wave function will be greater than or equal to the ground state energy.
+Diffusion or Green's function Monte Carlo (GFMC) starts with a trial wave function |Ψ T and uses Euclidean time evolution to extract the ground state wave function (Kalos, 1962).
+Inertial Confinement Fusion (ICF) and the pursuit of ignition has been a major driver for diagnostic development for decades and this has driven many advances in diagnostics that are now being used in the wider HED community.
+Experiments on deep inelastic scattering (DIS) ep → eX, which dominantly proceeds via the exchange of a virtual photon between the electron and the nucleon, have established the existence of quarks and provided detailed studies of the short range aspects of the strong coupling.
+Only in leading order (LO) this dependence can be neglected, but LO calculations are in most cases insufficient for a high precision machine like the EIC.
+Exclusive processes in deep inelastic scattering (DIS) have appeared as key reactions to trigger the generic mechanism of diffractive scattering.
+Every conservation law in the Standard Model (SM) is anticipated to have a symmetry associated with it.
+Within density functional theory (DFT), such dynamics are modeled through the TDHF (or TDDFT) evolution.
+The effects of the final state interaction (FSI), which can mimic the genuine time reversal violation in the R correlation, are exceptionally small for the 8 Li decay.
+Operator product expansion (OPE) for vector and axial vector current: The commonly known chiral order parameter can be rewritten in several forms.
+Importance truncation (IT) constitutes another wellestablished technique to reduce the computational costs of nuclear structure calculations while maintaining the desired accuracy on the solution of the Schrödinger equation.
+Nuclear Magnetic Resonance (NMR) measurements provided the degree of target polarization.
+Unlike a regular quantum mechanics (QM) treatment one does not have access to wave functions, but instead to various one-body densities and currents.
+The international scientific (SI) unit of committed effective dose equivalence (CEDE) is the joule per kilogram or sievert (Sv).
+The minimum detectable amount (MDA) is the smallest activity or mass of an analyte in a sample or person that can be detected with an acceptable level of uncertainty.
+The initial extended double folding (EDF) coupled channel calculation included coupling to the collective 2 + and 3 -states of 12 C at 4.44 and 9.64 MeV respectively.
+The observation of a permanent electric dipole moment (EDM) of a particle would imply a violation of time reversal (T) and parity symmetry (P).
+The pressurized water reactor (PWR) is taken as adequately representative of the LWR's for the purposes of the comparison.
+An electron ion collider (EIC) is aimed at polarization studies of the nucleon structure function at lower values of x.
+The manifestation of electric dipole moment (EDM), which also violates P-and Tinvariance, in atomic and molecular phenomena is strongly hampered by the electrostatic screening.
+An important aspect of High Energy Density (HED) plasma physics is concerned with the generation, study and control of self-organization, far from equilibrium, through the action of intense fields.
+Despite the great success of the Standard Model (SM) of elementary particles and their interactions, several important questions remain open.
+Recently, the study of dense and hot hadronic matter (HHM) is one of the interesting fields in relativistic heavy ion physics.
+The NN potential of the effective field theory (EFT) is non-renormalizable in the traditional sense already at leading order.
+The effects of the finalstate interactions (FSI) between the emitted nucleon and the residual nucleus are described by the relativistic Green's function (RGF) model where FSI are treated consistently with the exclusive scattering and using the same complex optical potential.
+At leading order (LO), the photon isolation requirement predominantly selects direct photons, which are those produced directly in the hard scattering, but also a contribution from fragmentation photons that are radiated in a parton shower after the scattering.
+The Effective Field Theory (EFT) based on chiral expansions provides a model independent hierarchy for many body forces at long distances but their predictive power may be undermined by the regularization scheme dependence induced by the counterterms and encoding the short distances dynamics which seem to dominate the uncertainties.
+The effective momentum approximation (EMA) replaces the momentum operators that appear in spinor-distortion operators by asymptotic kinematics.
+The nuclear symmetry energy (NSE) is one of a crucial property of asymmetric nuclear matter governing several areas of nuclear matter calculations like reaction dynamics, phase stability, cooling in the neutron star etc.
+The chiral potentials depend on low energy constants (LEC) and the cut-off parameters Λ and Λ.
+Heavy compound nuclei (CN) are metastable objects; local mononuclear entropy maxima separated from the more stable dinuclear states by transition states of significantly lower entropy.
+The relativistic Fermi gas (RFG) model neglects both the shell structure and correlations, treating the nucleus as a fragment of noninteracting nuclear matter of uniform density in a constant potential.
+Nuclear density functional theory (DFT) in combination with the proton-neutron quasiparticle-random phase approximation (pnQRPA) is not one of these approaches, however; 0νββ and 2νββ matrix elements can be computed in similar ways.
+The renormalization group (RG) flow of the couplings is discussed in some detail, and from the analysis, constraints on some of the couplings are derived.
+Molten salt reactors (MSR) with liquid fuel present a unique safeguards challenge whereby the current verification techniques have not been evaluated for effectiveness and applicability.
+The Eckart frame (E-frame) is defined as the frame in which the velocity field is parallel to one of the conserved currents N µ a.
+The choice of the core support structure (CSS) design for a liquid-metal-reactor (LMR) plant is of major importance, especially for pool-type LMRs (i.e., plants in which the entire primary system is submerged in a single reactor vessel).
+The Compressed Baryonic Matter (CBM) experiment at FAIR will investigate collisions between heavy nuclei, and measure various diagnostic probes, which are sensitive to the high-density equation-of-state (EOS), and to the microscopic degrees-of-freedom of high-density matter.
+The relativistic field theory model of the deuteron (RFMD) is reformulated from the first principles of QCD.
+Relativistic contributions (RC) are expected to be significant in deuteron photodisintegration, especially when the photon momentum involved in the process, becomes comparable with the rest mass of the nucleon.
+The controlled thermonuclear reactor (CTR) effort over the last twenty years is one such search for an alternate; energy source.
+The Giant Dipole Resonance (GDR) is shown to result from an increase in level density at a harmonic oscillator gap excitation energy of 2 ω.
+Hybrid TAC Calculations Tilted axis cranking (TAC) calculations have been performed to understand the band structures in 198 Bi.
+The charged-current (CC) interaction rate on 71 Ga and the elastic scattering (ES) rate on the electrons within the crystal would both be measured.
+Radioactive waste classification (WC) systems generally fall into one of three categories based on the source of the waste, the physical characteristics of the waste, or the waste disposal methods.
+The plane wave impulse approximation (PWIA) will be useful for the physical interpretation of the correlation effects shown below in terms of overlap functions.
+The Ultra relativistic Quantum Molecular Dynamics (UrQMD) transport model is applied to investigate the flow of deuterons.
+The Linear Boltzmann Transport (LBT) model is then used to simulate the propagation, energy attenuation of and medium response induced by jet partons in the quarkgluon plasma.
+Within the Green's function Monte Carlo (GFMC) method used in light nuclei, the positions of the particles are sampled, but the full sum over the spin-isospin degrees of of freedom is retained, leading to an exponential growth of the computational cost with A.
+The incineration of low level radioactive waste (LLW) is one of several technologies currently available for reduc ing the volume of LLW prior to disposal.
+High linear energy transfer (LET) radiation triggers vaporization of the drops into visible bubbles.
+Isospin symmetry breaking (ISB) in finite nuclei reflects a subtle balance between the isospin symmetry violating long-range electrostatic interaction that polarizes the entire nucleus and the short-range strong force, which, predominantly, preserves the isospin symmetry.
+The feed to an Atomic Vapor Laser Isotope Separation (AVLIS) process will be uraniummetal) The principal production of uranium metal for nuclear fuel cycles has previously been by batch metallothermic reductions of UF 4 using magnesium or calcium metal.
+Activity median aerodynamic diameter (AMAD) and geometric standard deviation (a ) values averaged 1.9 ym (range 1.6 to 2.1 ym) and 1.9 (range 1.6 to 2.2), respectively.
+The activity median aerodynamic diameters (AMAD) of the aerosols ranged from 1 to 2 ym with geometric standard deviations of 1.5 to 1.8.
+The gastrointestinal burden (GIB) was calculated as the initial body burden (IBB) minus the ILB.
+Isobaric Analog States (IAS), which are states in neighboring isobars whose isospin (and of course spin and parity) are same, played an important role in investigating the goodness of isospin in heavier nuclei.
+Kelson then invoked the independent particle model (IPM) picture to bring in the microscopic details.
+Semi Inclusive Deep Inelastic Scattering (SIDIS) of leptons (l) off nuclei can provide relevant information on: (i) possible modification of the nucleon structure function in medium (EMC-like effects), (ii) the relevance of exotic configurations at short nucleon-nucleon (NN) distances; (iii) the mechanism of quark hadronization.
+Nominally, an enhanced radiation (ER) weapon and a 10-kt fission weapon produce similar radiation kill effects but significantly dif ferent thermal and blast effects, anri an ER weapon and a 1-kt fission weapon produce similar thermal and blast effects.
+Nuclear density functional theory (DFT) is currently the only available microscopic many-body theory that is applicable to the whole nuclear chart.
+Stimulated Brillouin scattering (SBS) and stimulated Raman scattering (SRS) instabilities scatter the light off of self-generated ion acoustic and electron plasma waves, respectively.
+Ab initio calculations, like the no-core shell model (NCSM) and Green's function Monte Carlo (GFMC), of the spectrum s-and p-shell nuclei are routinely performed using realistic two-and three-body nuclear forces.
+Laser plasma instabilities (LPI), principally stimulated Brillouin (SBS) and Raman (SRS) scattering, redirect significant amounts of energy through backscatter.
+Concurrently, natural uranium (NU) or depleted uranium (DU) oxide would be dissolved in preparation for blending with the HEU.
+The Accelerator Production of Tritium (APT) project is designing a particle accelerator and target to produce tritium using neutrons generated fiom a Tungsten spallation source.
+The mirror energy difference (MED) of the mirror state, especially for states bearing the Thomas-Erhman shift, serves as a sensitive probe of isospin symmetry breaking.
+The harmonic oscillator (HO) basis used for the representation of the EFT interaction is limited to a few shells.
+Siemens worked on the high temperature gas reactor (HTGR) project from 1972.
+Analysis of extended xray absorption fine structure (EXAFS) spectra for the glasses indicates that the local environment around the cations exhibits different degrees of disorder due to the accumulated α-decay dose.
+Kinetic Monte Carlo (KMC) simulations can be used to study the evolution of radiation damage at the atomic scale over times and distances well beyond those possible with MD simulations.
+The success and utility of effective field theory (EFT) in explaining the structure and reactions of few-nucleon systems has prompted the initiation of EFT-inspired extrapolations to larger model spaces in ab initio methods such as the no-core shell model (NCSM).
+The Statistical Multifragmentation Model (SMM) [ 13,14] is the most widely used model for describing multfragmentation reactions.
+The extended theory of finite Fermi systems (ETFFS) is based on the Landau-Migdal theory of finite Fermi systems (TFFS) and includes in a consistent way configurations beyond the 1p1h level.
+The use of high enriched uranium (HEU) as HTGR fuel, as was done in the past, is no longer considered acceptable due to the very low proliferation resistance of HEU.
+Full Configuration Interaction (FCI) provides the exact ground-state energies within the valence space, serving as a benchmark for evaluating the accuracy of approximate methods.
+Doubly Occupied Configuration Interaction (DOCI) is another approximate method that restricts the configuration space to zero-seniority configurations, i.e., states in which all nucleons are paired as time-reversed partners.
+Self-consistent random phase approximation (RPA) approaches in the relativistic framework are applied to calculate the isospin symmetry-breaking corrections δc for the 0 + → 0 + superallowed transitions.
+The elastic scattering reaction (ES) is sensitive to all active flavors as well, but with reduced sensitivity to ν µ and ν τ.
+The predictions in the regime of nuclear matter (NM) of this kind of ab initio calculations are usually considered as a standard.
+The self-consistent random phase approximation (RPA), based on the framework of relativistic energy density functionals, is employed in the study of isovector and isoscalar dipole response in 68 Ni, 132 Sn, and 208 Pb.
+The evolution of pygmy dipole states (PDS) in the region of low excitation energies is analyzed as a function of the density-dependence of the symmetry energy for a set of relativistic effective interactions.
+Maxwellian averaged neutron capture cross sections (MACS) have been measured for many nuclei and made available in public data depositories.
+Liquid metal fast breeder reactor (LMFBR) fuel fabrication involves uranium and plutonium.
+Effective Field Theory (EFT) provides a powerful framework that exploits a separation of scales in physical systems to perform systematically improvable, model-independent calculations.
+An important signature of an renormalization group (RG) limit cycle is discrete scale invariance.
+The radon daughter concentration in working level units (WL) was continu ously measured at a distance of about 1 km from the mill and within the Uravan Club Ranch village.
+Gas chromatography-mass spectrometry (GC-MS) is one of the main analytical methods used by the Organization for the Prohibition of Chemical Weapons (OPCW).
+The neutron star (NS) is one of the mysterious stellar leftovers, having an enormously dense core and a robust crust.
+Acid Mine Drainage (AMD) is highly acidic water with elevated concentrations of metal ions generated from the weathering of exposed mining materials and mining lands.
+Acid mine drainage (AMD) tends to be highly acidic (typically pH 1-4) with high sulfate concentrations.
+Quantum phase transitions (QPT) between competing ground-state phases can be induced by variation of a non-thermal control parameter at zero temperature.
+The Chiral Magnetic Effect (CME), which is purported to result from strong parity violation, could lead to a splitting among positive and negative quarks in the QGP along the direction of the extremely large magnetic fields produced from the colliding ions.
+Local charge conservation (LCC) is additionally incorporated by generating ensembles of particles with zero net charge produced at the same spatial location, uniformly distributed over the anisotropic particle radiating source.
+The socalled pseudospin centrifugal barrier (PCB) terms κ(κ -1)/(2M r 2 ) are identical for the pseudospin doublets a and b with κ a + κ b = 1.
+Either source of B xy (t) causes free induction decay (FID) of the measured signal.
+The validity of such a closed quantum system (CQS) framework is sometimes justified by relatively high one-particle (neutron or proton) separation energies in nuclei close to the valley of beta stability.
+The free gas (FG), that is the starting point for studying interacting matter, is described in terms of s.p. plane waves orbitals e ik•x / √ Ω with wave number k and kinetic energy 2 k 2 2m.
+The final state Y N interaction (FSI) plays an important role in the γd → K + Y n, Y = Λ, Σ 0 reaction.
+An evenstate ΛN charge symmetry breaking (CSB) interaction determined from the A=4 systems works repulsively by +0.1 MeV (attractively by -0.1 MeV) in 10 Λ Be ( 10 Λ B).
+Light front (LF) quantization [ 1] provides a novel possibility to formulate quantum field theory at finite T and µ.
+And the critical end point (CEP) vanishes when α becomes large enough.
+Charge symmetry breaking (CSB) effects associated with the u and d quark mass difference are investigated in the quark distribution functions and spacelike electromagnetic form factors of the pion and kaon.
+Not all solutions of the triaxial rotor (TR) Hamiltonian are accepted for nuclei.
+The Spin Coherent State (SCS) representation distills the semiclassical features from the TR states.
+A particle rotor model (PRM) with a quasi-proton and a quasi-neutron coupled with a triaxial rotor is developed and applied to study chiral doublet bands with configurations of a h 11/2 proton and a h 11/2 quasi-neutron.
+The Lorentz Integral Transform method (LIT) is extended to pion photoproduction in the ∆resonance region.
+The basic idea is to solve a Bethe Salpeter (BS) equation, which guarantees unitarity, matching the low energy results to χP T predictions.
+Quantum Chromodynamics (QCD) predicts that at sufficiently high temperature or density, nuclear matter exists in a deconfined state of quarks and gluons known as a quark-gluon plasma (QGP).
+Critical Point Symmetries (CPS) appear in regions of the nuclear chart where a rapid change from one symmetry to another is observed.
+A driver for an inertial fusion energy (IFE) reactor must deliver sufficient energy and power density to ensure target ignition.
+The blanket nuclear energy multiplication (Mn) is defined as the ratio of the total blanket nuclear heating resulting from neutron and gamma interactions to the energy carried by the direct neutrons and gamma photons incident on the first wall.
+Dynamical chiral symmetry breaking (DCSB) is one of the keystones of low-energy hadronic phenomena.
+The nuclear excitation by electron transition (NEET) process was identified as the physics mechanism of the induced transitions.
+Nuclear excitation by electronics transition (NEET) is a way to enhance the decay of nuclear states via excitation of the atomic states.
+Nuclear excitation by an electron transition (NEET) may be used for triggering the decay of nuclear isomers only when there are compensations between energies (∆E) and multipolarities (∆L) of the nuclear transition and the transition in an electron shell.
+Low-and intermediate mass (LIM) stars are defined as those who end their life without proceeding through the carbon and heavier elements burning phases.
+Ground state correlations (GSC) and FSI contributions are introduced here at second order in the nucleon-nucleon interaction for the whole set of 1N and 2N isospin decay channels.
+Rates are given in solar neutrino units (SNU) for each isotope and events per year for each experiment.
+The reactor cavity cooling system (RCCS) surrounding the reactor vessel provides sufficient cooling to keep radionuclides contained within the refractory coated fuel particles without the need for active safety systems or operator intervention.
+The Heavy Diquark Symmetry (HDS) of Doubly Heavy Baryons (DHBs) provides new insights into the spectroscopy of these hadrons.
+A contribution to the bulk viscosity from the pion Urca (PU) reaction processing on the pion condensate is included for densities n > n π c.
+The comparison with the relativistic Fermi gas (RFG) model without interaction shows an improvement in the explanation of the scaling function f (ψ ′ ) in the region ψ ′ < -1, where the RFG result is f (ψ ′ ) = 0.
+Inertial confinement fusion (ICF) could be an important future energy source.
+Effects of the hadronic parity violation (HPV) are usually classified according to their isospin, and among all others the ∆I = 1 HPV possesses a special role as a unique probe of the hadronic weak neutral current.
+Effective field theories (EFT) are a powerful tool to deal with non-perturbative low energy physics.
+Stimulated Brillouin scattering (SBS) of laser light is a potentially important pro cess in long scalelength plasmas.
+Amplified spontane ous emission (ASE) in slab geometries has been analyzed by Monte Carlo methods to find the size and gain limits to efficient slab operation.
+The calculation included random phase approximation (RPA) excitations and thus took care of the most important collective modes in a Fermi gas.
+The electric dipole (E1) excitation in nucleus is mainly composed of the giant dipole resonance (GDR), which is formed by the relative dipole oscillation between neutrons and protons, thus reflecting asymmetry information in nuclear EoS.
+Short range correlations (SRC) arise from the tensor component and the repulsive hard-core in the NN interactions, and are essentially important to fully understand the nuclear structure and the properties of nucleons.
+Deep Inelastic Scattering (DIS) has been one of the most resourceful ways to examine the internal structure of hadrons.
+The Cherenkov Ring Imaging Detector (CRID) uses Cherenkov radiation to measure the speed of charged particles which, when combined with a momentum determination, identifies the particle.
+Fission occurs when special nuclear material (SNM), such as U-235 and Pu-239, absorbed a neutron.
+At the quark level, the conserved vector current (CVC) hypothesis is broken if the up and down quarks have different masses, but for a free nucleon this breaking is second order in (m d -m u ).
+The emission of intermediate mass fragments (IMF) is the most important observable of nuclear multifragmentation reactions.
+Ion mobility spectrometry (IMS) is recognized as one of the most sensitive and versatile techniques for the detection of trace levels of organic vapors.
+The Hartree-Fock (HF) based random phase approximation (RPA) provides a microscopic description of the nuclear compressional modes.
+The participant plane (PP) can be experimentally determined through the event plane reconstructed from final-state hadrons.
+The puzzle with the Random Phase Approximation (RPA) and the quasiparticle RPA (QRPA), when applied to the weak observables in the triad { 12 B, 12 C, 12 N}, is well known.
+The shell model Monte Carlo (SMMC) method permits calculations in model spaces that are many orders of magnitude larger than spaces that can be treated by conventional diagonalization methods.
+Outgoing boundary condition (OBC) is one of the most important ingredients to treat the continuum.
+Photonic Doppler velocimetry (PDV) now complements electric pins, giving weapon designers the option to utilize the optimal diagnostic for the desired data.
+Thermal gravimetric analysis (TGA) indicates that low temperature annealing greatly improves the thermal stability and iodine confinement.
+Spark plasma sintering (SPS), a field-assisted sintering technology, allows sintering and densification of materials at much reduced temperatures and shorter durations than conventional sintering techniques.
+Uranium electrolytic decontamination (UED), an electrochemical process, is an elegant way to remove the plutonium, but the UED process was paused in 2013.
+Inelastic x-ray scattering (IXS) spectra are informative about a wide variety of electronic excitations.
+Further, X-ray absorption spectroscopy (XAS) can be employed to examine the short-range structural and electronic information about the copper ions, especially after changes due to thermal treatments.
+Time-resolved small angle X-ray scattering (SAXS) studies are suited for monitoring the mechanism of formation in situ of such disordered materials as clays because of the inherent crystallization times for this system.
+Small angle neutron scattering (SANS) studies of the gels quenched at several different reaction times revealed that within tl1e first few hours the repulsive interactions between the colloidal silica particles decrease and larger colloidal systems are formed.
+The most general approach. is to use quantum mechanics (QM) which can, in principle, accurately depict any chemical reaction in an arbitrary environment.
+Renormalization Group (RG) approaches to NN interaction are other serious efforts.
+The relativistic local density approximation (LDA) for the Coulomb exchange functional in nuclear systems is presented.
+The Large Hadron Collider (LHC) experiments have revealed that the predictions of the color glass condensate (CGC) tend to underestimate the multiplicity at mid-rapidity.
+Contributions due to mixed phase Bremsstrahlung (MPB), nucleon-nucleon and quark-quark neutrino pair Bremsstrahlung (NPB), the nucleon and quark modified Urca processes (MU), and the hyperon and quark direct Urca (DU) processes are included.
+Within the vector dominance model (VDM) the EM correlator is proportional to the light vector meson propagators, D V, most notably the ρ-meson's (V =ρ).
+Coupled channels Born approximation (CCBA) and continuum discretized coupled channels (CDCC) calculations which explain the large number of observables are presented.
+The equation of state (EOS) of asymmetric nuclear matter (ANM) and, in particular, the density dependence of the nuclear symmetry energy, E s (ρ), in the supra-saturation density regime, have remained elusive in spite of several efforts made in finding an answer to this problem.
+The Urca reactions are of two types, the direct Urca (DU) and the modified Urca (MU) processes.
+The r.eutron OverPower (NOP) system also referred to as the Regional Overpower Protection (ROP) system in CANDU reactors protects the fuel from experiencing sustained heat transfer degradation, O resulting from overpowers that could arise from perturbations in the power distribution, or • * Peak values during the irradiation.
+Another type of polyolefin, polypropylene (PP), is also tolerant to high doses of radiation, similar to PE.
+Fluorinated ethylene propylene (FEP) is another widely used fluorinated polymer, often as an insulating material for electrical wires.
+The density matrix expansion (DME) of Negele and Vautherin is a convenient tool to map finiterange physics associated with vacuum two-and three-nucleon interactions into the form of a Skymelike energy density functional (EDF) with density-dependent couplings.
+Recent advances in nuclear Density Functional Theory (DFT) have enabled the calculation of magnetic dipole moments and electric quadrupole moments across broad regions of the nuclear chart without the need to invoke effective charges or effective g factors.
+X-ray absorption spectroscopy (XAS) experiments have the ability to determine oxidation state and local geometry, and have the benefits of being element specific, and not requiring long-range order.
+Extended X-ray absorption fine structure (EXAFS) spectroscopy will provide information about the coordination environment of the sorbed Np atom and help distinguish between inner-sphere and outer-sphere complexes.
+Emission of light fragments (LF) from nuclear reactions is an interesting open question.
+Number of Constituent Quark (NCQ) scaling of v2 of ρ 0 meson with respect to other hadrons at intermediate pT is observed.
+The predictions of the charge symmetry breaking (CSB) terms are compared with the Nolen-Schiffer (NS) anomaly regarding the energies of neighboring mirror nuclei.
+The Super Proton Synchrotron (SPS) covers one of the most interesting regions of the QCD phase diagram (T -µ B ).
+A critical point of second order (CP) separates those two regions.
+The total binding energy (BE) of a nucleus is the integral of the density functional H.
+The Shippingport LWBR critical heat flux (CHF) correlation conservatively predicts the data for the full range of LWBR geometries and heat flux distributions.
+The Tokamak Fusion-Fission Hybrid Reactor (THR) concept utilizes a tokamak deuterium-tritium (D-T) fusion reactor as a neutron source surrounded by a blanket containing fertile material.
+Realistic nuclear level densities (NLDs) obtained within the spectral distribution method (SDM) are employed to study nuclear processes of astrophysical interest.
+The spin and isospin wave functions (WF) are characterized by definite Young diagrams {f)s and {f} T, which prescribe their symmetry under permutations of nucleon coordinates.
+The pulse shape discrimination (PSD) technique was adopted to reject pile-up events in the individual detector elements by measuring the charge deposition over two time intervals (30 ns and 2 µs).
+Nuclear density functional theory (DFT) is the most promising microscopic approach for this purpose.
+Highly Enriched Uranium (HEU): Uranium enriched to at least 20 percent 235U(by weight).
+Condition monitoring (CM) is merely an enhancement of existing techniques which can be incorporated into present nuclear plant surveillance and preventive maintenance procedures.
+The Fermi transition to the isobaric analog state (IAS) is included in the data (upper panels) but not in the calculations.
+The standard model (SM) of particle physics is spectacularly successful, yet the measured value of the muon anomalous magnetic moment (g -2)µ deviates from SM calculations by 3.6σ.
+The leading order (LO) D ( * ) K potential is described by the Weinberg-Tomozawa (WT) term.
+The Thermal Scattering Law (TSL) library also presents unique challenges due to the number of target materials expanding by an order of magnitude over the past few releases.
+The strong enhancement by final state interaction (FSI) is most evident.
+The Hugoniot elastic limit (HEL) is the amplitude of the elastic precursor.
+The nuclear Density Functional Theory (DFT) has become a conventional approach to describing complex nuclei.
+The ion beam induced charge (IBIC) signal produced by each light ion is expected to map regions of lower charge collection efficiency (CCE), and thereby reveal details of the shape of the cascade and the physics of recombination of carriers that interact with the cluster.
+The response of asymmetric nuclear matter (ANM) has not been considered and, also, the difference between the response to isoscalar and isovector operators has not been investigated.
+The Modified Excluded Volume Hadron Resonance Gas (MEVHRG) model, which takes into account the effect of unequal excluded volume radii of different hadron species, has also been introduced.
+Prompt fission neutron spectrum (PFNS) and prompt fission neutron multiplicity are another important items, measurements of the former for the 243 Am(n, F) reaction are unavailable at the moment.
+The giant dipole resonance (GDR) is obvious as a single bump at 12.5-McV excitation, at a neutron energy of 60 MeV.
+Charge exchange spin-dipole (SD) excitations of 90 Zr and 208 Pb are studied by using a Skyrme Hartree-Fock(HF) + Random Phase approximation (RPA).
+The effective field theory (EFT) for the Standard Model at low energies is chiral perturbation theory (ChPT).
+Total Routhian surface (TRS) calculations are often used to track the deformation variation with rotation.
+Further effects such as short range correlations (SRC) are also taken into account.
+The field of Arbitrary Lagrangian Eulerian (ALE) hydrodynamics has enjoyed a long and fruitful development.
+The composition of neutron star (NS) matter (NSM) at high density ((5 -10)ρ 0 ; ρ 0 ≈ 0.16 fm -3 being the normal nuclear matter density) is one of the most interesting and active research areas of NS physics.
+Light water reactor (LWR): A nuclear reactor that uses ordinary water as both a moderator and a coolant and utilizes slightly enriched uranium-235 fuel.
+The Hyperspherical Harmonics (HH) method is one of the most accurate techniques to solve the quantum mechanical problem for nuclear systems with A ≤ 4.
+The core of the Light Water Breeder Readtor (LWBR) at Shippingport (L-1) uses fuel modules, each composed of a central movable seed region (F/M = 1.7) surrounded by a stationary blanket region (F/M = 3.0).
+High Explosive (HE) tests cannot be used to probe this poorly understood region, since the relative size of appropriate amounts of HE make HE tests suspect for providing the data.
+Blue--shifted stimulated Brillouin scattering (SBS) from supersonic expansion off back wall is evident during the pulse, as well as late time stimulated Raman scattering (SRS) and red--shifted SBS from the LEH plasma.
+Interactions of bound states (BS) are determined from the additional requirement that they reproduce some characteristics of the ground state (GS) of the nucleus, including the asymptotic constant (AC) in a particular channel.
+The hope is to create a deconfined quark gluon plasma (QGP) for a few fm/c and to study its properties.
+Shielding and reflector materials: lithium hydride (LiH), beryllium (Be), beryllium oxide (BeO), boron carbide (B4C), other metal carbides, water, and alternate hydrides.
+The relative biological effectiveness (RBE) of neutrons (compared with that of x rays) was de- termined for the blue-to-pink mutation rates in Tradescantia stamen hairs.
+Non Destructive Assay (NDA) methods are typically used to determine whether the physics package has a pre-negotiated set of attributes that would give the monitoring party high confidence that the device is actually a nuclear weapon.
+Deep Inelastic Scattering (DIS) experiments at large Q 2 have extracted this quantity through a global analysis of the world data 1.
+Moving target defense (MTD) is class of technology that dynamically modify a system environment to create uncertainty for adversaries.
+A parton shower, including initial state radiation (ISR) and final-state radiation (FSR), is generated around the hard vertex.
+The interior of a neutron star (NS) offers a unique meeting point between astrophysics and nuclear physics, since the macroscopic properties of NSs, such as mass, radius and thermal evolution, depend on the microscopic nature of matter at high densities.
+The quantum chromodynamics (QCD) as a underlying theory describing strong interactions exhibits two fascinating aspects: confinement and dynamical chiral symmetry breaking (DCSB).
+Gravitational radiation (GR) is emitted when a non-radial oscillation mode of the star is excited by an internal or external perturbation.
+Besides, supernova matter (SNM) and neutron star matter (NSM) are also interesting from the viewpoint of the nuclear shape.
+The Statistical Hadronization Model (SHM) must be considered as an effective model describing the process of hadron formation in high energy collisions at energy (or distance) scales where perturbative QCD is no longer applicable.
+The heavy ion (HI) induced interactions are either peripheral interactions or central collisions, depending on the degree of overlap between the projectile and target nuclei.
+Lepton number violating (LNV) interactions involving so far unobserved much heavier (∼ TeV) particles might lead to a comparable 0νββ decay rate.
+The nuclear shell model (NSM) is, in principle, the method that seems to be well suited for this task.
+The quasiparticle random phase approximation (QRPA) and its renormalized version (RQRPA) is another method often used in the evaluation of M 0ν.
+Multilevel adaptive mesh refinement (AMR) techniques have become popular for the numerical solution of nonlinear hyperbolic equations in which sharp gradients and/or discontinuities (shock, detonations, etc.) in the solution develop and propagate.
+Indeed, since the classical liquid drop model (LDM) favours symmetric shapes, 2 the mass asymmetry had to be a quantum shell effect.
+Spontaneous symmetry breaking (SSB) mechanism has played a central role to unravel the intrinsic structures of the quantum many-body systems.
+A scale factor called spectroscopic factor (SF) should be determined when theoretical results are compared with data.
+Natural organic matter (NOM) constitutes an important pool of ligands for complexing radionuclides and metal ions, and can play a role in their migration in subsurface environments.
+Fermi liquid theory (FLT) provides a clear conceptual framework based on the quasiparticle approximation to understand the thermal excitations of Fermi systems at low temperatures (T k 2 F /2M ), and in particular the adiabatic index Γ th.
+The charge symmetry breaking (CSB) and charge independence breaking (CIB) forces have been discussed in the context of isospin impurity effect on the super-allowed Fermi decays.
+The Maxwell construction (MC) is typically used to obtain a physical equation of state when a first order transition is present.
+A statistical multifragmentation model (SMM) is applied to the experimentally observed multifragmentation events in an intermediate heavy ion reaction.
+The string melting (SM) version of the AMPT model (labeled here as AMPT-SM) is based on the idea that for energy densities beyond a critical value of ∼ 1 GeV/fm 3, it is difficult to visualize the coexistence of strings (or hadrons) and partons.
+Experiments at the Relativistic Heavy Ion Collider (RHIC) and recent results from the Large Hadron Collider (LHC) have indicated that the collisions at the very highest energies produce a strongly interacting quark-gluon plasma at nearly vanishing net-baryon density.
+Liquid Scintillation Counting (LSC) is the reference method for tritium measurement.
+Below T c the system exists in the Hadron Gas (HG) state.
+Introduction Chiral Separation Effect (CSE) is one of the macroscopic transport phenomena generated by microscopic quantum anomalies -violation of classical symmetries at the quantum level.
+The Chiral Vortical Effect (CVE) is another anomalous transport phenomenon which exists in a thermal equilibrium state.
+The accelerator driven clean nuclear power system (ADS) is a reasonable choice to solve the final processing of long-lived nuclear waste and the effective use of the resources, and will become the transition between current commercial nuclear energy system and fusion energy system.
+The Lund model is employed in a number of Monte Carlo (MC) event generators, and has enjoyed great success representing jet fragmentation to hadrons.
+Using an isospin-dependent quantum molecular dynamics (IQMD) model, nuclear stopping is analyzed in asymmetric colliding channels by keeping the total mass fixed.
+The gas centrifuge isotope separation (GCIS) process is applicable to those elements that will form compounds that have high vapor pressures near room temperature.
+Separative work units (SWU) are not a quantity of material but a measure of the effort expended to separate a given quantity of uranium feed into two streams (one having a higher percentage of uranium-235).
+The process inherent ultimately safe (PIUS) reactor relies on a large pool of borated water for its safety system.
+Gas Electron Multiplier (GEM) and Micromesh Gaseous Structure (Micromegas) are well established MPGD technologies used as muon tracking systems in current and future high energy physics and nuclear physics experiments.
+Deeply virtual Compton scattering (DVCS), the electroproduction of a real photon from a single quark in the nucleon, eN → eNγ, is the most straightforward exclusive process that allows access to the GPDs.
+The non-relativistic Skyrme energy density functional (EDF) based collective Hamiltonian, that takes into account dynamical correlations related to the restoration of broken symmetries and fluctuations of quadrupole collective variables, is applied to quantitatively study the impurity effect of Λ hyperon on the collectivity of 44 S.
+The half-lives (T 1/2 ) of electron emission (EE) calculation have a considerable impact on the dynamics of r-process and abundance distribution.
+The spectroscopic factor (SF) of the single-particle state can be discussed by comparing the theoretical and experimental knockout cross sections.
+The Tokamak Fusion Test Reactor (TFTR) will be the nation's first magnetic confinement fusion device to experimentally demonstrate the release of fusion energy from the deuterium-tritium reaction under conditions projected for future experimental power reactors.
+On the other hand, the final state interaction (FSI) and de-excitation processes of the residual nucleus associated with the proton decay may also change the visible energy and simultaneously produce secondary neutrons.
+The study of heavy ion collision (HIC) at intermediate energies develops a great interest to understand the behavior of hot and dense nuclear matter under the extreme conditions of temperature, pressure and densities.
+Laser isotope separation (LIS), using laser light to selectively excite and ionize molecules (MLIS -Molecular Laser Isotope Separation) or individual atoms (AVLIS -Atomic Vapor Laser Isotope Separation), shows promise as a cost effective enrichment technique of the future, but has not yet been demonstrated commercially.
+Good agreement was achieved for giant dipole resonance (GDR) peak energies, while resonance widths were underestimated and hence peak cross sections were overestimated due to the lack of higher-order many-body correlations.
+The seed-blanket Light Water Breeder Reactor (LWBR) fueled with thorium-uranium-233 has promise of a conversion ratio high enough to make available about 50 percent of the potential energy in the thorium fuel reserves.
+The heavy water organic cooled reactor (HWOCR) 1000 MWe reference design incorporates a low pressure organic coolant and is moderated by heavy water at low pressure and temperature.
+The High Temperature Gas Cooled Reactor (HTGR) system is a helium cooled graphite moderated concept with a potential for lower power costs and higlier conversion ratios than present light water reactors.
+The Liquid Metal-Cooled Fast Breeder Reactor (LMFBR), using sodium as the coolant, has an extensive background dating from 1945.
+Chop-leach as now used for light water reactor (LWR) type fuels requires a large high-power shear plus special baskets to remove the hulls from the dissolver and packaging for disposal.
+Under Gibbs criterion, in the mixed phase (MP), pressure in the hadron phase (HP) must balance with that in the quark phase (QP) to ensure mechanical stability as follows, P HP (µ n, µ e ) = P QP (µ n, µ e ).
+Effective field theory (EFT) has become a standard tool for analyzing the chiral structure of Quantum Chromodynamics (QCD) at low energies, where the perturbative expansion in powers of the coupling constant cannot be used.
+At leading order (LO) in the chiral expansion the potential is given by the well established one-pion exchange (OPE) and two contact forces without derivatives.
+The giant dipole resonance (GDR) in 16 O calculated the CBA (red solid line), in standard TBA (black dashed line), and in RPA (blue dotted line).
+The dense matter equation of state (EOS) determines neutron star (NS) structure but can be calculated reliably only up to one to two times the nuclear saturation density, using accurate manybody methods that employ nuclear interactions from chiral effective field theory constrained by scattering data.
+Discontinuous Galerkin (DG) methods originate from the early work by Reed and Hill [RH73] for the solution of neutron transport equations.
+The supercooled vapor (SV) and the overheated liquid (OL) regions are situated between the MC and the ITS curves, on the left and on the right, respectively.
+The distributions of the total kinetic energy (TKE) of the fragments are also calculated (in the pointcharge approximation).
+The inclusion of Next to Leading Order (NLO) diagrams in the calculation should make the pQCD picture of heavy-flavour production more realistic.
+A departure from nucleate boiling ratio (DNBR) below 1.3 would also have negative effects of the PWR.
+The decreasing trend of the measured B(M 1) and B(E2) transition strengths in one of the sequence (DB I) spells out its origin as Magnetic Rotation (MR).
+The trends of B(M1) and B(E2) in DB I are reproduced well in the theoretical calculations using the Shears mechanism with the Principal Axis Cranking (SPAC) model.
+Within a liquid drop model (LDM) there is no contribution of the surface energy to the interaction of the separated fragments; the barrier has a maximum at the touching point configuration.
+Effective models like NJL, quark meson (QM) model can explain the QCD chiral phase diagram.
+A derived response level (DRL) is the quantity of a surrogate or radionuclide at which a particular PAG will be exceeded under selected assumptions.
+Time reversal invariance violating (TRIV) effects for low energy elastic neutron deuteron scattering are calculated for meson exchange and EFT-type of TRIV potentials in a Distorted Wave Born Approximation, using realistic hadronic strong interaction wave functions, obtained by solving three-body Faddeev equations in configuration space.
+The limited amount of data from hyperon-nucleon (YN), yet alone hyperon-hyperon (YY), scattering makes the development of hypernuclear potentials challenging.
+Nuclear magnetic resonance (NMR) is the only spectroscopic technique capable of probing individual nuclei of complex molecules or mixtures of molecules in solution.
+Within the color glass condensate (CGC) effective theory the pre-equilibrium stage of the high energy collisions can be described in terms of strong gluon fields, namely the Glasma.
+The equations of the Random Phase Approximation (RPA) can be reduced to independent equations for two-neutron, two-proton, and neutron-proton quasiparticle pairs.
+Quantum Monte Carlo (QMC) approaches exploit the advances of modern parallel computing in the treatment of many body quantum systems.
+An extension of the Brueckner Hartree Fock (BHF) approximation to a self-consistent Green's function method (GF) has been used to study properties of asymmetric nuclear matter.
+The chiral bag model (CBM) predicts a ratio of -1 for the pionic contributions.
+The Lead-Cooled Fast Reactor (LFR) uses lead or lead-bismuth eutectic as a coolant to provide a low neutron absorbing, high-temperature coolant with a fast spectrum reactor.
+Atom probe tomography (APT) has enabled unique investigations and provided unique insights into the development of microstructures under irradiation.
+Then the asymptotic normalization coefficients (ANC) can be deduced from experimental phase-shift data and applied to radiative capture processes which are important in nuclear astrophysics for new elements creation.
+A number of nucleon-nucleon (NN) potentials are now available which can be used in a non-relativistic approach to understand nuclear structure.
+The potential energy surfaces (PES) corresponding to various density distributions are plotted as functions of the mass quadrupole deformation β 2.
+Annual Limit on Intake (ALI): The derived limit for the amount of radioactive material taken into the body of an adult worker by inhalation or ingestion in a year.
+The self-consistent Theory of Finite Fermi Systems (TFFS) is consistently generalized for the case of accounting for phonon coupling (PC) effects in the energy region of pygmy-and giant multipole resonances (PDR and GMR) in magic nuclei with the aim to consider particle-hole (ph) and both complex 1p1h⊗phonon and two-phonon configurations.
+Neutron stars (NS) are compact objects with interior densities of several times normal nuclear density.
+The standard model (SM) for electroweak and strong interactions of elementary particles allows for precise theoretical predictions that are in remarkable agreement with present experimental results from high-energy experiments.
+I outline the effective field theory (EFT) calculation of nucleon-nucleon scattering which was recently carried out to next-to-next-to-leading order (NNLO) by Noam Shoresh and myself.
+Effective Field Theory (EFT) is useful for systems with a clear separation of scales.
+Renormalization group (RG) flow analysis in Subsection 7.2 fixes the rest of the couplings.
+The dipole polarizability (DP) of nuclei can be obtained from measurements of the photoabsorption cross sections.
+Nuclear resonance fluorescence (NRF) or (γ, γ ′ ) experiments study the γ emission after resonant absorption of a photon.
+The quasi-fission (QF) wherein the composite system fails to evolve into a compound nucleus (CN) after capture and breaks apart before reaching compact equilibrium shapes, significantly complicates the description of fusion process.
+The Fission Meter Information Barrier (FMIB) code is based on a simple implementation of the point model theory of neutron counting distributions that uses the first two moments of the distribution.
+The so-called deep Dirac level (DDL) is another very interesting puzzle existing on FNMS.
+The No Vector Walecka (NVW) model is defined by the elimination of the vector meson field in favor of a point coupling interaction of the form Gj µ j µ with j µ ≡ ψ ′ γ µ ψ ′.
+Upon Fourier transformation (FT) of the regulator functions, the position-space cutoff can be related to the momentumspace cutoff Λ c as R 0 = 2/Λ c.
+Due to its role in causing Axial Offset Anomaly (AOA) in PWR cores, Crud-Induced Power Shift (CIPS) has been a subject of intense interest for commercial nuclear power industry and studied both experimentally and analytically over the past two decades.
+The complex scaling method (CSM) provides with a way to obtain resonance parameters of particle unstable states by rotating the coordinates and momenta of the original Hamiltonian.
+The virtual photon theory (VPT), which is based on first-order Coulomb dissociation restricted to the electric dipole (E1), has been successfully used to explain the breakup data for several cases.
+The calculation of Potential Energy Surfaces (PES) for a series of isotopes in which a critical nucleus appears should result in a relatively flat PES for this particular nucleus.
+The vector meson dominance (VMD) model was a successful pre-QCD model in the description of diffractive photoproduction of vector mesons and electromagnetic interactions of hadrons in the multi-GeV energy regime.
+The conventional regime of Magnetic Fusion Energy (MFE), with plasma density n -1014 cm-3and magnetic field provided by superconductingmagnets, has been relatively well explored [Sheffield 96].
+Effective Field Theory(EFT) is, the unique, model independent and systematic low-energy version of QCD for processes involving momenta below the pion mass.
+At small-x the parton distribution functions (PDF), which give the momentum distribution of partons in a nucleon, are not properly determined and have large uncertainties because of lack of experimental data.
+Theoretical calculations using the coupled-channels (CC) method fail to correctly predict the magnitude of the single-2 + and mutual-2 + states data together with the elastic scattering data.
+The application of the Lorentz integral transform (LIT) method to photon scattering off nuclei is presented in general.
+Radon daughter exposures of 100 working level months (WLM) have been shown to produce an excess number of lung cancers in uranium miners (Radford, 1981).

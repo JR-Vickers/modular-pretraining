@@ -1,0 +1,28 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core",
+    "core_a-deadline-or-time-limit",
+    "core_alien-encounters",
+    "core_bygone-eras",
+    "core_cultural-traditions"
+  ],
+  "stage": {
+    "name": "coreftaux",
+    "num_checkpoints": -1,
+    "lr": 0.005,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/stories/seed_1/20260615135522386453/coreftaux",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "aux_factor": 1.0,
+    "core_aux_ratio": 2.0,
+    "label_prc": 1.0,
+    "ft_lr_factor": 0.25
+  }
+}

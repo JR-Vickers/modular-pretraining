@@ -1,0 +1,1032 @@
+Systemic Lupus Erythematosus (SLE) is a chronic autoimmune disease characterized by the production of antibodies to double stranded DNA (dsDNA) and ribonucleoproteins.
+B-Chronic lymphocytic leukemia (CLL) is a monoclonal disorder characterized by a progressive accumulation of functionally incompetent B lymphocytes expressing on their surface CD5 and CD19 antigens.
+Burkitt lymphoma (BL) is a human B-cell tumor characterized by chromosomal translocations that juxtapose the c-MYC proto-oncogene and an immunoglobulin gene enhancer, resulting in the constitutive overexpression of c-MYC (reviewed in reference 35).
+Type 1 diabetes (T1D) is a chronic autoimmune condition characterised by insulin secretion impairment, 1,2 affecting over 8.7 million individuals worldwide.
+Hypophosphatasia (HPP) is a rare inherited disorder characterized by the decreased activity of tissue-nonspecific alkaline phosphatase (TNSALP), caused by mutations in the ALPL gene.
+Timothy syndrome (TS) is a rare genetic disorder characterized by cardiac and neurological symptoms, including autism spectrum disorder and epilepsy, caused by germline variants in the CACNA1C gene.
+Porcine circovirus (PCV) is a small nonenveloped virus with a single-stranded circular DNA genome of approximately 1.7 kb in the family Circoviridae (11,28).
+Acquired myasthenia Gravis (MG) is an autoimmune disease characterized by the presence of antibodies against acetylcholine receptors (AChRs).
+Proliferating cell nuclear antigen (PCNA) is a small nuclear protein that plays a central role in DNA replication.
+Edited by Ruma Banerjee Viperin (RSAD2) is an interferon-stimulated antiviral protein that belongs to the radical S-adenosylmethionine (SAM) enzyme family.
+CD14 is a member of the Toll-like receptor (TLR) family, capable of binding to lipopolysaccharide (LPS) and promoting innate immune responses.
+Borna disease virus (BDV) is an enveloped virus with a nonsegmented, negative-strand RNA genome belonging to the Bornaviridae family within the Mononegavirales order (6,22).
+Epithelial-to-mesenchymal transition (EMT) is a normal process by which a differentiated epithelial cell acquires characteristics that allow for dedifferentiation into a mobile mesenchymal cell (27,33).
+The hepatitis B virus (HBV) is an enveloped DNA virus with a unique replication strategy (for a review, see reference 13) which causes acute and chronic infections of the liver in humans.
+Eosinophilic esophagitis (EoE) is a chronic, immune-mediated esophageal disease characterized by eosinophil-predominant inflammation (≥15 eosinophils per high-power field) and esophageal dysfunction.
+Inflammatory bowel disease (IBD) is a chronic inflammatory condition of the gastrointestinal tract, encompassing Crohn's Disease (CD), Ulcerative Colitis (UC), and Indeterminate Colitis (IC), with a rising incidence in the pediatric population globally.
+Cyclic vomiting syndrome (CVS) is a disorder of gut-brain interaction (DGBI) manifested by recurrent episodes of vomiting lasting hours to days between periods of baseline health.
+Hepatitis B virus (HBV) is a small DNA virus with an enveloped T ϭ 4 icosahedral capsid composed of 240 copies of core protein and a minor population of T ϭ 3 capsids composed of 180 copies of core protein.
+The thiobarbituric acid (TBA) assay is a widely used method for measuring malondialdehyde (MDA) levels in plant tissues, serving as an indicator of lipid peroxidation and oxidative stress.
+Photodynamic therapy (PDT) is a therapeutic approach in which tumor cells are killed by the production of reactive oxygen species (ROS) using light-excited photosensitizers.
+Human papillomavirus (HPV) is a virus species with double-stranded circular DNA, and it belongs to the Papillomaviridae family.
+Human immunodeficiency virus (HIV) is a virus species with single-stranded positive RNA, and it belongs to the Retroviridae family.
+RNA interference (RNAi) is a natural cellular procedure of gene silencing and the drug attacks small interfering RNA (siRNA), as shown by the in-vitro studies.
+Feline immunodeficiency virus (FIV) is a causative agent of AIDS-like disease and immunological abnormalities in domestic cats (Felis catus) that are similar to those caused by the human immunodeficiency virus (HIV) in humans (1,25,26).
+Angiopoietin 1 (Ang-1) is an endothelial-cell-specific growth factor that counters the permeabilizing effects of VEGF and stabilizes the vasculature (41,77,78).
+Loop-mediated isothermal amplification (LAMP) is a technique that can amplify DNA under conditions of constant temperature.
+Hepatitis B e-antigen (HBeAg) is a viral protein associated with HBV infections and is often used as a marker of ability to spread the virus to other people.
+Fibroblast Growth Factor 23 (FGF23) is a bone-derived phosphaturic hormone that acts on the kidney to increase phosphate excretion and suppress biosynthesis of 1.25(OH) 2 D 3.
+Poliovirus (PV)VPg is a genome-linked protein that is essential for the initiation of viral RNA replication.
+HIV reverse transcriptase (RT) is an essential enzyme that is the target of about half of all approved anti-AIDS drugs.
+The major histocompatibility complex (MHC) is a set of genes that play a key role in the vertebrate adaptive immune system in which MHC presents the antigen to be recognized by T cell and activate immune responses.
+High density lipoprotein (HDL) is a non-covalent assembly of specific proteins (mainly apoA-I and apoA-II) and lipids, which removes cholesterol from cells via reverse cholesterol transport.
+Heterochromatin protein 1 (HP1) is a reader protein that binds trimethyllysine at position nine of histone H3 (H3K9me3) via cation-interactions to two Tyr and one Trp in the aromatic cage of the HP1 chromodomain.
+Human astrovirus (HAstV) is a non-enveloped virus with a positive-sense RNA genome and causes gastroenteritis in infants, the elderly and immunocompromised individuals.
+Poly (A)-binding protein (PABP) is a protein that binds to the 3′ poly (A) tail on eukaryotic mRNAs, with its main function being to promote both mRNA translation initiation and mRNA stability.
+Dipeptidyl peptidase-4 (DPP4) is an established receptor for Middle East respiratory syndrome-related coronaviruses (MERSr-CoVs), while recent studies have identified angiotensin-converting enzyme 2 (ACE2) usage in multiple merbecovirus clades.
+R ubella virus (RUBV) is a positive-strand RNA virus with an ϳ10-kb genome that belongs to the Togaviridae family and is the sole member of the Rubivirus genus.
+Simian virus 40 (SV40) large T antigen is a multifunctional protein required for the initiation of virus DNA replication in infected cells.
+Waardenburg syndrome (WS) is an autosomal dominant disorder which is con- ventionally subcategorized into WS1 and WS2 by virtue of the presence or absence of dystopia canthorum.
+Neurofibromatosis type 2 (NF2) is an autosamal dominant disorder which has been mapped to chromosome 22.
+SERINC5 (S5) is an RF that is incorporated into HIV-1 particles to potently impair their infectivity and is efficiently antagonized by the viral pathogenesis factor Nef.
+Insulin regulated aminopeptidase (IRAP) is a transmembrane enzyme which regulates the processing of peptide hormones such as arginine-vasopressin (AVP) and oxytocin, as well as peptide trimming for major histocompatibility complex (MHC) I cross presentation.
+Tripartite motif-containing 21 (TRIM21) is a cytosolic immunoglobulin receptor that mediates antibody-dependent intracellular neutralization (ADIN).
+Thioredoxin (TXN) system is a complex network of proteins and enzymes that participate in the modulation of cellular redox balance and protection of cells against oxidative stress (Lu and Holmgren, 2014;Zheng and Conrad, 2020).
+Phosphoglucomutase (PGM) is a cytoplasmic enzyme that interconverts Glc-l-P and Glc-6P and is at a key regulatory branchpoint between energy production and nucleotide sugar and glycogen synthesis.
+Homologous recombination (HR) is a conserved mechanism of DNA strand exchange that is central to genome biology in all living cellular organisms (bacteria, archaea and eukaryotes) and in some of their viruses.
+DNA mismatch repair (MMR) is an important mechanism for maintaining fidelity of genomic DNA.
+The Ras-GAP SH3 domain-binding protein (G3BP) is an RNAbinding protein that acts as an effector for the formation of SGs.
+Matrix metalloproteinase 9 (MMP-9) is an enzyme that regulates the BBB integrity by degrading and weakening the extracellular matrix and tight junctions of the vascular endothelium.
+PA-X is a nonstructural protein of influenza A virus (IAV), which is encoded by the polymerase acidic (PA) N-terminal region that contains a C-terminal 11 frameshifted sequence.
+Panicum mosaic virus (PMV) is a recently molecularly characterized RNA virus with the unique feature of supporting the replication of two subviral RNAs in a few species of the family Gramineae.
+Viral protein U (Vpu) is a unique gene product of human immunodeficiency virus (HIV) type 1 (HIV-1) with two welldescribed functions: CD4 degradation and enhancement of viral particle release (32,35).
+CC chemokine receptor 5 (CCR5) is a receptor for chemokines and the coreceptor for R5 HIV-1 entry into CD4 + T lymphocytes.
+APOBEC3G (A3G) is an antiviral protein that binds RNA and single-stranded DNA (ssDNA).
+Hepatic lipase (HL) is an endothelial-bound lipolytic enzyme which functions as a phospholipase as well as a triacylglycerol hydrolase and is necessary for the metabolism of IDL and HDL.
+Dengue virus (DENV) is a highly prevalent pathogen of the Flaviviridae family to which yellow fever virus (YFV) and Zika virus (ZIKV) belong.
+Angiotensin-converting enzyme (ACE2) is a functional receptor used by SARS-CoV-2 to enter the cell.
+Deoxyribonuclease 1 like 3 (DNASE1L3) is a secreted enzyme that has been shown to digest the extracellular chromatin derived from apoptotic bodies, and DNASE1L3 pathogenic variants have been associated to a lupus phenotype.
+RNA interference (RNAi) is an evolutionarily conserved phenomenon of doublestranded (ds)RNA-mediated mRNA degradation that leads to the posttranscriptional silencing of the corresponding gene.
+Nonstructural protein 3 (NS3) is a multifunctional enzyme with serine protease, NTPase, and RNA helicase activities.
+Potato spindle tuber viroid (PSTVd) is a circular, single-stranded, noncoding RNA plant pathogen that is a useful model for studying the processing of noncoding RNA in eukaryotes.
+Epstein-Barr virus (EBV) is a classic example of a persistent infection in which down-regulation of viral protein synthesis limits antigen presentation to CD8 + T cells through the MHC class I pathway.
+Ubiquitin (Ub) is a small protein that cells use to modify other proteins to accomplish a remarkably diverse set of tasks that are important at nearly all levels of cellular activity, including DNA replication, transcription, translation, protein folding, sorting, signaling, and degradation.
+Adult T-cell Leukemia/Lymphoma (ATLL) is an aggressive T-cell malignancy with a poorly understood pathology that manifests from human T-lymphotropic virus type I (HTLV-1) infected T-cells, typically after long latency periods (430 years).
+Hepatitis E virus (HEV) is a nonenveloped virus with an icosahedral symmetry and is between 32 and 34 nm in diameter.
+Adeno-associated virus (AAV) is a small nonpathogenic virus of the Parvovirdae family (for a review, see reference 6).
+HCV nonstructural protein 3 (NS3) is a multifunctional protein that cleaves viral and host proteins and works as a helicase to separate or rearrange nucleic acid duplexes in a reaction fueled by ATP hydrolysis.
+Herpes simplex virus type 1 (HSV-1) is a neurotropic virus which is capable of establishing a lifelong latent state in the nervous system (22a, 29, 51, 59).
+Hepatitis B virus (HBV) e antigen (HBeAg) is an important serological marker for HBV infection.
+Puumala orthohantavirus (PUUV) is an enveloped virus with a tri-segmented negativestrand RNA genome.
+Langat virus (LGTV) is a member of the tick-borne encephalitis virus (TBEV) complex, which belongs to the genus flavivirus of the family Flaviviridae.
+DNA dependent protein kinase (DNA-PK) is a heterotrimeric protein complex consisting of Ku70, Ku80 and the catalytic subunit DNA-PKcs.
+Polymerase basic 2 (PB2) protein is a component of the influenza A virus RNA-dependent RNA polymerase complex alongside the polymerase basic 1 (PB1) and polymerase acidic (PA) protein subunits (12,13).
+Gibberellic acid (GA) is a growthpromoting hormone that positively regulates processes such as normal plant growth and development (Swain and Singh, 2005).
+The nuclear pore complex (NPC) is a supramolecular structure composed of more than 30 nucleoporins interacting with importins and exportins within the NPC channel.
+Root Mean Square Deviation (RMSD) is a quantitative measure of the structural deviation between atomic positions in a molecular system over time 41.
+IFN-stimulated gene of 15 kDa (ISG15) is a ubiquitin-like protein that is upregulated by type I IFN.
+Hepatitis A virus (HAV) is a positive-strand RNA virus with a genome length of approximately 7,480 nucleotides (nt) (9,10,30).
+UBL5 is a member of the Ubiquitin-Like (UBL) Protein subfamily; this sequence of UBL5 (named OsUBL5.1 here) contains an ORF of 222 nucleotides predicted to encode an 8.5 kDa protein (73 amino acids).
+Herpes simplex virus type 1 (HSV-1) is a double-stranded DNA virus that establishes a lifelong latent infection within sensory neurons (for a review, see reference 32).
+RNA interference (RNAi) is a cellular process in that double-stranded RNA (dsRNA) molecules of 19-23 nucleotides (nt) can silence targeted genes through sequence-specific cleavage of the cognate RNA transcript.
+RNA-dependent RNA polymerase (RdRp) is an inscribed protein of RNA viruses that is indispensable for the virus replication cycle.
+Glucose-regulated protein 78 (GRP78) is a member of the heat shock protein 70 family of molecular chaperone required for endoplasmic reticulum stress and stress-induced autophagy.
+Transportin 3 (Tnp3) is a karyopherin that is required for HIV-1 infection at a step at or post-nuclear entry therefore understanding how Tnp3 works will inform on such early events in the HIV-1 life cycle.
+RNA interference (RNAi) is a sequence-specific gene-silencing mechanism that employs dsRNA to produce short interfering RNAs (siRNAs) approximately 21 nucleotides (nt) in length (12,18). siRNAs assemble into endoribonuclease-containing complexes known as RNA-induced silencing complexes and subsequently guide these complexes to degrade mRNAs containing complementary sequences (29,53).
+Chikungunya virus (CHIKV) is a mosquitotransmitted human pathogen with T = 4 icosahedral symmetry.
+Equine arteritis virus (EAV) is a small enveloped virus with a positive-sense, single-stranded RNA genome of 12.7 kb and belongs to the family Arteriviridae (genus Arterivirus, order Nidovirales) (16,64).
+The polymerase chain reaction (PCR) is a method which permits the amplification of specific DNA sequences without cloning (16,20).
+HIV-1 viral protein R (Vpr) is a virion-associated protein with an average length of 96 amino acids (,15 kD).
+Human hepatitis delta virus (HDV) is a subviral satellite of hepatitis B virus (HBV).
+Hepatitis C virus (HCV) is an enveloped virus with a positive-sense single-stranded RNA.
+CpG ODN is a ligand of Toll-like receptor 9 (TLR9), which is expressed mainly by plasmacytoid dendritic cells (DCs) (pDCs), B lymphocytes, and monocytes/ macrophages.
+A deno-associated virus (AAV) is a single-stranded DNA virus with a genome composed of the rep and cap genes flanked by inverted terminal repeats (ITRs).
+Viral protein R (Vpr) is an accessory protein of HIV and SIV involved in the pathogenesis of viral infection.
+RNA interference (RNAi) is a process of sequence-specific post-transcriptional gene silencing triggered by small interfering RNAs (siRNAs).
+Human bocavirus (HBoV) is a small nonenveloped virus with a 5.3 kb single-stranded DNA genome.
+Chaos Game Representation (CGR) is a technique used to represent DNA sequences in the form of twodimensional images, providing a visual way to analyze patterns present in symbolic chains 44,45.
+Autoimmune haemolytic anaemia (AIHA) is an extrinsic haemolytic anaemia characterised by the production of autoantibodies that bind to the surface of RBCs leading to premature haemolysis.
+Aicardi-Goutières syndrome (AGS) is an early onset, progressive encephalopathy characterised by calcification of the basal ganglia, white matter abnormalities, and a chronic cerebrospinal fluid (CSF) lymphocytosis.
+Porcine epidemic diarrhea virus (PEDV) is an enveloped, single-stranded RNA virus belonging to the family Coronaviridae, subfamily Coronavirinae, genus Alphacoronavirus.
+Diabetes mellitus (DM) is a chronic progressive disease characterized by systemic hyperglycemia which results from alterations in insulin action, insulin secretion or both.
+Hepatitis C virus (HCV) is an enveloped, positive-sense RNA virus of the Flaviviridae family.
+Simian virus 40 (SV40) is a small DNA tumor virus which utilizes host cell gene products for both virus replication and neoplastic transformation.
+Vibrio parahaemolyticus (VP) is a bacterial pathogen found in brackish and marine water that infects many marine organisms, such as oysters and shrimp.
+Dengue fever (DF) is a mosquito-borne viral disease caused by the dengue virus (DENV).
+The hepatitis B virus (HBV) is a double-stranded DNA virus belonging to the family of Hepadnaviridae, affecting an estimated 350 million chronically infected individuals worldwide.
+Alongshan virus (ALSV) is a newly discovered pathogen in the Flaviviridae family, characterized by a unique multi-segmented genome that is distantly related to the canonical flaviviruses.
+Urtica dioica agglutinin (UDA) is a monomeric GlcNAc-specific protein derived from the stinging nettle rhizomes.
+Classical swine fever virus (CSFV) is a single-stranded positive-stranded RNA virus, belonging to the genus Pestivirus within the family Flaviviridae (6,7).
+Human immunodeficiency virus-1 (HIV-1) Vpr is a 14-kDa multifunctional protein that is detected in the nucleus, mitochondria, and in mature viral particles.
+Multiple sclerosis (MS) is an autoimmune condition characterized by degeneration of nerve fibre myelin sheets.
+Clara cell protein 16 (CC16) is an anti-inflammatory protein mainly produced by the epithelial non-ciliated Clara cells.
+The hepatitis C virus (HCV) is a single-stranded, positivesense RNA virus belonging to the genus Hepacivirus of the family Flaviviridae (Chan, 2014).
+Rift Valley fever virus (RVFV) is a zoonotic mosquito-borne virus belonging to the genus Phlebovirus in the Family Bunyaviridae.
+Hepatitis E virus (HEV) is a single stranded, positive RNA virus belonging to the Hepeviridae family.
+C-C motif chemokine receptor 2 (CCR2) is a G protein coupled receptor.
+IL-10 is a T helper cell type 2 (Th2) cytokine with co-stimulatory activity for T and B cells.
+Adult T-cell leukemia-lymphoma (ATL) is an intractable peripheral T-cell malignancy caused by human T-cell leukemia virus type-I (HTLV-1).
+Adult T-cell leukemia/lymphoma (ATLL) is a peripheral T cell neoplasm that is associated with infection by the human T-cell leukemia virus type I (HTLV-1).
+Autophagic cell death (ACD) is a regulated form of cell death characterized by excessive autophagy, resulting in the self-digestion and degradation of essential cellular components.
+Idiopathic pulmonary fibrosis (IPF) is a chronic progressive lung disease.
+Herpes simplex virus (HSV) is an enveloped double- stranded DNA virus which encodes information for at least 10 glycoproteins.
+Stiff-person syndrome (SPS) is an autoimmune disease caused by antibodies against the γ-amino butyric acid (GABA) synthesising enzyme, glutamic acid decarboxylase 65 (GAD65).
+The hemagglutination inhibition (HI) assay is a simple, rapid technique used to determine the relative amount of virus in a sample.
+DNA damage response (DDR) is a cellular defense mechanism to preserve genomic stability and integrity in response to double strand breaks (DSBs), single strand DNA breaks, or installed replication (Ciccia and Elledge, 2010).
+Vascular endothelial growth factor (VEGF) is a highly specific vascular endothelial cell growth factor.
+Farber disease (FD) is a rare autosomal-recessively inherited disorder caused by mutations in the N-acylsphingosine amidohydrolase (ASAH1) gene.
+Chronic lymphocytic leukaemia (CLL) is a malignancy of CD5 + B cells that is characterized by the accumulation of small, mature-appearing lymphocytes in the blood, marrow and lymphoid tissues.
+Herpes simplex virus 1 (HSV-1) is a large virus containing a double-stranded DNA genome enclosed within an icosahedral capsid, which is in turn surrounded by an amorphous layer of proteins, termed the tegument.
+Eastern equine encephalitis (EEE) virus is a singlestranded RNA virus in the genus Alphavirus (family Togaviridae) that can cause a severe mosquito-borne encephalitis in humans, horses, and game birds.
+Recombinase mediated cassette exchange (RMCE) is a two-step process leading to genetic modification in a specific genomic target sequence.
+Bovine viral diarrhoea virus (BVDV) is an economically important pathogen within the family Flaviviridae, genus Pestivirus and has been extensively used as a model for hepatitis C virus research.
+Alternative splicing (AS) is an important mechanism allowing higher proteome diversity in eukaryotes.
+The Wiskott-Aldrich syndrome (WAS) is an X-linked recessive immune deficiency disorder characterized by thrombocytopenia, small platelet size, eczema, recurrent infections, and increased risk of autoimmune disorders and malignancies.
+Common variable immunodeficiency (CVID) is a primary immunodeficiency disorder characterized by impaired B cell differentiation with defective immunoglobulin production.
+Nijmegen breakage syndrome (NBS) is a rare autosomal recessive syndrome of chromosomal instability mainly characterized by microcephaly at birth, combined immunodeficiency and predisposition to malignancies.
+Viral protein X (Vpx) is a human immunodeficiency virus type 2 (HIV-2) and simian immunodeficiency virus accessory protein that is packaged into virions in molar amounts equivalent to Gag proteins.
+Immune thrombocytopenia (ITP) is an autoimmune disease that is characterized by an insufficient number of platelets in the circulation due to decreased platelet production and increased peripheral platelet destruction.
+Restless legs syndrome (RLS) is a neurological sensorimotor disorder characterized by an urge to move the legs due to uncomfortable sensations.
+Interferon regulatory factor (IRF) 4 is a hematopoietic cell-specific transcription factor that regulates the maturation and differentiation of immune cells.
+Horizontal gene transfer (HGT) is an important process, which contributes in bacterial pathogenesis and drug resistance.
+Transmembrane protein 41B (TMEM41B) is a multispanning membrane protein found in the endoplasmic reticulum (ER).
+Viral protein U (Vpu) of HIV-1 (and SIV cpz ) is an integral membrane protein found predominantly in the endoplasmic reticulum (ER) and Golgi.
+Herpes simplex virus 1 (HSV-1) is a double-stranded DNA (dsDNA) virus with a 152-kbp genome.
+Inflammatory bowel disease (IBD) is a chronic inflammatory intestinal condition driven by immune dysregulation in genetically predisposed individuals.
+Biliary atresia (BA) is a life-threatening pediatric liver disease marked by progressive bile duct obstruction, liver fibrosis, and eventual failure.
+Celiac disease (CD) is a common, lifelong autoimmune disorder that causes nutrient malabsorption due to gluten-induced intestinal damage.
+Chronic wasting disease (CWD) is an efficiently transmitted prion disease of cervids (e.g., deer, elk, and moose) and is the only known prion disease affecting free-ranging, nondomestic animals.
+The Hepatitis B virus (HBV) is a hepatotropic DNA virus member of the Hepadnaviridae family.
+Nervous necrosis virus (NNV) is an aquatic RNA virus belonging to the genus Betanodavirus within the Nodaviridae family.
+Thymidine kinase (TK) is a cytoplasmic enzyme involved in the one step salvage pathway of pyrimidine synthesis.
+Persistent generalised lymphadenopathy (PGL) is an early manifestation of HIV infection and is characterised by hyperplasia and progressive fragmentation of the Bcell follicles, leading to end-stage lymphocyte depletion.
+Hepatitis D virus (HDV) is a defective single-stranded RNA virus which requires the HBsAg of HBV to establish infection in humans.
+West Nile virus (WNV) is a single-stranded, positive-sense RNA virus in the family Flaviviridae.
+Tobacco mosaic virus (TMV) is a positive-sense single stranded RNA virus, genus tobamovirus.
+Rift Valley fever virus (RVFV) is a negative sense, singlestranded RNA virus of the Bunyaviridae family, genus Phlebovirus.
+Tomato bushy stunt virus (TBSV) is a small (+)RNA virus of plants, which has recently emerged as a model virus to study virus replication, recombination, and virus -host interactions.
+Heme oxygenase-1 (HO-1) is an important cytoprotective enzyme, which is readily induced in response to a variety of stressors and cytotoxins.
+Satellite tobacco mosaic virus (STMV) is a T = 1 icosahedral virus with a single-stranded RNA genome.
+Venezuelan equine encephalitis virus (VEE) is a positive-sense RNA virus belonging to the Alphavirus genus, Togaviridae family.
+Hepatitis C virus (HCV) is a positive-stranded RNA virus and has been classified as a separate genus, Hepacivirus, in the Flaviviridae family, which also includes the genera Pestivirus (e.g., bovine viral diarrhea virus [BVDV]) and Flavivirus (e.g., Kunjin, dengue, and yellow fever viruses).
+Singleton-Merten syndrome (SMS) is an autosomal dominant multisystem disorder characterized by dental dysplasia, aortic calcification, skeletal abnormalities, glaucoma and psoriasis.
+Chronic Obstructive Pulmonary Disease (COPD) is a chronic and progressive lung disease involving emphysema, airway fibrosis and bronchiolitis, in which corticosteroids show little to no efficacy.
+Chronic wasting disease (CWD) is a terminal, infectious prion disease endemic within captive and free-ranging cervid populations across North America, Korea, and Scandinavia.
+Hepatitis C virus (HCV) is a positive strand RNA virus that belongs to the family Flaviviradae.
+Brain natriuretic peptide (BNP) is a peptide hormone released by the cardiac ventricles and atria in response to volume or pressure overload.
+Fragile X Mental Retardation Protein (FMRP) is an RNA regulatory protein belonging to the AF4 (ALL1-fused gene from chromosome 4)/FMR2(fragile X mental retardation 2) (AFF) family of proteins that chaperones mRNA from the nucleus and has roles in transcriptional control.
+Niemann-Pick Type C (NPC) is an autosomal recessive disorder characterized by a defect in intracellular cholesterol trafficking.
+Latent membrane protein-1 (LMP-1) is an essential viral membrane protein required for immortalization by EBV and acts by regulating key cell signaling pathways.
+H epatitis C virus (HCV) is a positive-stranded RNA virus in the Flaviviridae family of enveloped virions which affects an estimated 170 million people worldwide and is the major cause of chronic hepatitis.
+Primary effusion lymphoma (PEL) is a fatal B-cell lymphoma caused by Kaposi's sarcoma-associated herpesvirus (KSHV) infection.
+Hepatitis E virus (HEV) is a non-enveloped single-stranded RNA virus approximately 27-34 nm in diameter belonging to the genus Hepevirus in the Hepeviridae family.
+A ctivation-induced deaminase (AID) is an enzyme ex- pressed in B cells that diversifies variable genes to produce high-affinity antibodies and changes constant genes via class switch recombination (CSR) to yield different heavy chain classes.
+Specificity protein 1 (Sp1) is a transcription factor involved in gene expression in the early development of an organism.
+Hepatitis B virus (HBV) is an enveloped, partly doublestranded DNA virus with approximately 3,200 base pairs belonging to the family Hepadnaviridae.
+Pseudomonas exotoxin A (PE) is a single-chain protein toxin composed of three structural domains: domain I (cell binding), domain II (translocation) and domain m (ADP-ribosylation).
+Paroxysmal nocturnal hemoglobinuria (PNH) is a somatically acquired genetic disease caused by defective biosynthesis of the GPI anchor.
+Mucin 1 (MUC1) is a type I transmembrane protein containing a variable number of tandem repeats (TR) of a 20-amino acid sequence (GVTSAPDTRPAPGSTAPPAH) in its extracellular domain.
+Hepatitis B virus (HBV) is an enveloped DNA virus from the Hepadnaviridae family that infects human hepatocytes.
+Lyme borreliosis (LB) is a tick-borne infection caused by Borrelia burgdorferi sensu lato, a group of genetically diverse spirochaetes.
+Japanese encephalitis (JE) is a vector-borne disease caused by JE virus (JEV), a single-stranded RNA flavivirus that is transmitted through a zoonotic cycle between mosquitoes, pigs and water birds, with humans as dead-end hosts.
+The hepatitis C virus (HCV) is a hepatotropic, positivestranded RNA virus that causes acute and chronic hepatitis.
+Zika virus (ZIKV) is an enveloped positive stranded RNA virus belonging to the genus Flavivirus in the family Flaviviridae, which includes other relevant pathogenic arboviruses such as dengue virus (DENV), yellow fever virus (YFV), Japanese encephalitis virus (JEV), and West Nile virus (WNV).
+Papain-like protease (PLpro) is a multifunctional enzyme encoded in the RNA genome of the infectious Middle East respiratory syndrome (MERS) coronavirus.
+Werner syndrome (WS) is an autosomal recessive disorder, the hallmarks of which are premature aging and early onset of neoplastic diseases (Orren 2006;Bohr 2008).
+Atopic dermatitis (AD) or eczema is a prevalent inflammatory skin disease, characterized by abnormalities in the skin barrier, cellular immune deviations and increased sensitization to environmental allergens, that can affect both children and adults.
+Casein kinase I (CKI) is a serine/threonine protein ki- nase activity that is detected in all eukaryotic cells (reviewed in Tuazon and Traugh, 1991).
+Varicella zoster virus (VZV) is a common, globally distributed virus that causes chickenpox upon primary infection; it is normally associated with a generalized vesicular rash but may rarely occur without obvious dermal lesions.
+Severe acute respiratory syndrome (SARS) is a recent emergent zoonotic disease of humans caused by a new strain of coronavirus (CoV), likely originating from wild or captive bats within the region of the original SARS outbreak (25,30,32,41).
+Vesicular stomatitis virus (VSV) is a prototypic enveloped animal virus that has been used extensively to study virus entry, replication and assembly due to its broad host range and robust replication properties in a wide variety of mammalian and insect cells.
+Fanconi anemia (FA) is a recessively transmitted genetic disease characterised by marked sensitivity to crosslinking agents.
+Angiotensin-converting enzyme 2 gene (ACE2) is a metalloproteinase with 805 amino acids which is an important receptor for entry of SARS-CoV into the host cell.
+Brome mosaic virus (BMV) is a representative positive-strand RNA virus whose RNA replication, gene expression, and encapsidation have been reproduced in the yeast Saccharomyces cerevisiae.
+Hepatitis C virus (HCV) is an enveloped, positive-strand RNA virus in the family Flaviviridae.
+Chronic wasting disease (CWD) is a fatal prion disease affecting free-ranging and captive cervids.
+Autistic Spectrum Disorder (ASD) is a heterogeneous neurodevelopmental disorder, resulting from complex interactions among genetic, genomic and environmental factors.
+The unfolded protein response (UPR) is a major ER regulator mechanism which coordinates adaptive stress-responsive signalling through three sensors, namely IRE1a, PERK and ATF6.
+Lymphocyte activation gene-3 (LAG-3) is a cell surface molecule expressed on activated T cells, NK and B cells, and functions as an immune regulatory protein.
+Infectious bursal disease virus (IBDV) is a bisegmented double-strand RNA (dsRNA) virus of the Birnaviridae family.
+Alternative splicing (AS) of pre-mRNA is a key molecular event in eukaryotic gene expression.
+Radiation hybrid (RH) mapping is a somatic cell genetic technique that permits construction of fine-structure maps of human chromosomes.
+CD45 is a protein tyrosine phosphatase (PTP), that is expressed by hematopoietic cells, with the exception of platelets and mature erythrocytes.
+Stimulator of interferon genes (STING) is an endoplasmic reticulum (ER) protein that plays a crucial role in cytosolic DNA-mediated innate immunity.
+Regulated cell death (RCD) is a strategy employed by host cells to defend invasions of pathogens, such as viruses and bacteria.
+The measles virus (MV) is a nonsegmented negative-strand RNA virus that belongs to the family Paramyxoviridae in the genus Morbillivirus.
+Transfusion-related acute lung injury (TRALI) is a severe transfusion reaction, characterised by shortness of breath, hypoxia and bilateral pulmonary infiltrates.
+Immune thrombocytopenic purpura (ITP) is an acquired disorder, in which platelet consumption is due to platelet autoantibodies.
+Hepatitis B virus (HBV) is a small double-stranded DNA virus of approximately 3.2 Kilobases (kb) in pairs.
+Epidermolysis Bullosa Simplex (EBS) is an autosomal dominant disease characterized by blistering upon mechanized trauma, due to cytolysis of the basal epidermal cells.
+Herpes simplex virus (HSV) is a prevalent worldwide human pathogen that infects epithelial cells before it establishes latency in trigeminal or sacral nerve root ganglia (Steiner and Benninger, 2013), causing mucocutaneous lesions, keratitis, and encephalitis (Dropulic and Cohen, 2012).
+Type 1 diabetes (T1D) is an autoimmune disease caused by immune cell destruction of the insulin-producing beta cells in the pancreatic islets.
+Hepatitis D virus (HDV) is a small, defective RNA virus that depends on hepatitis B virus (HBV) for virion assembly and transmission.
+Pantothenate kinase-associated neurodegeneration (PKAN), formerly called Hallervorden-Spatz disease, is a rare disorder characterized by progressive extrapyramidal dysfunction and dementia 1.
+Parkinson's disease (PD) is a neurodegenerative disease characterized by dopaminergic neuron damage in the substantia nigra (SN) and a-synuclein accumulation.
+Parkinson disease (PD) is a chronic neurodegenerative disease associated with motor and non-motor symptoms.
+Mendelian randomization (MR) analysis is an analytic method to estimate the causal effect, which overcome the limitations of measurement errors and confounding frequently encountered in observational studies.
+Diabetes mellitus (DM) is a metabolic disease characterized by hyperglycemia.
+Equine infectious anemia (EIA) is a chronic recrudescent disease of horses characterized by symptoms of fever, anemia, glomerulonephritis, and uremia.
+Pneumocystis pneumonia (PCP) is an opportunistic infection caused by the fungus Pneumocystis jirovecii (Pj).
+Canonical correlation analysis (CCA) is a powerful approach to detect coexpression between gene sets because it does not only determine correlations between two genes.
+Latent autoimmune diabetes in adults (LADA) is a heterogeneous disease characterized by autoantibodies against insulin producing pancreatic beta cells and initial lack of need for insulin treatment.
+Vesicular stomatitis virus (VSV) is a non-segmented negativestranded RNA virus belonging to the family Rhabdoviridae with an extremely wide host tropism.
+Herpes simplex virus (HSV) is a remarkably successful human pathogen that establishes lifelong latency in neurons of the dorsal root ganglia.
+Acute respiratory distress syndrome (ARDS) is a life-threatening condition resulting from acute inflammatory lung injury.
+Chandipura virus (CHPV) is an emerging human pathogen associated with acute encephalitis and is related closely to vesicular stomatitis virus (VSV), a prototype rhabdovirus.
+Pulmonary legionellosis (PL) is a global opportunistic infection caused by the inhalation of aerosolized water particles laden with Legionella spp.
+Multicentric Castleman disease (MCD) is a distinct lymphoproliferative disorder characterized by inflammatory symptoms, lymphadenopathy, splenomegaly, and cytopenia.
+Hepatic lipase (HL) 1 is a 60-kD lipolytic enzyme that plays an important role in the hydrolysis of triglycerides and phospho-lipids present in circulating plasma lipoproteins.
+Osteoarthritis (OA) is a disease of movable joints characterized by anatomical and physiological abnormalities, such as cartilage degradation, bone remodeling, osteophyte formation, joint inflammation, and loss of normal joint function.
+Rheumatoid arthritis (RA) is a chronic inflammatory autoimmune disease that attacks multiple small synovial joints symmetrically, starting usually in the joints of the hands and feet.
+Mevalonate Kinase Deficiency (MKD) is a a rare monogenic autoinflammatory disease characterized by fever and generalized inflammation.
+NLRP12 associated periodic syndrome (NAPS12) is a rarely seen autoinflammatory disease also known as familial cold autoinflammatory syndrome 2 (FCAS2), caused by autosomal dominant inherited mutations in the NLRP12 gene.
+A20 Haploinsufficiency (HA20) is a recently described autoinflammatory disease (AID) caused by a loss-offunction mutation in the TNFAIP3 gene.
+ADA2 deficiency (DADA2) is an autosomal recessive disease that causes a monogenic vasculitis syndrome characterized by protean manifestations, including haematological, cutaneous, articular and vascular involvement.
+Systematic lupus erythematosus (SLE) is an autoimmune disease, and like WD, it involves multiple organs and systems.
+Acquired von Willebrand disease (AvWD) is a bleeding disorder, which is extremely rare in children.
+Subacute sclerosing panencephalitis (SSPE) is a demyelinating central nervous system disease caused by a persistent measles virus (MV) infection of neurons and glial cells.There is still no specific therapy available, and in spite of an intact innate and adaptive immune response, SSPE leads inevitably to death.
+West Nile virus (WNV) is a positive-strand RNA virus in the family Flaviviridae.
+Apis mellifera filamentous virus (AmFV) is a large double-stranded DNA virus of uncertain phylogenetic position that infects honey bees (Apis mellifera).
+Fluorescence polarization (FP) is a powerful tool to study protein dimerization in solution.
+Avian influenza (AI) is a dynamically evolving disease caused by highly contagious viruses, which affect a wide variety of avian and mammalian species, including humans.
+Herpes simplex virus (HSV) is a double-stranded DNA virus, belonging to Alphaherpesvirinae family, a subfamily of the Herpesviridae family.
+Human T-cell leukemia virus type I (HTLV-I) is a retro- virus etiologically associated with adult T-cell leukemia (21,  32, 35, 50) as well as the neurodegenerative disorder HTLV- I-associated myelopathy, or tropical spastic paraparesis (3,  11, 23, 31, 36).
+Herpes simplex virus type 1 (HSV-1) is a highly successful human pathogen belonging to the Alphaherpesviridae subfamily of herpesviruses.
+Hemophagocytic lymphohistiocytosis (HLH) is a fatal inflammatory syndrome characterized by excessive activation of immune cells.
+Chicken anemia virus (CAV) is a small circular single-stranded DNA virus with a single promoter-enhancer region containing four consensus cyclic AMP response element sequences (AGCTCA), which are similar to the estrogen response element (ERE) consensus half-sites (A)GGTCA.
+Severe acute respiratory syndrome (SARS) is an acute respiratory disease caused by the SARS-coronavirus (SARS-CoV).
+Replication and transcription activator (RTA) is a well-conserved immediate-early gene product among gammaherpesviruses (24,45,52,54).
+Newcastle disease (ND) is a devastating poultry disease caused by a virulent strain of Avian paramyxovirus type 1 (APMV-1).
+Feline panleukopenia virus (FPV) is a widespread and highly infectious pathogen in cats with a high mortality rate.
+Heart failure (HF) is a life-threatening syndrome characterized by shortness of breath, fluid retention, and reduced cardiac function.
+Hemolytic uremic syndrome (HUS) is a rare coagulation disorder.
+Herpes simplex virus 1 (HSV-1) is a large, dsDNA virus that is capable of alternating between two programs of gene expression that lead to a productive or silent infection.
+Hepatitis B virus (HBV) is a hepatotropic noncytopathic envelope virus that causes acute and chronic hepatitis.
+Varicella zoster virus (VZV) is an enveloped, linear double-stranded DNA virus.
+Tuberculosis (TB) is an infectious disease caused by the intracellular pathogen Mycobacterium tuberculosis (Mtb), which is characterised by chronic inflammatory responses (Russell, 2011;Kaufmann & Dorhoi, 2013).
+Classical swine fever (CSF) is a disease that is characterized by diffuse hemorrhaging, high fever, and high mortality rates.
+Crimean-Congo Hemorrhagic Fever (CCHF) is a disease characterized by serious course, including acute viral fever, ecchymosis, thrombocytopenia, liver dysfunction and high rate of mortality.
+Equine arteritis virus (EAV) is an enveloped, positive-stranded RNA virus belonging to the family Arteriviridae of the order Nidovirales.
+The nonstructural protein 3 (NS3) of JEV is a multifunctional protein of 619 amino acid residues.
+Human immunoficiency virus type 1 (HIV-1) Vpr is a 96amino-acid, 14-kDa protein that is expressed in infected cells in a Rev-dependent manner and is packaged into new virions through its interaction with the p6 region of the p55 gag precursor (6,51,75).
+Hepatitis B virus (HBV) is a DNA virus belonging to the Hepadnaviridae family that has limited tissue and species specificity.
+Hepatitis B virus (HBV) is a partially circular doublestranded DNA virus with a limited host range and high species specificity.
+Protein-losing enteropathy (PLE) is a syndrome which is characterized by excessive loss of protein from the gastrointestinal tract.
+Niemann-Pick type C (NPC) disease is a progressive neurological disorder characterized by dementia and ataxia, hepatic and pulmonary disease, and death typically within the first or second decade.
+Buruli ulcer (BU) is a neglected tropical disease caused by skin infection with the environmental pathogen Mycobacterium ulcerans.
+Yellow fever (YF) is an infectious disease caused by YF virus (YFV), a member of the family Flaviviridae.
+Human immunodeficiency virus (HIV) is an aggressive, lymphotropic virus known for CD4 depletion and immune suppression.
+U biquitin (Ub) is a 76-aa protein present in cells either as a free molecule or covalently attached to lysines in a wide variety of proteins.
+Systemic acquired resistance (SAR) is a broad-spectrum disease resistance response that can be induced upon infection from pathogens or by chemical treatment, such as with benzo-(1,2,3)-thiadiazole-7-carbothioic acid S-methyl ester (BTH).
+Type 1 diabetes (T1D) is a chronic autoimmune disease characterized by insulin deficiency and resultant hyperglycemia.
+Lynch syndrome (LS) is an inherited cancer predisposition disorder associated with an elevated risk of developing various solid cancers, but mostly colorectal cancer (CRC).
+Herpes simplex virus type 1 (HSV-1) is a neurotropic virus with an infection cycle characterized by two distinct phases.
+Herpes simplex virus (HSV) is a large enveloped DNA virus that replicates in the nuclei of infected mammalian cells.
+Japanese encephalitis (JE) is a mosquito-borne viral disease causing infection of the central nervous system in humans and equines.
+Avian myeloblastosis virus (AMV) is an acute transform- ing virus which arose in nature by recombination of the nondefective avian leukosis virus with chicken cellular se- quences (3,24).
+Amyotrophic lateral sclerosis (ALS) is a fatal neurodegenerative syndrome characterized by progressive loss of motor neurons in the cortex, brainstem and spinal cord.
+Multiple sclerosis (MS) is a complex disorder, characterized by demyelination and loss of axonal parts of neurons in the central nervous system involving multiple genetic and environmental factors.
+Progressive multifocal leukoencephalopathy (PML) is an infectious disease caused by reactivated JCvirus, characterized by demyelination due to its affinity to oligodendrocytes, and is seen in individuals with immunodeficiency, especially AIDS/HIV(+) patients, and monoclonal antibody therapy.
+Systemic lupus erythematosus (SLE) is a multigenic autoimmune disorder characterized by the formation and accumulation of immune complexes that cause tissue damage.
+The unfolded protein response (UPR) is a cell-autonomous stress response aimed at restoring homeostasis due to the accumulation of misfolded proteins in the endoplasmic reticulum (ER).
+Influenza A virus (IAV) is an RNA virus, consisting of eight gene segments: RNA polymerase subunits polymerase basic 2 (PB2), polymerase basic 1 (PB1) and polymerase acidic (PA), haemagglutinin (HA), nucleoprotein (NP), neuraminidase (NA), matrix (M) and non-structural protein (NS).
+Lassa fever (LF) is an acute viral disease caused by an enveloped RNA virus from the Arenaviridae family with a zoonotic reservoir.
+The NS3 protein of hepatitis C virus (HCV) is a bifunctional protein containing a serine protease in the N-terminal one-third, which is stimulated upon binding of the NS4A cofactor, and an RNA helicase in the C-terminal two-thirds.
+Hepatitis B virus (HBV) is a noncytopathic, hepatotropic virus of the Hepadnaviridae family that causes variable degrees of liver disease in humans.
+Hepatitis E virus (HEV) is a single-strand positive-sense RNA virus in the family Hepeviridae.
+JC virus (JCV) is a small, double-stranded human DNA virus that causes a fatal demyelinating disease of the human brain, known as progressive multifocal leukoencephalopathy (PML), in a subset of immunocompromized individuals by specifically and lytically infecting oligodendrocytes -the myelin producing cells of the central nervous system (CNS).
+Drosophila C virus (DCV) is a positive-sense RNA virus belonging to the Dicistroviridae family.
+Multiple sclerosis (MS) is a chronic, autoimmune disease of the central nervous system.
+Creutzfeldt-Jakob disease (CJD) is a rare and fatal human neurodegenerative disorder characterized by rapidly progressive dementia, myoclonus, cerebellar, pyramidal, extrapyramidal, visual symptoms, and psychiatric manifestations.
+West Nile virus (WNV) is an enveloped positive-stranded RNA virus that causes meningitis, encephalitis, and acute flaccid paralysis in humans.
+West Nile virus (WNV) is a single-stranded positive-sense RNA virus that targets neurons to cause potentially lethal encephalitis.
+Factor X (FX) is a vitamin K-dependant plasma protein which plays a central role in blood coagulation.
+Equine arteritis virus (EAV) is an enveloped, positive-strand RNA virus belonging to the family Arteriviridae of the order Nidovirales.
+Japanese encephalitis virus (JEV) is a mosquito-borne, neurotropic RNA virus within the family Flaviviridae, which includes other pathogens of global significance such as dengue virus and West Nile virus.
+Respiratory syncytial virus (RSV) is a nonsegmented negative-strand RNA virus (NSV) and a leading cause of severe lower respiratory tract illness in infants and the elderly.
+Hepatitis C virus (HCV) is a blood-borne pathogen belonging to the Flaviviridae family.
+Epstein Barr Virus (EBV) is a ubiquitous DNA tumor virus associated with several hematologic cancers and non-hematological tumors, such as Hodgkin's lymphoma, Burkitt's lymphoma, nasopharyngeal carcinoma, and gastric cancer.
+Herpes simplex virus type 1 (HSV-1) is a double-stranded DNA virus and the most common human neurotropic virus.
+The African swine fever (ASF) is a hemorrhagic infectious disease affecting the suid population and transmitted via the African swine fever virus (ASFV), a DNA virus of the Asfarviridae family, genus Asfavirus (1-3).
+Herpes simplex virus (HSV) is a large, enveloped DNA virus, the genome of which contains at least 74 different protein-coding genes (16,39,53).
+Protein kinase C (PKC) is a ubiquitous and multifunctional protein serine/threonine kinase with at least twelve different isoforms.
+Protein phosphatase inhibitor-l (PPI-1) is a small heat-and acid-stable protein, which specifically inhibits protein phosphatase 1 activity and therefore, it may be involved in the regulation of the level of protein phosphorylation in cells.
+Hereditary hemochromatosis (HH) is an autosomal recessive disorder mainly associated with homozygosity for the C282Y and H63D mutations in the hemochromatosis (HFE) gene.
+Scavenger Receptor Type B Class I (SR-BI) is an HDL receptor mainly expressed in liver, gonads and adrenal glands involved in regulating cholesterol metabolism and steroidogenesis.
+Herpes simplex virus (HSV) is a large, enveloped DNA virus that establishes a latent infection in neural cells.
+Lumpy skin disease (LSD) is a contagious viral disease caused by the Lumpy Skin Disease virus (LSDV), a member of the Capripoxviridae family.
+Chicken anemia virus (CAV) is a single-stranded circular DNA virus that carries 3 genes, the most studied of which is the gene encoding VP3, also known as apoptin.
+Latent membrane protein 1 (LMP1) is an Epstein-Barr virus (EBV) oncogenic protein that has no intrinsic enzymatic activity or sequence homology to cellular or viral proteins.
+Hereditary spastic paraplegia (HSP) is a neurodegenerative disorder characterised by progressive spasticity, primarily of the lower limbs.
+Autoimmune hepatitis (AIH) is a progressive inflammatory disorders of unknown etiology, characterized by immune-mediated destruction of hepatocytes and massive production of cytokines.
+Porcine epidemic diarrhea (PED) is an intestinal disease in pigs characterized by watery diarrhea, severe dehydration, vomiting, emaciation, and decreased reproductive performance.
+Anopheles minimus virus is an iridescent virus (IIV) belonging to Iridovirus genus (family, Iridoviridae).
+Y ellow fever (YF) is a zoonotic flaviviral disease endemic and epidemic in tropical regions of South America and Africa.
+The large T antigen (LT) of SV40 is a 708-residue viral protein that plays essential roles in promoting productive viral infection and cellular transformation (1,2,8,10).
+Viral protein R (Vpr) is an accessory gene of 14k-Da and 96 amino acids present in both HIV and SIV (slightly larger at 15k-Da and 101 amino acids) that is produced late in the virus replication and is also found within the viral particle.
+Ebola virus (EBOV) is a single-stranded RNA virus that causes Ebola virus disease (EVD), characterized by excessive inflammation, lymphocyte apoptosis, hemorrhage, and coagulation defects leading to multiorgan failure and shock.
+Multiple sclerosis (MS) is a chronic inflammatory demyelinating disease of unknown cause.
+Vesicular stomatitis virus (VSV) is a cytocidal, membrane-enveloped virus which has served as the prototype of the rhabdovirus group.
+Equine infectious anemia virus (EIAV) is a nonprimate enveloped virus, classified into the family Retroviridae, genus Lentivirus, along with Human immunodeficiency virus (HIV) (reviewed in reference 1).
+Invasive candidiasis (IC) is a serious infectious disease caused by fungi of the Candida genus, most commonly Candida albicans.
+Diabetes mellitus (DM) is a chronic metabolic disease characterized by the disturbance of glucose metabolism.
+Lyme borreliosis (LB) is a multisystemic disease caused by Borrelia burgdorferi sensu lato (sl) complex transmitted to humans by Ixodes ticks.
+Rheumatoid arthritis (RA) is an autoimmune disease characterized by chronic systemic inflammation and the involvement of the synovial joints.
+The S protein of SARS-CoV-2 is a type-I transmembrane (TM) protein that comprises a large ectodomain, a single-pass TM and an intracellular tail.
+P0 protein is a member of the immunoglobulin (Ig) gene superfamily, and constitutes 50% of the total myelin proteins present in the peripheral nervous system (PNS).
+Epstein-Barr virus (EBV) is a gamma herpes virus that infects more than 90% of the world's adult population and was the first virus identified to encode many miRNAs.
+Venezuelan equine encephalitis virus (VEEV) is an arbovirus that causes a disease in which 4%-14% of individuals can develop neurological symptoms.
+Crimean-Congo hemorrhagic fever virus (CCHFV) is a tick-borne virus of the Orthonairovirus genus, Nairoviridae family, that causes severe febrile hemorrhagic disease in humans with a case fatality rate ranging from approximately 3-30%.
+Hemophagocytic lymphohistiocytosis (HLH) is a hyperinflammatory, life-threatening disorder characterized by persistent fever, splenomegaly with cytopenia, hypertriglyceridemia, and hypofibrinogenemia and the presence of hemophagocytosis in the bone marrow [120].
+Idiopathic pulmonary fibrosis (IPF) is a progressive disorder of unknown etiology characterized by fibroblast accumulation, collagen deposition, and ECM remodeling leading to parenchymal destruction (1).
+Multiple sclerosis (MS) is a chronic inflammatory disease of the CNS, characterized by several pathological processes, including inflammation, trans-endothelial migration, demyelination, axonopathy, and neuron loss mediated by immune cells [152].
+Rotavirus (RV) is an enteric pathogen that is characterized by a non-enveloped double-stranded RNA virus belonging to the Reoviridae family, which is a major cause of severe gastroenteritis and diarrhea in young children [1].
+Chikungunya virus (CHIKV) is an alpha virus causing acute febrile illness characterized by crippling arthralgia [1], and a disseminated rash [2].
+Biliary atresia (BA) is a cholestatic liver disease of infants characterized by inflammatory and fibrotic obliteration of the biliary ducts, leading to severe fibrosis and eventually to biliary cirrhosis [1].
+Acute Respiratory Distress Syndrome (ARDS) is a life-threatening disease characterized by fluid accumulation in the interstitial and alveolar spaces due to increased vascular permeability resulting from inflammation [1].
+Autism spectrum disorder (ASDs) is a complex neurodevelopmental disorder characterized by varying levels of impairment in social interaction and communication as well as stereotypes and rigid patterns of behaviour [1].
+Multiple sclerosis (MS) is a chronic inflammatory condition affecting the central nervous system (CNS), characterized by inflammation, demyelination, and neuronal damage (1).
+Ischemic heart disease (IHD) is a chronic inflammatory disease characterized by atherosclerosis of the coronary arteries and a serious health threat worldwide, particularly in the older population (1).
+Knee joint osteoarthritis (OA) is a multifactorial disease characterized by various pathological changes, including cartilage degradation, osteophyte formation, remodeling of osteo cartilaginous units, and joint inflammation (16).
+Marburg virus (MARV) is a member of the Filoviridae, the same family as Ebola virus (EBOV), which has a 19 kb (-) single-stranded RNA genome encoding 7 proteins.
+Norwalk virus (NV) is a member of the family Caliciviridae, genus Norovirus, formerly called Norwalk-like virus and possessing a single-stranded RNA genome.
+Intercellular adhesion molecule-1 (ICAM-1) is a member of the immunoglobulin superfamily of adhesion proteins, which share a similar structure of repeating immunoglobulin-like domains (van de Stolpe and van der Saag, 1996).
+Citrus tristeza virus (CTV) is a member of the closterovirus group, which is composed of filamentous, insect-transmitted plant viruses having messenger-sense single-stranded RNA (ssRNA) genomes (4,5,11).
+Human herpesvirus 6 (HHV-6) is a lymphotropic betaherpesvirus that was initially isolated from individuals with AIDS and was subsequently shown to be a ubiquitous human pathogen (28,29,38).
+Electrospray ionization (ESI) is a very gentle form of ionization, which enables the intact transfer into the gas phase and detection of large multi-protein structures with little or no fragmentation; when ESI is coupled to mass spectrometry, non-covalently assembled macromolecular protein complexes can be detected and accurately mass measured.
+Human cytomegalovirus (HCMV) is a member of the betaherpesvirus family that, unlike other herpesviruses, triggers a strong innate immune response in infected cells that includes transcription of the beta interferon gene via activation of interferon regulatory factor 3 (IRF3).
+Feline immunodeficiency virus (FIV) is a lentivirus that causes a slow progressive degeneration of the immune system that eventually leads to a disease syndrome comparable to AIDS in humans.
+H uman metapneumovirus (HMPV) is a recently discovered paramyxovirus that is a major cause of upper and lower respiratory tract disease worldwide in all age groups (8,9,28,41).
+Crimean-Congo haemorrhagic fever (CCHF) is a viral haemorrhagic fever that was first described in Crimea in 1944 and subsequently associated with similar outbreaks that occurred in the Congo.
+Feline immunodeficiency virus (FIV) is a lentivirus of the retrovirus family that causes a slowly progressive multiorgan disease in cats (11, 21, 22, 36).
+Hexamminecobalt (III) chloride (Cohex) is a complex of a cobalt (III) ion surrounded by six ammonia ligands in a full octahedral coordination.
+The transmembrane protein claudin-1 (Cldn-1) is a major component of TJs 5.
+Favipiravir (T-705) is a broad-spectrum antiviral drug that inhibits RNA viruses after intracellular conversion into its active form, T-705 ribofuranosyl 5 -triphosphate.
+Remdesivir Remdesivir (GS-5734) is a monophosphate prodrug of an adenosine analog (GS-441524) that inhibits viral RNA-dependent RNA polymerase.
+Japanese encephalitis virus (JEV) is a mosquito-transmitted flavivirus that is closely related to other emerging viral pathogens, including dengue virus (DENV), West Nile virus (WNV), and Zika virus (ZIKV).
+Bovine immunodeficiency virus (BIV) is a recently characterized member of the lentivirus subfamily of retroviruses (6,18,21; reviewed in reference 20).
+Feline immunodeficiency virus (FIV) is a member of the lentivirus family and represents a significant pathogen in the cat population, particularly in the United States and Japan (18,30).
+Chronic granulomatous disease (CGD) is a rare primary immunodeficiency with mutations in NADPH oxidase enzyme complex which causes failure of phagocytic cells to produce superoxide and subsequent intracellular killing of microorganisms.
+Maraviroc (MVC) is a small-molecule CCR5 antagonist that acts by binding to the hydrophobic pocket formed by seven transmembrane helices of CCR5; thus, it inhibits HIV entry via an allosteric mechanism (7,8).
+Vascular endothelial growth factor (VEGF) is a major proangiogenic factor that binds to its receptors VEGFR1 and VEGFR2 to promote endothelial cell proliferation, migration, and tube formation.
+C-reactive protein (CRP) is a well-established marker of inflammation and several lifestyle factors affect the level of CRP.
+Frequency Chaos Game Representation (FCGR) is an extension of Chaos Game Representation that involves the counting of occurrences of specific nucleotide sequences or k-mers within the DNA sequence and their placement in the FCGR matrix 30.
+The dimerization initiation signal (DIS) is an important element that mediates the selection of a copackaged genome and the initiation of RNA dimerization (1,35).
+Abelson murine leukemia virus (Ab-MLV) is a rapidly transforming retrovirus that can induce lymphomas in vivo and transform pre-B cells and immortalized fibroblast cell lines in vitro (reviewed in references 39 and 40).
+HVEM is a member of the tumor necrosis factor (TNF) receptor superfamily (TNFRSF) and regulates immune cell activation or inactivation.
+Hepatitis C virus (HCV) is a member of the Flaviviridae family that contains a single-stranded positive RNA genome (,9600bp).
+Suppressor of cytokine signaling-1 (SOCS-1) is an inducible negative regulator of the JAK/STAT signal pathway; SOCS-1 is expressed in dendritic cells (DCs) and negatively regulates activation and type 1 regulatory cytokine production.
+Zidovudine (AZT) is a thymidine analogue inhibitor of the HIV-1 RT which has been used extensively to treat HIV-1infected individuals.
+Equine infectious anemia virus (EIAV) is a lentivirus that infects equine macrophages and endothelial cells in vivo (21,25).
+Tetrahydrobiopterin (BH4) is an essential cofactor for nitric oxide synthases and thus a critical determinant of NO production.
+The Human T-lymphotropic virus (HTLV) is a retrovirus that has been found throughout the world (Gessain and Cassar, 2012).
+Human herpesvirus 7 (HHV-7) is a widely prevalent betaherpesvirus with an in vitro tropism for CD4 ϩ T lymphocytes (reviewed in reference 5).
+Pneumonia virus of mice (PVM) is a member of the genus Pneumovirus, subfamily Pneumovirinae, and family Paramyxoviridae, together with the more extensively characterized human and bovine respiratory syncytial viruses (RSV).
+Chikungunya virus (CHIKV) is a mosquito-borne arthralgic alphavirus that has garnered international attention as an important emerging pathogen since 2005.
+Human T-lymphotropic virus type 1 (HTLV-1) is a complex retrovirus that infects CD4 ϩ T lymphocytes.
+Remdesivir (RDV) is a nucleoside analog inhibitor of the viral RNA dependent RNA polymerase (RdRp; nsp12 in SARS-CoV-2) that has been approved by the FDA for treatment of severe SARS-CoV-2 infections.
+Human cytomegalovirus (CMV) is a betaherpesvirus that replicates productively in many differentiated cell types, including epithelial cells, endothelial cells, fibroblasts, and certain hematopoietic cell types (reviewed in reference 22).
+Fibroblast growth factor 13 (FGF13) is a member of the fibroblast growth factor family, and FGF family members have broad mitogenic and cell survival activities.
+E pstein-Barr virus (EBV) is a ubiquitous human herpesvirus that is associated with a number of diseases, including Burkitt's lymphoma, Hodgkin's lymphoma, nasopharyngeal carcinoma, and posttransplant lymphoproliferative disease (6,25,33,34,40).
+H epatitis C virus (HCV) is a major cause of chronic hepatitis, cirrhosis, and hepatocellular carcinoma (1,2).
+Chikungunya virus (CHIKV) is a member of the alphavirus genus in the Togaviridae family of positive-stranded RNA viruses.
+Caprine arthritis encephalitis virus (CAEV) is a retrovirus that naturally infects goats and induces chronic inflammatory and degenerative disease of the joints, mammary glands, and central nervous system (3,20).
+Adeno-associated virus type 2 (AAV-2) is a human parvovirus that has attracted increasing interest because of its use as a gene transfer vector (23,32).
+Zika virus (ZIKV) is a reemerging member of the flaviviridae family, which includes dengue (DENV), yellow fever, Japanese encephalitis, and West Nile viruses.
+S100 calcium-binding protein A9 (S100A9) is a member of the S100 family of calcium-binding proteins.
+Schmallenberg virus (SBV) is a novel orthobunyavirus of ruminants that emerged in Europe in the summer of 2011.
+Marek disease virus (MDV) is a herpesvirus of chickens that induces T lymphomas within 3 weeks of infection.
+Protein kinase C (PKC) is an isoenzyme of the PKC family that is selectively expressed in T lymphocytes (2,19,20).
+JC virus (JCV) is a human polyomavirus that can emerge from a latent state to cause the cytolytic destruction of oligodendrocytes in the brain resulting in the fatal demyelinating disease, Progressive Multifocal Leukoencephalopathy (PML).
+Human papillomavirus (HPV) is a group of doublestranded circular DNA viruses with a genome of around 8000 base pairs.
+Epstein-Barr virus (EBV) is a causative agent of infectious mononucleosis and closely associated with Burkitt's lymphoma and nasopharyngeal carcinoma (NPC).
+CyPB is a member of the cyclophilin (CyP) family and functions as peptidyl-prolyl cis/trans isomerase, e.g., during nascent protein folding (18,27).
+The cysteine protease cathepsin W (CTSW) is an important host factor for IAV replication, and its proteolytic activity is required for fusion of viral and endosomal membranes.
+Janus kinase 2 (JAK2) V617F mutation is a molecular marker that are relevant to both diagnosis and treatment of BCR-ABL-negative classic myeloproliferative neoplasms including polycythemia vera (PV), essential thrombocythemia (ET), and primary myelofibrosis (PMF).
+Human cytomegalovirus (HCMV) is a b-herpesvirus with a large (236 kbp) DNA genome that establishes life-long, usually asymptomatic, infection in healthy individuals.
+Feline calicivirus (FCV) is a member of the genus Vesivirus and causes upper respiratory tract disease and acute mouth ulceration, occasionally associated with chronic stomatitis and acute arthritis in cats (15,21).
+JAM-1 is a member of the immunoglobulin (Ig) superfamily expressed by various cells and is involved in regulation of cell-cell interactions in the immune system and apical tight junction formation (10,23).
+Iodoacetic acid (IAA) is a known inhibitor that inactivates GAPDH by modifying the catalytic cysteine residue.
+Human serum albumin (HSA) is a mixture of human mercaptalbumin (HMA, reduced form) and non-mercaptalbumin (HNA, oxidized form) (HNA-1; mixed disulfide with cysteine, HNA-2; more higher oxidation product), i.e., a protein redox couple.
+Viral integrase (IN) is a key component of the PIC and is involved in several steps of replication notably in reverse transcription, nuclear import, chromatin targeting and integration.
+L-selectin (CD62L) is a member of the carbohydrate-binding family of selectin cell surface molecules and is especially involved in the initial and transient attachment of lymphocytes to high endothelial venules (HEV) in lymphoid organs.
+Varicella-zoster virus (VZV) is an alphaherpesvirus with the characteristic neurotropism of this group, but VZV also infects T cells productively and downregulates major histocompatibility complex (MHC) class I expression on infected T cells, asshown in the SCID-hu mouse model.
+Epstein-Barr virus (EBV) is a ubiquitous herpesvirus that is associated with a variety of malignancies, including nasopharyngeal carcinoma, Hodgkin's lymphoma, posttransplant lymphoma, and others (29,42,55,56).
+Protein kinase R (PKR) is a component of the UPR that phosphorylates eIF2α.
+Hepatitis C virus (HCV) is a major cause of chronic hepatitis and hepatocellular carcinoma (HCC) and different HCV genotypes show characteristic variations in their pathological properties.
+Infectious bursal disease virus (IBDV) is a member of the Birnavirus group, so called because the genomes of these viruses consist of two segments of double-stranded RNA (5,9).
+Fused in Sarcoma (FUS) is a ribonucleoprotein which functions in transcription, translation, splicing, mRNA transport, and stress responses.
+F1-ATPase (F1) is an ATPase domain of FoF1-ATP synthase and functions as rotary molecular motor.
+Apoptosis Resistant E3 Ligase (Arel1) is a member of the Homologous to E6AP Carboxyl Terminus (HECT) E3 Ubiquitin ligase family.
+Murine hepatitis virus (MHV) is a member of the Coronaviridae, a family of large, enveloped, plus-strand RNA viruses.
+Human papillomavirus (HPV) is a member of the family Papillomaviridae, which consists of over 170 DNA viruses.
+Human respiratory syncytial virus (RSV) is a member of the family Paramyxoviridae and has a single-stranded RNA genome which encodes at least 10 unique viral proteins within infected cells (7,8,13).
+The HTLV-1 Tax oncoprotein (Tax1) is a transactivator of viral transcription and also induces the expression of a variety of cellular genes by activation of the NF-B and CREB/ATF pathways.
+Fibronectin 1 (FN1) is a large adhesive glycoprotein of the extracellular matrix composed of 2 nearly identical subunits with a variety of binding domains for cell surface and extracellular ligands.
+Dengue virus (DENV) is a mosquito-transmitted flavivirus that infects approximately 100 million people annually.
+The epidermal growth factor receptor (EGFR) is a major regulator of several distinct, diverse cellular pathways, and a wide range of human tumours overexpress EGFR in vivo.
+Epstein-Barr virus (EBV) is a human gammaherpesvirus which is associated with several B-cell and epithelial cell malignancies, including the endemic form of Burkitt's lymphoma, posttransplantation lymphoproliferative diseases, AIDS-associated lymphomas, Hodgkin's disease, and undifferentiated nasopharyngeal carcinoma (31,42,65).
+APOBEC3F (A3F) is a member of the APOBEC3 cytidine deaminase family which, if left unchecked, are potent restriction factors of retroviral replication.
+Interleukin-10 (IL-10) is a critical component of the immunosuppressive network required to dampen the proinflammatory responses activated by the immune system after an encounter with a pathogen, and has been shown to be rapidly induced following SIV infection (9,10).
+Transmissible gastroenteritis virus (TGEV) is a member of the Coronaviridae family of the Nidovirales order (13,18).
+Survival of Motor Neurons protein (SMN) is a component of the SMN complex that has critical functions in the assembly and restructuring of diverse ribonucleoprotein (RNP) complexes.
+Puumala virus (PUUV) is a hantavirus that causes a mild to moderate form of HFRS in humans.
+A DNA-binding domain (DBD) is an intrinsic characteristic of IRFs and is required for binding with interferon-stimulated response elements (ISREs).
+Acetylcholine (ACh) is an essential neurotransmitter that is present in both the central nervous system (CNS) and peripheral nervous system (PNS) of most living organisms.
+DiGeorge Syndrome (DGS) is a developmental defect of the 3rd and 4th pharangeal pouches.
+H uman respiratory syncytial virus (RSV) is a leading viral cause of severe respiratory infection during infancy and early childhood and among immunocompromised populations (1,2).
+Dbf2-Mob1 is a component of the mitotic exit network (MEN) signaling pathway (Bardin and Amon 2001).
+The cerebrospinal fluid (CSF) is a bodily fluid that surrounds the brain and serves an array of functions ranging from acting as a shock absorber from neurological trauma to circulating nutrients around the CNS.
+Graft-versus-host disease (GVHD) is a major complication associated with allogeneic hematopoietic stem cell transplantation (HSCT).
+Graft-versus-host disease (GVHD) is a major cause of mortality and is classified into acute (aGVHD) and chronic.
+Brentuximab vedotin (BV) is an antibody-drug conjugate that targets CD30-positive malignancies via an anti-CD30 monoclonal antibody linked to monomethyl auristatin E, a microtubuledisrupting agent, by a protease-cleavable linker.
+The papillomavirus (PV) E2 protein is a transcription factor which regulates PV transcription and is also required for the replication of viral DNA (14,18,46).
+Chronic myelogenous leukemia (CML) is a myeloproliferative hematological neoplasm with a particular chromosome 22 to chromosome 9 translocation [t(9,22), Philadelphia chromosome], producing a constitutively active tyrosine kinase fusion protein: Bcr-Abl.
+Cidofovir (CDV) is an acyclic phosphonate analog of CMP (or dCMP) with potent in vitro and in vivo activity against a broad spectrum of herpesviruses (3,4,12).
+Remdesivir (GS-5734) is a nucleotide analog prodrug with broadspectrum antiviral activity that was shown to inhibit filovirus, coronavirus, and paramyxovirus replication (8,9).
+Human immunodeficiency virus type 1 (HIV-1) is a member of the lentivirus subfamily of the Retroviridae family and the etiologic agent of acquired immune deficiency syndrome (AIDS).
+Hepatitis C virus (HCV) is a pathogenic hepatic flavivirus with a single stranded RNA genome.
+Brefeldin A (BFA)1 is a fungal metabolite that reversibly blocks exocytosis of membrane- bound and soluble proteins (Takatsuki and Ta- mura, 1985).
+HNA-4a is a polymorphic variant of the αM (CD11b) subunit of the leucocyte β 2 (CD18) integrin family.
+Heparan sulfate (HS) is a linear polysaccharide that covalently attaches to core proteins, referred to as HS proteoglycans.
+Stimulator of interferon genes (STING) is an important regulator of the innate immune response to cytoplasmic DNA.
+The tuberous sclerosis complex (TSC) is a heterodimer composed of TSC1 and TSC2 subunits.
+IRE1/X box-binding protein 1 (XBP1) is a branch of UPR that evokes the ER stress response.
+CD40 is a costimulatory molecule that binds to CD154 (CD40L) expressed on T-cells.
+Mouse mammary tumor virus (MMTV) is a B-type retrovirus that induces mammary tumors in mice with high efficiency (9,16).
+Neuraminidase (NA) is a key target for anti-influenza drugs, such as oseltamivir (Tamiflu) and zanamivir (Relenza), as NA enhances the release of viral progeny from infected cells.
+P-TEFb is a heterodimer of cyclin-dependent kinase 9 (CDK9) and cyclin T1, T2, or K.
+Forkhead box L1 (FOXL1) is a member of the Forkhead box (FOX) superfamily and was reported to be dysregulated in various types of cancers.
+The highly pathogenic Marburg virus (MARV) is a member of the Filoviridae family and belongs to the group of nonsegmented negative-strand RNA viruses.
+Adeno-associated virus type 2 (AAV) is a nonpathogenic human parvovirus with a single-stranded, linear DNA genome containing inverted terminal repeats at each end which function as origins of replication (12,33,34,39).
+Cytochrome P4502D6 (CYP2D6) is a major target antigen of LKM-1 in AIH, since the majority of LKM-l positive AIH sera recognise the prokaryoticall expressed cytochrome.
+Papillomaviridae (PV) is a family of small epitheliotropic viruses of approximately 50-60 nm, with circular double stranded DNA genome 7-8 kb long, detected in all vertebrates.
+Foot and mouth disease virus (FMDV) is a picornavirus with an RNA genome that encodes a single poly-protein of approximately 225 kDa.
+SARS-CoV-2 is a variant of the coronavirus (CoV), a family of viruses known in the 1960s, which received its name due to the spicules on its surface that resemble a crown (in Latin-corona).
+HIV-1 viral protein U (Vpu) is a specific antagonist of human tetherin that might contribute to the high virulence of HIV-1.
+The DNA damage response (DDR) is a signaling cascade that is triggered by DNA damage, involving the halting of cell cycle progression and repair.
+The aryl hydrocarbon receptor (AhR) is a ligand-activated transcription factor that belongs to the basic helix-loop-helix (bHLH)/Per-ARNT-Sim (PAS) superfamily.
+TAP is a member of the ATP binding cassette (ABC) family of transporters, whose members couple ATP hydrolysis to the translocation of a broad spectrum of different substrates across cellular membranes (1,29,42).
+Phosphatidylcholine (PC) is a major phospholipid component of the biological membranes 16 and a precursor for the biosynthesis of lipid signaling molecules 17.
+West Nile virus (WNV) is a mosquito-borne flavivirus of the Flaviviridae family that belongs to the Japanese encephalitis (JEV) antigenic complex.
+Diabetes mellitus (DM) is a significant risk factor for SSIs because it has broad implications for immune response, vascular integrity, and wound healing.
+The interferon (IFN) system is a key component of innate immunity, and type I IFNs limit bunyaviral propagation both in vitro and in vivo.
+Vesicular stomatitis virus (VSV) is an envelope with bullet-shaped, non-segmented negative-strand RNA virus (NSRV).
+Equine infectious anemia virus (EIAV) is a member of the lentivirus genus in the Retroviridae family and is considered an animal model for HIV/AIDS research.
+Junin virus (JV) is a member of the Arenaviridae family of enveloped RNA viruses.
+Equine infectious anemia virus (EIAV) is a macrophagetropic lentivirus that causes persistent infections in horses (7,31).
+Telaprevir (TVR) is a peptidomimetic compound that inhibits the HCV NS3-4A serine protease.
+Human T-cell leukemia virus type 1 (HTLV-1) is a human retrovirus which is the etiologic agent of adult T-cell leukemia/ lymphoma (33,47,63) and a degenerative neurologic syndrome designated tropical spastic paraparesis (28,44).
+Influenza virus hemagglutinin (HA) is a primary determinant for mouse lung virulence (2,11,12,23,41,42).
+Epstein-Barr virus (EBV) is a human herpesvirus with tropism for B lymphocytes and some epithelial cells (12, 32,  39).
+Echovirus 30 (E30) is a member of the human enterovirus B (HEV-B) species, which also includes 28 serotypes of echoviruses, 6 coxsackie B viruses, coxsackie A9 virus and several new enterovirus serotypes.
+Junin virus (JUNV) is a New World arenavirus that is the causative agent of Argentine hemorrhagic fever (AHF).
+Ovarian clear cell carcinoma (OCCC) is a histologic subtype of epithelial ovarian cancer (EOC) with unique characteristics including chemoresistance and carcinogenic origins from endometriotic cysts.
+Minute virus of mice (MVM) is an autonomous parvovirus consisting of a single-stranded genome approximately 5 kb in length (12,13).
+Tomato yellow leaf curl virus (TYLCV) is a whitefly-transmitted geminivirus with a monopartite genome, whose nucleotide sequence has been determined (2,3).
+Phosphatidylinositol 3-kinase (PI3K) is a key component of one such signaling cascade that normally becomes triggered by activation of tyrosine kinase and heterotrimeric G-protein-coupled membrane receptors (Blume-Jensen and Hunter, 2001).
+Vaccinia virus (VACV) is a prototypical member of the genus Orthopoxvirus, which also includes the closely related cowpox virus (CPXV) (12,52).
+Chikungunya virus (CHIKV) is an alphavirus of the family Togaviridae, 1 with outbreaks occurring across Africa, Asia, parts of Europe, and South and Central America.
+Feline Enteric Coronavirus (FECV) is a virulent biotype of FCoV in domestic cats, and it is the hypervirulent biotype precursor of FIPV that causes fatal diseases in cats.
+Adeno-associated virus (AAV) is a human parvovirus with a single-stranded DNA genome of about 4.7 kb.
+LIGHT is a member of the tumor necrosis factor (TNF) superfamily, a type II transmembrane glycoprotein that plays an important role in inflammatory diseases such as autoimmune hepatitis, urticaria, asthma, and nonalcoholic fatty liver.
+Heart rate variability (HRV) is an indirect measurement of the autonomic modulation of heart rate (HR).
+Calprotectin (CP) is a widely used marker for the diagnosis and monitoring of gastrointestinal (GI) inflammation in humans.
+Angiotensin-converting enzyme 2 (ACE2) is an important component of RAS (renin-angiotensin system) signaling pathway.
+Human T-cell leukemia virus type 1 (HTLV-1) is a human retrovirus associated with adult T-cell leukemia (ATL) and a variety of chronic inflammatory diseases including HTLV-1associated myelopathy/tropical spastic paraparesis (HAM/ TSP) (5,12,38,41).
+P seudorabies virus (PRV) is a porcine alphaherpesvirus that is related to other animal alphaherpesviruses, like bovine herpesvirus 1 (BHV1) and equine herpesvirus 1 (EHV1), and the human alphaherpesviruses herpes simplex virus (HSV) and varicella-zoster virus (VZV).
+Resiquimod (R848) is an imidazoquinoline compound with potent antiviral activity and functions through the TLR7/TLR8 MyD88-dependent signaling pathway.
+Retroviral nucleocapsid (NC) protein is an integral part of the virion nucleocapsid where it is in tight associ- ation with genomic RNA and the tRNA primer.
+Group B Streptococcus (GBS) is a leading cause of bacteremia, sepsis, pneumonia, and meningitis in neonates and infants less than 3 months of age (2,3).
+Poly (ADP-ribose) polymerase-1 (PARP1) is a major member of the PARP superfamily that is involved in DNA damage signalling and other important cellular processes.
+DEAD-box helicase 41 (DDX41) is an intracellular dsDNA sensor that, upon activation by Bruton's tyrosine kinase (BTK), triggers type I IFN production through the stimulator of interferon genes (STING) signaling pathway.
+Trastuzumab emtansine (T-DM1) is an anticancer drug that has the anticancer effects of HER2-targeted trastuzumab and the cytotoxic activity of the microtubuleinhibitory agent DM1.
+Gut-associated lymphoid tissue (GALT) is an important target organ of human immunodeficiency virus (HIV) and may serve as a potentially significant viral reservoir since it harbors the majority of lymphoid tissue in the body.
+Heparanase 2 (Hpa2) is a close homolog of heparanase that lacks intrinsic HS-degrading activity but retains the capacity to bind HS with high affinity.
+Tenofovir alafenamide (TAF) is an investigational prodrug of the HIV-1 nucleotide reverse transcriptase (RT) inhibitor (NtRTI) tenofovir (TFV), with improved potency and drug delivery properties over the current prodrug, tenofovir disoproxil fumarate (TDF).
+AICAR is an analog of adenosine monophosphate (AMP) and activates the AMP-kinase cascade in response to ATP deprivation, such as in downregulated glycolysis.
+LR8 is a close relative of the low-density lipoprotein (LDL) receptor, distinguished by the presence of an additional 8th ligand-binding repeat in its extracel-* Corresponding author. lular domain.
+Viral hemorrhagic fever (VHF) is a term for a group of similar but distinct zoonotic human diseases that are caused by RNA viruses including hantaviruses.
+Brome mosaic virus (BMV) is a representative member of the alphavirus-like superfamily of human, animal, and plant positive-strand RNA viruses.
+The neuraminidase (NA) of influenza virus is a surface glycoprotein consisting of a square boxlike head and a long narrow stalk which is anchored to the membrane (1,6,11,16).
+SKP1 is a component of the SKP1-Cullin-F-box (SCF) complex and serves as an adapter that links the F-box and Cullin proteins (2,48).
+Hepatitis C virus (HCV) infection is a leading cause of cirrhosis, liver failure, and hepatocellular carcinoma (HCC) (1,2).
+Infectious bursal disease virus (IBDV) is a member of the Birnaviridae family, and mainly replicates in the bursa of Fabricius (BF) of chickens.
+Bovine leukemia virus (BLV) is a causative agent of enzootic bovine lymphoma (EBL).
+Hepatitis C virus (HCV) is a member of the Flaviviridae family and has a single-stranded positive sense RNA genome.
+APOBEC3G (A3G) is a host restriction factor that inhibits HIV-1 replication by inducing lethal hypermutation and inhibiting reverse transcription and integration.
+Epstein-Barr virus (EBV) is a gammaherpesvirus associated with several human malignancies, including Burkitt's lymphoma, lymphoproliferative disorders in immunocompromised individuals, Hodgkin's disease, and nasopharyngeal carcinoma (30,60).
+F-box and WD repeat domaincontaining 7(Fbw7) is a recognition component of E3 ligase SCFF Fw7 (SKP1-CUL1-F-box protein) complex (Welcker and Clurman, 2008).
+Ring domain E3 ligase (RINGE3s) is a group of E3 ligases containing the ring finger domain.
+Trichostatin A (TSA) is a potent inhibitor of HDAC class I and II (HDAC class I/II), showing high specificity and effectiveness.
+Production of reactive oxygen species (ROS) is a hallmark of mitochondrial dysfunction and at the same time, ROS are thought to be important mediators of cellular stress signalling.
+Early onset dementia (EOD) is a term used to describe all forms of dementia that manifest before the age of 65.
+B K virus (BKV) (human polyomavirus 1) is a member of the polyomavirus family that establishes lifelong persistent infections in most humans (1,2).
+Eotaxin (CCL11) is a proinflammatory chemokine that elicits chemotaxis especially of eosinophils, and also basophils, mast cells, and Th2 lymphocytes.
+Crimean-Congo hemorrhagic fever virus (CCHFV) is a Nairovirus of the Bunyaviridae and is the etiological agent of Crimean-Congo hemorrhagic fever (CCHF).
+Puumala virus (PUU) is a member of the genus Hantavirus in the family Bunyaviridae (17,43).
+Chondroitin sulfate proteoglycan (CSPG) is a glycoprotein that has been defined as a cell-surface antigen for both human melanoma and glioma brain tumor cells and has been characterized as a molecular target for diagnosis and treatment using murine antibodies MEL-14 and 9.2.27.
+Rift Valley fever virus (RVFV) is a mosquito-borne bunyavirus that causes Rift Valley fever (RVF), a zoonotic disease of wild and domestic ruminants, causing serious economic losses and a threat to human health that could be controlled by vaccination.
+Yellow fever (YF) virus is a mosquito-borne member of the genus Flavivirus, family Flaviviridae, which includes other important human-pathogenic viruses, such as dengue (DEN), Zika (ZIK), West Nile (WN), Japanese encephalitis (JE) and tick-borne encephalitis (TBE) viruses 1.
+Enterotoxigenic Escherichia coli (ETEC) is a major cause of diarrhea in children of developing countries and in visitors to such countries (2,42).
+Adeno-associated virus (AAV) is a dependent parvovirus with a 4.7-kb single-stranded linear DNA genome.
+Mouse hepatitis virus (MHV) is a member of the Coronaviridae, a group of enveloped viruses with a positive-strand RNA genome.
+PML is a member of the tripartite motif (TRIM) family of proteins, which play a key role in both cell-intrinsic and immune host responses against viruses (reviewed in reference 9).
+Suppressor of cytokine-singlaing-3 (SOCS-3) is an important cellular antiinflammatory regulator and is a target of miR-203.
+Anti Mullerian hormone (AMH) is a member of the transforming growth factor beta family and its action is mediated through the AMH receptor type II (AMHRII).
+Mycoplasma pneumoniae (MP) is a pathogenic microorganism that contains DNA and RNA and lacks a cell wall.
+Mouse hepatitis virus (MHV) is a member of the coronavirus family of enveloped, positive-strand RNA viruses and causes both lytic and persistent infections in vivo and in vitro.
+The koala retrovirus (KoRV) is an example of a recent transspecies transmission and endogenization, whereas the closely related gibbon ape leukemia virus (GaLV) remains exogenous in gibbons.
+The cellular DNA damage response (DDR) is a complex network of signaling pathways that safeguards cellular DNA to maintain genomic integrity both during replication and when the cell is under threat from endogenous damage and exogenous agents (2-4).
+Glycosylated hemoglobin (HbA1c) is an important determinant of diabetes control and reflects the mean glycemic level over the preceding 120 days, which is the average lifespan of a red blood cell.
+Eastern equine encephalitis virus (EEEV) is a member of the Alphavirus genus, which is comprised mostly of mosquito-borne positive-sense single-stranded RNA viruses in the family Togaviridae 1.
+FAVIPIRAVIR Favipiravir (T-705) is an antiviral triphosphate that inhibits RNA polymerase, blocking viral replication.
+Brome mosaic virus (BMV) is a well-studied member of the large alphavirus-like superfamily of animal and plant positivestrand RNA viruses.
+Dengue virus (DV) is a flavivirus that is spread by mosquitoes and causes millions of cases of disease each year worldwide (2,9,17).
+Herpes simplex virus-1 (HSV-1) is a prototypical member of the herpesvirus family of double-stranded DNA viruses.
+The major feature of domain III (DIII) is an immunoglobulinlike region that is thought to contribute to host cell binding (12,13).
+The chicken immunoglobulin Y (IgY) is a highly conserved homolog of human immunoglobulin G (IgG) (5,40), however, IgYs do not bind to human Fc receptors or fix mammalian complement components, and do not trigger potentially dangerous immune responses (14,15,37,41,42).
+Human papillomavirus (HPV) is a group of more than 200 DNA viruses that can infect the skin and mucosa.
+Hypervariable region 1 (HVR1) is an example of such a highly variable region in HCV; by using the sequences in HVR1 from both donors and recipients, a very precise analysis may be performed even when only a short time has elapsed from transmission to sampling.
+The toxin of the system (AvcD) is a deoxycytidylate deaminase that converts deoxycytidines (dC) to dexoyuridines (dU), while the RNA antitoxin (AvcI) inhibits AvcD activity.
+Caprine arthritis encephalitis virus (CAEV) is an ungulate lentivirus that replicates only in macrophages of infected goats and causes in some circumstances CNS disease in addition to other syndromes unique to goats, but there is no loss of T cells.
+West Nile virus (WNV) is a neurotropic flavivirus that appeared as an emerging infectious disease in the northeastern United States in 1999.
+Southampton virus (SHV) is a member of theNorwalk-like viruses (NLVs), one of four genera of the family Caliciviridae.
+Herpes simplex virus 1 (HSV-1) is an archetypal member of the alphaherpesvirus subfamily with a large genome encoding over 80 proteins, many of which play a critical role in virus-host interactions and immune modulation.
+Matrix antigen (MA) is a proteolytic cleavage product of the retrovirus Gag polyprotein (reviewed in reference 13).
+Porcine epidemic diarrhea (PED) is a common type of viral enteritis in pigs that is caus ed by PED virus (PEDV).
+ETS homologous factor (EHF) is a member of the E26 transformation specific (ETS) transcription factor family.
+Virion infectivity factor (Vif) is a protein encoded by human immunodeficiency virus types 1 and 2 (HIV-1 and -2) and simian immunodeficiency virus, plus other lentiviruses, and is essential for viral replication either in vivo or in culture for nonpermissive cells such as peripheral blood lymphoid cells, macrophages, and H9 T cells.
+Human respiratory syncytial virus (HRSV) is an enveloped RNA virus that assembles and buds from the plasma membrane of infected cells.
+Zika virus (ZIKV) is an emerging pathogen that can cause microcephaly and other neurological defects in developing fetuses.
+Lymphocytic choriomeningitis virus (LCMV), a Mammarenavirus, is an enveloped spherical virus that contains two segments of negative-stranded RNA totaling 11 kb.
+Influenza A virus (IAV) is an important human pathogen that causes worldwide epidemics yearly, and pandemics sporadically.
+The blood-brain barrier (BBB) is a key obstacle for circulating cancer cells to enter the brain.
+Intrahepatic cholestasis of pregnancy (ICP) is a liver disorder characterized by the presence of pruritus and biochemical cholestasis, appearing predominantly during the third trimester of pregnancy and disappearing spontaneously after parturition.
+Turnip mosaic virus (TuMV) is a member of the genus Potyvirus in the family Potyviridae and is a major worldwide pathogen of brassica crops.
+Human parainfluenza virus type 3 (HPIV-3) is an airborne pathogen that infects the epithelial cells of the respiratory tract.
+Venezuelan equine encephalitis virus (VEEV) is a reemerging virus that causes a severe and often fatal disease in equids and humans.
+Progressive multifocal leukoencephalopathy (PML) is a rare disease of the central nervous system caused by opportunistic infection with JC virus.
+Human metapneumovirus (HMPV) is a significant cause of respiratory infections, particularly in children, the elderly, and immunocompromised individuals.
+The avian coronavirus infectious bronchitis virus (IBV) is a member of the Gammacoronavirus genus that affects domestic fowl (1,2), primarily infecting the host respiratory tract, and is a global endemic virus.
+Herpes simplex virus (HSV) is an enveloped DNA virus that infects through contact with mucosal membranes.
+RNA interference (RNAi) is a mechanism of defence against viruses and transposable elements in plants, fungi, and animals.
+Progressive multifocal leukoencephalopathy (PML) is a demyelinating disease of the central nervous system caused by opportunistic infection with the JC virus (JCV).
+Hepatitis C virus (HCV), a member of the Flaviviridae family, is a positive-stranded RNA virus of about 9.5 kb (3,9,16).
+Lymphocytic choriomeningitis virus (LCMV) is an arenavirus that is a natural pathogen of mice.
+RNA-sequencing (RNA-seq) is an unbiased technique for examining the transcriptome of a tissue, to identify genes that are differentially expressed between tissues.
+Herpes simplex virus type 1 (HSV-1) is a common human pathogen that causes localized skin infections of the mucosal epithelia of the oral cavity, the pharynx, the oesophagus, and the eyes.
+Mouse hepatitis virus (MHV), a coronavirus, is an envel- oped virus with a single-stranded, positive-sense RNA genome of approximately 31 kb (14, 15, 27).
+Immunogenic cell death (ICD) is a regulated form of cell death that activates adaptive antitumor immunity, primarily through the stimulation of cytotoxic T lymphocytes.
+Whole Metagenome Sequencing (WMS) is a technique that analyzes all of the genetic material in a sample, enabling a thorough comprehension of the microbiota's biological functions.
+RNA interference (RNAi) is an ancient intra-cellular mechanism that regulates gene expression and cell function.
+The severe acute respiratory syndrome coronavirus (SARS-CoV) is a positive-stranded RNA virus with a large 29.7-kb genome that encodes 14 open reading frames (ORFs) (26,30).
+The PRRS virus (PRRSV), is a small enveloped virus with a single-stranded RNA genome containing eight ORFs.
+Epstein-Barr virus (EBV) is a ubiquitous virus which infects the majority of the human population and is the causative agent of infectious mononucleosis.
+Herpes simplex virus 1 (HSV-1) is a common human pathogen that establishes life-long latent infections.
+Turnip crinkle virus (TCV) is a small icosahedral virus with a monopartite genome that infects a broad range of dicotyl- edonous plants.
+Epstein-Barr (EBV) is a powerful immortalizing virus for human B lymphocytes in vitro and is associated with several human neoplasias in vivo.
+The leukotoxin (Lkt) is a protein that is secreted by the bacterium and acts as a pore-forming cytolysin that inserts into the plasma membrane of host cells, leading to cell lysis.
+Human NTCP (SLC10A1) is a multiple-transmembrane protein that is predominantly expressed at the basolateral membrane of hepatocytes.
+Vesicular stomatitis virus (VSV) is a negative-strand RNA virus which possesses a single type envelope glycoprotein (G) mediating viral entry.
+Ligand efficiency (LE) is a commonly applied parameter for selecting favorable ligands by comparing the values of average binding energy per atom.
+RNA interference (RNAi) is a natural cellular mechanism that inhibits gene expression in a sequence-specific manner.
+Ectromelia virus (ECTV) is a natural pathogen of mice that causes mousepox, and many of its genes have been implicated in the modulation of host immune responses.
+Golgi antiapoptotic protein (GAAP) is a novel regulator of cell death that is highly conserved in eukaryotes and present in some poxviruses, but its molecular mechanism is unknown.
+Measles virus (MV) is an immunosuppressive virus that can mediate profound transient suppression of a wide array of immune responses.
+Photodynamic therapy (PDT) is a phototherapeutic technique that employs light and a photosensitizer in conjunction with molecular tissue oxygen to induce cell death.
+Lumpy skin disease (LSD) is a viral disease of livestock that can cause cutaneous and internal lesions, affecting milk production, hide quality and in some cases death of the infected animal.
+Human RNA helicase A (RHA), also known as DHX9, is a member of DExD/H box protein family and has also been shown involved in reverse transcription-related activity of HIV-1.
+Rift Valley fever virus (RVFV) is an arbovirus that causes disease in livestock and humans in Africa and the Middle East.
+The hepatitis E virus (HEV) (specie Orthohepevirus A, genus Ortohepevirus, family Hepeviridae) is a non-enveloped virus with a positive sense single stranded RNA genome.
+Measles virus (MeV), a member of the genus Morbillivirus of the family Paramyxoviridae, is an enveloped virus with a nonsegmented negative-sense RNA genome.
+Hepatitis delta virus (HDV) is a defective RNA virus which is dependent on hepatitis B virus for essential helper functions.
+Herpes simplex virus 1 (HSV-1) is a ubiquitous human pathogen that establishes latent infection in ganglia neurons.
+Background-Chronic granulomatous disease (CGD) is a rare inherited disease of the phagocyte NADPH oxidase system that causes defective production of toxic oxygen metabolites, impaired bacterial and fungal killing, and recurrent life-threatening infections, mostly by catalaseproducing organisms.
+The Epstein-Barr virus (EBV) transactivator protein (ZEBRA) is an immediate-early protein that plays an important role in the switch from latency to productive cycle in EBV virus.
+Human herpes simplex virus 1 (HSV-1) is a double-stranded DNA virus that causes facial, ocular, and encephalitic disease in humans.
+GENE THERAPY Adeno-associated virus (AAV) is a small DNA virus that has been closely studied for its potential for human gene therapy.
+Dengue virus (DENV) is a single-stranded RNA virus that belongs to the Flaviviridae family, Flavivirus genus.
+Marek's disease (MD) is a lymphoproliferative disease of chickens caused by the oncogenic Gallid herpesvirus 2, commonly known as Marek's disease virus (MDV).
+Quorum sensing (QS) is a process of cell-to-cell communication that bacteria use to synchronize collective behaviors.
+Adeno-associated virus (AAV) belongs to the Parvoviridae family and is a type of defective virus with simple structured single-stranded DNA.
+West Nile virus (WNV) is an arthropod-borne virus with a world wide distribution that causes neurologic disease and death.
+The hepatitis C virus (HCV) core protein is a multifunctional protein that can interfere with the induction of an immune response.
+Anti-cancer therapy based on oncolytic viruses (OVs) is a targeted approach that takes advantage of OVs' ability to selectively infect and replicate in tumor cells, activate the host immune response, and destroy malignant cells over healthy ones.
+Herpes simplex virus type 1 (HSV-1) ICP27 protein is an essential regulator of viral gene expression with roles at various levels of RNA metabolism in the nucleus.
+P. falciparum (Pf) enoyl acyl carrier protein (ACP) reductase (ENR) is a key enzyme of plasmodial type II fatty acid biosynthesis (FAS II).
+The nuclear factor erythroid (Nrf2) Kelch-like ECH-associated protein 1 (Keap1) system is an anti-stress mechanism that is dissociated by high levels of ROS.
+Cucumber mosaic virus (CMV) is an RNA plant virus with a tripartite genome and an extremely broad host range.
+Oropouche virus (OROV) is an emerging vector-borne pathogen in the American tropics that is a significant cause of human disease.
+Zika virus (ZIKV), a mosquito-borne Flavivirus belonging to the Flaviviridae family, is an emerging pathogen that is spreading rapidly across the Americas, raising concerns in the forefront of global healthcare (Ayres, 2016).
+P orcine epidemic diarrhea virus (PEDV), a member of the fam- ily Coronaviridae, is an enveloped virus with a single-stranded, positive-sense RNA genome of about 30 kb (10,12).
+The C-type lectin member 5A (CLEC5A) is a pattern recognition receptor for members of the Flavivirus family and has critical functions in response to dengue virus and Japanese encephalitis virus.
+Chronic wasting disease (CWD) is a prion disease that affects captive and free-ranging cervids in many U.S. states and Canadian provinces, including Colorado and neighboring states.
+Hepatitis B virus (HBV), a member of the hepadnavirus family, is an enveloped virus with partially double-stranded DNA.
+Thyroxin (T4) is a form of thyroid hormone which is the major hormone secreted by the follicular cells of the thyroid gland.
+Maeda 1 Introduction: Prefoldin (PFD) is a molecular chaperone that captures a protein-folding intermediate and transfers it to a group II chaperonin (CPN) for correct folding.
+Chikungunya virus (CHIKV), an Alphavirus belonging to the family Togaviridae, is an enveloped virus with a positive sense RNA of approximately 11.8 kb.
+Human metapneumovirus (HMPV) is a negative-strand RNA virus that frequently causes respiratory tract infections in infants, the elderly, and the immunocompromised.
+Optical coherence tomography (OCT) is a noninvasive imaging technique that produces highresolution cross-sectional images of the retina.
+Tyrosine kinase receptor (TrkB) is a multifunctional receptor that participates in neurodegenerative disorders.
+Marek's disease (MD) is a neoplastic disease of chickens, which is caused by the lymphotropic alphaherpesvirus, MD virus (MDV).
+Kaposi's sarcoma-associated herpesvirus (KSHV) is an oncogenic virus associated with Kaposi's sarcoma (KS), which manifests hyper inflammation and oxidative stress as the hallmarks.
+Hydrogen Exchange Mass Spectrometry (HXMS) is a promising approach that is sensitive to a broad range of folding and unfolding dynamics in the native state, but direct analysis of spectra to determine rate constants is limited to certain experimental regimes.
+Translesion synthesis (TLS), a DNA damage tolerance (DDT) pathway, is an error prone process that recruits specialized polymerases to copy over lesioned areas of DNA.
+Thioesterase superfamily member 2 (Them2) is a member of the acyl-CoA thioesterase protein family and it can hydrolyze various fatty acyl-CoAs into free acids plus CoA.
+Blood coagulation factor VIII (FVIII) is a non-enzymatic protein cofactor which plays a crucial role in the formation of a stable blood clot.
+Adeno-associated virus (AAV) is a small DNA virus with a single-stranded genome representative of the family Parvoviridae.
+Hepatitis C virus (HCV) is a small ssRNA virus that causes hepatitis C and some cancers, such as liver cancer.
+Porcine epidemic diarrhea virus (PEDV) is a positive-sense RNA virus that causes infectious gastroenteritis in pigs.
+The prototype rhabdovirus vesicular stomatitis virus (VSV) is a classic example of a virus that rapidly inhibits protein synthesis from host mRNA and, at the same time, promotes protein synthesis from its own mRNA (32,47).
+Progressive multifocal leukoencephalopathy (PML) is a rare demyelinating disorder of the central nervous system, caused by the reactivation of the ubiquitous JC virus.
+The plasminogen (Plg) system is an important mechanism for the cell migration through the tissues in the mammalian organisms.
+C anine distemper virus (CDV), a member of the family Paramyxoviridae (genus Morbillivirus), is an enveloped virus with a nonsegmented RNA genome of negative polarity.
+Measles virus (MV), a member of the genus Morbillivirus in the family Paramyxoviridae, is an enveloped virus with a nonsegmented negative-strand RNA genome.
+Reverse transcription-quantitative PCR (RT-qPCR) is a widely used technique for the determination of mRNA level changes in different biological systems 21.
+Caveolin-1 (Cav-1) is a major protein constituent of caveolae, a type of plasma membrane raft.
+Glycogen synthase kinase-3 (GSK3) is an enzyme that functions in many signaling pathways, including those involved in development.
+Neisseria meningitidis (Nm) is a common commensal bacterium that is paradoxically also a devastating human pathogen.
+Borna disease virus (BDV) is an attractive paradigm for investigating the mechanisms of neurobehavioral disorders due to the persistence of a non-cytolytic virus.
+Cytokinin (CK) is a primary growth hormone that fine-tunes plant development under normal and stressful conditions.
+Epithelial to mesenchymal transition (EMT) is a key process associated with tumor metastasis and poor prognosis.
+Progressive multifocal leukoencephalopathy (PML) is a severe demyelinating disease of the central nervous system caused by JC virus (JCV) infection.
+Bovine respiratory syncytial virus (BRSV) is an RNA virus with envelope that causes acute, febrile, and highly infectious respiratory diseases in cattle.
+Chikungunya virus (CHIKV) is a mosquito-borne virus of the Alphavirus genus in the Togaviridae family.
+Cyclooxygenase-2 (COX-2) is a membrane-bound enzyme that catalyzes the production of prostaglandins and thromboxanes from arachidonic acid.
+Myxoma virus (MV), the causative agent of myxomatosis, is a large virus with a doublestranded DNA genome of 163 kb which replicates in the cytoplasm of infected cells.
+H epatitis E virus (HEV) is an RNA virus that belongs to the genus Orthohepevirus A.
+Indole amine 2 and 3 dioxygenase (IDO1) is an intracellular non-secretory enzyme that catalyzes kynurenine derivatives from the essential amino acid tryptophan.
+H erpes simplex virus (HSV) is an important human pathogen that infects epithelial cells before spreading to the peripheral nervous system, where it establishes a lifelong latent infection.
+Autocrine motilty factor (AMF) is a cytoline which stimulates tumor cell motility.
+Apple stem grooving virus (ASGV) is a plant virus that primarily infects apple, pear and quince trees and can have significant economic implications for the pome fruit industry.
+Hepatitis C virus (HCV) is a unique enveloped virus that assembles as a hybrid lipoviral particle by tightly interacting with host lipoproteins.
+Hepatitis C virus (HCV) is a positive-sense ssRNA virus of the Flaviviridae family.
+Parkinson disease (PD) is a neurodegenerative disorder which causes dopaminergic neuronal loss in the nigro striatal pathway.
+FccRIIIa (CD16) is a low-affinity receptor that only binds to clustered IgG displayed on the cell surface but not to monomeric IgG.
+IMPORTANCEHuman metapneumovirus (HMPV) is a paramyxovirus that causes respiratory disease worldwide.
+Borna disease virus (BDV) is a neurotropic RNA virus with a wide host range.
+APOBEC3G (A3G) is a host-encoded protein that potently restricts the infectivity of a broad range of retroviruses.
+Membrane type 1 matrix metalloproteinase (MT1-MMP) with a transmembrane domain is a new member of the MMP gene family and is expressed on the cell surfaces of many carcinoma cells to activate the zymogen of MMP-2 (gelatinase A).
+The extracellular matrix (ECM) is an important regulator of cell growth, death and differentiation.
+Macrophage migration inhibitory factor (MIF) is a constitutively expressed protein that is secreted to maintain immune function when glucocorticoids are elevated by trauma or stress.
+E nterovirus 71 (EV71) is a single-stranded RNA virus that be- longs to human enterovirus species A of the genus Enterovirus within the Picornaviridae family.
+Poly(ADP-ribose) Polymerase-13 (PARP13), also known as ZC3HAV1 and Zinc-finger Antiviral Protein (ZAP), is an RNA-binding protein that regulates the stability, and translation of specific mRNAs, and modulates the miRNA silencing pathway to globally impact miRNA targets.
+Human immunodeficiency virus (HIV) is a single-stranded RNA virus that can weaken the body's cellular and humoral immunity and is a serious disease without specific drug management and vaccine.
+RNA interference (RNAi) is a powerful tool for functional gene analysis which has been successfully used to downregulate the expression levels of target genes.
+Herpes simplex virus 1 (HSV-1) protein ICP27 is a multifunctional regulatory protein that is posttranslationally modified by phosphorylation during viral infection.
+Pyruvate kinase (PK) is an enzyme with a crucial importance for cellular metabolism and homeostasis of the whole organism.
+Mendelian randomisation (MR) is a method of causal inference which relies on the use of genetic variation, assigned at conception, as a proxy of the exposure of interest and thus limits bias due to confounding and reverse causation, subject to core assumptions being met.
+Human cytomegalovirus (HCMV) is a ubiquitous pathogen that plays an important role in the senescence process.
+Foot-and-mouth disease (FMD) is a highly contagious disease that affects clovenhoofed animals such as pigs, cattle, and sheep.
+Dengue virus (DENV) (species: Orthoflavivirus denguei; genus: Orthoflavivirus; family: Flaviviridae) is an enveloped virus with a positive-sense single-stranded RNA genome.
+I nfluenza A virus (IAV) is a serious respiratory pathogen that poses an ongoing public health problem, as it leads to annual epidemics and occasional pandemics.
+Bovine ephemeral fever virus (BEFV) is an arthropodborne virus which causes a disabling febrile infection of cattle and water buffalo.
+Zika virus (ZIKV) is an emerging arthropod-borne virus that belongs to the family Flaviviridae and the genus Flavivirus.
+Insulin-like growth factor (IGF1) is a small protein with very potent actions.
+Epstein-Barr virus (EBV) is a ubiquitous oncogenic virus that induces many cancers.
+Retinoblastoma like protein 2 (RBL2) or p130 is a member of the pocket protein family, which is infrequently mutated in human tumours.
+Hepatitis delta virus (HDV) is a small RNA virus that is associated with severe acute and chronic liver disease in humans.
+Parkinson's disease (PD) is a degenerative disorder of the central nervous system that mainly affects the motor system and was first described in detail in 1817 (Goetz, 2012).
+The Transmissible Gastroenteritis Coronavirus (TGEV) is an enveloped virus with an internal core made of RNA, N and M proteins.
+Diphtheria toxin (DT), the main virulence factor produced by the causative organism C. diphtheriae, is a protein molecule with a molecular mass of 58,350 Da.
+Renin-Angiotensin-Aldosterone System (RAAS) is a part of the hormone system that spreads throughout of human body.
+Peste des petits ruminants (PPR) is a transboundary viral disease that affects small ruminants, such as goats and sheep, in Africa, the Middle East, and Asia, causing substantial damage to livelihoods and disrupting livestock trade.
+HIV associated neurocognitive disorder (HAND) is a condition that encompasses cognitive deficits as well as motor symptoms.
+Hepatitis C virus (HCV) is a highly diverse pathogen that is classified into seven distinct genotypes.
+Equine infectious anemia virus (EIAV) is a lentivirus that causes persistent infection in horses.
+The envelope stress response (ESR) of Gram-negative bacteria is a paradigm for sRNA-mediated stress management and involves, among other factors, the alternative sigma factor E (r E ) and one or more sRNAs.
+The integrated stress response (ISR) is a homeostatic mechanism by which eukaryotic cells sense and respond to stress-inducing signals, such as amino acid starvation.
+The hepatitis C virus (HCV) multifunctional nonstructural protein 3 (NS3) is a protease that cleaves viral and host proteins and a helicase that separates DNA and RNA structures in reactions fueled by ATP hydrolysis.
+Retinoic acid-inducible gene I (RIG-I), or DExD/H-Box helicase 58 (DDX58), is an innate immune receptor that senses cytoplasmic viral nucleic acids and activates a downstream signaling cascade that leads to the production of type I IFNs (16,18).
+Myelin protein zero (MPZ) is a major structural protein of peripheral nerve myelin.
+Helicase-dependent amplification (HDA) is an isothermal amplification method that does not require thermal variation for detachment double-stranded nucleic acid and polymerization.
+The population attributable fraction (PAF) is a measure that is widely used to assess the public health impact of risk factors or exposures in populations.
+Varicella-zoster virus (VZV) is a human alphaherpesvirus that causes two diseases, varicella (chicken pox) and herpes zoster (shingles); the latter disease is a recurrent infection following prolonged latency in sensory ganglia.
+Guillain-Barre syndrome (GBS) is an autoimmune disease with polyneuropathy involving motor, sensory and sometimes autonomic nerves.
+Subacute sclerosing panencephalitis (SSPE) is a progressive neurological disorder of childhood and early adolescence.
+Amyotrophic latera sclerosis (ALS) is a neurodegenerative disease that selectively affects motor neurons of the cortex, brain stem and spinal cord.
+Classical swine fever virus (CSFV), the causative agent of CSF, is an enveloped RNA virus with a single-stranded positive-sense RNA genome of ∼12.3 kb with one large open reading frame (ORF) flanked by 5 ′ and 3 ′ untranslated regions (UTRs).
+Kaposi's sarcoma-associated herpesvirus (KSHV) DNA polymerase processiv ity factor, ORF59, is a lytic protein essential for viral DNA synthesis as part of the core replication complex.
+Dengue virus (DENV) is a positive-strand RNA virus of the family Flaviviridae, genus Flavivirus.
+Reverse transcription-polymerase chain reaction (RT-PCR) is a highly sensitive method for viral diagnosis and is especially useful for detection of low titer virus or non-viable viral RNA in respiratory secretions.
+Hepatitis delta virus (HDV) is a defective human virus that lacks the ability to produce its own envelope proteins and, thus, depends on the presence of a helper virus, which induces its surface proteins to produce infectious particles.
+Influenza A virus (IAV) is a human respiratory pathogen that causes yearly global epidemics, as well as sporadic pandemics due to human adaptation of pathogenic strains.
+Preeclampsia (PE) is a multi-organ syndrome that contributes greatly to neonatal mortality and maternal health without a definite cause.
+Preeclampsia (PE) is a maternal syndrome defined by development of gestational hypertension and proteinuria.
+Prostaglandin E2 (PGE2) is a hormone-like substance that acts as an immunomodulator at the maternalfetal interface.
+Superoxide Dismutase 1 (SOD1) is an antioxidant enzyme that protects the cells from radical oxygen species.
+The template modeling score (TM-score) is a measure of similarity between two protein structures.
+Glucose-6-phosphate dehydrogenase (G6PD) is an enzyme that makes up part of the pentose phosphate pathway.
+Sodium taurocholate cotransporting polypeptide (NTCP) is a functional receptor for hepatitis B virus (HBV) entry.
+The RIG-I-like receptor (RLR) family of pattern recognition receptors (PRRs) is a group of cytosolic RNA helicase proteins that can identify viral RNA as nonself via binding to pathogen associated molecular pattern (PAMP) motifs within RNA ligands that accumulate during virus infection.
+Progressive multifocal leukoencephalopathy (PML) is a diffuse infectious disease of the central nervous system (CNS) with a disabling and potentially lethal course.
+Herpes simplex virus type 1 (HSV-1) is a double-stranded DNA virus with a broad host range.
+Food chain length (FCL) is a measure of the number of trophic links between primary producers and the top predator in an ecosystem.
+The human astrovirus (HAstV) is a non-enveloped, single-stranded RNA virus that is a common cause of gastroenteritis.
+Hypokalemic periodic paralysis (HypoPP) is a genetic disease that presents with severe and recurrent episodes of weakness triggered by reduced serum potassium.
+Human immunodeficiency virus type 1 (HIV-1) viral protein R (Vpr) is a virion-associated protein that transactivates the HIV-1 long terminal repeat (LTR).
+Allele-specific expression (ASE) is an imbalance of allelic gene expression often driven by genetic and epigenetic changes in cisregulatory regions.
+Tumor necrosis factor (TNF) is a cytokine with multiple effects on the cells.
+Preeclampsia (PE) is a pregnancy disorder associated with dyslipidemia, oxidative stress and endothelial dysfunction.
+The Support Vector Machine (SVM) algorithm is a supervised learning method for classification and regression.
+Glial Fibrillary Acidic Protein (GFAP) (Enzyme-Linked Immunosorbent Assay) GFAP is a member of the cytoskeletal protein family and constitutes the main 8-9 nm intermediate filament in mature CNS astrocytes.
+Hepatitis C virus (HCV) is a positive-sense RNA virus of the genus Hepacivirus in the Flaviviridae family.
+Severe acute respiratory syndrome (SARS) is a recently emerged human infectious disease caused by a zoonotic coronavirus (SARS-CoV) that has a mortality rate of approximately 10% (11,20,24,30).
+Optineurin (OPTN) is an adaptor protein that has been linked to mitophagy, the autophagy of mitochondria (38).
+Lysin motif (LysM) receptor-like kinase is a cell membrane protein that can enhance host disease resistance through the LysM signaling pathway [51].
+Simian virus 40 (SV40) large T antigen is a viral protein that interacts with tumor suppressors and is capable of transforming both primary and established cell lines (15).
+Pure red cell aplasia (PRCA) is a syndrome defined by anormocytic normochromic anaemia with severe reticulocytopaenia and marked reduction or absence of erythroid precursors from the bone marrow [1].
+Fas cell surface death receptor (FAS) is a member of the tumor necrosis factor receptor superfamily, known as 'death receptors', and has been revealed to serve an important role in initiating cell apoptosis [7].
+Stromal cell-derived factor 1 (SDF-1) is a chemokine protein that has a wide range of functions, one being the ability to control the trafficking of leukocytes. [60] CXCL12/SDF-1 prevented the accumulation of newly reverse-transcribed HIV proviral DNA, required for productive infection.
+Multiple sclerosis (MS) is a chronic inflammatory disorder of the central nervous system (CNS) and is the most common cause of non-traumatic disability among young adults [1].
+Lipoxygenase (LOX) is an essential enzyme for JA synthesis, and activation of LOX expression can significantly induce the synthesis and accumulation of JA [36,37].
+CXC chemokine receptor (CXCR)4 is a coreceptor for the entry of T cell line-tropic (X4) strains of HIV-1, and CC chemokine receptor (CCR)5 serves as a coreceptor for macrophage-tropic (R5) strains of HIV-1 (5)(6)(7)(8).
+Oral lichen planus (OLP) is a chronic inflammatory disease in which the immunopathogenesis involves cell-mediated immune dysregulation [1].
+Carbonic anhydrase IX (CAIX) is a hypoxia-induced transmembrane protein that catalyzes the reversible hydration of carbon dioxide into bicarbonate ions and protons [1].
+Adenosine deaminase acting on RNA (ADAR) is a family of editing enzymes that catalyze adenosine-to-inosine (A-to-I) deamination in dsRNA (36).
+Angiotensin-converting enzyme 2 (ACE2) is a key receptor of SARS-CoV-2 virus [17].
+Hepatitis B virus (HBV) is a DNA virus with a life cycle that is somewhat similar to retroviruses [2].
+MG is a precursor of advanced glycation end-products (AGEs), and MG-derived protein modification [5], known as glycation, is a patho-physiologically relevant process.
+Feline infectious peritonitis (FIP) is a disease of felids that has a spectrum of pathological outcomes, all of which are lethal (18).
+The stem cell (SC) is a type of cell that has the remarkable capacity of regenerating it selves [10].
+NETs release (NETosis) is a powerful mechanism of microbial destruction whereby neutrophils die and release digestive granules containing neutrophil elastase (NE) and myeloperoxidase (MPO) [23].
+Reverse transcriptase (RT) is an enzyme that catalyses DNA polymerization using an RNA template [2,3].
+The dengue virus (DENV) is an enveloped flavivirus with a diameter of 40-60 nm that contains a nucleocapsid associated with a linear positive-sense, 5 0 -capped RNA genome of approximately 11 kb in length that encodes three structural proteins (capsid, pre-membrane, and envelope) and seven nonstructural proteins (NS1, NS2a, NS2b, NS3, NS4a, NS4b, and NS5).
+Nucleoside diphosphate kinase (NDK) is an enzyme that has a key role in DNA replication as catalyzes the phosphorylation of nucleotides diphosphates to generate nucleotides triphosphates (NTP´s).
+The hepatitis B core antigen (HBc) is a non-enveloped model VLP that has been extensively studied and applied as carrier to vaccinate against various heterologous pathogens (11).
+Malignant catarrhal fever (MCF) is an often-fatal lymphoproliferative disease of mainly ruminant species including domestic cattle, water buffalo, American bison, various species of cervids and other wild living ruminants, caused by closely related Gammaherpesvirinae of the genus Macavirus [6].
+The Hepatitis Delta virus (HDV) is a defective RNA virus that can only develop replicative activity and hence establish infection in the presence of the envelope of the hepatitis B virus (HBV) [1,2].
+Like GTPase 1 (MX1) is an interferon-inducible protein that is associated with viral infections by influenza and viral encephalitis [56,57].
+Group A rotavirus (RVA) is a principal aetiologic agent of ailment, it is a nonenveloped virus consisting of 11 dsRNA gene segments wrapped in trilaminar icosahedral capsid [5].
+Heme oxygenase 1 (HO-1) is an enzyme linked with suppression of inflammatory responses (32).
+Zika virus (ZIKV) is an RNA virus of the Flavivirus genus, Flaviviridae family, that belongs to the arbovirus group, which comprises viruses that share a cycle of transmission via arthropod vectors, most commonly mosquitoes, ticks and flies [1,2].
+Enzootic bovine leukosis (EBL) is a neoplastic lymphoproliferative disease of cattle associated with infection by bovine leukemia virus (BLV) (17).
+The average nucleotide identity (ANI) is a measure for evolutionary relatedness based on sequence similarity between the set of shared genes (8).
+Hepatitis delta virus (HDV) is a satellite RNA virus that depends on the envelope protein of the hepatitis B virus (HBV) to enter the hepatocytes and assemble new HDV particles [1].
+Human papillomavirus (HPV) is a small virus with a doublestranded DNA genome that tends to attach to the squamous epithelium of the skin layers [1] and mucous membranes of the upper gastrointestinal tract, respiratory tract, and genital tract that causing genital warts, laryngeal papillomas, and certain types of cancer [2].
+The viral infectivity factor (Vif) is an HIV-1 accessory protein that binds to A3G before its incorporation into virions and quickly promotes its degradation by the proteasome [reviewed in (10)].
+TLR4 is a receptor for lipopolysaccharide (LPS), preferably activated by a bacterial infection, whereas TLR4 is also activated during HSV-1 infection in primary mouse astrocytes (27).
+Baloxavir marboxil (BXM) is a potent inhibitor of influenza virus replication, with antiviral effects specific for the four types of influenza viruses (A, B, C, and D) (46), that acts over the cap-dependent endonuclease within the polymerase PA subunit (47,48).
+DPP4 (CD26) is a serine aminopeptidase that acts as a receptor for MERS-CoV and is also an essential determinant of MERS-CoV tropism [13,68].
+Hepatitis C virus (HCV) is an etiological agent of liver disease including steatosis, cirrhosis, and hepatocellular carcinoma, and has infected over 170 million individuals worldwide [1,2].
+Herpes simplex virus 1 (HSV-1) ICP27 is a multifunctional regulatory protein that interacts with a number of proteins and that binds RNA (32).
+Regulated cell death (RCD) is a mechanism by which the cell activates its own machinery for self-destruction; it involves structured signaling cascades and molecularly defined effector mechanisms and is important for the maintenance of tissues [1][2][3][4].
+Hepatitis B virus (HBV) is a DNA virus with a small, double-stranded structure and eight genotypes with variable geographic distribution for each type [1].
+GSDMD is a protein composed of an N terminus (N-GSDMD) and C terminus (C-GSDMD) connected by a peptide linker (14)(15)(16).
+Chicken infectious anemia virus (CAV) is a small DNA virus of the family Circoviridae and has recently been classified as the sole member of the genus Gyrovirus (44).
+Enterovirus A71 (EV-A71) is a small non-enveloped virus with a positive-sense singlestranded RNA genome that belongs to the genus Enterovirus of the Picornaviridae family [1].
+M umps virus (MuV) is a human pathogen of the Rubulavirus genus of the Paramyxoviridae family that causes an acute infection with symptoms ranging from parotitis to mild meningitis and severe encephalitis (1).
+RNA interference (RNAi) is a method used to silence viral genes, and small interfering RNA (siRNA) was demonstrated as a potential therapeutic strategy against viral infections [161].
+Epithelial-mesenchymal transition (EMT) is a biological process in which epithelial cells transform into cells with a mesenchymal phenotype, and this process constitutes the early basis of fibrosis (15).
+Major Histocompatibility Complex (MHC) is a critical protein that binds the antigenic peptide and presents it on the cell surface to be recognized by the T-cell receptor, followed by the activation and maturation of the T-cell to fight the infected cell in the future [20].
+Japanese encephalitis virus (JEV) is an enveloped virus with a genome of single-stranded positive RNA approximately 11kb in size and belongs to the genus Flavivirus in the family Flaviviridae [1].
+Vaccinia virus (VV) is a large-DNA animal virus which replicates entirely in the cell cytoplasm (22).
+Coat protein (CP) is a multifunctional protein that plays a crucial role in the molecular mechanism of the virus infection processes and has an important role also in virus movement [30].
+CXC chemokine receptor 4 (CXCR4) is a coreceptor for the entry of T-cell-linetropic (T-tropic) strains of HIV-1 (15), and the CC chemokine receptor 5 (CCR5) serves as a coreceptor for macrophage tropic (M-tropic) strains of HIV-1 (1,6,11,14).
+Sindbis virus (SV) is a lytic virus which has been shown to induce apoptosis in nonneuronal cells (34).
+K aposi sarcoma (KS) is a neoplasia of endothelial cell origin that is etiologically associated with Kaposi sarcoma-associated herpesvirus (KSHV) infection (1).
+Adenovirus (Ad) is a nonenveloped virus that has been reported to contain glycosylated proteins (15,30,31) including a mono-GlcNac addition to the fiber knob protein (6).
+Herpes simplex virus type 1 (HSV-1) is an enveloped virus that causes primary gingivostomatitis, herpes labialis, and other important infections such as encephalitis, ocular and genital infection, meningitis, and pneumonitis. [1][2][3] Therapeutic choice for these infections includes the use of topical or systemic antiviral agent.
+T he DNA damage response (DDR) is a conglomerate of pathways designed to detect DNA damage and signal its presence to cell cycle checkpoints and to the repair machinery, allowing the cell to pause and mend the damage or, if the damage is too severe, to trigger apoptosis or senescence (1,2).
+Poly(ADP-ribose) polymerase 1 (PARP-1) is a sensor protein that belongs to a large family of PARP proteins and detects various types of DNA lesions, including singlestrand DNA breaks, double-strand DNA breaks, and others (4)(5)(6).
+Severe acute respiratory syndrome (SARS) is a severe form of pneumonia due to infection with a coronavirus (CoV) that has adapted to human-to-human transmission (12).
+Phorbol 12-myristate 13-acetate (PMA) is a known selective activator of protein kinase C commonly used to induce an invasive and metastatic phenotype in in vitro cultured cancer cells [43,44].
+Wolbachia surface protein (WSP) is an abundant Wolbachia protein that not only partakes in the structure of Wolbachia but has also been shown to be secreted into the host cytoplasm in nematodes (19).
+Epithelial-mesenchymal transition (EMT) is a process by which epithelial cells switch from the epithelial phenotype to the mesenchymal phenotype, accompanied with the ectopic expressions of EMT-related genes [4].
+Differential display (DD) is a powerful method used to investigate gene expression, specifically to look for a difference in the expression of mRNAs between two closely related samples [53,54].
+RNA interference (RNAi) is an evolutionarily conserved mechanism of sequence-specific gene silencing that reduces the levels of protein products translated from a targeted mRNA (34).
+Severe acute respiratory syndrome (SARS) is a potentially fatal atypical pneumonia that arose in Guangdong Province of the People's Republic of China in November 2002.
+Principal Component Analysis (PCA) is an unsupervised multidimensional statistical Analysis method, which can reflect the overall metabolic differences among each group and the variation degree among samples within the group.
+Adult T cell Leukemia (ATL) is an aggressive lymphoproliferative malignancy secondary to infection by the human T-cell leukemia virus type I (HTLV-I) and is associated with a dismal prognosis.
+Hepatitis B virus (HBV) is an enveloped, partially double-stranded DNA virus belonging to the family of Hepadnaviridae.
+Infectious bronchitis virus (IBV) is a gammacoronavirus infecting chicken.
+Adult T cell leukemia (ATL) is typically characterised by expansion of a single dominant malignantly transformed HTLV-1-infected clone.
+The trans-activation response element (TAR) is a leader RNA found in all human immunodeficiency virus (HIV) transcripts.
+The area postrema (AP) is a midline region lacking a blood-brain barrier that lies immediately adjacent to the NTS.
+Ferulic acid (FA) is a phenolic molecule ample in vegetables, i.e., carrots and tomatoes, fruits, i.e., oranges and pineapples, and in seed plants, i.e., oranges and pineapples.
+West Nile Virus (WNV) is a mosquito-borne neurotropic flavivirus, and closely related to Yellow Fever Virus (YFV) and Dengue virus (DENV).
+GacS is a membrane-associated sensor histidine kinase (SK) which senses environmental signals, working with its cognate response regulator (RR) GacA, which positively controls the expression of two central regulatory noncoding RNAs, namely, RsmY and RsmZ.
+Rous sarcoma virus (RSV) is a prototype simple oncoretrovirus.
+Opium poppy mosaic virus (OPMV) is a recently discovered umbravirus in the family Tombusviridae.
+H epatitis B virus (HBV) is a small, enveloped partially double-stranded (ds) DNA virus containing a relaxed circular DNA (rcDNA) genome (1,2).
+Head and neck squamous cell carcinoma (HNSCC) is characterized by complex relations between stromal, epithelial, and immune cells within the tumor microenvironment (TME).
+IMPORTANCEThe capsid anchor (Ca) is a single-pass transmembrane domain at the C terminus of the capsid protein (C) known to function as a signal for the translocation of PrM into the ER lumen.
+Back ground: Dilated cardiomyopathy (DCM) is characterized by left or bi-ventricular dilation associated with global systolic dysfunction, and is the most common indication for heart transplant in the UK.
+West Nile virus (WNV) is a neurotropic, arthropod-borne flavivirus with a single-stranded positive-sense RNA genome.
+Porcine reproductive and respiratory syndrome (PRRS), characterized by severe reproductive failure in sows, and respiratory distress in piglets and growing pigs, is now considered one of the most important diseases in countries with intensive swine industries (Rossow, 1998).
+Ameloblastic carcinoma (AC) is a rare primary odontogenic malignancy that combines the histological features of ameloblastoma with cytologic atypia.
+Kawasaki disease (KD) is an acute, self-limited vasculitis in infants and young children.
+Hepatitis C virus (HCV) is a hepatotropic non-cytopathic positive strand RNA virus, which is considered as the main initiator of chronic hepatitis and hepatic metabolic disorders.
+Epstein-Barr virus (EBV), a lymphotropic γ-herpes virus found in the human population worldwide, is characterized by its unique ability to efficiently transform normal resting B lymphocytes in vitro converting them into lymphoblastoid cell lines (LCLs).
+Alternative splicing (AS) is an important mRNA maturation step that allows increased variability and diversity of proteins in eukaryotes.
+The Giardia lamblia virus (GLV) is a non-enveloped icosahedral dsRNA and endosymbiont virus that infects the zoonotic protozoan parasite Giardia duodenalis (syn.
+TRALI is defined as new acute lung injury (ALI) that occurs during or within 6 h of transfusion, not explained by another ALI risk factor.
+Human leukocyte antigen B27 (HLA-B27) is a prominent major histocompatability complex (MHC) class I-allele in human immune biology.
+GDSL-type esterase/lipase proteins (GELPs) characterized by a conserved GDSL motif at their N-terminus belong to the lipid hydrolysis enzyme superfamily.
+Zika virus (ZIKV) is a mosquito-borne Orthoflavivirus, belonging to a genus that also contains other important human pathogens like the yellow fever virus (YFV), dengue virus (DENV), Japanese encephalitis virus (JEV), West Nile virus (WNV), and tick-borne encephalitis virus.
+Oral lichen planus (OLP) is a common chronic inflammatory immune-mediated disease, with an etiopathogenesis associated with cell-mediated immunological dysfunction.
+The signal peptidase complex (SPC) is a membrane complex in the endoplasmic reticulum, where it cleaves signal peptides (SPs) from the N-termini of the secretory and membrane proteins.
+Human immunodeficiency virus (HIV) is a lentivirus characterized by its ability to establish chronic infection by evading the immune system.
+Interferon regulatory factor 7 (IRF7) is a key regulator in the host's innate antiviral immune response to type I interferons (IFNs).
+Chronic obstructive pulmonary disease (COPD) refers to a chronic disease characterized by airway obstruction and inflammation (Rabe and Watz 2017).
+Heme oxygenase-1 (HO-1) is a ubiquitously expressed inducible isoform of the first and rate-limiting enzyme for heme degradation.
+Hepatitis B virus (HBV) is a partially double-stranded, enveloped DNA virus classified within the Hepadnaviridae as well as a member of the hepatitis virus grouping with HCV.
+Multiple myeloma (MM) is a hematologic malignancy, characterized by the neoplastic proliferation of plasma cells producing monoclonal immunoglobulins.
+Chronic lymphocytic leukemia (CLL) is the most common human leukemia and is characterized by predominantly nondividing malignant B cells overexpressing the antiapoptotic B cell lymphoma 2 (Bcl2) protein. miR-15a and miR-16-1 are deleted or down-regulated in the majority of CLLs.
+C3G is a guanine nucleotide exchange factor (GEF) for Rap1, and is activated via Crk adaptor protein.
+T he classic myeloproliferative neoplasms (MPN) are a heter- ogenous group of chronic disorders characterized by cellular proliferation of one or more myeloid lineages, which is thought to arise from a mutated hematopoietic stem cell (HSC) (1,2).
+Vaccinia virus (VV) is an orthopoxvirus and the live vaccine used to eradicate smallpox.
+Rift Valley fever virus (RVFV) is an important mosquito-borne veterinary and human pathogen that can cause severe disease including acute-onset hepatitis, delayed-onset encephalitis, retinitis and blindness, or a hemorrhagic syndrome.
+Flock House virus (FHV) is a small, nonenveloped, icosahedral insect virus in the Nodaviridae family.
+Metagenomic shotgun sequencing (MSS) is a relatively unbiased, culture-independent method in which nucleic acid extracted from a sample is sequenced.
+Hodgkin lymphoma (HL) is a monoclonal lymphoid neoplasm that originates from B lymphocytes and is characterized by a rare population of Hodgkin Reed-Sternberg (HRS) cells surrounded by a massive inflammatory infiltrate.
+G ibbon ape leukemia virus (GALV) is an exogenous gamma- retrovirus associated with hematopoietic neoplasms in captive colonies of white-handed gibbon (Hylobates lar).
+Kawasaki disease (KD) is an acute medium-vessel vasculitis, mainly affecting infants older than six months and children under five years.
+Rift Valley fever virus (RVFV) is a Phlebovirus in the family Bunyaviridae that is transmitted primarily by mosquitoes and is emerging as a serious viral zoonosis affecting both livestock and humans.
+The outer mitochondrial membrane (OMM) is a lipid-rich surface, whereas the highly folded inner membrane has a higher protein-lipid content.
+CD1d is a major histocompatibility complex (MHC) class I-like molecule and is required for the development of natural killer T (NKT) cells (11,12).
+Hyaluronic acid (HA) oligosaccharide is an anionic linear nonsulfated glycosaminoglycuronan consisting of the repeating polymeric disaccharides d-glucuronic acid and N-acetyl-d-glucosamine.
+Cucumber leaf spot virus (CLSV) is an aureusvirus (family Tombusviridae) that has a positive-sense RNA genome encoding five proteins.
+The causative agent of FIP is a feline coronavirus (FCoV) designated feline infectious peritonitis virus (FIPV) which infects immune cells, leading to a systemic infection (25,28).
+Next-generation sequencing (NGS) is a non-Sanger-based high-throughput DNA sequencing technology that can be used for genotyping the most polymorphic genes in the human leukocyte antigen (HLA) system.
+Rabbit haemorrhagic disease virus (RHDV) is a calicivirus belonging to the genus Lagovirus that causes rabbit haemorrhagic disease (RHD) in adult European rabbits (Oryctolagus cuniculus).
+L yme disease (LD) is an emerging vector-borne infec- tion caused by Borrelia burgdorferi, which is transmitted to humans by infected ticks.
+African swine fever virus (ASFV) is an extremely genetically and phenotypically heterogeneous pathogen.
+Canine distemper virus (CDV) is a single-stranded negative-sense RNA (ssRNA (-)) virus with potentially oncolytic properties.
+Chronic lymphocytic leukemia (CLL) is characterized by the accumulation of CD5 + CD19 + B cells in the peripheral blood, and in primary and secondary lymphoid organs.
+Respiratory syncytial virus (RSV) is an enveloped pneumovirus classified within the Paramyxoviridae family.
+Upf1 is a key component in nonsense-mediated decay (NMD), Staufen1-mediated mRNA decay (SMD), and structure-mediated RNA decay (SRD) pathways, among others.
+The oligonucleotide ligation assay (OLA) is a point mutation assay based on the covalent joining of two adjacent, dif-ferentially labeled oligonucleotide probes by a DNA ligase when they are hybridized to a cDNA template (15,20).
+Acute promyelocytic leukemia (APL) is characterized by reciprocal translocations involving the RARa gene (usually PML-RARa).
+Porcine epidemic diarrhea virus (PEDV) is an acute, highly contagious enterovirus that infects pigs of all ages.
+The Negative Regulator of Splicing (NRS) is a 230 nt, cis-acting RNA sequence contained within the gag gene of Rous sarcoma virus (RSV).
+The Conserved Oligomeric Golgi (COG) complex is a putative vesicle tethering factor that interacts with Golgi SNARE and Rab molecules and orchestrates retrograde intra-Golgi transport.
+Cobra venom factor (CVF) is a nontoxic glycoprotein in cobra venom.
+Murine AIDS (MAIDS) is characterized by lymphadenopathy, splenomegaly, hypergammaglobulinemia, T-and B-cell dysfunctions, and late appearance of B-cell lymphomas and opportunistic infections (for reviews, see references 14, 21, and 22).
+Human immunodeficiency virus type 1 (HIV-1) infection is generally characterized by a long-term, chronic disease course gradually progressing to AIDS (7,24,29).
+Borna disease virus (BDV) is a nonsegmented, negativesense, single-stranded RNA virus belonging to the virus family Bornaviridae within the order Mononegavirales (5,11).
+The rabies virus (RV) phosphoprotein (P) is a type I interferon (IFN) antagonist preventing both transcriptional induction of IFN and IFN-mediated JAK/STAT signaling.
+S taphylococcal toxic shock syndrome (TSS) is a life- threatening illness characterized by fever, rash, desquamation, organ dysfunction, and shock.
+The tobacco necrosis virus (TNV) genome is an uncapped, nonpolyadenylated RNA whose translation mechanism has not been well investigated.
+Elongation factor 2 (EF2) is a GTPase found in eukaryotes and archaea that is required during translation for the movement of ribosomes along mRNA.
+Japanese encephalitis virus (JEV) is a mosquito-borne flavivirus, leading to an acute encephalitis and damage to the central nervous system (CNS).
+Duck hepatitis B virus (DHBV) is a highly virulent Avihepadnavirus causing liver disease in ducks similar to other members of the family Hepadnaviridae, such as human BV (an orthohepadnavirus).
+Vesicular stomatitis virus (VSV) is a prototypic nonsegmented, negative-stranded RNA virus that belongs to the family Rhabdoviridae.
+Merkel cell carcinoma (MCC) is a rare and highly aggressive malignancy of the skin which occurs mainly in old people and is very uncommon in young individuals.
+Herpes simplex virus 2 (HSV2) is a human herpesvirus found worldwide that causes genital lesions and more rarely causes encephalitis.
+Human immunodeficiency virus type 1 (HIV-1) infections are characterized by a high degree of genetic variation, which inevitably leads to facile generation of drug-resistant variants during treatment (16,26).
+Microplastics (MPs) are defined as particles smaller than 5 mm.
+X-linked Lymphoproliferative Syndromes (XLP), arising from mutations in SH2D1A or XIAP genes, are characterized by fulminant Epstein-Barr virus (EBV) infection.
+Epidermal growth factor receptor (EGFR) is a wellstudied RTK family member, which is believed to play a central role during IAV internalization after virion attachment.
+LSD1/KDM1 is a flavin adenine dinucleotide (FAD)dependent amine oxidase, which can demethylate lysine 4 in histone H3 (an activatory mark) and lysine 9 in histone H3 (a silencing mark).
+Herpes simplex virus type 2 (HSV-2) is an enveloped, nuclear replicating, double-stranded DNA virus, that belongs to the subgroup of alphaherpesvirinae.
+Granzyme B (GzB) is a serine protease found in the cytoplasmic granules of cytotoxic T lymphocytes (CTLs) and natural killer (NK) cells.
+Myeloproliferative neoplasms (MPNs) are characterized by an enhanced activity of the JAK/STAT pathway, due to the acquisition of somatic gain-of-function mutations in the hematopoietic stem cell.
+Human intestinal absorption (HIA) is a key ADMET property, playing a vital role in the transportation of drugs to their intended targets 30.
+Mixed lineage leukemia 5 (MLL5) protein is a trithorax family histone 3 lysine 4 (H3K4) methyltransferase that regulates diverse biological processes, including cell cycle progression, hematopoiesis and cancer.
+Hodgkin's disease (HD) is characterized by a disruption of the lymph node architecture with low numbers of Hodgkin and Reed-Sternberg (H-RS) cells surrounded by an abundance of reactive nonmalignant cells (2,9,13,26).
+Bovine leukemia virus (BLV) is a B-lymphocytotropic retrovirus closely related by genomic organization and disease progression to human T-cell leukemia virus type 1 (HTLV-1) (for reviews, see references 7 and 12).
+The enhanced liver fibrosis (ELF) index is a highly sensitive noninvasive marker of hepatic fibrosis that has had limited assessment in the HIV/HCV population.
+Japanese encephalitis virus (JEV) is a neurotropic flavivirus belonging to the family Flaviviridae.
+Hematopoietic cell transplantation (HCT) is a potentially curative treatment modality for hematological disorders but may result in extensive morbidity and death.
+Subacute sclerosing panencephalitis (SSPE) is a persistent, progressive, and fatal degenerative disease resulting from persistent measles virus (MV) infection of the central nervous system.
+Mungbean yellow mosaic virus (MYMV) is a bipartite begomovirus first reported from mung bean plants showing yellow mosaic symptoms during 1950s in India (Nariani, 1960).
+The area under curve (AUC) is an important concept in pharmacology and reflects the total dose exposure in the tissue over time.
+Torque Teno Virus (TTV) is a circular, single-stranded, nonenveloped, negatively polarized DNA virus measuring between 3.4 and 3.9 Kb in length and 30-32 nm in diameter.
+Hepatic encephalopathy (HE) is a brain dysfunction caused by liver insuffi ciency and/or portal systemic shunt (PSS); it manifests as a wide spectrum of neurological or psychiatric abnormalities ranging from subclinical alterations to coma [ 1 -3 ].
+Hepatitis C virus (HCV) is a human hepatotropic flavivirus.
+Human immunodeficiency virus (HIV) infection is characterized by viral entry into the central nervous system (CNS), which is mediated, in part, by the transmigration of HIV-infected monocytes into the brain.
+Peste des petits ruminants (PPR), an acute viral disease of goats and sheep, characterized by fever, erosive stomatitis, conjunctivitis, gastroenteritis and pneumonia is caused by Peste des petits ruminants virus (PPRV).
+Zinc finger antiviral protein (ZAP) is a host restriction factor encoded by the antiviral gene that evolved over the long-term coexistence of the virus and host.
+PRRSV NSP9 is an RNA-dependent RNA polymerase (RdRp) involved in forming the viral replication and transcription complex (RTC).
+Simian virus 40 (SV40) large T antigen (Tag) is a promiscuous transcriptional transactivator; however, its mechanism of transactivation remains unknown.
+Hepatitis C virus (HCV) 7 is a positive sense single-stranded RNA (ϳ9.6 kb) virus, belonging to the Flaviviridae family.
+Klinefelter syndrome (KS) is a common sex chromosome aneuploidy in man most often characterized as 47, XXY karyotype.
+Rat coronavirus (RCoV) causes respiratory disease in adult rats, characterized by an early PMN response, viral replication and inflammatory lesions in the lungs, mild weight loss and effective resolution of infection.
+Classical swine fever virus (CSFV) is a Pestivirus, member of the Flaviviridae family.
+The heat shock protein 90 (Hsp90) is a chaperone involved in the activation and stability of TBK1 in both RNA-and DNA-sensing signaling pathways (108,109).
+Lymphoeptithelioma-like carcinoma (LELC) is defined as a poorly differentiated carcinoma with dense lymphocytic infiltration and has similar histological features to undifferentiated NPC.
+Mouse mammary tumor virus (MMTV) is a complex, milk-born betaretrovirus, which preferentially infects dendritic cells (DC) in the gastrointestinal tract and then spreads to T and B lymphocytes and finally to the mammary gland.
+Interleukin 28B is a Type 1 helper (Th1) cytokine that belongs to the type-III IFN family, a class-II cytokine receptor ligand, and also named IFN-k.
+The eEF1B is a guanine nucleotide exchange factor (GEF) that catalyzes the exchange of GDP for GTP on the eEF1A protein.
+Lagos bat virus (LBV) is a phylogroup II lyssavirus exclusively found in Africa.
+Viral protein U (Vpu) is a 17-kDa phosphoprotein that enhances the release of viral particles from human immunodeficiency virus type 1-infected cells.
+Adult T-cell leukemia/lymphoma (ATLL) is a very aggressive and chemoresistant leukemia caused by the human T-cell leukemia virus type 1 (HTLV-1).
+Unfolded protein response (UPR) is a naturally evolved cyto-protective signaling pathway which is triggered due to endoplasmic reticulum (ER) stress caused by accumulation of unfolded/misfolded proteins in its lumen.
+Japanese encephalitis virus (JEV) is a flavivirus related to dengue, yellow fever and West Nile viruses and is the main cause of acute viral encephalitis in the Asia-Pacific region, primarily affecting children and young adults.
+Human immunodeficiency virus type 1 (HIV-1) infection is characterized by progressive depletion of CD4 + T lymphocytes and dysfunction of the immune system.
+The ciliary marginal zone (CMZ) is a region between the neural retina and ciliary epithelium, and contains retinal progenitor cells that give rise to neuron and glia.
+Yin Yang 1 (YY1) is a ubiquitously expressed GLI-Kruppel zinc finger-containing transcriptional regulator.
+Multiple sclerosis (MS) is an inflammatory demyelinating neurological disease in which autoreactive T lymphocytes sensitized to myelin components of the central nervous system are postulated to contribute to pathogenesis.
+Japanese encephalitis (JE) is a mosquito-borne viral encephalitis caused by the Japanese encephalitis virus (JEV) (Flavivirus: Flaviviridae).
+Pigmented villonodular synovitis (PVNS) is a rare pseudoneoplastic origin of synovial membrane disease characterized by unrestrained proliferation of mononuclear cells.
+Kawasaki disease (KD) is a systemic vasculitis, it is known as the main cause of heart disease acquired in childhood.
+Eosinophilic fasciitis (EF) is a rare scleroderma-like connective tissue disease with unclear etiopathogenesis.
+H epatitis C virus (HCV) is an enveloped, positive-sense, single- stranded RNA virus belonging to Hepacivirus genus within the Flaviviridae family.
+Furin is a proprotein convertase (PC) in the secretory pathway with a minimum recognition sequence of RXXR.
+A cute promyelocytic leukemia (APL) is characterized by chromosomal translocations involving retinoic acid receptor alpha (RARα) with a limited number of translocation partners.
+Kyasanur Forest Disease (KFD) is a tick-borne viral hemorrhagic fever caused by the KFD virus (KFDV).
+Kyasanur Forest Disease (KFD) is an acute viral hemorrhagic fever affecting humans and monkeys.
+West Nile virus (WNV) is a mosquito-borne flavivirus maintained in a transmission cycle between mosquitoes and birds, but it can also infect other vertebrates, including humans, in which it can cause neuroinvasive diseases.
+Histologically, CRS without nasal polyps (CRSsNP) is characterized by a predominantly neutrophilic inflammation with a lesser contribution of eosinophils, whereas CRS with nasal polyps (CRSwNP) is characterized by eosinophilic inflammation.
+The serine-threonine liver kinase B1 (LKB1) is a master upstream kinase of 5′-AMP-activated protein kinase (AMPK) that senses the energy status and therefore regulates the intracellular metabolic homeostasis.
+Friend virus (FV) is a highly leukemogenic and immunosuppressive mouse retrovirus complex composed of replicationcompetent Friend murine leukemia virus (F-MuLV) and replication-defective but acutely transforming Friend spleen focus-forming virus (SFFV).
+Yellow fever (YF) virus is an arbovirus endemic in many countries in Africa and South America.
+H uman immunodeficiency virus type 1 (HIV-1) causes a slow and progressive disease course characterized by a gradual decline in CD4 ϩ T helper cell numbers.
+Feline infectious peritonitis (FIP) is a progressive, debilitating, highly fatal disease in wild and domestic Felidae.
+Crimean-Congo hemorrhagic fever (CCHF) is a severe febrile-illness caused by the Crimean-Congo hemorrhagic fever virus (CCHFV), a negative-sense RNA virus in the Nairoviridae family of the Bunyavirales order.
+Chronic lymphocytic leukemia (CLL) characterized by accumulation of apoptotic resistance CD19+CD5+ B lymphocytes in peripheral blood and lymphoid organs is the most prevalent adulthood leukemia in the western hemisphere.
+Chondroitin sulfate (CS) is a class within the group of negatively charged polysaccharides, glycosaminoglycans, and mainly located in the extracellular matrix.
+Infected-cell protein 0 (ICP0) is a RING finger E3 ligase that regulates herpes simplex virus (HSV) mRNA synthesis, and strongly influences the balance between latency and replication of HSV.
+Yellow fever (YF) is an acute, vector-borne zoonotic illness endemic to tropical areas in America and Africa.
+The blood-brain barrier (BBB) is a functional and structural component of the central nervous system (CNS) vasculature that serves important protective functions for the CNS.
+The JC virus (JCV) is a human neurotropic Polyomavirus causing progressive multifocal leukoencephalopathy (PML).
+Allograft inflammatory factor 1 (AIF1) is an important inflammation-responsive scaffold protein that is mainly expressed in immunocytes (Zhao, Yan & Chen, 2013).
+Entecavir (ETV) is a deoxyguanosine analog competitive inhibitor of hepatitis B virus (HBV) polymerase that exhibits delayed chain termination of HBV DNA.
+Vilyuisk human encephalitis virus (VHEV) is a picornavirus related to Theiler's murine encephalomyelitis virus (TMEV).
+Left ventricular (LV) systolic dysfunction is a common problem in dogs and can be due to a variety of etiologies.
+The cord dorsum potential (CDP) is a stationary potential arising in dorsal horn interneurons after stimulation of sensory nerves.
+Thymidine kinase (TK) is a soluble biomarker present in S-phase of a salvage pathway for DNA synthesis, and can be measured in serum.
+The unfolded-protein response (UPR) is a signal transduction cascade triggered by perturbation of the homeostasis of the endoplasmic reticulum (ER).
+The Conserved Oligomeric Golgi (COG) complex is a hetero-octamer complex made up of eight proteins (COG1 to COG8) and plays central role in Golgi trafficking, maintenance of Golgi structure and integrity, and management of the distribution of glycosylation enzymes.
+The genome of mouse hepatitis virus (MHV) is a singlestranded, linear, positive-sense, polyadenylated RNA of approximately 31 kb in length (22,24,39).
+Borna disease virus (BDV) is a newly classified nonsegmented negative-strand RNA virus that can persistently infect the central nervous systems of a broad range of warm-blooded animals and possibly humans without destruction of its host cells (11,13,21,29).
+The hepatitis B virus X protein (HBx) is a broadly acting transactivator implicated in the development of liver cancer.
+Thymosin beta 4 (Tb4) is a 5kd polypeptide that has been shown to sequester monomeric actin in platelets and in a variety of other cells.
+Vesicular stomatitis virus (VSV) is an enveloped, negative-sense, single-strand RNA virus in the Rhabdoviridae family.
+Activating transcription factor 3 (ATF3) is a basic-region leucine zipper transcription factor belonging to the cyclic AMP response element binding family.
+The human (-globin locus control region (LCR) is a complex DNA regulatory element that controls the expression of the cis-linked -like globin genes located in the 55 kilobases 3' of the LCR.
+Granulocyte colony stimulating factor (G-CSF) is a glycoprotein, which stimulates the bone marrow production of stem cells and granulocytes and releases them into the circulation.
+The epidermal growth factor (EGF) receptor is a single chain glycoprotein of -170 kDa with ligand-inducible protein tyrosine kinase activity (for review, see Carpenter, 1987).
+Francisella tularensis (FT) is a gram-negative facultative intracellular bacterium that causes a high morbidity/mortality zoonotic disease known as tularemia.
+Argyrophilic grain disease (AGD) is a relatively frequent slowly progressive dementia with late onset.
+Enteric nervous system (ENS) disturbance is a frequent complication in patients with a variety of inflammatory bowel diseases.
+The HIV-1 Rev response element (RRE) is a cis-acting RNA element characterized by multiple stem-loops.
+Human immunodeficiency virus type 1 (HIV-1) is a complex retrovirus highly dependent upon a myriad of cellular mechanisms for successful virus replication.
+Borna disease virus (BDV) is an enveloped, nonsegmented, negative-strand RNA virus of the order Mononegavirales (1,4,6,14,20).
+Murray Valley encephalitis virus (MVEV) is a mosquito-borne orthoflavivirus endemic to Australia that can cause fatal neurological disease.
+SERINC5 (Ser5) is a novel host restriction factor that inhibits HIV-1, murine leukemia virus (MLV), and equine infectious anemia virus (EIAV) replication.
+Tumor progression locus 2 (TPL2) is a serine/threonine kinase that belongs to the mitogen-activated protein 3 kinase (MAP3K) family, and it plays an important role in pathogen infection.
+Chemokine (C-C motif) ligand 2 (CCL2) is an important cytokine in the spike-ACE2 signalling pathway.
+An intrinsically disordered protein (IDP) is defined as a folded protein that is completely or partially devoid of a unique fold in isolation in solution, and exhibits limited secondary structure (Trivedi and Nagarajaram, 2022).
+Multiple sclerosis (MS) is a chronic inflammatory demyelinating and neurodegenerative disorder of the central nervous system (CNS), resulting in irreversible brain and spinal cord injury.
+Chronic Fatigue Syndrome (CFS) is a severe, systemic illness characterized by persistent, debilitating and medically unexplained fatigue.
+Men who have sex with men (MSM) is a term introduced in 1992 to attempt to capture a range of male-male sexual behaviours and avoid characterisation of the men engaging in these behaviours by sexual orientation (homosexual, bisexual, heterosexual, or gay) or gender identity (male, female, transgender, queer).
+Guillain Barre Syndrome (GBS) is an autoimmune acute polyradiculoneuroathy manifesting as a rapidly evolving areflexic paralysis with or without sensory & lower cranial nerve involvement.
+Focal cerebral arteriopathy (FCA) is a monophasic inflammatory stenosis most often affecting the supraclinoid internal carotid artery (ICA) or the proximal segment of the middle cerebral artery (MCA).
+Osmotic demyelination syndrome (ODS) is a rare non-inflammatory CNS demyelinating disease.
+Alpha-2 macroglobulin (A2M) is a major plasma proteinase inhibitor that also has important role in immune modulation.
+Nairobi sheep disease virus (NSDV) is a tick-borne orthonairovirus, which is genetically related to Crimean-Congo hemorrhagic fever virus (CCHFV), and causes severe hemorrhagic gastroenteritis in infected sheep.
+Cross reacting material (CRM) negative FX deficiency is characterized by a lack of detectable FX antigen in the plasma.
+Tissue factor pathway inhibitor (TFPI) is a physiological factor Xa dependent inhibitor of the factor Vlla/tissue factor complex.
+The CXCL10/IFN-inducible protein 10 (IP-10) is a proinflammatory chemokine secreted by monocytes, endothelial cells and fibroblasts in response to IFN-α,β and IFN-γ.
+Crimean Congo hemorrhagic fever (CCHF) is a tick-borne hemorrhagic zoonosis associated with high mortality.
+Human immunodeficiency virus (HIV)/hepatitis C virus (HCV) co-infection is characterized by higher serum HCV RNA loads compared with HCV mono-infection.
+Feline immunodeficiency virus (FIV) is a lentivirus in the family Retroviridae that infects members of the family Felidae exclusively.
+The apolipoprotein E4 allele (APOE4) is a reliable genetic risk factor for sporadic Alzheimer's disease (e.g., 7 ), and has been suggested to have a role in several other neurological conditions, including central nervous system (CNS) response to chronic infection such as HIV 8,9.
+Sleeping Beauty (SB) is a novel functional genomics tool that was recently demonstrated as a powerful approach for cancer gene discovery.
+The live attenuated yellow fever (YF) vaccine is a highly effective human vaccine and induces long-term protective neutralizing antibodies directed against the viral envelope protein E.
+Simian foamy virus (SFV) is a ubiquitous retrovirus in nonhuman primates (NHPs) that can be transmitted to humans, mostly through severe bites.
+Malignant hyperthermia (MH) is a myopathy associated to a dysfunction in Intracellular Ca2-homeostasis.
+Kawasaki disease (KD) is an acute systemic vasculitis complicated by coronary aneurysms that predominantly occurs in young East Asian children.
+Preeclampsia (PE) is characterized by a loss of the normal vasodilation in pregnancy and is associated with increases in growth factors and cytokines such as VEGF and TNF, which are known to inhibit Cx43 function.
+Yellow fever (YF) is a mosquito-borne viral illness caused by the yellow fever virus (YFV), an arbovirus from the genus Flavivirus within the family Flaviviridae.
+Herpes simplex virus (HSV) is an enveloped double stranded neurotropic DNA virus that naturally occurs in humans.
+Protospacer adjacent motif (PAM) is a 2-6-base pair DNA sequence immediately following the DNA sequence targeted by the Cas nuclease in the CRISPR bacterial adaptive immune system.
+Infectious bronchitis virus (IBV) is a highly contagious avian coronavirus.
+West Nile virus (WNV) is a positive-stranded RNA flavivirus grouped within the Japanese encephalitis virus serocomplex.
+Epidermal growth factor (EGF) is a potent mitogen and has been shown to accelerate healing of epithelial damage both in the skin an.d the GUT.
+Early growth response gene 1 (EGR-1) is a transcription factor activated by Epidermal growth factor receptor (EGFR) signaling that is essential for the maintenance of CD34 + HPC self-renewal in the bone marrow niche.
+Spring viremia of carp virus (SVCV) is a highly pathogenic Vesiculovirus in the common carp.
+Paraneoplastic cerebellar degeneration (PCD) is a relatively frequent PNNS characterized by antibody-mediated damage to cerebellar Purkinje cells.
+Interferon regulatory factor 8 (IRF8) is a myeloid lineage transcription factor involved in microglial activation.
+Porcine epidemic diarrhea (PED) is a highly contagious, intestinal infectious disease caused by porcine epidemic diarrhea virus (PEDV).
+E rns is characterized by ribonuclease (RNase) activity and binds viral ss and double-stranded (ds)RNA to cleave it.
+Transforming growth factor beta inducible protein (TGFBI), is also known as keratoepithelian, 68 and is referred to here as beta-inducible growth hormone 3 (BIGH3) is produced by fibroblasts and macrophages.
+Chandipura virus (CHPV) is an emerging rhabdovirus primarily afecting pediatric populations in India, causing acute encephalitis syndrome (AES) with high mortality rates.
+Influenza A viruses (IAV) belong to the family of Orthomyxoviridae and are characterized by a segmented single-stranded RNA genome with negative orientation.
+Human T cell leukemia virus type 1 (HTLV-1)associated myelopathy/tropical spastic paraparesis (HAM/TSP) is characterized by a hyperstimulated immune response including elevated levels of inflammatory cytokines/chemokines, and the oligoclonal expansion of virus-specific CD8+ T cells in the cerebrospinal fluid.
+Tumor necrosis factor (TNF) is a major inflammatory cytokine, secreted primarily by activated macrophages and T lymphocytes, that is thought to limit infections by a variety of microorganisms (reviewed in reference 68).
+Linker for activation of T cells (LAT) is a transmembrane adapter molecule, which is phosphorylated after TCR triggering.
+Pre-eclampsia (PE) is characterized by maternal endothelium dysfunction, which is potentially induced by the elevated shedding of the placental syncytiotrophoblast (ST).
+Borna disease virus (BDV) is a noncytolytic, neurotropic, single-strand, negative-sense RNA virus that naturally infects a wide range of vertebrate species from birds and rodents to primates.
+Infectious bronchitis (IB) is an acute, highly contagious upper respiratory disease of chickens.
+The serotonin transporter (SERT) protein is a brain glycoprotein with 12 predicted transmembrane domains.
+Parkinson's disease (PD) is a neurodegenerative disease mostly affecting the motor system and is characterized by tremor, rigidity, postural reflex impairment and slowness.
+Hemophagocytic lymphohistiocytosis (HLH) is a very rare but life-threatening syndrome of hyperactive immune activation and is characterized by high levels of cytokines, reflecting activation of T-cells and macrophages.
+Progressive multifocal leukoencephalopathy (PML) is a deadly demyelinating disease due to central nervous system replication of the human polyomavirus JC virus (JCV) in immunosuppressed patients.
+Progressive multifocal leukoencephalopathy (PML) is a rare but deadly demyelinating disease of the central nervous system.
+Barley stripe mosaic virus (BSMV), the type member of the genus Hordeivirus, is a positive-strand RNA virus containing three genomic RNAs designated as RNAα, RNAβ, and RNAγ.
+Marek's disease (MD) is a highly contagious lymphoproliferative disease of chickens caused by the MD herpesvirus (MDV).
+Severe fever with thrombocytopenia syndrome (SFTS) is a tick-borne infectious disease caused by the SFTS virus (SFTSV).
+The vaccinia virus complement control protein (VCP) is a virulence factor, but the mechanisms by which it enhances pathogenesis have not been fully defined.
+Respiratory syncytial virus (RSV) is a significant pathogen that primarily infects infants and young children and causes acute respiratory infections characterized by symptoms of bronchitis and pneumonia.
+Ataxia telangiectasia (A-T), is a genetic disorder caused by the homozygous mutation of the ATM gene and, frequently associates with variable degrees of cellular and humoral immunodeficiency.
+Huntington's disease (HD) is a fatal neurodegenerative disorder caused by an expanded polyglutamine repeat in huntingtin (htt), a protein that is expressed ubiquitously.
+Hepatitis B virus (HBV) ~ is a small (440/~) DNA virus 1.
+The human immunodeficiency virus-1 (HIV-1) nucleocapsid protein (NCp7) is a nucleic acid chaperone protein with two highly conserved zinc fingers.
+The V protein of the paramyxovirus simian virus 5 (SV5) is a multifunctional protein containing an N-terminal 164-residue domain that is shared with the P protein and a distinct C-terminal domain that is cysteine rich.
+Insulin-like growth factor-1 receptor (IGF-1R) is a cell membrane receptor involved in cell proliferation is expressed in the head and squamous cell carcinoma.
+Simian virus 40 (SV40), a member of the Papovaviridae, is a small, nonenveloped tumorigenic virus.
+African swine fever virus (ASFV), the causative agent of ASF, is a large complex DNA virus belonging to the genus Asfivirus of the family Asfarviridae.
+Herpes simplex virus (HSV), a member of Herpesviridae is an enveloped double-stranded DNA virus with a linear 152-kbp nucleic acid.
+V iral protein R (Vpr) is an accessory protein common to all primate lentiviruses whose role in viral replication remains unclear.
+Seneca Valley virus (SVV), also known as senecavirus A, is a small and single-stranded RNA virus and the sole member of the genus Senecavirus within the family Picornaviridae.
+Vesicular stomatitis virus (VSV), which is a negative sense RNA virus, has a glycoprotein that translocates to the nucleus as well.
+Chronic kidney disease (CKD), a worldwide public health issue, is a heterogeneous condition affecting the structure and function of the kidney.
+Human epidermal growth factor receptor 2 (HER2), known as Erythroblastosis homolog B2 (ErbB-2), is a transmembrane tyrosine kinase receptor and a member of the EGFR family.
+Hepatitis E virus (HEV) belongs to the Hepeviridae family and is a common pathogen causing acute hepatitis and jaundice.
+Severe fever with thrombocytopenia syndrome (SFTS) is a fatal viral disease characterized by high fever, thrombocytopenia, leukopenia, and multi-organ haemorrhage.
+Infectious bronchitis virus (IBV), a member of Co-acute, highly contagious respiratory and urogenital disease of chickens that causes significant economic ronaviridae, is a positive sense, single-stranded RNA virus with a genome size about 27•6 kilobase.
+The alphavirus chikungunya virus (CHIKV) is a serious human pathogen that can cause large-scale epidemics characterized by fever and joint pain and often resulting in chronic arthritis.

@@ -1,0 +1,302 @@
+% stories_modules.tex — pgfplots port of stories_modules.png.
+\begin{tikzpicture}
+  \pgfplotsset{legend image code/.code={\draw[#1] (0cm,-0.07cm) rectangle (0.25cm,0.07cm);}}
+
+  \definecolor{steelblue31119180}{RGB}{31,119,180}
+  \definecolor{darkorange25512714}{RGB}{255,127,14}
+  \definecolor{forestgreen4416044}{RGB}{44,160,44}
+  \definecolor{crimson2143940}{RGB}{214,39,40}
+  \definecolor{mediumpurple148103189}{RGB}{148,103,189}
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{gray}{RGB}{128,128,128}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+
+  \begin{groupplot}[group style={group size=1 by 2, vertical sep=1.2cm}, width=0.86\linewidth, height=0.088\linewidth, scale only axis=true]
+  \nextgroupplot[
+  tick align=outside, tick pos=left,
+  ymajorgrids,
+  y grid style={darkgray176, opacity=0.5, line width=0.28pt},
+  ymin=0.5, ymax=1.1,
+  ytick={0.6,0.8,1.0},
+  yticklabel style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1},
+  ylabel={Compute\\Ratio}, ylabel style={align=center, font=\footnotesize},
+  xmin=-0.6, xmax=4.6,
+  xtick={0,1,2,3,4},
+  xticklabels={{Core Data Only},{+ Deadlines Data},{+ Aliens Data},{+ Eras Data},{+ Cultures Data}},
+  xticklabel style={font=\footnotesize},
+  ytick style={color=black}, xtick style={color=black},
+  title={\textbf{Data Filtering (5 Models)}}, title style={font=\footnotesize, yshift=-0.6em},
+  legend columns=-1,
+  legend style={font=\scriptsize, draw=lightgray204, at={(0.5,1.55)}, anchor=south, /tikz/every even column/.append style={column sep=0.6em}},
+  ]
+  \addlegendimage{area legend,draw=none,fill=steelblue31119180}
+  \addlegendentry{Core}
+  \addlegendimage{area legend,draw=none,fill=darkorange25512714}
+  \addlegendentry{Deadlines}
+  \addlegendimage{area legend,draw=none,fill=forestgreen4416044}
+  \addlegendentry{Aliens}
+  \addlegendimage{area legend,draw=none,fill=crimson2143940}
+  \addlegendentry{Eras}
+  \addlegendimage{area legend,draw=none,fill=mediumpurple148103189}
+  \addlegendentry{Cultures}
+  \addlegendimage{area legend,draw=none,fill=gray}
+  \addlegendentry{Retain $\uparrow$}
+  \addlegendimage{area legend,draw=none,fill=lightgray204,pattern=diagonal lines wide,pattern color=gray}
+  \addlegendentry{Forget $\downarrow$}
+  \draw[draw=none,fill=steelblue31119180] (axis cs:-0.3850,0) rectangle (axis cs:-0.2310,0.945792);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:-0.2110,0) rectangle (axis cs:-0.0570,0.636961);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:-0.2110,0) rectangle (axis cs:-0.0570,0.636961);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:-0.0370,0) rectangle (axis cs:0.1170,0.689341);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:-0.0370,0) rectangle (axis cs:0.1170,0.689341);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:0.1370,0) rectangle (axis cs:0.2910,0.898782);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:0.1370,0) rectangle (axis cs:0.2910,0.898782);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:0.3110,0) rectangle (axis cs:0.4650,0.843807);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:0.3110,0) rectangle (axis cs:0.4650,0.843807);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:0.6150,0) rectangle (axis cs:0.7690,0.951857);
+  \draw[draw=none,fill=darkorange25512714] (axis cs:0.7890,0) rectangle (axis cs:0.9430,0.952109);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:0.9630,0) rectangle (axis cs:1.1170,0.689782);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:0.9630,0) rectangle (axis cs:1.1170,0.689782);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:1.1370,0) rectangle (axis cs:1.2910,0.909112);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:1.1370,0) rectangle (axis cs:1.2910,0.909112);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:1.3110,0) rectangle (axis cs:1.4650,0.856326);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:1.3110,0) rectangle (axis cs:1.4650,0.856326);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:1.6150,0) rectangle (axis cs:1.7690,0.969019);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:1.7890,0) rectangle (axis cs:1.9430,0.645005);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:1.7890,0) rectangle (axis cs:1.9430,0.645005);
+  \draw[draw=none,fill=forestgreen4416044] (axis cs:1.9630,0) rectangle (axis cs:2.1170,0.988931);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:2.1370,0) rectangle (axis cs:2.2910,0.922453);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.1370,0) rectangle (axis cs:2.2910,0.922453);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:2.3110,0) rectangle (axis cs:2.4650,0.861384);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.3110,0) rectangle (axis cs:2.4650,0.861384);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:2.6150,0) rectangle (axis cs:2.7690,0.976310);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:2.7890,0) rectangle (axis cs:2.9430,0.657150);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.7890,0) rectangle (axis cs:2.9430,0.657150);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:2.9630,0) rectangle (axis cs:3.1170,0.704698);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.9630,0) rectangle (axis cs:3.1170,0.704698);
+  \draw[draw=none,fill=crimson2143940] (axis cs:3.1370,0) rectangle (axis cs:3.2910,0.962152);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:3.3110,0) rectangle (axis cs:3.4650,0.885481);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:3.3110,0) rectangle (axis cs:3.4650,0.885481);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:3.6150,0) rectangle (axis cs:3.7690,0.961846);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:3.7890,0) rectangle (axis cs:3.9430,0.655543);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:3.7890,0) rectangle (axis cs:3.9430,0.655543);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:3.9630,0) rectangle (axis cs:4.1170,0.698133);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:3.9630,0) rectangle (axis cs:4.1170,0.698133);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:4.1370,0) rectangle (axis cs:4.2910,0.929709);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:4.1370,0) rectangle (axis cs:4.2910,0.929709);
+  \draw[draw=none,fill=mediumpurple148103189] (axis cs:4.3110,0) rectangle (axis cs:4.4650,0.945258);
+  \draw[black,line width=0.5pt] (axis cs:-0.3080,0.926725)--(axis cs:-0.3080,0.964859);
+  \draw[black,line width=0.5pt] (axis cs:-0.3480,0.926725)--(axis cs:-0.2680,0.926725);
+  \draw[black,line width=0.5pt] (axis cs:-0.3480,0.964859)--(axis cs:-0.2680,0.964859);
+  \draw[black,line width=0.5pt] (axis cs:-0.1340,0.620996)--(axis cs:-0.1340,0.652925);
+  \draw[black,line width=0.5pt] (axis cs:-0.1740,0.620996)--(axis cs:-0.0940,0.620996);
+  \draw[black,line width=0.5pt] (axis cs:-0.1740,0.652925)--(axis cs:-0.0940,0.652925);
+  \draw[black,line width=0.5pt] (axis cs:0.0400,0.675598)--(axis cs:0.0400,0.703084);
+  \draw[black,line width=0.5pt] (axis cs:0.0000,0.675598)--(axis cs:0.0800,0.675598);
+  \draw[black,line width=0.5pt] (axis cs:0.0000,0.703084)--(axis cs:0.0800,0.703084);
+  \draw[black,line width=0.5pt] (axis cs:0.2140,0.884275)--(axis cs:0.2140,0.913290);
+  \draw[black,line width=0.5pt] (axis cs:0.1740,0.884275)--(axis cs:0.2540,0.884275);
+  \draw[black,line width=0.5pt] (axis cs:0.1740,0.913290)--(axis cs:0.2540,0.913290);
+  \draw[black,line width=0.5pt] (axis cs:0.3880,0.827137)--(axis cs:0.3880,0.860476);
+  \draw[black,line width=0.5pt] (axis cs:0.3480,0.827137)--(axis cs:0.4280,0.827137);
+  \draw[black,line width=0.5pt] (axis cs:0.3480,0.860476)--(axis cs:0.4280,0.860476);
+  \draw[black,line width=0.5pt] (axis cs:0.6920,0.929583)--(axis cs:0.6920,0.974130);
+  \draw[black,line width=0.5pt] (axis cs:0.6520,0.929583)--(axis cs:0.7320,0.929583);
+  \draw[black,line width=0.5pt] (axis cs:0.6520,0.974130)--(axis cs:0.7320,0.974130);
+  \draw[black,line width=0.5pt] (axis cs:0.8660,0.928272)--(axis cs:0.8660,0.975946);
+  \draw[black,line width=0.5pt] (axis cs:0.8260,0.928272)--(axis cs:0.9060,0.928272);
+  \draw[black,line width=0.5pt] (axis cs:0.8260,0.975946)--(axis cs:0.9060,0.975946);
+  \draw[black,line width=0.5pt] (axis cs:1.0400,0.670287)--(axis cs:1.0400,0.709277);
+  \draw[black,line width=0.5pt] (axis cs:1.0000,0.670287)--(axis cs:1.0800,0.670287);
+  \draw[black,line width=0.5pt] (axis cs:1.0000,0.709277)--(axis cs:1.0800,0.709277);
+  \draw[black,line width=0.5pt] (axis cs:1.2140,0.886941)--(axis cs:1.2140,0.931283);
+  \draw[black,line width=0.5pt] (axis cs:1.1740,0.886941)--(axis cs:1.2540,0.886941);
+  \draw[black,line width=0.5pt] (axis cs:1.1740,0.931283)--(axis cs:1.2540,0.931283);
+  \draw[black,line width=0.5pt] (axis cs:1.3880,0.840729)--(axis cs:1.3880,0.871924);
+  \draw[black,line width=0.5pt] (axis cs:1.3480,0.840729)--(axis cs:1.4280,0.840729);
+  \draw[black,line width=0.5pt] (axis cs:1.3480,0.871924)--(axis cs:1.4280,0.871924);
+  \draw[black,line width=0.5pt] (axis cs:1.6920,0.951995)--(axis cs:1.6920,0.986043);
+  \draw[black,line width=0.5pt] (axis cs:1.6520,0.951995)--(axis cs:1.7320,0.951995);
+  \draw[black,line width=0.5pt] (axis cs:1.6520,0.986043)--(axis cs:1.7320,0.986043);
+  \draw[black,line width=0.5pt] (axis cs:1.8660,0.634228)--(axis cs:1.8660,0.655781);
+  \draw[black,line width=0.5pt] (axis cs:1.8260,0.634228)--(axis cs:1.9060,0.634228);
+  \draw[black,line width=0.5pt] (axis cs:1.8260,0.655781)--(axis cs:1.9060,0.655781);
+  \draw[black,line width=0.5pt] (axis cs:2.0400,0.971099)--(axis cs:2.0400,1.006763);
+  \draw[black,line width=0.5pt] (axis cs:2.0000,0.971099)--(axis cs:2.0800,0.971099);
+  \draw[black,line width=0.5pt] (axis cs:2.0000,1.006763)--(axis cs:2.0800,1.006763);
+  \draw[black,line width=0.5pt] (axis cs:2.2140,0.909391)--(axis cs:2.2140,0.935515);
+  \draw[black,line width=0.5pt] (axis cs:2.1740,0.909391)--(axis cs:2.2540,0.909391);
+  \draw[black,line width=0.5pt] (axis cs:2.1740,0.935515)--(axis cs:2.2540,0.935515);
+  \draw[black,line width=0.5pt] (axis cs:2.3880,0.848469)--(axis cs:2.3880,0.874299);
+  \draw[black,line width=0.5pt] (axis cs:2.3480,0.848469)--(axis cs:2.4280,0.848469);
+  \draw[black,line width=0.5pt] (axis cs:2.3480,0.874299)--(axis cs:2.4280,0.874299);
+  \draw[black,line width=0.5pt] (axis cs:2.6920,0.946203)--(axis cs:2.6920,1.006418);
+  \draw[black,line width=0.5pt] (axis cs:2.6520,0.946203)--(axis cs:2.7320,0.946203);
+  \draw[black,line width=0.5pt] (axis cs:2.6520,1.006418)--(axis cs:2.7320,1.006418);
+  \draw[black,line width=0.5pt] (axis cs:2.8660,0.634278)--(axis cs:2.8660,0.680022);
+  \draw[black,line width=0.5pt] (axis cs:2.8260,0.634278)--(axis cs:2.9060,0.634278);
+  \draw[black,line width=0.5pt] (axis cs:2.8260,0.680022)--(axis cs:2.9060,0.680022);
+  \draw[black,line width=0.5pt] (axis cs:3.0400,0.684231)--(axis cs:3.0400,0.725165);
+  \draw[black,line width=0.5pt] (axis cs:3.0000,0.684231)--(axis cs:3.0800,0.684231);
+  \draw[black,line width=0.5pt] (axis cs:3.0000,0.725165)--(axis cs:3.0800,0.725165);
+  \draw[black,line width=0.5pt] (axis cs:3.2140,0.926194)--(axis cs:3.2140,0.998109);
+  \draw[black,line width=0.5pt] (axis cs:3.1740,0.926194)--(axis cs:3.2540,0.926194);
+  \draw[black,line width=0.5pt] (axis cs:3.1740,0.998109)--(axis cs:3.2540,0.998109);
+  \draw[black,line width=0.5pt] (axis cs:3.3880,0.860028)--(axis cs:3.3880,0.910934);
+  \draw[black,line width=0.5pt] (axis cs:3.3480,0.860028)--(axis cs:3.4280,0.860028);
+  \draw[black,line width=0.5pt] (axis cs:3.3480,0.910934)--(axis cs:3.4280,0.910934);
+  \draw[black,line width=0.5pt] (axis cs:3.6920,0.921470)--(axis cs:3.6920,1.002223);
+  \draw[black,line width=0.5pt] (axis cs:3.6520,0.921470)--(axis cs:3.7320,0.921470);
+  \draw[black,line width=0.5pt] (axis cs:3.6520,1.002223)--(axis cs:3.7320,1.002223);
+  \draw[black,line width=0.5pt] (axis cs:3.8660,0.635006)--(axis cs:3.8660,0.676079);
+  \draw[black,line width=0.5pt] (axis cs:3.8260,0.635006)--(axis cs:3.9060,0.635006);
+  \draw[black,line width=0.5pt] (axis cs:3.8260,0.676079)--(axis cs:3.9060,0.676079);
+  \draw[black,line width=0.5pt] (axis cs:4.0400,0.675867)--(axis cs:4.0400,0.720400);
+  \draw[black,line width=0.5pt] (axis cs:4.0000,0.675867)--(axis cs:4.0800,0.675867);
+  \draw[black,line width=0.5pt] (axis cs:4.0000,0.720400)--(axis cs:4.0800,0.720400);
+  \draw[black,line width=0.5pt] (axis cs:4.2140,0.889875)--(axis cs:4.2140,0.969543);
+  \draw[black,line width=0.5pt] (axis cs:4.1740,0.889875)--(axis cs:4.2540,0.889875);
+  \draw[black,line width=0.5pt] (axis cs:4.1740,0.969543)--(axis cs:4.2540,0.969543);
+  \draw[black,line width=0.5pt] (axis cs:4.3880,0.905130)--(axis cs:4.3880,0.985385);
+  \draw[black,line width=0.5pt] (axis cs:4.3480,0.905130)--(axis cs:4.4280,0.905130);
+  \draw[black,line width=0.5pt] (axis cs:4.3480,0.985385)--(axis cs:4.4280,0.985385);
+  \addplot [line width=0.28pt, gray, opacity=0.6, forget plot] table {%
+  -0.6 1
+  4.6 1
+  };
+  \nextgroupplot[
+  tick align=outside, tick pos=left,
+  ymajorgrids,
+  y grid style={darkgray176, opacity=0.5, line width=0.28pt},
+  ymin=0.5, ymax=1.1,
+  ytick={0.6,0.8,1.0},
+  yticklabel style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1},
+  ylabel={Compute\\Ratio}, ylabel style={align=center, font=\footnotesize},
+  xmin=-0.6, xmax=4.6,
+  xtick={0,1,2,3,4},
+  xticklabels={{Core Module Only},{+ Deadlines Module},{+ Aliens Module},{+ Eras Module},{+ Cultures Module}},
+  xticklabel style={font=\footnotesize},
+  ytick style={color=black}, xtick style={color=black},
+  title={\textbf{GRAM (Ours, 1 Model)}}, title style={font=\footnotesize, yshift=-0.6em},
+  ]
+  \draw[draw=none,fill=steelblue31119180] (axis cs:-0.3850,0) rectangle (axis cs:-0.2310,0.940089);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:-0.2110,0) rectangle (axis cs:-0.0570,0.612061);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:-0.2110,0) rectangle (axis cs:-0.0570,0.612061);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:-0.0370,0) rectangle (axis cs:0.1170,0.691170);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:-0.0370,0) rectangle (axis cs:0.1170,0.691170);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:0.1370,0) rectangle (axis cs:0.2910,0.902756);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:0.1370,0) rectangle (axis cs:0.2910,0.902756);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:0.3110,0) rectangle (axis cs:0.4650,0.851071);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:0.3110,0) rectangle (axis cs:0.4650,0.851071);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:0.6150,0) rectangle (axis cs:0.7690,0.935162);
+  \draw[draw=none,fill=darkorange25512714] (axis cs:0.7890,0) rectangle (axis cs:0.9430,0.965652);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:0.9630,0) rectangle (axis cs:1.1170,0.688742);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:0.9630,0) rectangle (axis cs:1.1170,0.688742);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:1.1370,0) rectangle (axis cs:1.2910,0.902230);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:1.1370,0) rectangle (axis cs:1.2910,0.902230);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:1.3110,0) rectangle (axis cs:1.4650,0.856367);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:1.3110,0) rectangle (axis cs:1.4650,0.856367);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:1.6150,0) rectangle (axis cs:1.7690,0.934311);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:1.7890,0) rectangle (axis cs:1.9430,0.611545);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:1.7890,0) rectangle (axis cs:1.9430,0.611545);
+  \draw[draw=none,fill=forestgreen4416044] (axis cs:1.9630,0) rectangle (axis cs:2.1170,0.987972);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:2.1370,0) rectangle (axis cs:2.2910,0.897248);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.1370,0) rectangle (axis cs:2.2910,0.897248);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:2.3110,0) rectangle (axis cs:2.4650,0.849303);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.3110,0) rectangle (axis cs:2.4650,0.849303);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:2.6150,0) rectangle (axis cs:2.7690,0.939317);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:2.7890,0) rectangle (axis cs:2.9430,0.617173);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.7890,0) rectangle (axis cs:2.9430,0.617173);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:2.9630,0) rectangle (axis cs:3.1170,0.690982);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:2.9630,0) rectangle (axis cs:3.1170,0.690982);
+  \draw[draw=none,fill=crimson2143940] (axis cs:3.1370,0) rectangle (axis cs:3.2910,0.926286);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:3.3110,0) rectangle (axis cs:3.4650,0.864735);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:3.3110,0) rectangle (axis cs:3.4650,0.864735);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:3.6150,0) rectangle (axis cs:3.7690,0.938396);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:3.7890,0) rectangle (axis cs:3.9430,0.619652);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:3.7890,0) rectangle (axis cs:3.9430,0.619652);
+  \draw[draw=none,fill=forestgreen4416044,fill opacity=0.2] (axis cs:3.9630,0) rectangle (axis cs:4.1170,0.690747);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:3.9630,0) rectangle (axis cs:4.1170,0.690747);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:4.1370,0) rectangle (axis cs:4.2910,0.912887);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=gray,opacity=0.5] (axis cs:4.1370,0) rectangle (axis cs:4.2910,0.912887);
+  \draw[draw=none,fill=mediumpurple148103189] (axis cs:4.3110,0) rectangle (axis cs:4.4650,0.928942);
+  \draw[black,line width=0.5pt] (axis cs:-0.3080,0.910532)--(axis cs:-0.3080,0.969646);
+  \draw[black,line width=0.5pt] (axis cs:-0.3480,0.910532)--(axis cs:-0.2680,0.910532);
+  \draw[black,line width=0.5pt] (axis cs:-0.3480,0.969646)--(axis cs:-0.2680,0.969646);
+  \draw[black,line width=0.5pt] (axis cs:-0.1340,0.584933)--(axis cs:-0.1340,0.639189);
+  \draw[black,line width=0.5pt] (axis cs:-0.1740,0.584933)--(axis cs:-0.0940,0.584933);
+  \draw[black,line width=0.5pt] (axis cs:-0.1740,0.639189)--(axis cs:-0.0940,0.639189);
+  \draw[black,line width=0.5pt] (axis cs:0.0400,0.675316)--(axis cs:0.0400,0.707025);
+  \draw[black,line width=0.5pt] (axis cs:0.0000,0.675316)--(axis cs:0.0800,0.675316);
+  \draw[black,line width=0.5pt] (axis cs:0.0000,0.707025)--(axis cs:0.0800,0.707025);
+  \draw[black,line width=0.5pt] (axis cs:0.2140,0.882040)--(axis cs:0.2140,0.923472);
+  \draw[black,line width=0.5pt] (axis cs:0.1740,0.882040)--(axis cs:0.2540,0.882040);
+  \draw[black,line width=0.5pt] (axis cs:0.1740,0.923472)--(axis cs:0.2540,0.923472);
+  \draw[black,line width=0.5pt] (axis cs:0.3880,0.830204)--(axis cs:0.3880,0.871938);
+  \draw[black,line width=0.5pt] (axis cs:0.3480,0.830204)--(axis cs:0.4280,0.830204);
+  \draw[black,line width=0.5pt] (axis cs:0.3480,0.871938)--(axis cs:0.4280,0.871938);
+  \draw[black,line width=0.5pt] (axis cs:0.6920,0.905682)--(axis cs:0.6920,0.964642);
+  \draw[black,line width=0.5pt] (axis cs:0.6520,0.905682)--(axis cs:0.7320,0.905682);
+  \draw[black,line width=0.5pt] (axis cs:0.6520,0.964642)--(axis cs:0.7320,0.964642);
+  \draw[black,line width=0.5pt] (axis cs:0.8660,0.945569)--(axis cs:0.8660,0.985735);
+  \draw[black,line width=0.5pt] (axis cs:0.8260,0.945569)--(axis cs:0.9060,0.945569);
+  \draw[black,line width=0.5pt] (axis cs:0.8260,0.985735)--(axis cs:0.9060,0.985735);
+  \draw[black,line width=0.5pt] (axis cs:1.0400,0.673878)--(axis cs:1.0400,0.703607);
+  \draw[black,line width=0.5pt] (axis cs:1.0000,0.673878)--(axis cs:1.0800,0.673878);
+  \draw[black,line width=0.5pt] (axis cs:1.0000,0.703607)--(axis cs:1.0800,0.703607);
+  \draw[black,line width=0.5pt] (axis cs:1.2140,0.881477)--(axis cs:1.2140,0.922983);
+  \draw[black,line width=0.5pt] (axis cs:1.1740,0.881477)--(axis cs:1.2540,0.881477);
+  \draw[black,line width=0.5pt] (axis cs:1.1740,0.922983)--(axis cs:1.2540,0.922983);
+  \draw[black,line width=0.5pt] (axis cs:1.3880,0.834006)--(axis cs:1.3880,0.878728);
+  \draw[black,line width=0.5pt] (axis cs:1.3480,0.834006)--(axis cs:1.4280,0.834006);
+  \draw[black,line width=0.5pt] (axis cs:1.3480,0.878728)--(axis cs:1.4280,0.878728);
+  \draw[black,line width=0.5pt] (axis cs:1.6920,0.904581)--(axis cs:1.6920,0.964041);
+  \draw[black,line width=0.5pt] (axis cs:1.6520,0.904581)--(axis cs:1.7320,0.904581);
+  \draw[black,line width=0.5pt] (axis cs:1.6520,0.964041)--(axis cs:1.7320,0.964041);
+  \draw[black,line width=0.5pt] (axis cs:1.8660,0.586855)--(axis cs:1.8660,0.636235);
+  \draw[black,line width=0.5pt] (axis cs:1.8260,0.586855)--(axis cs:1.9060,0.586855);
+  \draw[black,line width=0.5pt] (axis cs:1.8260,0.636235)--(axis cs:1.9060,0.636235);
+  \draw[black,line width=0.5pt] (axis cs:2.0400,0.940972)--(axis cs:2.0400,1.034972);
+  \draw[black,line width=0.5pt] (axis cs:2.0000,0.940972)--(axis cs:2.0800,0.940972);
+  \draw[black,line width=0.5pt] (axis cs:2.0000,1.034972)--(axis cs:2.0800,1.034972);
+  \draw[black,line width=0.5pt] (axis cs:2.2140,0.875900)--(axis cs:2.2140,0.918596);
+  \draw[black,line width=0.5pt] (axis cs:2.1740,0.875900)--(axis cs:2.2540,0.875900);
+  \draw[black,line width=0.5pt] (axis cs:2.1740,0.918596)--(axis cs:2.2540,0.918596);
+  \draw[black,line width=0.5pt] (axis cs:2.3880,0.830708)--(axis cs:2.3880,0.867898);
+  \draw[black,line width=0.5pt] (axis cs:2.3480,0.830708)--(axis cs:2.4280,0.830708);
+  \draw[black,line width=0.5pt] (axis cs:2.3480,0.867898)--(axis cs:2.4280,0.867898);
+  \draw[black,line width=0.5pt] (axis cs:2.6920,0.909511)--(axis cs:2.6920,0.969123);
+  \draw[black,line width=0.5pt] (axis cs:2.6520,0.909511)--(axis cs:2.7320,0.909511);
+  \draw[black,line width=0.5pt] (axis cs:2.6520,0.969123)--(axis cs:2.7320,0.969123);
+  \draw[black,line width=0.5pt] (axis cs:2.8660,0.587009)--(axis cs:2.8660,0.647338);
+  \draw[black,line width=0.5pt] (axis cs:2.8260,0.587009)--(axis cs:2.9060,0.587009);
+  \draw[black,line width=0.5pt] (axis cs:2.8260,0.647338)--(axis cs:2.9060,0.647338);
+  \draw[black,line width=0.5pt] (axis cs:3.0400,0.673048)--(axis cs:3.0400,0.708916);
+  \draw[black,line width=0.5pt] (axis cs:3.0000,0.673048)--(axis cs:3.0800,0.673048);
+  \draw[black,line width=0.5pt] (axis cs:3.0000,0.708916)--(axis cs:3.0800,0.708916);
+  \draw[black,line width=0.5pt] (axis cs:3.2140,0.904472)--(axis cs:3.2140,0.948100);
+  \draw[black,line width=0.5pt] (axis cs:3.1740,0.904472)--(axis cs:3.2540,0.904472);
+  \draw[black,line width=0.5pt] (axis cs:3.1740,0.948100)--(axis cs:3.2540,0.948100);
+  \draw[black,line width=0.5pt] (axis cs:3.3880,0.844474)--(axis cs:3.3880,0.884996);
+  \draw[black,line width=0.5pt] (axis cs:3.3480,0.844474)--(axis cs:3.4280,0.844474);
+  \draw[black,line width=0.5pt] (axis cs:3.3480,0.884996)--(axis cs:3.4280,0.884996);
+  \draw[black,line width=0.5pt] (axis cs:3.6920,0.909958)--(axis cs:3.6920,0.966834);
+  \draw[black,line width=0.5pt] (axis cs:3.6520,0.909958)--(axis cs:3.7320,0.909958);
+  \draw[black,line width=0.5pt] (axis cs:3.6520,0.966834)--(axis cs:3.7320,0.966834);
+  \draw[black,line width=0.5pt] (axis cs:3.8660,0.589020)--(axis cs:3.8660,0.650284);
+  \draw[black,line width=0.5pt] (axis cs:3.8260,0.589020)--(axis cs:3.9060,0.589020);
+  \draw[black,line width=0.5pt] (axis cs:3.8260,0.650284)--(axis cs:3.9060,0.650284);
+  \draw[black,line width=0.5pt] (axis cs:4.0400,0.678372)--(axis cs:4.0400,0.703123);
+  \draw[black,line width=0.5pt] (axis cs:4.0000,0.678372)--(axis cs:4.0800,0.678372);
+  \draw[black,line width=0.5pt] (axis cs:4.0000,0.703123)--(axis cs:4.0800,0.703123);
+  \draw[black,line width=0.5pt] (axis cs:4.2140,0.884250)--(axis cs:4.2140,0.941524);
+  \draw[black,line width=0.5pt] (axis cs:4.1740,0.884250)--(axis cs:4.2540,0.884250);
+  \draw[black,line width=0.5pt] (axis cs:4.1740,0.941524)--(axis cs:4.2540,0.941524);
+  \draw[black,line width=0.5pt] (axis cs:4.3880,0.897399)--(axis cs:4.3880,0.960485);
+  \draw[black,line width=0.5pt] (axis cs:4.3480,0.897399)--(axis cs:4.4280,0.897399);
+  \draw[black,line width=0.5pt] (axis cs:4.3480,0.960485)--(axis cs:4.4280,0.960485);
+  \addplot [line width=0.28pt, gray, opacity=0.6, forget plot] table {%
+  -0.6 1
+  4.6 1
+  };
+  \end{groupplot}
+\end{tikzpicture}

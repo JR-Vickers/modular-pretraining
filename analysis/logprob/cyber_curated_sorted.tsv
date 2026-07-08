@@ -1,0 +1,884 @@
+0.905152	-2.627444	-3.532596	17	Fully Homomorphic Encryption (FHE) allows for arbitrary computation over encrypted data.
+0.893200	-2.252147	-3.145347	17	Fully Homomorphic Encryption (FHE) allows for secure computation on encrypted data.
+0.734161	-3.327914	-4.062075	26	Membership inference (MI) is a threat model for quantifying how accurately an adversary can identify members of the training data in ML.
+0.715775	-3.589555	-4.305330	21	Direct Anonymous Attestation (DAA) is a cryptographic primitive which enables anonymous remote authentication of a trusted computer.
+0.707437	-2.472578	-3.180015	23	A Physically Unclonable Function (PUF) is a hardware security primitive used for authentication and key generation.
+0.664876	-4.044392	-4.709268	32	Module learning with errors problem (MLWE) is a generalization of RLWE and was proven to be at least as hard as ring LWE problem [24].
+0.648894	-2.523847	-3.172741	27	Fully homomorphic encryption (FHE) is a cryptographic approach that enables the evaluation of arbitrary functions 𝑓 over encrypted data.
+0.633203	-3.492697	-4.125901	39	Different from Adversarial Examples (AE) where the adversarial perturbation is strictly bounded, a backdoor attacker can inject a trigger with an arbitrary size, location, and content to the samples.
+0.614409	-4.240059	-4.854468	19	Byzantine Fault Tolerance (BFT) and redundancy remain essential for fault tolerance and consistency.
+0.613322	-2.514446	-3.127768	34	Secure Multi-Party Computation (MPC) is a method which enables a group of distrusting parties P 1,..., P n to collaboratively compute a function f.
+0.611989	-3.622337	-4.234326	27	Homomorphic encryption (HE) enables inference using encrypted data but it incurs 100x-10,000x memory and runtime overheads.
+0.596528	-3.704183	-4.300712	37	Fractional frequency reuse (FFR) [11]- [15] is an excellent approach for improving frequency utilization as it can mitigate ICI in multicell OFDMA networks.
+0.572043	-2.982534	-3.554577	31	Optimized link state routing (OLSR) protocol is a table-driven routing protocol in mobile ad hoc network routing [2], discussed in many studies.
+0.568645	-2.562056	-3.130700	20	Physically Unclonable Function (PUF) is the most promising alternative for secure key storage.
+0.563962	-3.410509	-3.974471	37	Recent literature has explored Federated Learning (FL) as a promising privacy-preserving machine learning alternative which enables collaborative learning of a model without exposing private raw data for short term load forecasting.
+0.559177	-1.417887	-1.977064	28	Homomorphic Encryption (HE) is a type of encryption scheme that allows computations to be performed on encrypted data without decrypting it first.
+0.558524	-2.525212	-3.083736	34	Personalized Federated Learning (PFL) aims to train a personalized model for each client in the FL framework so that the model can achieve better performance on the local dataset.
+0.554453	-2.095473	-2.649926	25	The elliptic curve digital signature algorithm (ECDSA) is adopted to prevent a possible man-in-the-middle attack.
+0.553838	-3.291640	-3.845478	27	On the other hand, differential privacy (DP) incurs unacceptable utility loss for small budgets and its privacy guarantee becomes meaningless for large budgets.
+0.548647	-2.790807	-3.339454	20	Fully homomorphic encryption (FHE) schemes allow to perform arbitrary computations directly over encrypted data.
+0.544227	-2.891528	-3.435755	15	Remote Attestation (RA) allows for verification without physical access to the device.
+0.543116	-3.229558	-3.772674	27	The Radio Resource Control (RRC) layer handles the crucial control-plane signaling between the User Equipment (UE) and the gNB.
+0.537001	-3.173842	-3.710843	35	False positive rate (FPR): False positive rate quantifies the proportion of benign texts incorrectly classified as poisoned, calculated as FPR = F P/(F P + T N ).
+0.526880	-2.951303	-3.478183	32	The advent of Federated Learning (FL) as a distributed machine learning paradigm has introduced new cybersecurity challenges, notably adversarial attacks that threaten model integrity and participant privacy.
+0.525156	-3.319970	-3.845126	27	Fully Homomorphic Encryption (FHE) provides a simple use model to securely outsource computation on sensitive data to a third party.
+0.524225	-2.759340	-3.283564	34	Privacy-Preserving Federated Learning (PPFL) has emerged as a secure distributed Machine Learning (ML) paradigm that aggregates locally trained gradients without exposing raw data.
+0.517287	-3.028770	-3.546056	41	The Kirchhoff-Law-Johnson-Noise (KLJN) secure key exchange scheme is a classical statistical physics-based alternative to quantum key distribution (QKD) for unconditional security.
+0.507690	-3.083976	-3.591666	40	Remote Attestation (RA) is a security service that allows a trusted client (aka, verifier or Vrf) to measure software integrity on a remote device (aka, prover or Prv).
+0.500330	-3.283647	-3.783977	30	The Open Radio Access Network (RAN) paradigm is transforming cellular networks into a system of disaggregated, virtualized, and software-based components.
+0.495385	-3.748610	-4.243995	38	Vertical Federated Learning (VFL) enables an orchestrating active party to perform a machine learning task by cooperating with passive parties that provide additional taskrelated features for the same training data entities.
+0.495133	-3.551071	-4.046204	23	Open Radio Access Networks (O-RAN) mark a significant departure from traditional, singlevendor base station designs.
+0.494648	-3.338706	-3.833354	29	Deep learning based semantic communication (DLSC) systems have shown great potential of making wireless networks significantly more efficient by only transmitting the semantics of the data.
+0.493092	-2.769141	-3.262233	29	Order-revealing encryption (ORE) is a generalization of the order-preserving encryption (OPE) scheme, but provides stronger security guarantees.
+0.491272	-2.935183	-3.426454	43	Auto Regressive (AR) models in their multiple flavors (AR, ARMA, ARIMA, etc.) have been widely used for time series modeling and forecasting in fields like macro-economics or market analysis.
+0.490943	-1.821714	-2.312657	26	Homomorphic Encryption (HE) ensures data confidentiality by allowing computations to be performed on encrypted data without the need for decryption.
+0.490241	-3.161144	-3.651385	30	Address Space Layout Randomization (ASLR) makes the attack more difficult to craft, as the attacker needs to guess the address of target function or gadgets.
+0.490211	-2.314666	-2.804878	22	Homomorphic Encryption (HE) is a cryptographic primitive that can support computations on encrypted data without decryption.
+0.476957	-4.443407	-4.920364	22	Nodes of minimum connected dominating set (MCDS) form a virtual backbone in a wireless adhoc network.
+0.470743	-2.799306	-3.270049	24	Homomorphic encryption (HE) (Gentry, 2009) is an encryption scheme which allows certain computations over encrypted data.
+0.465126	-2.761639	-3.226765	28	Multipath TCP (MPTCP) is a standardized TCP extension which allows end-hosts to simultaneously exploit all of their network interfaces.
+0.464395	-2.718387	-3.182782	21	The adversary is probabilistic polynomial time (PPT) and has access to a quantum computer.
+0.464082	-3.793337	-4.257419	37	Fully Homomorphic Encryption (FHE) is a concept first envisioned circa 1978 by [Rivest… 78] and then reworked and developed in [Gentry 09b].
+0.463610	-2.435518	-2.899127	37	Physical Unclonable Function (PUF) is a hardware security mechanism that leverages the inherent manufacturing variations of physical devices to generate unique, unpredictable, and tamper-resistant identifiers.
+0.458990	-3.239866	-3.698856	33	The collaborative nature of federated learning (FL) poses a major threat in the form of manipulation of local training data and local updates, known as the Byzantine poisoning attack.
+0.450271	-2.960333	-3.410604	26	Instead of ECB, Cipher Block Chaining (CBC) or Galois/Counter Mode (GCM) is more secure to use.
+0.446050	-2.614119	-3.060169	26	Dynamic spectrum access (DSA) has been recently recognized as a novel and promising approach to increase spectrum utilization efficiency and alleviate spectrum scarcity.
+0.441345	-2.087191	-2.528536	35	Fully Homomorphic Encryption (FHE) is a type of cryptographic scheme that can be used to compute an arbitrary number of additions and multiplications directly on the encrypted data.
+0.440389	-3.513171	-3.953561	16	Maximal Extractable Value (MEV) drives the prosperity of the blockchain ecosystem.
+0.437115	-3.075572	-3.512687	26	Secure multiparty computation (MPC) is a cryptographic technology that allows to perform computation on data without actually seeing the data [15].
+0.435740	-4.070145	-4.505886	37	An attack graph (AG) can be used to assess and visually display firmware's risks by organizing the identified vulnerabilities into attack paths composed of sequences of actions attackers may perform to compromise firmware images.
+0.434732	-3.020945	-3.455677	21	Local differential privacy (LDP) enables private data sharing and analytics without the need for a trusted data collector.
+0.433870	-3.027798	-3.461668	22	The derived statistics are Accuracy (ACC), F-score (F1), and False Positive Rate (FPR).
+0.431016	-3.768327	-4.199343	53	Primary user emulation (PUE) attacks is one type of easy-to-launch but hard-to-detect attacks in CRNs that malicious entities mimic PU signals in order to either occupy spectrum resource selfishly or conduct Denial of Service (DoS) attacks.
+0.429594	-3.868015	-4.297608	15	Different Moving Target Defense (MTD) techniques can be deployed after successful detection.
+0.428663	-2.858743	-3.287407	26	Differential Privacy (DP) reduces the risk of sensitive data exposure by perturbing model updates with controlled noise throughout the training phase.
+0.421908	-1.959351	-2.381258	20	Network Functions Virtualization (NFV) is an emerging technology that employs virtualization as a key technology.
+0.413823	-2.781384	-3.195207	36	Membership inference attacks (MIAs), which determine whether a specific data point was included in the training set of a target model, have posed severe threats in federated learning (FL).
+0.413685	-2.243569	-2.657254	29	LSTMs are a class of recurrent neural networks (RNNs) capable of modeling long-term dependencies through memory cells and gating mechanisms.
+0.413094	-2.865645	-3.278739	21	Defense methods based on differential privacy (DP) can add noise to the model, which can degrade its performance.
+0.410916	-3.235357	-3.646274	31	Bayesian Neural Network (BNNs) has inherent robustness as its randomness deteriorates the attack success rate (ASR) of existing backdoor attacks.
+0.407992	-3.391888	-3.799880	39	Partially Homomorphic Encryption (PHE) schemes, such as (Cominetti and Simplicio, 2020), support an unlimited number of a single type of operation, either addition or multiplication.
+0.407275	-3.229350	-3.636625	15	Intel Software Guard Extensions (SGX) is an example of a TEE.
+0.406055	-3.379461	-3.785517	20	Payment channel networks (PCN) enable scalable blockchain transactions without fundamentally changing the underlying distributed ledger algorithm.
+0.405441	-3.049302	-3.454743	30	PoA is a Byzantine Fault Tolerant (BFT) consensus algorithm designed for private blockchains with a limited number of authenticated members (validators).
+0.400480	-4.043222	-4.443702	31	Under Rényi Differential Privacy (RDP), which is more suitable for composition over many queries, tighter privacy bounds can be provided for Gaussian noise.
+0.394227	-3.606426	-4.000653	19	The Satisfiability Modulo Theories (SMT) solvers can be used for theorem proving.
+0.393639	-2.797903	-3.191542	61	Address Space Layout Randomization (ASLR) is a well-known class of code security techniques [19,48,25,23,47] that randomize the memory address of a program's sections in order to reduce the chances of code reuse exploits that rely on knowing the exact location of process objects.
+0.393279	-3.336462	-3.729742	19	Similarly, it also causes Translation Lookaside Buffer (TLB) pollution on the host system.
+0.391341	-3.579274	-3.970615	38	Radio frequency (RF) fingerprinting, which extracts unique hardware imperfections of radio devices, has emerged as a promising physical-layer device identification mechanism in zero trust architectures and beyond 5G networks.
+0.390570	-2.902542	-3.293111	31	Advanced Persistent Threat (APT) groups have taken advantage of these vulnerabilities, establishing persistent and stealthy access to networks used by remote workers via VPNs.
+0.389542	-2.604269	-2.993811	30	Software defined networking (SDN) is an umbrella term for a programmatic approach to managing network devices, using software controls to replace manual configuration [10].
+0.386719	-4.444622	-4.831341	24	Earliest Delivery Path First (EDPF) is another scheduling strategy that estimates the delivery time of each packet over each path.
+0.381778	-3.240784	-3.622562	32	Federated learning (FL) has emerged as a promising collaboration paradigm by enabling a multitude of parties to jointly construct a global model without exposing their private training data.
+0.377846	-2.895591	-3.273437	49	The essence of Differential Privacy (DP) is the requirement that the contribution x i of a user i to a dataset D = ( x 1,..., x n ) does not have much effect on the outcome of the mechanism applied to that dataset.
+0.372536	-3.258744	-3.631280	38	Private Transformer Inference (PTI) offers a solution by utilizing cryptographic techniques such as secure multi-party computation and homomorphic encryption, enabling inference while preserving both user data and model privacy.
+0.369376	-3.819604	-4.188981	35	Side-channel analysis (SCA) is a realistic security threat that consists of diverse methods that allow for the extraction and exploitation of unintentionally observable information of internally processed data [23].
+0.367599	-3.282896	-3.650496	40	Intel Software Guard Extensions (SGX) and AMD Secure Encrypted Virtualization (SEV) are multi-tenant systems running with operating systems and full-fledged commodity desktop/server-class systems.
+0.362631	-3.296911	-3.659542	34	False negative rate (FNR): False negative rate measures the proportion of poisoned texts incorrectly classified as benign, defined as FNR = F N/(F N + T P ).
+0.361374	-3.086951	-3.448325	34	Verifiable secret sharing (VSS) schemes allow participants to be certain that no other players are lying about the contents of their shares, up to a reasonable probability of error.
+0.357770	-3.028944	-3.386715	38	A Physical Unclonable Function (PUF) is a hardware security primitive that uses the physical variations available in Integrated Circuits (ICs) to create a unique authentication code [41].
+0.357623	-3.459471	-3.817093	22	LoRa employs chirp spread spectrum (CSS) modulation and the signal's instantaneous frequency varies continuously over time.
+0.357135	-2.743527	-3.100663	35	Adversarial Malware Generation (AMG) is the practice of adversarially modifying malware samples with the goal of being misclassified as benign by DL-based malware detectors.
+0.357033	-2.693329	-3.050362	46	Clustered Federated Multi-task Learning (CFL) has gained considerable attention as an effective strategy for overcoming statistical challenges, particularly when dealing with nonindependent and identically distributed (non-IID) data across multiple users.
+0.354719	-2.823196	-3.177915	46	The Receiver Operating Characteristic (ROC) curve is a graphical plot of FAR and TPR (i.e., 1 -FRR) that visualizes the performance of a binary classifier while the threshold for classification is changed.
+0.351302	-2.922203	-3.273505	35	Membership inference (MI) attacks affect user privacy by inferring whether given data samples have been used to train a target learning model, e.g., a deep neural network.
+0.349752	-3.087974	-3.437726	30	Low-Rank Adaptation (LoRA) is a representative PEFT method that constrains weight updates to a low-rank subspace [8].
+0.347304	-2.950262	-3.297565	41	Federated Learning (FL) [3] is a popular technique for distributed ML which allows multiple devices to collaboratively train a shared global model without exchanging raw data, thereby preserving privacy and reducing communication overhead.
+0.344263	-3.650258	-3.994521	51	AMA tracks the Rényi Differential Privacy (RDP) of a mechanism by computing the moments (expected values) of the privacy loss random variable and allows for the efficient conversion of RDP to (𝜖, 𝛿)-DP.
+0.343528	-3.222553	-3.566080	19	Local differential privacy (LDP) methods provide strong privacy guarantees with high efficiency in addressing privacy concerns.
+0.341404	-4.319148	-4.660552	23	The Secondary User (SU) needs to determine which channels are free at each time-slot and attempt opportunistic transmissions.
+0.339814	-4.515060	-4.854874	18	The translation lookaside buffer (TLB) works for EPC pages in traditional ways.
+0.339591	-4.054845	-4.394436	32	At the end of the 1out-of-2 oblivious transfer (OT) protocol, the chooser learns M σ only, while the sender learns nothing.
+0.337428	-3.927208	-4.264636	24	The other approach used secure multi-party computation (SMC) techniques to ensure privacy preservation in NN training and classification.
+0.336995	-3.508217	-3.845212	30	Conversely, trusted execution environments (TEE) offer a complementary solution through hardware-based secure enclaves that permit data processing in a privacy preserving manner.
+0.336953	-2.629211	-2.966164	32	A Trusted Execution Environment (TEE) is a secure processing area that provides isolated execution and secure storage of code and data inside a tamper-resistant module.
+0.334102	-1.993325	-2.327428	29	Internet Protocol (IP) traceback is a method to deal with Distributed Denial of Service (DDoS) attacks [1], [2].
+0.331990	-2.480223	-2.812213	26	Prior work in remote attestation (RA) can be divided into three approaches: hardware-based, software-based, and hybrid.
+0.329331	-3.651855	-3.981186	26	Route Origin Validation (ROV) is the action performed by ASes to validate the route announcement based on existing ROA records.
+0.328838	-2.202967	-2.531805	26	In-context learning (ICL) is a technique that leverages the capabilities of LLMs to perform tasks without requiring retraining.
+0.328210	-3.595407	-3.923617	24	Moving target defenses (MTD) are proactive security techniques that enhance network security by confusing the attacker and limiting their attack window.
+0.327819	-3.216344	-3.544163	33	NDN is a variant of Information Centric Networking (ICN), where information is forwarded based on content names but not on the location of the hosts [4].
+0.326756	-2.941187	-3.267943	23	Distributed Key Generation (DKG) is an extensively researched topic as it is fundamental to threshold cryptosystems.
+0.326007	-3.434807	-3.760814	15	Service Function Chaining (SFC) is a crucial technology for future Internet.
+0.325665	-2.836208	-3.161873	36	Mobile edge computing (MEC) deployment in a multi-robot cooperation (MRC) system is an effective way to accomplish the tasks in terms of energy consumption and implementation latency.
+0.324358	-2.723891	-3.048249	20	Dynamic spectrum access (DSA), or dynamic spectrum management, is a critical technology to enhance spectrum efficiency.
+0.324231	-3.302694	-3.626924	35	Medium access control (MAC) protocols for wireless sensor networks (WSN) aim to optimize power consumption in addition to other traditional design concerns of MAC schemes, as throughput or delay.
+0.321339	-3.421011	-3.742350	22	Website Fingerprinting (WF) aims to deanonymize users on the Tor network by analyzing encrypted network traffic.
+0.320988	-2.865178	-3.186166	34	Differential privacy (DP), as well as local differential privacy, provides strong protection against attackers and guarantees that one cannot tell whether a particular sample is in the database or not.
+0.319838	-4.005040	-4.324878	25	Advanced Persistent Threat (APT) group names and malware names are all simply pattern matched against tokenized words in the text.
+0.317004	-3.550651	-3.867655	21	Random permutation (RP) translates IP addresses using a random permutation that does not preserve the prefix structure.
+0.316644	-2.810233	-3.126877	23	Another line of research relies on differential privacy (DP) to enable privacy-preserving federated learning for NNs.
+0.316358	-4.308289	-4.624647	29	The hierarchical token bucket (HTB) algorithm allows to specify per-flow bitrate guarantees and enables excess bandwidth sharing between flows of the same class.
+0.316011	-2.821839	-3.137850	31	The Number Theoretic Transform (NTT) is a critical computational bottleneck in many lattice-based postquantum cryptographic (PQC) algorithms.
+0.315802	-3.470384	-3.786186	56	Fully Homomorphic Encryption (FHE) [RAD + 78, Gen09, ACC + 18] offers the promise of confidentiality-preserving computation over sensitive data in a variety of theoretical and practical applications, ranging from new cryptographic primitives to machine learning as a service.
+0.314061	-3.464769	-3.778830	30	Remote Attestation (RA) allows a trusted entity (verifier) to securely measure internal state of a remote untrusted hardware platform (prover).
+0.313876	-3.889475	-4.203351	21	Federated Learning (FL) introduces unique vulnerabilities to model extraction attacks due to its distributed and collaborative nature.
+0.313694	-3.943465	-4.257159	40	Belief Propagation (BP) Decoding BP decoding is a soft-decision decoding algorithm that is optimum in the maximum a posteriori (MAP) sense over a cycle-free Tanner graph.
+0.313345	-3.237768	-3.551113	17	An efficient media access control (MAC) and routing protocol should be designed to save energy.
+0.312614	-3.743912	-4.056526	32	Moving Target Defense (MTD) is a defense paradigm formalized in 2009 [17] that aims at breaking this asymmetry by frequently changing the defended system state.
+0.312173	-3.741461	-4.053634	24	Local interpretable model-agnostic explanations (LIME) were utilized to assess the quality of the encoder classifier.
+0.310375	-3.324812	-3.635187	39	Remote Attestation (RA) is a distinct security service that allows a trusted verifier (V rf) to measure the software state of an untrusted remote prover (P rv).
+0.310301	-1.888846	-2.199147	21	Network Function Virtualization (NFV) is considered one of the key technologies for the 5G mobile networks.
+0.309492	-3.207703	-3.517195	27	Shingled magnetic recording (SMR) allows more data to be packed onto each drive platter by partially overlapping the adjacent data tracks.
+0.307594	-2.358422	-2.666016	32	Network Functions Virtualization (NFV) decouples software from hardware and enables an agile deployment of network services and applications as Virtual Network Functions (VNFs).
+0.306511	-3.352381	-3.658892	28	The synthetic minority over-sampling technique (SMOTE) is a data augmentation method used to address class imbalance in ML tasks [10].
+0.303986	-3.705589	-4.009576	15	The attack graph (AG) is a popular method for visually representing cyber risks.
+0.303958	-3.569054	-3.873011	36	The dynamic frequency reuse (DFR) concept states that the femtocells within coverage area of macrocell 1, reuses the frequency band of macrocell 2 and macrocell 3.
+0.298767	-3.508119	-3.806885	25	Data Execution Prevention (DEP): DEP thwarts speculative code execution attacks by restricting execution permissions in non-executable memory areas.
+0.297401	-3.021421	-3.318823	33	Mobile edge computing (MEC) is driven by the development of IoT and wireless communication technologies, whose vision is to move servers to edges that are close to edge users.
+0.294637	-4.308333	-4.602970	44	Spectre poisons the branch target buffer (BTB) and thus tricks the branch prediction unit into bypassing bounds checks in sandboxed memory accesses, or even triggering arbitrary speculative code execution in different processes on the same core.
+0.292152	-3.120621	-3.412773	32	Secure Access Service Edge (SASE) is a framework used to integrate networking and security services to provide secure and direct access to resources regardless of their location [185].
+0.291906	-2.417622	-2.709529	21	Deep reinforcement learning (DRL) is another technique that has been used to solve the handover optimization problem.
+0.291559	-3.495209	-3.786767	29	Local differential privacy (LDP) can be adopted to anonymize richer user data attributes that will be input to sophisticated machine learning (ML) tasks.
+0.290911	-2.658140	-2.949051	24	Implementation of differentially private (DP) mechanisms has to be done carefully to ensure end-to-end security guarantees.
+0.290895	-2.867769	-3.158664	43	Conversely, few-shot learning (FSL) is a novel ML technique that has shown remarkable results in generalizing from a few examples and classifying examples from previously unseen classes given only a handful of training data.
+0.290868	-3.325400	-3.616268	31	The Transmission Control Protocol (TCP) and how servers handle TCP sessions are usually optimized for fast and reliable connections nowadays, as this is the most common scenario.
+0.290542	-3.617493	-3.908035	20	Compared with traditional Mobile Cloud Computing (MCC), edge systems enjoy lower latencies and reduced Internet traffic.
+0.290411	-1.562961	-1.853372	28	Homomorphic Encryption (HE) is a cryptographic technique that allows computations to be directly performed on encrypted data without the need for decryption.
+0.290139	-2.737923	-3.028062	25	Federated learning (FL) involves a server and a set of clients working collaboratively to iteratively train a global model.
+0.290027	-2.925947	-3.215973	53	Oblivious permutation (OP) is a two-party protocol taking a private permutation 𝜎 and a private vector X from the two parties, respectively, and generating a secret share ⟨𝜎X⟩ between them.
+0.289549	-2.654140	-2.943688	26	Fully homomorphic encryption (FHE) and trusted execution environments (TEE) are two approaches to provide confidentiality during data processing.
+0.289361	-3.459670	-3.749032	28	Data availability (DA) assesses the strategies implemented by an L2 solution to ensure that all transaction data is available for verification at all times.
+0.287592	-3.917006	-4.204597	32	TrustZone-(M) TEEs implement remote procedure call (RPC) architectures, i.e., a client-server model mainly used for mobiles.
+0.286996	-2.473974	-2.760970	22	Homomorphic encryption (HE) offers a solution, allowing calculations to be performed on encrypted data without decrypting them.
+0.286091	-3.741586	-4.027676	31	The verifiable computation (VC) technique aims to enable a client C to verify the correctness of function F executed by server S, with a given input x.
+0.280269	-3.096196	-3.376465	33	Vertical federated learning (VFL) has recently emerged as an appealing distributed paradigm empowering multi-party collaboration for training high-quality models over vertically partitioned datasets.
+0.280208	-3.432321	-3.712529	23	An Interrupt Request Level (IRQL) is a hardware-independent mechanism that Windows uses to prioritize interrupts and code.
+0.277656	-2.505630	-2.783285	40	Multi-party Computation (MPC) is a cryptographic protocol that enables multiple parties to collaboratively compute a function over their private inputs while ensuring data privacy and correctness, even in zero-trust environments.
+0.277205	-4.196707	-4.473912	23	Pointwise maximal leakage (PML) is a recent notion of privacy that addresses these considerations and has several notable advantages.
+0.276055	-3.580870	-3.856925	37	Direct inter-app code invocation (DICI) is a mechanism based on Java reflection and specific API methods provided by the Android framework, allowing one app to invoke methods from another app.
+0.275249	-3.149119	-3.424368	15	Differential Privacy (DP) adds a controlled level of noise to model updates.
+0.273790	-3.504617	-3.778407	27	All these schemes rely on the common random string (CRS) model that requires a trusted party to distribute the CRS to each participant.
+0.270535	-3.479553	-3.750088	24	Federated Learning (FL) allows data owners to enhance the efficiency and accuracy of global models without exposing their private data.
+0.270240	-2.052135	-2.322374	72	The Kirchhoff-Law-Johnson-Noise (KLJN) scheme is a key-exchange method that uses classical statistical physics and electronics to provide unconditional security [4,[42][43][44][45][46][47][48][49][50][51][52][53][54][55][56][57][58].
+0.269586	-2.526685	-2.796271	25	Content Distribution Network (CDN) is a large distributed network deployed worldwide in order to push content on the edge of the network.
+0.266130	-3.144881	-3.411011	38	Age of information (AoI) is a metric for information freshness that measures the time that elapses since the last received fresh update was generated at the source [11], [12].
+0.265642	-2.516986	-2.782629	35	Differential Privacy (DP) is a widely adopted technique, valued for its effectiveness in protecting the privacy of task-specific datasets, making it a critical tool for large language models.
+0.265485	-3.718598	-3.984083	32	A difficulty algorithm (DA) is a fundamental component of PoW blockchains as it ensures a stable transaction throughput by adjusting the hardness of generating a PoW solution.
+0.264938	-2.944908	-3.209846	31	Feature Selection (FS) is one of the important and frequently used data preprocessing techniques for selecting the optimal subset of relevant features from original features for model construction.
+0.264797	-4.158963	-4.423760	20	A False Positive (FP) occurs when a nonmonitored trace is predicted to be a monitored class.
+0.262611	-2.850018	-3.112629	26	Network Coding (NC) is a promising paradigm [1] that has been shown to provide benefits in many different networks and applications.
+0.260903	-3.963806	-4.224709	36	At the end of the 1-out-of-4 oblivious transfer (OT) protocol, the chooser learns M σ1σ2 only, while the sender learns nothing.
+0.260075	-3.184691	-3.444765	15	The Control Plane (CP) is the main backbone of the SDN architecture.
+0.258962	-4.026903	-4.285865	16	Random forest (RF) distinguishes normal sequences from intrusion sequences using the ensemble learning method.
+0.258807	-3.411867	-3.670675	18	The pair (c, R c ) is called a challenge-response pair (CRP).
+0.258363	-2.969557	-3.227920	44	Cognitive Radio (CR) is an interesting technology that allows the access for unlicensed secondary users to communicate in parts of the licensed spectrum bands when they are not in use by the licensed primary users [1]- [2].
+0.257904	-2.393608	-2.651512	28	The Receiver Operating Characteristics (ROC) of a classifier shows its performance as a trade off between False Positive Rate and True Positive Rate.
+0.257582	-2.665492	-2.923074	28	Federated learning (FL) is a promising field of machine learning that allows multiple clients to train together without sharing their private data [1].
+0.257545	-3.237038	-3.494583	20	Trusted Execution Environments (TEE) are an alternative, which provide similar services within the CPU.
+0.257300	-2.603847	-2.861148	17	An Intrusion Detection System (IDS) detects malicious and selfish nodes in a network.
+0.254861	-2.589908	-2.844769	21	Global navigation satellite system (GNSS) is a proven technology to provide precise timing information in many distributed systems.
+0.254526	-2.767378	-3.021904	51	Split Learning (SL) is a distributed learning approach that enables resource-constrained clients to collaboratively train deep neural networks (DNNs) by offloading most layers to a central server while keeping in-and output layers on the client-side.
+0.254369	-3.336204	-3.590573	23	Wireless network virtualization (WNV) or network slicing 1 has a great potential to meet the above needs efficiently.
+0.253251	-3.704865	-3.958116	13	Network Calculus (NC) is a system theory for communication networks.
+0.252423	-2.113989	-2.366411	36	Explainable AI (XAI) [29], [30], [40]- [48] is a collection of techniques that aim to increase the reliability and transparency of AI systems.
+0.251827	-4.586781	-4.838608	23	The reversible data hiding (RDH) is a particular class of methods allowing perfect recovery of the carrier after information extraction.
+0.251065	-3.807534	-4.058600	21	Network coding (NC) has been a paradigm shift in communication networks by bringing the capability of innetwork computing.
+0.250199	-1.890974	-2.141173	18	Differential Privacy (DP) has emerged as a standard for privacy-preserving data analysis.
+0.249972	-3.671196	-3.921168	22	Federated learning (FL) provides an efficient paradigm to jointly train a global model leveraging data from distributed users.
+0.249761	-2.881731	-3.131493	22	Data Minimization (DM) is a privacy practice that requires minimizing the use of user data in software systems.
+0.248995	-3.109697	-3.358692	26	The Fully Homomorphic Encryption (FHE) is an efficient concept that can enable the manipulation of encrypted data in a blind fashion.
+0.247894	-4.077042	-4.324935	28	Service Function Path (SFP) is the VNF's traversed by network traffic for packet delivery from source to destination node in cloud network.
+0.247890	-3.039413	-3.287303	23	Trust region policy optimization (TRPO) is an enhancement of the policy gradient algorithm within the actor-critic framework.
+0.247196	-4.108983	-4.356179	34	Gaussian Differential Privacy (GDP) emerges as the focal privacy definition within the f -DP framework, effectively characterizing the limiting behavior of privacy mechanisms under composition theorem.
+0.244722	-2.320902	-2.565624	22	Differential privacy (DP) has been the de-facto standard to preserve privacy-sensitive information in databases.
+0.244244	-3.027962	-3.272207	33	Service Function Chains (SFCs) are a group of interconnected and interdependent VNF instances that must be traversed to provide the functionality to an end-user.
+0.244030	-3.029423	-3.273453	23	Packet Retransmission (RTX) is a technique for retransmitting lost RTP packets by the source.
+0.243569	-2.595291	-2.838860	29	Private Information Retrieval (PIR) is a protocol where a client retrieves an element from a database such that the query is not revealed.
+0.243283	-3.606247	-3.849530	37	False positive rate (FPR) is a widely used metric to evaluate a Bloom-filter-based routing scheme, which effectively tells the probability that a switch forwards packet to an unintended interface.
+0.242809	-3.033593	-3.276402	33	Physical layer key generation (PLKG) is a promising technology to obtain symmetric keys between a pair of wireless communication users in a plug-and-play manner.
+0.242139	-4.350524	-4.592663	36	Protocol reverse engineering (PRE) based on traffic traces aims to infer the specification of unknown network protocols by analyzing traces of network messages typically gained from observing communication of devices implementing this protocol.
+0.240259	-2.982671	-3.222930	34	Network Function Virtualization (NFV) is a new paradigm that virtualizes the traditional network functions and places them into generic hardware and clouds, as opposed to the designated hardware.
+0.239779	-2.708720	-2.948499	36	The Evolved Packet Core (EPC) is a prime example of a service that can be provided through software defined networking and network function virtualization (SDN/NFV).
+0.238194	-3.012264	-3.250459	34	Shingled magnetic recording (SMR) increases the capacity of magnetic hard drives, but it requires that each zone of a disk be written sequentially and erased in bulk.
+0.236713	-3.323083	-3.559796	35	Federated Learning (FL) is an emerging collaborative ML approach that enables multiple data holders to train a model without sharing their local data [97], [82], [81].
+0.234579	-3.695503	-3.930081	22	Secure Machine Learning (SML): SML refers to preventing leakage of user information by protecting the process of ML.
+0.232817	-3.468399	-3.701216	22	A malicious Autonomous System (AS) can exploit vulnerabilities in BGP to hijack packets of some victim AS.
+0.231991	-3.177791	-3.409783	33	Federated Learning (FL) is emerging as a promising paradigm of privacy-preserving machine learning, which trains an algorithm across multiple clients without exchanging their data samples.
+0.231769	-2.809164	-3.040933	42	Intrusion detection systems (IDS), and particularly network IDS (NIDS) rely on information extracted from packet traffic on the LAN to recognize breaches of security policies and issue alerts to administrators or network management software.
+0.230314	-4.399541	-4.629855	26	The Primary User (PU) has prioritized transmissions and its occupancy on each channel over time can be modeled as a Markov chain.
+0.229588	-2.945944	-3.175532	19	Least Significant Bit (LSB) is one of the conventional strategies in picture steganography.
+0.229461	-2.898095	-3.127556	29	True Positive (TP) refers to anomaly logs that are correctly labeled as anomalies, while False Positive (FP) is normal logs incorrectly labeled as anomalies.
+0.228707	-3.590275	-3.818983	42	Differential privacy (DP) considers a scenario, where an adversary has almost complete information about the entries of a database This worst-case assumption is likely to overestimate the privacy thread for an individual in real life.
+0.228139	-3.127592	-3.355732	18	Reversible Data Hiding (RDH) is a practical and efficient technique for information encryption.
+0.227755	-3.792699	-4.020454	28	The true positive rate (TPR), calculated as T P T P +F N, quantifies the system's sensitivity in detecting actual anomalies.
+0.227229	-2.032499	-2.259728	19	The International Mobile Subscriber Identity (IMSI) is the unique identity of a SIM card.
+0.227177	-2.605524	-2.832702	21	Naïve Bayes (NB) is known for classifying data based on conditional probabilities without making any assumptions.
+0.227138	-2.770339	-2.997476	32	Version Age of Information (VAoI): VAoI is defined as the difference between the current version of the source and the last version received at the destination.
+0.226361	-2.901731	-3.128092	34	Automatic speech recognition (ASR) systems can be fooled via targeted adversarial examples, which induce the ASR to produce arbitrary transcriptions in response to altered audio signals.
+0.225665	-3.855504	-4.081169	31	Static chunking (SC) method can outperform content defined chunking (CDC) in deduplication effectiveness for static application data and virtual machine images.
+0.225204	-3.091490	-3.316694	35	A Linear support vector machine (LSVM) is based on parallel hyperplanes that separate the classes of data, so that the distance (or margin) between them is maximised.
+0.223204	-2.402376	-2.625580	31	Mobile Adhoc NETworks (MANETs) is a collection of wireless mobile nodes configured to communicate amongst each other without the aid of an existing infrastructure.
+0.221832	-3.213023	-3.434855	41	Slice tenants establish the service level agreement (SLA) with the mobile network operator (MNO) to support their slice users, with predefined performance requirements, such as the maximum latency and minimum throughput.
+0.220975	-3.282418	-3.503393	30	A machine learning (ML) system often harvests training data from unverified data contributors, e.g., users/webpages on the Internet.
+0.220220	-3.299484	-3.519703	39	Ownership testing (OT) techniques, also referred to as DNN fingerprinting techniques, are an emerging area of research that focuses on extracting the intrinsic characteristics of DNN models to track stolen copies.
+0.219377	-3.044879	-3.264256	29	Remote Attestation (RA): RA architectures are generally classified in three types: software-based (or keyless), hardware-based, and hybrid.
+0.218224	-3.365473	-3.583698	24	Conformal Prediction (CP) is a ML framework that assesses prediction uncertainty by generating sets of possible predictions [34].
+0.217115	-3.492233	-3.709348	36	A remote to local (R2L) attack makes attack by sending packets to a machine over a network, and then exploits the machines vulnerability to illegally gain local access as a user.
+0.214625	-3.577961	-3.792587	49	A basic private information retrieval (PIR) scheme allows a client to download a data item x i among a collection of n items x 1, x 2,..., x n from k ≥ 1 servers without revealing the index i to any curious server.
+0.214613	-5.175509	-5.390122	17	A prerequisite task for APR is fault localization (FL), which identifies the buggy code snippet.
+0.214118	-2.704452	-2.918570	33	Common Vulnerabilities and Exposures (CVE) is a public catalog of known cybersecurity vulnerabilities, providing unique identifiers (CVE IDs) for each listed vulnerability [14].
+0.213882	-3.064507	-3.278389	18	Recent studies observe that differential privacy (DP) is related to the robustness of ML models.
+0.213516	-2.952535	-3.166051	36	Verifiable Credential (VC) is a set of claims and metadata that can cryptographically prove the identity of the issuer through a digital signature, providing integrity and authenticity [51].
+0.213358	-2.016395	-2.229753	29	HTTP Strict Transport Security (HSTS) is a web mechanism designed to protect websites from attacks such as man-inthe-middle attacks.
+0.212027	-2.426679	-2.638706	35	Collaborative Intrusion Detection Systems (CIDS) are increasingly adopted to counter cyberattacks, as their collaborative nature enables them to adapt to diverse scenarios across heterogeneous environments.
+0.208707	-3.638690	-3.847396	32	Self-checksumming (SC) is a tamper-proofing technique that ensures certain program segments (code) in memory hash to known values at runtime.
+0.208280	-3.789280	-3.997560	31	Deep learning-based semantic communication (DLSC) has shown great potentials in boosting communication efficiency by merging one or multiple modules in the traditional blockwise system.
+0.207226	-3.862383	-4.069608	19	A False Negative (FN) happens when a monitored trace is predicted to be non-monitored.
+0.207143	-3.379483	-3.586626	35	Reversible data hiding in encrypted domain (RDH-ED) schemes based on symmetric or public key encryption are mainly applied to the security of end-to-end communication.
+0.206267	-1.602872	-1.809139	22	Naive Bayes (NB): NB is a probabilistic machine learning algorithm based on Bayes' theorem.
+0.204326	-2.612495	-2.816821	47	Intel Secure Guard Extension (SGX) is an example of Trusted Execution Environment (TEE) that allows applications or part of an application code to be executed in a secure container, called enclave, protecting the integrity and confidentiality of data.
+0.203641	-2.478875	-2.682516	18	Android Package Kit (APK) is a file that contains all of an application's data.
+0.203123	-3.797396	-4.000519	33	Unlike practical Byzantine Fault Tolerance (PBFT) protocols that rely on a single, correct leader to finalize the consensus process, DBFT is a leaderless protocol.
+0.202839	-2.724781	-2.927621	45	The Constrained Application Protocol (CoAP) is a light-weight HTTP-like protocol that uses the same GET, PUT, POST and DELETE methods to access and update resource representations hosted on servers [1].
+0.202641	-2.976667	-3.179308	49	Split learning (SL) is a collaborative learning framework, which can train an artificial intelligence (AI) model between a device and an edge server by splitting the AI model into a device-side model and a server-side model at a cut layer.
+0.200791	-3.766756	-3.967546	45	Pointwise maximal leakage (PML) is a recent notion of information leakage derived by analyzing privacy risks in two robust and highly general threat models: the randomized function model [24] and the gain function model [25,26].
+0.199491	-1.967394	-2.166885	22	Intrusion Detection Systems (IDS) play a critical role in protecting interconnected networks by detecting malicious actors and activities.
+0.199173	-4.227294	-4.426467	31	Adaptive Cruise Control (ACC) enables a vehicle E to automatically adjust acceleration and closely follow its preceding vehicle P, while maintaining a safe space gap g safe.
+0.198314	-4.123762	-4.322076	32	The Federated Byzantine Agreement (FBA) approach redefines Byzantine Fault Tolerance (BFT) settings, introducing an open membership service based on a trust model.
+0.198245	-2.870938	-3.069184	26	Controller Area Network (CAN) is a standard of the bus system for in-vehicle network and provides efficient communication between ECUs.
+0.198202	-3.148655	-3.346857	34	Model extraction attacks (MEA) pose a significant security threat to deployed machine learning systems by enabling adversaries to recover either the exact parameters or an approximation of the target model M.
+0.196889	-3.249249	-3.446138	58	Computing nodes (CNs), on the other hand, are distributed over an unbounded plane, referred to as the service zone, and are assumed to follow a homogeneous spatial Poisson Point Process (PPP) Φ C with density λ c (nodes/m 2 ).
+0.196211	-3.772665	-3.968876	23	SEV protects Virtual Machines (VM) from an untrusted hypervisor by using hardware-enforced memory encryption.
+0.196142	-2.429834	-2.625976	25	Convolutional Neural Networks (CNN) draw inspiration from the workings and hierarchical structure of the primary visual pathway of the brain.
+0.196059	-2.604367	-2.800426	32	Inspired by the superiority of Deep Learning (DL) for solving non-convex problems, researchers have introduced DL-based approaches for efficient precoder design.
+0.195517	-2.188804	-2.384321	17	A Deep Neural Network (DNN) is a neural network architecture having many hidden layers.
+0.194042	-3.912072	-4.106113	17	Caches all use Least Recently Used (LRU) policy to do content replacement.
+0.193740	-2.399645	-2.593385	48	Software-Defined Networking (SDN) is a technology that helps tackle the network management and orchestration complexity [4] and has been widely used in VEC and Mobile Edge Computing (MEC) environments [5], [6].
+0.192722	-3.033859	-3.226581	25	Advanced persistent threat (APT) attacks are usually a set of continuous, long-running processes that permeate the victim system.
+0.192416	-3.880216	-4.072633	44	The authors successfully decreased the security of (EC)DSA to a Hidden Number Problem (HNP), which can then be further reduced to an approximation Closest Vector Problem (CVP) for a specific lattice.
+0.192307	-3.230160	-3.422466	23	A software defined networking (SDN) enabled resource allocation framework is proposed to support multiple virtual networks flexibly and dynamically.
+0.191430	-2.654210	-2.845640	49	The use of software-defined networking (SDN) and network function virtualization (NFV) in the core of 5G can satisfy the new services' demands in the mobile core network (MCN), as well as considerably increase energy efficiency.
+0.189694	-2.960395	-3.150089	24	Dynamic Source Routing (DSR) is primarily intended for mobile node multi-hop wireless mesh ad-hoc networks.
+0.189353	-2.404675	-2.594028	32	The Interplanetary Filesystem (IPFS) is a prominent example of a newer peer-to-peer (P2P) data storage system [1].
+0.189339	-2.458264	-2.647603	33	Homomorphic Encryption (HE) is a form of public-key cryptography which permits computation on messages while in encrypted form, without the need to access the secret key.
+0.187716	-3.721983	-3.909699	31	Self-checksumming (SC) is a software protection technique that allows programs to detect changes in their binary representation and memory using so called guards [14].
+0.187575	-2.908605	-3.096180	23	Homomorphic Encryption (HE) has the potential to be used as a solution to preserve data privacy in NN.
+0.187553	-2.695320	-2.882873	15	A Distributed Ledger (DL) is a set of replicated state machines.
+0.187493	-2.880486	-3.067979	25	Intrusion Prevention System (IPS) provides an in-line mechanism focus on identifying and blocking malicious network activity in real time.
+0.186701	-3.571792	-3.758493	18	The domain name system (DNS) supports only static bindings, mostly using static IP addresses.
+0.186500	-3.076110	-3.262610	36	The Common Security Advisory Format (CSAF) aims to bring security advisories into a standardized format which is intended to solve existing problems and to enable automated processing of the advisories.
+0.186397	-2.689044	-2.875440	36	Insider threat detection (ITD) poses a persistent and high-impact challenge in cybersecurity due to the subtle, long-term, and context-dependent nature of malicious insider behaviors.
+0.186093	-4.369876	-4.555969	46	An information flow model (IFM) is characterised as N, P, SC, ⊔, ⊑ where: Storage objects in N are assigned security levels drawn from a (finite) complete lattice SC.
+0.185661	-2.971319	-3.156980	35	Federated Learning (FL) is a decentralized learning approach where participants collaboratively train a machine learning model without sharing (possibly sensitive) training data with a central server [56].
+0.185267	-2.783525	-2.968791	24	Examples include protection of intellectual property (IP), digital rights management (DRM), and concealment of malicious behavior in software.
+0.185249	-3.335006	-3.520255	36	GRU is an efficient form of long short term memory  (LSTM) since it uses only two gates -Update and Resetinstead of three gates as in LSTM.
+0.184900	-5.716392	-5.901292	20	The Network Coding (NC) provides diversity by transmitting carefully designed mathematical combinations of multiple original packets instead.
+0.184884	-3.990397	-4.175281	27	Delay tolerant network (DTN) is opportunistic network where each node searches best opportunity to deliver the message called bundle to the destination.
+0.184751	-2.174813	-2.359564	25	The Common Vulnerability Scoring System (CVSS) is a standardized framework used to assess the severity of software vulnerabilities [16].
+0.183865	-2.686513	-2.870378	29	Software Defined Networking (SDN), on the other hand, requires a central controller to routinely perform frequent policy and configuration updates in the network.
+0.183168	-2.433356	-2.616524	18	Simple Mail Transfer Protocol (SMTP) is an Internet standard for electronic mail transmission [54].
+0.182311	-2.491900	-2.674211	37	Proxy Re-Encryption (PRE) is a technique which allows an entity, given an encrypted message, to produce the same message encrypted with a different key, without accessing the message itself.
+0.181929	-3.289047	-3.470977	28	Thereby, these so-called intrusion detection systems (IDS) usually ingest network traffic or system log data and analyze their contents for malicious activities.
+0.181552	-1.959348	-2.140900	36	Multi-layer Perceptron (MLP) is a type of supervised learning algorithm consisting of input, output, and several hidden layers (those in between the input and output layer).
+0.180871	-3.226346	-3.407217	35	Publicly verifiable secret sharing (PVSS) takes one step further by allowing anyone, not just the shareholder, to publicly verify the correctness of the sharing and reconstruction process.
+0.180862	-2.468394	-2.649256	29	Physical layer security (PLS) techniques are specifically designed to enhance the confidentiality and integrity of transmitted information by leveraging the physical attributes of wireless communication channels.
+0.180353	-2.441123	-2.621476	29	Common fields include source IP (SIP), destination IP (DIP), source port (SP), destination port (DP), and protocol (PRO).
+0.180311	-4.032418	-4.212729	37	The trusted platform module (TPM) is proposed as a physical separation method where the cryptographic keys for a specific host computer are stored in a separate module to use in IWMDs.
+0.178743	-1.600094	-1.778837	28	Software-Defined Wide Area Networking (SD-WAN) is a paradigm that aims at overcoming the limitations of traditional WANs.
+0.177196	-2.780841	-2.958037	45	T HE Alternating Direction Method of Multipliers (ADMM) has become a widely used optimization algorithm across various fields, including power systems, due to its scalability and effectiveness in solving large-scale, distributed optimization problems.
+0.176987	-3.270603	-3.447590	31	Verifiable computation (VC) allows a computationally weak client to outsource the evaluation of a function on many inputs to a powerful but untrusted server.
+0.176683	-2.271574	-2.448257	19	The Controller Area Network (CAN) is the most widely employed protocol for in-vehicle communications.
+0.176057	-3.257283	-3.433339	37	Genetic algorithm (GA) is a search heuristic commonly used in fuzzing, where candidate solutions are mutated over successive generations, with higher-performing candidates prioritized to guide the search.
+0.175861	-4.243235	-4.419096	23	Somewhat Homomorphic Encryption (SHE) are schemes that can evaluate only circuits of bounded multiplicative depth.
+0.175642	-2.310927	-2.486569	28	Automatic Speech Recognition (ASR) or speech-to-text aims at transforming an audio speech signal into the sequence of corresponding words.
+0.174246	-1.941990	-2.116236	26	Software-defined network (SDN) is characterized by its programmability, flexibility, and the separation of control and data planes.
+0.173923	-3.392866	-3.566788	32	A Delay-Tolerant Network (DTN) is an overlay on top of regional networksfoot_0, and provides interoperability between these networks [17].
+0.173419	-2.783897	-2.957315	43	Deepfakes are the product of artificial intelligence (AI) applications that merge, combine, replace, and superimpose images and video clips to create fake videos that appear authentic (Maras and Alexandrou, 2019).
+0.173277	-1.917940	-2.091217	18	Transactions per second (TPS) is one of the most popular performance metrics for blockchains.
+0.172980	-2.846975	-3.019955	49	The vehicular ad-hoc network (VANET) is a specific environment for vehicle users to exchange messages (of traffic information, weather situations, road conditions, etc.) with other nearby vehicles and road-side-units (RSUs).
+0.172525	-3.322624	-3.495150	28	Multipath TCP (MPTCP) [154,155] is a prominent protocol for multipath transmission developed at IETF since 2009.
+0.170680	-2.035942	-2.206622	34	Quantum Secure Direct Communication (QSDC): QSDC is a protocol that allows for the direct transmission of secret messages without the need for a pre-shared key.
+0.170633	-2.946219	-3.116852	30	Radio frequency (RF) fingerprinting, which extracts the intrinsic hardware characteristics of radio devices, offers a promising physical-layer approach for device identification and authentication.
+0.169943	-1.680660	-1.850603	18	Open Shortest Path First (OSPF) is a routing protocol for IP-based networks.
+0.169798	-3.260066	-3.429864	29	Test vector leakage assessment (TVLA) is a technique that can be used to assess the resistance of cryptographic implementations against hardware sidechannel attacks [92].
+0.168793	-3.873721	-4.042514	29	Hidden Subset Sum Problem (HSSP) Let Q be an integer, and let x 1,..., x B be unknown integers in Z Q.
+0.168578	-3.607987	-3.776565	37	The Low-energy adaptive clustering hierarchy (LEACH) is a classical protocol that introduces the concept of clustering within a WSN and introduces a hierarchical approach to data transmission [153].
+0.168364	-1.945394	-2.113757	45	The rise of Network Function Virtualization (NFV) has transformed network infrastructures by replacing fixed hardware with software-based Virtualized Network Functions (VNFs), enabling greater agility, scalability, and cost efficiency.
+0.167942	-3.257239	-3.425181	48	A secret sharing scheme (SSS) allows to split a secret s into different pieces, called shares, which are given to the set of participants P, such that only certain qualified subsets of participants can recover the secret using their respective shares.
+0.167473	-2.917160	-3.084633	17	The cache uses the Least Recently Used (LRU) method for cache replacement policy.
+0.167280	-3.577285	-3.744565	16	Random Linear Network Coding (RLNC) provides a theoretically efficient method for coding.
+0.166800	-3.178519	-3.345318	27	A payload attribution system (PAS) captures and records network traffic for an extended duration, i.e., for as long as possible.
+0.166200	-2.881186	-3.047386	28	Meanwhile, Differential Privacy (DP), as one of the fundamental cryptographic tools, offers a robust mechanism to safeguard sensitive information while extracting meaningful insights.
+0.163873	-3.591013	-3.754886	24	A specialization of an AST is a control flow graph (CFG), which represents the application's control flow (CFG).
+0.163673	-2.909400	-3.073074	26	An Identity Base Encryption (IBE) scheme is a public-key cryptosystem where any string is a valid public key.
+0.163631	-3.941659	-4.105290	23	Next, a message authentication code (MAC) on the generated PID is produced in the browser using the secret key k.
+0.163595	-3.311014	-3.474609	35	Emergency asset recovery (EAR) focuses on evaluating the effectiveness of the mechanisms to allow users to reclaim their assets during emergencies, such as network failures, breaches, or unexpected shutdowns.
+0.163323	-3.527847	-3.691169	18	Neural network (NN) is efficient at learning underlying complex relationships because of its composite architecture.
+0.161153	-3.768162	-3.929315	28	CPU: Android employs Linux's Completely Fair Scheduler (CFS) that ensures that an equal share of CPU is distributed among all processes.
+0.160904	-4.213081	-4.373985	36	Route Origin Authorization (ROA) is a cryptographically signed record stored in RPKI that includes (AS, prefix) pairs, indicating that the AS is authorized to announce the prefix.
+0.160777	-2.691305	-2.852083	47	The Elliptic Curve Discrete Logarithm Problem (ECDLP) is about determining the least positive integer k which satisfies the equation Q = k • P for two given points Q and P on the elliptic curve group.
+0.160590	-2.873929	-3.034519	38	Non-orthogonal Multiple Access (NOMA) is a key enabler for 5G network that addresses various challenges such as serving multiple users over same radio resources and high throughput.
+0.160504	-3.058853	-3.219356	31	Deep reinforcement learning (RL) is an especially promising tool for offensive penetration testing and in recent years, a number of frameworks were created to train deep RL agents.
+0.160486	-3.305680	-3.466166	52	Well-known hashbased algorithms include: HyperLogLog (HLL) for estimating cardinality, Count-Min Sketch (CMS) for detecting heavy hitters, Bloom Filters (BF) for detecting whether a flow belongs to a set or not, etc.
+0.160096	-4.429905	-4.590001	38	Certificate transparency (CT) 6 makes certificates public and DNS-Based Authentication of Named Entities for TLS (DANE TLSA) 7 binds certificates to services available below a specific domain name.
+0.159715	-3.508742	-3.668457	65	Reconfigurable Intelligent Surface (RIS) is a new type of system node with reconfigurable surface technology, where its response can be adapted to the status of the propagation environment through control signaling, hence turning the wireless environment from a passive to an intelligent actor as the channel becomes somehow programmable [11]- [14].
+0.158873	-3.249384	-3.408257	36	Compressed sensing (CS) is a newly-developing data acquisition and reconstruction technique mixing the signal sampling and data compression processes by virtue of the sparsity of signal to be captured.
+0.157703	-3.414332	-3.572035	24	Differential privacy (DP) provides a mathematical definition for the privacy loss associated with any data release drawn from a database 1.
+0.157256	-2.860267	-3.017523	26	Local Differential Privacy (LDP) protocols enable an untrusted server to perform privacy-preserving, federated data analytics.
+0.156304	-3.224374	-3.380678	23	Network function virtualization (NFV) is now emerging to replace hardware boxes with virtual software instances running on commodity servers.
+0.155229	-2.738942	-2.894172	34	Intrusion Detection Systems (IDS) are crucial for securing IoT; however, traditional IDS often struggle to adapt to IoT networks' dynamic and evolving nature and threat patterns.
+0.155206	-3.511960	-3.667166	53	Space-Time Block Coding (STBC) provides strong diversity gain, but cannot increase the link throughput without the use of Adaptive Modulation and Coding (AMC), and therefore AMC has become a standard approach in recently developed wireless standards, including WiMAX.
+0.154444	-3.567216	-3.721660	25	Network Traffic Matrix (TM) prediction is defined as the problem of estimating future network traffic from the previous and achieved network traffic data.
+0.154090	-2.269848	-2.423938	42	Client-Side Key Derivation (CSKD) is a technique in which cryptographic keys are generated and stored locally on the client, reducing server-side risks and improving the overall security of password storage and authentication.
+0.154001	-2.214592	-2.368592	28	Infrastructure as Code (IaC) is the process of managing IT infrastructure via programmable configuration files (also called IaC scripts).
+0.153680	-3.735767	-3.889448	25	The Strict Avalanche Criterion (SAC) is a more refined property of S-boxes derived from the general avalanche property.
+0.152579	-2.620443	-2.773022	40	Deep ML or deep learning (DL) is a branch of ML where hierarchical architectures of neural networks are used for unsupervised feature learning and these learned features are then used for classification and other related tasks.
+0.152466	-4.152763	-4.305229	22	Global State Routing (GSR) optimizes by restricting update messages to intermediate nodes, aiming for improved efficiency.
+0.152239	-2.989007	-3.141246	55	Secure multi-party computation (MPC) is a computationally efficient approach that allows a client to outsource computation to a group of parties (or cloud providers), assuring that the client's information is prevented from misuse even if some parties are corrupted or cannot fully be trusted.
+0.152145	-3.857871	-4.010015	24	Intel Software Guard Extensions (SGX) is a promising hardwarebased technology for protecting sensitive computations from potentially compromised system software.
+0.151952	-2.332659	-2.484610	28	The Real-time Transport Protocol (RTP) is an application layer transport protocol to support live, on-demand, and interactive multimedia applications.
+0.151515	-2.572872	-2.724387	25	Multi-path TCP (MPTCP) and Stream Control Transmission Protocol (SCTP) allow for multiple paths/flows.
+0.149613	-3.722990	-3.872603	16	Logistic regression (LR) is another potential candidate for detecting anomaly using maximum likelihood.
+0.149405	-2.807624	-2.957028	29	Deep Neural Networks (DNN) are more complex versions of NN, with additional layers and neurons, 1 enabling them to handle more challenging tasks.
+0.149319	-2.301649	-2.450968	40	Network function virtualization (NFV) and software defined networking (SDN) are two promising technologies to enable 5G and 6G services and achieve cost reduction, network scalability, and deployment flexibility.
+0.149267	-3.743956	-3.893223	18	The linear approximation probability (LAP) is the maximum value of the imbalance of an event.
+0.148159	-3.578825	-3.726985	21	Homomorphic encryption (HE) is a candidate solution to protect user gradients against leakage to a malicious server.
+0.147300	-4.357995	-4.505294	30	Relative Path Overwrite (RPO) is a recent technique to inject style directives into sites even when no style sink or markup injection vulnerability is present.
+0.146718	-2.488469	-2.635187	45	Gaussian Differential Privacy (GDP) is articulated as a specialized instance of 𝑓 -differential privacy (𝑓 -DP), a generalization of differential privacy that frames privacy as a hypothesis testing problem.
+0.146498	-3.888208	-4.034705	19	Federated learning (FL) enables collaborative model training across many clients without centralizing raw data.
+0.145094	-3.865482	-4.010576	49	Using Gaussian Differential Privacy (GDP), which naturally leads to amortized analysis, APA builds on the idea of privacy loss distributions and uses tools like supermartingales and hockeystick divergences to track privacy loss more precisely.
+0.145069	-2.524339	-2.669408	32	Software Defined Networking (SDN) is based basically on three features: centralization of the control plane, programmability of network functions and traffic engineering.
+0.144788	-3.320117	-3.464905	22	Network coding (NC) is known as a new transmitting paradigm, which can efficiently increase the network capacity and throughput.
+0.144009	-3.633831	-3.777840	35	The Area Under the Curve (AUC) provides a single numerical value for comparing metrics µ, although it presents a simplistic view of the TPR / FPR trade-off.
+0.143380	-3.570649	-3.714028	22	A Priority Gas Auction (PGA) is a market-based mechanism that determines the computation price for network transactions.
+0.142991	-4.251002	-4.393994	38	PKIX defines an Attribute Certificate (AC) that binds this extra information as a digitally signed data structure with a reference back to a specific identity based PKC or to multiple such PKCs.
+0.142598	-2.955011	-3.097609	35	The Public Key Infrastructure (PKI) is a core underpinning technology of the modern internet, enabling secure tra c (e.g. via TLS) between clients and servers.
+0.142255	-4.173049	-4.315304	20	The Verifiable Delay Function (VDF)'s major role is to guarantee a specific delay for evaluation.
+0.140721	-4.129017	-4.269738	35	Row Hammer (RH) on Real Systems: RH has been shown to be able to bypass all system memory protection schemes, allowing adversaries to compromise the confidentiality and integrity of actual systems.
+0.140287	-2.366214	-2.506501	40	Internet of Things (IoT) is a global collection of physical and virtual devices, and all related infrastructure, exchanging information and providing services to each other and to the people who use it [2].
+0.140261	-2.022157	-2.162418	19	Machine learning (ML) techniques are increasingly common in security applications, such as malware and intrusion detection.
+0.140119	-2.656128	-2.796248	35	The L3 cache, or Last Level Cache (LLC), is shared among all CPU cores and helps in bridging the speed gap between the L2 cache and main memory.
+0.139936	-2.292192	-2.432129	18	Currently, Software Defined Networks (SDN) is regarded as the networks of the future.
+0.139890	-2.591951	-2.731841	50	Quick UDP Internet Connections (QUIC) is a transport-layer protocol running on top of User Datagram Protocol (UDP) [17] developed by Google since 2012 and currently under discussion at Internet Engineering Task Force (IETF) [8].
+0.139185	-3.621755	-3.760940	20	All these schemes assume a binary erasure channel (BEC) model for the eavesdropper channel.
+0.138738	-2.329612	-2.468349	26	Proof of Stake (PoS) is a consensus algorithm that eliminates the computational-intensive mining process used in PoW [11].
+0.138098	-2.317884	-2.455982	29	Confidential Computing (CC) has received increasing attention in recent years as a mechanism to protect user data from untrusted operating systems (OSes).
+0.137072	-2.964844	-3.101916	39	Network Slicing (NS) is a key feature of B5G networks, involves segmenting a single physical network into virtual slices, each tailored to meet the unique demands of specific use cases.
+0.135877	-3.385684	-3.521561	19	Federated Learning (FL) allows devices to train a global machine learning model without sharing data.
+0.135722	-2.224705	-2.360427	21	Intrusion detection systems (IDS) monitor system logs and network traffic to recognize malicious activities in computer networks.
+0.135713	-2.790238	-2.925950	22	The most common-used intrusion detection system (IDS) in commercial environments is signature-based or rule-based.
+0.134603	-2.729206	-2.863809	34	The Constrained Application Protocol (CoAP) is an HTTP-like protocol for RESTful applications intended to run on constrained devices, typically part of the Internet of Things.
+0.133904	-3.037220	-3.171125	19	Content Delivery Networks (CDN) distribute content globally, reducing origin server load and improving access speeds.
+0.132439	-2.880261	-3.012699	29	Recently, intermittent computing (IC) has received tremendous attention due to its high potential in perpetual sensing for Internet-of-Things (IoT).
+0.132412	-2.633966	-2.766378	28	Besides the SGD-based methods, support vector machine (SVM) is another classic and popular machine learning algorithm, for solving classification problems.
+0.132086	-2.870103	-3.002190	39	Use-after-free (UAF) is a common heap error that occurs when a program unintentionally releases a heap object but continues to use the original pointer, i.e., a dangling pointer.
+0.131441	-2.695364	-2.826805	23	Named Data Networking (NDN) is an emerging internet architecture that addresses weaknesses of the Internet Protocol (IP).
+0.131359	-2.854556	-2.985915	38	Remote procedure calls (RPC) allow components in a distributed cluster of applications to invoke each other's functions (procedures) seamlessly, as if those functions are owned by the invoking application.
+0.131093	-1.910055	-2.041148	42	Low Earth orbit (LEO) satellite mega-constellations with hundreds or thousands of satellites and inter-satellite links (ISLs) have the potential to provide global end-to-end connectivity.
+0.130608	-3.694592	-3.825200	30	SF is based on graphs approaching the Moore Bound (MB): The upper bound on the number of vertices in a graph with a given D and k.
+0.130246	-2.234969	-2.365215	22	Software Defined Network (SDN) allows orchestration and centralized management of a multi-tenant cloud network.
+0.129944	-2.489477	-2.619421	27	Linear feedback shift register (LFSR) and nonlinear feedback shift register (NLFSR)based update functions are widely used.
+0.129163	-3.623799	-3.752963	31	The framework uses Hidden Markov Random Field (HMRF) to model network behavior and spatial Markovianity to model the network behavior's spatial context.
+0.129024	-2.645332	-2.774357	35	Federated Learning (FL) is a distributed machine learning (ML) paradigm in which devices collaboratively train a shared model by iteratively exchanging model parameters rather than raw data.
+0.128831	-2.653555	-2.782387	33	Vehicular ad hoc networks (VANETs) are characterized by frequent routing path failures due to the high mobility caused by the sudden changes of the direction of vehicles.
+0.128606	-1.774631	-1.903236	29	Software-defined networking (SDN) is a flexible network architecture that offers centralized control and management of a network, in contrast to traditional data networks.
+0.127842	-3.455549	-3.583391	18	Differential privacy (DP) and cryptographic primitives are complementary popular countermeasures against privacy attacks.
+0.126933	-2.545104	-2.672036	26	Hardware intellectual property (IP) based system-onchip (SoC) design has become a prevalent practice in the semiconductor industry.
+0.126825	-2.664395	-2.791220	26	A role based access control (RBAC) policy bases access control decisions on the functions a user is allowed to perform within an organization.
+0.126265	-3.124436	-3.250701	35	A Verifiable Delay Function (VDF) is a function that takes a specified sequential time T to be evaluated, but can be verified in O(log T )-time.
+0.125828	-2.675525	-2.801353	62	The DID is a Uniform Resource Identifier (URI) of the following form: did:method-name:method-specific-id where method-name is the name of the DID Method used to interact with the distributed ledger and method-specific-id is the pointer to the DID Document in the distributed ledger.
+0.125374	-3.339134	-3.464508	22	A cryptographic protocol (CP) is a distributed algorithm that describes an order in which messages are exchanged between communicating agents.
+0.125091	-2.415522	-2.540613	21	The Portable Document Format (PDF) is an open standard format used to present content and layout on different platforms.
+0.125066	-2.801391	-2.926456	44	Federated Learning (FL) is a distributed machine learning approach that allows multiple devices or servers, each possessing its own local data samples, to collaboratively develop a model without the need to share their data directly [27].
+0.124827	-2.396888	-2.521716	24	Software Defined Networking (SDN) enables the remote management of data plane to be done by third-party software.
+0.123615	-2.784798	-2.908413	31	A secret sharing scheme (SSS) is a method for distributing a secret S, such as an encryption key, among a group of n participants [1].
+0.123358	-2.327832	-2.451190	36	Ad-Hoc On-Demand Distance Vector (AODV) is a reactive routing protocol designed for mobile ad-hoc networks, utilizing a hop-by-hop approach.
+0.122043	-2.408051	-2.530094	31	The purpose of a wireless sensor network (WSN) is to provide the users with access to the information of interest from data gathered by spatially distributed sensors.
+0.121748	-3.754520	-3.876268	44	Model Context Protocol (MCP) as a mechanism to provide agentic AI solutions to a user running an AI application that can deploy Gen AI models and a host of software tools through the services provided by a MCP server.
+0.121455	-3.616507	-3.737962	22	A new version of FGSM, namely Basic Iterative Method (BIM), was proposed for the same purpose.
+0.121120	-2.418117	-2.539237	28	Intrusion Detection Systems (IDS) are critical security mechanisms that protect against a wide variety of network threats and malicious behaviors on networks or hosts.
+0.120854	-2.341172	-2.462026	27	Adversarial machine learning (ML) is a subfield of ML that studies adversarially-mounted attacks against ML-based systems.
+0.120079	-3.044967	-3.165046	31	OpenID Connect (OIDC) is an open authentication protocol that adds an identity layer to OAuth 2.0 by profiling and extending it [39].
+0.119983	-4.098551	-4.218534	29	I MPLICIT Neural Representation (INR), also known as a coordinate-based representation, is a method for parameterizing various signals.
+0.119413	-2.481753	-2.601166	56	The use of Kalman Filtering (KF) for target tracking within sensor networks has risen as an attractive technique adopted by a number of related algorithms with different variations, such as Extended Kalman Filtering (EKF) and Distributed Kalman Filtering (DKF).
+0.119279	-3.709197	-3.828475	55	The Explicit Congestion Notification (ECN) field has taken on new importance due to Low Latency, Low Loss, and Scalable throughput (L4S) technology designed for extremely latencysensitive applications (such as cloud games and cloud-rendered VR/AR).
+0.119148	-3.111718	-3.230865	32	Differential Privacy (DP) is a privacy framework that adds carefully calibrated noise to statistical outputs, ensuring that individual data points have minimal impact on the overall resul.
+0.118931	-3.447540	-3.566471	21	Single-server private information retrieval (PIR) has been used as the main tool to address this problem.
+0.118777	-2.189364	-2.308141	38	Deep Q-network (DQN) is an advancement of Q-learning that replaces the Q-table with a deep neural network (DNN) model to meet real-time requirements.
+0.118544	-2.658661	-2.777204	23	The Genetic Algorithm (GA) is a type of evolutionary heuristic search algorithm that belongs to the evolutionary algorithms group.
+0.117694	-2.624293	-2.741987	38	Device-to-device (D2D) communication refers to the situation where two user equipments bypass the cellular base station (BS) and core network and establish a direct local communication link.
+0.116793	-3.823846	-3.940639	26	User and Entity Behavior Analytics (UEBA) systems commonly detect insider threats by scoring fixed time windows of user activity for anomalous behavior.
+0.116784	-1.598096	-1.714880	15	Artificial Neural Network (ANN) is a computational model inspired by human brain.
+0.116623	-2.016669	-2.133292	27	A smart contract (SC) is a computerized transaction protocol that executes the terms of a contract on a distributed ledger such as a blockchain.
+0.116520	-1.971477	-2.087997	35	Internet of Things (IoT) is a revolutionary technology that provides interaction between ordinary devices with the ability to gather data, exchange it, and analyze it in an efficient manner.
+0.114402	-3.665945	-3.780347	16	A solution is using error correction codes (ECC) to correct all faulty values.
+0.113676	-3.209719	-3.323395	32	Scalable Video Coding (SVC) enables efficient video transmission by encoding a stream into multiple layers of increasing quality, allowing selective adaptation based on network conditions.
+0.113525	-3.139709	-3.253234	28	The branch prediction unit (BPU) tries to predict whether a branch will be taken and, consequently, determines the address of the next instruction.
+0.112829	-2.637606	-2.750435	21	Unsupervised Learning (UL) techniques are essential in understanding and organizing data without the need for labeled examples.
+0.112763	-2.700014	-2.812777	23	Differential privacy (DP) is one of the most popular methods to prevent ML models from leaking any training data information.
+0.111915	-2.262175	-2.374091	24	Industrial control systems (ICS) are increasingly exposed to cybersecurity threats due to their growing interconnection with corporate and public networks.
+0.110867	-3.485314	-3.596181	40	The term collaborative intrusion detection networks (CIDNs) refers to such network of communicating IDSs that exchange security alerts and other data, where the credibility of peers in a CIDN is crucial.
+0.109539	-3.236407	-3.345946	31	User Datagram Protocol (UDP) would not be an appropriate option for ICDT-WSN applications that require reliable delivery, such as military surveillance.
+0.107977	-3.467368	-3.575345	20	Network utility maximization (NUM) is a wellstudied problem for network traffic management and resource allocation.
+0.107583	-3.918053	-4.025637	49	The Gentry-Sahai-Waters (GSW) cryptosystem is a homomorphic encryption which utilizes lattice-based cryptography, specifically leveraging problems like Learning With Errors (LWE) and its variant Ring-LWE [8].
+0.107494	-2.657273	-2.764768	23	Differential privacy (DP) and local differential privacy (LPD) are frameworks to protect sensitive information in data collections.
+0.107205	-2.896296	-3.003500	35	The Intrusion Detection System (IDS) solution is commonly used to collect data from ongoing attacks, so the collected data can be used later on to tune security configurations and policies.
+0.106131	-1.744363	-1.850494	19	Principal Component Analysis (PCA) is frequently employed for the dimensionality reduction of a dataset.
+0.106027	-2.520147	-2.626174	33	The digital twin (DT) is a virtual replica of a physical system that enables simulation, analysis, and optimization of system behavior in a risk-free environment [130].
+0.105671	-2.654883	-2.760553	30	Differential privacy (DP) is a formal mathematical framework that quantifies the extent to which an adversary can learn about an individual from sanitized data products.
+0.105444	-4.551507	-4.656950	27	Cooperative Adaptive Cruise Control (CACC) extends ACC by using the intended acceleration a P of P in the computation of a E.
+0.105430	-2.494543	-2.599973	61	Reinforcement learning (RL) is a machine learning algorithm where an agent learns the optimal policy from interacting with the environment and updating the policy based on the rewards obtained for its state and action pair. is concept can be further extended to a multi agent system where each agent comes up with its own local policy.
+0.105407	-3.157463	-3.262870	27	Congestion control (CC) crucially impacts user experience across Internet services like streaming, gaming, AR/VR, and connected cars.
+0.104547	-2.518473	-2.623020	24	Hybrid Routing Protocols (HRP) combines features of both proactive and reactive protocols to adapt to changing network conditions.
+0.104113	-3.218341	-3.322454	19	An automated market maker (AMM) is a smart contract that forms a market to swap tokens.
+0.103830	-3.595827	-3.699657	21	Conceptual Graph (CG) is an excellent knowledge representation tool with better semantic expressiveness than simple keywords.
+0.102942	-1.841138	-1.944080	31	A Mobile Ad hoc Network (MANET) can be defined as a collection of mobile nodes that are geographically distributed and communicate with one another over a wireless medium.
+0.102569	-4.126307	-4.228876	27	Delay tolerant network (DTN) is opportunistic network where every node searches best opportunity to deliver the message called bundle to the destination.
+0.102186	-3.391103	-3.493289	43	The NIC then uses Direct Memory Access (DMA) to transfer packets to the system's main memory, specifically into the buffers managed by the driver, updating the receive (RX) buffer's pointers in the process.
+0.102184	-4.192999	-4.295182	28	Read Amplification (RA) similarly is caused by requiring to read a larger amount of data than is issued in the read I/O request.
+0.100383	-2.351987	-2.452371	20	The Receiver Operating Characteristic (ROC) curve illustrates the balance between sensitivity and specificity in a model.
+0.099989	-2.695838	-2.795827	32	Wireless sensor networks (WSN) groups specialized transducers that provide sensing services to Internet of Things (IoT) devices with limited energy and storage resources.
+0.099917	-2.962570	-3.062488	22	The Delay Tolerant Network (DTN) paradigm has emerged as an efficient solution for managing these challenging networks.
+0.099687	-3.974048	-4.073735	28	Greedy Perimeter Stateless Routing (GPSR) is a positionbased routing mechanism frequently employed in UAV Adhoc networks.
+0.099617	-3.202699	-3.302316	31	Gradient boosting decision tree (GBDT) is a boostingbased machine learning algorithm that ensembles a set of decision treesfoot_0  [13].
+0.099608	-2.650410	-2.750018	25	Principal component analysis (PCA) aims to reduce the dimension of a feature space by grouping features together to constitute new components.
+0.099594	-3.750210	-3.849804	33	The scheme complies to the IP Multimedia Subsystem (IMS), a standardized overlay architecture for session control, authentication, authorization and accountability in all-IP networks.
+0.098841	-2.992585	-3.091427	20	Remote Procedure Call (RPC) services have become a primary gateway for users to access public blockchains.
+0.096945	-4.014831	-4.111776	15	Bitcoin introduces Simple Payment Verification (SPV) as its light client protocol.
+0.096828	-2.811790	-2.908617	18	A finite field or Galois field (GF) is a field with finite number of elements.
+0.096739	-2.802105	-2.898844	31	The main objective of a Hardware Abstraction Layer (HAL) is to make a legacy network device SDN-compatible through a set of abstractions.
+0.096334	-3.323754	-3.420088	37	Remote Direct Memory Access (RDMA) technology has been essential in high-performance network-ing to resolve similar issues, namely to allow higher bandwidth, lower latencies and lower CPU utilization.
+0.096209	-6.849199	-6.945408	19	Solutions ranging from order preserving encryption(OPE) schemes to schemes specifically evaluating range predicates exist.
+0.095904	-2.195603	-2.291507	27	The General Packet Radio Service (GPRS) is a packet-switched extension on top of the circuit-switched architecture.
+0.095648	-3.132680	-3.228327	50	Formal property verification (FPV) provides the capability to model and validate design behaviors through security properties with model checkers; however, current practices require significant manual efforts to create such properties, making them time-consuming, costly, and error-prone.
+0.095565	-3.774135	-3.869699	47	The extended memory management units (MMU) of the CPU prevents accesses to the PRM from all programs outside enclaves, including the OS kernel, virtual machine hypervisors, SMM code or Direct Memory Accesses (DMA).
+0.094652	-2.406463	-2.501115	32	Linear Predictive Coding (LPC) LPC is a coding method used to represent the spectral envelope of an audio signal based on a linear predictive model.
+0.094276	-3.506740	-3.601016	54	Practical homomorphic encryption (HE) implementations emerged recently and enable computations directly on encrypted data; the (encrypted) result is correct as if it were produced by the traditional method (decryption, computation, and encryption) and may be decrypted using the secret key.
+0.094220	-3.749669	-3.843889	50	The Multiplicative Increase Multiplicative Decrease (MIMD) scheme, however, increases by a fixed amount α (instead of α W ) and therefore would solve the scalability problem but often induces high loss rates and does not guarantee convergence.
+0.094167	-2.983878	-3.078045	30	Physical memory protection (PMP) is a standard RISC-V feature that allows the firmware to specify physical memory regions and control the memory access permissions.
+0.093056	-2.555054	-2.648111	46	Long Short-Term Memory (LSTM) is a specific recurrent neural network (RNN) architecture that is well-suited to learn from experience to classify, process and predict time series with time lags of unknown size.
+0.093039	-1.696737	-1.789776	35	Reinforcement learning (RL) is a field of learning in which an agent learns to make decisions through the rewards or penalties received as a result of performing one or more actions.
+0.092570	-3.806104	-3.898674	23	The resource public key infrastructure (RPKI) can be used to check the legitimacy of a prefix announcement in BGP.
+0.091327	-3.075216	-3.166543	32	Intel Virtual Machine Extensions (VMX) is a set of hardware virtualization instructions which introduces the additional privilege levels of VMX root and VMX non-root.
+0.090278	-2.611653	-2.701931	48	Constrained shortest distance (CSD) querying is one of the fundamental graph query primitives, which finds the shortest distance from an origin to a destination in a graph with a constraint that the total cost does not exceed a given threshold.
+0.089135	-2.681411	-2.770546	18	Batch normalization (BN) is a technique that accelerates the convergence of deep nets.
+0.088104	-2.361707	-2.449811	23	The field of quantitative information flow (QIF) is concerned with assessing the amount of information that flows through a system.
+0.088060	-3.513452	-3.601513	19	Content Centric Networking (CCN) is a clean-state architecture for the future Internet.
+0.087839	-3.054070	-3.141909	23	The privacy preserving data mining (PPDM) has been one of the most interesting, yet challenging, research issues.
+0.087666	-2.659295	-2.746962	39	DNS over TLS (DoT) and DNS over HTTPS (DoH) promise to improve privacy and security of DNS by encrypting DNS messages, especially when messages are padded to a uniform size.
+0.087317	-3.632818	-3.720135	35	Garbage collection (GC) runs as a background task, scanning the zone sets for dead space and relocating live objects to other, open zone sets to reclaim that dead space.
+0.087087	-3.928818	-4.015905	34	The centralized training and distributed execution (CTDE) has also gained attention, with methodologies like value decomposition network (VDN) and QMIX being prime examples.
+0.087044	-2.409963	-2.497007	40	Technologies such as Intel's Total Memory Encryption (TME) and AMD's Secure Memory Encryption (SME) offer transparent encryption at the hardware level, providing strong protection without requiring software modifications.
+0.086744	-2.491716	-2.578460	22	Network time protocol (NTP) is a well-known mechanism to synchronize clocks over the internet [15].
+0.086577	-3.923098	-4.009676	25	Physical layer authentication (PLA) consolidates access security by incorporating unique characteristics of analog communication channels and/or devices in authentication protocols.
+0.085965	-2.972687	-3.058652	31	Random Forest (RF) is an ensemble method that utilizes several decision trees, enhancing both prediction accuracy and robustness via a majority voting process [6,24].
+0.085748	-3.350371	-3.436118	26	A Controller Area Network (CAN) bus in the vehicles is an efficient standard bus enabling communication between all Electronic Control Units (ECU).
+0.085409	-2.730883	-2.816292	28	The Bounded Retrieval Model (BRM) assumes that the total amount of data that the attacker can exfiltrate is limited.
+0.085267	-3.780796	-3.866064	20	The common service entity (CSE) supports common service functions including registration, discovery, and data management.
+0.084258	-3.125730	-3.209988	28	The Number Theoretic Transform (NTT) is the Discrete Fourier Transform defined over the ring Z q instead of the complex numbers.
+0.084239	-3.733551	-3.817790	33	The Invinsible Internet Project (I2P) is another message-oriented system offering anonymization services by using peer-to-peer low-latency communication.
+0.084194	-2.181906	-2.266100	46	Low-Power Wide-Area Network (LPWAN) is an emerging communication standard for Internet of Things (IoT) that has strong potential to support connectivity of a large number of roadside sensors with an extremely long communication range.
+0.083957	-2.142697	-2.226654	66	A positive operator-valued measurement (POVM) on the Hilbert space ℋ is defined as a set of positive semidefinite operators {𝐸 𝑖 } on ℋ that satisfies ∑︀ 𝑖 𝐸 𝑖 = 𝐼.
+0.083634	-2.232896	-2.316530	16	Random forest (RF): A random forest is an ensemble method based on decision trees.
+0.083554	-1.831663	-1.915217	19	The Discrete Cosine Transform (DCT) is widely used in many digital signal processing applications.
+0.080928	-3.288220	-3.369148	18	Time Series Classification (TSC) is highly vulnerable to backdoor attacks, posing significant security threats.
+0.080751	-2.886705	-2.967456	36	Trust and Reputation Management (TRM) is an effective approach to continuously evaluate the trustworthiness of each participant by collecting and processing evidence of their interactions with other nodes and the infrastructure.
+0.080392	-3.525934	-3.606326	45	Verifiable Information dispersal(VID) is a technique that uses Reed-Solomon code to split data into O(n) chunks, and each replica only stores a constant number of chunks to ensure the data is reconstructable.
+0.079705	-3.197875	-3.277579	27	Indeed, a True Random Number Generator (TRNG) relies on natural phenomena like atmospheric or thermal noise, radioactive decay or cosmic background radiation.
+0.079605	-2.761482	-2.841087	42	Cyber Threat Intelligence (CTI) (Lee 2023) includes the attack tactics, techniques and procedures (TTPs) used by threat actors, as well as the report writer's analysis of the attack.
+0.079226	-3.272447	-3.351674	30	Speculative execution uses a branch prediction unit (BPU), which predicts the outcome of conditional branch instructions (i.e., taken/not taken).
+0.079148	-2.880926	-2.960074	23	The federated learning (FL) framework provides improved privacy and scalability support for large machine learning (ML) problems.
+0.078516	-3.415933	-3.494449	32	The term mixed reality (MR) includes AR, AV, and mixed configurations thereof, blending representations of virtual and real-world elements together in a single user interface.
+0.078349	-2.963002	-3.041350	33	Differential privacy (DP) is a mathematical framework that provides a rigorous privacy assurance, effectively mitigating the risks of individual information disclosure [27], [47], [48].
+0.078317	-2.361036	-2.439353	33	The Cumulative Distribution Function (CDF) characterizes the distribution of discrete random variables, allowing one to derive the probability of a random variable smaller than a specific value.
+0.077390	-2.916317	-2.993707	22	RPL creates a Directed Acyclic Graph (DAG) structure to manage the routing of data packets.
+0.076201	-2.864414	-2.940614	44	Conventional beamforming techniques like zero-forcing (ZF) and maximum ratio transmission (MRT) are often used to control the beam pattern and direct it toward the legitimate receiver while suppressing it toward the eavesdropper.
+0.076130	-3.398150	-3.474280	40	Federated Learning (FL) has been recently receiving increasing consideration from the cybersecurity community as a way to collaboratively train deep learning models with distributed profiles of cyber threats, with no disclosure of training data.
+0.074693	-3.671197	-3.745890	21	Cognitive radio network (CRN) has been recognized as the key to achieve efficient utility of communication bands.
+0.073371	-1.971050	-2.044421	32	Retrieval augmented generation (RAG) is a process where a large language model (LLM) retrieves useful information from a database and then generates the responses.
+0.073236	-3.299909	-3.373146	30	Dynamic Voltage and Frequency Scaling (DVFS) is an energy management scheme, ubiquitous on commodity devices, that trades off processing speed for energy savings.
+0.072944	-2.872517	-2.945462	19	Hidden Vector Encryption (HVE) is a particular case of Predicate Encryption (PE).
+0.072158	-3.019119	-3.091277	35	Ethereum supports the use of a Virtual Machine (EVM) which can run userdefined contract codes, and can be used to build Dapps or Decentralized Applications.
+0.071982	-3.661640	-3.733621	19	Log-based insider threat detection (ITD) detects malicious user activities by auditing log entries.
+0.070600	-2.565824	-2.636424	16	An intrusion detection system (IDS) is usually needed to detect any types of attacks.
+0.070387	-2.475015	-2.545402	24	DMA Attacks: Direct Memory Access (DMA) allows peripherals to access system memory directly, bypassing the CPU.
+0.069064	-1.637184	-1.706248	29	Near-field communication (NFC) is a set of communication protocols which offers the possibility to establish a short-range communication between two electronic devices.
+0.068720	-3.661039	-3.729759	36	Federated Learning (FL) is a machine-learning specific approach that trains models over distributed datasets while limiting data movement to central servers, transmitting only model updates [62,103].
+0.068382	-3.023364	-3.091747	51	Software defined networking (SDN) is an emerging trend for the design of Internet management systems that decouples vertical integration of the control plane and data plane and provides flexibility that allows software to program the data plane hardware directly according to a set of network policies.
+0.068138	-2.634497	-2.702634	24	Self-propagating malware (SPM) is a prevalent class of malware that has recently gained in popularity among adversaries.
+0.067957	-4.294692	-4.362649	34	User Equivalent Range Error (UERE) is square root of sum of squares of individual biases from Ephemeris, clock, Ionosphere, Troposphere and multipath.
+0.067810	-2.940462	-3.008272	62	Conversely, the false positive rate (FPR), expressed as F P F P +T N, measures the likelihood of false alarms, while the false negative rate (FNR), determined by F N T P +F N, evaluates detection failures, a particularly critical metric for security applications in industrial control systems.
+0.067494	-1.917653	-1.985146	34	Traditionally, Network Function Virtualization (NFV) has been implemented to run on Virtual Machines (VMs) in form of Virtual Network Functions (VNFs).
+0.067243	-2.854237	-2.921480	37	Trusted Execution Environment (TEE) is an environment where code being executed inside the TEE is trusted in authenticity and integrity and both the code and other assets are protected from external access.
+0.067133	-3.142964	-3.210097	46	Non-Access Stratum (NAS): The NAS is a key component of the control plane in modern 5G and 4G cellular networks, managing mobility, session control, and security between user equipment (UE) and the core network.
+0.067130	-1.431852	-1.498982	41	An Intrusion Detection System (IDS) can be broadly classified into three categories: Network-based IDS (NIDS), Hostbased IDS (HIDS), and Combined IDS (CIDS).
+0.066825	-3.657263	-3.724088	33	The alerts are correlated in a Hidden Markov Model (HMM)based prediction system that first determines the type of multi-stage attack and then predicts its current stage.
+0.066781	-2.981005	-3.047786	38	Support vector machine (SVM) is a supervised machine learning algorithm which detects anomaly by separating normal behavior from the other by using different kernel types (linear, polynomial, and RBF).
+0.066737	-4.053711	-4.120448	32	Different from RBAC, Context Based Access Control (CBAC) [ 18] avoids the notion of roles and directly associates permissions to the subjects by the context information.
+0.065293	-2.506321	-2.571613	29	Vehicular Ad Hoc Networks (VANETs) are characterized by intermittent connectivity, which leads to failures of end to end paths between nodes.
+0.065097	-3.026328	-3.091425	53	Voltage Fault Injection (VFI) is a specific Fault Injection (FI) method to inject disturbances into the power supply line of an Integrated Circuit (IC) and hence, violates the IC's specified operating conditions for a certain, controlled period of time.
+0.064462	-2.387531	-2.451993	35	Intelligent reflecting surface (IRS) is an emerging key technology for the fifth-generation (5G) and beyond wireless communication systems to provide more robust and reliable communication links.
+0.062858	-1.181143	-1.244001	23	Vehicle-to-vehicle (V2V) communication is a key component of the future autonomous driving systems.
+0.062368	-2.804651	-2.867019	33	K-nearest neighbor (KNN) method is a classification approach that uses a voting score among all the neighbors of a given data point in determining its class membership.
+0.062152	-3.077314	-3.139466	33	The offline reinforcement learning (RL) problem aims to learn an optimal policy from historical data collected by one or more behavioural policies (experts) by interacting with an environment.
+0.061355	-3.909584	-3.970939	23	Formal Property Verification (FPV) provides a rigorous methodology for mathematically verifying hardware design correctness using modelchecking.
+0.061324	-3.383793	-3.445117	25	Traffic Engineering (TE) aims to measure and analyze RT network traffic, and design routing mechanisms to improve utilization of network resources.
+0.061183	-2.490332	-2.551516	25	Software-Defined Network (SDN) is an approach that enables centralized and programmable control by separating control and data plane.
+0.060777	-2.045106	-2.105882	30	Near-Field Communication (NFC) is a modern technology for short range communication with a variety of applications ranging from physical access control to contactless payments.
+0.060516	-4.154507	-4.215023	13	A fixed initialization vector (IV) is input at the initial stage.
+0.059563	-2.844801	-2.904364	33	Ridge regression (RR) is a modification of the linear regression, where the coefficients are estimated by an augmented version of OLS, the so called ridge estimator.
+0.058529	-3.573042	-3.631570	33	Graph Neural Network (GNN): Behind the GNN acronym, there is a broad family of graph-based DL models with different features and designed to pursue different goals.
+0.057859	-2.579015	-2.636873	40	The linear code permutation equivalence (LCPE) problem asks to decide whether two linear codes (i.e. linear subspaces) are the same up to a permutation of the coordinates.
+0.057519	-2.960561	-3.018079	55	Matthews Correlation Coefficient (MCC): MCC is a more informative metric than F1 score and accuracy as it takes into account true and false positives and negatives and is generally regarded as a balanced measure which can be used even if the classes are of very different sizes.
+0.057360	-1.794117	-1.851477	19	Simple Network Management Protocol (SNMP) is the de facto standard for network management and service monitoring.
+0.056129	-2.864150	-2.920280	29	Federated Learning (FL) offers a promising solution to the privacy concerns associated with centralized Machine Learning (ML) by enabling decentralized, collaborative learning.
+0.055816	-1.406638	-1.462453	42	The Domain Name System (DNS) is a critical component of the Internet's infrastructure that translates human-readable domain names (e.g., google.com) into Internet Protocol (IP) addresses [24].
+0.055543	-3.437267	-3.492810	38	RNN is a variant of artificial neural network (ANN), and LSTM-RNN is improved version of RNN and that is a capable of order learning dependence in sequence prediction problems.
+0.055179	-2.325012	-2.380191	48	Transmission Control Protocol (TCP) is commonly used by most of Internet applications and becomes one of the two original components of the Internet protocol suite, complementing the Internet Protocol (IP), thus the entire suite is known as TCP/IP.
+0.054792	-3.632939	-3.687730	31	Gradient Boosted Decision Trees (GBDT) is another approach to address overfitting that works by using a technique called boosting (while RF uses bagging).
+0.054439	-2.860997	-2.915436	33	Principal Component Analysis (PCA) is a linear projection that rotates the embedding space to align with axes (principal components), capturing the maximal variance.
+0.054080	-1.809520	-1.863600	32	Retrieval-Augmented Generation (RAG) is a powerful technique for enhancing Large Language Models (LLMs) with external, up-todate knowledge.
+0.053515	-3.262680	-3.316196	37	A smart grid (SG) is a fully automated power transmission network that monitors and controls every communication participant and grid node to ensure a bidirectional flow of information and power between all nodes.
+0.052994	-3.026838	-3.079832	30	Payload Attribution Systems (PAS) are one of the most important tools of network forensics for detecting an offender after the occurrence of a cybercrime.
+0.050498	-3.044578	-3.095076	39	Cognitive radio network (CRN) is a technique proposed to alleviate the spectrum shortage problem by enabling unlicensed users to coexist with incumbent users in licensed spectrum bands without inducing interference to incumbent communications.
+0.049799	-3.679265	-3.729064	33	Software-fault isolation (SFI), introduced in 1993 [29], is an effective technique for reducing trust in software components in both userland and kernels [28].
+0.048541	-2.455045	-2.503586	32	Forward Error Correction (FEC) is a technique, which adds redundant information to the video stream that can be used in order to recover lost packets of the stream.
+0.048082	-3.296185	-3.344266	33	A term rewrite system (TRS) is a finite set of rewrite rules ℓ → r where ℓ, r ∈ T (F, X ).
+0.046819	-2.705664	-2.752482	53	An oblivious pseudorandom function (OPRF) is a protocol by which a client and server interact to evaluate a pseudorandom function on a key provided by the server and an input provided by the client, without divulging the key or input to the other party.
+0.046798	-2.389056	-2.435854	33	A Pseudorandom Function (PRF) is a deterministic random function that maps random values from a small domain to pseudorandom numbers in a larger domain.
+0.046208	-3.003232	-3.049441	25	Principal Component Analysis (PCA) [Hot33], [Pea01] is a widely employed dimensionality reduction technique.
+0.046200	-2.827045	-2.873244	26	An independent set (IS) of a graph is a subset of vertices such that no edge joins any two of them [16].
+0.046035	-2.855245	-2.901280	43	Scalar Quantization Scalar quantization (SQ) is a fundamental technique in signal processing and data compression, wherein continuous data samples are normalized and subsequently quantized within a specified range using B bits per sample.
+0.045909	-1.952996	-1.998905	23	Wireless Sensor Networks (WSN) is a key component of IoT and a source of a huge amount of information.
+0.045696	-1.892986	-1.938683	28	Recursive Feature Elimination (RFE) is a feature selection technique used to identify and select the most important features for a machine learning model.
+0.044109	-4.592111	-4.636220	23	Row Hammer (RH) has been critical DRAM reliability and security vulnerabilities that have troubled the industry for almost a decade.
+0.042980	-2.526223	-2.569203	31	A Confidential Virtual Machine (CVM) is a VM-based Trusted Execution Environment (TEE) designed to protect the security of cloud VMs.
+0.042746	-1.840164	-1.882910	27	Domain Name System (DNS) is a significant protocol and service on the internet which is commonly used for mapping domain names into IP addresses.
+0.042558	-2.510659	-2.553217	25	Deep Reinforcement Learning (DRL) is gaining popularity in various fields ranging from games to industrial processes and cyber-physical systems.
+0.041689	-3.527110	-3.568798	26	Earliest Deadline First (EDF) or Least Time to Go is a dynamic scheduling algorithm used in real-time operating systems.
+0.040958	-4.070641	-4.111598	18	Adversarial Model (AM): AM defines the threats and adversary capabilities on a cryptographic protocol.
+0.040909	-4.117269	-4.158179	19	Set T is also called a connected dominating set (CDS) when T forms a connected graph.
+0.040840	-2.752336	-2.793176	44	The Network Function Virtualization Infrastructure (NFVI) block contains both physical resources (e.g. computing units, storage, network) and virtual resources (virtual machines) connected via the virtualization layer (the hypervisor).
+0.040656	-4.586457	-4.627113	25	Define a Min Cross Layer Cut (MCLC) as a smallest set of physical links needed to disconnect the logical network.
+0.039955	-2.372538	-2.412493	21	Internet service providers (ISPs) offer network connectivity, characterized by quality of service (QoS) metrics.
+0.039423	-3.859420	-3.898843	20	Secure Hash Algorithm (SHA)), comparing their respective security levels and performance within the context of PoW.
+0.039207	-3.781933	-3.821140	31	Windowed Certificate Revocation (WCR) is just an improved method of implementing CRLs, and it applies equally well to delta-CRLs.
+0.038886	-3.064620	-3.103506	19	Advanced Encryption Standard (AES) plays a vital rule to insure the data integrity and confidentiality.
+0.038401	-2.475364	-2.513765	21	So, a Pseudo Random Number Generator (PRNG) can be used in place of a TRNG.
+0.038386	-3.937223	-3.975608	33	The bit independence criterion (BIC) analyzes all the avalanche variables and determines the extent of their pair-wise independence in reference to a given set of avalanche vectors.
+0.037717	-1.988086	-2.025802	20	A support vector machine (SVM) is a type of supervised learning model leveraged for classification problems.
+0.037596	-3.561208	-3.598805	28	The Area Under the Curve (AUC), often associated with the ROC curve, provides a combined performance measurement across all varying thresholds of classification.
+0.037470	-2.615036	-2.652506	43	Software Defined Networking (SDN) has evolved to revolutionize next-generation networks, offering programmability for on-the-fly service provisioning, primarily supported by the OpenFlow (OF) protocol.
+0.037369	-2.497720	-2.535089	23	Public Key Infrastructure (PKI): PKI is a system concerned with establishing trust in cryptographic communications over insecure public networks.
+0.037333	-3.913892	-3.951225	26	Telecare medicine information systems (TMIS) are also an online healthcare service in which a patient/user can access remote medical servers.
+0.037288	-3.207634	-3.244922	22	Assertion Based Verification (ABV) uses assertions that are derived from its specification by the verification experts.
+0.037074	-3.283363	-3.320437	28	Smart Contract (SC) has recently gained significant attention due to its decentralized, peer-topeer transaction, distributed consensus, and anonymity properties.
+0.036844	-2.563174	-2.600018	37	Deep Learning (DL) is a special subset of ML that studies Artificial Neural Networks (ANNs) which contain more than one hidden layer, often implemented to simulate the human brain [17].
+0.036370	-3.544040	-3.580410	24	Modern recommender systems (RS) have profoundly enhanced user experience across digital platforms, yet they face significant threats from poisoning attacks.
+0.035751	-3.061439	-3.097190	45	Structural Similarity (SSIM) This is an index of similarity between two images and it is known to be a better estimation of human eye perception in comparison to other traditional methods such as peak SNR or mean squared error.
+0.035274	-2.369391	-2.404664	45	Abstract Syntax Tree (AST) is a tree representation of the abstract syntactic structure of source code, while removing unnecessary information such as punctuation and delimiters (e.g., braces, semicolons, parentheses).
+0.034978	-2.873184	-2.908162	18	Machine Learning (ML) algorithms enable IDS to detect specific patterns and anomalies in the network.
+0.033012	-2.354310	-2.387322	25	Multiprotocol Label Switching (MPLS) is a technology that offers flow differentiation and QoS in the Internet.
+0.032989	-2.724965	-2.757954	18	Cryptographic Protocols (CP) are distributed algorithms intended for secure communication in an insecure environment.
+0.032549	-1.050889	-1.083438	17	Principal Component Analysis (PCA) is a statistical technique used for dimensionality reduction.
+0.030775	-2.900405	-2.931180	34	Software Defined Networking (SDN) is a promising paradigm that allows the programming of the logic behind the network's operation with some abstraction level from the underlying networking devices.
+0.030769	-3.038125	-3.068893	34	Differential power analysis (DPA) attacks: DPA attacks use different analysis techniques (statistical, error correction, etc.) to infer sensitive information from power consumption data.
+0.030143	-2.061375	-2.091519	60	Industrial control system (ICS) is a general term that encompasses several types of control systems, including SCADA systems, distributed control systems (DCS), and other control system configurations such as Programmable Logic Controllers (PLC) often found in the industrial sectors and critical infrastructures [1].
+0.030071	-2.991513	-3.021584	18	Split Learning (SL) has emerged as a practical and efficient alternative to traditional federated learning.
+0.029879	-3.090905	-3.120784	19	Quantitative information flow (QIF) is concerned with assessing the leakage of information in computational systems.
+0.028008	-4.400349	-4.428357	28	Branch Target Buffer (BTB) Protections: BTB protections are critical for mitigating Spectre Variant 2, which targets branch mispredictions.
+0.027458	-1.793685	-1.821143	18	Reinforcement Learning (RL) is a computational approach to learn from interaction with an environment.
+0.027384	-3.127800	-3.155184	32	Network function virtualization (NFV) based service function chaining (SFC) allows the provisioning of various security and traffic engineering applications in a cloud network.
+0.026471	-3.237144	-3.263615	32	SSDFS file system is Log-structured File System (LFS) with using of Copy-On-Write (COW) policy for data updates.
+0.026446	-2.459519	-2.485966	33	Reactive Routing Protocol (RRP) is an on-demand routing protocol in which a route between a pair of nodes is stored when there is communication between them.
+0.025852	-2.604140	-2.629991	23	Federated learning (FL) is a machine learning paradigm that enables privacy-preserving collaborative training of ML models.
+0.025641	-2.498384	-2.524024	30	Homomorphic encryption (HE) is a cryptographic scheme that permits data processing to occur while the data remains encrypted, eliminating the need for decryption during computation.
+0.024355	-3.424230	-3.448585	31	Stochastic geometry(SG) is a rich branch of applied probability theory, particularly suited to the research of random phenomena in the plane or in higher dimensions.
+0.023813	-2.375937	-2.399750	21	Receiver Operating Characteristics (ROC) curve is often used to evaluate the performance of a particular detector.
+0.023190	-3.213476	-3.236666	24	Verifiable Credentials (VCs) is a W3C recommendation for portable and provable claims about a subject.
+0.022273	-2.683819	-2.706091	49	A mobile ad hoc network (MANET) is a self-configuring network of mobile devices making direct wireless links with each other rather than a central router; the topology of the network evolves with time as links are continually being made and broken.
+0.021523	-2.586255	-2.607778	24	Distributed Systems (DS), by virtue of their decentralized nature, complexity and scale, present a unique set of security challenges.
+0.021168	-3.145774	-3.166942	27	Mobile Edge Computing (MEC) broadens the scope of computation and storage beyond the central network, incorporating edge nodes close to end devices.
+0.021106	-3.239736	-3.260842	29	Digital Twin (DT), virtual replicas of physical systems, integrate realtime data to mirror their real-world counterparts, enabling precise monitoring and optimization.
+0.020693	-3.491862	-3.512555	31	The distributed coordination function (DCF) and the enhanced distributed channel access (EDCA) of the hybrid coordination function (HCF) are essentially random mechanisms.
+0.020684	-3.408220	-3.428904	29	Exponential backoff (EB) is a widely adopted collision resolution mechanism in many popular random-access networks including Ethernet and wireless LAN (WLAN).
+0.020588	-3.023201	-3.043789	20	Load Balancing (LB) is a routing strategy that increases performance by distributing traffic over multiple outgoing paths.
+0.020341	-1.864563	-1.884904	24	Open Shortest Path First (OSPF) is one of the most widely used routing protocol to manage intra-domain routing.
+0.020195	-3.658046	-3.678241	29	Curriculum Learning (CL) is a training paradigm in which models are exposed to tasks of increasing complexity, thereby improving convergence behavior and overall performance.
+0.019884	-2.481258	-2.501142	26	Relationship-based Access Control (ReBAC) is an access control model in which permissions are determined based on relationships between entities.
+0.019864	-2.984654	-3.004518	30	Linear regression (LR): Linear regression is a relatively simple statistical model where a dependent variable is explained by multiple independent variables multiplied by coefficients defining their weights.
+0.019753	-2.370809	-2.390561	27	Convolutional Neural Networks (CNN) is a sort of network of specialized neurons with a grid-like architecture used for data processing.
+0.019297	-3.862875	-3.882171	47	A One-Time Pad (OTP) is a cryptographic protocol in which both parties have an associated random variables, as the -key‖, which are not related with any variables owned by an eavesdropper [28][29].
+0.017022	-2.122825	-2.139847	45	Markov Decision Process (MDP) provides a mathematical framework for modeling the decision-making system where the transition from a state to another state is probabilistic, and the transition probability depends on the decision taken at the state.
+0.016375	-1.934462	-1.950838	22	The network time protocol (NTP) is a protocol designed to synchronize the clocks of computers over a network.
+0.016345	-3.078338	-3.094683	30	Vulnerability of 3D point cloud (PC) classifiers has become a grave concern due to the popularity of 3D sensors in safety-critical applications.
+0.016148	-3.183316	-3.199464	23	Network traffic analysis (NTA) techniques have evolved from port-based approaches up to machine learning based techniques over time.
+0.016034	-2.608600	-2.624635	25	Dynamic Voltage and Frequency Scaling (DVFS) techniques have been widely used as an energy management scheme in modern computing systems.
+0.015453	-2.145410	-2.160863	22	Function-as-a-Service (FaaS) is an emerging high-level abstraction for cloud applications.
+0.015428	-4.047754	-4.063182	16	The exterior gateway protocol (EGP) defines the path at the network-level.
+0.015320	-2.444755	-2.460075	26	Inductive logic programming (ILP) is a form of machine learning in which concepts are learned from examples and expressed as logic programs.
+0.013837	-5.310236	-5.324073	24	Alternatively, active learning (AL) inspired strategies introduce a labeling budget to prioritize a subset of drifting samples for humans to label.
+0.013438	-5.797120	-5.810558	21	A concatenatedcode-based fuzzy extractor (FE) is utilized to reconstruct stable POK bits.
+0.013325	-3.883894	-3.897219	28	Unlike traditional State Machine Replication (SMR) systems, which focus solely on liveness and safety, blockchain systems also require a fairness property.
+0.012887	-3.044272	-3.057159	26	Location entropy (LE) is a popular metric for measuring the popularity of various locations (e.g., points-of-interest).
+0.012420	-1.826209	-1.838629	17	Convolutional Neural Networks(CNN) belongs to the family of Artificial Neural Networks.
+0.011727	-2.276979	-2.288707	29	The Network Time Protocol (NTP) is one of the oldest core network protocols and remains the de facto mechanism for clock synchronization across the Internet today.
+0.011591	-4.873446	-4.885036	30	Traditional wireless physical layer key (PLK), which relies on reciprocal channel and randomness characteristics between two legitimate users, holds the promise of securing DLSC.
+0.011499	-2.781899	-2.793398	18	Decision trees (DT) are classification models based on the sequential application of simple binary rules.
+0.011238	-2.274390	-2.285627	37	A Knowledge Graph (KG) is a directed graph composed of subject-predicate-object (s, p, o) triples, where each triple defines a relationship between entities.
+0.010741	-3.848838	-3.859579	33	Bundle Protocol Query (BPQ) extension block has been introduced to allow an application to query a content object, which is answered by an intermediate node on the path.
+0.010244	-3.578976	-3.589220	24	Federated Learning (FL) is a decentralized approach for training ML models across various devices while keeping data local [28].
+0.010218	-2.079972	-2.090190	37	Reinforcement learning (RL) is an interdisciplinary area of machine learning and optimal control concerned with how an intelligent agent ought to take actions in a dynamic environment to maximize the cumulative reward.
+0.009815	-3.872717	-3.882532	27	Dispute resolution (DR) examines the mechanisms that an L2 solution employs to resolve conflicts, particularly those involving fraudulent activities or disputes.
+0.009489	-1.632553	-1.642043	41	The communication that exists in vehicle-to-everything (V2X), such as vehicle to vehicle (V2V), vehicle to infrastructure (V2I), and vehicle to network (V2N).
+0.009283	-2.860229	-2.869512	41	The Area Under the Curve (AUC), on the other hand, quantifies the likelihood that a randomly chosen pair of circuits, one with the Trojan and one without, will be accurately classified by the model.
+0.008193	-1.913513	-1.921706	40	Bluetooth Low Energy (BLE), operating in the 2.4 GHz band, combines higher data rates (up to 2 Mbps) with very low power consumption (10 mW) and supports mesh networking.
+0.007170	-1.999077	-2.006247	32	Machine learning (ML) based network intrusion detection systems (NIDSs) have been around for many years to address the shortcomings of signature-based NIDSs.
+0.006815	-3.543592	-3.550407	17	Smart grid applies demand side management (DSM) to cope with the energy consumption cost.
+0.006625	-3.989064	-3.995689	38	The Baby-step Giant-step (BSGS) algorithm, originally introduced by Shanks [14], is a classical collision-based method for solving the standard DLP in cyclic groups.
+0.006338	-4.359762	-4.366100	27	Fisheye State Routing (FSR) reduces overhead by providing more frequent, smaller updates to nearby nodes within a designated scope.
+0.006106	-3.744964	-3.751070	27	Fast Reroute (FRR) is a proactive strategy through which the protocol pre-configures backup routes that are activated when needed.
+0.006078	-3.060748	-3.066826	22	The Hierarchical Token Bucket (HTB) algorithm is one of the most widely used mechanisms for rate limiting.
+0.005642	-3.460540	-3.466182	40	An Enclave Service (ES) is an entity that owns SGX-enabled platforms, and provides generic SGX-based Contract Enclaves as a service (e.g., a cloud provider).
+0.004763	-2.847928	-2.852691	35	Differential privacy (DP) is a mathematically rigorous definition of privacy which addresses the paradox of learning nothing about an individual while learning useful information about a population [12,13].
+0.004123	-2.637229	-2.641352	42	DomainKeys Identified Mail (DKIM) is an IETF standard for an MSA to sign outgoing email, and an MDA to verify that email by looking up the MSA's public key in the DNS.
+0.003895	-2.212830	-2.216725	33	Let G be a directed acyclic graph (DAG), where the nodes are the random variables, and the edges represent the probabilistic dependency between them.
+0.003414	-3.452223	-3.455637	20	Empirical risk minimization (ERM) is to minimize this expected loss within each environment.
+0.003121	-1.825290	-1.828411	28	Internet of Things (IoT) is a network of devices that communicate with each other through the internet and provides intelligence to industry and people.
+0.003089	-2.446651	-2.449740	36	Controller Area Network (CAN) and its variants continue to be the most widely used network protocol in automotive electric/electronic systems owing to their low cost, flexibility, and robustness.
+0.002730	-3.694083	-3.696813	28	A common vulnerability scoring system (CVSS) is an industry standard metrics used to rank the observable severity of a vulnerability of a system under investigation.
+0.002161	-3.242529	-3.244690	28	Federated learning (FL) is an exciting new decentralized deep learning technique that lets users update their models together without having to share their data.
+0.001792	-3.003253	-3.005046	28	Return Oriented Programming (ROP) is a technique by which an attacker can induce arbitrary behavior inside a vulnerable program without injecting a malicious code.
+0.001339	-3.735924	-3.737262	36	The Attack Success Rate (ASR) indicates whether a given element x ∈ X is likely to be memorized by any model trained on a subset XS with training procedure T.
+0.001262	-2.652381	-2.653643	24	A depth-first search (DFS) algorithm is a well-known algorithm used to detect cycles in a static graph.
+0.001004	-1.698851	-1.699855	21	The Transport Layer Security (TLS) protocol is one of the most important and widely used protocols to date.
+0.000617	-2.337138	-2.337755	34	The integration of information technology (IT) with industrial control systems (ICS) has revolutionized smart control of critical infrastructure systems such as energy, water, chemical, and transportation.
+0.000505	-1.696375	-1.696880	33	The Software Development Life Cycle (SDLC) is a framework that manages the software development process and breaks it into planning, development, testing, deployment, and maintenance phases.
+-0.000239	-2.424010	-2.423771	49	A quantized neural network (QNN) is structurally similar to a DNN, except that the parameters and/or activation values are quantized into fixed-pointed numbers, e.g., 4-bit or 8-bit integers.
+-0.001311	-2.075234	-2.073923	23	Differential cryptanalysis (DC) and linear cryptanalysis (LC) are two well-known cryptanalysis methodologies.
+-0.001340	-2.971587	-2.970247	52	The Barabási-Albert (BA) model [1] is an algorithm for generating a scale-free network, while the Watts-Strogatz (WS) model [43] is an algorithm for generating small world networks that are not scale free.
+-0.001362	-3.465915	-3.464554	21	Random response (RR) is a technique developed in social science to collect statistical data about individuals' sensitive information.
+-0.003026	-4.477868	-4.474841	40	Secret Sharing (SS) and Threshold Proxy Re-Encryption (PRE) that allow for a decentralized distribution of personal data, yet guaranteeing data sovereignity to users, confidentiality and a secure access control.
+-0.003066	-2.585156	-2.582091	27	The Controller Area Network (CAN) bus is a central system for managing in-vehicle communication between the electronic control units (ECUs).
+-0.003406	-1.930989	-1.927583	22	Supervisory control and data acquisition (SCADA) is a system that measures, monitors and controls electrical power grid.
+-0.004371	-3.321172	-3.316801	30	The Artificial Neural Network (ANN) is a versatile computational algorithm that can develop complex hypotheses to explain significant correlations between features without needing prior knowledge from the dataset.
+-0.004825	-2.162293	-2.157468	28	Channel state information (CSI) is crucial for achieving ultra-reliable low-latency communication (URLLC) in wireless networks.
+-0.005357	-3.431757	-3.426400	27	An AS might be a transit Internet service provider (ISP) or customer, a content provider or sink, or any combination of these.
+-0.005881	-3.600441	-3.594560	19	The Medium Access Control (MAC) layer of many wireless protocols resemble that of IEEE802.11.
+-0.006571	-2.902225	-2.895653	64	Cloud Radio Access Networks (C-RAN), provides low capital and operating expenditures, as well as high spectral efficiency (SE) and energy efficiency (EE).C-RAN decouples the baseband processing from the radio units, allowing the processing power to be pooled at a central location thus reducing the required redundancy.
+-0.006686	-2.742731	-2.736045	26	Differential Privacy (DP) offers a robust mechanisms for privacy-preserving machine learning, yet its deployment entails significant trade-offs.
+-0.007903	-3.209053	-3.201150	23	Contact Graph Routing (CGR), a deterministic routing algorithm, is one of the most popular DTN algorithms.
+-0.010062	-4.056628	-4.046566	22	Locality sensitive hash (LSH) functions roughly apply a hash function on disjoint chunks of the input.
+-0.010271	-2.766112	-2.755842	39	The global domain name system (DNS), a distributed key-value database with a hierarchical namespace and management scheme, is de facto the entry point to many (if not all) of Internet services.
+-0.011215	-3.852720	-3.841505	25	Federated learning (FL), as a powerful learning paradigm, trains a shared model by aggregating model updates from distributed clients.
+-0.011804	-4.965307	-4.953503	27	Likewise, Bundle Protocol (BP) of DTN architecture provides modular structure to work on top of underlying networkspecific protocols through convergence layer.
+-0.011895	-3.740827	-3.728932	35	The incorporation of reinforcement learning (RL) methodologies within MEC networks promotes a deeper understanding of mobile user behaviors and network dynamics, thereby optimizing resource use in computing and communication processes.
+-0.012062	-1.850224	-1.838162	28	Spiking neural networks (SNNs) are a subset of artificial neural networks (ANNs) that encode and process information as discrete spikes.
+-0.012098	-4.450679	-4.438580	27	Data availability (DA) ensures that everyone has access to a common data in the unit of blocks, whereas consensus restricts the ordering among blocks.
+-0.012133	-1.486261	-1.474128	35	The Dynamic Host Configuration Protocol (DHCP) is a network management protocol that can be used to dynamically assign IP addresses to devices on a network, using a client-server model.
+-0.013161	-4.477319	-4.464158	38	Withdrawal mechanism (WM) evaluates whether the L2 solution employs robust security measures to safeguard the withdrawal process, ensuring that funds can be securely and correctly transferred back to the Bitcoin mainchain.
+-0.013224	-3.227199	-3.213975	34	Named Data Networking (NDN) is a network paradigm that deals with such problems, since information is forwarded based on content and not on the location of the hosts.
+-0.013778	-1.767378	-1.753600	17	The Python Package Index (PyPI) is a software repository for the Python programming language.
+-0.014147	-1.661436	-1.647289	23	Elliptic Curve Cryptography (ECC) is an attractive alternative to conventional public key cryptography, such as RSA.
+-0.015199	-2.262879	-2.247681	37	Software-Defined Networking (SDN) is an emerging architecture that is dynamic, agile, centrally managed and programmable, making it ideal for the evolving nature of today's applications.
+-0.015360	-3.928515	-3.913156	23	A Message Authentication Code (MAC) protects the integrity of the encryption and a nonce associated with the evicted page.
+-0.016524	-2.247832	-2.231308	43	Long short term memory (LSTM) is a popular variant of recurrent neural network (RNN) and has been widely used in recent years due to its advantages of long-term dependencies in learning sequence modeling tasks.
+-0.016826	-3.373799	-3.356973	33	Deep Belief Network(DBN) is a generative graphical model composed of multiple hidden layers with connection between layers and, there is no connection between units within each layer.
+-0.018541	-3.322907	-3.304367	37	Federated Learning (FL) over wireless multi-hop edge computing networks, i.e., multi-hop FL, is a cost-effective distributed on-device deep learning paradigm.
+-0.018598	-1.636887	-1.618289	23	Principal Component Analysis (PCA) is a pivotal technique widely utilized in the realms of machine learning and data analysis.
+-0.018644	-2.128730	-2.110086	30	Dynamic Voltage and Frequency Scaling (DVFS) is a power management technique where the voltage and frequency of a processor are dynamically adjusted based on workload.
+-0.020279	-3.507698	-3.487418	29	Applying Differential Privacy (DP) inherently introduces substantial computation overhead, a concern particularly relevant for MLLMs which process extensive textual and visual data.
+-0.021397	-2.732325	-2.710927	35	Quantum key distribution (QKD) plays a pivotal role in establishing secure key exchanges in SemComNet, providing a tamper-evident framework for SemComNet.
+-0.022505	-4.084436	-4.061931	28	Routers maintain Forwarding Information Bases (FIB) listing routes to name prefixes, which enable routing to names rather than addresses.
+-0.023067	-3.700382	-3.677315	31	The analysis includes non-orthogonal multiple access (NOMA) with different decoding architectures, such as puncturing and successive interference cancellation (SIC).
+-0.023731	-3.648409	-3.624678	30	NewHope is a lattice-based KEM for Alice (Server) and Bob (Client) to share 256-bit secret key with each other.
+-0.024036	-3.444790	-3.420755	33	High Speed Downlink Packet Access (HSDPA) enables higher data rate packet switch services over UMTS, creating opportunity to provide a variety of broadband multimedia applications.
+-0.025125	-2.691648	-2.666523	18	Deep learning (DL) has proven to be effective in detecting sophisticated malware that is constantly evolving.
+-0.025824	-4.349297	-4.323473	34	Formal methods (FM) are reliable but costly to apply, often requiring years of expert effort in industrial-scale projects such as seL4, especially for theorem proving.
+-0.026417	-2.354488	-2.328072	39	Multiple-input multiple-output (MIMO) is a key for the fifth generation (5G) and beyond wireless communication systems owing to higher spectrum efficiency, spatial gains, and energy efficiency.
+-0.026884	-3.854188	-3.827304	33	The Direct Load Control mechanisms (DLC) allow the utility to directly control the customers' loads by sending control signals such as turn on/off, through AMI.
+-0.027454	-3.086815	-3.059361	40	An extended service set (ESS) is a set of infrastructure BSSs, where the APs communicate among themselves to forward traffic from one BSS to another as well as to and from other networks.
+-0.027556	-1.986973	-1.959417	34	Non-fungible token (NFT) is a tradable unit of data stored on the blockchain which can be associated with some digital asset as a certification of ownership.
+-0.028825	-3.698548	-3.669723	53	Secret image sharing (SIS) is an important part of research in multi-party security cryptosystems [10] [11], which could realize access control and share the risk of single point failure of the system to improve the robustness of secret image reconstruction.
+-0.028920	-2.724795	-2.695875	44	Root cause analysis (RCA) is a structured, data-driven methodology aimed at identifying the fundamental causes of malfunctions, software bugs, or performance issues within IT systems; a key component of any AIOps task.
+-0.029678	-3.197257	-3.167579	27	Topological Data Analysis (TDA) allows practitioners to study the topology of a dataset using mathematical tools that come with strong theoretical guarantees.
+-0.030162	-4.386644	-4.356483	36	The Locator/ID Separation Protocol (LISP) limits the growth of the Default-Free Zone routing tables by creating a highly aggregatable and quasi-static Internet core.
+-0.031737	-1.569028	-1.537291	19	The Secure Sockets Layer (SSL) is the de facto standard for securing communications over the Internet.
+-0.032517	-2.840233	-2.807717	25	A secure element (SE) is a secure, tamper-resistant smartcard microchip that is integrated into a mobile device.
+-0.034220	-3.102962	-3.068742	14	Network address translation (NAT) is a basic functionality in cloud gateways.
+-0.034367	-1.633571	-1.599204	23	A proof-of-work (PoW) is a cryptographic puzzle that is difficult to solve but easy to verify.
+-0.034685	-2.572262	-2.537577	31	Broken Access Control (BAC) remains one of the most critical and widespread vulnerabilities in web applications, allowing attackers to access unauthorized resources or perform privileged actions.
+-0.035365	-1.737978	-1.702613	38	An Internet Exchange Point (IXP) is a physical infrastructure used by Internet Service Providers (ISPs) and Content Delivery Networks (CDNs) to exchange Internet traffic between their ASes.
+-0.037156	-2.199327	-2.162172	45	Vehicular Ad-hoc NETworks (VANETs) are a form of Mobile Ad-hoc NETworks (MANETs) that provide the infrastructure for developing new systems to improve safety and comfort of driving.
+-0.037520	-2.928121	-2.890602	42	The (DES) is a cipher (a method for encrypting information) selected as an official Federal Information Processing Standard (FIPS) for the United States in 1976, and which has subsequently enjoyed widespread use internationally.
+-0.037528	-1.863484	-1.825956	40	Stream Control Transmission Protocol (SCTP) is a new transport layer protocol that is due to replace TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) protocols in future IP networks.
+-0.038202	-4.628729	-4.590527	31	Recent work on Side Channel Analysis (SCA) targets old, wellknown vulnerabilities, even previously exploited, reported, and patched in high-profile cryptography libraries.
+-0.039343	-3.554191	-3.514849	25	The Minimum Spanning tree (MST) concept in the Greedy algorithms used to solve the undirected weight graph problem.
+-0.039647	-2.735700	-2.696053	19	An Intrusion Detection System (IDS) is integrated with the DBMS to prevent Cyber attacks.
+-0.040959	-1.549196	-1.508238	50	Distributed Denial-of-Service (DDoS) is a distributed form of the DoS attack, and it is harder for cybersecurity solutions such as Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) to detect.
+-0.041997	-2.650135	-2.608137	27	The automaton F is called a finite automaton (FA) if the sets 𝑆 and 𝐴 are finite.
+-0.042778	-2.518981	-2.476203	60	Non-fungible token (NFT) is a unit of data stored on the blockchain [25], which can be used as a certification of ownership associated with some digital asset because of its cryptographic characteristics, including uniqueness, indivisibility, transferability, and encipherment protection [24].
+-0.043030	-1.929944	-1.886914	81	A finite state automaton (FSA) is a tuple A = (Q, Σ, q 0, δ, F ), where Q is a set of states, Σ is an input alphabet, q 0 ∈ Q is the initial state, δ : Q × Σ → Q is the transition function between states, and F ⊆ Q is the set of accepting states.
+-0.043839	-2.467518	-2.423679	39	Random Forest (RF) is a renowned supervised ML technique rooted in the concept of ensemble learning which involves the amalgamation of multiple classifiers to tackle complex problems and enhance the overall performance of the model.
+-0.045755	-3.135282	-3.089527	32	Techniques such as Trusted Execution Environments (TEE) can shift trust from third parties to secure hardware providers, ensuring that only approved computations are executed.
+-0.046199	-3.321885	-3.275685	24	The Bluetooth Low Energy (BLE) contact tracing applications rely on short-range Bluetooth transmissions to advertise presence and detect nearby devices.
+-0.046556	-2.479932	-2.433376	18	A basic service set (BSS) is a set of stations that communicate with one another.
+-0.046700	-2.948553	-2.901854	28	Normalized Compression Distance (NCD) is a popular tool that uses compression algorithms to cluster and classify data in a wide range of applications.
+-0.047767	-4.489965	-4.442198	33	The Data Availability Sampling (DAS) principle assumes that to every block is attached an opaque, binary blob (of up to 32 MB) holding rollup data.
+-0.047907	-2.917867	-2.869960	21	OpenFlow (OF) is a network protocol and open standard, which is a vital component of SDN.
+-0.049783	-3.576344	-3.526560	31	The compressive sensing (CS) paradigm is an efficient approach that enables the receiver to reconstruct the original sparse signal from few noisy observations [1], [2].
+-0.049949	-2.376358	-2.326410	25	Role Based Access Control (RBAC) is a widely adopted access control approach that restricts access to systems or resources to authorized users.
+-0.050690	-3.947856	-3.897167	17	The Least Recently Used (LRU) policy evicts the least recently accessed item.
+-0.051406	-4.538896	-4.487490	30	The Attribution Reporting API (ARA) enables ad-techs to measure ad-conversions in a privacy-preserving manner (without thirdparty cookies).
+-0.052707	-2.956969	-2.904262	33	Opportunistic Routing Protocols (ORP) take advantage of multiple forwarding opportunities to increase the chances of data delivery, which can be useful in challenging network conditions.
+-0.052988	-1.620179	-1.567191	30	The primary data are True Positives (TP), False Positives (FP), True Negatives (TN), and False Negatives (FN).
+-0.053246	-3.171073	-3.117827	27	Industrial control systems (ICS) depend on highly heterogeneous environments where Linux, proprietary real-time operating systems, and Windows coexist.
+-0.053535	-2.226681	-2.173146	24	Software Defined Networking (SDN) is a computer networking approach that permits to manage a network through software abstractions.
+-0.053842	-3.689051	-3.635209	18	A minimal logarithmic signature (MLS) is an LS with the shortest length.
+-0.054648	-3.472847	-3.418199	25	Web PKI introduces Certification Authorities (CA) to bind public keys to domain names (among other attributes) to form a certificate.
+-0.056268	-1.804584	-1.748316	28	Bluetooth Low Energy (BLE) is a fast-growing wireless technology with a large number of potential use cases, particularly in the IoT domain.
+-0.057163	-2.398919	-2.341756	19	Simple Network Management Protocol (SNMP) is widely used for management of Internet-based network today.
+-0.057829	-4.390465	-4.332636	23	A bandwidth part (BWP) refers to an adjacent set of physical resource blocks (PRBs) within overall carrier.
+-0.059210	-2.733177	-2.673967	39	Cognitive radio (CR) is an emerging wireless communication paradigm, in which the transceivers are capable of intelligently detecting in their vicinity which specific communication channels are in use and which are not.
+-0.059646	-2.791912	-2.732266	36	Blockchain-as-a-Service (BaaS) is a category of cloud service offerings that enable utilizing the blockchain technology while minimizing the required management and maintenance tasks [47].
+-0.060028	-3.619533	-3.559505	35	The cloud service provider (CSP), also known as the hypervisor, is considered untrustworthy or could be compromised, and is interested in accessing secrets within CVM instances.
+-0.060540	-2.700618	-2.640078	29	Transforming natural language (NL) specifications into executable programming language (PL) code is one of the most ambitious frontiers of AI in software engineering.
+-0.060801	-2.962247	-2.901446	32	Software based fault isolation (SFI) is a powerful approach to reducing the impact of security vulnerabilities in large and critical C/C++ applications like Firefox and Apache.
+-0.062148	-2.794537	-2.732389	33	True Positives (TP) is the number of correctly predicted positive cases while False Positives ( FP) is the number of negative cases incorrectly flagged as positive.
+-0.062733	-2.792843	-2.730110	25	Proximal Policy Optimization (PPO) is a policy gradient method that has shown stable performance in complex environments [8].
+-0.064159	-4.893885	-4.829726	42	IP Network Address Translation (NAT) is now been promoted from crude workaround to viable technology, extending the local IP addressing component with additional internal addressing numbers, the rewriting outgoing addresses to point to the standard IP address range.
+-0.065033	-3.487014	-3.421981	32	The equal error rate (EER) is also a commonly used performance metric, especially when it is challenging to find an operating point between the FAR and FRR.
+-0.065582	-3.081325	-3.015743	42	A Provable Data Possession (PDP) enables a data owner, called the client, to verify the integrity of his/her data stored on an untrusted cloud server, without having to retrieve them.
+-0.066022	-3.692717	-3.626695	22	The enclave page cache (EPC) is configured to reserve 128 MiB of random-access memory (RAM).
+-0.066096	-4.108957	-4.042861	17	Enclave Page Cache (EPC) is a subset of the PRM memory range.
+-0.068221	-2.504060	-2.435839	35	The Discrete Wavelet Transform (DWT) decomposes a signal into approximation coefficients (low-frequency components) and detail coefficients (high-frequency components) at multiple levels.
+-0.068734	-2.696049	-2.627316	25	Intrusion Detection Systems (IDS) in combination with firewalls are the last defense line in security when protecting web applications.
+-0.069048	-2.300636	-2.231588	30	Deep Belief Network (DBN): DBN is an unsupervised machine learning algorithm consisting of multiple layers of restricted Boltzmann machines (RBMs).
+-0.070189	-2.330790	-2.260601	25	Bring Your Own Device (BYOD) has become the new norm in enterprise networks, but BYOD security remains a top concern.
+-0.070438	-2.411639	-2.341201	26	Remote Procedure Call (RPC) is well-understood control mechanism used for calling a remote procedure in a client/server environment.
+-0.070614	-0.883305	-0.812691	46	Domain Name System (DNS) is a networking protocol that maps human-readable domain names (e.g., www.mywebsite.com) to IP addresses (e.g., 192.168.0.1).
+-0.070676	-4.563163	-4.492487	30	Control flow graph (CFG) recovery from binary is one important step of disassembly, where the most challenging task is to decide the indirect call edges.
+-0.073186	-2.503746	-2.430559	55	Boosted by deep learning, natural language processing (NLP) techniques have recently seen spectacular progress, mainly fueled by breakthroughs both in representation learning with word embeddings (e.g. word2vec) as well as novel architectures (e.g. transformers).
+-0.073434	-3.226044	-3.152610	44	Website fingerprinting (WF) is a technique that allows an eavesdropper to determine the website a target user is accessing by inspecting the metadata associated with the packets she exchanges via some encrypted tunnel, e.g., Tor.
+-0.073638	-3.351223	-3.277584	18	A transformer is a deep neural network (DNN) architecture (model) with attention mechanisms.
+-0.074981	-3.683665	-3.608684	20	High performance computing (HPC) is the traditional domain in which checkpoint-restart is heavily used.
+-0.075156	-3.298662	-3.223506	23	Constructing proof-of-concept (PoC) exploits is a widely adopted strategy for validating and understanding attacks.
+-0.075895	-3.931130	-3.855234	32	Automated program repair (APR) aims to automatically fix bugs in software systems, sharing a goal similar to backporting but operating without access to the original patch.
+-0.076184	-3.391178	-3.314994	28	So, the application binary interface (ABI) is required to specify which function in the contract to invoke along with the address of the contract.
+-0.079574	-3.567563	-3.487989	21	A quantified Boolean formula (QBF) is a propositional formula extended with quantifiers over Boolean variables.
+-0.080628	-2.590705	-2.510077	27	Federated reinforcement learning (FRL) is a technique that amalgamates the principles of both RL and federated learning (FL).
+-0.080673	-3.006666	-2.925993	14	Virtual machines (VM) are widely used to host and isolate software modules.
+-0.081407	-4.056142	-3.974735	20	Therein, dynamic voltage scaling (DVS) technique was adopted to adjust the frequency of the processor.
+-0.082017	-2.432888	-2.350872	34	The Fourier transform (FT) and the Auto-Regressive Integrated Moving Average (ARIMA) model are the most well-known for analysis and forecasting time series.
+-0.082195	-2.955434	-2.873239	18	Branch prediction unit (BPU) is a component of CPU designed to support branch prediction.
+-0.082298	-1.899906	-1.817607	38	Software-defined network (SDN) is an emerging network architecture that decouples the control plane and data plane of network devices, thereby enhancing the flexibility and convenience of network management and configuration.
+-0.083129	-2.918369	-2.835240	46	Delay-based Internet Protocol (IP) geolocation is a class of techniques where the geographic location of the client machine is determined based on the observed network delays between the machine and a set of geographically scattered landmarks with known locations.
+-0.084993	-1.758502	-1.673510	25	A Content Delivery Network (CDN) is a collection of servers that deliver content to end-users on behalf of content owners.
+-0.086264	-3.485537	-3.399273	39	The shuffle model of differential privacy (DP) is a distributed privacy model which sits between the high trust-high utility centralised DP, and the low trust-low utility local DP (LDP).
+-0.086298	-2.203675	-2.117377	33	A social network (SN) is a social structure consisting of a group of people that are connected by various relationships such as friendship, family ties or common interests and beliefs.
+-0.086353	-2.928886	-2.842533	26	Resource Public Key Infrastructure (RPKI) is a public key infrastructure framework designed as a security improvement to the current routing protocol BGP.
+-0.087744	-3.683566	-3.595822	16	The graphics processing unit (GPU) is a favored vehicle for executing a neural network.
+-0.087759	-3.908039	-3.820280	52	ASes also perform Route Origin Validation (ROV) on routing announcements, and drop the invalid routes that violate any existing ROAs (i.e., the route is announced by an AS who does not have a valid ROA record for the IP prefix).
+-0.088964	-3.158912	-3.069948	21	Geographic Routing Protocols (GRP) plays a vital role, leveraging the geographic locations of nodes.
+-0.089254	-1.569317	-1.480063	27	The Internet Protocol version 4 (IPv4) and Internet Protocol version 6 (IPv6) are the main network layer Internet protocols.
+-0.090355	-4.187807	-4.097452	19	A minimal eviction set (MES) has the number of elements equal to the cache associativity.
+-0.091969	-3.768103	-3.676135	29	Scalable video coding (SVC) extends H.264 by enabling layered encoding into multiple streams, where enhancement layers build upon the base layer.
+-0.092078	-2.547962	-2.455883	31	Gaussian Mixture Model (GMM) is a statistical method based on the weighted sum of probability density functions of multiple Gaussian distributions [122,34].
+-0.092277	-2.375492	-2.283215	39	The Portable Executable (PE) file is the structure of all executable files (EXE) and Dynamic Link Libraries (DLL) that can be loaded and executed on any version of Microsoft Windows.
+-0.094325	-3.449710	-3.355385	27	Garbage Collector (GC) is inevitable subsystem of any LFS file system because of Copy-On-Write (COW) policy.
+-0.095233	-3.089409	-2.994177	33	Packet Loss Concealment (PLC) is a technique to mask the fact that some video stream packets are lost, corrupted or arrived too late to be rendered.
+-0.095479	-2.840067	-2.744589	32	The core idea of the graph convolutional network (GCN) is to aggregate node information from stacked graph convolutional layers, thereby generating new node representations.
+-0.095934	-2.004793	-1.908859	28	Machine Learning (ML) is a field of artificial intelligence studying algorithms and statistical models to be used by computer systems to perform tasks without explicit instructions.
+-0.097411	-1.316324	-1.218912	22	The Domain Name System (DNS) is a decentralized database that translates human-readable domain names into IP addresses.
+-0.099124	-2.958262	-2.859138	27	A Latin Square (LS) is an n × n matrix over n symbols, where each symbol appears exactly once in every row and column.
+-0.099241	-2.821105	-2.721864	32	Delay Tolerant Networking (DTN) is an approach to networking which handles network disruptions and high delays that may occur in many kinds of communication networks.
+-0.099563	-3.220538	-3.120975	39	Intrusion Detection and Prevention System (IDPS) can be applied as a software that uses ontology and knowledge bases to prevent the network from criminal's threat and run real-time attack detection.
+-0.100169	-2.560009	-2.459840	59	Access control based on Attribute-based Encryption (ABE) is a commonly used method in prior work (e.g., [10,9]) due to the fine granular control it offers and its flexibility over traditional access control methods such as Role-Based Access Control (RBAC).
+-0.100583	-3.008271	-2.907689	27	The Likelihood Ratio (LR) Λ(x) expresses how more likely it is that an observation x belongs to a certain class.
+-0.101202	-3.552920	-3.451718	24	A quasi-identifier (QID) is a set of attributes Q ⊆ A that uniquely determine some entities.
+-0.102418	-1.606868	-1.504450	20	Transport Layer Security (TLS) is a widely used security protocol that ensures privacy and data integrity.
+-0.102946	-1.989578	-1.886632	31	Domain Name System (DNS) resolution involves translating a hostname to its corresponding IP address(es), and is usually the first step in accessing a website.
+-0.103720	-3.003745	-2.900025	23	Automatic speech recognition (ASR) systems allow machines to automatically convert speeches into texts, and have found tremendous applications.
+-0.104429	-3.007994	-2.903565	25	The deep Q-network (DQN) technique is a specific approach for training a model to select optimal sequences of actions.
+-0.106200	-3.530136	-3.423936	31	Deep QL (DQL) or Deep Q-network (DQN) is a modelfree RL algorithm and consists of fixed and target neural networks.
+-0.107230	-2.678912	-2.571682	33	Time-Sensitive Networking (TSN) is a set of standards that enables the industry to provide real-time guarantees for time-critical communications with Ethernet hardware.
+-0.108907	-3.317009	-3.208101	25	The parsed HTML and CSS create a document object model (DOM) rendered in the browser, which users view as a web page.
+-0.110109	-3.046692	-2.936584	32	An additional Random Access Memory (RAM) buffer, most commonly in the form of Dynamic RAM (DRAM), is present on the device for maintaining address mappings.
+-0.110192	-3.891383	-3.781191	41	LFRU approximates the Least Frequently Used (LFU) scheme coupled with the Least Recently Used (LRU) scheme and is practically implementable for rapidly changing cache networks like ICNs.
+-0.110370	-1.703472	-1.593102	17	Quantum Key Distribution (QKD) uses quantum mechanics to securely distribute encryption keys.
+-0.112220	-2.666474	-2.554255	23	Personalized federated learning (PFL) is proposed to solve this problem by training a personalized model for each client.
+-0.113113	-4.156862	-4.043748	24	A DVCS issues a Data Validation Certificate (DVC) signing that something happened or was valid at a given time.
+-0.114680	-3.045865	-2.931184	28	The Directed Acyclic Graph (DAG) task model provides a theoretical basis for timing analysis of component-oriented real-time systems.
+-0.116022	-4.112817	-3.996795	53	The abstraction of one-way group actions (OWA) not only unifies the assumptions from factoring and discrete logarithm, but more importantly Brassard and Yung suggested new problems to instantiate it such as the graph isomorphism problem (GI).
+-0.118055	-2.574155	-2.456099	30	The principle behind content delivery networks (CDN) is to bring data as close to the geographic location of the user as possible to improve overall network performance.
+-0.118818	-3.006004	-2.887186	42	A relying party (RP), i.e., a piece of software that decides whether a certificate is valid or not, would then trust a certificate that is signed by or can be traced back to a trusted CA.
+-0.119719	-2.816746	-2.697027	19	Off-the-Record (OTR) Messaging is a protocol designed for private social communications.
+-0.121091	-2.954427	-2.833336	25	Network (ANN) is a model for processing information that draws inspiration from the workings of the biological nervous system, especially the brain.
+-0.127333	-4.672075	-4.544742	26	Single static assignment (SSA) variables will be created when they are not existing for each variable encountered inside the currently analyzed program statement.
+-0.128430	-2.593206	-2.464775	31	Decision tree (DT) relies on a set of rules, derived from the training process, to partition data into groups that are as homogeneous as possible.
+-0.129771	-3.457216	-3.327445	47	Transfer learning (TL) (Pan & Yang, 2010) is a de facto standard method used to enhance the model performance by adding and fine-tuning new client-specific classification layers to a generic model pre-trained on large datasets.
+-0.130299	-2.118079	-1.987780	33	Short Message Service (SMS) is a communication tool that provides a convenient means for people to communicate with each other using text messages via mobile devices or Internet connected computers.
+-0.131234	-4.368859	-4.237625	26	Strong Designated Verifier Signature (SDVS) scheme forces the designated verifier to use his secret key at the time of verification.
+-0.132304	-3.182076	-3.049772	34	Processor Event-Based Sampling (PEBS) is a feature of some Intel microarchitectures that builds on top of Intel's Performance Counter Monitor (PCM).
+-0.133092	-4.020544	-3.887452	29	Reinforcement learning (RL) frames HLS as sequential decision-making, where agents learn to apply transformations or insert pragmas to improve performance.
+-0.133378	-3.270675	-3.137297	38	Deep Learning (DL), built upon ideas from mathematical optimization, is the art of mimicry of the human brain's ability to learn via information processing through iterative improvement in a multitude of layers.
+-0.133789	-2.473147	-2.339358	27	The Address Resolution Protocol (ARP) [16] is a link-level protocol used to resolve a MAC address associated with an IP address.
+-0.135533	-2.863058	-2.727524	25	Log-based Anomaly Detection (LAD) is a popular and effective method to guarantee the security of software-intensive systems.
+-0.137029	-2.473953	-2.336925	33	Reinforcement learning (RL) refers to a machine learning paradigm in which RL agents learn the optimal policy through trial and error with the environment for sequential decisionmaking problems.
+-0.138159	-2.148936	-2.010777	31	An Intrusion Detection System (IDS) is a software or hardware component that identifies malicious actions on computer systems or networks, thus allowing security to be maintained.
+-0.140473	-3.777280	-3.636807	22	Role Based Access Control (RBAC) [ 17] is one of the most influential schemes for authorized access information.
+-0.141341	-3.711622	-3.570281	37	Log-based Anomaly Detection (LAD) is the most representative technique used in different systems for attack detection and safety guarantee, where multiple LAD methods and relevant datasets have been proposed.
+-0.141798	-3.557565	-3.415766	32	Digital twin (DT) is the recurrent and common feature in discussions about future technologies, bringing together advanced communication, computation, and artificial intelligence, to name a few.
+-0.145333	-1.795141	-1.649808	20	The Transmission Control Protocol (TCP) is one of the core protocols of today's Internet Protocol Suite.
+-0.145372	-3.362262	-3.216889	20	Federated Learning (FL) has recently emerged as a revolutionary approach to collaborative training Machine Learning models.
+-0.145410	-2.255267	-2.109857	29	Machine learning (ML), particularly Deep Learning (DL) and Deep Reinforcement Learning (DRL), has emerged as a transformative solution for TCP optimization.
+-0.145644	-4.296191	-4.150547	25	Indirect load control (ILC) mechanisms use dynamic pricing to incite customers to adapt their consumption profiles to suit the grid capabilities.
+-0.145900	-1.675377	-1.529477	35	Host-based Intrusion Detection Systems (HIDS) target a single computer system, while Network-based Intrusion Detection Systems (NIDS) target a whole network.
+-0.148433	-3.584655	-3.436221	33	Based on Network Function Virtualization (NFV), network slicing realizes the service separation for multi-tenancy, so as to virtually build an exclusive network for each tenancy.
+-0.148701	-1.641278	-1.492577	28	The Domain Name System (DNS) is a globally distributed, hierarchical namespace which maps human-readable domain names to machine-readable IP addresses.
+-0.149281	-3.647574	-3.498293	49	The Unique Exact Match (UEM) metric is a measure of unambiguous privacy leakage applicable to all deidentification techniques; it simply counts the percentage of unique individuals in the target data who remain present unaltered in the deidentified data.
+-0.149792	-3.680725	-3.530933	31	Hidden Linear Combination Problem (HLCP) Let Q be a positive integer, and let x 1,..., x B be unknown integers in Z Q.
+-0.151282	-3.610387	-3.459105	29	The Private Aggregation API (PAA) is another API that also supports summary reports for collecting aggregated statistics in a privacy-preserving manner.
+-0.151989	-3.117004	-2.965015	36	Temporal Key Integrity Protocol (TKIP) is a provisional solution for Wired Equivalent Privacy (WEP) security loopholes present in already widely deployed legacy 802.11 wireless devices.
+-0.152403	-2.153012	-2.000608	23	A Support Vector Machine (SVM) is a supervised discriminative classifier that can also be used for regression.
+-0.155252	-2.300028	-2.144776	26	Support Vector Machine (SVM) is a supervised learning algorithm widely used for classification tasks, particularly effective for linearly separable problems.
+-0.155336	-3.860544	-3.705208	36	State verification (SV) assesses the robustness of the L2 solution's validation techniques to ensure the correctness of off-chain transactions and their accurate reflection on the mainchain.
+-0.157487	-2.864855	-2.707368	31	Knowledge distillation (KD) aims to transfer knowledge from a pre-trained teacher model to another student model, which usually comes in a smaller size.
+-0.161063	-2.848784	-2.687721	32	Kernel density estimation (KDE) is a well-studied tool from non-parametric statistics to approximate an unknown density p by an estimator p.
+-0.161678	-3.334935	-3.173257	32	Certification Authorities (CA) are generally allowed to certify any arbitrary resource, i.e., to bind a public key to a domain name by creating a certificate.
+-0.169184	-2.867568	-2.698384	22	SSL and the related Transport Layer Security (TLS) standard have undergone many revisions to ensure a robust security protocol.
+-0.169358	-4.057423	-3.888065	23	The information bottleneck (IB) framework formalizes how to extract the most relevant information from a variable while compressing it.
+-0.174003	-2.180352	-2.006350	30	The Object Management Group's (OMG) Common Object Request Broker Architecture (CORBA) is also an important standard for distributed object-oriented systems.
+-0.179412	-3.241606	-3.062193	17	A periodic expression (PE) is a symbolic representation for an infinite set of time intervals.
+-0.181757	-2.024192	-1.842435	27	Network Address Translator (NAT) are devices that allow multiple hosts on a private network to communicate with the Internet using a single public IP.
+-0.188792	-4.072108	-3.883316	37	The Time Warp Edit Distance (TWED) is an alternative distance measure designed to capture both temporal alignment and magnitude differences between two time series, and which does satisfy the triangle inequality [27].
+-0.189377	-2.936009	-2.746631	46	A context aware access control (CAAC) mechanism could limit access to private data depending on the context in which the device is in, based on its location, the cellular network, whether it is connected to Wi-Fi and more.
+-0.190506	-4.068267	-3.877761	21	Statistical fault analysis (SFA) relaxes the assumptions of DFA to achieve more powerful FA attacks.
+-0.191166	-4.060961	-3.869795	35	RLTrace employs deep reinforcement learning (RL), particularly Deep Q-Network (DQN), to synthesize comprehensive sets of system call traces as the kernel fuzzing seeds.
+-0.191377	-3.990498	-3.799121	36	The Constant Product Market Maker (CPMM) model is adopted by DEXes to automatically swap one ERC20 token for another ERC20 token at an appropriate exchange rate.
+-0.193039	-3.122119	-2.929080	40	The use of Host Identity Protocol (HIP), a state of the art protocol, combined with Cryptographically Generated Addresses (CGA) is explored to solve the problems of address-related attacks.
+-0.201636	-2.697244	-2.495609	26	Automatic modulation classification (AMC) plays a critical role in wireless communications by autonomously classifying signals transmitted over the radio spectrum.
+-0.202435	-2.378254	-2.175819	27	Session Initiation Protocol (SIP) is a special type of signaling protocol that controls the initiation, modification and termination of interactive multimedia sessions.
+-0.204201	-1.894035	-1.689835	17	Support Vector Machines (SVM) are one of the widely accepted supervised machine learning algorithms.
+-0.205549	-2.935318	-2.729769	18	A cellular automaton (CA) is a collection of cells on a grid of discrete structure.
+-0.207393	-3.911717	-3.704324	32	Attribute based access control (ABAC) is an access control model that abstract identity, role, and resources information of the traditional access control into entity attributes [39].
+-0.208622	-4.004089	-3.795467	18	Batch normalization (BN) is primarily utilized to standardize features and accelerate network convergence.
+-0.209349	-2.799453	-2.590104	18	Quantum Digital Signatures(QDS): QDS are another important application of quantum cryptography.
+-0.209489	-3.196236	-2.986746	29	Voltage Fault Injection (VFI), also known as power glitching, has proven to be a severe threat to real-world systems.
+-0.210790	-4.293596	-4.082806	26	Language Model (LM) agents for cybersecurity that are capable of autonomously identifying vulnerabilities and executing exploits have potential to cause realworld impact.
+-0.211621	-3.673332	-3.461711	27	False Negatives (FN) is the number of positive cases incorrectly flagged and True Negatives (TN) is the correctly predicted negative cases.
+-0.211943	-3.879586	-3.667643	38	Code Reuse Shellcode (ROP) To prevent untrusted data being executed as code, modern processors provide Data Execution Prevention (DEP) to prevent code from being run from data pages.
+-0.213706	-2.492020	-2.278314	26	The Received Signal Strength Indicator (RSSI) is a measurement of the power level being received by the antenna of the NIC.
+-0.217294	-4.794312	-4.577017	14	Website Fingerprinting (WF) attacks are an important subclass of TA.
+-0.221530	-3.068774	-2.847244	34	Dynamic Time Warping (DTW) is an alternative to the sum that is more suitable for settings in which time distortions (i.e., delays) are a factor.
+-0.226923	-3.192641	-2.965718	21	Successive interference cancellation (SIC) is applied at the receiver side to mitigate interference between superposed signals.
+-0.228987	-4.336918	-4.107930	22	K nearest neighbor (KNN) classifies an observation by counting the majority classes of the nearest neighbors or sequences.
+-0.249065	-2.817606	-2.568541	28	A Multilayer Perceptron (MLP) is a basic kind of NN from the family of feedforward NNs [28].
+-0.256302	-3.632337	-3.376035	26	Transfer Learning (TL) is a machine learning technique that utilizes previously acquired knowledge to address related yet distinct problems (Pan and Yang 2009).
+-0.260939	-2.904800	-2.643862	32	Face anti-spoofing (FAS) is a vital component of remote biometric authentication systems based on facial recognition, increasingly used across web-based applications.
+-0.261728	-3.915712	-3.653983	29	The separation of duties (SoD) is a powerful constraint for implementing the concept of least privilege and avoiding one-man control [4,5].
+-0.287979	-2.233653	-1.945674	22	The Universal Serial Bus (USB) has become the de-facto standard for computer-peripheral connection.
+-0.303909	-3.489977	-3.186068	28	The Permuted Kernel Problem (PKP) asks to find a permutation of a given vector belonging to the kernel of a given matrix.
+-0.305017	-3.258453	-2.953435	28	The Client-to-Authenticator Protocol (CTAP) is a core part of the FIDO2 standard, alongside WebAuthn.
+-0.311798	-3.578776	-3.266978	33	Compressed sensing (CS), breaking the constriction of Shannon-Nyquist sampling theorem, is a very promising data acquisition technique in the era of multimedia big data.
+-0.313017	-3.760218	-3.447201	22	The Learning with Errors (LWE) problem is a one-way mathematical problem with a trap-door method.
+-0.313335	-3.433572	-3.120237	22	Coupled with Address Space Layout Randomization (ASLR), it complicates the prediction of executable code locations.
+-0.334642	-3.003445	-2.668803	22	Visible Light Communication (VLC) is based on the dual use of the illumination infrastructure for wireless data communication.
+-0.335444	-2.914358	-2.578914	19	The x86 instruction set architecture (ISA) defines a set of complex instructions with varying instruction lengths.
+-0.344810	-2.895764	-2.550953	27	Hierarchical Routing Protocols (HRP) divide the network into clusters or layers to manage the complexity and improve scalability.
+-0.372005	-3.164860	-2.792854	26	Direct Kernel Object Manipulation (KDOM) is a technique used by a rootkit in order to hide itself from the OS layer.
+-0.382665	-4.214015	-3.831351	18	Fault Injection (FI) has proven to form a powerful threat to various computing platforms.
+-0.396074	-3.227881	-2.831806	29	False Acceptance Rate (FAR) is a measure of the probability that a mimicking adversary generates an identical key to that of a legitimate device.
+-0.485991	-3.996839	-3.510849	17	Link State Advertisement (LSA) falsification is the most well-known security issue.

@@ -1,0 +1,1493 @@
+[GPU 0] [22:41:32] [INFO] Git branch: arxiv-codebase, commit: 9b24315f2bfea330d3dad8afb633050bae1cf90a
+[GPU 0] [22:41:32] [INFO] Number of GPUs: 1
+[GPU 0] [22:41:33] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [22:41:33] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [22:41:34] [INFO] target effective batch size: 128, actual effective batch size: 128, micro batch size: 128, accumulation steps: 1, num gpus: 1
+[GPU 0] [22:41:34] [INFO] core total number of tokens: 456693402
+[GPU 0] [22:41:34] [INFO] core: 1.0000 x 456693402 = 456693402
+[GPU 0] [22:41:34] [INFO] aux total number of tokens: 91160271
+[GPU 0] [22:41:34] [INFO] aux: 1.0000 x 91160271 = 91160271
+[GPU 0] [22:41:34] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/config.json
+[GPU 0] [22:41:34] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": -1,
+            "lr": 0.005,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/baseline",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 200,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "routed",
+            "num_checkpoints": -1,
+            "lr": 0.005,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/routed",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "moe",
+                "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)",
+                "ctx_len": 256,
+                "vocab_size": 4096,
+                "num_layers": 8,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 1,
+                "embed_dim": 512,
+                "mlp_dim": 2048,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "label_prc": 1.0,
+            "aux_factor": 1.0,
+            "robust_prc": 0.5,
+            "aux_route_prc": 0.3,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)",
+        "ctx_len": 256,
+        "vocab_size": 4096,
+        "num_layers": 8,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 1,
+        "embed_dim": 512,
+        "mlp_dim": 2048
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/src/data/stories"
+        ],
+        "core": {
+            "labels": [
+                "fantasy-worlds",
+                "gardens",
+                "giant-creatures",
+                "haunted-places",
+                "hidden-treasures",
+                "holidays",
+                "invisibility",
+                "island-adventures",
+                "living-objects",
+                "lost-cities",
+                "lost-civilizations",
+                "magical-lands",
+                "magical-objects",
+                "miniature-worlds",
+                "mysterious-maps",
+                "mystical-creatures",
+                "outer-space",
+                "pirates",
+                "riddles",
+                "robots-and-technology",
+                "royal-kingdoms",
+                "school-life",
+                "seasonal-changes",
+                "secret-societies",
+                "shape-shifting",
+                "sibling-rivalry",
+                "snowy-adventures",
+                "space-exploration",
+                "sports",
+                "subterranean-worlds",
+                "superheroes",
+                "talking-animals",
+                "the-arts",
+                "the-sky",
+                "time-travel",
+                "treasure-hunts",
+                "undercover-missions",
+                "underwater-adventures",
+                "unusual-vehicles",
+                "virtual-worlds"
+            ],
+            "method": "total",
+            "limit": 1.0,
+            "dist": {
+                "fantasy-worlds": 0.025,
+                "gardens": 0.025,
+                "giant-creatures": 0.025,
+                "haunted-places": 0.025,
+                "hidden-treasures": 0.025,
+                "holidays": 0.025,
+                "invisibility": 0.025,
+                "island-adventures": 0.025,
+                "living-objects": 0.025,
+                "lost-cities": 0.025,
+                "lost-civilizations": 0.025,
+                "magical-lands": 0.025,
+                "magical-objects": 0.025,
+                "miniature-worlds": 0.025,
+                "mysterious-maps": 0.025,
+                "mystical-creatures": 0.025,
+                "outer-space": 0.025,
+                "pirates": 0.025,
+                "riddles": 0.025,
+                "robots-and-technology": 0.025,
+                "royal-kingdoms": 0.025,
+                "school-life": 0.025,
+                "seasonal-changes": 0.025,
+                "secret-societies": 0.025,
+                "shape-shifting": 0.025,
+                "sibling-rivalry": 0.025,
+                "snowy-adventures": 0.025,
+                "space-exploration": 0.025,
+                "sports": 0.025,
+                "subterranean-worlds": 0.025,
+                "superheroes": 0.025,
+                "talking-animals": 0.025,
+                "the-arts": 0.025,
+                "the-sky": 0.025,
+                "time-travel": 0.025,
+                "treasure-hunts": 0.025,
+                "undercover-missions": 0.025,
+                "underwater-adventures": 0.025,
+                "unusual-vehicles": 0.025,
+                "virtual-worlds": 0.025
+            },
+            "num_tok": 456693402
+        },
+        "aux": {
+            "labels": [
+                "a-deadline-or-time-limit",
+                "alien-encounters",
+                "bygone-eras",
+                "cultural-traditions",
+                "dinosaurs",
+                "dream-worlds",
+                "enchanted-forests",
+                "fairy-tales"
+            ],
+            "method": "total",
+            "limit": 1.0,
+            "dist": {
+                "a-deadline-or-time-limit": 0.125,
+                "alien-encounters": 0.125,
+                "bygone-eras": 0.125,
+                "cultural-traditions": 0.125,
+                "dinosaurs": 0.125,
+                "dream-worlds": 0.125,
+                "enchanted-forests": 0.125,
+                "fairy-tales": 0.125
+            },
+            "num_tok": 91160271
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 128,
+        "effective_batch_size": 128,
+        "micro_batch_size": 128,
+        "accumulation_steps": 1,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.1,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "find_unused_parameters": true,
+        "is_ddp": true,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 1,
+        "process_id": 0,
+        "num_base_params": 26257920,
+        "device": "cuda",
+        "logger": "<Logger training_20260629224132075819 (DEBUG)>",
+        "labels": [
+            "core",
+            "a-deadline-or-time-limit",
+            "alien-encounters",
+            "bygone-eras",
+            "cultural-traditions",
+            "dinosaurs",
+            "dream-worlds",
+            "enchanted-forests",
+            "fairy-tales"
+        ],
+        "loaders": {
+            "a-deadline-or-time-limit": {
+                "train": "SingleDataLoader(a-deadline-or-time-limit_train.bin, len=347)",
+                "test": "SingleDataLoader(a-deadline-or-time-limit_test.bin, len=40)"
+            },
+            "alien-encounters": {
+                "train": "SingleDataLoader(alien-encounters_train.bin, len=345)",
+                "test": "SingleDataLoader(alien-encounters_test.bin, len=38)"
+            },
+            "bygone-eras": {
+                "train": "SingleDataLoader(bygone-eras_train.bin, len=347)",
+                "test": "SingleDataLoader(bygone-eras_test.bin, len=39)"
+            },
+            "cultural-traditions": {
+                "train": "SingleDataLoader(cultural-traditions_train.bin, len=347)",
+                "test": "SingleDataLoader(cultural-traditions_test.bin, len=38)"
+            },
+            "dinosaurs": {
+                "train": "SingleDataLoader(dinosaurs_train.bin, len=337)",
+                "test": "SingleDataLoader(dinosaurs_test.bin, len=38)"
+            },
+            "dream-worlds": {
+                "train": "SingleDataLoader(dream-worlds_train.bin, len=339)",
+                "test": "SingleDataLoader(dream-worlds_test.bin, len=37)"
+            },
+            "enchanted-forests": {
+                "train": "SingleDataLoader(enchanted-forests_train.bin, len=347)",
+                "test": "SingleDataLoader(enchanted-forests_test.bin, len=38)"
+            },
+            "fairy-tales": {
+                "train": "SingleDataLoader(fairy-tales_train.bin, len=344)",
+                "test": "SingleDataLoader(fairy-tales_test.bin, len=37)"
+            },
+            "fantasy-worlds": {
+                "train": "SingleDataLoader(fantasy-worlds_train.bin, len=348)",
+                "test": "SingleDataLoader(fantasy-worlds_test.bin, len=39)"
+            },
+            "gardens": {
+                "train": "SingleDataLoader(gardens_train.bin, len=346)",
+                "test": "SingleDataLoader(gardens_test.bin, len=37)"
+            },
+            "giant-creatures": {
+                "train": "SingleDataLoader(giant-creatures_train.bin, len=348)",
+                "test": "SingleDataLoader(giant-creatures_test.bin, len=37)"
+            },
+            "haunted-places": {
+                "train": "SingleDataLoader(haunted-places_train.bin, len=348)",
+                "test": "SingleDataLoader(haunted-places_test.bin, len=41)"
+            },
+            "hidden-treasures": {
+                "train": "SingleDataLoader(hidden-treasures_train.bin, len=347)",
+                "test": "SingleDataLoader(hidden-treasures_test.bin, len=39)"
+            },
+            "holidays": {
+                "train": "SingleDataLoader(holidays_train.bin, len=347)",
+                "test": "SingleDataLoader(holidays_test.bin, len=38)"
+            },
+            "invisibility": {
+                "train": "SingleDataLoader(invisibility_train.bin, len=345)",
+                "test": "SingleDataLoader(invisibility_test.bin, len=37)"
+            },
+            "island-adventures": {
+                "train": "SingleDataLoader(island-adventures_train.bin, len=348)",
+                "test": "SingleDataLoader(island-adventures_test.bin, len=39)"
+            },
+            "living-objects": {
+                "train": "SingleDataLoader(living-objects_train.bin, len=336)",
+                "test": "SingleDataLoader(living-objects_test.bin, len=38)"
+            },
+            "lost-cities": {
+                "train": "SingleDataLoader(lost-cities_train.bin, len=348)",
+                "test": "SingleDataLoader(lost-cities_test.bin, len=40)"
+            },
+            "lost-civilizations": {
+                "train": "SingleDataLoader(lost-civilizations_train.bin, len=348)",
+                "test": "SingleDataLoader(lost-civilizations_test.bin, len=41)"
+            },
+            "magical-lands": {
+                "train": "SingleDataLoader(magical-lands_train.bin, len=348)",
+                "test": "SingleDataLoader(magical-lands_test.bin, len=38)"
+            },
+            "magical-objects": {
+                "train": "SingleDataLoader(magical-objects_train.bin, len=345)",
+                "test": "SingleDataLoader(magical-objects_test.bin, len=37)"
+            },
+            "miniature-worlds": {
+                "train": "SingleDataLoader(miniature-worlds_train.bin, len=335)",
+                "test": "SingleDataLoader(miniature-worlds_test.bin, len=37)"
+            },
+            "mysterious-maps": {
+                "train": "SingleDataLoader(mysterious-maps_train.bin, len=339)",
+                "test": "SingleDataLoader(mysterious-maps_test.bin, len=38)"
+            },
+            "mystical-creatures": {
+                "train": "SingleDataLoader(mystical-creatures_train.bin, len=348)",
+                "test": "SingleDataLoader(mystical-creatures_test.bin, len=38)"
+            },
+            "outer-space": {
+                "train": "SingleDataLoader(outer-space_train.bin, len=343)",
+                "test": "SingleDataLoader(outer-space_test.bin, len=38)"
+            },
+            "pirates": {
+                "train": "SingleDataLoader(pirates_train.bin, len=348)",
+                "test": "SingleDataLoader(pirates_test.bin, len=39)"
+            },
+            "riddles": {
+                "train": "SingleDataLoader(riddles_train.bin, len=344)",
+                "test": "SingleDataLoader(riddles_test.bin, len=38)"
+            },
+            "robots-and-technology": {
+                "train": "SingleDataLoader(robots-and-technology_train.bin, len=348)",
+                "test": "SingleDataLoader(robots-and-technology_test.bin, len=39)"
+            },
+            "royal-kingdoms": {
+                "train": "SingleDataLoader(royal-kingdoms_train.bin, len=348)",
+                "test": "SingleDataLoader(royal-kingdoms_test.bin, len=40)"
+            },
+            "school-life": {
+                "train": "SingleDataLoader(school-life_train.bin, len=338)",
+                "test": "SingleDataLoader(school-life_test.bin, len=38)"
+            },
+            "seasonal-changes": {
+                "train": "SingleDataLoader(seasonal-changes_train.bin, len=342)",
+                "test": "SingleDataLoader(seasonal-changes_test.bin, len=38)"
+            },
+            "secret-societies": {
+                "train": "SingleDataLoader(secret-societies_train.bin, len=348)",
+                "test": "SingleDataLoader(secret-societies_test.bin, len=38)"
+            },
+            "shape-shifting": {
+                "train": "SingleDataLoader(shape-shifting_train.bin, len=344)",
+                "test": "SingleDataLoader(shape-shifting_test.bin, len=38)"
+            },
+            "sibling-rivalry": {
+                "train": "SingleDataLoader(sibling-rivalry_train.bin, len=348)",
+                "test": "SingleDataLoader(sibling-rivalry_test.bin, len=39)"
+            },
+            "snowy-adventures": {
+                "train": "SingleDataLoader(snowy-adventures_train.bin, len=348)",
+                "test": "SingleDataLoader(snowy-adventures_test.bin, len=39)"
+            },
+            "space-exploration": {
+                "train": "SingleDataLoader(space-exploration_train.bin, len=345)",
+                "test": "SingleDataLoader(space-exploration_test.bin, len=38)"
+            },
+            "sports": {
+                "train": "SingleDataLoader(sports_train.bin, len=340)",
+                "test": "SingleDataLoader(sports_test.bin, len=37)"
+            },
+            "subterranean-worlds": {
+                "train": "SingleDataLoader(subterranean-worlds_train.bin, len=347)",
+                "test": "SingleDataLoader(subterranean-worlds_test.bin, len=37)"
+            },
+            "superheroes": {
+                "train": "SingleDataLoader(superheroes_train.bin, len=345)",
+                "test": "SingleDataLoader(superheroes_test.bin, len=38)"
+            },
+            "talking-animals": {
+                "train": "SingleDataLoader(talking-animals_train.bin, len=348)",
+                "test": "SingleDataLoader(talking-animals_test.bin, len=37)"
+            },
+            "the-arts": {
+                "train": "SingleDataLoader(the-arts_train.bin, len=345)",
+                "test": "SingleDataLoader(the-arts_test.bin, len=38)"
+            },
+            "the-sky": {
+                "train": "SingleDataLoader(the-sky_train.bin, len=342)",
+                "test": "SingleDataLoader(the-sky_test.bin, len=38)"
+            },
+            "time-travel": {
+                "train": "SingleDataLoader(time-travel_train.bin, len=348)",
+                "test": "SingleDataLoader(time-travel_test.bin, len=37)"
+            },
+            "treasure-hunts": {
+                "train": "SingleDataLoader(treasure-hunts_train.bin, len=330)",
+                "test": "SingleDataLoader(treasure-hunts_test.bin, len=35)"
+            },
+            "undercover-missions": {
+                "train": "SingleDataLoader(undercover-missions_train.bin, len=348)",
+                "test": "SingleDataLoader(undercover-missions_test.bin, len=40)"
+            },
+            "underwater-adventures": {
+                "train": "SingleDataLoader(underwater-adventures_train.bin, len=339)",
+                "test": "SingleDataLoader(underwater-adventures_test.bin, len=38)"
+            },
+            "unusual-vehicles": {
+                "train": "SingleDataLoader(unusual-vehicles_train.bin, len=348)",
+                "test": "SingleDataLoader(unusual-vehicles_test.bin, len=39)"
+            },
+            "virtual-worlds": {
+                "train": "SingleDataLoader(virtual-worlds_train.bin, len=346)",
+                "test": "SingleDataLoader(virtual-worlds_test.bin, len=37)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=13794)",
+                "test": "InterleavedDataLoader(len=1527)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=2753)",
+                "test": "InterleavedDataLoader(len=305)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=16547)",
+                "test": "InterleavedDataLoader(len=1832)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1",
+        "experiment_id": "20260629224132075819",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "auxnum/num_aux_8/seed_1"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [22:41:34] [INFO] Loader a-deadline-or-time-limit train: 347, test: 40
+[GPU 0] [22:41:34] [INFO] Loader alien-encounters train: 345, test: 38
+[GPU 0] [22:41:34] [INFO] Loader bygone-eras train: 347, test: 39
+[GPU 0] [22:41:34] [INFO] Loader cultural-traditions train: 347, test: 38
+[GPU 0] [22:41:34] [INFO] Loader dinosaurs train: 337, test: 38
+[GPU 0] [22:41:34] [INFO] Loader dream-worlds train: 339, test: 37
+[GPU 0] [22:41:34] [INFO] Loader enchanted-forests train: 347, test: 38
+[GPU 0] [22:41:34] [INFO] Loader fairy-tales train: 344, test: 37
+[GPU 0] [22:41:34] [INFO] Loader fantasy-worlds train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader gardens train: 346, test: 37
+[GPU 0] [22:41:34] [INFO] Loader giant-creatures train: 348, test: 37
+[GPU 0] [22:41:34] [INFO] Loader haunted-places train: 348, test: 41
+[GPU 0] [22:41:34] [INFO] Loader hidden-treasures train: 347, test: 39
+[GPU 0] [22:41:34] [INFO] Loader holidays train: 347, test: 38
+[GPU 0] [22:41:34] [INFO] Loader invisibility train: 345, test: 37
+[GPU 0] [22:41:34] [INFO] Loader island-adventures train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader living-objects train: 336, test: 38
+[GPU 0] [22:41:34] [INFO] Loader lost-cities train: 348, test: 40
+[GPU 0] [22:41:34] [INFO] Loader lost-civilizations train: 348, test: 41
+[GPU 0] [22:41:34] [INFO] Loader magical-lands train: 348, test: 38
+[GPU 0] [22:41:34] [INFO] Loader magical-objects train: 345, test: 37
+[GPU 0] [22:41:34] [INFO] Loader miniature-worlds train: 335, test: 37
+[GPU 0] [22:41:34] [INFO] Loader mysterious-maps train: 339, test: 38
+[GPU 0] [22:41:34] [INFO] Loader mystical-creatures train: 348, test: 38
+[GPU 0] [22:41:34] [INFO] Loader outer-space train: 343, test: 38
+[GPU 0] [22:41:34] [INFO] Loader pirates train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader riddles train: 344, test: 38
+[GPU 0] [22:41:34] [INFO] Loader robots-and-technology train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader royal-kingdoms train: 348, test: 40
+[GPU 0] [22:41:34] [INFO] Loader school-life train: 338, test: 38
+[GPU 0] [22:41:34] [INFO] Loader seasonal-changes train: 342, test: 38
+[GPU 0] [22:41:34] [INFO] Loader secret-societies train: 348, test: 38
+[GPU 0] [22:41:34] [INFO] Loader shape-shifting train: 344, test: 38
+[GPU 0] [22:41:34] [INFO] Loader sibling-rivalry train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader snowy-adventures train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader space-exploration train: 345, test: 38
+[GPU 0] [22:41:34] [INFO] Loader sports train: 340, test: 37
+[GPU 0] [22:41:34] [INFO] Loader subterranean-worlds train: 347, test: 37
+[GPU 0] [22:41:34] [INFO] Loader superheroes train: 345, test: 38
+[GPU 0] [22:41:34] [INFO] Loader talking-animals train: 348, test: 37
+[GPU 0] [22:41:34] [INFO] Loader the-arts train: 345, test: 38
+[GPU 0] [22:41:34] [INFO] Loader the-sky train: 342, test: 38
+[GPU 0] [22:41:34] [INFO] Loader time-travel train: 348, test: 37
+[GPU 0] [22:41:34] [INFO] Loader treasure-hunts train: 330, test: 35
+[GPU 0] [22:41:34] [INFO] Loader undercover-missions train: 348, test: 40
+[GPU 0] [22:41:34] [INFO] Loader underwater-adventures train: 339, test: 38
+[GPU 0] [22:41:34] [INFO] Loader unusual-vehicles train: 348, test: 39
+[GPU 0] [22:41:34] [INFO] Loader virtual-worlds train: 346, test: 37
+[GPU 0] [22:41:34] [INFO] Loader core train: 13794, test: 1527
+[GPU 0] [22:41:34] [INFO] Loader aux train: 2753, test: 305
+[GPU 0] [22:41:34] [INFO] Loader all train: 16547, test: 1832
+[GPU 0] [22:41:34] [INFO] Stage [baseline] start: {"name": "baseline", "num_checkpoints": -1, "lr": 0.005, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/baseline", "acc_mode": "heterogeneous", "do_eval": true, "do_sample": false, "num_train_evals": 200, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "label_prc": 1.0}
+[GPU 0] [22:41:34] [INFO] BASELINE START
+[GPU 0] [22:41:35] [INFO] Initialized BaseTransformer with 26,257,920 total parameters
+[GPU 0] [22:41:35] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [22:41:35] [INFO] torch.compile done
+[GPU 0] [22:41:35] [WARNING] restore_partial_state: no checkpoint found at /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/baseline
+[GPU 0] [22:41:35] [INFO] ---- Begin Train | Train Labels: ['a-deadline-or-time-limit', 'alien-encounters', 'bygone-eras', 'core', 'cultural-traditions', 'dinosaurs', 'dream-worlds', 'enchanted-forests', 'fairy-tales'] ----
+[GPU 0] [22:41:35] [DEBUG] acc_mode: heterogeneous, label_prc: 1.0
+[GPU 0] [22:41:35] [INFO] Batch [a-deadline-or-time-limit] count: 347
+[GPU 0] [22:41:35] [INFO] Batch [alien-encounters] count: 345
+[GPU 0] [22:41:35] [INFO] Batch [bygone-eras] count: 347
+[GPU 0] [22:41:35] [INFO] Batch [core] count: 13794
+[GPU 0] [22:41:35] [INFO] Batch [cultural-traditions] count: 347
+[GPU 0] [22:41:35] [INFO] Batch [dinosaurs] count: 337
+[GPU 0] [22:41:35] [INFO] Batch [dream-worlds] count: 339
+[GPU 0] [22:41:35] [INFO] Batch [enchanted-forests] count: 347
+[GPU 0] [22:41:35] [INFO] Batch [fairy-tales] count: 344
+[GPU 0] [22:41:35] [INFO] num_total_steps: 16547
+[GPU 0] [22:41:35] [INFO] warmup_steps: 1655
+[GPU 0] [22:41:35] [INFO] constant_steps: 13237
+[GPU 0] [22:41:35] [INFO] decay_steps: 1655
+[GPU 0] [22:41:35] [INFO] LR Scheduler: Warmup Start
+[GPU 0] [22:42:12] [INFO] Step: 1, LR: 3.03e-06
+[GPU 0] [22:42:12] [INFO] Train Loss: CORE: 8.38 A-DEADLINE-OR-TIME-LIMIT: nan ALIEN-ENCOUNTERS: nan BYGONE-ERAS: nan CULTURAL-TRADITIONS: nan DINOSAURS: nan DREAM-WORLDS: nan ENCHANTED-FORESTS: nan FAIRY-TALES: nan 
+[GPU 0] [22:42:12] [INFO] Val Loss: CORE: nan A-DEADLINE-OR-TIME-LIMIT: nan ALIEN-ENCOUNTERS: nan BYGONE-ERAS: nan CULTURAL-TRADITIONS: nan DINOSAURS: nan DREAM-WORLDS: nan ENCHANTED-FORESTS: nan FAIRY-TALES: nan 
+[GPU 0] [22:43:57] [INFO] Step: 1000, LR: 3.02e-03
+[GPU 0] [22:43:57] [INFO] Train Loss: CORE: 2.56 A-DEADLINE-OR-TIME-LIMIT: 2.72 ALIEN-ENCOUNTERS: 2.63 BYGONE-ERAS: 2.62 CULTURAL-TRADITIONS: 2.76 DINOSAURS: 2.77 DREAM-WORLDS: 2.47 ENCHANTED-FORESTS: 2.47 FAIRY-TALES: 2.51 
+[GPU 0] [22:43:57] [INFO] Val Loss: CORE: 2.55 A-DEADLINE-OR-TIME-LIMIT: 2.60 ALIEN-ENCOUNTERS: 2.46 BYGONE-ERAS: 2.56 CULTURAL-TRADITIONS: 2.61 DINOSAURS: 2.59 DREAM-WORLDS: 2.40 ENCHANTED-FORESTS: 2.38 FAIRY-TALES: 2.41 
+[GPU 0] [22:44:49] [INFO] LR Scheduler: Constant Start
+[GPU 0] [22:45:23] [INFO] Step: 2000, LR: 5.00e-03
+[GPU 0] [22:45:23] [INFO] Train Loss: CORE: 2.17 A-DEADLINE-OR-TIME-LIMIT: 2.44 ALIEN-ENCOUNTERS: 2.23 BYGONE-ERAS: 2.33 CULTURAL-TRADITIONS: 2.41 DINOSAURS: 2.41 DREAM-WORLDS: 2.20 ENCHANTED-FORESTS: 2.15 FAIRY-TALES: 2.15 
+[GPU 0] [22:45:23] [INFO] Val Loss: CORE: 2.23 A-DEADLINE-OR-TIME-LIMIT: 2.35 ALIEN-ENCOUNTERS: 2.20 BYGONE-ERAS: 2.26 CULTURAL-TRADITIONS: 2.32 DINOSAURS: 2.32 DREAM-WORLDS: 2.11 ENCHANTED-FORESTS: 2.07 FAIRY-TALES: 2.09 
+[GPU 0] [22:46:51] [INFO] Step: 3000, LR: 5.00e-03
+[GPU 0] [22:46:51] [INFO] Train Loss: CORE: 2.07 A-DEADLINE-OR-TIME-LIMIT: 2.21 ALIEN-ENCOUNTERS: 2.06 BYGONE-ERAS: 2.09 CULTURAL-TRADITIONS: 2.18 DINOSAURS: 2.13 DREAM-WORLDS: 1.98 ENCHANTED-FORESTS: 1.99 FAIRY-TALES: 1.97 
+[GPU 0] [22:46:51] [INFO] Val Loss: CORE: 2.07 A-DEADLINE-OR-TIME-LIMIT: 2.16 ALIEN-ENCOUNTERS: 2.04 BYGONE-ERAS: 2.10 CULTURAL-TRADITIONS: 2.14 DINOSAURS: 2.09 DREAM-WORLDS: 1.97 ENCHANTED-FORESTS: 1.95 FAIRY-TALES: 1.96 
+[GPU 0] [22:48:17] [INFO] Step: 4000, LR: 5.00e-03
+[GPU 0] [22:48:17] [INFO] Train Loss: CORE: 1.96 A-DEADLINE-OR-TIME-LIMIT: 2.12 ALIEN-ENCOUNTERS: 1.98 BYGONE-ERAS: 2.01 CULTURAL-TRADITIONS: 2.08 DINOSAURS: 2.01 DREAM-WORLDS: 1.90 ENCHANTED-FORESTS: 1.87 FAIRY-TALES: 1.88 
+[GPU 0] [22:48:17] [INFO] Val Loss: CORE: 2.02 A-DEADLINE-OR-TIME-LIMIT: 2.10 ALIEN-ENCOUNTERS: 1.94 BYGONE-ERAS: 2.01 CULTURAL-TRADITIONS: 2.06 DINOSAURS: 1.99 DREAM-WORLDS: 1.89 ENCHANTED-FORESTS: 1.87 FAIRY-TALES: 1.87 
+[GPU 0] [22:49:46] [INFO] Step: 5000, LR: 5.00e-03
+[GPU 0] [22:49:46] [INFO] Train Loss: CORE: 1.96 A-DEADLINE-OR-TIME-LIMIT: 2.06 ALIEN-ENCOUNTERS: 1.94 BYGONE-ERAS: 1.98 CULTURAL-TRADITIONS: 2.01 DINOSAURS: 1.95 DREAM-WORLDS: 1.87 ENCHANTED-FORESTS: 1.83 FAIRY-TALES: 1.84 
+[GPU 0] [22:49:46] [INFO] Val Loss: CORE: 1.95 A-DEADLINE-OR-TIME-LIMIT: 2.05 ALIEN-ENCOUNTERS: 1.91 BYGONE-ERAS: 1.97 CULTURAL-TRADITIONS: 2.01 DINOSAURS: 1.95 DREAM-WORLDS: 1.86 ENCHANTED-FORESTS: 1.81 FAIRY-TALES: 1.83 
+[GPU 0] [22:51:15] [INFO] Step: 6000, LR: 5.00e-03
+[GPU 0] [22:51:15] [INFO] Train Loss: CORE: 1.95 A-DEADLINE-OR-TIME-LIMIT: 2.03 ALIEN-ENCOUNTERS: 1.89 BYGONE-ERAS: 1.94 CULTURAL-TRADITIONS: 1.98 DINOSAURS: 1.92 DREAM-WORLDS: 1.82 ENCHANTED-FORESTS: 1.80 FAIRY-TALES: 1.81 
+[GPU 0] [22:51:15] [INFO] Val Loss: CORE: 1.95 A-DEADLINE-OR-TIME-LIMIT: 2.04 ALIEN-ENCOUNTERS: 1.90 BYGONE-ERAS: 1.93 CULTURAL-TRADITIONS: 1.98 DINOSAURS: 1.91 DREAM-WORLDS: 1.82 ENCHANTED-FORESTS: 1.79 FAIRY-TALES: 1.79 
+[GPU 0] [22:52:42] [INFO] Step: 7000, LR: 5.00e-03
+[GPU 0] [22:52:42] [INFO] Train Loss: CORE: 1.90 A-DEADLINE-OR-TIME-LIMIT: 2.00 ALIEN-ENCOUNTERS: 1.86 BYGONE-ERAS: 1.91 CULTURAL-TRADITIONS: 1.96 DINOSAURS: 1.90 DREAM-WORLDS: 1.80 ENCHANTED-FORESTS: 1.76 FAIRY-TALES: 1.78 
+[GPU 0] [22:52:42] [INFO] Val Loss: CORE: 1.88 A-DEADLINE-OR-TIME-LIMIT: 1.99 ALIEN-ENCOUNTERS: 1.87 BYGONE-ERAS: 1.90 CULTURAL-TRADITIONS: 1.95 DINOSAURS: 1.91 DREAM-WORLDS: 1.79 ENCHANTED-FORESTS: 1.75 FAIRY-TALES: 1.77 
+[GPU 0] [22:54:11] [INFO] Step: 8000, LR: 5.00e-03
+[GPU 0] [22:54:11] [INFO] Train Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.97 ALIEN-ENCOUNTERS: 1.81 BYGONE-ERAS: 1.89 CULTURAL-TRADITIONS: 1.91 DINOSAURS: 1.86 DREAM-WORLDS: 1.79 ENCHANTED-FORESTS: 1.75 FAIRY-TALES: 1.75 
+[GPU 0] [22:54:11] [INFO] Val Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.97 ALIEN-ENCOUNTERS: 1.83 BYGONE-ERAS: 1.88 CULTURAL-TRADITIONS: 1.93 DINOSAURS: 1.87 DREAM-WORLDS: 1.77 ENCHANTED-FORESTS: 1.74 FAIRY-TALES: 1.75 
+[GPU 0] [22:55:42] [INFO] Step: 9000, LR: 5.00e-03
+[GPU 0] [22:55:42] [INFO] Train Loss: CORE: 1.84 A-DEADLINE-OR-TIME-LIMIT: 1.95 ALIEN-ENCOUNTERS: 1.83 BYGONE-ERAS: 1.87 CULTURAL-TRADITIONS: 1.91 DINOSAURS: 1.84 DREAM-WORLDS: 1.77 ENCHANTED-FORESTS: 1.73 FAIRY-TALES: 1.74 
+[GPU 0] [22:55:42] [INFO] Val Loss: CORE: 1.87 A-DEADLINE-OR-TIME-LIMIT: 1.95 ALIEN-ENCOUNTERS: 1.81 BYGONE-ERAS: 1.87 CULTURAL-TRADITIONS: 1.91 DINOSAURS: 1.83 DREAM-WORLDS: 1.76 ENCHANTED-FORESTS: 1.73 FAIRY-TALES: 1.73 
+[GPU 0] [22:57:09] [INFO] Step: 10000, LR: 5.00e-03
+[GPU 0] [22:57:09] [INFO] Train Loss: CORE: 1.81 A-DEADLINE-OR-TIME-LIMIT: 1.93 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.85 CULTURAL-TRADITIONS: 1.89 DINOSAURS: 1.82 DREAM-WORLDS: 1.76 ENCHANTED-FORESTS: 1.71 FAIRY-TALES: 1.73 
+[GPU 0] [22:57:09] [INFO] Val Loss: CORE: 1.84 A-DEADLINE-OR-TIME-LIMIT: 1.93 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.85 CULTURAL-TRADITIONS: 1.90 DINOSAURS: 1.82 DREAM-WORLDS: 1.75 ENCHANTED-FORESTS: 1.72 FAIRY-TALES: 1.72 
+[GPU 0] [22:58:37] [INFO] Step: 11000, LR: 5.00e-03
+[GPU 0] [22:58:37] [INFO] Train Loss: CORE: 1.86 A-DEADLINE-OR-TIME-LIMIT: 1.92 ALIEN-ENCOUNTERS: 1.79 BYGONE-ERAS: 1.84 CULTURAL-TRADITIONS: 1.88 DINOSAURS: 1.82 DREAM-WORLDS: 1.74 ENCHANTED-FORESTS: 1.71 FAIRY-TALES: 1.72 
+[GPU 0] [22:58:37] [INFO] Val Loss: CORE: 1.84 A-DEADLINE-OR-TIME-LIMIT: 1.91 ALIEN-ENCOUNTERS: 1.81 BYGONE-ERAS: 1.84 CULTURAL-TRADITIONS: 1.87 DINOSAURS: 1.83 DREAM-WORLDS: 1.73 ENCHANTED-FORESTS: 1.71 FAIRY-TALES: 1.70 
+[GPU 0] [23:00:05] [INFO] Step: 12000, LR: 5.00e-03
+[GPU 0] [23:00:05] [INFO] Train Loss: CORE: 1.83 A-DEADLINE-OR-TIME-LIMIT: 1.90 ALIEN-ENCOUNTERS: 1.79 BYGONE-ERAS: 1.83 CULTURAL-TRADITIONS: 1.87 DINOSAURS: 1.80 DREAM-WORLDS: 1.73 ENCHANTED-FORESTS: 1.70 FAIRY-TALES: 1.71 
+[GPU 0] [23:00:05] [INFO] Val Loss: CORE: 1.81 A-DEADLINE-OR-TIME-LIMIT: 1.90 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.86 DINOSAURS: 1.80 DREAM-WORLDS: 1.73 ENCHANTED-FORESTS: 1.68 FAIRY-TALES: 1.69 
+[GPU 0] [23:01:34] [INFO] Step: 13000, LR: 5.00e-03
+[GPU 0] [23:01:34] [INFO] Train Loss: CORE: 1.78 A-DEADLINE-OR-TIME-LIMIT: 1.90 ALIEN-ENCOUNTERS: 1.78 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.86 DINOSAURS: 1.78 DREAM-WORLDS: 1.73 ENCHANTED-FORESTS: 1.69 FAIRY-TALES: 1.69 
+[GPU 0] [23:01:34] [INFO] Val Loss: CORE: 1.80 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.78 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.85 DINOSAURS: 1.79 DREAM-WORLDS: 1.71 ENCHANTED-FORESTS: 1.68 FAIRY-TALES: 1.69 
+[GPU 0] [23:03:04] [INFO] Step: 14000, LR: 5.00e-03
+[GPU 0] [23:03:05] [INFO] Train Loss: CORE: 1.79 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.77 BYGONE-ERAS: 1.80 CULTURAL-TRADITIONS: 1.85 DINOSAURS: 1.79 DREAM-WORLDS: 1.71 ENCHANTED-FORESTS: 1.68 FAIRY-TALES: 1.68 
+[GPU 0] [23:03:05] [INFO] Val Loss: CORE: 1.81 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.77 BYGONE-ERAS: 1.81 CULTURAL-TRADITIONS: 1.86 DINOSAURS: 1.77 DREAM-WORLDS: 1.71 ENCHANTED-FORESTS: 1.66 FAIRY-TALES: 1.67 
+[GPU 0] [23:04:27] [INFO] LR Scheduler: Decay Start
+[GPU 0] [23:04:35] [INFO] Step: 15000, LR: 4.67e-03
+[GPU 0] [23:04:35] [INFO] Train Loss: CORE: 1.77 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.75 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.84 DINOSAURS: 1.77 DREAM-WORLDS: 1.71 ENCHANTED-FORESTS: 1.67 FAIRY-TALES: 1.67 
+[GPU 0] [23:04:35] [INFO] Val Loss: CORE: 1.81 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.77 BYGONE-ERAS: 1.81 CULTURAL-TRADITIONS: 1.85 DINOSAURS: 1.78 DREAM-WORLDS: 1.70 ENCHANTED-FORESTS: 1.65 FAIRY-TALES: 1.67 
+[GPU 0] [23:06:05] [INFO] Step: 16000, LR: 1.65e-03
+[GPU 0] [23:06:05] [INFO] Train Loss: CORE: 1.72 A-DEADLINE-OR-TIME-LIMIT: 1.81 ALIEN-ENCOUNTERS: 1.66 BYGONE-ERAS: 1.73 CULTURAL-TRADITIONS: 1.77 DINOSAURS: 1.69 DREAM-WORLDS: 1.64 ENCHANTED-FORESTS: 1.59 FAIRY-TALES: 1.59 
+[GPU 0] [23:06:05] [INFO] Val Loss: CORE: 1.70 A-DEADLINE-OR-TIME-LIMIT: 1.79 ALIEN-ENCOUNTERS: 1.67 BYGONE-ERAS: 1.72 CULTURAL-TRADITIONS: 1.76 DINOSAURS: 1.67 DREAM-WORLDS: 1.62 ENCHANTED-FORESTS: 1.59 FAIRY-TALES: 1.59 
+[GPU 0] [23:06:57] [INFO] Step: 16547, LR: 1.00e-08
+[GPU 0] [23:06:57] [INFO] Train Loss: CORE: 1.69 A-DEADLINE-OR-TIME-LIMIT: 1.77 ALIEN-ENCOUNTERS: 1.64 BYGONE-ERAS: 1.69 CULTURAL-TRADITIONS: 1.74 DINOSAURS: 1.67 DREAM-WORLDS: 1.61 ENCHANTED-FORESTS: 1.56 FAIRY-TALES: 1.57 
+[GPU 0] [23:06:57] [INFO] Val Loss: CORE: 1.68 A-DEADLINE-OR-TIME-LIMIT: 1.77 ALIEN-ENCOUNTERS: 1.64 BYGONE-ERAS: 1.69 CULTURAL-TRADITIONS: 1.73 DINOSAURS: 1.66 DREAM-WORLDS: 1.60 ENCHANTED-FORESTS: 1.56 FAIRY-TALES: 1.57 
+[GPU 0] [23:07:03] [INFO] ---- Begin Eval ----
+[GPU 0] [23:07:03] [INFO] Data: core | Experts: None
+[GPU 0] [23:07:24] [INFO] loss: 1.67916048
+[GPU 0] [23:07:24] [INFO] Data: a-deadline-or-time-limit | Experts: None
+[GPU 0] [23:07:24] [INFO] loss: 1.76699221
+[GPU 0] [23:07:24] [INFO] Data: alien-encounters | Experts: None
+[GPU 0] [23:07:25] [INFO] loss: 1.64453125
+[GPU 0] [23:07:25] [INFO] Data: bygone-eras | Experts: None
+[GPU 0] [23:07:25] [INFO] loss: 1.69330931
+[GPU 0] [23:07:25] [INFO] Data: cultural-traditions | Experts: None
+[GPU 0] [23:07:26] [INFO] loss: 1.73108554
+[GPU 0] [23:07:26] [INFO] Data: dinosaurs | Experts: None
+[GPU 0] [23:07:26] [INFO] loss: 1.65995061
+[GPU 0] [23:07:26] [INFO] Data: dream-worlds | Experts: None
+[GPU 0] [23:07:27] [INFO] loss: 1.59902871
+[GPU 0] [23:07:27] [INFO] Data: enchanted-forests | Experts: None
+[GPU 0] [23:07:28] [INFO] loss: 1.55982733
+[GPU 0] [23:07:28] [INFO] Data: fairy-tales | Experts: None
+[GPU 0] [23:07:28] [INFO] loss: 1.56566727
+[GPU 0] [23:07:28] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": -1, "lr": 0.005, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/routed", "acc_mode": "heterogeneous", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "moe", "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)", "ctx_len": 256, "vocab_size": 4096, "num_layers": 8, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 1, "embed_dim": 512, "mlp_dim": 2048, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "label_prc": 1.0, "aux_factor": 1.0, "robust_prc": 0.5, "aux_route_prc": 0.3, "equal_compute": true}
+[GPU 0] [23:07:28] [INFO] ROUTED START
+[GPU 0] [23:07:29] [INFO] Initialized MoETransformer with 38,885,888 total parameters
+[GPU 0] [23:07:29] [INFO]   Label 'core' has 26,257,920 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'a-deadline-or-time-limit' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'alien-encounters' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'bygone-eras' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'cultural-traditions' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'dinosaurs' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'dream-worlds' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'enchanted-forests' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO]   Label 'fairy-tales' has 1,578,496 parameters
+[GPU 0] [23:07:29] [INFO] Compiling MoETransformer with torch.compile...
+[GPU 0] [23:07:29] [INFO] torch.compile done
+[GPU 0] [23:07:29] [WARNING] restore_partial_state: no checkpoint found at /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819/routed
+[GPU 0] [23:07:29] [INFO] ---- Begin Routed Unordered ----
+[GPU 0] [23:07:29] [INFO] initial len_all: 16547, len_all_labeled: 16547, len_all_unlabeled: 0, len_ft: 9650, len_base: 6897, label_prc: 1.0
+[GPU 0] [23:07:29] [INFO] compute-equal: -15232486400.0 <= 0, must truncate training
+[GPU 0] [23:07:29] [INFO] compute-equal: len_base: -234 -> 6663, len_ft: -327 -> 9323, len_all_unlabeled: 0 -> 0
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core',), ('core',))] count: 6663
+[GPU 0] [23:07:29] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('a-deadline-or-time-limit',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('alien-encounters',))] count: 233
+[GPU 0] [23:07:29] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 835
+[GPU 0] [23:07:29] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('bygone-eras',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('cultural-traditions',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'dinosaurs'), ('core', 'dinosaurs'))] count: 816
+[GPU 0] [23:07:29] [INFO] Batch [('dinosaurs', ('core', 'dinosaurs'), ('core', 'dinosaurs'))] count: 98
+[GPU 0] [23:07:29] [INFO] Batch [('dinosaurs', ('core', 'dinosaurs'), ('dinosaurs',))] count: 228
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'dream-worlds'), ('core', 'dream-worlds'))] count: 820
+[GPU 0] [23:07:29] [INFO] Batch [('dream-worlds', ('core', 'dream-worlds'), ('core', 'dream-worlds'))] count: 98
+[GPU 0] [23:07:29] [INFO] Batch [('dream-worlds', ('core', 'dream-worlds'), ('dream-worlds',))] count: 230
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'enchanted-forests'), ('core', 'enchanted-forests'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('enchanted-forests', ('core', 'enchanted-forests'), ('core', 'enchanted-forests'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('enchanted-forests', ('core', 'enchanted-forests'), ('enchanted-forests',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'fairy-tales'), ('core', 'fairy-tales'))] count: 833
+[GPU 0] [23:07:29] [INFO] Batch [('fairy-tales', ('core', 'fairy-tales'), ('core', 'fairy-tales'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('fairy-tales', ('core', 'fairy-tales'), ('fairy-tales',))] count: 232
+[GPU 0] [23:07:29] [INFO] Batch group is empty (0 batches)
+[GPU 0] [23:07:29] [INFO] 
+len_all: 16547, len_all_labeled: 16547, len_all_unlabeled: 0,
+len_base: 6663, len_ft: 9323,
+len_core_for_ft: 6663, len_aux_for_ft: 2660,
+aux_factor: {'a-deadline-or-time-limit': 1.0, 'alien-encounters': 1.0, 'bygone-eras': 1.0, 'cultural-traditions': 1.0, 'dinosaurs': 1.0, 'dream-worlds': 1.0, 'enchanted-forests': 1.0, 'fairy-tales': 1.0}, robust_prc: 0.5,
+aux_route_prc: 0.3, equal_compute: True
+[GPU 0] [23:07:29] [INFO] count_by_label: {'core': 13327, 'a-deadline-or-time-limit': 335, 'alien-encounters': 333, 'bygone-eras': 335, 'cultural-traditions': 335, 'dinosaurs': 326, 'dream-worlds': 328, 'enchanted-forests': 335, 'fairy-tales': 332}
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core',), ('core',))] count: 6663
+[GPU 0] [23:07:29] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('a-deadline-or-time-limit',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('alien-encounters',))] count: 233
+[GPU 0] [23:07:29] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 835
+[GPU 0] [23:07:29] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('bygone-eras',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('cultural-traditions',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'dinosaurs'), ('core', 'dinosaurs'))] count: 816
+[GPU 0] [23:07:29] [INFO] Batch [('dinosaurs', ('core', 'dinosaurs'), ('core', 'dinosaurs'))] count: 98
+[GPU 0] [23:07:29] [INFO] Batch [('dinosaurs', ('core', 'dinosaurs'), ('dinosaurs',))] count: 228
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'dream-worlds'), ('core', 'dream-worlds'))] count: 820
+[GPU 0] [23:07:29] [INFO] Batch [('dream-worlds', ('core', 'dream-worlds'), ('core', 'dream-worlds'))] count: 98
+[GPU 0] [23:07:29] [INFO] Batch [('dream-worlds', ('core', 'dream-worlds'), ('dream-worlds',))] count: 230
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'enchanted-forests'), ('core', 'enchanted-forests'))] count: 840
+[GPU 0] [23:07:29] [INFO] Batch [('enchanted-forests', ('core', 'enchanted-forests'), ('core', 'enchanted-forests'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('enchanted-forests', ('core', 'enchanted-forests'), ('enchanted-forests',))] count: 235
+[GPU 0] [23:07:29] [INFO] Batch [('core', ('core', 'fairy-tales'), ('core', 'fairy-tales'))] count: 833
+[GPU 0] [23:07:29] [INFO] Batch [('fairy-tales', ('core', 'fairy-tales'), ('core', 'fairy-tales'))] count: 100
+[GPU 0] [23:07:29] [INFO] Batch [('fairy-tales', ('core', 'fairy-tales'), ('fairy-tales',))] count: 232
+[GPU 0] [23:07:29] [INFO] ---- Begin Routed ----
+[GPU 0] [23:07:29] [DEBUG] acc_mode: heterogeneous
+[GPU 0] [23:07:29] [INFO] num_total_steps: 15986
+[GPU 0] [23:07:29] [INFO] LR schedule group 0: steps [0, 15986), warmup=1599, constant=12788, decay=1599
+[GPU 0] [23:07:29] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [23:07:29] [INFO] CUDA memory before training loop:
+[GPU 0] [23:07:29] [INFO] |===========================================================================|
+[GPU 0] [23:07:29] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [23:07:29] [INFO] |===========================================================================|
+[GPU 0] [23:07:29] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Allocated memory      | 452110 KiB |   8736 MiB |   1162 TiB |   1162 TiB |
+[GPU 0] [23:07:29] [INFO] |       from large pool | 405762 KiB |   8656 MiB |   1160 TiB |   1160 TiB |
+[GPU 0] [23:07:29] [INFO] |       from small pool |  46348 KiB |     81 MiB |      1 TiB |      1 TiB |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Active memory         | 452110 KiB |   8736 MiB |   1162 TiB |   1162 TiB |
+[GPU 0] [23:07:29] [INFO] |       from large pool | 405762 KiB |   8656 MiB |   1160 TiB |   1160 TiB |
+[GPU 0] [23:07:29] [INFO] |       from small pool |  46348 KiB |     81 MiB |      1 TiB |      1 TiB |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Requested memory      | 452101 KiB |   8736 MiB |   1162 TiB |   1162 TiB |
+[GPU 0] [23:07:29] [INFO] |       from large pool | 405762 KiB |   8656 MiB |   1160 TiB |   1160 TiB |
+[GPU 0] [23:07:29] [INFO] |       from small pool |  46339 KiB |     81 MiB |      1 TiB |      1 TiB |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | GPU reserved memory   |   8626 MiB |   9042 MiB |   1741 GiB |   1732 GiB |
+[GPU 0] [23:07:29] [INFO] |       from large pool |   8580 MiB |   8960 MiB |   1737 GiB |   1728 GiB |
+[GPU 0] [23:07:29] [INFO] |       from small pool |     46 MiB |     82 MiB |      3 GiB |      3 GiB |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [23:07:29] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [23:07:29] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Allocations           |     496    |    1192    |   36073 K  |   36073 K  |
+[GPU 0] [23:07:29] [INFO] |       from large pool |      72    |     239    |   20382 K  |   20382 K  |
+[GPU 0] [23:07:29] [INFO] |       from small pool |     424    |    1083    |   15691 K  |   15690 K  |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Active allocs         |     496    |    1192    |   36073 K  |   36073 K  |
+[GPU 0] [23:07:29] [INFO] |       from large pool |      72    |     239    |   20382 K  |   20382 K  |
+[GPU 0] [23:07:29] [INFO] |       from small pool |     424    |    1083    |   15691 K  |   15690 K  |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:29] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:29] [INFO] |===========================================================================|
+[GPU 0] [23:07:29] [INFO] 
+[GPU 0] [23:07:29] [INFO] Batch group start, LR: 1.0000e-08, batches: 15986, epochs: 1, group_total_steps: 15986
+[GPU 0] [23:07:32] [INFO] CUDA memory after first training step:
+[GPU 0] [23:07:32] [INFO] |===========================================================================|
+[GPU 0] [23:07:32] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [23:07:32] [INFO] |===========================================================================|
+[GPU 0] [23:07:32] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Allocated memory      |   1132 MiB |   8899 MiB |   1162 TiB |   1162 TiB |
+[GPU 0] [23:07:32] [INFO] |       from large pool |   1060 MiB |   8852 MiB |   1161 TiB |   1161 TiB |
+[GPU 0] [23:07:32] [INFO] |       from small pool |     71 MiB |     81 MiB |      1 TiB |      1 TiB |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Active memory         |   1132 MiB |   8899 MiB |   1162 TiB |   1162 TiB |
+[GPU 0] [23:07:32] [INFO] |       from large pool |   1060 MiB |   8852 MiB |   1161 TiB |   1161 TiB |
+[GPU 0] [23:07:32] [INFO] |       from small pool |     71 MiB |     81 MiB |      1 TiB |      1 TiB |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Requested memory      |   1131 MiB |   8899 MiB |   1162 TiB |   1162 TiB |
+[GPU 0] [23:07:32] [INFO] |       from large pool |   1060 MiB |   8852 MiB |   1161 TiB |   1161 TiB |
+[GPU 0] [23:07:32] [INFO] |       from small pool |     71 MiB |     81 MiB |      1 TiB |      1 TiB |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | GPU reserved memory   |   8972 MiB |   9042 MiB |   1741 GiB |   1732 GiB |
+[GPU 0] [23:07:32] [INFO] |       from large pool |   8900 MiB |   8960 MiB |   1737 GiB |   1728 GiB |
+[GPU 0] [23:07:32] [INFO] |       from small pool |     72 MiB |     82 MiB |      3 GiB |      3 GiB |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [23:07:32] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [23:07:32] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Allocations           |     903    |    1192    |   36074 K  |   36074 K  |
+[GPU 0] [23:07:32] [INFO] |       from large pool |     113    |     239    |   20382 K  |   20382 K  |
+[GPU 0] [23:07:32] [INFO] |       from small pool |     790    |    1083    |   15692 K  |   15691 K  |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Active allocs         |     903    |    1192    |   36074 K  |   36074 K  |
+[GPU 0] [23:07:32] [INFO] |       from large pool |     113    |     239    |   20382 K  |   20382 K  |
+[GPU 0] [23:07:32] [INFO] |       from small pool |     790    |    1083    |   15692 K  |   15691 K  |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [23:07:32] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [23:07:32] [INFO] |===========================================================================|
+[GPU 0] [23:07:32] [INFO] 
+[GPU 0] [23:07:32] [INFO] Step: 1, LR: 3.1369e-06
+[GPU 0] [23:07:32] [INFO] Train Loss: CORE: nan A-DEADLINE-OR-TIME-LIMIT: nan ALIEN-ENCOUNTERS: nan BYGONE-ERAS: nan CULTURAL-TRADITIONS: nan DINOSAURS: nan DREAM-WORLDS: nan ENCHANTED-FORESTS: 8.44 FAIRY-TALES: nan 
+[GPU 0] [23:08:22] [INFO] Step: 1000, LR: 3.1270e-03
+[GPU 0] [23:08:22] [INFO] Train Loss: CORE: 2.64 A-DEADLINE-OR-TIME-LIMIT: 3.38 ALIEN-ENCOUNTERS: 3.35 BYGONE-ERAS: 3.43 CULTURAL-TRADITIONS: 3.95 DINOSAURS: 3.51 DREAM-WORLDS: 3.13 ENCHANTED-FORESTS: 3.39 FAIRY-TALES: 2.89 
+[GPU 0] [23:08:49] [INFO] LR Scheduler: Group constant (step 1599)
+[GPU 0] [23:09:07] [INFO] Step: 2000, LR: 5.0000e-03
+[GPU 0] [23:09:07] [INFO] Train Loss: CORE: 2.31 A-DEADLINE-OR-TIME-LIMIT: 2.94 ALIEN-ENCOUNTERS: 2.88 BYGONE-ERAS: 3.09 CULTURAL-TRADITIONS: 3.31 DINOSAURS: 2.90 DREAM-WORLDS: 2.74 ENCHANTED-FORESTS: 2.86 FAIRY-TALES: 2.60 
+[GPU 0] [23:09:52] [INFO] Step: 3000, LR: 5.0000e-03
+[GPU 0] [23:09:52] [INFO] Train Loss: CORE: 2.13 A-DEADLINE-OR-TIME-LIMIT: 2.76 ALIEN-ENCOUNTERS: 2.65 BYGONE-ERAS: 2.79 CULTURAL-TRADITIONS: 2.90 DINOSAURS: 2.69 DREAM-WORLDS: 2.53 ENCHANTED-FORESTS: 2.56 FAIRY-TALES: 2.39 
+[GPU 0] [23:10:38] [INFO] Step: 4000, LR: 5.0000e-03
+[GPU 0] [23:10:38] [INFO] Train Loss: CORE: 2.05 A-DEADLINE-OR-TIME-LIMIT: 2.62 ALIEN-ENCOUNTERS: 2.53 BYGONE-ERAS: 2.65 CULTURAL-TRADITIONS: 2.69 DINOSAURS: 2.57 DREAM-WORLDS: 2.42 ENCHANTED-FORESTS: 2.40 FAIRY-TALES: 2.28 
+[GPU 0] [23:11:24] [INFO] Step: 5000, LR: 5.0000e-03
+[GPU 0] [23:11:24] [INFO] Train Loss: CORE: 1.98 A-DEADLINE-OR-TIME-LIMIT: 2.44 ALIEN-ENCOUNTERS: 2.24 BYGONE-ERAS: 2.27 CULTURAL-TRADITIONS: 2.56 DINOSAURS: 2.44 DREAM-WORLDS: 2.24 ENCHANTED-FORESTS: 2.09 FAIRY-TALES: 2.20 
+[GPU 0] [23:12:10] [INFO] Step: 6000, LR: 5.0000e-03
+[GPU 0] [23:12:10] [INFO] Train Loss: CORE: 1.96 A-DEADLINE-OR-TIME-LIMIT: 2.30 ALIEN-ENCOUNTERS: 2.07 BYGONE-ERAS: 2.11 CULTURAL-TRADITIONS: 2.19 DINOSAURS: 2.20 DREAM-WORLDS: 2.06 ENCHANTED-FORESTS: 1.93 FAIRY-TALES: 2.00 
+[GPU 0] [23:12:56] [INFO] Step: 7000, LR: 5.0000e-03
+[GPU 0] [23:12:56] [INFO] Train Loss: CORE: 1.92 A-DEADLINE-OR-TIME-LIMIT: 2.17 ALIEN-ENCOUNTERS: 1.97 BYGONE-ERAS: 2.03 CULTURAL-TRADITIONS: 2.09 DINOSAURS: 2.11 DREAM-WORLDS: 1.97 ENCHANTED-FORESTS: 1.86 FAIRY-TALES: 1.91 
+[GPU 0] [23:13:43] [INFO] Step: 8000, LR: 5.0000e-03
+[GPU 0] [23:13:43] [INFO] Train Loss: CORE: 1.91 A-DEADLINE-OR-TIME-LIMIT: 2.08 ALIEN-ENCOUNTERS: 1.92 BYGONE-ERAS: 1.98 CULTURAL-TRADITIONS: 2.03 DINOSAURS: 2.01 DREAM-WORLDS: 1.90 ENCHANTED-FORESTS: 1.82 FAIRY-TALES: 1.84 
+[GPU 0] [23:14:28] [INFO] Step: 9000, LR: 5.0000e-03
+[GPU 0] [23:14:28] [INFO] Train Loss: CORE: 1.88 A-DEADLINE-OR-TIME-LIMIT: 2.04 ALIEN-ENCOUNTERS: 1.89 BYGONE-ERAS: 1.95 CULTURAL-TRADITIONS: 2.00 DINOSAURS: 1.96 DREAM-WORLDS: 1.83 ENCHANTED-FORESTS: 1.79 FAIRY-TALES: 1.82 
+[GPU 0] [23:15:14] [INFO] Step: 10000, LR: 5.0000e-03
+[GPU 0] [23:15:14] [INFO] Train Loss: CORE: 1.86 A-DEADLINE-OR-TIME-LIMIT: 1.99 ALIEN-ENCOUNTERS: 1.87 BYGONE-ERAS: 1.93 CULTURAL-TRADITIONS: 1.97 DINOSAURS: 1.93 DREAM-WORLDS: 1.81 ENCHANTED-FORESTS: 1.77 FAIRY-TALES: 1.80 
+[GPU 0] [23:16:00] [INFO] Step: 11000, LR: 5.0000e-03
+[GPU 0] [23:16:00] [INFO] Train Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.98 ALIEN-ENCOUNTERS: 1.85 BYGONE-ERAS: 1.91 CULTURAL-TRADITIONS: 1.95 DINOSAURS: 1.90 DREAM-WORLDS: 1.80 ENCHANTED-FORESTS: 1.75 FAIRY-TALES: 1.78 
+[GPU 0] [23:16:46] [INFO] Step: 12000, LR: 5.0000e-03
+[GPU 0] [23:16:46] [INFO] Train Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.96 ALIEN-ENCOUNTERS: 1.83 BYGONE-ERAS: 1.89 CULTURAL-TRADITIONS: 1.93 DINOSAURS: 1.88 DREAM-WORLDS: 1.78 ENCHANTED-FORESTS: 1.74 FAIRY-TALES: 1.77 
+[GPU 0] [23:17:32] [INFO] Step: 13000, LR: 5.0000e-03
+[GPU 0] [23:17:32] [INFO] Train Loss: CORE: 1.84 A-DEADLINE-OR-TIME-LIMIT: 1.94 ALIEN-ENCOUNTERS: 1.81 BYGONE-ERAS: 1.88 CULTURAL-TRADITIONS: 1.91 DINOSAURS: 1.86 DREAM-WORLDS: 1.76 ENCHANTED-FORESTS: 1.73 FAIRY-TALES: 1.75 
+[GPU 0] [23:18:17] [INFO] Step: 14000, LR: 5.0000e-03
+[GPU 0] [23:18:17] [INFO] Train Loss: CORE: 1.82 A-DEADLINE-OR-TIME-LIMIT: 1.93 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.86 CULTURAL-TRADITIONS: 1.89 DINOSAURS: 1.83 DREAM-WORLDS: 1.75 ENCHANTED-FORESTS: 1.72 FAIRY-TALES: 1.73 
+[GPU 0] [23:18:35] [INFO] LR Scheduler: Group decay (step 14387)
+[GPU 0] [23:19:03] [INFO] Step: 15000, LR: 3.0832e-03
+[GPU 0] [23:19:03] [INFO] Train Loss: CORE: 1.78 A-DEADLINE-OR-TIME-LIMIT: 1.91 ALIEN-ENCOUNTERS: 1.78 BYGONE-ERAS: 1.85 CULTURAL-TRADITIONS: 1.87 DINOSAURS: 1.81 DREAM-WORLDS: 1.74 ENCHANTED-FORESTS: 1.72 FAIRY-TALES: 1.72 
+[GPU 0] [23:19:48] [INFO] Step: 15986, LR: 1.0000e-08
+[GPU 0] [23:19:48] [INFO] Train Loss: CORE: 1.70 A-DEADLINE-OR-TIME-LIMIT: 1.87 ALIEN-ENCOUNTERS: 1.74 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.84 DINOSAURS: 1.78 DREAM-WORLDS: 1.72 ENCHANTED-FORESTS: 1.68 FAIRY-TALES: 1.68 
+[GPU 0] [23:19:51] [INFO] ---- Begin Eval ----
+[GPU 0] [23:19:51] [INFO] Data: core | Experts: ['core']
+[GPU 0] [23:20:19] [INFO] loss: 1.70313525
+[GPU 0] [23:20:19] [INFO] Data: a-deadline-or-time-limit | Experts: ['core']
+[GPU 0] [23:20:20] [INFO] loss: 1.87617183
+[GPU 0] [23:20:20] [INFO] Data: alien-encounters | Experts: ['core']
+[GPU 0] [23:20:21] [INFO] loss: 1.73992598
+[GPU 0] [23:20:21] [INFO] Data: bygone-eras | Experts: ['core']
+[GPU 0] [23:20:21] [INFO] loss: 1.72776437
+[GPU 0] [23:20:21] [INFO] Data: cultural-traditions | Experts: ['core']
+[GPU 0] [23:20:22] [INFO] loss: 1.77734375
+[GPU 0] [23:20:22] [INFO] Data: dinosaurs | Experts: ['core']
+[GPU 0] [23:20:23] [INFO] loss: 1.83141446
+[GPU 0] [23:20:23] [INFO] Data: dream-worlds | Experts: ['core']
+[GPU 0] [23:20:23] [INFO] loss: 1.63386822
+[GPU 0] [23:20:23] [INFO] Data: enchanted-forests | Experts: ['core']
+[GPU 0] [23:20:24] [INFO] loss: 1.61821544
+[GPU 0] [23:20:24] [INFO] Data: fairy-tales | Experts: ['core']
+[GPU 0] [23:20:25] [INFO] loss: 1.59776187
+[GPU 0] [23:20:25] [INFO] ---- Begin Eval ----
+[GPU 0] [23:20:25] [INFO] Data: core | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:20:57] [INFO] loss: 1.70726919
+[GPU 0] [23:20:57] [INFO] Data: a-deadline-or-time-limit | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:20:58] [INFO] loss: 1.77148438
+[GPU 0] [23:20:58] [INFO] Data: alien-encounters | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:20:59] [INFO] loss: 1.74424338
+[GPU 0] [23:20:59] [INFO] Data: bygone-eras | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:21:00] [INFO] loss: 1.73157048
+[GPU 0] [23:21:00] [INFO] Data: cultural-traditions | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:21:00] [INFO] loss: 1.77981091
+[GPU 0] [23:21:00] [INFO] Data: dinosaurs | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:21:01] [INFO] loss: 1.83470392
+[GPU 0] [23:21:01] [INFO] Data: dream-worlds | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:21:02] [INFO] loss: 1.63830233
+[GPU 0] [23:21:02] [INFO] Data: enchanted-forests | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:21:03] [INFO] loss: 1.62171054
+[GPU 0] [23:21:03] [INFO] Data: fairy-tales | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [23:21:03] [INFO] loss: 1.59945107
+[GPU 0] [23:21:03] [INFO] ---- Begin Eval ----
+[GPU 0] [23:21:03] [INFO] Data: core | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:33] [INFO] loss: 1.70808268
+[GPU 0] [23:21:33] [INFO] Data: a-deadline-or-time-limit | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:34] [INFO] loss: 1.88125002
+[GPU 0] [23:21:34] [INFO] Data: alien-encounters | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:34] [INFO] loss: 1.65234375
+[GPU 0] [23:21:35] [INFO] Data: bygone-eras | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:35] [INFO] loss: 1.73357368
+[GPU 0] [23:21:35] [INFO] Data: cultural-traditions | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:36] [INFO] loss: 1.78186679
+[GPU 0] [23:21:36] [INFO] Data: dinosaurs | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:37] [INFO] loss: 1.83532071
+[GPU 0] [23:21:37] [INFO] Data: dream-worlds | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:37] [INFO] loss: 1.63914692
+[GPU 0] [23:21:37] [INFO] Data: enchanted-forests | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:38] [INFO] loss: 1.62376642
+[GPU 0] [23:21:38] [INFO] Data: fairy-tales | Experts: ['alien-encounters', 'core']
+[GPU 0] [23:21:39] [INFO] loss: 1.60261822
+[GPU 0] [23:21:39] [INFO] ---- Begin Eval ----
+[GPU 0] [23:21:39] [INFO] Data: core | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:09] [INFO] loss: 1.70388222
+[GPU 0] [23:22:09] [INFO] Data: a-deadline-or-time-limit | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:09] [INFO] loss: 1.87578130
+[GPU 0] [23:22:10] [INFO] Data: alien-encounters | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:10] [INFO] loss: 1.74054277
+[GPU 0] [23:22:10] [INFO] Data: bygone-eras | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:11] [INFO] loss: 1.72095358
+[GPU 0] [23:22:11] [INFO] Data: cultural-traditions | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:12] [INFO] loss: 1.77405429
+[GPU 0] [23:22:12] [INFO] Data: dinosaurs | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:13] [INFO] loss: 1.83223689
+[GPU 0] [23:22:13] [INFO] Data: dream-worlds | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:13] [INFO] loss: 1.63513517
+[GPU 0] [23:22:13] [INFO] Data: enchanted-forests | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:14] [INFO] loss: 1.61800992
+[GPU 0] [23:22:14] [INFO] Data: fairy-tales | Experts: ['bygone-eras', 'core']
+[GPU 0] [23:22:15] [INFO] loss: 1.59565032
+[GPU 0] [23:22:15] [INFO] ---- Begin Eval ----
+[GPU 0] [23:22:15] [INFO] Data: core | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:45] [INFO] loss: 1.70524824
+[GPU 0] [23:22:45] [INFO] Data: a-deadline-or-time-limit | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:45] [INFO] loss: 1.87558591
+[GPU 0] [23:22:45] [INFO] Data: alien-encounters | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:46] [INFO] loss: 1.74177635
+[GPU 0] [23:22:46] [INFO] Data: bygone-eras | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:47] [INFO] loss: 1.72676277
+[GPU 0] [23:22:47] [INFO] Data: cultural-traditions | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:48] [INFO] loss: 1.75164473
+[GPU 0] [23:22:48] [INFO] Data: dinosaurs | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:49] [INFO] loss: 1.83264804
+[GPU 0] [23:22:49] [INFO] Data: dream-worlds | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:49] [INFO] loss: 1.63619089
+[GPU 0] [23:22:49] [INFO] Data: enchanted-forests | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:51] [INFO] loss: 1.61944902
+[GPU 0] [23:22:51] [INFO] Data: fairy-tales | Experts: ['core', 'cultural-traditions']
+[GPU 0] [23:22:52] [INFO] loss: 1.59839523
+[GPU 0] [23:22:52] [INFO] ---- Begin Eval ----
+[GPU 0] [23:22:52] [INFO] Data: core | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:24] [INFO] loss: 1.70808268
+[GPU 0] [23:23:24] [INFO] Data: a-deadline-or-time-limit | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:25] [INFO] loss: 1.88046873
+[GPU 0] [23:23:25] [INFO] Data: alien-encounters | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:26] [INFO] loss: 1.73930919
+[GPU 0] [23:23:26] [INFO] Data: bygone-eras | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:27] [INFO] loss: 1.73257208
+[GPU 0] [23:23:27] [INFO] Data: cultural-traditions | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:28] [INFO] loss: 1.78145564
+[GPU 0] [23:23:28] [INFO] Data: dinosaurs | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:29] [INFO] loss: 1.68318260
+[GPU 0] [23:23:29] [INFO] Data: dream-worlds | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:30] [INFO] loss: 1.63830233
+[GPU 0] [23:23:30] [INFO] Data: enchanted-forests | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:31] [INFO] loss: 1.62335527
+[GPU 0] [23:23:31] [INFO] Data: fairy-tales | Experts: ['core', 'dinosaurs']
+[GPU 0] [23:23:31] [INFO] loss: 1.60156250
+[GPU 0] [23:23:31] [INFO] ---- Begin Eval ----
+[GPU 0] [23:23:31] [INFO] Data: core | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:02] [INFO] loss: 1.70426083
+[GPU 0] [23:24:02] [INFO] Data: a-deadline-or-time-limit | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:03] [INFO] loss: 1.87597656
+[GPU 0] [23:24:03] [INFO] Data: alien-encounters | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:04] [INFO] loss: 1.74115956
+[GPU 0] [23:24:04] [INFO] Data: bygone-eras | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:05] [INFO] loss: 1.72896636
+[GPU 0] [23:24:05] [INFO] Data: cultural-traditions | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:05] [INFO] loss: 1.77754939
+[GPU 0] [23:24:05] [INFO] Data: dinosaurs | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:06] [INFO] loss: 1.83223689
+[GPU 0] [23:24:06] [INFO] Data: dream-worlds | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:07] [INFO] loss: 1.61676526
+[GPU 0] [23:24:07] [INFO] Data: enchanted-forests | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:08] [INFO] loss: 1.61780429
+[GPU 0] [23:24:08] [INFO] Data: fairy-tales | Experts: ['core', 'dream-worlds']
+[GPU 0] [23:24:08] [INFO] loss: 1.59818411
+[GPU 0] [23:24:08] [INFO] ---- Begin Eval ----
+[GPU 0] [23:24:08] [INFO] Data: core | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:38] [INFO] loss: 1.70573425
+[GPU 0] [23:24:38] [INFO] Data: a-deadline-or-time-limit | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:39] [INFO] loss: 1.87773442
+[GPU 0] [23:24:39] [INFO] Data: alien-encounters | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:40] [INFO] loss: 1.74218750
+[GPU 0] [23:24:40] [INFO] Data: bygone-eras | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:40] [INFO] loss: 1.73076928
+[GPU 0] [23:24:40] [INFO] Data: cultural-traditions | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:41] [INFO] loss: 1.77939963
+[GPU 0] [23:24:41] [INFO] Data: dinosaurs | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:42] [INFO] loss: 1.83285367
+[GPU 0] [23:24:42] [INFO] Data: dream-worlds | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:42] [INFO] loss: 1.63513517
+[GPU 0] [23:24:43] [INFO] Data: enchanted-forests | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:43] [INFO] loss: 1.57771385
+[GPU 0] [23:24:43] [INFO] Data: fairy-tales | Experts: ['core', 'enchanted-forests']
+[GPU 0] [23:24:44] [INFO] loss: 1.59818411
+[GPU 0] [23:24:44] [INFO] ---- Begin Eval ----
+[GPU 0] [23:24:44] [INFO] Data: core | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:14] [INFO] loss: 1.70411754
+[GPU 0] [23:25:14] [INFO] Data: a-deadline-or-time-limit | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:15] [INFO] loss: 1.87617183
+[GPU 0] [23:25:15] [INFO] Data: alien-encounters | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:15] [INFO] loss: 1.74095392
+[GPU 0] [23:25:15] [INFO] Data: bygone-eras | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:16] [INFO] loss: 1.72716343
+[GPU 0] [23:25:16] [INFO] Data: cultural-traditions | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:17] [INFO] loss: 1.77631581
+[GPU 0] [23:25:17] [INFO] Data: dinosaurs | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:18] [INFO] loss: 1.83244240
+[GPU 0] [23:25:18] [INFO] Data: dream-worlds | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:18] [INFO] loss: 1.63344598
+[GPU 0] [23:25:18] [INFO] Data: enchanted-forests | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:19] [INFO] loss: 1.61677635
+[GPU 0] [23:25:19] [INFO] Data: fairy-tales | Experts: ['core', 'fairy-tales']
+[GPU 0] [23:25:20] [INFO] loss: 1.59142733
+[GPU 0] [23:25:21] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:25:22] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:25:22] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:25:22] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:25:24] [INFO] New best validation loss: 1.8457 @ step 0
+[GPU 0] [23:25:25] [INFO] New best validation loss: 1.8311 @ step 1
+[GPU 0] [23:25:26] [INFO] New best validation loss: 1.8244 @ step 2
+[GPU 0] [23:25:27] [INFO] New best validation loss: 1.8238 @ step 3
+[GPU 0] [23:25:37] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:25:37] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:25:39] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:25:39] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:25:39] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:25:40] [INFO] New best validation loss: 1.7148 @ step 0
+[GPU 0] [23:25:41] [INFO] New best validation loss: 1.7031 @ step 1
+[GPU 0] [23:25:42] [INFO] New best validation loss: 1.6988 @ step 2
+[GPU 0] [23:25:43] [INFO] New best validation loss: 1.6986 @ step 3
+[GPU 0] [23:25:53] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:25:53] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:25:53] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:25:53] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:25:53] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:25:54] [INFO] New best validation loss: 1.7266 @ step 0
+[GPU 0] [23:26:04] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:26:04] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:26:04] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:26:04] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:26:04] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:26:05] [INFO] New best validation loss: 1.7683 @ step 0
+[GPU 0] [23:26:06] [INFO] New best validation loss: 1.7669 @ step 1
+[GPU 0] [23:26:16] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:26:16] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:26:16] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:26:16] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:26:16] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:26:17] [INFO] New best validation loss: 1.7924 @ step 0
+[GPU 0] [23:26:18] [INFO] New best validation loss: 1.7708 @ step 1
+[GPU 0] [23:26:19] [INFO] New best validation loss: 1.7601 @ step 2
+[GPU 0] [23:26:20] [INFO] New best validation loss: 1.7564 @ step 3
+[GPU 0] [23:26:21] [INFO] New best validation loss: 1.7560 @ step 4
+[GPU 0] [23:26:31] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:26:31] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:26:31] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:26:31] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:26:31] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:26:32] [INFO] New best validation loss: 1.6265 @ step 0
+[GPU 0] [23:26:33] [INFO] New best validation loss: 1.6263 @ step 1
+[GPU 0] [23:26:43] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:26:43] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:26:44] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:26:44] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:26:44] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:26:45] [INFO] New best validation loss: 1.6069 @ step 0
+[GPU 0] [23:26:46] [INFO] New best validation loss: 1.6018 @ step 1
+[GPU 0] [23:26:58] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:26:58] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:26:59] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:26:59] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:26:59] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:27:00] [INFO] New best validation loss: 1.5973 @ step 0
+[GPU 0] [23:27:11] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:27:11] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:27:11] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:27:13] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:27:13] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:27:13] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:27:14] [INFO] New best validation loss: 1.7171 @ step 0
+[GPU 0] [23:27:15] [INFO] New best validation loss: 1.7052 @ step 1
+[GPU 0] [23:27:16] [INFO] New best validation loss: 1.6998 @ step 2
+[GPU 0] [23:27:18] [INFO] New best validation loss: 1.6996 @ step 3
+[GPU 0] [23:27:30] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:27:30] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:27:32] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:27:32] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:27:32] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:27:33] [INFO] New best validation loss: 1.7282 @ step 0
+[GPU 0] [23:27:46] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:27:46] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:27:47] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:27:47] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:27:47] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:27:48] [INFO] New best validation loss: 1.7691 @ step 0
+[GPU 0] [23:27:50] [INFO] New best validation loss: 1.7671 @ step 1
+[GPU 0] [23:28:02] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:28:02] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:28:04] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:28:04] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:28:04] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:28:05] [INFO] New best validation loss: 1.7936 @ step 0
+[GPU 0] [23:28:06] [INFO] New best validation loss: 1.7720 @ step 1
+[GPU 0] [23:28:07] [INFO] New best validation loss: 1.7619 @ step 2
+[GPU 0] [23:28:08] [INFO] New best validation loss: 1.7574 @ step 3
+[GPU 0] [23:28:09] [INFO] New best validation loss: 1.7572 @ step 4
+[GPU 0] [23:28:21] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:28:21] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:28:22] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:28:22] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:28:22] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:28:23] [INFO] New best validation loss: 1.6282 @ step 0
+[GPU 0] [23:28:24] [INFO] New best validation loss: 1.6280 @ step 1
+[GPU 0] [23:28:35] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:28:35] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:28:35] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:28:35] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:28:35] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:28:36] [INFO] New best validation loss: 1.6079 @ step 0
+[GPU 0] [23:28:37] [INFO] New best validation loss: 1.6038 @ step 1
+[GPU 0] [23:28:38] [INFO] New best validation loss: 1.6028 @ step 2
+[GPU 0] [23:28:49] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [23:28:49] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [23:28:49] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:28:49] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:28:49] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:28:50] [INFO] New best validation loss: 1.5986 @ step 0
+[GPU 0] [23:29:01] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:29:01] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:29:01] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:29:01] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:29:01] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:29:01] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:29:02] [INFO] New best validation loss: 1.8488 @ step 0
+[GPU 0] [23:29:03] [INFO] New best validation loss: 1.8334 @ step 1
+[GPU 0] [23:29:04] [INFO] New best validation loss: 1.8258 @ step 2
+[GPU 0] [23:29:05] [INFO] New best validation loss: 1.8254 @ step 3
+[GPU 0] [23:29:16] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:29:16] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:29:17] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:29:17] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:29:17] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:29:18] [INFO] New best validation loss: 1.7290 @ step 0
+[GPU 0] [23:29:29] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:29:29] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:29:30] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:29:30] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:29:30] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:29:31] [INFO] New best validation loss: 1.7716 @ step 0
+[GPU 0] [23:29:32] [INFO] New best validation loss: 1.7683 @ step 1
+[GPU 0] [23:29:44] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:29:44] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:29:44] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:29:44] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:29:44] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:29:45] [INFO] New best validation loss: 1.7934 @ step 0
+[GPU 0] [23:29:46] [INFO] New best validation loss: 1.7714 @ step 1
+[GPU 0] [23:29:48] [INFO] New best validation loss: 1.7611 @ step 2
+[GPU 0] [23:29:49] [INFO] New best validation loss: 1.7568 @ step 3
+[GPU 0] [23:29:50] [INFO] New best validation loss: 1.7564 @ step 4
+[GPU 0] [23:30:01] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:30:01] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:30:01] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:30:01] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:30:01] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:30:03] [INFO] New best validation loss: 1.6286 @ step 0
+[GPU 0] [23:30:04] [INFO] New best validation loss: 1.6280 @ step 1
+[GPU 0] [23:30:18] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:30:18] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:30:18] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:30:18] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:30:18] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:30:19] [INFO] New best validation loss: 1.6110 @ step 0
+[GPU 0] [23:30:20] [INFO] New best validation loss: 1.6049 @ step 1
+[GPU 0] [23:30:21] [INFO] New best validation loss: 1.6034 @ step 2
+[GPU 0] [23:30:32] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [23:30:32] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [23:30:32] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:30:32] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:30:32] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:30:33] [INFO] New best validation loss: 1.5990 @ step 0
+[GPU 0] [23:30:44] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:30:44] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:30:44] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:30:44] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:30:44] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:30:44] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:30:45] [INFO] New best validation loss: 1.8453 @ step 0
+[GPU 0] [23:30:46] [INFO] New best validation loss: 1.8307 @ step 1
+[GPU 0] [23:30:47] [INFO] New best validation loss: 1.8234 @ step 2
+[GPU 0] [23:30:48] [INFO] New best validation loss: 1.8232 @ step 3
+[GPU 0] [23:30:59] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:30:59] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:31:00] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:31:00] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:31:00] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:31:01] [INFO] New best validation loss: 1.7155 @ step 0
+[GPU 0] [23:31:02] [INFO] New best validation loss: 1.7035 @ step 1
+[GPU 0] [23:31:03] [INFO] New best validation loss: 1.6990 @ step 2
+[GPU 0] [23:31:04] [INFO] New best validation loss: 1.6988 @ step 3
+[GPU 0] [23:31:15] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:31:15] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:31:15] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:31:15] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:31:15] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:31:16] [INFO] New best validation loss: 1.7669 @ step 0
+[GPU 0] [23:31:17] [INFO] New best validation loss: 1.7660 @ step 1
+[GPU 0] [23:31:28] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:31:28] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:31:28] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:31:28] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:31:28] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:31:29] [INFO] New best validation loss: 1.7926 @ step 0
+[GPU 0] [23:31:30] [INFO] New best validation loss: 1.7710 @ step 1
+[GPU 0] [23:31:31] [INFO] New best validation loss: 1.7599 @ step 2
+[GPU 0] [23:31:32] [INFO] New best validation loss: 1.7562 @ step 3
+[GPU 0] [23:31:33] [INFO] New best validation loss: 1.7558 @ step 4
+[GPU 0] [23:31:44] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:31:44] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:31:44] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:31:44] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:31:44] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:31:45] [INFO] New best validation loss: 1.6265 @ step 0
+[GPU 0] [23:31:46] [INFO] New best validation loss: 1.6263 @ step 1
+[GPU 0] [23:31:57] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:31:57] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:31:57] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:31:57] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:31:57] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:31:58] [INFO] New best validation loss: 1.6069 @ step 0
+[GPU 0] [23:31:59] [INFO] New best validation loss: 1.6018 @ step 1
+[GPU 0] [23:32:00] [INFO] New best validation loss: 1.6018 @ step 2
+[GPU 0] [23:32:11] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [23:32:11] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [23:32:11] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:32:11] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:32:11] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:32:12] [INFO] New best validation loss: 1.5971 @ step 0
+[GPU 0] [23:32:23] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:32:23] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:32:23] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:32:23] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:32:23] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:32:23] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:32:24] [INFO] New best validation loss: 1.8445 @ step 0
+[GPU 0] [23:32:25] [INFO] New best validation loss: 1.8303 @ step 1
+[GPU 0] [23:32:26] [INFO] New best validation loss: 1.8232 @ step 2
+[GPU 0] [23:32:28] [INFO] New best validation loss: 1.8230 @ step 3
+[GPU 0] [23:32:40] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:32:40] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:32:40] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:32:40] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:32:40] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:32:41] [INFO] New best validation loss: 1.7159 @ step 0
+[GPU 0] [23:32:42] [INFO] New best validation loss: 1.7046 @ step 1
+[GPU 0] [23:32:43] [INFO] New best validation loss: 1.6992 @ step 2
+[GPU 0] [23:32:44] [INFO] New best validation loss: 1.6990 @ step 3
+[GPU 0] [23:32:55] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:32:55] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:32:55] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:32:55] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:32:55] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:32:56] [INFO] New best validation loss: 1.7252 @ step 0
+[GPU 0] [23:33:08] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:33:08] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:33:08] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:33:08] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:33:08] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:33:09] [INFO] New best validation loss: 1.7932 @ step 0
+[GPU 0] [23:33:10] [INFO] New best validation loss: 1.7714 @ step 1
+[GPU 0] [23:33:11] [INFO] New best validation loss: 1.7609 @ step 2
+[GPU 0] [23:33:12] [INFO] New best validation loss: 1.7564 @ step 3
+[GPU 0] [23:33:13] [INFO] New best validation loss: 1.7560 @ step 4
+[GPU 0] [23:33:25] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:33:25] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:33:25] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:33:25] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:33:25] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:33:26] [INFO] New best validation loss: 1.6273 @ step 0
+[GPU 0] [23:33:27] [INFO] New best validation loss: 1.6265 @ step 1
+[GPU 0] [23:33:38] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:33:38] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:33:38] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:33:38] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:33:38] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:33:39] [INFO] New best validation loss: 1.6073 @ step 0
+[GPU 0] [23:33:40] [INFO] New best validation loss: 1.6032 @ step 1
+[GPU 0] [23:33:41] [INFO] New best validation loss: 1.6022 @ step 2
+[GPU 0] [23:33:54] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [23:33:54] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [23:33:54] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:33:54] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:33:54] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:33:55] [INFO] New best validation loss: 1.5976 @ step 0
+[GPU 0] [23:34:06] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:34:06] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:34:06] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:34:06] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:34:06] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:34:06] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:34:07] [INFO] New best validation loss: 1.8477 @ step 0
+[GPU 0] [23:34:09] [INFO] New best validation loss: 1.8324 @ step 1
+[GPU 0] [23:34:10] [INFO] New best validation loss: 1.8254 @ step 2
+[GPU 0] [23:34:11] [INFO] New best validation loss: 1.8252 @ step 3
+[GPU 0] [23:34:22] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:34:22] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:34:22] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:34:22] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:34:22] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:34:23] [INFO] New best validation loss: 1.7136 @ step 0
+[GPU 0] [23:34:24] [INFO] New best validation loss: 1.7019 @ step 1
+[GPU 0] [23:34:25] [INFO] New best validation loss: 1.6976 @ step 2
+[GPU 0] [23:34:26] [INFO] New best validation loss: 1.6972 @ step 3
+[GPU 0] [23:34:37] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:34:37] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:34:38] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:34:38] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:34:38] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:34:39] [INFO] New best validation loss: 1.7292 @ step 0
+[GPU 0] [23:34:50] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:34:50] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:34:50] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:34:50] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:34:50] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:34:51] [INFO] New best validation loss: 1.7710 @ step 0
+[GPU 0] [23:34:52] [INFO] New best validation loss: 1.7683 @ step 1
+[GPU 0] [23:35:03] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:35:03] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:35:03] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:35:03] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:35:03] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:35:04] [INFO] New best validation loss: 1.6282 @ step 0
+[GPU 0] [23:35:15] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:35:15] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:35:16] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:35:16] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:35:16] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:35:17] [INFO] New best validation loss: 1.6106 @ step 0
+[GPU 0] [23:35:18] [INFO] New best validation loss: 1.6044 @ step 1
+[GPU 0] [23:35:19] [INFO] New best validation loss: 1.6034 @ step 2
+[GPU 0] [23:35:30] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [23:35:30] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [23:35:30] [INFO] ---- Begin FT | Experts: ['core', 'dinosaurs'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:35:30] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:35:30] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:35:31] [INFO] New best validation loss: 1.5986 @ step 0
+[GPU 0] [23:35:42] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:35:42] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:35:42] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:35:42] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:35:42] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:35:42] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:35:43] [INFO] New best validation loss: 1.8461 @ step 0
+[GPU 0] [23:35:44] [INFO] New best validation loss: 1.8311 @ step 1
+[GPU 0] [23:35:45] [INFO] New best validation loss: 1.8244 @ step 2
+[GPU 0] [23:35:46] [INFO] New best validation loss: 1.8238 @ step 3
+[GPU 0] [23:35:58] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:35:58] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:35:58] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:35:58] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:35:58] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:35:59] [INFO] New best validation loss: 1.7161 @ step 0
+[GPU 0] [23:36:00] [INFO] New best validation loss: 1.7039 @ step 1
+[GPU 0] [23:36:01] [INFO] New best validation loss: 1.6986 @ step 2
+[GPU 0] [23:36:02] [INFO] New best validation loss: 1.6986 @ step 3
+[GPU 0] [23:36:13] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:36:13] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:36:14] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:36:14] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:36:14] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:36:15] [INFO] New best validation loss: 1.7270 @ step 0
+[GPU 0] [23:36:26] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:36:26] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:36:26] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:36:26] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:36:26] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:36:27] [INFO] New best validation loss: 1.7689 @ step 0
+[GPU 0] [23:36:28] [INFO] New best validation loss: 1.7669 @ step 1
+[GPU 0] [23:36:39] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:36:39] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:36:39] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:36:39] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:36:39] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:36:40] [INFO] New best validation loss: 1.7928 @ step 0
+[GPU 0] [23:36:41] [INFO] New best validation loss: 1.7708 @ step 1
+[GPU 0] [23:36:42] [INFO] New best validation loss: 1.7601 @ step 2
+[GPU 0] [23:36:43] [INFO] New best validation loss: 1.7566 @ step 3
+[GPU 0] [23:36:44] [INFO] New best validation loss: 1.7560 @ step 4
+[GPU 0] [23:36:55] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:36:55] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:36:56] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:36:56] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:36:56] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:36:57] [INFO] New best validation loss: 1.6067 @ step 0
+[GPU 0] [23:36:58] [INFO] New best validation loss: 1.6007 @ step 1
+[GPU 0] [23:37:09] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:37:09] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:37:09] [INFO] ---- Begin FT | Experts: ['core', 'dream-worlds'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:37:09] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:37:09] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:37:10] [INFO] New best validation loss: 1.5978 @ step 0
+[GPU 0] [23:37:21] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:37:21] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:37:21] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:37:21] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:37:21] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:37:21] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:37:22] [INFO] New best validation loss: 1.8467 @ step 0
+[GPU 0] [23:37:23] [INFO] New best validation loss: 1.8312 @ step 1
+[GPU 0] [23:37:24] [INFO] New best validation loss: 1.8248 @ step 2
+[GPU 0] [23:37:25] [INFO] New best validation loss: 1.8242 @ step 3
+[GPU 0] [23:37:36] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:37:36] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:37:37] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:37:37] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:37:37] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:37:38] [INFO] New best validation loss: 1.7161 @ step 0
+[GPU 0] [23:37:39] [INFO] New best validation loss: 1.7046 @ step 1
+[GPU 0] [23:37:40] [INFO] New best validation loss: 1.6994 @ step 2
+[GPU 0] [23:37:41] [INFO] New best validation loss: 1.6990 @ step 3
+[GPU 0] [23:37:51] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:37:51] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:37:52] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:37:52] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:37:52] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:37:53] [INFO] New best validation loss: 1.7274 @ step 0
+[GPU 0] [23:38:04] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:38:04] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:38:04] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:38:04] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:38:04] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:38:05] [INFO] New best validation loss: 1.7695 @ step 0
+[GPU 0] [23:38:06] [INFO] New best validation loss: 1.7675 @ step 1
+[GPU 0] [23:38:17] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:38:17] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:38:17] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:38:17] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:38:17] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:38:18] [INFO] New best validation loss: 1.7928 @ step 0
+[GPU 0] [23:38:19] [INFO] New best validation loss: 1.7716 @ step 1
+[GPU 0] [23:38:20] [INFO] New best validation loss: 1.7603 @ step 2
+[GPU 0] [23:38:21] [INFO] New best validation loss: 1.7564 @ step 3
+[GPU 0] [23:38:22] [INFO] New best validation loss: 1.7560 @ step 4
+[GPU 0] [23:38:34] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:38:34] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:38:34] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:38:34] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:38:34] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:38:35] [INFO] New best validation loss: 1.6269 @ step 0
+[GPU 0] [23:38:36] [INFO] New best validation loss: 1.6265 @ step 1
+[GPU 0] [23:38:47] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:38:47] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:38:47] [INFO] ---- Begin FT | Experts: ['core', 'enchanted-forests'] | Data: ['fairy-tales'] ----
+[GPU 0] [23:38:47] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:38:47] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:38:48] [INFO] New best validation loss: 1.5980 @ step 0
+[GPU 0] [23:38:59] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:38:59] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:38:59] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [23:39:00] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [23:39:00] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:39:00] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:39:01] [INFO] New best validation loss: 1.8457 @ step 0
+[GPU 0] [23:39:02] [INFO] New best validation loss: 1.8309 @ step 1
+[GPU 0] [23:39:04] [INFO] New best validation loss: 1.8242 @ step 2
+[GPU 0] [23:39:05] [INFO] New best validation loss: 1.8236 @ step 3
+[GPU 0] [23:39:17] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:39:17] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:39:17] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['alien-encounters'] ----
+[GPU 0] [23:39:17] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:39:17] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:39:18] [INFO] New best validation loss: 1.7155 @ step 0
+[GPU 0] [23:39:19] [INFO] New best validation loss: 1.7035 @ step 1
+[GPU 0] [23:39:20] [INFO] New best validation loss: 1.6990 @ step 2
+[GPU 0] [23:39:21] [INFO] New best validation loss: 1.6990 @ step 3
+[GPU 0] [23:39:33] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [23:39:33] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [23:39:33] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['bygone-eras'] ----
+[GPU 0] [23:39:33] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:39:33] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:39:34] [INFO] New best validation loss: 1.7256 @ step 0
+[GPU 0] [23:39:45] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [23:39:45] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [23:39:46] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['cultural-traditions'] ----
+[GPU 0] [23:39:46] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:39:46] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:39:47] [INFO] New best validation loss: 1.7679 @ step 0
+[GPU 0] [23:39:48] [INFO] New best validation loss: 1.7667 @ step 1
+[GPU 0] [23:39:58] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:39:58] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:39:59] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['dinosaurs'] ----
+[GPU 0] [23:39:59] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:39:59] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:40:00] [INFO] New best validation loss: 1.7928 @ step 0
+[GPU 0] [23:40:01] [INFO] New best validation loss: 1.7716 @ step 1
+[GPU 0] [23:40:02] [INFO] New best validation loss: 1.7605 @ step 2
+[GPU 0] [23:40:03] [INFO] New best validation loss: 1.7566 @ step 3
+[GPU 0] [23:40:04] [INFO] New best validation loss: 1.7562 @ step 4
+[GPU 0] [23:40:15] [INFO] Stop FT @ 16: no val improvement for 10 steps
+[GPU 0] [23:40:15] [INFO] Wrote stats.jsonl entries at FT step 4 
+[GPU 0] [23:40:16] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['dream-worlds'] ----
+[GPU 0] [23:40:16] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:40:16] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:40:17] [INFO] New best validation loss: 1.6261 @ step 0
+[GPU 0] [23:40:18] [INFO] New best validation loss: 1.6256 @ step 1
+[GPU 0] [23:40:30] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:40:30] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:40:30] [INFO] ---- Begin FT | Experts: ['core', 'fairy-tales'] | Data: ['enchanted-forests'] ----
+[GPU 0] [23:40:30] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [23:40:30] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [23:40:31] [INFO] New best validation loss: 1.6063 @ step 0
+[GPU 0] [23:40:32] [INFO] New best validation loss: 1.6001 @ step 1
+[GPU 0] [23:40:44] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [23:40:44] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [23:40:45] [INFO] ----------------------------------------
+[GPU 0] [23:40:45] [INFO] Finished. See /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/num_aux_8/seed_1/20260629224132075819

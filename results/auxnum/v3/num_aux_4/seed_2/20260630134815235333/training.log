@@ -1,0 +1,952 @@
+[GPU 0] [13:48:27] [INFO] Git branch: arxiv-codebase, commit: ee664e93914c1fe7d5f204d3f3b76f8c73aae582
+[GPU 0] [13:48:27] [INFO] Number of GPUs: 1
+[GPU 0] [13:48:28] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [13:48:28] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [13:48:28] [INFO] target effective batch size: 128, actual effective batch size: 128, micro batch size: 128, accumulation steps: 1, num gpus: 1
+[GPU 0] [13:48:29] [INFO] core total number of tokens: 501664802
+[GPU 0] [13:48:29] [INFO] core: 0.8000 x full-dataset 547,853,673 = 438,282,938 (downsample from 501,664,802 available)
+[GPU 0] [13:48:29] [INFO] aux total number of tokens: 46188871
+[GPU 0] [13:48:29] [INFO] aux: 0.2000 x full-dataset 547,853,673 = 109,570,735 (upsample from 46,188,871 available)
+[GPU 0] [13:48:30] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/config.json
+[GPU 0] [13:48:30] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": -1,
+            "lr": 0.005,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/baseline",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 200,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "routed",
+            "num_checkpoints": -1,
+            "lr": 0.005,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/routed",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "moe",
+                "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)",
+                "ctx_len": 256,
+                "vocab_size": 4096,
+                "num_layers": 8,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 1,
+                "embed_dim": 512,
+                "mlp_dim": 2048,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "label_prc": 1.0,
+            "aux_factor": 1.0,
+            "robust_prc": 0.5,
+            "aux_route_prc": 0.2,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)",
+        "ctx_len": 256,
+        "vocab_size": 4096,
+        "num_layers": 8,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 1,
+        "embed_dim": 512,
+        "mlp_dim": 2048
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/src/data/stories"
+        ],
+        "core": {
+            "labels": [
+                "dinosaurs",
+                "dream-worlds",
+                "enchanted-forests",
+                "fairy-tales",
+                "fantasy-worlds",
+                "gardens",
+                "giant-creatures",
+                "haunted-places",
+                "hidden-treasures",
+                "holidays",
+                "invisibility",
+                "island-adventures",
+                "living-objects",
+                "lost-cities",
+                "lost-civilizations",
+                "magical-lands",
+                "magical-objects",
+                "miniature-worlds",
+                "mysterious-maps",
+                "mystical-creatures",
+                "outer-space",
+                "pirates",
+                "riddles",
+                "robots-and-technology",
+                "royal-kingdoms",
+                "school-life",
+                "seasonal-changes",
+                "secret-societies",
+                "shape-shifting",
+                "sibling-rivalry",
+                "snowy-adventures",
+                "space-exploration",
+                "sports",
+                "subterranean-worlds",
+                "superheroes",
+                "talking-animals",
+                "the-arts",
+                "the-sky",
+                "time-travel",
+                "treasure-hunts",
+                "undercover-missions",
+                "underwater-adventures",
+                "unusual-vehicles",
+                "virtual-worlds"
+            ],
+            "method": "dataset",
+            "limit": 0.8,
+            "dist": {
+                "dinosaurs": 0.022727272727272728,
+                "dream-worlds": 0.022727272727272728,
+                "enchanted-forests": 0.022727272727272728,
+                "fairy-tales": 0.022727272727272728,
+                "fantasy-worlds": 0.022727272727272728,
+                "gardens": 0.022727272727272728,
+                "giant-creatures": 0.022727272727272728,
+                "haunted-places": 0.022727272727272728,
+                "hidden-treasures": 0.022727272727272728,
+                "holidays": 0.022727272727272728,
+                "invisibility": 0.022727272727272728,
+                "island-adventures": 0.022727272727272728,
+                "living-objects": 0.022727272727272728,
+                "lost-cities": 0.022727272727272728,
+                "lost-civilizations": 0.022727272727272728,
+                "magical-lands": 0.022727272727272728,
+                "magical-objects": 0.022727272727272728,
+                "miniature-worlds": 0.022727272727272728,
+                "mysterious-maps": 0.022727272727272728,
+                "mystical-creatures": 0.022727272727272728,
+                "outer-space": 0.022727272727272728,
+                "pirates": 0.022727272727272728,
+                "riddles": 0.022727272727272728,
+                "robots-and-technology": 0.022727272727272728,
+                "royal-kingdoms": 0.022727272727272728,
+                "school-life": 0.022727272727272728,
+                "seasonal-changes": 0.022727272727272728,
+                "secret-societies": 0.022727272727272728,
+                "shape-shifting": 0.022727272727272728,
+                "sibling-rivalry": 0.022727272727272728,
+                "snowy-adventures": 0.022727272727272728,
+                "space-exploration": 0.022727272727272728,
+                "sports": 0.022727272727272728,
+                "subterranean-worlds": 0.022727272727272728,
+                "superheroes": 0.022727272727272728,
+                "talking-animals": 0.022727272727272728,
+                "the-arts": 0.022727272727272728,
+                "the-sky": 0.022727272727272728,
+                "time-travel": 0.022727272727272728,
+                "treasure-hunts": 0.022727272727272728,
+                "undercover-missions": 0.022727272727272728,
+                "underwater-adventures": 0.022727272727272728,
+                "unusual-vehicles": 0.022727272727272728,
+                "virtual-worlds": 0.022727272727272728
+            },
+            "num_tok": 438282938
+        },
+        "aux": {
+            "labels": [
+                "a-deadline-or-time-limit",
+                "alien-encounters",
+                "bygone-eras",
+                "cultural-traditions"
+            ],
+            "method": "dataset",
+            "limit": 0.2,
+            "dist": {
+                "a-deadline-or-time-limit": 0.25,
+                "alien-encounters": 0.25,
+                "bygone-eras": 0.25,
+                "cultural-traditions": 0.25
+            },
+            "num_tok": 109570735
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 128,
+        "effective_batch_size": 128,
+        "micro_batch_size": 128,
+        "accumulation_steps": 1,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.1,
+        "decay_prc": 0.1,
+        "seed": 2,
+        "compile": true,
+        "find_unused_parameters": true,
+        "is_ddp": false,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 1,
+        "process_id": 0,
+        "num_base_params": 26257920,
+        "device": "cuda",
+        "logger": "<Logger training_20260630134815235333 (DEBUG)>",
+        "labels": [
+            "core",
+            "a-deadline-or-time-limit",
+            "alien-encounters",
+            "bygone-eras",
+            "cultural-traditions"
+        ],
+        "loaders": {
+            "a-deadline-or-time-limit": {
+                "train": "InterleavedDataLoader(len=835)",
+                "test": "SingleDataLoader(a-deadline-or-time-limit_test.bin, len=40)"
+            },
+            "alien-encounters": {
+                "train": "InterleavedDataLoader(len=835)",
+                "test": "SingleDataLoader(alien-encounters_test.bin, len=38)"
+            },
+            "bygone-eras": {
+                "train": "InterleavedDataLoader(len=835)",
+                "test": "SingleDataLoader(bygone-eras_test.bin, len=39)"
+            },
+            "cultural-traditions": {
+                "train": "InterleavedDataLoader(len=835)",
+                "test": "SingleDataLoader(cultural-traditions_test.bin, len=38)"
+            },
+            "dinosaurs": {
+                "train": "SingleDataLoader(dinosaurs_train.bin, len=303)",
+                "test": "SingleDataLoader(dinosaurs_test.bin, len=38)"
+            },
+            "dream-worlds": {
+                "train": "SingleDataLoader(dream-worlds_train.bin, len=303)",
+                "test": "SingleDataLoader(dream-worlds_test.bin, len=37)"
+            },
+            "enchanted-forests": {
+                "train": "SingleDataLoader(enchanted-forests_train.bin, len=303)",
+                "test": "SingleDataLoader(enchanted-forests_test.bin, len=38)"
+            },
+            "fairy-tales": {
+                "train": "SingleDataLoader(fairy-tales_train.bin, len=303)",
+                "test": "SingleDataLoader(fairy-tales_test.bin, len=37)"
+            },
+            "fantasy-worlds": {
+                "train": "SingleDataLoader(fantasy-worlds_train.bin, len=303)",
+                "test": "SingleDataLoader(fantasy-worlds_test.bin, len=39)"
+            },
+            "gardens": {
+                "train": "SingleDataLoader(gardens_train.bin, len=303)",
+                "test": "SingleDataLoader(gardens_test.bin, len=37)"
+            },
+            "giant-creatures": {
+                "train": "SingleDataLoader(giant-creatures_train.bin, len=303)",
+                "test": "SingleDataLoader(giant-creatures_test.bin, len=37)"
+            },
+            "haunted-places": {
+                "train": "SingleDataLoader(haunted-places_train.bin, len=303)",
+                "test": "SingleDataLoader(haunted-places_test.bin, len=41)"
+            },
+            "hidden-treasures": {
+                "train": "SingleDataLoader(hidden-treasures_train.bin, len=303)",
+                "test": "SingleDataLoader(hidden-treasures_test.bin, len=39)"
+            },
+            "holidays": {
+                "train": "SingleDataLoader(holidays_train.bin, len=303)",
+                "test": "SingleDataLoader(holidays_test.bin, len=38)"
+            },
+            "invisibility": {
+                "train": "SingleDataLoader(invisibility_train.bin, len=303)",
+                "test": "SingleDataLoader(invisibility_test.bin, len=37)"
+            },
+            "island-adventures": {
+                "train": "SingleDataLoader(island-adventures_train.bin, len=303)",
+                "test": "SingleDataLoader(island-adventures_test.bin, len=39)"
+            },
+            "living-objects": {
+                "train": "SingleDataLoader(living-objects_train.bin, len=303)",
+                "test": "SingleDataLoader(living-objects_test.bin, len=38)"
+            },
+            "lost-cities": {
+                "train": "SingleDataLoader(lost-cities_train.bin, len=303)",
+                "test": "SingleDataLoader(lost-cities_test.bin, len=40)"
+            },
+            "lost-civilizations": {
+                "train": "SingleDataLoader(lost-civilizations_train.bin, len=303)",
+                "test": "SingleDataLoader(lost-civilizations_test.bin, len=41)"
+            },
+            "magical-lands": {
+                "train": "SingleDataLoader(magical-lands_train.bin, len=303)",
+                "test": "SingleDataLoader(magical-lands_test.bin, len=38)"
+            },
+            "magical-objects": {
+                "train": "SingleDataLoader(magical-objects_train.bin, len=303)",
+                "test": "SingleDataLoader(magical-objects_test.bin, len=37)"
+            },
+            "miniature-worlds": {
+                "train": "SingleDataLoader(miniature-worlds_train.bin, len=303)",
+                "test": "SingleDataLoader(miniature-worlds_test.bin, len=37)"
+            },
+            "mysterious-maps": {
+                "train": "SingleDataLoader(mysterious-maps_train.bin, len=303)",
+                "test": "SingleDataLoader(mysterious-maps_test.bin, len=38)"
+            },
+            "mystical-creatures": {
+                "train": "SingleDataLoader(mystical-creatures_train.bin, len=303)",
+                "test": "SingleDataLoader(mystical-creatures_test.bin, len=38)"
+            },
+            "outer-space": {
+                "train": "SingleDataLoader(outer-space_train.bin, len=303)",
+                "test": "SingleDataLoader(outer-space_test.bin, len=38)"
+            },
+            "pirates": {
+                "train": "SingleDataLoader(pirates_train.bin, len=303)",
+                "test": "SingleDataLoader(pirates_test.bin, len=39)"
+            },
+            "riddles": {
+                "train": "SingleDataLoader(riddles_train.bin, len=303)",
+                "test": "SingleDataLoader(riddles_test.bin, len=38)"
+            },
+            "robots-and-technology": {
+                "train": "SingleDataLoader(robots-and-technology_train.bin, len=303)",
+                "test": "SingleDataLoader(robots-and-technology_test.bin, len=39)"
+            },
+            "royal-kingdoms": {
+                "train": "SingleDataLoader(royal-kingdoms_train.bin, len=303)",
+                "test": "SingleDataLoader(royal-kingdoms_test.bin, len=40)"
+            },
+            "school-life": {
+                "train": "SingleDataLoader(school-life_train.bin, len=303)",
+                "test": "SingleDataLoader(school-life_test.bin, len=38)"
+            },
+            "seasonal-changes": {
+                "train": "SingleDataLoader(seasonal-changes_train.bin, len=303)",
+                "test": "SingleDataLoader(seasonal-changes_test.bin, len=38)"
+            },
+            "secret-societies": {
+                "train": "SingleDataLoader(secret-societies_train.bin, len=303)",
+                "test": "SingleDataLoader(secret-societies_test.bin, len=38)"
+            },
+            "shape-shifting": {
+                "train": "SingleDataLoader(shape-shifting_train.bin, len=303)",
+                "test": "SingleDataLoader(shape-shifting_test.bin, len=38)"
+            },
+            "sibling-rivalry": {
+                "train": "SingleDataLoader(sibling-rivalry_train.bin, len=303)",
+                "test": "SingleDataLoader(sibling-rivalry_test.bin, len=39)"
+            },
+            "snowy-adventures": {
+                "train": "SingleDataLoader(snowy-adventures_train.bin, len=303)",
+                "test": "SingleDataLoader(snowy-adventures_test.bin, len=39)"
+            },
+            "space-exploration": {
+                "train": "SingleDataLoader(space-exploration_train.bin, len=303)",
+                "test": "SingleDataLoader(space-exploration_test.bin, len=38)"
+            },
+            "sports": {
+                "train": "SingleDataLoader(sports_train.bin, len=303)",
+                "test": "SingleDataLoader(sports_test.bin, len=37)"
+            },
+            "subterranean-worlds": {
+                "train": "SingleDataLoader(subterranean-worlds_train.bin, len=303)",
+                "test": "SingleDataLoader(subterranean-worlds_test.bin, len=37)"
+            },
+            "superheroes": {
+                "train": "SingleDataLoader(superheroes_train.bin, len=303)",
+                "test": "SingleDataLoader(superheroes_test.bin, len=38)"
+            },
+            "talking-animals": {
+                "train": "SingleDataLoader(talking-animals_train.bin, len=303)",
+                "test": "SingleDataLoader(talking-animals_test.bin, len=37)"
+            },
+            "the-arts": {
+                "train": "SingleDataLoader(the-arts_train.bin, len=303)",
+                "test": "SingleDataLoader(the-arts_test.bin, len=38)"
+            },
+            "the-sky": {
+                "train": "SingleDataLoader(the-sky_train.bin, len=303)",
+                "test": "SingleDataLoader(the-sky_test.bin, len=38)"
+            },
+            "time-travel": {
+                "train": "SingleDataLoader(time-travel_train.bin, len=303)",
+                "test": "SingleDataLoader(time-travel_test.bin, len=37)"
+            },
+            "treasure-hunts": {
+                "train": "SingleDataLoader(treasure-hunts_train.bin, len=303)",
+                "test": "SingleDataLoader(treasure-hunts_test.bin, len=35)"
+            },
+            "undercover-missions": {
+                "train": "SingleDataLoader(undercover-missions_train.bin, len=303)",
+                "test": "SingleDataLoader(undercover-missions_test.bin, len=40)"
+            },
+            "underwater-adventures": {
+                "train": "SingleDataLoader(underwater-adventures_train.bin, len=303)",
+                "test": "SingleDataLoader(underwater-adventures_test.bin, len=38)"
+            },
+            "unusual-vehicles": {
+                "train": "SingleDataLoader(unusual-vehicles_train.bin, len=303)",
+                "test": "SingleDataLoader(unusual-vehicles_test.bin, len=39)"
+            },
+            "virtual-worlds": {
+                "train": "SingleDataLoader(virtual-worlds_train.bin, len=303)",
+                "test": "SingleDataLoader(virtual-worlds_test.bin, len=37)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=13332)",
+                "test": "InterleavedDataLoader(len=1677)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=3340)",
+                "test": "InterleavedDataLoader(len=155)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=16672)",
+                "test": "InterleavedDataLoader(len=1832)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2",
+        "experiment_id": "20260630134815235333",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "auxnum/v3/num_aux_4/seed_2"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [13:48:30] [INFO] Loader a-deadline-or-time-limit train: 835, test: 40
+[GPU 0] [13:48:30] [INFO] Loader alien-encounters train: 835, test: 38
+[GPU 0] [13:48:30] [INFO] Loader bygone-eras train: 835, test: 39
+[GPU 0] [13:48:30] [INFO] Loader cultural-traditions train: 835, test: 38
+[GPU 0] [13:48:30] [INFO] Loader dinosaurs train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader dream-worlds train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader enchanted-forests train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader fairy-tales train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader fantasy-worlds train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader gardens train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader giant-creatures train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader haunted-places train: 303, test: 41
+[GPU 0] [13:48:30] [INFO] Loader hidden-treasures train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader holidays train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader invisibility train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader island-adventures train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader living-objects train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader lost-cities train: 303, test: 40
+[GPU 0] [13:48:30] [INFO] Loader lost-civilizations train: 303, test: 41
+[GPU 0] [13:48:30] [INFO] Loader magical-lands train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader magical-objects train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader miniature-worlds train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader mysterious-maps train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader mystical-creatures train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader outer-space train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader pirates train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader riddles train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader robots-and-technology train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader royal-kingdoms train: 303, test: 40
+[GPU 0] [13:48:30] [INFO] Loader school-life train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader seasonal-changes train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader secret-societies train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader shape-shifting train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader sibling-rivalry train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader snowy-adventures train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader space-exploration train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader sports train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader subterranean-worlds train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader superheroes train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader talking-animals train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader the-arts train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader the-sky train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader time-travel train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader treasure-hunts train: 303, test: 35
+[GPU 0] [13:48:30] [INFO] Loader undercover-missions train: 303, test: 40
+[GPU 0] [13:48:30] [INFO] Loader underwater-adventures train: 303, test: 38
+[GPU 0] [13:48:30] [INFO] Loader unusual-vehicles train: 303, test: 39
+[GPU 0] [13:48:30] [INFO] Loader virtual-worlds train: 303, test: 37
+[GPU 0] [13:48:30] [INFO] Loader core train: 13332, test: 1677
+[GPU 0] [13:48:30] [INFO] Loader aux train: 3340, test: 155
+[GPU 0] [13:48:30] [INFO] Loader all train: 16672, test: 1832
+[GPU 0] [13:48:30] [INFO] Stage [baseline] start: {"name": "baseline", "num_checkpoints": -1, "lr": 0.005, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/baseline", "acc_mode": "heterogeneous", "do_eval": true, "do_sample": false, "num_train_evals": 200, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "label_prc": 1.0}
+[GPU 0] [13:48:30] [INFO] BASELINE START
+[GPU 0] [13:48:32] [INFO] Initialized BaseTransformer with 26,257,920 total parameters
+[GPU 0] [13:48:32] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [13:48:41] [INFO] torch.compile done
+[GPU 0] [13:48:41] [WARNING] restore_partial_state: no checkpoint found at /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/baseline
+[GPU 0] [13:48:41] [INFO] ---- Begin Train | Train Labels: ['a-deadline-or-time-limit', 'alien-encounters', 'bygone-eras', 'core', 'cultural-traditions'] ----
+[GPU 0] [13:48:41] [DEBUG] acc_mode: heterogeneous, label_prc: 1.0
+[GPU 0] [13:48:41] [INFO] Batch [a-deadline-or-time-limit] count: 835
+[GPU 0] [13:48:41] [INFO] Batch [alien-encounters] count: 835
+[GPU 0] [13:48:41] [INFO] Batch [bygone-eras] count: 835
+[GPU 0] [13:48:41] [INFO] Batch [core] count: 13332
+[GPU 0] [13:48:41] [INFO] Batch [cultural-traditions] count: 835
+[GPU 0] [13:48:41] [INFO] num_total_steps: 16672
+[GPU 0] [13:48:41] [INFO] warmup_steps: 1667
+[GPU 0] [13:48:41] [INFO] constant_steps: 13338
+[GPU 0] [13:48:41] [INFO] decay_steps: 1667
+[GPU 0] [13:48:41] [INFO] LR Scheduler: Warmup Start
+[GPU 0] [13:50:28] [INFO] Step: 1, LR: 3.01e-06
+[GPU 0] [13:50:28] [INFO] Train Loss: CORE: 8.38 A-DEADLINE-OR-TIME-LIMIT: nan ALIEN-ENCOUNTERS: nan BYGONE-ERAS: nan CULTURAL-TRADITIONS: nan 
+[GPU 0] [13:50:28] [INFO] Val Loss: CORE: nan A-DEADLINE-OR-TIME-LIMIT: nan ALIEN-ENCOUNTERS: nan BYGONE-ERAS: nan CULTURAL-TRADITIONS: nan 
+[GPU 0] [13:52:30] [INFO] Step: 1000, LR: 3.00e-03
+[GPU 0] [13:52:30] [INFO] Train Loss: CORE: 2.54 A-DEADLINE-OR-TIME-LIMIT: 2.64 ALIEN-ENCOUNTERS: 2.43 BYGONE-ERAS: 2.56 CULTURAL-TRADITIONS: 2.55 
+[GPU 0] [13:52:30] [INFO] Val Loss: CORE: 2.55 A-DEADLINE-OR-TIME-LIMIT: 2.61 ALIEN-ENCOUNTERS: 2.52 BYGONE-ERAS: 2.56 CULTURAL-TRADITIONS: 2.58 
+[GPU 0] [13:53:16] [INFO] LR Scheduler: Constant Start
+[GPU 0] [13:53:40] [INFO] Step: 2000, LR: 5.00e-03
+[GPU 0] [13:53:40] [INFO] Train Loss: CORE: 2.18 A-DEADLINE-OR-TIME-LIMIT: 2.29 ALIEN-ENCOUNTERS: 2.20 BYGONE-ERAS: 2.31 CULTURAL-TRADITIONS: 2.28 
+[GPU 0] [13:53:40] [INFO] Val Loss: CORE: 2.24 A-DEADLINE-OR-TIME-LIMIT: 2.32 ALIEN-ENCOUNTERS: 2.20 BYGONE-ERAS: 2.26 CULTURAL-TRADITIONS: 2.28 
+[GPU 0] [13:54:50] [INFO] Step: 3000, LR: 5.00e-03
+[GPU 0] [13:54:50] [INFO] Train Loss: CORE: 2.11 A-DEADLINE-OR-TIME-LIMIT: 2.14 ALIEN-ENCOUNTERS: 2.01 BYGONE-ERAS: 2.08 CULTURAL-TRADITIONS: 2.09 
+[GPU 0] [13:54:50] [INFO] Val Loss: CORE: 2.08 A-DEADLINE-OR-TIME-LIMIT: 2.16 ALIEN-ENCOUNTERS: 1.98 BYGONE-ERAS: 2.10 CULTURAL-TRADITIONS: 2.12 
+[GPU 0] [13:55:59] [INFO] Step: 4000, LR: 5.00e-03
+[GPU 0] [13:55:59] [INFO] Train Loss: CORE: 2.00 A-DEADLINE-OR-TIME-LIMIT: 2.04 ALIEN-ENCOUNTERS: 1.91 BYGONE-ERAS: 2.00 CULTURAL-TRADITIONS: 2.01 
+[GPU 0] [13:55:59] [INFO] Val Loss: CORE: 1.98 A-DEADLINE-OR-TIME-LIMIT: 2.05 ALIEN-ENCOUNTERS: 1.96 BYGONE-ERAS: 2.02 CULTURAL-TRADITIONS: 2.04 
+[GPU 0] [13:57:09] [INFO] Step: 5000, LR: 5.00e-03
+[GPU 0] [13:57:09] [INFO] Train Loss: CORE: 1.98 A-DEADLINE-OR-TIME-LIMIT: 2.01 ALIEN-ENCOUNTERS: 1.88 BYGONE-ERAS: 1.92 CULTURAL-TRADITIONS: 1.96 
+[GPU 0] [13:57:09] [INFO] Val Loss: CORE: 1.96 A-DEADLINE-OR-TIME-LIMIT: 2.01 ALIEN-ENCOUNTERS: 1.90 BYGONE-ERAS: 1.95 CULTURAL-TRADITIONS: 1.98 
+[GPU 0] [13:58:18] [INFO] Step: 6000, LR: 5.00e-03
+[GPU 0] [13:58:18] [INFO] Train Loss: CORE: 1.93 A-DEADLINE-OR-TIME-LIMIT: 1.96 ALIEN-ENCOUNTERS: 1.82 BYGONE-ERAS: 1.89 CULTURAL-TRADITIONS: 1.91 
+[GPU 0] [13:58:18] [INFO] Val Loss: CORE: 1.90 A-DEADLINE-OR-TIME-LIMIT: 1.98 ALIEN-ENCOUNTERS: 1.85 BYGONE-ERAS: 1.93 CULTURAL-TRADITIONS: 1.96 
+[GPU 0] [13:59:28] [INFO] Step: 7000, LR: 5.00e-03
+[GPU 0] [13:59:28] [INFO] Train Loss: CORE: 1.92 A-DEADLINE-OR-TIME-LIMIT: 1.93 ALIEN-ENCOUNTERS: 1.74 BYGONE-ERAS: 1.84 CULTURAL-TRADITIONS: 1.86 
+[GPU 0] [13:59:28] [INFO] Val Loss: CORE: 1.89 A-DEADLINE-OR-TIME-LIMIT: 1.95 ALIEN-ENCOUNTERS: 1.82 BYGONE-ERAS: 1.90 CULTURAL-TRADITIONS: 1.92 
+[GPU 0] [14:00:37] [INFO] Step: 8000, LR: 5.00e-03
+[GPU 0] [14:00:37] [INFO] Train Loss: CORE: 1.88 A-DEADLINE-OR-TIME-LIMIT: 1.91 ALIEN-ENCOUNTERS: 1.76 BYGONE-ERAS: 1.84 CULTURAL-TRADITIONS: 1.88 
+[GPU 0] [14:00:37] [INFO] Val Loss: CORE: 1.87 A-DEADLINE-OR-TIME-LIMIT: 1.93 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.88 CULTURAL-TRADITIONS: 1.91 
+[GPU 0] [14:01:46] [INFO] Step: 9000, LR: 5.00e-03
+[GPU 0] [14:01:46] [INFO] Train Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.90 ALIEN-ENCOUNTERS: 1.74 BYGONE-ERAS: 1.81 CULTURAL-TRADITIONS: 1.84 
+[GPU 0] [14:01:46] [INFO] Val Loss: CORE: 1.86 A-DEADLINE-OR-TIME-LIMIT: 1.92 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.88 CULTURAL-TRADITIONS: 1.90 
+[GPU 0] [14:02:55] [INFO] Step: 10000, LR: 5.00e-03
+[GPU 0] [14:02:55] [INFO] Train Loss: CORE: 1.86 A-DEADLINE-OR-TIME-LIMIT: 1.84 ALIEN-ENCOUNTERS: 1.67 BYGONE-ERAS: 1.81 CULTURAL-TRADITIONS: 1.80 
+[GPU 0] [14:02:55] [INFO] Val Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.78 BYGONE-ERAS: 1.86 CULTURAL-TRADITIONS: 1.88 
+[GPU 0] [14:04:03] [INFO] Step: 11000, LR: 5.00e-03
+[GPU 0] [14:04:03] [INFO] Train Loss: CORE: 1.82 A-DEADLINE-OR-TIME-LIMIT: 1.84 ALIEN-ENCOUNTERS: 1.74 BYGONE-ERAS: 1.81 CULTURAL-TRADITIONS: 1.78 
+[GPU 0] [14:04:03] [INFO] Val Loss: CORE: 1.84 A-DEADLINE-OR-TIME-LIMIT: 1.88 ALIEN-ENCOUNTERS: 1.76 BYGONE-ERAS: 1.84 CULTURAL-TRADITIONS: 1.86 
+[GPU 0] [14:05:12] [INFO] Step: 12000, LR: 5.00e-03
+[GPU 0] [14:05:12] [INFO] Train Loss: CORE: 1.82 A-DEADLINE-OR-TIME-LIMIT: 1.75 ALIEN-ENCOUNTERS: 1.63 BYGONE-ERAS: 1.70 CULTURAL-TRADITIONS: 1.80 
+[GPU 0] [14:05:12] [INFO] Val Loss: CORE: 1.81 A-DEADLINE-OR-TIME-LIMIT: 1.87 ALIEN-ENCOUNTERS: 1.76 BYGONE-ERAS: 1.83 CULTURAL-TRADITIONS: 1.86 
+[GPU 0] [14:06:22] [INFO] Step: 13000, LR: 5.00e-03
+[GPU 0] [14:06:22] [INFO] Train Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.80 ALIEN-ENCOUNTERS: 1.67 BYGONE-ERAS: 1.73 CULTURAL-TRADITIONS: 1.72 
+[GPU 0] [14:06:22] [INFO] Val Loss: CORE: 1.82 A-DEADLINE-OR-TIME-LIMIT: 1.88 ALIEN-ENCOUNTERS: 1.75 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.85 
+[GPU 0] [14:07:32] [INFO] Step: 14000, LR: 5.00e-03
+[GPU 0] [14:07:32] [INFO] Train Loss: CORE: 1.76 A-DEADLINE-OR-TIME-LIMIT: 1.83 ALIEN-ENCOUNTERS: 1.68 BYGONE-ERAS: 1.76 CULTURAL-TRADITIONS: 1.79 
+[GPU 0] [14:07:32] [INFO] Val Loss: CORE: 1.79 A-DEADLINE-OR-TIME-LIMIT: 1.87 ALIEN-ENCOUNTERS: 1.73 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.84 
+[GPU 0] [14:08:41] [INFO] Step: 15000, LR: 5.00e-03
+[GPU 0] [14:08:41] [INFO] Train Loss: CORE: 1.83 A-DEADLINE-OR-TIME-LIMIT: 1.76 ALIEN-ENCOUNTERS: 1.66 BYGONE-ERAS: 1.74 CULTURAL-TRADITIONS: 1.77 
+[GPU 0] [14:08:41] [INFO] Val Loss: CORE: 1.82 A-DEADLINE-OR-TIME-LIMIT: 1.85 ALIEN-ENCOUNTERS: 1.72 BYGONE-ERAS: 1.81 CULTURAL-TRADITIONS: 1.83 
+[GPU 0] [14:08:41] [INFO] LR Scheduler: Decay Start
+[GPU 0] [14:09:49] [INFO] Step: 16000, LR: 2.02e-03
+[GPU 0] [14:09:49] [INFO] Train Loss: CORE: 1.67 A-DEADLINE-OR-TIME-LIMIT: 1.78 ALIEN-ENCOUNTERS: 1.62 BYGONE-ERAS: 1.70 CULTURAL-TRADITIONS: 1.71 
+[GPU 0] [14:09:49] [INFO] Val Loss: CORE: 1.72 A-DEADLINE-OR-TIME-LIMIT: 1.78 ALIEN-ENCOUNTERS: 1.65 BYGONE-ERAS: 1.72 CULTURAL-TRADITIONS: 1.75 
+[GPU 0] [14:10:35] [INFO] Step: 16672, LR: 1.00e-08
+[GPU 0] [14:10:35] [INFO] Train Loss: CORE: 1.65 A-DEADLINE-OR-TIME-LIMIT: 1.73 ALIEN-ENCOUNTERS: 1.60 BYGONE-ERAS: 1.69 CULTURAL-TRADITIONS: 1.69 
+[GPU 0] [14:10:35] [INFO] Val Loss: CORE: 1.68 A-DEADLINE-OR-TIME-LIMIT: 1.74 ALIEN-ENCOUNTERS: 1.62 BYGONE-ERAS: 1.69 CULTURAL-TRADITIONS: 1.72 
+[GPU 0] [14:10:38] [INFO] ---- Begin Eval ----
+[GPU 0] [14:10:38] [INFO] Data: core | Experts: None
+[GPU 0] [14:11:02] [INFO] loss: 1.68070304
+[GPU 0] [14:11:02] [INFO] Data: a-deadline-or-time-limit | Experts: None
+[GPU 0] [14:11:02] [INFO] loss: 1.74257815
+[GPU 0] [14:11:02] [INFO] Data: alien-encounters | Experts: None
+[GPU 0] [14:11:03] [INFO] loss: 1.62150490
+[GPU 0] [14:11:03] [INFO] Data: bygone-eras | Experts: None
+[GPU 0] [14:11:04] [INFO] loss: 1.69050479
+[GPU 0] [14:11:04] [INFO] Data: cultural-traditions | Experts: None
+[GPU 0] [14:11:04] [INFO] loss: 1.71607733
+[GPU 0] [14:11:04] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": -1, "lr": 0.005, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/routed", "acc_mode": "heterogeneous", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "moe", "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)", "ctx_len": 256, "vocab_size": 4096, "num_layers": 8, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 1, "embed_dim": 512, "mlp_dim": 2048, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "label_prc": 1.0, "aux_factor": 1.0, "robust_prc": 0.5, "aux_route_prc": 0.2, "equal_compute": true}
+[GPU 0] [14:11:04] [INFO] ROUTED START
+[GPU 0] [14:11:05] [INFO] Initialized MoETransformer with 32,571,904 total parameters
+[GPU 0] [14:11:05] [INFO]   Label 'core' has 26,257,920 parameters
+[GPU 0] [14:11:05] [INFO]   Label 'a-deadline-or-time-limit' has 1,578,496 parameters
+[GPU 0] [14:11:05] [INFO]   Label 'alien-encounters' has 1,578,496 parameters
+[GPU 0] [14:11:05] [INFO]   Label 'bygone-eras' has 1,578,496 parameters
+[GPU 0] [14:11:05] [INFO]   Label 'cultural-traditions' has 1,578,496 parameters
+[GPU 0] [14:11:05] [INFO] Compiling MoETransformer with torch.compile...
+[GPU 0] [14:11:05] [INFO] torch.compile done
+[GPU 0] [14:11:05] [WARNING] restore_partial_state: no checkpoint found at /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333/routed
+[GPU 0] [14:11:05] [INFO] ---- Begin Routed Unordered ----
+[GPU 0] [14:11:05] [INFO] initial len_all: 16672, len_all_labeled: 16672, len_all_unlabeled: 0, len_ft: 10006, len_base: 6666, label_prc: 1.0
+[GPU 0] [14:11:05] [INFO] compute-equal: -15794430976.0 <= 0, must truncate training
+[GPU 0] [14:11:05] [INFO] compute-equal: len_base: -232 -> 6434, len_ft: -348 -> 9658, len_all_unlabeled: 0 -> 0
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core',), ('core',))] count: 6434
+[GPU 0] [14:11:06] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('a-deadline-or-time-limit',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('alien-encounters',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('bygone-eras',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('cultural-traditions',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch group is empty (0 batches)
+[GPU 0] [14:11:06] [INFO] 
+len_all: 16672, len_all_labeled: 16672, len_all_unlabeled: 0,
+len_base: 6434, len_ft: 9658,
+len_core_for_ft: 6434, len_aux_for_ft: 3224,
+aux_factor: {'a-deadline-or-time-limit': 1.0, 'alien-encounters': 1.0, 'bygone-eras': 1.0, 'cultural-traditions': 1.0}, robust_prc: 0.5,
+aux_route_prc: 0.2, equal_compute: True
+[GPU 0] [14:11:06] [INFO] count_by_label: {'core': 12866, 'a-deadline-or-time-limit': 806, 'alien-encounters': 806, 'bygone-eras': 806, 'cultural-traditions': 806}
+[GPU 0] [14:11:06] [WARNING] len(batches) != expected, (16090 != 16092), 2 length difference
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core',), ('core',))] count: 6434
+[GPU 0] [14:11:06] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('a-deadline-or-time-limit',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch [('a-deadline-or-time-limit', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'a-deadline-or-time-limit'), ('core', 'a-deadline-or-time-limit'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('alien-encounters',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch [('alien-encounters', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'alien-encounters'), ('core', 'alien-encounters'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('bygone-eras',))] count: 645
+[GPU 0] [14:11:06] [INFO] Batch [('bygone-eras', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'bygone-eras'), ('core', 'bygone-eras'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('core', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 1608
+[GPU 0] [14:11:06] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('core', 'cultural-traditions'))] count: 161
+[GPU 0] [14:11:06] [INFO] Batch [('cultural-traditions', ('core', 'cultural-traditions'), ('cultural-traditions',))] count: 645
+[GPU 0] [14:11:06] [INFO] ---- Begin Routed ----
+[GPU 0] [14:11:06] [DEBUG] acc_mode: heterogeneous
+[GPU 0] [14:11:06] [INFO] num_total_steps: 16090
+[GPU 0] [14:11:06] [INFO] LR schedule group 0: steps [0, 16090), warmup=1609, constant=12872, decay=1609
+[GPU 0] [14:11:06] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [14:11:06] [INFO] CUDA memory before training loop:
+[GPU 0] [14:11:06] [INFO] |===========================================================================|
+[GPU 0] [14:11:06] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [14:11:06] [INFO] |===========================================================================|
+[GPU 0] [14:11:06] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Allocated memory      | 312538 KiB |   8061 MiB | 319200 GiB | 319200 GiB |
+[GPU 0] [14:11:06] [INFO] |       from large pool | 278528 KiB |   8028 MiB | 318943 GiB | 318943 GiB |
+[GPU 0] [14:11:06] [INFO] |       from small pool |  34010 KiB |     42 MiB |    256 GiB |    256 GiB |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Active memory         | 312538 KiB |   8061 MiB | 319200 GiB | 319200 GiB |
+[GPU 0] [14:11:06] [INFO] |       from large pool | 278528 KiB |   8028 MiB | 318943 GiB | 318943 GiB |
+[GPU 0] [14:11:06] [INFO] |       from small pool |  34010 KiB |     42 MiB |    256 GiB |    256 GiB |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Requested memory      | 312534 KiB |   8061 MiB | 319199 GiB | 319199 GiB |
+[GPU 0] [14:11:06] [INFO] |       from large pool | 278528 KiB |   8028 MiB | 318943 GiB | 318943 GiB |
+[GPU 0] [14:11:06] [INFO] |       from small pool |  34006 KiB |     42 MiB |    255 GiB |    255 GiB |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | GPU reserved memory   |   8284 MiB |   8284 MiB |   8284 MiB |      0 B   |
+[GPU 0] [14:11:06] [INFO] |       from large pool |   8240 MiB |   8240 MiB |   8240 MiB |      0 B   |
+[GPU 0] [14:11:06] [INFO] |       from small pool |     44 MiB |     44 MiB |     44 MiB |      0 B   |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [14:11:06] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [14:11:06] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Allocations           |     363    |     625    |   10276 K  |   10276 K  |
+[GPU 0] [14:11:06] [INFO] |       from large pool |      70    |     168    |    5724 K  |    5723 K  |
+[GPU 0] [14:11:06] [INFO] |       from small pool |     293    |     534    |    4552 K  |    4552 K  |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Active allocs         |     363    |     625    |   10276 K  |   10276 K  |
+[GPU 0] [14:11:06] [INFO] |       from large pool |      70    |     168    |    5724 K  |    5723 K  |
+[GPU 0] [14:11:06] [INFO] |       from small pool |     293    |     534    |    4552 K  |    4552 K  |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:06] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:06] [INFO] |===========================================================================|
+[GPU 0] [14:11:06] [INFO] 
+[GPU 0] [14:11:06] [INFO] Batch group start, LR: 1.0000e-08, batches: 16090, epochs: 1, group_total_steps: 16090
+[GPU 0] [14:11:09] [INFO] CUDA memory after first training step:
+[GPU 0] [14:11:09] [INFO] |===========================================================================|
+[GPU 0] [14:11:09] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [14:11:09] [INFO] |===========================================================================|
+[GPU 0] [14:11:09] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Allocated memory      | 757473 KiB |   8507 MiB | 319260 GiB | 319259 GiB |
+[GPU 0] [14:11:09] [INFO] |       from large pool | 696320 KiB |   8472 MiB | 319003 GiB | 319002 GiB |
+[GPU 0] [14:11:09] [INFO] |       from small pool |  61153 KiB |     72 MiB |    256 GiB |    256 GiB |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Active memory         | 757473 KiB |   8507 MiB | 319260 GiB | 319259 GiB |
+[GPU 0] [14:11:09] [INFO] |       from large pool | 696320 KiB |   8472 MiB | 319003 GiB | 319002 GiB |
+[GPU 0] [14:11:09] [INFO] |       from small pool |  61153 KiB |     72 MiB |    256 GiB |    256 GiB |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Requested memory      | 757399 KiB |   8507 MiB | 319258 GiB | 319258 GiB |
+[GPU 0] [14:11:09] [INFO] |       from large pool | 696320 KiB |   8472 MiB | 319003 GiB | 319002 GiB |
+[GPU 0] [14:11:09] [INFO] |       from small pool |  61079 KiB |     72 MiB |    255 GiB |    255 GiB |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | GPU reserved memory   |   8834 MiB |   8834 MiB |   8834 MiB |      0 B   |
+[GPU 0] [14:11:09] [INFO] |       from large pool |   8760 MiB |   8760 MiB |   8760 MiB |      0 B   |
+[GPU 0] [14:11:09] [INFO] |       from small pool |     74 MiB |     74 MiB |     74 MiB |      0 B   |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [14:11:09] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [14:11:09] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Allocations           |     768    |     900    |   10278 K  |   10277 K  |
+[GPU 0] [14:11:09] [INFO] |       from large pool |     110    |     182    |    5724 K  |    5724 K  |
+[GPU 0] [14:11:09] [INFO] |       from small pool |     658    |     772    |    4553 K  |    4552 K  |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Active allocs         |     768    |     900    |   10278 K  |   10277 K  |
+[GPU 0] [14:11:09] [INFO] |       from large pool |     110    |     182    |    5724 K  |    5724 K  |
+[GPU 0] [14:11:09] [INFO] |       from small pool |     658    |     772    |    4553 K  |    4552 K  |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [14:11:09] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [14:11:09] [INFO] |===========================================================================|
+[GPU 0] [14:11:09] [INFO] 
+[GPU 0] [14:11:09] [INFO] Step: 1, LR: 3.1175e-06
+[GPU 0] [14:11:09] [INFO] Train Loss: CORE: 8.44 A-DEADLINE-OR-TIME-LIMIT: nan ALIEN-ENCOUNTERS: nan BYGONE-ERAS: nan CULTURAL-TRADITIONS: nan 
+[GPU 0] [14:12:00] [INFO] Step: 1000, LR: 3.1075e-03
+[GPU 0] [14:12:00] [INFO] Train Loss: CORE: 2.66 A-DEADLINE-OR-TIME-LIMIT: 3.76 ALIEN-ENCOUNTERS: 3.35 BYGONE-ERAS: 3.42 CULTURAL-TRADITIONS: 3.73 
+[GPU 0] [14:12:27] [INFO] LR Scheduler: Group constant (step 1609)
+[GPU 0] [14:12:45] [INFO] Step: 2000, LR: 5.0000e-03
+[GPU 0] [14:12:45] [INFO] Train Loss: CORE: 2.32 A-DEADLINE-OR-TIME-LIMIT: 2.81 ALIEN-ENCOUNTERS: 2.85 BYGONE-ERAS: 2.98 CULTURAL-TRADITIONS: 2.96 
+[GPU 0] [14:13:27] [INFO] Step: 3000, LR: 5.0000e-03
+[GPU 0] [14:13:27] [INFO] Train Loss: CORE: 2.14 A-DEADLINE-OR-TIME-LIMIT: 2.40 ALIEN-ENCOUNTERS: 2.25 BYGONE-ERAS: 2.34 CULTURAL-TRADITIONS: 2.43 
+[GPU 0] [14:14:10] [INFO] Step: 4000, LR: 5.0000e-03
+[GPU 0] [14:14:10] [INFO] Train Loss: CORE: 2.05 A-DEADLINE-OR-TIME-LIMIT: 2.21 ALIEN-ENCOUNTERS: 2.08 BYGONE-ERAS: 2.15 CULTURAL-TRADITIONS: 2.18 
+[GPU 0] [14:14:53] [INFO] Step: 5000, LR: 5.0000e-03
+[GPU 0] [14:14:53] [INFO] Train Loss: CORE: 1.99 A-DEADLINE-OR-TIME-LIMIT: 2.12 ALIEN-ENCOUNTERS: 1.98 BYGONE-ERAS: 2.06 CULTURAL-TRADITIONS: 2.10 
+[GPU 0] [14:15:37] [INFO] Step: 6000, LR: 5.0000e-03
+[GPU 0] [14:15:37] [INFO] Train Loss: CORE: 1.95 A-DEADLINE-OR-TIME-LIMIT: 2.06 ALIEN-ENCOUNTERS: 1.92 BYGONE-ERAS: 2.01 CULTURAL-TRADITIONS: 2.04 
+[GPU 0] [14:16:23] [INFO] Step: 7000, LR: 5.0000e-03
+[GPU 0] [14:16:23] [INFO] Train Loss: CORE: 1.94 A-DEADLINE-OR-TIME-LIMIT: 2.03 ALIEN-ENCOUNTERS: 1.88 BYGONE-ERAS: 1.97 CULTURAL-TRADITIONS: 1.99 
+[GPU 0] [14:17:09] [INFO] Step: 8000, LR: 5.0000e-03
+[GPU 0] [14:17:09] [INFO] Train Loss: CORE: 1.91 A-DEADLINE-OR-TIME-LIMIT: 1.99 ALIEN-ENCOUNTERS: 1.85 BYGONE-ERAS: 1.94 CULTURAL-TRADITIONS: 1.96 
+[GPU 0] [14:17:54] [INFO] Step: 9000, LR: 5.0000e-03
+[GPU 0] [14:17:54] [INFO] Train Loss: CORE: 1.88 A-DEADLINE-OR-TIME-LIMIT: 1.98 ALIEN-ENCOUNTERS: 1.83 BYGONE-ERAS: 1.92 CULTURAL-TRADITIONS: 1.94 
+[GPU 0] [14:18:40] [INFO] Step: 10000, LR: 5.0000e-03
+[GPU 0] [14:18:40] [INFO] Train Loss: CORE: 1.88 A-DEADLINE-OR-TIME-LIMIT: 1.94 ALIEN-ENCOUNTERS: 1.80 BYGONE-ERAS: 1.90 CULTURAL-TRADITIONS: 1.92 
+[GPU 0] [14:19:25] [INFO] Step: 11000, LR: 5.0000e-03
+[GPU 0] [14:19:25] [INFO] Train Loss: CORE: 1.86 A-DEADLINE-OR-TIME-LIMIT: 1.92 ALIEN-ENCOUNTERS: 1.78 BYGONE-ERAS: 1.87 CULTURAL-TRADITIONS: 1.90 
+[GPU 0] [14:20:10] [INFO] Step: 12000, LR: 5.0000e-03
+[GPU 0] [14:20:10] [INFO] Train Loss: CORE: 1.85 A-DEADLINE-OR-TIME-LIMIT: 1.91 ALIEN-ENCOUNTERS: 1.77 BYGONE-ERAS: 1.86 CULTURAL-TRADITIONS: 1.89 
+[GPU 0] [14:20:56] [INFO] Step: 13000, LR: 5.0000e-03
+[GPU 0] [14:20:56] [INFO] Train Loss: CORE: 1.84 A-DEADLINE-OR-TIME-LIMIT: 1.89 ALIEN-ENCOUNTERS: 1.76 BYGONE-ERAS: 1.85 CULTURAL-TRADITIONS: 1.86 
+[GPU 0] [14:21:40] [INFO] Step: 14000, LR: 5.0000e-03
+[GPU 0] [14:21:40] [INFO] Train Loss: CORE: 1.82 A-DEADLINE-OR-TIME-LIMIT: 1.87 ALIEN-ENCOUNTERS: 1.74 BYGONE-ERAS: 1.83 CULTURAL-TRADITIONS: 1.85 
+[GPU 0] [14:22:01] [INFO] LR Scheduler: Group decay (step 14481)
+[GPU 0] [14:22:25] [INFO] Step: 15000, LR: 3.3872e-03
+[GPU 0] [14:22:25] [INFO] Train Loss: CORE: 1.78 A-DEADLINE-OR-TIME-LIMIT: 1.87 ALIEN-ENCOUNTERS: 1.73 BYGONE-ERAS: 1.82 CULTURAL-TRADITIONS: 1.85 
+[GPU 0] [14:23:11] [INFO] Step: 16000, LR: 2.7969e-04
+[GPU 0] [14:23:11] [INFO] Train Loss: CORE: 1.71 A-DEADLINE-OR-TIME-LIMIT: 1.83 ALIEN-ENCOUNTERS: 1.69 BYGONE-ERAS: 1.78 CULTURAL-TRADITIONS: 1.79 
+[GPU 0] [14:23:15] [INFO] Step: 16090, LR: 1.0000e-08
+[GPU 0] [14:23:15] [INFO] Train Loss: CORE: 1.70 A-DEADLINE-OR-TIME-LIMIT: 1.83 ALIEN-ENCOUNTERS: 1.69 BYGONE-ERAS: 1.77 CULTURAL-TRADITIONS: 1.79 
+[GPU 0] [14:23:21] [INFO] ---- Begin Eval ----
+[GPU 0] [14:23:21] [INFO] Data: core | Experts: ['core']
+[GPU 0] [14:23:55] [INFO] loss: 1.70347905
+[GPU 0] [14:23:55] [INFO] Data: a-deadline-or-time-limit | Experts: ['core']
+[GPU 0] [14:23:56] [INFO] loss: 1.91230464
+[GPU 0] [14:23:56] [INFO] Data: alien-encounters | Experts: ['core']
+[GPU 0] [14:23:57] [INFO] loss: 1.76418591
+[GPU 0] [14:23:57] [INFO] Data: bygone-eras | Experts: ['core']
+[GPU 0] [14:23:57] [INFO] loss: 1.73677886
+[GPU 0] [14:23:57] [INFO] Data: cultural-traditions | Experts: ['core']
+[GPU 0] [14:23:58] [INFO] loss: 1.78988492
+[GPU 0] [14:23:58] [INFO] ---- Begin Eval ----
+[GPU 0] [14:23:58] [INFO] Data: core | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [14:24:35] [INFO] loss: 1.70702422
+[GPU 0] [14:24:35] [INFO] Data: a-deadline-or-time-limit | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [14:24:36] [INFO] loss: 1.76796877
+[GPU 0] [14:24:36] [INFO] Data: alien-encounters | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [14:24:37] [INFO] loss: 1.76603615
+[GPU 0] [14:24:37] [INFO] Data: bygone-eras | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [14:24:37] [INFO] loss: 1.73838139
+[GPU 0] [14:24:37] [INFO] Data: cultural-traditions | Experts: ['a-deadline-or-time-limit', 'core']
+[GPU 0] [14:24:38] [INFO] loss: 1.78721213
+[GPU 0] [14:24:38] [INFO] ---- Begin Eval ----
+[GPU 0] [14:24:38] [INFO] Data: core | Experts: ['alien-encounters', 'core']
+[GPU 0] [14:25:14] [INFO] loss: 1.70705223
+[GPU 0] [14:25:14] [INFO] Data: a-deadline-or-time-limit | Experts: ['alien-encounters', 'core']
+[GPU 0] [14:25:15] [INFO] loss: 1.91308594
+[GPU 0] [14:25:15] [INFO] Data: alien-encounters | Experts: ['alien-encounters', 'core']
+[GPU 0] [14:25:16] [INFO] loss: 1.64453125
+[GPU 0] [14:25:16] [INFO] Data: bygone-eras | Experts: ['alien-encounters', 'core']
+[GPU 0] [14:25:17] [INFO] loss: 1.73918271
+[GPU 0] [14:25:17] [INFO] Data: cultural-traditions | Experts: ['alien-encounters', 'core']
+[GPU 0] [14:25:17] [INFO] loss: 1.79050159
+[GPU 0] [14:25:17] [INFO] ---- Begin Eval ----
+[GPU 0] [14:25:17] [INFO] Data: core | Experts: ['bygone-eras', 'core']
+[GPU 0] [14:25:55] [INFO] loss: 1.70435953
+[GPU 0] [14:25:55] [INFO] Data: a-deadline-or-time-limit | Experts: ['bygone-eras', 'core']
+[GPU 0] [14:25:55] [INFO] loss: 1.90820312
+[GPU 0] [14:25:56] [INFO] Data: alien-encounters | Experts: ['bygone-eras', 'core']
+[GPU 0] [14:25:56] [INFO] loss: 1.76398027
+[GPU 0] [14:25:56] [INFO] Data: bygone-eras | Experts: ['bygone-eras', 'core']
+[GPU 0] [14:25:57] [INFO] loss: 1.72215545
+[GPU 0] [14:25:57] [INFO] Data: cultural-traditions | Experts: ['bygone-eras', 'core']
+[GPU 0] [14:25:58] [INFO] loss: 1.78022206
+[GPU 0] [14:25:58] [INFO] ---- Begin Eval ----
+[GPU 0] [14:25:58] [INFO] Data: core | Experts: ['core', 'cultural-traditions']
+[GPU 0] [14:26:34] [INFO] loss: 1.70554280
+[GPU 0] [14:26:34] [INFO] Data: a-deadline-or-time-limit | Experts: ['core', 'cultural-traditions']
+[GPU 0] [14:26:34] [INFO] loss: 1.90625000
+[GPU 0] [14:26:34] [INFO] Data: alien-encounters | Experts: ['core', 'cultural-traditions']
+[GPU 0] [14:26:35] [INFO] loss: 1.76583064
+[GPU 0] [14:26:35] [INFO] Data: bygone-eras | Experts: ['core', 'cultural-traditions']
+[GPU 0] [14:26:36] [INFO] loss: 1.73076928
+[GPU 0] [14:26:36] [INFO] Data: cultural-traditions | Experts: ['core', 'cultural-traditions']
+[GPU 0] [14:26:37] [INFO] loss: 1.75000000
+[GPU 0] [14:26:38] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [14:26:38] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [14:26:38] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:26:38] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:26:40] [INFO] New best validation loss: 1.8803 @ step 0
+[GPU 0] [14:26:41] [INFO] New best validation loss: 1.8646 @ step 1
+[GPU 0] [14:26:42] [INFO] New best validation loss: 1.8564 @ step 2
+[GPU 0] [14:26:54] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:26:54] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:26:54] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['alien-encounters'] ----
+[GPU 0] [14:26:54] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:26:54] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:26:55] [INFO] New best validation loss: 1.7410 @ step 0
+[GPU 0] [14:26:56] [INFO] New best validation loss: 1.7278 @ step 1
+[GPU 0] [14:26:57] [INFO] New best validation loss: 1.7243 @ step 2
+[GPU 0] [14:27:09] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:27:09] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:27:09] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['bygone-eras'] ----
+[GPU 0] [14:27:09] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:27:09] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:27:10] [INFO] New best validation loss: 1.7338 @ step 0
+[GPU 0] [14:27:22] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:27:22] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:27:22] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [14:27:22] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:27:23] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:27:24] [INFO] New best validation loss: 1.7802 @ step 0
+[GPU 0] [14:27:35] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:27:35] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:27:35] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [14:27:35] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['alien-encounters'] ----
+[GPU 0] [14:27:35] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:27:35] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:27:36] [INFO] New best validation loss: 1.7424 @ step 0
+[GPU 0] [14:27:38] [INFO] New best validation loss: 1.7294 @ step 1
+[GPU 0] [14:27:39] [INFO] New best validation loss: 1.7253 @ step 2
+[GPU 0] [14:27:52] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:27:52] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:27:53] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['bygone-eras'] ----
+[GPU 0] [14:27:53] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:27:53] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:27:54] [INFO] New best validation loss: 1.7354 @ step 0
+[GPU 0] [14:28:08] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:28:08] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:28:08] [INFO] ---- Begin FT | Experts: ['a-deadline-or-time-limit', 'core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [14:28:08] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:28:08] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:28:09] [INFO] New best validation loss: 1.7798 @ step 0
+[GPU 0] [14:28:22] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:28:22] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:28:22] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [14:28:22] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [14:28:22] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:28:22] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:28:24] [INFO] New best validation loss: 1.8811 @ step 0
+[GPU 0] [14:28:25] [INFO] New best validation loss: 1.8648 @ step 1
+[GPU 0] [14:28:27] [INFO] New best validation loss: 1.8568 @ step 2
+[GPU 0] [14:28:41] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:28:41] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:28:41] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['bygone-eras'] ----
+[GPU 0] [14:28:41] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:28:41] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:28:42] [INFO] New best validation loss: 1.7358 @ step 0
+[GPU 0] [14:28:55] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:28:55] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:28:55] [INFO] ---- Begin FT | Experts: ['alien-encounters', 'core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [14:28:55] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:28:55] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:28:57] [INFO] New best validation loss: 1.7806 @ step 0
+[GPU 0] [14:29:09] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:29:09] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:29:09] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [14:29:10] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [14:29:10] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:29:10] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:29:12] [INFO] New best validation loss: 1.8775 @ step 0
+[GPU 0] [14:29:13] [INFO] New best validation loss: 1.8621 @ step 1
+[GPU 0] [14:29:14] [INFO] New best validation loss: 1.8551 @ step 2
+[GPU 0] [14:29:29] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:29:29] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:29:29] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['alien-encounters'] ----
+[GPU 0] [14:29:29] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:29:29] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:29:31] [INFO] New best validation loss: 1.7407 @ step 0
+[GPU 0] [14:29:32] [INFO] New best validation loss: 1.7276 @ step 1
+[GPU 0] [14:29:33] [INFO] New best validation loss: 1.7245 @ step 2
+[GPU 0] [14:29:46] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:29:46] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:29:46] [INFO] ---- Begin FT | Experts: ['bygone-eras', 'core'] | Data: ['cultural-traditions'] ----
+[GPU 0] [14:29:46] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:29:46] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:29:47] [INFO] New best validation loss: 1.7734 @ step 0
+[GPU 0] [14:29:59] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:29:59] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:29:59] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [14:30:01] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['a-deadline-or-time-limit'] ----
+[GPU 0] [14:30:01] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:30:01] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:30:02] [INFO] New best validation loss: 1.8758 @ step 0
+[GPU 0] [14:30:04] [INFO] New best validation loss: 1.8607 @ step 1
+[GPU 0] [14:30:06] [INFO] New best validation loss: 1.8541 @ step 2
+[GPU 0] [14:30:22] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:30:22] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:30:23] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['alien-encounters'] ----
+[GPU 0] [14:30:23] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:30:23] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:30:25] [INFO] New best validation loss: 1.7416 @ step 0
+[GPU 0] [14:30:26] [INFO] New best validation loss: 1.7286 @ step 1
+[GPU 0] [14:30:27] [INFO] New best validation loss: 1.7245 @ step 2
+[GPU 0] [14:30:39] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [14:30:39] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [14:30:39] [INFO] ---- Begin FT | Experts: ['core', 'cultural-traditions'] | Data: ['bygone-eras'] ----
+[GPU 0] [14:30:39] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:30:39] [DEBUG] local_x: torch.Size([512, 256]), local_y: torch.Size([512, 256]), num_steps: 4, per_gpu: 512, mbs_size: 128
+[GPU 0] [14:30:40] [INFO] New best validation loss: 1.7300 @ step 0
+[GPU 0] [14:30:53] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [14:30:53] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [14:30:54] [INFO] ----------------------------------------
+[GPU 0] [14:30:54] [INFO] Finished. See /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/auxnum/v3/num_aux_4/seed_2/20260630134815235333

@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "completed_iterations": [],
+  "stage": {
+    "name": "baseline",
+    "num_checkpoints": -1,
+    "lr": 0.0008677257023958782,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/sweep/200M/seed_3/20260702145157964628/baseline",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 200,
+    "do_elicit": false,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "label_prc": 1.0
+  }
+}

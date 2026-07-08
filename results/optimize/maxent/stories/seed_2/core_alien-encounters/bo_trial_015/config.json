@@ -1,0 +1,427 @@
+{
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": -1,
+            "lr": 0.005,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent_stories/seed_2/core_alien-encounters/bo_trial_015/baseline",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 200,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.0008711020437301309,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent_stories/seed_2/core_alien-encounters/bo_trial_015/maxent",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "alien-encounters"
+                ]
+            ],
+            "alpha_retain": 65.52646581429288,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)",
+        "ctx_len": 256,
+        "vocab_size": 4096,
+        "num_layers": 8,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 1,
+        "embed_dim": 512,
+        "mlp_dim": 2048
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/stories"
+        ],
+        "core": {
+            "labels": [
+                "dinosaurs",
+                "dream-worlds",
+                "enchanted-forests",
+                "fairy-tales",
+                "fantasy-worlds",
+                "gardens",
+                "giant-creatures",
+                "haunted-places",
+                "hidden-treasures",
+                "holidays",
+                "invisibility",
+                "island-adventures",
+                "living-objects",
+                "lost-cities",
+                "lost-civilizations",
+                "magical-lands",
+                "magical-objects",
+                "miniature-worlds",
+                "mysterious-maps",
+                "mystical-creatures",
+                "outer-space",
+                "pirates",
+                "riddles",
+                "robots-and-technology",
+                "royal-kingdoms",
+                "school-life",
+                "seasonal-changes",
+                "secret-societies",
+                "shape-shifting",
+                "sibling-rivalry",
+                "snowy-adventures",
+                "space-exploration",
+                "sports",
+                "subterranean-worlds",
+                "superheroes",
+                "talking-animals",
+                "the-arts",
+                "the-sky",
+                "time-travel",
+                "treasure-hunts",
+                "undercover-missions",
+                "underwater-adventures",
+                "unusual-vehicles",
+                "virtual-worlds"
+            ],
+            "method": "total",
+            "limit": 1.0,
+            "dist": {
+                "dinosaurs": 0.022727272727272728,
+                "dream-worlds": 0.022727272727272728,
+                "enchanted-forests": 0.022727272727272728,
+                "fairy-tales": 0.022727272727272728,
+                "fantasy-worlds": 0.022727272727272728,
+                "gardens": 0.022727272727272728,
+                "giant-creatures": 0.022727272727272728,
+                "haunted-places": 0.022727272727272728,
+                "hidden-treasures": 0.022727272727272728,
+                "holidays": 0.022727272727272728,
+                "invisibility": 0.022727272727272728,
+                "island-adventures": 0.022727272727272728,
+                "living-objects": 0.022727272727272728,
+                "lost-cities": 0.022727272727272728,
+                "lost-civilizations": 0.022727272727272728,
+                "magical-lands": 0.022727272727272728,
+                "magical-objects": 0.022727272727272728,
+                "miniature-worlds": 0.022727272727272728,
+                "mysterious-maps": 0.022727272727272728,
+                "mystical-creatures": 0.022727272727272728,
+                "outer-space": 0.022727272727272728,
+                "pirates": 0.022727272727272728,
+                "riddles": 0.022727272727272728,
+                "robots-and-technology": 0.022727272727272728,
+                "royal-kingdoms": 0.022727272727272728,
+                "school-life": 0.022727272727272728,
+                "seasonal-changes": 0.022727272727272728,
+                "secret-societies": 0.022727272727272728,
+                "shape-shifting": 0.022727272727272728,
+                "sibling-rivalry": 0.022727272727272728,
+                "snowy-adventures": 0.022727272727272728,
+                "space-exploration": 0.022727272727272728,
+                "sports": 0.022727272727272728,
+                "subterranean-worlds": 0.022727272727272728,
+                "superheroes": 0.022727272727272728,
+                "talking-animals": 0.022727272727272728,
+                "the-arts": 0.022727272727272728,
+                "the-sky": 0.022727272727272728,
+                "time-travel": 0.022727272727272728,
+                "treasure-hunts": 0.022727272727272728,
+                "undercover-missions": 0.022727272727272728,
+                "underwater-adventures": 0.022727272727272728,
+                "unusual-vehicles": 0.022727272727272728,
+                "virtual-worlds": 0.022727272727272728
+            },
+            "num_tok": 501664802
+        },
+        "aux": {
+            "labels": [
+                "a-deadline-or-time-limit",
+                "alien-encounters",
+                "bygone-eras",
+                "cultural-traditions"
+            ],
+            "method": "total",
+            "limit": 1.0,
+            "dist": {
+                "a-deadline-or-time-limit": 0.25,
+                "alien-encounters": 0.25,
+                "bygone-eras": 0.25,
+                "cultural-traditions": 0.25
+            },
+            "num_tok": 46188871
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 128,
+        "effective_batch_size": 128,
+        "micro_batch_size": 128,
+        "accumulation_steps": 1,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.1,
+        "decay_prc": 0.1,
+        "seed": 2,
+        "compile": true,
+        "find_unused_parameters": true,
+        "is_ddp": true,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 1,
+        "process_id": 0,
+        "num_base_params": 26257920,
+        "device": "cuda",
+        "logger": "<Logger training_bo_trial_015 (DEBUG)>",
+        "labels": [
+            "core",
+            "a-deadline-or-time-limit",
+            "alien-encounters",
+            "bygone-eras",
+            "cultural-traditions"
+        ],
+        "loaders": {
+            "a-deadline-or-time-limit": {
+                "train": "SingleDataLoader(a-deadline-or-time-limit_train.bin, len=352)",
+                "test": "SingleDataLoader(a-deadline-or-time-limit_test.bin, len=40)"
+            },
+            "alien-encounters": {
+                "train": "SingleDataLoader(alien-encounters_train.bin, len=345)",
+                "test": "SingleDataLoader(alien-encounters_test.bin, len=38)"
+            },
+            "bygone-eras": {
+                "train": "SingleDataLoader(bygone-eras_train.bin, len=352)",
+                "test": "SingleDataLoader(bygone-eras_test.bin, len=39)"
+            },
+            "cultural-traditions": {
+                "train": "SingleDataLoader(cultural-traditions_train.bin, len=352)",
+                "test": "SingleDataLoader(cultural-traditions_test.bin, len=38)"
+            },
+            "dinosaurs": {
+                "train": "SingleDataLoader(dinosaurs_train.bin, len=337)",
+                "test": "SingleDataLoader(dinosaurs_test.bin, len=38)"
+            },
+            "dream-worlds": {
+                "train": "SingleDataLoader(dream-worlds_train.bin, len=339)",
+                "test": "SingleDataLoader(dream-worlds_test.bin, len=37)"
+            },
+            "enchanted-forests": {
+                "train": "SingleDataLoader(enchanted-forests_train.bin, len=347)",
+                "test": "SingleDataLoader(enchanted-forests_test.bin, len=38)"
+            },
+            "fairy-tales": {
+                "train": "SingleDataLoader(fairy-tales_train.bin, len=344)",
+                "test": "SingleDataLoader(fairy-tales_test.bin, len=37)"
+            },
+            "fantasy-worlds": {
+                "train": "SingleDataLoader(fantasy-worlds_train.bin, len=347)",
+                "test": "SingleDataLoader(fantasy-worlds_test.bin, len=39)"
+            },
+            "gardens": {
+                "train": "SingleDataLoader(gardens_train.bin, len=346)",
+                "test": "SingleDataLoader(gardens_test.bin, len=37)"
+            },
+            "giant-creatures": {
+                "train": "SingleDataLoader(giant-creatures_train.bin, len=347)",
+                "test": "SingleDataLoader(giant-creatures_test.bin, len=37)"
+            },
+            "haunted-places": {
+                "train": "SingleDataLoader(haunted-places_train.bin, len=347)",
+                "test": "SingleDataLoader(haunted-places_test.bin, len=41)"
+            },
+            "hidden-treasures": {
+                "train": "SingleDataLoader(hidden-treasures_train.bin, len=347)",
+                "test": "SingleDataLoader(hidden-treasures_test.bin, len=39)"
+            },
+            "holidays": {
+                "train": "SingleDataLoader(holidays_train.bin, len=347)",
+                "test": "SingleDataLoader(holidays_test.bin, len=38)"
+            },
+            "invisibility": {
+                "train": "SingleDataLoader(invisibility_train.bin, len=345)",
+                "test": "SingleDataLoader(invisibility_test.bin, len=37)"
+            },
+            "island-adventures": {
+                "train": "SingleDataLoader(island-adventures_train.bin, len=347)",
+                "test": "SingleDataLoader(island-adventures_test.bin, len=39)"
+            },
+            "living-objects": {
+                "train": "SingleDataLoader(living-objects_train.bin, len=336)",
+                "test": "SingleDataLoader(living-objects_test.bin, len=38)"
+            },
+            "lost-cities": {
+                "train": "SingleDataLoader(lost-cities_train.bin, len=347)",
+                "test": "SingleDataLoader(lost-cities_test.bin, len=40)"
+            },
+            "lost-civilizations": {
+                "train": "SingleDataLoader(lost-civilizations_train.bin, len=347)",
+                "test": "SingleDataLoader(lost-civilizations_test.bin, len=41)"
+            },
+            "magical-lands": {
+                "train": "SingleDataLoader(magical-lands_train.bin, len=347)",
+                "test": "SingleDataLoader(magical-lands_test.bin, len=38)"
+            },
+            "magical-objects": {
+                "train": "SingleDataLoader(magical-objects_train.bin, len=345)",
+                "test": "SingleDataLoader(magical-objects_test.bin, len=37)"
+            },
+            "miniature-worlds": {
+                "train": "SingleDataLoader(miniature-worlds_train.bin, len=335)",
+                "test": "SingleDataLoader(miniature-worlds_test.bin, len=37)"
+            },
+            "mysterious-maps": {
+                "train": "SingleDataLoader(mysterious-maps_train.bin, len=339)",
+                "test": "SingleDataLoader(mysterious-maps_test.bin, len=38)"
+            },
+            "mystical-creatures": {
+                "train": "SingleDataLoader(mystical-creatures_train.bin, len=347)",
+                "test": "SingleDataLoader(mystical-creatures_test.bin, len=38)"
+            },
+            "outer-space": {
+                "train": "SingleDataLoader(outer-space_train.bin, len=343)",
+                "test": "SingleDataLoader(outer-space_test.bin, len=38)"
+            },
+            "pirates": {
+                "train": "SingleDataLoader(pirates_train.bin, len=347)",
+                "test": "SingleDataLoader(pirates_test.bin, len=39)"
+            },
+            "riddles": {
+                "train": "SingleDataLoader(riddles_train.bin, len=344)",
+                "test": "SingleDataLoader(riddles_test.bin, len=38)"
+            },
+            "robots-and-technology": {
+                "train": "SingleDataLoader(robots-and-technology_train.bin, len=347)",
+                "test": "SingleDataLoader(robots-and-technology_test.bin, len=39)"
+            },
+            "royal-kingdoms": {
+                "train": "SingleDataLoader(royal-kingdoms_train.bin, len=347)",
+                "test": "SingleDataLoader(royal-kingdoms_test.bin, len=40)"
+            },
+            "school-life": {
+                "train": "SingleDataLoader(school-life_train.bin, len=338)",
+                "test": "SingleDataLoader(school-life_test.bin, len=38)"
+            },
+            "seasonal-changes": {
+                "train": "SingleDataLoader(seasonal-changes_train.bin, len=342)",
+                "test": "SingleDataLoader(seasonal-changes_test.bin, len=38)"
+            },
+            "secret-societies": {
+                "train": "SingleDataLoader(secret-societies_train.bin, len=347)",
+                "test": "SingleDataLoader(secret-societies_test.bin, len=38)"
+            },
+            "shape-shifting": {
+                "train": "SingleDataLoader(shape-shifting_train.bin, len=344)",
+                "test": "SingleDataLoader(shape-shifting_test.bin, len=38)"
+            },
+            "sibling-rivalry": {
+                "train": "SingleDataLoader(sibling-rivalry_train.bin, len=347)",
+                "test": "SingleDataLoader(sibling-rivalry_test.bin, len=39)"
+            },
+            "snowy-adventures": {
+                "train": "SingleDataLoader(snowy-adventures_train.bin, len=347)",
+                "test": "SingleDataLoader(snowy-adventures_test.bin, len=39)"
+            },
+            "space-exploration": {
+                "train": "SingleDataLoader(space-exploration_train.bin, len=345)",
+                "test": "SingleDataLoader(space-exploration_test.bin, len=38)"
+            },
+            "sports": {
+                "train": "SingleDataLoader(sports_train.bin, len=340)",
+                "test": "SingleDataLoader(sports_test.bin, len=37)"
+            },
+            "subterranean-worlds": {
+                "train": "SingleDataLoader(subterranean-worlds_train.bin, len=347)",
+                "test": "SingleDataLoader(subterranean-worlds_test.bin, len=37)"
+            },
+            "superheroes": {
+                "train": "SingleDataLoader(superheroes_train.bin, len=345)",
+                "test": "SingleDataLoader(superheroes_test.bin, len=38)"
+            },
+            "talking-animals": {
+                "train": "SingleDataLoader(talking-animals_train.bin, len=347)",
+                "test": "SingleDataLoader(talking-animals_test.bin, len=37)"
+            },
+            "the-arts": {
+                "train": "SingleDataLoader(the-arts_train.bin, len=345)",
+                "test": "SingleDataLoader(the-arts_test.bin, len=38)"
+            },
+            "the-sky": {
+                "train": "SingleDataLoader(the-sky_train.bin, len=342)",
+                "test": "SingleDataLoader(the-sky_test.bin, len=38)"
+            },
+            "time-travel": {
+                "train": "SingleDataLoader(time-travel_train.bin, len=347)",
+                "test": "SingleDataLoader(time-travel_test.bin, len=37)"
+            },
+            "treasure-hunts": {
+                "train": "SingleDataLoader(treasure-hunts_train.bin, len=330)",
+                "test": "SingleDataLoader(treasure-hunts_test.bin, len=35)"
+            },
+            "undercover-missions": {
+                "train": "SingleDataLoader(undercover-missions_train.bin, len=347)",
+                "test": "SingleDataLoader(undercover-missions_test.bin, len=40)"
+            },
+            "underwater-adventures": {
+                "train": "SingleDataLoader(underwater-adventures_train.bin, len=339)",
+                "test": "SingleDataLoader(underwater-adventures_test.bin, len=38)"
+            },
+            "unusual-vehicles": {
+                "train": "SingleDataLoader(unusual-vehicles_train.bin, len=347)",
+                "test": "SingleDataLoader(unusual-vehicles_test.bin, len=39)"
+            },
+            "virtual-worlds": {
+                "train": "SingleDataLoader(virtual-worlds_train.bin, len=346)",
+                "test": "SingleDataLoader(virtual-worlds_test.bin, len=37)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=15143)",
+                "test": "InterleavedDataLoader(len=1677)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=1401)",
+                "test": "InterleavedDataLoader(len=155)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=16544)",
+                "test": "InterleavedDataLoader(len=1832)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent_stories/seed_2/core_alien-encounters",
+        "experiment_id": "bo_trial_015",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "optimize/maxent_stories/seed_2/core_alien-encounters"
+    },
+    "label_prc": 1.0
+}

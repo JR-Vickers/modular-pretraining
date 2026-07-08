@@ -1,0 +1,1880 @@
+[GPU 0] [12:29:41] [INFO] Git branch: AGI-1696-New-Dataset-Runs_ethan, commit: b0d77fd8859e6a0eb07c7a309c20b686f616dece
+[GPU 0] [12:29:41] [INFO] Number of GPUs: 8
+[GPU 0] [12:29:43] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [12:29:43] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [12:29:57] [INFO] target effective batch size: 641, actual effective batch size: 672, micro batch size: 12, accumulation steps: 7, num gpus: 8
+[GPU 0] [12:29:57] [INFO] core total number of tokens: 66749057569
+[GPU 0] [12:29:57] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [12:29:57] [INFO] core: chinchilla optimal tokens: 16,130,190,080, requested proportion: 1.0000, requested number of tokens: 16,130,190,080.0, 
+[GPU 0] [12:29:57] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [12:29:57] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [12:29:57] [INFO] aux: chinchilla optimal tokens: 16,130,190,080, requested proportion: 0.0100, requested number of tokens: 161,301,900.8, 
+[GPU 0] [12:29:57] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/config.json
+[GPU 0] [12:29:57] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": -1,
+            "lr": 0.0005663534909876918,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/baseline",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 100,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00010729596369105324,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_01",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core"
+                ]
+            ],
+            "alpha_retain": 439.48130243995763,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 6.175735321341742e-05,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_02",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-biology"
+                ]
+            ],
+            "alpha_retain": 85.6836914774251,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00013629655348425783,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_03",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "code-lisp"
+                ]
+            ],
+            "alpha_retain": 589.8498097039299,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.0001557886319053484,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_04",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-cyber"
+                ]
+            ],
+            "alpha_retain": 517.4551644690708,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.000170511140227519,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_05",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-nuclear"
+                ]
+            ],
+            "alpha_retain": 548.1074204112906,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 24,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 1600,
+        "mlp_dim": 6400
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 16130190080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 161301900.8
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 641,
+        "effective_batch_size": 672,
+        "micro_batch_size": 12,
+        "accumulation_steps": 7,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 3,
+        "compile": true,
+        "find_unused_parameters": false,
+        "is_ddp": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 8,
+        "process_id": 0,
+        "num_base_params": 806509504,
+        "device": "cuda",
+        "logger": "<Logger training_20260527122922310033 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=410)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=24612)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=137831)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=105)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=105)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=105)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=1640)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=105)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=164083)",
+                "test": "InterleavedDataLoader(len=315)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=1640)",
+                "test": "InterleavedDataLoader(len=420)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=165723)",
+                "test": "InterleavedDataLoader(len=735)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3",
+        "experiment_id": "20260527122922310033",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/maxent/800M/seed_3"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [12:29:57] [INFO] Loader code-lisp train: 410, test: 105
+[GPU 0] [12:29:57] [INFO] Loader code-other train: 24612, test: 105
+[GPU 0] [12:29:57] [INFO] Loader fineweb train: 137831, test: 105
+[GPU 0] [12:29:57] [INFO] Loader papers-biology train: 410, test: 105
+[GPU 0] [12:29:57] [INFO] Loader papers-cyber train: 410, test: 105
+[GPU 0] [12:29:57] [INFO] Loader papers-nuclear train: 410, test: 105
+[GPU 0] [12:29:57] [INFO] Loader papers-other train: 1640, test: 105
+[GPU 0] [12:29:57] [INFO] Loader core train: 164083, test: 315
+[GPU 0] [12:29:57] [INFO] Loader aux train: 1640, test: 420
+[GPU 0] [12:29:57] [INFO] Loader all train: 165723, test: 735
+[GPU 0] [12:29:57] [INFO] Skipping completed stage baseline @ /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/baseline
+[GPU 0] [12:29:57] [INFO] Loading baseline model from /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/baseline/checkpoint.pth for downstream stages
+[GPU 0] [12:30:14] [INFO] Initialized BaseTransformer with 806,509,504 total parameters
+[GPU 0] [12:30:14] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [12:30:20] [INFO] torch.compile done
+[GPU 0] [12:30:50] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00010729596369105324, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_01", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core"]], "alpha_retain": 439.48130243995763, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [12:30:50] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [12:30:50] [INFO] UNLEARNING - maxent START
+[GPU 0] [12:30:50] [INFO] Unlearning: retaining ['core'], removing ['code-lisp', 'papers-biology', 'papers-cyber', 'papers-nuclear']
+[GPU 0] [12:30:51] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-cyber', 'papers-nuclear'] ----
+[GPU 0] [12:30:51] [DEBUG] alpha_retain: 439.48130243995763, lr: 0.00010729596369105324, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [12:30:51] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-other']
+[GPU 0] [12:41:52] [INFO] Finished MaxEnt — Avg KL→U: 8.293, Avg Retain CE: 2.231
+[GPU 0] [12:41:52] [INFO] ---- Begin Eval ----
+[GPU 0] [12:41:52] [INFO] Data: core | Experts: None
+[GPU 0] [12:42:41] [INFO] loss: 1.89551938
+[GPU 0] [12:42:41] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [12:42:49] [INFO] loss: 1.98236597
+[GPU 0] [12:42:49] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [12:42:56] [INFO] loss: 2.42451620
+[GPU 0] [12:42:56] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [12:43:03] [INFO] loss: 2.79646564
+[GPU 0] [12:43:03] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [12:43:10] [INFO] loss: 2.68779778
+[GPU 0] [12:43:13] [INFO] UNLEARNING - maxent - ADVERSARIAL FT START
+[GPU 0] [12:43:25] [INFO] ---- Begin FT | Experts: None | Data: ['code-lisp'] ----
+[GPU 0] [12:43:25] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [12:43:25] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [12:44:17] [INFO] New best validation loss: 1.8084 @ step 0
+[GPU 0] [12:44:31] [INFO] New best validation loss: 1.6618 @ step 1
+[GPU 0] [12:44:45] [INFO] New best validation loss: 1.5360 @ step 2
+[GPU 0] [12:44:58] [INFO] New best validation loss: 1.4296 @ step 3
+[GPU 0] [12:45:18] [INFO] New best validation loss: 1.3403 @ step 4
+[GPU 0] [12:45:36] [INFO] New best validation loss: 1.2660 @ step 5
+[GPU 0] [12:45:52] [INFO] New best validation loss: 1.2047 @ step 6
+[GPU 0] [12:46:05] [INFO] New best validation loss: 1.1550 @ step 7
+[GPU 0] [12:46:20] [INFO] New best validation loss: 1.1150 @ step 8
+[GPU 0] [12:46:36] [INFO] New best validation loss: 1.0820 @ step 9
+[GPU 0] [12:46:53] [INFO] New best validation loss: 1.0548 @ step 10
+[GPU 0] [12:47:11] [INFO] New best validation loss: 1.0321 @ step 11
+[GPU 0] [12:47:29] [INFO] New best validation loss: 1.0133 @ step 12
+[GPU 0] [12:47:46] [INFO] New best validation loss: 0.9974 @ step 13
+[GPU 0] [12:48:02] [INFO] New best validation loss: 0.9845 @ step 14
+[GPU 0] [12:48:19] [INFO] New best validation loss: 0.9739 @ step 15
+[GPU 0] [12:48:31] [INFO] New best validation loss: 0.9651 @ step 16
+[GPU 0] [12:48:46] [INFO] New best validation loss: 0.9576 @ step 17
+[GPU 0] [12:49:00] [INFO] New best validation loss: 0.9513 @ step 18
+[GPU 0] [12:49:13] [INFO] New best validation loss: 0.9456 @ step 19
+[GPU 0] [12:49:26] [INFO] New best validation loss: 0.9406 @ step 20
+[GPU 0] [12:49:44] [INFO] New best validation loss: 0.9360 @ step 21
+[GPU 0] [12:50:01] [INFO] New best validation loss: 0.9319 @ step 22
+[GPU 0] [12:50:19] [INFO] New best validation loss: 0.9284 @ step 23
+[GPU 0] [12:50:37] [INFO] New best validation loss: 0.9251 @ step 24
+[GPU 0] [12:50:55] [INFO] New best validation loss: 0.9221 @ step 25
+[GPU 0] [12:51:09] [INFO] New best validation loss: 0.9192 @ step 26
+[GPU 0] [12:51:23] [INFO] New best validation loss: 0.9166 @ step 27
+[GPU 0] [12:51:39] [INFO] New best validation loss: 0.9144 @ step 28
+[GPU 0] [12:51:57] [INFO] New best validation loss: 0.9124 @ step 29
+[GPU 0] [12:52:14] [INFO] New best validation loss: 0.9103 @ step 30
+[GPU 0] [12:52:30] [INFO] New best validation loss: 0.9084 @ step 31
+[GPU 0] [12:52:48] [INFO] New best validation loss: 0.9068 @ step 32
+[GPU 0] [12:53:04] [INFO] New best validation loss: 0.9051 @ step 33
+[GPU 0] [12:53:21] [INFO] New best validation loss: 0.9033 @ step 34
+[GPU 0] [12:53:38] [INFO] New best validation loss: 0.9019 @ step 35
+[GPU 0] [12:53:51] [INFO] New best validation loss: 0.9007 @ step 36
+[GPU 0] [12:54:05] [INFO] New best validation loss: 0.8993 @ step 37
+[GPU 0] [12:54:19] [INFO] New best validation loss: 0.8979 @ step 38
+[GPU 0] [12:54:33] [INFO] New best validation loss: 0.8968 @ step 39
+[GPU 0] [12:54:50] [INFO] New best validation loss: 0.8956 @ step 40
+[GPU 0] [12:55:08] [INFO] New best validation loss: 0.8947 @ step 41
+[GPU 0] [12:55:26] [INFO] New best validation loss: 0.8938 @ step 42
+[GPU 0] [12:55:44] [INFO] New best validation loss: 0.8927 @ step 43
+[GPU 0] [12:56:01] [INFO] New best validation loss: 0.8917 @ step 44
+[GPU 0] [12:56:18] [INFO] New best validation loss: 0.8907 @ step 45
+[GPU 0] [12:56:36] [INFO] New best validation loss: 0.8898 @ step 46
+[GPU 0] [12:56:52] [INFO] New best validation loss: 0.8888 @ step 47
+[GPU 0] [12:57:09] [INFO] New best validation loss: 0.8879 @ step 48
+[GPU 0] [12:57:25] [INFO] New best validation loss: 0.8872 @ step 49
+[GPU 0] [12:57:43] [INFO] New best validation loss: 0.8864 @ step 50
+[GPU 0] [12:58:00] [INFO] New best validation loss: 0.8853 @ step 51
+[GPU 0] [12:58:13] [INFO] New best validation loss: 0.8845 @ step 52
+[GPU 0] [12:58:27] [INFO] New best validation loss: 0.8838 @ step 53
+[GPU 0] [12:58:42] [INFO] New best validation loss: 0.8831 @ step 54
+[GPU 0] [12:58:55] [INFO] New best validation loss: 0.8823 @ step 55
+[GPU 0] [12:59:09] [INFO] New best validation loss: 0.8816 @ step 56
+[GPU 0] [12:59:22] [INFO] New best validation loss: 0.8809 @ step 57
+[GPU 0] [12:59:36] [INFO] New best validation loss: 0.8803 @ step 58
+[GPU 0] [12:59:49] [INFO] New best validation loss: 0.8796 @ step 59
+[GPU 0] [13:00:04] [INFO] New best validation loss: 0.8789 @ step 60
+[GPU 0] [13:00:27] [INFO] New best validation loss: 0.8781 @ step 61
+[GPU 0] [13:00:45] [INFO] New best validation loss: 0.8775 @ step 62
+[GPU 0] [13:01:02] [INFO] New best validation loss: 0.8768 @ step 63
+[GPU 0] [13:01:19] [INFO] New best validation loss: 0.8762 @ step 64
+[GPU 0] [13:01:37] [INFO] New best validation loss: 0.8757 @ step 65
+[GPU 0] [13:01:54] [INFO] New best validation loss: 0.8751 @ step 66
+[GPU 0] [13:02:10] [INFO] New best validation loss: 0.8745 @ step 67
+[GPU 0] [13:02:25] [INFO] New best validation loss: 0.8739 @ step 68
+[GPU 0] [13:02:42] [INFO] New best validation loss: 0.8733 @ step 69
+[GPU 0] [13:02:58] [INFO] New best validation loss: 0.8728 @ step 70
+[GPU 0] [13:03:14] [INFO] New best validation loss: 0.8722 @ step 71
+[GPU 0] [13:03:31] [INFO] New best validation loss: 0.8718 @ step 72
+[GPU 0] [13:03:45] [INFO] New best validation loss: 0.8713 @ step 73
+[GPU 0] [13:04:02] [INFO] New best validation loss: 0.8708 @ step 74
+[GPU 0] [13:04:19] [INFO] New best validation loss: 0.8704 @ step 75
+[GPU 0] [13:04:37] [INFO] New best validation loss: 0.8698 @ step 76
+[GPU 0] [13:04:52] [INFO] New best validation loss: 0.8694 @ step 77
+[GPU 0] [13:05:09] [INFO] New best validation loss: 0.8689 @ step 78
+[GPU 0] [13:05:23] [INFO] New best validation loss: 0.8685 @ step 79
+[GPU 0] [13:05:40] [INFO] New best validation loss: 0.8680 @ step 80
+[GPU 0] [13:05:58] [INFO] New best validation loss: 0.8676 @ step 81
+[GPU 0] [13:06:15] [INFO] New best validation loss: 0.8672 @ step 82
+[GPU 0] [13:06:29] [INFO] New best validation loss: 0.8668 @ step 83
+[GPU 0] [13:06:45] [INFO] New best validation loss: 0.8664 @ step 84
+[GPU 0] [13:07:01] [INFO] New best validation loss: 0.8659 @ step 85
+[GPU 0] [13:07:16] [INFO] New best validation loss: 0.8655 @ step 86
+[GPU 0] [13:07:29] [INFO] New best validation loss: 0.8650 @ step 87
+[GPU 0] [13:07:43] [INFO] New best validation loss: 0.8647 @ step 88
+[GPU 0] [13:07:55] [INFO] New best validation loss: 0.8644 @ step 89
+[GPU 0] [13:08:12] [INFO] New best validation loss: 0.8640 @ step 90
+[GPU 0] [13:08:26] [INFO] New best validation loss: 0.8637 @ step 91
+[GPU 0] [13:08:43] [INFO] New best validation loss: 0.8633 @ step 92
+[GPU 0] [13:09:00] [INFO] New best validation loss: 0.8631 @ step 93
+[GPU 0] [13:09:16] [INFO] New best validation loss: 0.8626 @ step 94
+[GPU 0] [13:09:35] [INFO] New best validation loss: 0.8623 @ step 95
+[GPU 0] [13:09:52] [INFO] New best validation loss: 0.8620 @ step 96
+[GPU 0] [13:10:06] [INFO] New best validation loss: 0.8616 @ step 97
+[GPU 0] [13:10:20] [INFO] New best validation loss: 0.8613 @ step 98
+[GPU 0] [13:10:34] [INFO] New best validation loss: 0.8610 @ step 99
+[GPU 0] [13:10:51] [INFO] New best validation loss: 0.8608 @ step 100
+[GPU 0] [13:11:09] [INFO] New best validation loss: 0.8605 @ step 101
+[GPU 0] [13:11:22] [INFO] New best validation loss: 0.8602 @ step 102
+[GPU 0] [13:11:36] [INFO] New best validation loss: 0.8598 @ step 103
+[GPU 0] [13:11:49] [INFO] New best validation loss: 0.8595 @ step 104
+[GPU 0] [13:12:07] [INFO] New best validation loss: 0.8593 @ step 105
+[GPU 0] [13:12:22] [INFO] New best validation loss: 0.8589 @ step 106
+[GPU 0] [13:12:36] [INFO] New best validation loss: 0.8587 @ step 107
+[GPU 0] [13:12:53] [INFO] New best validation loss: 0.8584 @ step 108
+[GPU 0] [13:13:08] [INFO] New best validation loss: 0.8581 @ step 109
+[GPU 0] [13:13:26] [INFO] New best validation loss: 0.8578 @ step 110
+[GPU 0] [13:13:43] [INFO] New best validation loss: 0.8576 @ step 111
+[GPU 0] [13:13:59] [INFO] New best validation loss: 0.8573 @ step 112
+[GPU 0] [13:14:15] [INFO] New best validation loss: 0.8571 @ step 113
+[GPU 0] [13:14:33] [INFO] New best validation loss: 0.8569 @ step 114
+[GPU 0] [13:14:47] [INFO] New best validation loss: 0.8566 @ step 115
+[GPU 0] [13:15:01] [INFO] New best validation loss: 0.8563 @ step 116
+[GPU 0] [13:15:21] [INFO] New best validation loss: 0.8560 @ step 117
+[GPU 0] [13:15:35] [INFO] New best validation loss: 0.8559 @ step 118
+[GPU 0] [13:15:53] [INFO] New best validation loss: 0.8556 @ step 119
+[GPU 0] [13:16:10] [INFO] New best validation loss: 0.8554 @ step 120
+[GPU 0] [13:16:29] [INFO] New best validation loss: 0.8551 @ step 121
+[GPU 0] [13:16:45] [INFO] New best validation loss: 0.8549 @ step 122
+[GPU 0] [13:17:03] [INFO] New best validation loss: 0.8547 @ step 123
+[GPU 0] [13:17:18] [INFO] New best validation loss: 0.8545 @ step 124
+[GPU 0] [13:17:31] [INFO] New best validation loss: 0.8543 @ step 125
+[GPU 0] [13:17:44] [INFO] New best validation loss: 0.8541 @ step 126
+[GPU 0] [13:17:59] [INFO] New best validation loss: 0.8539 @ step 127
+[GPU 0] [13:18:15] [INFO] New best validation loss: 0.8537 @ step 128
+[GPU 0] [13:18:31] [INFO] New best validation loss: 0.8536 @ step 129
+[GPU 0] [13:18:49] [INFO] New best validation loss: 0.8534 @ step 130
+[GPU 0] [13:19:06] [INFO] New best validation loss: 0.8532 @ step 131
+[GPU 0] [13:19:24] [INFO] New best validation loss: 0.8530 @ step 132
+[GPU 0] [13:19:41] [INFO] New best validation loss: 0.8529 @ step 133
+[GPU 0] [13:19:59] [INFO] New best validation loss: 0.8527 @ step 134
+[GPU 0] [13:20:16] [INFO] New best validation loss: 0.8524 @ step 135
+[GPU 0] [13:20:33] [INFO] New best validation loss: 0.8522 @ step 136
+[GPU 0] [13:20:47] [INFO] New best validation loss: 0.8521 @ step 137
+[GPU 0] [13:21:03] [INFO] New best validation loss: 0.8519 @ step 138
+[GPU 0] [13:21:18] [INFO] New best validation loss: 0.8518 @ step 139
+[GPU 0] [13:21:34] [INFO] New best validation loss: 0.8516 @ step 140
+[GPU 0] [13:21:50] [INFO] New best validation loss: 0.8515 @ step 141
+[GPU 0] [13:22:07] [INFO] New best validation loss: 0.8514 @ step 142
+[GPU 0] [13:22:25] [INFO] New best validation loss: 0.8513 @ step 143
+[GPU 0] [13:22:42] [INFO] New best validation loss: 0.8512 @ step 144
+[GPU 0] [13:23:00] [INFO] New best validation loss: 0.8511 @ step 145
+[GPU 0] [13:23:13] [INFO] New best validation loss: 0.8511 @ step 146
+[GPU 0] [13:23:27] [INFO] New best validation loss: 0.8509 @ step 147
+[GPU 0] [13:23:40] [INFO] New best validation loss: 0.8508 @ step 148
+[GPU 0] [13:23:53] [INFO] New best validation loss: 0.8506 @ step 149
+[GPU 0] [13:24:10] [INFO] New best validation loss: 0.8506 @ step 150
+[GPU 0] [13:24:23] [INFO] New best validation loss: 0.8503 @ step 151
+[GPU 0] [13:24:40] [INFO] New best validation loss: 0.8503 @ step 152
+[GPU 0] [13:24:54] [INFO] New best validation loss: 0.8501 @ step 153
+[GPU 0] [13:25:10] [INFO] New best validation loss: 0.8501 @ step 154
+[GPU 0] [13:25:28] [INFO] New best validation loss: 0.8500 @ step 155
+[GPU 0] [13:25:41] [INFO] New best validation loss: 0.8499 @ step 156
+[GPU 0] [13:25:54] [INFO] New best validation loss: 0.8499 @ step 157
+[GPU 0] [13:26:08] [INFO] New best validation loss: 0.8498 @ step 158
+[GPU 0] [13:26:37] [INFO] New best validation loss: 0.8497 @ step 160
+[GPU 0] [13:26:50] [INFO] New best validation loss: 0.8496 @ step 161
+[GPU 0] [13:27:05] [INFO] New best validation loss: 0.8496 @ step 162
+[GPU 0] [13:27:19] [INFO] New best validation loss: 0.8495 @ step 163
+[GPU 0] [13:27:35] [INFO] New best validation loss: 0.8495 @ step 164
+[GPU 0] [13:27:48] [INFO] New best validation loss: 0.8494 @ step 165
+[GPU 0] [13:28:03] [INFO] New best validation loss: 0.8494 @ step 166
+[GPU 0] [13:28:17] [INFO] New best validation loss: 0.8493 @ step 167
+[GPU 0] [13:28:35] [INFO] New best validation loss: 0.8492 @ step 168
+[GPU 0] [13:29:10] [INFO] New best validation loss: 0.8491 @ step 170
+[GPU 0] [13:31:41] [INFO] New best validation loss: 0.8491 @ step 179
+[GPU 0] [13:34:45] [INFO] Stop FT @ 191: no val improvement for 10 steps
+[GPU 0] [13:34:45] [INFO] Wrote stats.jsonl entries at FT step 179 
+[GPU 0] [13:34:59] [INFO] ---- Begin FT | Experts: None | Data: ['papers-biology'] ----
+[GPU 0] [13:34:59] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [13:34:59] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [13:35:12] [INFO] New best validation loss: 2.4192 @ step 0
+[GPU 0] [13:35:24] [INFO] New best validation loss: 2.4150 @ step 1
+[GPU 0] [13:35:36] [INFO] New best validation loss: 2.4117 @ step 2
+[GPU 0] [13:35:49] [INFO] New best validation loss: 2.4092 @ step 3
+[GPU 0] [13:36:04] [INFO] New best validation loss: 2.4069 @ step 4
+[GPU 0] [13:36:18] [INFO] New best validation loss: 2.4050 @ step 5
+[GPU 0] [13:36:34] [INFO] New best validation loss: 2.4034 @ step 6
+[GPU 0] [13:36:52] [INFO] New best validation loss: 2.4022 @ step 7
+[GPU 0] [13:37:09] [INFO] New best validation loss: 2.4011 @ step 8
+[GPU 0] [13:37:27] [INFO] New best validation loss: 2.4002 @ step 9
+[GPU 0] [13:37:45] [INFO] New best validation loss: 2.3994 @ step 10
+[GPU 0] [13:37:59] [INFO] New best validation loss: 2.3988 @ step 11
+[GPU 0] [13:38:14] [INFO] New best validation loss: 2.3980 @ step 12
+[GPU 0] [13:38:32] [INFO] New best validation loss: 2.3973 @ step 13
+[GPU 0] [13:38:47] [INFO] New best validation loss: 2.3966 @ step 14
+[GPU 0] [13:39:04] [INFO] New best validation loss: 2.3960 @ step 15
+[GPU 0] [13:39:19] [INFO] New best validation loss: 2.3953 @ step 16
+[GPU 0] [13:39:37] [INFO] New best validation loss: 2.3947 @ step 17
+[GPU 0] [13:39:50] [INFO] New best validation loss: 2.3941 @ step 18
+[GPU 0] [13:40:07] [INFO] New best validation loss: 2.3936 @ step 19
+[GPU 0] [13:40:21] [INFO] New best validation loss: 2.3931 @ step 20
+[GPU 0] [13:40:35] [INFO] New best validation loss: 2.3928 @ step 21
+[GPU 0] [13:40:50] [INFO] New best validation loss: 2.3923 @ step 22
+[GPU 0] [13:41:07] [INFO] New best validation loss: 2.3920 @ step 23
+[GPU 0] [13:41:23] [INFO] New best validation loss: 2.3919 @ step 24
+[GPU 0] [13:41:41] [INFO] New best validation loss: 2.3916 @ step 25
+[GPU 0] [13:41:57] [INFO] New best validation loss: 2.3913 @ step 26
+[GPU 0] [13:42:14] [INFO] New best validation loss: 2.3911 @ step 27
+[GPU 0] [13:42:29] [INFO] New best validation loss: 2.3910 @ step 28
+[GPU 0] [13:42:47] [INFO] New best validation loss: 2.3909 @ step 29
+[GPU 0] [13:43:04] [INFO] New best validation loss: 2.3908 @ step 30
+[GPU 0] [13:43:37] [INFO] New best validation loss: 2.3907 @ step 32
+[GPU 0] [13:46:27] [INFO] Stop FT @ 44: no val improvement for 10 steps
+[GPU 0] [13:46:27] [INFO] Wrote stats.jsonl entries at FT step 32 
+[GPU 0] [13:46:42] [INFO] ---- Begin FT | Experts: None | Data: ['papers-cyber'] ----
+[GPU 0] [13:46:42] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [13:46:42] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [13:46:54] [INFO] New best validation loss: 2.6863 @ step 0
+[GPU 0] [13:47:07] [INFO] New best validation loss: 2.6841 @ step 1
+[GPU 0] [13:47:20] [INFO] New best validation loss: 2.6827 @ step 2
+[GPU 0] [13:47:33] [INFO] New best validation loss: 2.6815 @ step 3
+[GPU 0] [13:47:46] [INFO] New best validation loss: 2.6803 @ step 4
+[GPU 0] [13:48:01] [INFO] New best validation loss: 2.6792 @ step 5
+[GPU 0] [13:48:15] [INFO] New best validation loss: 2.6779 @ step 6
+[GPU 0] [13:48:33] [INFO] New best validation loss: 2.6771 @ step 7
+[GPU 0] [13:48:49] [INFO] New best validation loss: 2.6763 @ step 8
+[GPU 0] [13:49:07] [INFO] New best validation loss: 2.6758 @ step 9
+[GPU 0] [13:49:22] [INFO] New best validation loss: 2.6751 @ step 10
+[GPU 0] [13:49:40] [INFO] New best validation loss: 2.6746 @ step 11
+[GPU 0] [13:49:58] [INFO] New best validation loss: 2.6742 @ step 12
+[GPU 0] [13:50:16] [INFO] New best validation loss: 2.6737 @ step 13
+[GPU 0] [13:50:34] [INFO] New best validation loss: 2.6732 @ step 14
+[GPU 0] [13:50:51] [INFO] New best validation loss: 2.6726 @ step 15
+[GPU 0] [13:51:08] [INFO] New best validation loss: 2.6721 @ step 16
+[GPU 0] [13:51:22] [INFO] New best validation loss: 2.6717 @ step 17
+[GPU 0] [13:51:35] [INFO] New best validation loss: 2.6713 @ step 18
+[GPU 0] [13:51:52] [INFO] New best validation loss: 2.6710 @ step 19
+[GPU 0] [13:52:10] [INFO] New best validation loss: 2.6709 @ step 20
+[GPU 0] [13:52:28] [INFO] New best validation loss: 2.6705 @ step 21
+[GPU 0] [13:52:45] [INFO] New best validation loss: 2.6704 @ step 22
+[GPU 0] [13:53:02] [INFO] New best validation loss: 2.6701 @ step 23
+[GPU 0] [13:53:16] [INFO] New best validation loss: 2.6700 @ step 24
+[GPU 0] [13:53:34] [INFO] New best validation loss: 2.6699 @ step 25
+[GPU 0] [13:53:51] [INFO] New best validation loss: 2.6698 @ step 26
+[GPU 0] [13:54:05] [INFO] New best validation loss: 2.6698 @ step 27
+[GPU 0] [13:54:21] [INFO] New best validation loss: 2.6697 @ step 28
+[GPU 0] [13:54:35] [INFO] New best validation loss: 2.6697 @ step 29
+[GPU 0] [13:57:33] [INFO] Stop FT @ 41: no val improvement for 10 steps
+[GPU 0] [13:57:33] [INFO] Wrote stats.jsonl entries at FT step 29 
+[GPU 0] [13:57:48] [INFO] ---- Begin FT | Experts: None | Data: ['papers-nuclear'] ----
+[GPU 0] [13:57:48] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [13:57:48] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [13:58:02] [INFO] New best validation loss: 2.7907 @ step 0
+[GPU 0] [13:58:15] [INFO] New best validation loss: 2.7867 @ step 1
+[GPU 0] [13:58:29] [INFO] New best validation loss: 2.7831 @ step 2
+[GPU 0] [13:58:43] [INFO] New best validation loss: 2.7796 @ step 3
+[GPU 0] [13:58:59] [INFO] New best validation loss: 2.7772 @ step 4
+[GPU 0] [13:59:16] [INFO] New best validation loss: 2.7750 @ step 5
+[GPU 0] [13:59:34] [INFO] New best validation loss: 2.7732 @ step 6
+[GPU 0] [13:59:50] [INFO] New best validation loss: 2.7713 @ step 7
+[GPU 0] [14:00:07] [INFO] New best validation loss: 2.7696 @ step 8
+[GPU 0] [14:00:28] [INFO] New best validation loss: 2.7681 @ step 9
+[GPU 0] [14:00:45] [INFO] New best validation loss: 2.7669 @ step 10
+[GPU 0] [14:01:02] [INFO] New best validation loss: 2.7657 @ step 11
+[GPU 0] [14:01:20] [INFO] New best validation loss: 2.7646 @ step 12
+[GPU 0] [14:01:37] [INFO] New best validation loss: 2.7636 @ step 13
+[GPU 0] [14:01:54] [INFO] New best validation loss: 2.7628 @ step 14
+[GPU 0] [14:02:09] [INFO] New best validation loss: 2.7621 @ step 15
+[GPU 0] [14:02:26] [INFO] New best validation loss: 2.7611 @ step 16
+[GPU 0] [14:02:42] [INFO] New best validation loss: 2.7604 @ step 17
+[GPU 0] [14:02:55] [INFO] New best validation loss: 2.7600 @ step 18
+[GPU 0] [14:03:11] [INFO] New best validation loss: 2.7594 @ step 19
+[GPU 0] [14:03:29] [INFO] New best validation loss: 2.7586 @ step 20
+[GPU 0] [14:03:47] [INFO] New best validation loss: 2.7580 @ step 21
+[GPU 0] [14:04:04] [INFO] New best validation loss: 2.7575 @ step 22
+[GPU 0] [14:04:19] [INFO] New best validation loss: 2.7569 @ step 23
+[GPU 0] [14:04:36] [INFO] New best validation loss: 2.7565 @ step 24
+[GPU 0] [14:04:53] [INFO] New best validation loss: 2.7561 @ step 25
+[GPU 0] [14:05:09] [INFO] New best validation loss: 2.7557 @ step 26
+[GPU 0] [14:05:26] [INFO] New best validation loss: 2.7554 @ step 27
+[GPU 0] [14:05:41] [INFO] New best validation loss: 2.7552 @ step 28
+[GPU 0] [14:05:55] [INFO] New best validation loss: 2.7550 @ step 29
+[GPU 0] [14:06:11] [INFO] New best validation loss: 2.7546 @ step 30
+[GPU 0] [14:06:30] [INFO] New best validation loss: 2.7544 @ step 31
+[GPU 0] [14:06:47] [INFO] New best validation loss: 2.7543 @ step 32
+[GPU 0] [14:07:02] [INFO] New best validation loss: 2.7541 @ step 33
+[GPU 0] [14:07:17] [INFO] New best validation loss: 2.7540 @ step 34
+[GPU 0] [14:07:35] [INFO] New best validation loss: 2.7539 @ step 35
+[GPU 0] [14:07:52] [INFO] New best validation loss: 2.7539 @ step 36
+[GPU 0] [14:08:11] [INFO] New best validation loss: 2.7539 @ step 37
+[GPU 0] [14:08:28] [INFO] New best validation loss: 2.7539 @ step 38
+[GPU 0] [14:11:30] [INFO] Stop FT @ 50: no val improvement for 10 steps
+[GPU 0] [14:11:30] [INFO] Wrote stats.jsonl entries at FT step 38 
+[GPU 0] [14:11:32] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 6.175735321341742e-05, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_02", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-biology"]], "alpha_retain": 85.6836914774251, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [14:11:32] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [14:11:32] [INFO] UNLEARNING - maxent START
+[GPU 0] [14:11:32] [INFO] Unlearning: retaining ['core', 'papers-biology'], removing ['code-lisp', 'papers-cyber', 'papers-nuclear']
+[GPU 0] [14:11:33] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-cyber', 'papers-nuclear'] ----
+[GPU 0] [14:11:33] [DEBUG] alpha_retain: 85.6836914774251, lr: 6.175735321341742e-05, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [14:11:33] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-biology', 'papers-other']
+[GPU 0] [14:13:26] [INFO] Early stop MAXENT at step 496: KL→U ≤ 2.0
+[GPU 0] [14:13:26] [INFO] Finished MaxEnt — Avg KL→U: 7.956, Avg Retain CE: 2.289
+[GPU 0] [14:13:26] [INFO] ---- Begin Eval ----
+[GPU 0] [14:13:26] [INFO] Data: core | Experts: None
+[GPU 0] [14:13:47] [INFO] loss: 1.88388586
+[GPU 0] [14:13:47] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [14:13:54] [INFO] loss: 6.21469450
+[GPU 0] [14:13:54] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [14:14:02] [INFO] loss: 2.37250733
+[GPU 0] [14:14:02] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [14:14:09] [INFO] loss: 2.79443836
+[GPU 0] [14:14:09] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [14:14:16] [INFO] loss: 2.69010425
+[GPU 0] [14:14:20] [INFO] UNLEARNING - maxent - ADVERSARIAL FT START
+[GPU 0] [14:14:32] [INFO] ---- Begin FT | Experts: None | Data: ['code-lisp'] ----
+[GPU 0] [14:14:32] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [14:14:32] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [14:14:43] [INFO] New best validation loss: 5.9492 @ step 0
+[GPU 0] [14:14:57] [INFO] New best validation loss: 5.6750 @ step 1
+[GPU 0] [14:15:12] [INFO] New best validation loss: 5.4137 @ step 2
+[GPU 0] [14:15:29] [INFO] New best validation loss: 5.1649 @ step 3
+[GPU 0] [14:15:47] [INFO] New best validation loss: 4.9251 @ step 4
+[GPU 0] [14:16:04] [INFO] New best validation loss: 4.6943 @ step 5
+[GPU 0] [14:16:17] [INFO] New best validation loss: 4.4673 @ step 6
+[GPU 0] [14:16:31] [INFO] New best validation loss: 4.2484 @ step 7
+[GPU 0] [14:16:48] [INFO] New best validation loss: 4.0343 @ step 8
+[GPU 0] [14:17:05] [INFO] New best validation loss: 3.8238 @ step 9
+[GPU 0] [14:17:20] [INFO] New best validation loss: 3.6178 @ step 10
+[GPU 0] [14:17:38] [INFO] New best validation loss: 3.4200 @ step 11
+[GPU 0] [14:17:52] [INFO] New best validation loss: 3.2289 @ step 12
+[GPU 0] [14:18:09] [INFO] New best validation loss: 3.0454 @ step 13
+[GPU 0] [14:18:23] [INFO] New best validation loss: 2.8701 @ step 14
+[GPU 0] [14:18:37] [INFO] New best validation loss: 2.7049 @ step 15
+[GPU 0] [14:18:50] [INFO] New best validation loss: 2.5473 @ step 16
+[GPU 0] [14:19:03] [INFO] New best validation loss: 2.4002 @ step 17
+[GPU 0] [14:19:18] [INFO] New best validation loss: 2.2625 @ step 18
+[GPU 0] [14:19:31] [INFO] New best validation loss: 2.1346 @ step 19
+[GPU 0] [14:19:44] [INFO] New best validation loss: 2.0161 @ step 20
+[GPU 0] [14:20:01] [INFO] New best validation loss: 1.9068 @ step 21
+[GPU 0] [14:20:19] [INFO] New best validation loss: 1.8064 @ step 22
+[GPU 0] [14:20:36] [INFO] New best validation loss: 1.7156 @ step 23
+[GPU 0] [14:20:54] [INFO] New best validation loss: 1.6327 @ step 24
+[GPU 0] [14:21:11] [INFO] New best validation loss: 1.5576 @ step 25
+[GPU 0] [14:21:30] [INFO] New best validation loss: 1.4910 @ step 26
+[GPU 0] [14:21:47] [INFO] New best validation loss: 1.4317 @ step 27
+[GPU 0] [14:22:05] [INFO] New best validation loss: 1.3793 @ step 28
+[GPU 0] [14:22:22] [INFO] New best validation loss: 1.3328 @ step 29
+[GPU 0] [14:22:37] [INFO] New best validation loss: 1.2914 @ step 30
+[GPU 0] [14:22:54] [INFO] New best validation loss: 1.2555 @ step 31
+[GPU 0] [14:23:11] [INFO] New best validation loss: 1.2233 @ step 32
+[GPU 0] [14:23:28] [INFO] New best validation loss: 1.1954 @ step 33
+[GPU 0] [14:23:46] [INFO] New best validation loss: 1.1703 @ step 34
+[GPU 0] [14:24:03] [INFO] New best validation loss: 1.1481 @ step 35
+[GPU 0] [14:24:18] [INFO] New best validation loss: 1.1285 @ step 36
+[GPU 0] [14:24:32] [INFO] New best validation loss: 1.1106 @ step 37
+[GPU 0] [14:24:45] [INFO] New best validation loss: 1.0950 @ step 38
+[GPU 0] [14:24:58] [INFO] New best validation loss: 1.0809 @ step 39
+[GPU 0] [14:25:13] [INFO] New best validation loss: 1.0683 @ step 40
+[GPU 0] [14:25:31] [INFO] New best validation loss: 1.0570 @ step 41
+[GPU 0] [14:25:49] [INFO] New best validation loss: 1.0466 @ step 42
+[GPU 0] [14:26:06] [INFO] New best validation loss: 1.0375 @ step 43
+[GPU 0] [14:26:21] [INFO] New best validation loss: 1.0292 @ step 44
+[GPU 0] [14:26:38] [INFO] New best validation loss: 1.0216 @ step 45
+[GPU 0] [14:26:55] [INFO] New best validation loss: 1.0146 @ step 46
+[GPU 0] [14:27:12] [INFO] New best validation loss: 1.0082 @ step 47
+[GPU 0] [14:27:26] [INFO] New best validation loss: 1.0023 @ step 48
+[GPU 0] [14:27:42] [INFO] New best validation loss: 0.9969 @ step 49
+[GPU 0] [14:27:58] [INFO] New best validation loss: 0.9920 @ step 50
+[GPU 0] [14:28:14] [INFO] New best validation loss: 0.9873 @ step 51
+[GPU 0] [14:28:28] [INFO] New best validation loss: 0.9828 @ step 52
+[GPU 0] [14:28:43] [INFO] New best validation loss: 0.9789 @ step 53
+[GPU 0] [14:28:56] [INFO] New best validation loss: 0.9750 @ step 54
+[GPU 0] [14:29:11] [INFO] New best validation loss: 0.9715 @ step 55
+[GPU 0] [14:29:29] [INFO] New best validation loss: 0.9681 @ step 56
+[GPU 0] [14:29:42] [INFO] New best validation loss: 0.9650 @ step 57
+[GPU 0] [14:29:58] [INFO] New best validation loss: 0.9620 @ step 58
+[GPU 0] [14:30:22] [INFO] New best validation loss: 0.9590 @ step 59
+[GPU 0] [14:30:39] [INFO] New best validation loss: 0.9564 @ step 60
+[GPU 0] [14:30:56] [INFO] New best validation loss: 0.9539 @ step 61
+[GPU 0] [14:31:11] [INFO] New best validation loss: 0.9514 @ step 62
+[GPU 0] [14:31:25] [INFO] New best validation loss: 0.9491 @ step 63
+[GPU 0] [14:31:39] [INFO] New best validation loss: 0.9467 @ step 64
+[GPU 0] [14:31:54] [INFO] New best validation loss: 0.9447 @ step 65
+[GPU 0] [14:32:10] [INFO] New best validation loss: 0.9427 @ step 66
+[GPU 0] [14:32:27] [INFO] New best validation loss: 0.9406 @ step 67
+[GPU 0] [14:32:42] [INFO] New best validation loss: 0.9386 @ step 68
+[GPU 0] [14:32:56] [INFO] New best validation loss: 0.9370 @ step 69
+[GPU 0] [14:33:14] [INFO] New best validation loss: 0.9352 @ step 70
+[GPU 0] [14:33:33] [INFO] New best validation loss: 0.9335 @ step 71
+[GPU 0] [14:33:51] [INFO] New best validation loss: 0.9317 @ step 72
+[GPU 0] [14:34:08] [INFO] New best validation loss: 0.9303 @ step 73
+[GPU 0] [14:34:27] [INFO] New best validation loss: 0.9287 @ step 74
+[GPU 0] [14:34:44] [INFO] New best validation loss: 0.9272 @ step 75
+[GPU 0] [14:34:59] [INFO] New best validation loss: 0.9257 @ step 76
+[GPU 0] [14:35:14] [INFO] New best validation loss: 0.9243 @ step 77
+[GPU 0] [14:35:30] [INFO] New best validation loss: 0.9231 @ step 78
+[GPU 0] [14:35:47] [INFO] New best validation loss: 0.9217 @ step 79
+[GPU 0] [14:36:05] [INFO] New best validation loss: 0.9203 @ step 80
+[GPU 0] [14:36:21] [INFO] New best validation loss: 0.9191 @ step 81
+[GPU 0] [14:36:34] [INFO] New best validation loss: 0.9179 @ step 82
+[GPU 0] [14:36:47] [INFO] New best validation loss: 0.9168 @ step 83
+[GPU 0] [14:37:02] [INFO] New best validation loss: 0.9156 @ step 84
+[GPU 0] [14:37:19] [INFO] New best validation loss: 0.9145 @ step 85
+[GPU 0] [14:37:37] [INFO] New best validation loss: 0.9134 @ step 86
+[GPU 0] [14:37:54] [INFO] New best validation loss: 0.9122 @ step 87
+[GPU 0] [14:38:11] [INFO] New best validation loss: 0.9111 @ step 88
+[GPU 0] [14:38:29] [INFO] New best validation loss: 0.9101 @ step 89
+[GPU 0] [14:38:47] [INFO] New best validation loss: 0.9092 @ step 90
+[GPU 0] [14:39:04] [INFO] New best validation loss: 0.9083 @ step 91
+[GPU 0] [14:39:21] [INFO] New best validation loss: 0.9073 @ step 92
+[GPU 0] [14:39:36] [INFO] New best validation loss: 0.9063 @ step 93
+[GPU 0] [14:39:49] [INFO] New best validation loss: 0.9053 @ step 94
+[GPU 0] [14:40:03] [INFO] New best validation loss: 0.9045 @ step 95
+[GPU 0] [14:40:20] [INFO] New best validation loss: 0.9036 @ step 96
+[GPU 0] [14:40:37] [INFO] New best validation loss: 0.9026 @ step 97
+[GPU 0] [14:40:50] [INFO] New best validation loss: 0.9019 @ step 98
+[GPU 0] [14:41:06] [INFO] New best validation loss: 0.9011 @ step 99
+[GPU 0] [14:41:20] [INFO] New best validation loss: 0.9002 @ step 100
+[GPU 0] [14:41:34] [INFO] New best validation loss: 0.8993 @ step 101
+[GPU 0] [14:41:47] [INFO] New best validation loss: 0.8985 @ step 102
+[GPU 0] [14:42:01] [INFO] New best validation loss: 0.8977 @ step 103
+[GPU 0] [14:42:16] [INFO] New best validation loss: 0.8969 @ step 104
+[GPU 0] [14:42:34] [INFO] New best validation loss: 0.8961 @ step 105
+[GPU 0] [14:42:51] [INFO] New best validation loss: 0.8955 @ step 106
+[GPU 0] [14:43:08] [INFO] New best validation loss: 0.8949 @ step 107
+[GPU 0] [14:43:25] [INFO] New best validation loss: 0.8942 @ step 108
+[GPU 0] [14:43:38] [INFO] New best validation loss: 0.8935 @ step 109
+[GPU 0] [14:43:52] [INFO] New best validation loss: 0.8927 @ step 110
+[GPU 0] [14:44:10] [INFO] New best validation loss: 0.8921 @ step 111
+[GPU 0] [14:44:28] [INFO] New best validation loss: 0.8914 @ step 112
+[GPU 0] [14:44:46] [INFO] New best validation loss: 0.8907 @ step 113
+[GPU 0] [14:45:01] [INFO] New best validation loss: 0.8900 @ step 114
+[GPU 0] [14:45:22] [INFO] New best validation loss: 0.8894 @ step 115
+[GPU 0] [14:45:40] [INFO] New best validation loss: 0.8888 @ step 116
+[GPU 0] [14:45:58] [INFO] New best validation loss: 0.8883 @ step 117
+[GPU 0] [14:46:12] [INFO] New best validation loss: 0.8877 @ step 118
+[GPU 0] [14:46:27] [INFO] New best validation loss: 0.8871 @ step 119
+[GPU 0] [14:46:45] [INFO] New best validation loss: 0.8864 @ step 120
+[GPU 0] [14:46:59] [INFO] New best validation loss: 0.8859 @ step 121
+[GPU 0] [14:47:16] [INFO] New best validation loss: 0.8854 @ step 122
+[GPU 0] [14:47:33] [INFO] New best validation loss: 0.8847 @ step 123
+[GPU 0] [14:47:46] [INFO] New best validation loss: 0.8842 @ step 124
+[GPU 0] [14:47:59] [INFO] New best validation loss: 0.8837 @ step 125
+[GPU 0] [14:48:14] [INFO] New best validation loss: 0.8830 @ step 126
+[GPU 0] [14:48:28] [INFO] New best validation loss: 0.8825 @ step 127
+[GPU 0] [14:48:43] [INFO] New best validation loss: 0.8821 @ step 128
+[GPU 0] [14:48:57] [INFO] New best validation loss: 0.8816 @ step 129
+[GPU 0] [14:49:13] [INFO] New best validation loss: 0.8811 @ step 130
+[GPU 0] [14:49:30] [INFO] New best validation loss: 0.8806 @ step 131
+[GPU 0] [14:49:47] [INFO] New best validation loss: 0.8801 @ step 132
+[GPU 0] [14:50:05] [INFO] New best validation loss: 0.8796 @ step 133
+[GPU 0] [14:50:19] [INFO] New best validation loss: 0.8792 @ step 134
+[GPU 0] [14:50:35] [INFO] New best validation loss: 0.8788 @ step 135
+[GPU 0] [14:50:49] [INFO] New best validation loss: 0.8783 @ step 136
+[GPU 0] [14:51:07] [INFO] New best validation loss: 0.8778 @ step 137
+[GPU 0] [14:51:20] [INFO] New best validation loss: 0.8774 @ step 138
+[GPU 0] [14:51:34] [INFO] New best validation loss: 0.8769 @ step 139
+[GPU 0] [14:51:48] [INFO] New best validation loss: 0.8765 @ step 140
+[GPU 0] [14:52:01] [INFO] New best validation loss: 0.8760 @ step 141
+[GPU 0] [14:52:14] [INFO] New best validation loss: 0.8756 @ step 142
+[GPU 0] [14:52:31] [INFO] New best validation loss: 0.8752 @ step 143
+[GPU 0] [14:52:44] [INFO] New best validation loss: 0.8748 @ step 144
+[GPU 0] [14:52:58] [INFO] New best validation loss: 0.8743 @ step 145
+[GPU 0] [14:53:14] [INFO] New best validation loss: 0.8740 @ step 146
+[GPU 0] [14:53:32] [INFO] New best validation loss: 0.8736 @ step 147
+[GPU 0] [14:53:47] [INFO] New best validation loss: 0.8732 @ step 148
+[GPU 0] [14:54:01] [INFO] New best validation loss: 0.8729 @ step 149
+[GPU 0] [14:54:16] [INFO] New best validation loss: 0.8724 @ step 150
+[GPU 0] [14:54:31] [INFO] New best validation loss: 0.8720 @ step 151
+[GPU 0] [14:54:45] [INFO] New best validation loss: 0.8717 @ step 152
+[GPU 0] [14:55:00] [INFO] New best validation loss: 0.8714 @ step 153
+[GPU 0] [14:55:15] [INFO] New best validation loss: 0.8710 @ step 154
+[GPU 0] [14:55:32] [INFO] New best validation loss: 0.8707 @ step 155
+[GPU 0] [14:55:45] [INFO] New best validation loss: 0.8704 @ step 156
+[GPU 0] [14:56:03] [INFO] New best validation loss: 0.8699 @ step 157
+[GPU 0] [14:56:19] [INFO] New best validation loss: 0.8696 @ step 158
+[GPU 0] [14:56:32] [INFO] New best validation loss: 0.8693 @ step 159
+[GPU 0] [14:56:46] [INFO] New best validation loss: 0.8690 @ step 160
+[GPU 0] [14:57:01] [INFO] New best validation loss: 0.8686 @ step 161
+[GPU 0] [14:57:18] [INFO] New best validation loss: 0.8683 @ step 162
+[GPU 0] [14:57:36] [INFO] New best validation loss: 0.8679 @ step 163
+[GPU 0] [14:57:49] [INFO] New best validation loss: 0.8675 @ step 164
+[GPU 0] [14:58:04] [INFO] New best validation loss: 0.8673 @ step 165
+[GPU 0] [14:58:18] [INFO] New best validation loss: 0.8670 @ step 166
+[GPU 0] [14:58:32] [INFO] New best validation loss: 0.8667 @ step 167
+[GPU 0] [14:58:47] [INFO] New best validation loss: 0.8665 @ step 168
+[GPU 0] [14:59:04] [INFO] New best validation loss: 0.8663 @ step 169
+[GPU 0] [14:59:18] [INFO] New best validation loss: 0.8660 @ step 170
+[GPU 0] [14:59:35] [INFO] New best validation loss: 0.8657 @ step 171
+[GPU 0] [14:59:51] [INFO] New best validation loss: 0.8653 @ step 172
+[GPU 0] [15:00:08] [INFO] New best validation loss: 0.8650 @ step 173
+[GPU 0] [15:00:29] [INFO] New best validation loss: 0.8647 @ step 174
+[GPU 0] [15:00:46] [INFO] New best validation loss: 0.8643 @ step 175
+[GPU 0] [15:01:00] [INFO] New best validation loss: 0.8640 @ step 176
+[GPU 0] [15:01:15] [INFO] New best validation loss: 0.8638 @ step 177
+[GPU 0] [15:01:29] [INFO] New best validation loss: 0.8635 @ step 178
+[GPU 0] [15:01:42] [INFO] New best validation loss: 0.8633 @ step 179
+[GPU 0] [15:01:59] [INFO] New best validation loss: 0.8630 @ step 180
+[GPU 0] [15:02:16] [INFO] New best validation loss: 0.8628 @ step 181
+[GPU 0] [15:02:34] [INFO] New best validation loss: 0.8625 @ step 182
+[GPU 0] [15:02:52] [INFO] New best validation loss: 0.8623 @ step 183
+[GPU 0] [15:03:09] [INFO] New best validation loss: 0.8621 @ step 184
+[GPU 0] [15:03:23] [INFO] New best validation loss: 0.8619 @ step 185
+[GPU 0] [15:03:37] [INFO] New best validation loss: 0.8616 @ step 186
+[GPU 0] [15:03:51] [INFO] New best validation loss: 0.8613 @ step 187
+[GPU 0] [15:04:09] [INFO] New best validation loss: 0.8611 @ step 188
+[GPU 0] [15:04:27] [INFO] New best validation loss: 0.8609 @ step 189
+[GPU 0] [15:04:45] [INFO] New best validation loss: 0.8607 @ step 190
+[GPU 0] [15:05:02] [INFO] New best validation loss: 0.8604 @ step 191
+[GPU 0] [15:05:16] [INFO] New best validation loss: 0.8602 @ step 192
+[GPU 0] [15:05:33] [INFO] New best validation loss: 0.8600 @ step 193
+[GPU 0] [15:05:50] [INFO] New best validation loss: 0.8598 @ step 194
+[GPU 0] [15:06:08] [INFO] New best validation loss: 0.8596 @ step 195
+[GPU 0] [15:06:21] [INFO] New best validation loss: 0.8593 @ step 196
+[GPU 0] [15:06:38] [INFO] New best validation loss: 0.8590 @ step 197
+[GPU 0] [15:06:52] [INFO] New best validation loss: 0.8588 @ step 198
+[GPU 0] [15:07:06] [INFO] New best validation loss: 0.8585 @ step 199
+[GPU 0] [15:07:06] [INFO] Wrote stats.jsonl entries at FT step 199 
+[GPU 0] [15:07:20] [INFO] ---- Begin FT | Experts: None | Data: ['papers-cyber'] ----
+[GPU 0] [15:07:20] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [15:07:20] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [15:07:32] [INFO] New best validation loss: 2.6847 @ step 0
+[GPU 0] [15:07:45] [INFO] New best validation loss: 2.6790 @ step 1
+[GPU 0] [15:07:58] [INFO] New best validation loss: 2.6756 @ step 2
+[GPU 0] [15:08:11] [INFO] New best validation loss: 2.6734 @ step 3
+[GPU 0] [15:08:26] [INFO] New best validation loss: 2.6711 @ step 4
+[GPU 0] [15:08:40] [INFO] New best validation loss: 2.6696 @ step 5
+[GPU 0] [15:08:53] [INFO] New best validation loss: 2.6677 @ step 6
+[GPU 0] [15:09:09] [INFO] New best validation loss: 2.6659 @ step 7
+[GPU 0] [15:09:26] [INFO] New best validation loss: 2.6646 @ step 8
+[GPU 0] [15:09:44] [INFO] New best validation loss: 2.6631 @ step 9
+[GPU 0] [15:09:58] [INFO] New best validation loss: 2.6618 @ step 10
+[GPU 0] [15:10:15] [INFO] New best validation loss: 2.6607 @ step 11
+[GPU 0] [15:10:34] [INFO] New best validation loss: 2.6598 @ step 12
+[GPU 0] [15:10:51] [INFO] New best validation loss: 2.6588 @ step 13
+[GPU 0] [15:11:08] [INFO] New best validation loss: 2.6580 @ step 14
+[GPU 0] [15:11:22] [INFO] New best validation loss: 2.6571 @ step 15
+[GPU 0] [15:11:39] [INFO] New best validation loss: 2.6562 @ step 16
+[GPU 0] [15:11:52] [INFO] New best validation loss: 2.6555 @ step 17
+[GPU 0] [15:12:06] [INFO] New best validation loss: 2.6547 @ step 18
+[GPU 0] [15:12:21] [INFO] New best validation loss: 2.6540 @ step 19
+[GPU 0] [15:12:39] [INFO] New best validation loss: 2.6534 @ step 20
+[GPU 0] [15:12:56] [INFO] New best validation loss: 2.6528 @ step 21
+[GPU 0] [15:13:12] [INFO] New best validation loss: 2.6522 @ step 22
+[GPU 0] [15:13:30] [INFO] New best validation loss: 2.6516 @ step 23
+[GPU 0] [15:13:48] [INFO] New best validation loss: 2.6511 @ step 24
+[GPU 0] [15:14:04] [INFO] New best validation loss: 2.6507 @ step 25
+[GPU 0] [15:14:19] [INFO] New best validation loss: 2.6504 @ step 26
+[GPU 0] [15:14:36] [INFO] New best validation loss: 2.6500 @ step 27
+[GPU 0] [15:14:50] [INFO] New best validation loss: 2.6497 @ step 28
+[GPU 0] [15:15:04] [INFO] New best validation loss: 2.6494 @ step 29
+[GPU 0] [15:15:22] [INFO] New best validation loss: 2.6491 @ step 30
+[GPU 0] [15:15:38] [INFO] New best validation loss: 2.6487 @ step 31
+[GPU 0] [15:15:54] [INFO] New best validation loss: 2.6484 @ step 32
+[GPU 0] [15:16:09] [INFO] New best validation loss: 2.6480 @ step 33
+[GPU 0] [15:16:27] [INFO] New best validation loss: 2.6478 @ step 34
+[GPU 0] [15:16:44] [INFO] New best validation loss: 2.6476 @ step 35
+[GPU 0] [15:16:58] [INFO] New best validation loss: 2.6474 @ step 36
+[GPU 0] [15:17:11] [INFO] New best validation loss: 2.6473 @ step 37
+[GPU 0] [15:17:26] [INFO] New best validation loss: 2.6471 @ step 38
+[GPU 0] [15:17:44] [INFO] New best validation loss: 2.6469 @ step 39
+[GPU 0] [15:17:58] [INFO] New best validation loss: 2.6467 @ step 40
+[GPU 0] [15:18:12] [INFO] New best validation loss: 2.6465 @ step 41
+[GPU 0] [15:18:29] [INFO] New best validation loss: 2.6464 @ step 42
+[GPU 0] [15:18:46] [INFO] New best validation loss: 2.6463 @ step 43
+[GPU 0] [15:19:04] [INFO] New best validation loss: 2.6462 @ step 44
+[GPU 0] [15:19:20] [INFO] New best validation loss: 2.6461 @ step 45
+[GPU 0] [15:19:38] [INFO] New best validation loss: 2.6460 @ step 46
+[GPU 0] [15:19:53] [INFO] New best validation loss: 2.6459 @ step 47
+[GPU 0] [15:20:11] [INFO] New best validation loss: 2.6458 @ step 48
+[GPU 0] [15:20:29] [INFO] New best validation loss: 2.6457 @ step 49
+[GPU 0] [15:20:45] [INFO] New best validation loss: 2.6457 @ step 50
+[GPU 0] [15:20:58] [INFO] New best validation loss: 2.6456 @ step 51
+[GPU 0] [15:21:15] [INFO] New best validation loss: 2.6456 @ step 52
+[GPU 0] [15:21:34] [INFO] New best validation loss: 2.6455 @ step 53
+[GPU 0] [15:21:51] [INFO] New best validation loss: 2.6454 @ step 54
+[GPU 0] [15:22:08] [INFO] New best validation loss: 2.6453 @ step 55
+[GPU 0] [15:22:23] [INFO] New best validation loss: 2.6453 @ step 56
+[GPU 0] [15:23:10] [INFO] New best validation loss: 2.6452 @ step 59
+[GPU 0] [15:23:23] [INFO] New best validation loss: 2.6451 @ step 60
+[GPU 0] [15:23:37] [INFO] New best validation loss: 2.6451 @ step 61
+[GPU 0] [15:23:50] [INFO] New best validation loss: 2.6451 @ step 62
+[GPU 0] [15:24:08] [INFO] New best validation loss: 2.6450 @ step 63
+[GPU 0] [15:24:26] [INFO] New best validation loss: 2.6450 @ step 64
+[GPU 0] [15:25:11] [INFO] New best validation loss: 2.6449 @ step 67
+[GPU 0] [15:25:28] [INFO] New best validation loss: 2.6449 @ step 68
+[GPU 0] [15:25:41] [INFO] New best validation loss: 2.6449 @ step 69
+[GPU 0] [15:26:14] [INFO] New best validation loss: 2.6449 @ step 71
+[GPU 0] [15:26:32] [INFO] New best validation loss: 2.6449 @ step 72
+[GPU 0] [15:28:07] [INFO] New best validation loss: 2.6449 @ step 78
+[GPU 0] [15:28:21] [INFO] New best validation loss: 2.6449 @ step 79
+[GPU 0] [15:31:33] [INFO] Stop FT @ 91: no val improvement for 10 steps
+[GPU 0] [15:31:33] [INFO] Wrote stats.jsonl entries at FT step 79 
+[GPU 0] [15:31:47] [INFO] ---- Begin FT | Experts: None | Data: ['papers-nuclear'] ----
+[GPU 0] [15:31:47] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [15:31:47] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [15:31:59] [INFO] New best validation loss: 2.7855 @ step 0
+[GPU 0] [15:32:11] [INFO] New best validation loss: 2.7784 @ step 1
+[GPU 0] [15:32:26] [INFO] New best validation loss: 2.7741 @ step 2
+[GPU 0] [15:32:39] [INFO] New best validation loss: 2.7707 @ step 3
+[GPU 0] [15:32:51] [INFO] New best validation loss: 2.7677 @ step 4
+[GPU 0] [15:33:06] [INFO] New best validation loss: 2.7655 @ step 5
+[GPU 0] [15:33:22] [INFO] New best validation loss: 2.7631 @ step 6
+[GPU 0] [15:33:36] [INFO] New best validation loss: 2.7612 @ step 7
+[GPU 0] [15:33:51] [INFO] New best validation loss: 2.7592 @ step 8
+[GPU 0] [15:34:05] [INFO] New best validation loss: 2.7571 @ step 9
+[GPU 0] [15:34:20] [INFO] New best validation loss: 2.7556 @ step 10
+[GPU 0] [15:34:36] [INFO] New best validation loss: 2.7539 @ step 11
+[GPU 0] [15:34:54] [INFO] New best validation loss: 2.7526 @ step 12
+[GPU 0] [15:35:11] [INFO] New best validation loss: 2.7511 @ step 13
+[GPU 0] [15:35:29] [INFO] New best validation loss: 2.7499 @ step 14
+[GPU 0] [15:35:47] [INFO] New best validation loss: 2.7483 @ step 15
+[GPU 0] [15:36:01] [INFO] New best validation loss: 2.7470 @ step 16
+[GPU 0] [15:36:17] [INFO] New best validation loss: 2.7457 @ step 17
+[GPU 0] [15:36:34] [INFO] New best validation loss: 2.7447 @ step 18
+[GPU 0] [15:36:47] [INFO] New best validation loss: 2.7437 @ step 19
+[GPU 0] [15:37:03] [INFO] New best validation loss: 2.7429 @ step 20
+[GPU 0] [15:37:19] [INFO] New best validation loss: 2.7420 @ step 21
+[GPU 0] [15:37:36] [INFO] New best validation loss: 2.7413 @ step 22
+[GPU 0] [15:37:52] [INFO] New best validation loss: 2.7404 @ step 23
+[GPU 0] [15:38:06] [INFO] New best validation loss: 2.7395 @ step 24
+[GPU 0] [15:38:20] [INFO] New best validation loss: 2.7388 @ step 25
+[GPU 0] [15:38:35] [INFO] New best validation loss: 2.7380 @ step 26
+[GPU 0] [15:38:48] [INFO] New best validation loss: 2.7373 @ step 27
+[GPU 0] [15:39:05] [INFO] New best validation loss: 2.7366 @ step 28
+[GPU 0] [15:39:20] [INFO] New best validation loss: 2.7361 @ step 29
+[GPU 0] [15:39:36] [INFO] New best validation loss: 2.7355 @ step 30
+[GPU 0] [15:39:51] [INFO] New best validation loss: 2.7350 @ step 31
+[GPU 0] [15:40:06] [INFO] New best validation loss: 2.7346 @ step 32
+[GPU 0] [15:40:21] [INFO] New best validation loss: 2.7340 @ step 33
+[GPU 0] [15:40:38] [INFO] New best validation loss: 2.7335 @ step 34
+[GPU 0] [15:40:54] [INFO] New best validation loss: 2.7331 @ step 35
+[GPU 0] [15:41:10] [INFO] New best validation loss: 2.7327 @ step 36
+[GPU 0] [15:41:28] [INFO] New best validation loss: 2.7325 @ step 37
+[GPU 0] [15:41:46] [INFO] New best validation loss: 2.7320 @ step 38
+[GPU 0] [15:42:00] [INFO] New best validation loss: 2.7318 @ step 39
+[GPU 0] [15:42:16] [INFO] New best validation loss: 2.7315 @ step 40
+[GPU 0] [15:42:32] [INFO] New best validation loss: 2.7312 @ step 41
+[GPU 0] [15:42:50] [INFO] New best validation loss: 2.7310 @ step 42
+[GPU 0] [15:43:06] [INFO] New best validation loss: 2.7306 @ step 43
+[GPU 0] [15:43:23] [INFO] New best validation loss: 2.7304 @ step 44
+[GPU 0] [15:43:39] [INFO] New best validation loss: 2.7302 @ step 45
+[GPU 0] [15:43:53] [INFO] New best validation loss: 2.7300 @ step 46
+[GPU 0] [15:44:06] [INFO] New best validation loss: 2.7297 @ step 47
+[GPU 0] [15:44:22] [INFO] New best validation loss: 2.7294 @ step 48
+[GPU 0] [15:44:38] [INFO] New best validation loss: 2.7291 @ step 49
+[GPU 0] [15:44:52] [INFO] New best validation loss: 2.7289 @ step 50
+[GPU 0] [15:45:10] [INFO] New best validation loss: 2.7287 @ step 51
+[GPU 0] [15:45:29] [INFO] New best validation loss: 2.7286 @ step 52
+[GPU 0] [15:45:47] [INFO] New best validation loss: 2.7284 @ step 53
+[GPU 0] [15:46:02] [INFO] New best validation loss: 2.7284 @ step 54
+[GPU 0] [15:46:16] [INFO] New best validation loss: 2.7282 @ step 55
+[GPU 0] [15:46:32] [INFO] New best validation loss: 2.7281 @ step 56
+[GPU 0] [15:46:47] [INFO] New best validation loss: 2.7280 @ step 57
+[GPU 0] [15:47:01] [INFO] New best validation loss: 2.7277 @ step 58
+[GPU 0] [15:47:18] [INFO] New best validation loss: 2.7275 @ step 59
+[GPU 0] [15:47:34] [INFO] New best validation loss: 2.7274 @ step 60
+[GPU 0] [15:47:52] [INFO] New best validation loss: 2.7272 @ step 61
+[GPU 0] [15:48:09] [INFO] New best validation loss: 2.7271 @ step 62
+[GPU 0] [15:48:23] [INFO] New best validation loss: 2.7271 @ step 63
+[GPU 0] [15:48:37] [INFO] New best validation loss: 2.7270 @ step 64
+[GPU 0] [15:48:50] [INFO] New best validation loss: 2.7268 @ step 65
+[GPU 0] [15:49:05] [INFO] New best validation loss: 2.7267 @ step 66
+[GPU 0] [15:49:18] [INFO] New best validation loss: 2.7265 @ step 67
+[GPU 0] [15:49:31] [INFO] New best validation loss: 2.7264 @ step 68
+[GPU 0] [15:49:45] [INFO] New best validation loss: 2.7264 @ step 69
+[GPU 0] [15:50:00] [INFO] New best validation loss: 2.7264 @ step 70
+[GPU 0] [15:50:17] [INFO] New best validation loss: 2.7263 @ step 71
+[GPU 0] [15:50:33] [INFO] New best validation loss: 2.7263 @ step 72
+[GPU 0] [15:50:47] [INFO] New best validation loss: 2.7261 @ step 73
+[GPU 0] [15:51:15] [INFO] New best validation loss: 2.7261 @ step 75
+[GPU 0] [15:51:31] [INFO] New best validation loss: 2.7261 @ step 76
+[GPU 0] [15:51:45] [INFO] New best validation loss: 2.7260 @ step 77
+[GPU 0] [15:51:59] [INFO] New best validation loss: 2.7260 @ step 78
+[GPU 0] [15:52:14] [INFO] New best validation loss: 2.7258 @ step 79
+[GPU 0] [15:53:08] [INFO] New best validation loss: 2.7257 @ step 82
+[GPU 0] [15:53:21] [INFO] New best validation loss: 2.7257 @ step 83
+[GPU 0] [15:54:02] [INFO] New best validation loss: 2.7257 @ step 86
+[GPU 0] [15:56:58] [INFO] Stop FT @ 98: no val improvement for 10 steps
+[GPU 0] [15:56:58] [INFO] Wrote stats.jsonl entries at FT step 86 
+[GPU 0] [15:57:00] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00013629655348425783, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_03", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "code-lisp"]], "alpha_retain": 589.8498097039299, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [15:57:00] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [15:57:00] [INFO] UNLEARNING - maxent START
+[GPU 0] [15:57:00] [INFO] Unlearning: retaining ['code-lisp', 'core'], removing ['papers-biology', 'papers-cyber', 'papers-nuclear']
+[GPU 0] [15:57:01] [INFO] ---- Begin MaxEnt | Data Labels: ['papers-biology', 'papers-cyber', 'papers-nuclear'] ----
+[GPU 0] [15:57:01] [DEBUG] alpha_retain: 589.8498097039299, lr: 0.00013629655348425783, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [15:57:01] [DEBUG] retain_labels: ['code-lisp', 'code-other', 'fineweb', 'papers-other']
+[GPU 0] [16:02:21] [INFO] Early stop MAXENT at step 1468: KL→U ≤ 2.0
+[GPU 0] [16:02:21] [INFO] Finished MaxEnt — Avg KL→U: 7.726, Avg Retain CE: 2.175
+[GPU 0] [16:02:21] [INFO] ---- Begin Eval ----
+[GPU 0] [16:02:21] [INFO] Data: core | Experts: None
+[GPU 0] [16:02:42] [INFO] loss: 2.11436868
+[GPU 0] [16:02:42] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [16:02:49] [INFO] loss: 0.78750700
+[GPU 0] [16:02:49] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [16:02:56] [INFO] loss: 5.47946405
+[GPU 0] [16:02:56] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [16:03:04] [INFO] loss: 4.58271980
+[GPU 0] [16:03:04] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [16:03:11] [INFO] loss: 4.10009289
+[GPU 0] [16:03:13] [INFO] UNLEARNING - maxent - ADVERSARIAL FT START
+[GPU 0] [16:03:23] [INFO] ---- Begin FT | Experts: None | Data: ['papers-biology'] ----
+[GPU 0] [16:03:23] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [16:03:24] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [16:03:36] [INFO] New best validation loss: 4.9980 @ step 0
+[GPU 0] [16:03:49] [INFO] New best validation loss: 4.5037 @ step 1
+[GPU 0] [16:04:02] [INFO] New best validation loss: 3.9330 @ step 2
+[GPU 0] [16:04:15] [INFO] New best validation loss: 3.3073 @ step 3
+[GPU 0] [16:04:32] [INFO] New best validation loss: 2.7266 @ step 4
+[GPU 0] [16:04:50] [INFO] New best validation loss: 2.4833 @ step 5
+[GPU 0] [16:05:07] [INFO] New best validation loss: 2.4628 @ step 6
+[GPU 0] [16:07:12] [INFO] New best validation loss: 2.4626 @ step 15
+[GPU 0] [16:07:29] [INFO] New best validation loss: 2.4603 @ step 16
+[GPU 0] [16:07:45] [INFO] New best validation loss: 2.4575 @ step 17
+[GPU 0] [16:07:58] [INFO] New best validation loss: 2.4550 @ step 18
+[GPU 0] [16:08:15] [INFO] New best validation loss: 2.4524 @ step 19
+[GPU 0] [16:08:34] [INFO] New best validation loss: 2.4497 @ step 20
+[GPU 0] [16:08:51] [INFO] New best validation loss: 2.4476 @ step 21
+[GPU 0] [16:09:05] [INFO] New best validation loss: 2.4453 @ step 22
+[GPU 0] [16:09:19] [INFO] New best validation loss: 2.4432 @ step 23
+[GPU 0] [16:09:37] [INFO] New best validation loss: 2.4412 @ step 24
+[GPU 0] [16:09:54] [INFO] New best validation loss: 2.4391 @ step 25
+[GPU 0] [16:10:11] [INFO] New best validation loss: 2.4370 @ step 26
+[GPU 0] [16:10:29] [INFO] New best validation loss: 2.4351 @ step 27
+[GPU 0] [16:10:46] [INFO] New best validation loss: 2.4333 @ step 28
+[GPU 0] [16:11:04] [INFO] New best validation loss: 2.4319 @ step 29
+[GPU 0] [16:11:19] [INFO] New best validation loss: 2.4305 @ step 30
+[GPU 0] [16:11:34] [INFO] New best validation loss: 2.4290 @ step 31
+[GPU 0] [16:11:50] [INFO] New best validation loss: 2.4276 @ step 32
+[GPU 0] [16:12:07] [INFO] New best validation loss: 2.4262 @ step 33
+[GPU 0] [16:12:21] [INFO] New best validation loss: 2.4251 @ step 34
+[GPU 0] [16:12:34] [INFO] New best validation loss: 2.4237 @ step 35
+[GPU 0] [16:12:48] [INFO] New best validation loss: 2.4227 @ step 36
+[GPU 0] [16:13:04] [INFO] New best validation loss: 2.4214 @ step 37
+[GPU 0] [16:13:19] [INFO] New best validation loss: 2.4205 @ step 38
+[GPU 0] [16:13:36] [INFO] New best validation loss: 2.4197 @ step 39
+[GPU 0] [16:13:53] [INFO] New best validation loss: 2.4188 @ step 40
+[GPU 0] [16:14:10] [INFO] New best validation loss: 2.4179 @ step 41
+[GPU 0] [16:14:28] [INFO] New best validation loss: 2.4171 @ step 42
+[GPU 0] [16:14:42] [INFO] New best validation loss: 2.4165 @ step 43
+[GPU 0] [16:14:55] [INFO] New best validation loss: 2.4158 @ step 44
+[GPU 0] [16:15:10] [INFO] New best validation loss: 2.4153 @ step 45
+[GPU 0] [16:15:26] [INFO] New best validation loss: 2.4145 @ step 46
+[GPU 0] [16:15:42] [INFO] New best validation loss: 2.4139 @ step 47
+[GPU 0] [16:15:58] [INFO] New best validation loss: 2.4133 @ step 48
+[GPU 0] [16:16:14] [INFO] New best validation loss: 2.4127 @ step 49
+[GPU 0] [16:16:32] [INFO] New best validation loss: 2.4120 @ step 50
+[GPU 0] [16:16:50] [INFO] New best validation loss: 2.4115 @ step 51
+[GPU 0] [16:17:06] [INFO] New best validation loss: 2.4108 @ step 52
+[GPU 0] [16:17:22] [INFO] New best validation loss: 2.4103 @ step 53
+[GPU 0] [16:17:35] [INFO] New best validation loss: 2.4098 @ step 54
+[GPU 0] [16:17:49] [INFO] New best validation loss: 2.4092 @ step 55
+[GPU 0] [16:18:06] [INFO] New best validation loss: 2.4087 @ step 56
+[GPU 0] [16:18:24] [INFO] New best validation loss: 2.4082 @ step 57
+[GPU 0] [16:18:41] [INFO] New best validation loss: 2.4076 @ step 58
+[GPU 0] [16:18:59] [INFO] New best validation loss: 2.4072 @ step 59
+[GPU 0] [16:19:16] [INFO] New best validation loss: 2.4068 @ step 60
+[GPU 0] [16:19:34] [INFO] New best validation loss: 2.4065 @ step 61
+[GPU 0] [16:19:51] [INFO] New best validation loss: 2.4061 @ step 62
+[GPU 0] [16:20:04] [INFO] New best validation loss: 2.4056 @ step 63
+[GPU 0] [16:20:21] [INFO] New best validation loss: 2.4053 @ step 64
+[GPU 0] [16:20:38] [INFO] New best validation loss: 2.4050 @ step 65
+[GPU 0] [16:20:56] [INFO] New best validation loss: 2.4047 @ step 66
+[GPU 0] [16:21:13] [INFO] New best validation loss: 2.4044 @ step 67
+[GPU 0] [16:21:29] [INFO] New best validation loss: 2.4039 @ step 68
+[GPU 0] [16:21:47] [INFO] New best validation loss: 2.4036 @ step 69
+[GPU 0] [16:22:01] [INFO] New best validation loss: 2.4033 @ step 70
+[GPU 0] [16:22:14] [INFO] New best validation loss: 2.4031 @ step 71
+[GPU 0] [16:22:28] [INFO] New best validation loss: 2.4028 @ step 72
+[GPU 0] [16:22:44] [INFO] New best validation loss: 2.4026 @ step 73
+[GPU 0] [16:22:57] [INFO] New best validation loss: 2.4023 @ step 74
+[GPU 0] [16:23:12] [INFO] New best validation loss: 2.4021 @ step 75
+[GPU 0] [16:23:27] [INFO] New best validation loss: 2.4018 @ step 76
+[GPU 0] [16:23:43] [INFO] New best validation loss: 2.4016 @ step 77
+[GPU 0] [16:23:58] [INFO] New best validation loss: 2.4011 @ step 78
+[GPU 0] [16:24:11] [INFO] New best validation loss: 2.4009 @ step 79
+[GPU 0] [16:24:25] [INFO] New best validation loss: 2.4005 @ step 80
+[GPU 0] [16:24:43] [INFO] New best validation loss: 2.4003 @ step 81
+[GPU 0] [16:25:00] [INFO] New best validation loss: 2.4001 @ step 82
+[GPU 0] [16:25:16] [INFO] New best validation loss: 2.3998 @ step 83
+[GPU 0] [16:25:34] [INFO] New best validation loss: 2.3996 @ step 84
+[GPU 0] [16:25:50] [INFO] New best validation loss: 2.3994 @ step 85
+[GPU 0] [16:26:06] [INFO] New best validation loss: 2.3992 @ step 86
+[GPU 0] [16:26:22] [INFO] New best validation loss: 2.3990 @ step 87
+[GPU 0] [16:26:39] [INFO] New best validation loss: 2.3988 @ step 88
+[GPU 0] [16:26:57] [INFO] New best validation loss: 2.3986 @ step 89
+[GPU 0] [16:27:15] [INFO] New best validation loss: 2.3983 @ step 90
+[GPU 0] [16:27:33] [INFO] New best validation loss: 2.3981 @ step 91
+[GPU 0] [16:27:46] [INFO] New best validation loss: 2.3978 @ step 92
+[GPU 0] [16:28:03] [INFO] New best validation loss: 2.3977 @ step 93
+[GPU 0] [16:28:20] [INFO] New best validation loss: 2.3975 @ step 94
+[GPU 0] [16:28:38] [INFO] New best validation loss: 2.3973 @ step 95
+[GPU 0] [16:28:52] [INFO] New best validation loss: 2.3971 @ step 96
+[GPU 0] [16:29:09] [INFO] New best validation loss: 2.3969 @ step 97
+[GPU 0] [16:29:27] [INFO] New best validation loss: 2.3967 @ step 98
+[GPU 0] [16:29:43] [INFO] New best validation loss: 2.3966 @ step 99
+[GPU 0] [16:29:56] [INFO] New best validation loss: 2.3964 @ step 100
+[GPU 0] [16:30:11] [INFO] New best validation loss: 2.3962 @ step 101
+[GPU 0] [16:30:29] [INFO] New best validation loss: 2.3961 @ step 102
+[GPU 0] [16:30:47] [INFO] New best validation loss: 2.3958 @ step 103
+[GPU 0] [16:31:03] [INFO] New best validation loss: 2.3956 @ step 104
+[GPU 0] [16:31:20] [INFO] New best validation loss: 2.3954 @ step 105
+[GPU 0] [16:31:38] [INFO] New best validation loss: 2.3953 @ step 106
+[GPU 0] [16:31:52] [INFO] New best validation loss: 2.3953 @ step 107
+[GPU 0] [16:32:09] [INFO] New best validation loss: 2.3951 @ step 108
+[GPU 0] [16:32:27] [INFO] New best validation loss: 2.3950 @ step 109
+[GPU 0] [16:32:44] [INFO] New best validation loss: 2.3947 @ step 110
+[GPU 0] [16:33:00] [INFO] New best validation loss: 2.3946 @ step 111
+[GPU 0] [16:33:14] [INFO] New best validation loss: 2.3945 @ step 112
+[GPU 0] [16:33:32] [INFO] New best validation loss: 2.3943 @ step 113
+[GPU 0] [16:33:46] [INFO] New best validation loss: 2.3942 @ step 114
+[GPU 0] [16:34:03] [INFO] New best validation loss: 2.3941 @ step 115
+[GPU 0] [16:34:18] [INFO] New best validation loss: 2.3939 @ step 116
+[GPU 0] [16:34:49] [INFO] New best validation loss: 2.3937 @ step 118
+[GPU 0] [16:35:07] [INFO] New best validation loss: 2.3937 @ step 119
+[GPU 0] [16:35:24] [INFO] New best validation loss: 2.3935 @ step 120
+[GPU 0] [16:35:42] [INFO] New best validation loss: 2.3935 @ step 121
+[GPU 0] [16:36:00] [INFO] New best validation loss: 2.3934 @ step 122
+[GPU 0] [16:36:16] [INFO] New best validation loss: 2.3932 @ step 123
+[GPU 0] [16:36:34] [INFO] New best validation loss: 2.3930 @ step 124
+[GPU 0] [16:36:52] [INFO] New best validation loss: 2.3930 @ step 125
+[GPU 0] [16:37:08] [INFO] New best validation loss: 2.3929 @ step 126
+[GPU 0] [16:37:23] [INFO] New best validation loss: 2.3929 @ step 127
+[GPU 0] [16:37:40] [INFO] New best validation loss: 2.3927 @ step 128
+[GPU 0] [16:37:58] [INFO] New best validation loss: 2.3927 @ step 129
+[GPU 0] [16:38:13] [INFO] New best validation loss: 2.3926 @ step 130
+[GPU 0] [16:38:29] [INFO] New best validation loss: 2.3925 @ step 131
+[GPU 0] [16:38:46] [INFO] New best validation loss: 2.3925 @ step 132
+[GPU 0] [16:39:01] [INFO] New best validation loss: 2.3924 @ step 133
+[GPU 0] [16:39:15] [INFO] New best validation loss: 2.3924 @ step 134
+[GPU 0] [16:39:31] [INFO] New best validation loss: 2.3923 @ step 135
+[GPU 0] [16:39:49] [INFO] New best validation loss: 2.3923 @ step 136
+[GPU 0] [16:40:06] [INFO] New best validation loss: 2.3923 @ step 137
+[GPU 0] [16:40:23] [INFO] New best validation loss: 2.3922 @ step 138
+[GPU 0] [16:40:41] [INFO] New best validation loss: 2.3921 @ step 139
+[GPU 0] [16:41:33] [INFO] New best validation loss: 2.3920 @ step 142
+[GPU 0] [16:41:48] [INFO] New best validation loss: 2.3920 @ step 143
+[GPU 0] [16:42:01] [INFO] New best validation loss: 2.3919 @ step 144
+[GPU 0] [16:42:16] [INFO] New best validation loss: 2.3918 @ step 145
+[GPU 0] [16:42:45] [INFO] New best validation loss: 2.3917 @ step 147
+[GPU 0] [16:43:03] [INFO] New best validation loss: 2.3917 @ step 148
+[GPU 0] [16:43:35] [INFO] New best validation loss: 2.3917 @ step 150
+[GPU 0] [16:43:48] [INFO] New best validation loss: 2.3917 @ step 151
+[GPU 0] [16:44:21] [INFO] New best validation loss: 2.3917 @ step 153
+[GPU 0] [16:44:37] [INFO] New best validation loss: 2.3917 @ step 154
+[GPU 0] [16:45:29] [INFO] New best validation loss: 2.3916 @ step 157
+[GPU 0] [16:48:26] [INFO] Stop FT @ 169: no val improvement for 10 steps
+[GPU 0] [16:48:27] [INFO] Wrote stats.jsonl entries at FT step 157 
+[GPU 0] [16:48:40] [INFO] ---- Begin FT | Experts: None | Data: ['papers-cyber'] ----
+[GPU 0] [16:48:40] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [16:48:40] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [16:48:53] [INFO] New best validation loss: 3.4635 @ step 0
+[GPU 0] [16:49:06] [INFO] New best validation loss: 3.0120 @ step 1
+[GPU 0] [16:49:19] [INFO] New best validation loss: 2.7872 @ step 2
+[GPU 0] [16:49:33] [INFO] New best validation loss: 2.7198 @ step 3
+[GPU 0] [16:49:46] [INFO] New best validation loss: 2.6951 @ step 4
+[GPU 0] [16:49:59] [INFO] New best validation loss: 2.6839 @ step 5
+[GPU 0] [16:50:15] [INFO] New best validation loss: 2.6785 @ step 6
+[GPU 0] [16:50:29] [INFO] New best validation loss: 2.6763 @ step 7
+[GPU 0] [16:50:45] [INFO] New best validation loss: 2.6750 @ step 8
+[GPU 0] [16:50:59] [INFO] New best validation loss: 2.6739 @ step 9
+[GPU 0] [16:51:14] [INFO] New best validation loss: 2.6731 @ step 10
+[GPU 0] [16:51:32] [INFO] New best validation loss: 2.6726 @ step 11
+[GPU 0] [16:51:50] [INFO] New best validation loss: 2.6720 @ step 12
+[GPU 0] [16:52:07] [INFO] New best validation loss: 2.6712 @ step 13
+[GPU 0] [16:52:24] [INFO] New best validation loss: 2.6704 @ step 14
+[GPU 0] [16:52:41] [INFO] New best validation loss: 2.6699 @ step 15
+[GPU 0] [16:52:55] [INFO] New best validation loss: 2.6691 @ step 16
+[GPU 0] [16:53:12] [INFO] New best validation loss: 2.6682 @ step 17
+[GPU 0] [16:53:28] [INFO] New best validation loss: 2.6672 @ step 18
+[GPU 0] [16:53:46] [INFO] New best validation loss: 2.6664 @ step 19
+[GPU 0] [16:54:03] [INFO] New best validation loss: 2.6657 @ step 20
+[GPU 0] [16:54:19] [INFO] New best validation loss: 2.6651 @ step 21
+[GPU 0] [16:54:36] [INFO] New best validation loss: 2.6646 @ step 22
+[GPU 0] [16:54:54] [INFO] New best validation loss: 2.6640 @ step 23
+[GPU 0] [16:55:08] [INFO] New best validation loss: 2.6633 @ step 24
+[GPU 0] [16:55:23] [INFO] New best validation loss: 2.6625 @ step 25
+[GPU 0] [16:55:36] [INFO] New best validation loss: 2.6620 @ step 26
+[GPU 0] [16:55:50] [INFO] New best validation loss: 2.6616 @ step 27
+[GPU 0] [16:56:07] [INFO] New best validation loss: 2.6611 @ step 28
+[GPU 0] [16:56:21] [INFO] New best validation loss: 2.6606 @ step 29
+[GPU 0] [16:56:36] [INFO] New best validation loss: 2.6602 @ step 30
+[GPU 0] [16:56:50] [INFO] New best validation loss: 2.6597 @ step 31
+[GPU 0] [16:57:07] [INFO] New best validation loss: 2.6593 @ step 32
+[GPU 0] [16:57:26] [INFO] New best validation loss: 2.6589 @ step 33
+[GPU 0] [16:57:44] [INFO] New best validation loss: 2.6587 @ step 34
+[GPU 0] [16:57:57] [INFO] New best validation loss: 2.6584 @ step 35
+[GPU 0] [16:58:14] [INFO] New best validation loss: 2.6582 @ step 36
+[GPU 0] [16:58:28] [INFO] New best validation loss: 2.6579 @ step 37
+[GPU 0] [16:58:43] [INFO] New best validation loss: 2.6575 @ step 38
+[GPU 0] [16:59:00] [INFO] New best validation loss: 2.6573 @ step 39
+[GPU 0] [16:59:17] [INFO] New best validation loss: 2.6570 @ step 40
+[GPU 0] [16:59:35] [INFO] New best validation loss: 2.6567 @ step 41
+[GPU 0] [16:59:51] [INFO] New best validation loss: 2.6564 @ step 42
+[GPU 0] [17:00:06] [INFO] New best validation loss: 2.6561 @ step 43
+[GPU 0] [17:00:27] [INFO] New best validation loss: 2.6560 @ step 44
+[GPU 0] [17:00:45] [INFO] New best validation loss: 2.6557 @ step 45
+[GPU 0] [17:01:03] [INFO] New best validation loss: 2.6554 @ step 46
+[GPU 0] [17:01:18] [INFO] New best validation loss: 2.6551 @ step 47
+[GPU 0] [17:01:35] [INFO] New best validation loss: 2.6549 @ step 48
+[GPU 0] [17:01:50] [INFO] New best validation loss: 2.6547 @ step 49
+[GPU 0] [17:02:08] [INFO] New best validation loss: 2.6545 @ step 50
+[GPU 0] [17:02:22] [INFO] New best validation loss: 2.6544 @ step 51
+[GPU 0] [17:02:38] [INFO] New best validation loss: 2.6542 @ step 52
+[GPU 0] [17:02:53] [INFO] New best validation loss: 2.6540 @ step 53
+[GPU 0] [17:03:09] [INFO] New best validation loss: 2.6539 @ step 54
+[GPU 0] [17:03:27] [INFO] New best validation loss: 2.6538 @ step 55
+[GPU 0] [17:03:43] [INFO] New best validation loss: 2.6537 @ step 56
+[GPU 0] [17:04:00] [INFO] New best validation loss: 2.6536 @ step 57
+[GPU 0] [17:04:16] [INFO] New best validation loss: 2.6535 @ step 58
+[GPU 0] [17:04:34] [INFO] New best validation loss: 2.6534 @ step 59
+[GPU 0] [17:04:49] [INFO] New best validation loss: 2.6533 @ step 60
+[GPU 0] [17:05:03] [INFO] New best validation loss: 2.6532 @ step 61
+[GPU 0] [17:05:18] [INFO] New best validation loss: 2.6530 @ step 62
+[GPU 0] [17:05:31] [INFO] New best validation loss: 2.6529 @ step 63
+[GPU 0] [17:05:45] [INFO] New best validation loss: 2.6529 @ step 64
+[GPU 0] [17:05:58] [INFO] New best validation loss: 2.6528 @ step 65
+[GPU 0] [17:06:13] [INFO] New best validation loss: 2.6528 @ step 66
+[GPU 0] [17:06:29] [INFO] New best validation loss: 2.6526 @ step 67
+[GPU 0] [17:06:47] [INFO] New best validation loss: 2.6526 @ step 68
+[GPU 0] [17:07:04] [INFO] New best validation loss: 2.6524 @ step 69
+[GPU 0] [17:07:19] [INFO] New best validation loss: 2.6523 @ step 70
+[GPU 0] [17:07:36] [INFO] New best validation loss: 2.6523 @ step 71
+[GPU 0] [17:07:54] [INFO] New best validation loss: 2.6521 @ step 72
+[GPU 0] [17:08:09] [INFO] New best validation loss: 2.6521 @ step 73
+[GPU 0] [17:08:26] [INFO] New best validation loss: 2.6521 @ step 74
+[GPU 0] [17:08:58] [INFO] New best validation loss: 2.6520 @ step 76
+[GPU 0] [17:09:28] [INFO] New best validation loss: 2.6518 @ step 78
+[GPU 0] [17:10:00] [INFO] New best validation loss: 2.6517 @ step 80
+[GPU 0] [17:10:16] [INFO] New best validation loss: 2.6517 @ step 81
+[GPU 0] [17:13:14] [INFO] Stop FT @ 93: no val improvement for 10 steps
+[GPU 0] [17:13:14] [INFO] Wrote stats.jsonl entries at FT step 81 
+[GPU 0] [17:13:28] [INFO] ---- Begin FT | Experts: None | Data: ['papers-nuclear'] ----
+[GPU 0] [17:13:28] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [17:13:28] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [17:13:40] [INFO] New best validation loss: 3.9873 @ step 0
+[GPU 0] [17:13:54] [INFO] New best validation loss: 3.5403 @ step 1
+[GPU 0] [17:14:07] [INFO] New best validation loss: 3.2355 @ step 2
+[GPU 0] [17:14:20] [INFO] New best validation loss: 3.0297 @ step 3
+[GPU 0] [17:14:33] [INFO] New best validation loss: 2.9024 @ step 4
+[GPU 0] [17:14:48] [INFO] New best validation loss: 2.8387 @ step 5
+[GPU 0] [17:15:03] [INFO] New best validation loss: 2.8126 @ step 6
+[GPU 0] [17:15:26] [INFO] New best validation loss: 2.8022 @ step 7
+[GPU 0] [17:15:43] [INFO] New best validation loss: 2.7969 @ step 8
+[GPU 0] [17:15:56] [INFO] New best validation loss: 2.7945 @ step 9
+[GPU 0] [17:16:12] [INFO] New best validation loss: 2.7933 @ step 10
+[GPU 0] [17:16:30] [INFO] New best validation loss: 2.7924 @ step 11
+[GPU 0] [17:16:48] [INFO] New best validation loss: 2.7914 @ step 12
+[GPU 0] [17:17:05] [INFO] New best validation loss: 2.7904 @ step 13
+[GPU 0] [17:17:22] [INFO] New best validation loss: 2.7893 @ step 14
+[GPU 0] [17:17:39] [INFO] New best validation loss: 2.7878 @ step 15
+[GPU 0] [17:17:55] [INFO] New best validation loss: 2.7860 @ step 16
+[GPU 0] [17:18:11] [INFO] New best validation loss: 2.7843 @ step 17
+[GPU 0] [17:18:29] [INFO] New best validation loss: 2.7822 @ step 18
+[GPU 0] [17:18:45] [INFO] New best validation loss: 2.7804 @ step 19
+[GPU 0] [17:19:02] [INFO] New best validation loss: 2.7788 @ step 20
+[GPU 0] [17:19:16] [INFO] New best validation loss: 2.7772 @ step 21
+[GPU 0] [17:19:35] [INFO] New best validation loss: 2.7753 @ step 22
+[GPU 0] [17:19:52] [INFO] New best validation loss: 2.7739 @ step 23
+[GPU 0] [17:20:09] [INFO] New best validation loss: 2.7724 @ step 24
+[GPU 0] [17:20:25] [INFO] New best validation loss: 2.7711 @ step 25
+[GPU 0] [17:20:41] [INFO] New best validation loss: 2.7699 @ step 26
+[GPU 0] [17:20:55] [INFO] New best validation loss: 2.7684 @ step 27
+[GPU 0] [17:21:10] [INFO] New best validation loss: 2.7672 @ step 28
+[GPU 0] [17:21:29] [INFO] New best validation loss: 2.7661 @ step 29
+[GPU 0] [17:21:46] [INFO] New best validation loss: 2.7650 @ step 30
+[GPU 0] [17:22:03] [INFO] New best validation loss: 2.7639 @ step 31
+[GPU 0] [17:22:17] [INFO] New best validation loss: 2.7629 @ step 32
+[GPU 0] [17:22:35] [INFO] New best validation loss: 2.7621 @ step 33
+[GPU 0] [17:22:49] [INFO] New best validation loss: 2.7612 @ step 34
+[GPU 0] [17:23:06] [INFO] New best validation loss: 2.7600 @ step 35
+[GPU 0] [17:23:19] [INFO] New best validation loss: 2.7592 @ step 36
+[GPU 0] [17:23:33] [INFO] New best validation loss: 2.7584 @ step 37
+[GPU 0] [17:23:46] [INFO] New best validation loss: 2.7577 @ step 38
+[GPU 0] [17:24:03] [INFO] New best validation loss: 2.7571 @ step 39
+[GPU 0] [17:24:20] [INFO] New best validation loss: 2.7562 @ step 40
+[GPU 0] [17:24:37] [INFO] New best validation loss: 2.7555 @ step 41
+[GPU 0] [17:24:51] [INFO] New best validation loss: 2.7548 @ step 42
+[GPU 0] [17:25:07] [INFO] New best validation loss: 2.7541 @ step 43
+[GPU 0] [17:25:20] [INFO] New best validation loss: 2.7536 @ step 44
+[GPU 0] [17:25:33] [INFO] New best validation loss: 2.7529 @ step 45
+[GPU 0] [17:25:48] [INFO] New best validation loss: 2.7526 @ step 46
+[GPU 0] [17:26:03] [INFO] New best validation loss: 2.7521 @ step 47
+[GPU 0] [17:26:17] [INFO] New best validation loss: 2.7515 @ step 48
+[GPU 0] [17:26:35] [INFO] New best validation loss: 2.7510 @ step 49
+[GPU 0] [17:26:53] [INFO] New best validation loss: 2.7505 @ step 50
+[GPU 0] [17:27:10] [INFO] New best validation loss: 2.7501 @ step 51
+[GPU 0] [17:27:28] [INFO] New best validation loss: 2.7497 @ step 52
+[GPU 0] [17:27:45] [INFO] New best validation loss: 2.7495 @ step 53
+[GPU 0] [17:28:01] [INFO] New best validation loss: 2.7491 @ step 54
+[GPU 0] [17:28:16] [INFO] New best validation loss: 2.7487 @ step 55
+[GPU 0] [17:28:34] [INFO] New best validation loss: 2.7484 @ step 56
+[GPU 0] [17:28:52] [INFO] New best validation loss: 2.7480 @ step 57
+[GPU 0] [17:29:06] [INFO] New best validation loss: 2.7475 @ step 58
+[GPU 0] [17:29:20] [INFO] New best validation loss: 2.7472 @ step 59
+[GPU 0] [17:29:37] [INFO] New best validation loss: 2.7470 @ step 60
+[GPU 0] [17:29:55] [INFO] New best validation loss: 2.7466 @ step 61
+[GPU 0] [17:30:13] [INFO] New best validation loss: 2.7463 @ step 62
+[GPU 0] [17:30:33] [INFO] New best validation loss: 2.7460 @ step 63
+[GPU 0] [17:30:50] [INFO] New best validation loss: 2.7457 @ step 64
+[GPU 0] [17:31:08] [INFO] New best validation loss: 2.7454 @ step 65
+[GPU 0] [17:31:25] [INFO] New best validation loss: 2.7451 @ step 66
+[GPU 0] [17:31:43] [INFO] New best validation loss: 2.7448 @ step 67
+[GPU 0] [17:32:00] [INFO] New best validation loss: 2.7446 @ step 68
+[GPU 0] [17:32:16] [INFO] New best validation loss: 2.7442 @ step 69
+[GPU 0] [17:32:30] [INFO] New best validation loss: 2.7439 @ step 70
+[GPU 0] [17:32:44] [INFO] New best validation loss: 2.7437 @ step 71
+[GPU 0] [17:32:57] [INFO] New best validation loss: 2.7434 @ step 72
+[GPU 0] [17:33:12] [INFO] New best validation loss: 2.7430 @ step 73
+[GPU 0] [17:33:28] [INFO] New best validation loss: 2.7428 @ step 74
+[GPU 0] [17:33:46] [INFO] New best validation loss: 2.7424 @ step 75
+[GPU 0] [17:34:01] [INFO] New best validation loss: 2.7423 @ step 76
+[GPU 0] [17:34:17] [INFO] New best validation loss: 2.7421 @ step 77
+[GPU 0] [17:34:35] [INFO] New best validation loss: 2.7419 @ step 78
+[GPU 0] [17:34:53] [INFO] New best validation loss: 2.7416 @ step 79
+[GPU 0] [17:35:11] [INFO] New best validation loss: 2.7415 @ step 80
+[GPU 0] [17:35:29] [INFO] New best validation loss: 2.7413 @ step 81
+[GPU 0] [17:35:47] [INFO] New best validation loss: 2.7410 @ step 82
+[GPU 0] [17:36:03] [INFO] New best validation loss: 2.7409 @ step 83
+[GPU 0] [17:36:17] [INFO] New best validation loss: 2.7407 @ step 84
+[GPU 0] [17:36:34] [INFO] New best validation loss: 2.7405 @ step 85
+[GPU 0] [17:36:49] [INFO] New best validation loss: 2.7404 @ step 86
+[GPU 0] [17:37:07] [INFO] New best validation loss: 2.7401 @ step 87
+[GPU 0] [17:37:25] [INFO] New best validation loss: 2.7399 @ step 88
+[GPU 0] [17:37:43] [INFO] New best validation loss: 2.7398 @ step 89
+[GPU 0] [17:38:00] [INFO] New best validation loss: 2.7396 @ step 90
+[GPU 0] [17:38:14] [INFO] New best validation loss: 2.7395 @ step 91
+[GPU 0] [17:38:27] [INFO] New best validation loss: 2.7394 @ step 92
+[GPU 0] [17:38:42] [INFO] New best validation loss: 2.7393 @ step 93
+[GPU 0] [17:38:55] [INFO] New best validation loss: 2.7391 @ step 94
+[GPU 0] [17:39:11] [INFO] New best validation loss: 2.7390 @ step 95
+[GPU 0] [17:39:28] [INFO] New best validation loss: 2.7389 @ step 96
+[GPU 0] [17:39:44] [INFO] New best validation loss: 2.7388 @ step 97
+[GPU 0] [17:40:01] [INFO] New best validation loss: 2.7387 @ step 98
+[GPU 0] [17:40:20] [INFO] New best validation loss: 2.7387 @ step 99
+[GPU 0] [17:40:38] [INFO] New best validation loss: 2.7386 @ step 100
+[GPU 0] [17:40:53] [INFO] New best validation loss: 2.7385 @ step 101
+[GPU 0] [17:41:06] [INFO] New best validation loss: 2.7384 @ step 102
+[GPU 0] [17:41:21] [INFO] New best validation loss: 2.7384 @ step 103
+[GPU 0] [17:41:34] [INFO] New best validation loss: 2.7383 @ step 104
+[GPU 0] [17:41:48] [INFO] New best validation loss: 2.7382 @ step 105
+[GPU 0] [17:42:02] [INFO] New best validation loss: 2.7381 @ step 106
+[GPU 0] [17:42:16] [INFO] New best validation loss: 2.7380 @ step 107
+[GPU 0] [17:42:33] [INFO] New best validation loss: 2.7380 @ step 108
+[GPU 0] [17:42:51] [INFO] New best validation loss: 2.7379 @ step 109
+[GPU 0] [17:43:06] [INFO] New best validation loss: 2.7379 @ step 110
+[GPU 0] [17:43:20] [INFO] New best validation loss: 2.7378 @ step 111
+[GPU 0] [17:43:37] [INFO] New best validation loss: 2.7378 @ step 112
+[GPU 0] [17:43:50] [INFO] New best validation loss: 2.7378 @ step 113
+[GPU 0] [17:44:06] [INFO] New best validation loss: 2.7377 @ step 114
+[GPU 0] [17:44:35] [INFO] New best validation loss: 2.7376 @ step 116
+[GPU 0] [17:45:07] [INFO] New best validation loss: 2.7376 @ step 118
+[GPU 0] [17:45:59] [INFO] New best validation loss: 2.7376 @ step 121
+[GPU 0] [17:46:28] [INFO] New best validation loss: 2.7376 @ step 123
+[GPU 0] [17:49:17] [INFO] Stop FT @ 135: no val improvement for 10 steps
+[GPU 0] [17:49:17] [INFO] Wrote stats.jsonl entries at FT step 123 
+[GPU 0] [17:49:21] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.0001557886319053484, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_04", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-cyber"]], "alpha_retain": 517.4551644690708, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [17:49:21] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [17:49:21] [INFO] UNLEARNING - maxent START
+[GPU 0] [17:49:21] [INFO] Unlearning: retaining ['core', 'papers-cyber'], removing ['code-lisp', 'papers-biology', 'papers-nuclear']
+[GPU 0] [17:49:23] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-nuclear'] ----
+[GPU 0] [17:49:23] [DEBUG] alpha_retain: 517.4551644690708, lr: 0.0001557886319053484, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [17:49:23] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-cyber', 'papers-other']
+[GPU 0] [17:52:27] [INFO] Early stop MAXENT at step 821: KL→U ≤ 2.0
+[GPU 0] [17:52:27] [INFO] Finished MaxEnt — Avg KL→U: 8.223, Avg Retain CE: 2.269
+[GPU 0] [17:52:27] [INFO] ---- Begin Eval ----
+[GPU 0] [17:52:27] [INFO] Data: core | Experts: None
+[GPU 0] [17:52:49] [INFO] loss: 1.89102805
+[GPU 0] [17:52:49] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [17:52:56] [INFO] loss: 5.89438248
+[GPU 0] [17:52:56] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [17:53:03] [INFO] loss: 2.91899180
+[GPU 0] [17:53:03] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [17:53:10] [INFO] loss: 2.97243309
+[GPU 0] [17:53:10] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [17:53:17] [INFO] loss: 2.64694953
+[GPU 0] [17:53:18] [INFO] UNLEARNING - maxent - ADVERSARIAL FT START
+[GPU 0] [17:53:29] [INFO] ---- Begin FT | Experts: None | Data: ['code-lisp'] ----
+[GPU 0] [17:53:29] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [17:53:29] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [17:53:41] [INFO] New best validation loss: 4.8984 @ step 0
+[GPU 0] [17:53:53] [INFO] New best validation loss: 3.8984 @ step 1
+[GPU 0] [17:54:06] [INFO] New best validation loss: 2.9515 @ step 2
+[GPU 0] [17:54:20] [INFO] New best validation loss: 2.1467 @ step 3
+[GPU 0] [17:54:33] [INFO] New best validation loss: 1.5778 @ step 4
+[GPU 0] [17:54:46] [INFO] New best validation loss: 1.2592 @ step 5
+[GPU 0] [17:55:01] [INFO] New best validation loss: 1.1031 @ step 6
+[GPU 0] [17:55:15] [INFO] New best validation loss: 1.0267 @ step 7
+[GPU 0] [17:55:30] [INFO] New best validation loss: 0.9911 @ step 8
+[GPU 0] [17:55:46] [INFO] New best validation loss: 0.9725 @ step 9
+[GPU 0] [17:56:00] [INFO] New best validation loss: 0.9611 @ step 10
+[GPU 0] [17:56:15] [INFO] New best validation loss: 0.9529 @ step 11
+[GPU 0] [17:56:28] [INFO] New best validation loss: 0.9475 @ step 12
+[GPU 0] [17:56:41] [INFO] New best validation loss: 0.9432 @ step 13
+[GPU 0] [17:56:55] [INFO] New best validation loss: 0.9401 @ step 14
+[GPU 0] [17:57:12] [INFO] New best validation loss: 0.9373 @ step 15
+[GPU 0] [17:57:30] [INFO] New best validation loss: 0.9348 @ step 16
+[GPU 0] [17:57:43] [INFO] New best validation loss: 0.9327 @ step 17
+[GPU 0] [17:57:57] [INFO] New best validation loss: 0.9306 @ step 18
+[GPU 0] [17:58:13] [INFO] New best validation loss: 0.9289 @ step 19
+[GPU 0] [17:58:28] [INFO] New best validation loss: 0.9272 @ step 20
+[GPU 0] [17:58:43] [INFO] New best validation loss: 0.9251 @ step 21
+[GPU 0] [17:58:56] [INFO] New best validation loss: 0.9235 @ step 22
+[GPU 0] [17:59:13] [INFO] New best validation loss: 0.9217 @ step 23
+[GPU 0] [17:59:31] [INFO] New best validation loss: 0.9200 @ step 24
+[GPU 0] [17:59:46] [INFO] New best validation loss: 0.9181 @ step 25
+[GPU 0] [17:59:59] [INFO] New best validation loss: 0.9165 @ step 26
+[GPU 0] [18:00:19] [INFO] New best validation loss: 0.9149 @ step 27
+[GPU 0] [18:00:37] [INFO] New best validation loss: 0.9132 @ step 28
+[GPU 0] [18:00:53] [INFO] New best validation loss: 0.9117 @ step 29
+[GPU 0] [18:01:09] [INFO] New best validation loss: 0.9100 @ step 30
+[GPU 0] [18:01:28] [INFO] New best validation loss: 0.9084 @ step 31
+[GPU 0] [18:01:45] [INFO] New best validation loss: 0.9069 @ step 32
+[GPU 0] [18:01:59] [INFO] New best validation loss: 0.9054 @ step 33
+[GPU 0] [18:02:13] [INFO] New best validation loss: 0.9039 @ step 34
+[GPU 0] [18:02:27] [INFO] New best validation loss: 0.9026 @ step 35
+[GPU 0] [18:02:44] [INFO] New best validation loss: 0.9011 @ step 36
+[GPU 0] [18:03:02] [INFO] New best validation loss: 0.8999 @ step 37
+[GPU 0] [18:03:16] [INFO] New best validation loss: 0.8986 @ step 38
+[GPU 0] [18:03:34] [INFO] New best validation loss: 0.8973 @ step 39
+[GPU 0] [18:03:52] [INFO] New best validation loss: 0.8958 @ step 40
+[GPU 0] [18:04:07] [INFO] New best validation loss: 0.8946 @ step 41
+[GPU 0] [18:04:23] [INFO] New best validation loss: 0.8938 @ step 42
+[GPU 0] [18:04:40] [INFO] New best validation loss: 0.8927 @ step 43
+[GPU 0] [18:04:58] [INFO] New best validation loss: 0.8914 @ step 44
+[GPU 0] [18:05:15] [INFO] New best validation loss: 0.8903 @ step 45
+[GPU 0] [18:05:30] [INFO] New best validation loss: 0.8893 @ step 46
+[GPU 0] [18:05:43] [INFO] New best validation loss: 0.8882 @ step 47
+[GPU 0] [18:05:57] [INFO] New best validation loss: 0.8872 @ step 48
+[GPU 0] [18:06:14] [INFO] New best validation loss: 0.8863 @ step 49
+[GPU 0] [18:06:32] [INFO] New best validation loss: 0.8855 @ step 50
+[GPU 0] [18:06:47] [INFO] New best validation loss: 0.8847 @ step 51
+[GPU 0] [18:07:05] [INFO] New best validation loss: 0.8838 @ step 52
+[GPU 0] [18:07:21] [INFO] New best validation loss: 0.8827 @ step 53
+[GPU 0] [18:07:35] [INFO] New best validation loss: 0.8820 @ step 54
+[GPU 0] [18:07:49] [INFO] New best validation loss: 0.8812 @ step 55
+[GPU 0] [18:08:03] [INFO] New best validation loss: 0.8804 @ step 56
+[GPU 0] [18:08:21] [INFO] New best validation loss: 0.8797 @ step 57
+[GPU 0] [18:08:38] [INFO] New best validation loss: 0.8790 @ step 58
+[GPU 0] [18:08:53] [INFO] New best validation loss: 0.8785 @ step 59
+[GPU 0] [18:09:09] [INFO] New best validation loss: 0.8777 @ step 60
+[GPU 0] [18:09:23] [INFO] New best validation loss: 0.8770 @ step 61
+[GPU 0] [18:09:37] [INFO] New best validation loss: 0.8764 @ step 62
+[GPU 0] [18:09:52] [INFO] New best validation loss: 0.8757 @ step 63
+[GPU 0] [18:10:05] [INFO] New best validation loss: 0.8750 @ step 64
+[GPU 0] [18:10:18] [INFO] New best validation loss: 0.8746 @ step 65
+[GPU 0] [18:10:32] [INFO] New best validation loss: 0.8741 @ step 66
+[GPU 0] [18:10:47] [INFO] New best validation loss: 0.8736 @ step 67
+[GPU 0] [18:11:02] [INFO] New best validation loss: 0.8727 @ step 68
+[GPU 0] [18:11:19] [INFO] New best validation loss: 0.8722 @ step 69
+[GPU 0] [18:11:36] [INFO] New best validation loss: 0.8718 @ step 70
+[GPU 0] [18:11:54] [INFO] New best validation loss: 0.8713 @ step 71
+[GPU 0] [18:12:11] [INFO] New best validation loss: 0.8709 @ step 72
+[GPU 0] [18:12:24] [INFO] New best validation loss: 0.8702 @ step 73
+[GPU 0] [18:12:42] [INFO] New best validation loss: 0.8697 @ step 74
+[GPU 0] [18:12:59] [INFO] New best validation loss: 0.8693 @ step 75
+[GPU 0] [18:13:14] [INFO] New best validation loss: 0.8687 @ step 76
+[GPU 0] [18:13:32] [INFO] New best validation loss: 0.8683 @ step 77
+[GPU 0] [18:13:50] [INFO] New best validation loss: 0.8679 @ step 78
+[GPU 0] [18:14:05] [INFO] New best validation loss: 0.8674 @ step 79
+[GPU 0] [18:14:19] [INFO] New best validation loss: 0.8670 @ step 80
+[GPU 0] [18:14:35] [INFO] New best validation loss: 0.8667 @ step 81
+[GPU 0] [18:14:53] [INFO] New best validation loss: 0.8662 @ step 82
+[GPU 0] [18:15:10] [INFO] New best validation loss: 0.8658 @ step 83
+[GPU 0] [18:15:30] [INFO] New best validation loss: 0.8655 @ step 84
+[GPU 0] [18:15:46] [INFO] New best validation loss: 0.8650 @ step 85
+[GPU 0] [18:16:04] [INFO] New best validation loss: 0.8647 @ step 86
+[GPU 0] [18:16:21] [INFO] New best validation loss: 0.8642 @ step 87
+[GPU 0] [18:16:38] [INFO] New best validation loss: 0.8639 @ step 88
+[GPU 0] [18:16:56] [INFO] New best validation loss: 0.8636 @ step 89
+[GPU 0] [18:17:11] [INFO] New best validation loss: 0.8632 @ step 90
+[GPU 0] [18:17:27] [INFO] New best validation loss: 0.8629 @ step 91
+[GPU 0] [18:17:42] [INFO] New best validation loss: 0.8626 @ step 92
+[GPU 0] [18:17:57] [INFO] New best validation loss: 0.8623 @ step 93
+[GPU 0] [18:18:11] [INFO] New best validation loss: 0.8619 @ step 94
+[GPU 0] [18:18:26] [INFO] New best validation loss: 0.8615 @ step 95
+[GPU 0] [18:18:41] [INFO] New best validation loss: 0.8611 @ step 96
+[GPU 0] [18:18:54] [INFO] New best validation loss: 0.8608 @ step 97
+[GPU 0] [18:19:08] [INFO] New best validation loss: 0.8605 @ step 98
+[GPU 0] [18:19:22] [INFO] New best validation loss: 0.8603 @ step 99
+[GPU 0] [18:19:36] [INFO] New best validation loss: 0.8600 @ step 100
+[GPU 0] [18:19:53] [INFO] New best validation loss: 0.8598 @ step 101
+[GPU 0] [18:20:10] [INFO] New best validation loss: 0.8596 @ step 102
+[GPU 0] [18:20:28] [INFO] New best validation loss: 0.8593 @ step 103
+[GPU 0] [18:20:46] [INFO] New best validation loss: 0.8590 @ step 104
+[GPU 0] [18:21:03] [INFO] New best validation loss: 0.8586 @ step 105
+[GPU 0] [18:21:19] [INFO] New best validation loss: 0.8583 @ step 106
+[GPU 0] [18:21:35] [INFO] New best validation loss: 0.8580 @ step 107
+[GPU 0] [18:21:49] [INFO] New best validation loss: 0.8579 @ step 108
+[GPU 0] [18:22:07] [INFO] New best validation loss: 0.8577 @ step 109
+[GPU 0] [18:22:25] [INFO] New best validation loss: 0.8575 @ step 110
+[GPU 0] [18:22:40] [INFO] New best validation loss: 0.8572 @ step 111
+[GPU 0] [18:22:58] [INFO] New best validation loss: 0.8570 @ step 112
+[GPU 0] [18:23:13] [INFO] New best validation loss: 0.8567 @ step 113
+[GPU 0] [18:23:27] [INFO] New best validation loss: 0.8564 @ step 114
+[GPU 0] [18:23:41] [INFO] New best validation loss: 0.8563 @ step 115
+[GPU 0] [18:23:55] [INFO] New best validation loss: 0.8561 @ step 116
+[GPU 0] [18:24:08] [INFO] New best validation loss: 0.8558 @ step 117
+[GPU 0] [18:24:21] [INFO] New best validation loss: 0.8556 @ step 118
+[GPU 0] [18:24:38] [INFO] New best validation loss: 0.8554 @ step 119
+[GPU 0] [18:24:52] [INFO] New best validation loss: 0.8553 @ step 120
+[GPU 0] [18:25:08] [INFO] New best validation loss: 0.8551 @ step 121
+[GPU 0] [18:25:26] [INFO] New best validation loss: 0.8550 @ step 122
+[GPU 0] [18:25:43] [INFO] New best validation loss: 0.8548 @ step 123
+[GPU 0] [18:25:57] [INFO] New best validation loss: 0.8546 @ step 124
+[GPU 0] [18:26:09] [INFO] New best validation loss: 0.8544 @ step 125
+[GPU 0] [18:26:24] [INFO] New best validation loss: 0.8543 @ step 126
+[GPU 0] [18:26:40] [INFO] New best validation loss: 0.8541 @ step 127
+[GPU 0] [18:26:56] [INFO] New best validation loss: 0.8539 @ step 128
+[GPU 0] [18:27:14] [INFO] New best validation loss: 0.8538 @ step 129
+[GPU 0] [18:27:31] [INFO] New best validation loss: 0.8536 @ step 130
+[GPU 0] [18:27:46] [INFO] New best validation loss: 0.8535 @ step 131
+[GPU 0] [18:28:00] [INFO] New best validation loss: 0.8532 @ step 132
+[GPU 0] [18:28:15] [INFO] New best validation loss: 0.8531 @ step 133
+[GPU 0] [18:28:32] [INFO] New best validation loss: 0.8530 @ step 134
+[GPU 0] [18:28:50] [INFO] New best validation loss: 0.8528 @ step 135
+[GPU 0] [18:29:06] [INFO] New best validation loss: 0.8527 @ step 136
+[GPU 0] [18:29:20] [INFO] New best validation loss: 0.8526 @ step 137
+[GPU 0] [18:29:36] [INFO] New best validation loss: 0.8526 @ step 138
+[GPU 0] [18:29:52] [INFO] New best validation loss: 0.8524 @ step 139
+[GPU 0] [18:30:06] [INFO] New best validation loss: 0.8523 @ step 140
+[GPU 0] [18:30:27] [INFO] New best validation loss: 0.8522 @ step 141
+[GPU 0] [18:30:44] [INFO] New best validation loss: 0.8520 @ step 142
+[GPU 0] [18:30:58] [INFO] New best validation loss: 0.8518 @ step 143
+[GPU 0] [18:31:16] [INFO] New best validation loss: 0.8518 @ step 144
+[GPU 0] [18:31:34] [INFO] New best validation loss: 0.8517 @ step 145
+[GPU 0] [18:31:50] [INFO] New best validation loss: 0.8516 @ step 146
+[GPU 0] [18:32:05] [INFO] New best validation loss: 0.8515 @ step 147
+[GPU 0] [18:32:21] [INFO] New best validation loss: 0.8514 @ step 148
+[GPU 0] [18:32:35] [INFO] New best validation loss: 0.8513 @ step 149
+[GPU 0] [18:32:52] [INFO] New best validation loss: 0.8512 @ step 150
+[GPU 0] [18:33:08] [INFO] New best validation loss: 0.8511 @ step 151
+[GPU 0] [18:33:25] [INFO] New best validation loss: 0.8511 @ step 152
+[GPU 0] [18:33:40] [INFO] New best validation loss: 0.8510 @ step 153
+[GPU 0] [18:33:54] [INFO] New best validation loss: 0.8510 @ step 154
+[GPU 0] [18:34:08] [INFO] New best validation loss: 0.8509 @ step 155
+[GPU 0] [18:34:25] [INFO] New best validation loss: 0.8509 @ step 156
+[GPU 0] [18:34:38] [INFO] New best validation loss: 0.8508 @ step 157
+[GPU 0] [18:34:53] [INFO] New best validation loss: 0.8507 @ step 158
+[GPU 0] [18:35:07] [INFO] New best validation loss: 0.8506 @ step 159
+[GPU 0] [18:35:25] [INFO] New best validation loss: 0.8506 @ step 160
+[GPU 0] [18:35:41] [INFO] New best validation loss: 0.8505 @ step 161
+[GPU 0] [18:35:55] [INFO] New best validation loss: 0.8505 @ step 162
+[GPU 0] [18:36:11] [INFO] New best validation loss: 0.8505 @ step 163
+[GPU 0] [18:36:25] [INFO] New best validation loss: 0.8504 @ step 164
+[GPU 0] [18:36:39] [INFO] New best validation loss: 0.8504 @ step 165
+[GPU 0] [18:36:53] [INFO] New best validation loss: 0.8503 @ step 166
+[GPU 0] [18:37:09] [INFO] New best validation loss: 0.8503 @ step 167
+[GPU 0] [18:37:45] [INFO] New best validation loss: 0.8503 @ step 169
+[GPU 0] [18:38:20] [INFO] New best validation loss: 0.8503 @ step 171
+[GPU 0] [18:38:54] [INFO] New best validation loss: 0.8502 @ step 173
+[GPU 0] [18:39:29] [INFO] New best validation loss: 0.8501 @ step 175
+[GPU 0] [18:39:47] [INFO] New best validation loss: 0.8501 @ step 176
+[GPU 0] [18:42:39] [INFO] Stop FT @ 188: no val improvement for 10 steps
+[GPU 0] [18:42:39] [INFO] Wrote stats.jsonl entries at FT step 176 
+[GPU 0] [18:42:53] [INFO] ---- Begin FT | Experts: None | Data: ['papers-biology'] ----
+[GPU 0] [18:42:53] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [18:42:53] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [18:43:07] [INFO] New best validation loss: 2.6887 @ step 0
+[GPU 0] [18:43:20] [INFO] New best validation loss: 2.5441 @ step 1
+[GPU 0] [18:43:33] [INFO] New best validation loss: 2.4633 @ step 2
+[GPU 0] [18:43:47] [INFO] New best validation loss: 2.4309 @ step 3
+[GPU 0] [18:44:00] [INFO] New best validation loss: 2.4219 @ step 4
+[GPU 0] [18:44:14] [INFO] New best validation loss: 2.4213 @ step 5
+[GPU 0] [18:45:07] [INFO] New best validation loss: 2.4199 @ step 8
+[GPU 0] [18:45:26] [INFO] New best validation loss: 2.4170 @ step 9
+[GPU 0] [18:45:44] [INFO] New best validation loss: 2.4142 @ step 10
+[GPU 0] [18:45:58] [INFO] New best validation loss: 2.4112 @ step 11
+[GPU 0] [18:46:13] [INFO] New best validation loss: 2.4083 @ step 12
+[GPU 0] [18:46:29] [INFO] New best validation loss: 2.4057 @ step 13
+[GPU 0] [18:46:47] [INFO] New best validation loss: 2.4034 @ step 14
+[GPU 0] [18:47:04] [INFO] New best validation loss: 2.4012 @ step 15
+[GPU 0] [18:47:19] [INFO] New best validation loss: 2.3992 @ step 16
+[GPU 0] [18:47:37] [INFO] New best validation loss: 2.3978 @ step 17
+[GPU 0] [18:47:54] [INFO] New best validation loss: 2.3964 @ step 18
+[GPU 0] [18:48:11] [INFO] New best validation loss: 2.3952 @ step 19
+[GPU 0] [18:48:28] [INFO] New best validation loss: 2.3940 @ step 20
+[GPU 0] [18:48:41] [INFO] New best validation loss: 2.3930 @ step 21
+[GPU 0] [18:48:54] [INFO] New best validation loss: 2.3921 @ step 22
+[GPU 0] [18:49:11] [INFO] New best validation loss: 2.3912 @ step 23
+[GPU 0] [18:49:28] [INFO] New best validation loss: 2.3904 @ step 24
+[GPU 0] [18:49:42] [INFO] New best validation loss: 2.3898 @ step 25
+[GPU 0] [18:49:57] [INFO] New best validation loss: 2.3891 @ step 26
+[GPU 0] [18:50:13] [INFO] New best validation loss: 2.3886 @ step 27
+[GPU 0] [18:50:27] [INFO] New best validation loss: 2.3883 @ step 28
+[GPU 0] [18:50:44] [INFO] New best validation loss: 2.3876 @ step 29
+[GPU 0] [18:51:02] [INFO] New best validation loss: 2.3871 @ step 30
+[GPU 0] [18:51:17] [INFO] New best validation loss: 2.3865 @ step 31
+[GPU 0] [18:51:35] [INFO] New best validation loss: 2.3862 @ step 32
+[GPU 0] [18:51:49] [INFO] New best validation loss: 2.3857 @ step 33
+[GPU 0] [18:52:03] [INFO] New best validation loss: 2.3855 @ step 34
+[GPU 0] [18:52:20] [INFO] New best validation loss: 2.3851 @ step 35
+[GPU 0] [18:52:37] [INFO] New best validation loss: 2.3849 @ step 36
+[GPU 0] [18:52:50] [INFO] New best validation loss: 2.3846 @ step 37
+[GPU 0] [18:53:06] [INFO] New best validation loss: 2.3844 @ step 38
+[GPU 0] [18:53:24] [INFO] New best validation loss: 2.3842 @ step 39
+[GPU 0] [18:53:39] [INFO] New best validation loss: 2.3842 @ step 40
+[GPU 0] [18:53:53] [INFO] New best validation loss: 2.3840 @ step 41
+[GPU 0] [18:54:09] [INFO] New best validation loss: 2.3838 @ step 42
+[GPU 0] [18:54:22] [INFO] New best validation loss: 2.3838 @ step 43
+[GPU 0] [18:54:36] [INFO] New best validation loss: 2.3838 @ step 44
+[GPU 0] [18:54:49] [INFO] New best validation loss: 2.3838 @ step 45
+[GPU 0] [18:57:49] [INFO] Stop FT @ 57: no val improvement for 10 steps
+[GPU 0] [18:57:49] [INFO] Wrote stats.jsonl entries at FT step 45 
+[GPU 0] [18:58:05] [INFO] ---- Begin FT | Experts: None | Data: ['papers-nuclear'] ----
+[GPU 0] [18:58:05] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [18:58:05] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [18:58:17] [INFO] New best validation loss: 2.8669 @ step 0
+[GPU 0] [18:58:33] [INFO] New best validation loss: 2.8064 @ step 1
+[GPU 0] [18:58:48] [INFO] New best validation loss: 2.7789 @ step 2
+[GPU 0] [18:59:03] [INFO] New best validation loss: 2.7702 @ step 3
+[GPU 0] [18:59:19] [INFO] New best validation loss: 2.7677 @ step 4
+[GPU 0] [18:59:36] [INFO] New best validation loss: 2.7659 @ step 5
+[GPU 0] [18:59:53] [INFO] New best validation loss: 2.7640 @ step 6
+[GPU 0] [19:00:11] [INFO] New best validation loss: 2.7621 @ step 7
+[GPU 0] [19:00:30] [INFO] New best validation loss: 2.7596 @ step 8
+[GPU 0] [19:00:47] [INFO] New best validation loss: 2.7565 @ step 9
+[GPU 0] [19:01:05] [INFO] New best validation loss: 2.7537 @ step 10
+[GPU 0] [19:01:21] [INFO] New best validation loss: 2.7514 @ step 11
+[GPU 0] [19:01:39] [INFO] New best validation loss: 2.7495 @ step 12
+[GPU 0] [19:01:55] [INFO] New best validation loss: 2.7476 @ step 13
+[GPU 0] [19:02:09] [INFO] New best validation loss: 2.7459 @ step 14
+[GPU 0] [19:02:25] [INFO] New best validation loss: 2.7445 @ step 15
+[GPU 0] [19:02:40] [INFO] New best validation loss: 2.7431 @ step 16
+[GPU 0] [19:02:57] [INFO] New best validation loss: 2.7419 @ step 17
+[GPU 0] [19:03:13] [INFO] New best validation loss: 2.7409 @ step 18
+[GPU 0] [19:03:32] [INFO] New best validation loss: 2.7397 @ step 19
+[GPU 0] [19:03:47] [INFO] New best validation loss: 2.7387 @ step 20
+[GPU 0] [19:04:05] [INFO] New best validation loss: 2.7379 @ step 21
+[GPU 0] [19:04:22] [INFO] New best validation loss: 2.7374 @ step 22
+[GPU 0] [19:04:40] [INFO] New best validation loss: 2.7369 @ step 23
+[GPU 0] [19:04:57] [INFO] New best validation loss: 2.7364 @ step 24
+[GPU 0] [19:05:14] [INFO] New best validation loss: 2.7360 @ step 25
+[GPU 0] [19:05:33] [INFO] New best validation loss: 2.7356 @ step 26
+[GPU 0] [19:05:51] [INFO] New best validation loss: 2.7354 @ step 27
+[GPU 0] [19:06:08] [INFO] New best validation loss: 2.7353 @ step 28
+[GPU 0] [19:06:23] [INFO] New best validation loss: 2.7351 @ step 29
+[GPU 0] [19:06:54] [INFO] New best validation loss: 2.7351 @ step 31
+[GPU 0] [19:09:51] [INFO] Stop FT @ 43: no val improvement for 10 steps
+[GPU 0] [19:09:51] [INFO] Wrote stats.jsonl entries at FT step 31 
+[GPU 0] [19:09:54] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.000170511140227519, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033/maxent_05", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-nuclear"]], "alpha_retain": 548.1074204112906, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [19:09:54] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [19:09:54] [INFO] UNLEARNING - maxent START
+[GPU 0] [19:09:54] [INFO] Unlearning: retaining ['core', 'papers-nuclear'], removing ['code-lisp', 'papers-biology', 'papers-cyber']
+[GPU 0] [19:09:55] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-cyber'] ----
+[GPU 0] [19:09:55] [DEBUG] alpha_retain: 548.1074204112906, lr: 0.000170511140227519, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [19:09:55] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-nuclear', 'papers-other']
+[GPU 0] [19:12:56] [INFO] Early stop MAXENT at step 821: KL→U ≤ 2.0
+[GPU 0] [19:12:56] [INFO] Finished MaxEnt — Avg KL→U: 8.339, Avg Retain CE: 2.301
+[GPU 0] [19:12:56] [INFO] ---- Begin Eval ----
+[GPU 0] [19:12:56] [INFO] Data: core | Experts: None
+[GPU 0] [19:13:18] [INFO] loss: 1.89391673
+[GPU 0] [19:13:18] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [19:13:25] [INFO] loss: 6.09910679
+[GPU 0] [19:13:25] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [19:13:32] [INFO] loss: 2.45807290
+[GPU 0] [19:13:32] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [19:13:39] [INFO] loss: 2.72206092
+[GPU 0] [19:13:39] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [19:13:46] [INFO] loss: 2.67695284
+[GPU 0] [19:13:49] [INFO] UNLEARNING - maxent - ADVERSARIAL FT START
+[GPU 0] [19:13:59] [INFO] ---- Begin FT | Experts: None | Data: ['code-lisp'] ----
+[GPU 0] [19:13:59] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [19:13:59] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [19:14:12] [INFO] New best validation loss: 5.0792 @ step 0
+[GPU 0] [19:14:25] [INFO] New best validation loss: 4.1078 @ step 1
+[GPU 0] [19:14:39] [INFO] New best validation loss: 3.1973 @ step 2
+[GPU 0] [19:14:52] [INFO] New best validation loss: 2.3835 @ step 3
+[GPU 0] [19:15:10] [INFO] New best validation loss: 1.7376 @ step 4
+[GPU 0] [19:15:26] [INFO] New best validation loss: 1.3362 @ step 5
+[GPU 0] [19:15:39] [INFO] New best validation loss: 1.1469 @ step 6
+[GPU 0] [19:15:53] [INFO] New best validation loss: 1.0583 @ step 7
+[GPU 0] [19:16:09] [INFO] New best validation loss: 1.0131 @ step 8
+[GPU 0] [19:16:27] [INFO] New best validation loss: 0.9895 @ step 9
+[GPU 0] [19:16:45] [INFO] New best validation loss: 0.9766 @ step 10
+[GPU 0] [19:16:59] [INFO] New best validation loss: 0.9683 @ step 11
+[GPU 0] [19:17:15] [INFO] New best validation loss: 0.9625 @ step 12
+[GPU 0] [19:17:33] [INFO] New best validation loss: 0.9575 @ step 13
+[GPU 0] [19:17:51] [INFO] New best validation loss: 0.9534 @ step 14
+[GPU 0] [19:18:06] [INFO] New best validation loss: 0.9496 @ step 15
+[GPU 0] [19:18:19] [INFO] New best validation loss: 0.9462 @ step 16
+[GPU 0] [19:18:36] [INFO] New best validation loss: 0.9428 @ step 17
+[GPU 0] [19:18:53] [INFO] New best validation loss: 0.9399 @ step 18
+[GPU 0] [19:19:09] [INFO] New best validation loss: 0.9371 @ step 19
+[GPU 0] [19:19:23] [INFO] New best validation loss: 0.9345 @ step 20
+[GPU 0] [19:19:39] [INFO] New best validation loss: 0.9320 @ step 21
+[GPU 0] [19:19:55] [INFO] New best validation loss: 0.9294 @ step 22
+[GPU 0] [19:20:12] [INFO] New best validation loss: 0.9270 @ step 23
+[GPU 0] [19:20:30] [INFO] New best validation loss: 0.9249 @ step 24
+[GPU 0] [19:20:47] [INFO] New best validation loss: 0.9229 @ step 25
+[GPU 0] [19:21:05] [INFO] New best validation loss: 0.9209 @ step 26
+[GPU 0] [19:21:22] [INFO] New best validation loss: 0.9190 @ step 27
+[GPU 0] [19:21:40] [INFO] New best validation loss: 0.9171 @ step 28
+[GPU 0] [19:21:58] [INFO] New best validation loss: 0.9153 @ step 29
+[GPU 0] [19:22:14] [INFO] New best validation loss: 0.9135 @ step 30
+[GPU 0] [19:22:32] [INFO] New best validation loss: 0.9120 @ step 31
+[GPU 0] [19:22:46] [INFO] New best validation loss: 0.9103 @ step 32
+[GPU 0] [19:23:04] [INFO] New best validation loss: 0.9087 @ step 33
+[GPU 0] [19:23:20] [INFO] New best validation loss: 0.9074 @ step 34
+[GPU 0] [19:23:37] [INFO] New best validation loss: 0.9060 @ step 35
+[GPU 0] [19:23:54] [INFO] New best validation loss: 0.9044 @ step 36
+[GPU 0] [19:24:07] [INFO] New best validation loss: 0.9030 @ step 37
+[GPU 0] [19:24:21] [INFO] New best validation loss: 0.9017 @ step 38
+[GPU 0] [19:24:37] [INFO] New best validation loss: 0.9004 @ step 39
+[GPU 0] [19:24:51] [INFO] New best validation loss: 0.8992 @ step 40
+[GPU 0] [19:25:07] [INFO] New best validation loss: 0.8980 @ step 41
+[GPU 0] [19:25:24] [INFO] New best validation loss: 0.8969 @ step 42
+[GPU 0] [19:25:41] [INFO] New best validation loss: 0.8959 @ step 43
+[GPU 0] [19:25:57] [INFO] New best validation loss: 0.8948 @ step 44
+[GPU 0] [19:26:12] [INFO] New best validation loss: 0.8938 @ step 45
+[GPU 0] [19:26:30] [INFO] New best validation loss: 0.8926 @ step 46
+[GPU 0] [19:26:47] [INFO] New best validation loss: 0.8916 @ step 47
+[GPU 0] [19:27:05] [INFO] New best validation loss: 0.8907 @ step 48
+[GPU 0] [19:27:21] [INFO] New best validation loss: 0.8899 @ step 49
+[GPU 0] [19:27:39] [INFO] New best validation loss: 0.8891 @ step 50
+[GPU 0] [19:27:57] [INFO] New best validation loss: 0.8882 @ step 51
+[GPU 0] [19:28:11] [INFO] New best validation loss: 0.8876 @ step 52
+[GPU 0] [19:28:25] [INFO] New best validation loss: 0.8868 @ step 53
+[GPU 0] [19:28:41] [INFO] New best validation loss: 0.8859 @ step 54
+[GPU 0] [19:28:59] [INFO] New best validation loss: 0.8852 @ step 55
+[GPU 0] [19:29:16] [INFO] New best validation loss: 0.8845 @ step 56
+[GPU 0] [19:29:34] [INFO] New best validation loss: 0.8838 @ step 57
+[GPU 0] [19:29:50] [INFO] New best validation loss: 0.8832 @ step 58
+[GPU 0] [19:30:04] [INFO] New best validation loss: 0.8824 @ step 59
+[GPU 0] [19:30:26] [INFO] New best validation loss: 0.8819 @ step 60
+[GPU 0] [19:30:44] [INFO] New best validation loss: 0.8814 @ step 61
+[GPU 0] [19:31:00] [INFO] New best validation loss: 0.8806 @ step 62
+[GPU 0] [19:31:17] [INFO] New best validation loss: 0.8801 @ step 63
+[GPU 0] [19:31:35] [INFO] New best validation loss: 0.8795 @ step 64
+[GPU 0] [19:31:50] [INFO] New best validation loss: 0.8790 @ step 65
+[GPU 0] [19:32:08] [INFO] New best validation loss: 0.8785 @ step 66
+[GPU 0] [19:32:25] [INFO] New best validation loss: 0.8780 @ step 67
+[GPU 0] [19:32:42] [INFO] New best validation loss: 0.8775 @ step 68
+[GPU 0] [19:32:57] [INFO] New best validation loss: 0.8769 @ step 69
+[GPU 0] [19:33:13] [INFO] New best validation loss: 0.8763 @ step 70
+[GPU 0] [19:33:27] [INFO] New best validation loss: 0.8759 @ step 71
+[GPU 0] [19:33:42] [INFO] New best validation loss: 0.8755 @ step 72
+[GPU 0] [19:33:55] [INFO] New best validation loss: 0.8751 @ step 73
+[GPU 0] [19:34:09] [INFO] New best validation loss: 0.8746 @ step 74
+[GPU 0] [19:34:26] [INFO] New best validation loss: 0.8743 @ step 75
+[GPU 0] [19:34:43] [INFO] New best validation loss: 0.8739 @ step 76
+[GPU 0] [19:35:01] [INFO] New best validation loss: 0.8735 @ step 77
+[GPU 0] [19:35:18] [INFO] New best validation loss: 0.8731 @ step 78
+[GPU 0] [19:35:36] [INFO] New best validation loss: 0.8727 @ step 79
+[GPU 0] [19:35:54] [INFO] New best validation loss: 0.8722 @ step 80
+[GPU 0] [19:36:10] [INFO] New best validation loss: 0.8718 @ step 81
+[GPU 0] [19:36:28] [INFO] New best validation loss: 0.8714 @ step 82
+[GPU 0] [19:36:45] [INFO] New best validation loss: 0.8712 @ step 83
+[GPU 0] [19:37:03] [INFO] New best validation loss: 0.8709 @ step 84
+[GPU 0] [19:37:20] [INFO] New best validation loss: 0.8706 @ step 85
+[GPU 0] [19:37:37] [INFO] New best validation loss: 0.8703 @ step 86
+[GPU 0] [19:37:51] [INFO] New best validation loss: 0.8700 @ step 87
+[GPU 0] [19:38:05] [INFO] New best validation loss: 0.8697 @ step 88
+[GPU 0] [19:38:19] [INFO] New best validation loss: 0.8693 @ step 89
+[GPU 0] [19:38:32] [INFO] New best validation loss: 0.8689 @ step 90
+[GPU 0] [19:38:46] [INFO] New best validation loss: 0.8686 @ step 91
+[GPU 0] [19:39:00] [INFO] New best validation loss: 0.8683 @ step 92
+[GPU 0] [19:39:14] [INFO] New best validation loss: 0.8681 @ step 93
+[GPU 0] [19:39:33] [INFO] New best validation loss: 0.8678 @ step 94
+[GPU 0] [19:39:49] [INFO] New best validation loss: 0.8676 @ step 95
+[GPU 0] [19:40:02] [INFO] New best validation loss: 0.8673 @ step 96
+[GPU 0] [19:40:20] [INFO] New best validation loss: 0.8671 @ step 97
+[GPU 0] [19:40:37] [INFO] New best validation loss: 0.8668 @ step 98
+[GPU 0] [19:40:50] [INFO] New best validation loss: 0.8666 @ step 99
+[GPU 0] [19:41:05] [INFO] New best validation loss: 0.8664 @ step 100
+[GPU 0] [19:41:20] [INFO] New best validation loss: 0.8661 @ step 101
+[GPU 0] [19:41:36] [INFO] New best validation loss: 0.8660 @ step 102
+[GPU 0] [19:41:52] [INFO] New best validation loss: 0.8658 @ step 103
+[GPU 0] [19:42:06] [INFO] New best validation loss: 0.8656 @ step 104
+[GPU 0] [19:42:22] [INFO] New best validation loss: 0.8653 @ step 105
+[GPU 0] [19:42:39] [INFO] New best validation loss: 0.8651 @ step 106
+[GPU 0] [19:42:52] [INFO] New best validation loss: 0.8649 @ step 107
+[GPU 0] [19:43:05] [INFO] New best validation loss: 0.8647 @ step 108
+[GPU 0] [19:43:19] [INFO] New best validation loss: 0.8646 @ step 109
+[GPU 0] [19:43:32] [INFO] New best validation loss: 0.8644 @ step 110
+[GPU 0] [19:43:45] [INFO] New best validation loss: 0.8642 @ step 111
+[GPU 0] [19:44:01] [INFO] New best validation loss: 0.8640 @ step 112
+[GPU 0] [19:44:16] [INFO] New best validation loss: 0.8638 @ step 113
+[GPU 0] [19:44:31] [INFO] New best validation loss: 0.8637 @ step 114
+[GPU 0] [19:44:49] [INFO] New best validation loss: 0.8636 @ step 115
+[GPU 0] [19:45:06] [INFO] New best validation loss: 0.8634 @ step 116
+[GPU 0] [19:45:26] [INFO] New best validation loss: 0.8633 @ step 117
+[GPU 0] [19:45:44] [INFO] New best validation loss: 0.8632 @ step 118
+[GPU 0] [19:46:02] [INFO] New best validation loss: 0.8630 @ step 119
+[GPU 0] [19:46:18] [INFO] New best validation loss: 0.8629 @ step 120
+[GPU 0] [19:46:35] [INFO] New best validation loss: 0.8627 @ step 121
+[GPU 0] [19:46:51] [INFO] New best validation loss: 0.8625 @ step 122
+[GPU 0] [19:47:06] [INFO] New best validation loss: 0.8623 @ step 123
+[GPU 0] [19:47:21] [INFO] New best validation loss: 0.8622 @ step 124
+[GPU 0] [19:47:39] [INFO] New best validation loss: 0.8621 @ step 125
+[GPU 0] [19:47:57] [INFO] New best validation loss: 0.8620 @ step 126
+[GPU 0] [19:48:13] [INFO] New best validation loss: 0.8619 @ step 127
+[GPU 0] [19:48:31] [INFO] New best validation loss: 0.8618 @ step 128
+[GPU 0] [19:48:45] [INFO] New best validation loss: 0.8617 @ step 129
+[GPU 0] [19:49:03] [INFO] New best validation loss: 0.8616 @ step 130
+[GPU 0] [19:49:19] [INFO] New best validation loss: 0.8616 @ step 131
+[GPU 0] [19:49:37] [INFO] New best validation loss: 0.8615 @ step 132
+[GPU 0] [19:49:52] [INFO] New best validation loss: 0.8613 @ step 133
+[GPU 0] [19:50:09] [INFO] New best validation loss: 0.8612 @ step 134
+[GPU 0] [19:50:26] [INFO] New best validation loss: 0.8611 @ step 135
+[GPU 0] [19:50:42] [INFO] New best validation loss: 0.8610 @ step 136
+[GPU 0] [19:51:00] [INFO] New best validation loss: 0.8609 @ step 137
+[GPU 0] [19:51:13] [INFO] New best validation loss: 0.8609 @ step 138
+[GPU 0] [19:51:30] [INFO] New best validation loss: 0.8608 @ step 139
+[GPU 0] [19:51:44] [INFO] New best validation loss: 0.8607 @ step 140
+[GPU 0] [19:52:01] [INFO] New best validation loss: 0.8607 @ step 141
+[GPU 0] [19:52:18] [INFO] New best validation loss: 0.8606 @ step 142
+[GPU 0] [19:52:35] [INFO] New best validation loss: 0.8606 @ step 143
+[GPU 0] [19:52:52] [INFO] New best validation loss: 0.8604 @ step 144
+[GPU 0] [19:53:10] [INFO] New best validation loss: 0.8604 @ step 145
+[GPU 0] [19:53:28] [INFO] New best validation loss: 0.8603 @ step 146
+[GPU 0] [19:53:44] [INFO] New best validation loss: 0.8603 @ step 147
+[GPU 0] [19:54:02] [INFO] New best validation loss: 0.8602 @ step 148
+[GPU 0] [19:54:16] [INFO] New best validation loss: 0.8602 @ step 149
+[GPU 0] [19:54:35] [INFO] New best validation loss: 0.8602 @ step 150
+[GPU 0] [19:54:50] [INFO] New best validation loss: 0.8601 @ step 151
+[GPU 0] [19:55:07] [INFO] New best validation loss: 0.8601 @ step 152
+[GPU 0] [19:55:20] [INFO] New best validation loss: 0.8601 @ step 153
+[GPU 0] [19:55:33] [INFO] New best validation loss: 0.8601 @ step 154
+[GPU 0] [19:56:36] [INFO] New best validation loss: 0.8600 @ step 158
+[GPU 0] [19:57:11] [INFO] New best validation loss: 0.8600 @ step 160
+[GPU 0] [19:57:45] [INFO] New best validation loss: 0.8600 @ step 162
+[GPU 0] [20:00:56] [INFO] Stop FT @ 174: no val improvement for 10 steps
+[GPU 0] [20:00:56] [INFO] Wrote stats.jsonl entries at FT step 162 
+[GPU 0] [20:01:10] [INFO] ---- Begin FT | Experts: None | Data: ['papers-biology'] ----
+[GPU 0] [20:01:10] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [20:01:10] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [20:01:22] [INFO] New best validation loss: 2.4225 @ step 0
+[GPU 0] [20:01:36] [INFO] New best validation loss: 2.4078 @ step 1
+[GPU 0] [20:01:49] [INFO] New best validation loss: 2.4021 @ step 2
+[GPU 0] [20:02:05] [INFO] New best validation loss: 2.3990 @ step 3
+[GPU 0] [20:02:21] [INFO] New best validation loss: 2.3965 @ step 4
+[GPU 0] [20:02:34] [INFO] New best validation loss: 2.3943 @ step 5
+[GPU 0] [20:02:47] [INFO] New best validation loss: 2.3926 @ step 6
+[GPU 0] [20:03:05] [INFO] New best validation loss: 2.3912 @ step 7
+[GPU 0] [20:03:21] [INFO] New best validation loss: 2.3896 @ step 8
+[GPU 0] [20:03:39] [INFO] New best validation loss: 2.3882 @ step 9
+[GPU 0] [20:03:56] [INFO] New best validation loss: 2.3867 @ step 10
+[GPU 0] [20:04:14] [INFO] New best validation loss: 2.3855 @ step 11
+[GPU 0] [20:04:32] [INFO] New best validation loss: 2.3846 @ step 12
+[GPU 0] [20:04:50] [INFO] New best validation loss: 2.3834 @ step 13
+[GPU 0] [20:05:06] [INFO] New best validation loss: 2.3828 @ step 14
+[GPU 0] [20:05:22] [INFO] New best validation loss: 2.3823 @ step 15
+[GPU 0] [20:05:39] [INFO] New best validation loss: 2.3820 @ step 16
+[GPU 0] [20:08:30] [INFO] Stop FT @ 28: no val improvement for 10 steps
+[GPU 0] [20:08:30] [INFO] Wrote stats.jsonl entries at FT step 16 
+[GPU 0] [20:08:44] [INFO] ---- Begin FT | Experts: None | Data: ['papers-cyber'] ----
+[GPU 0] [20:08:44] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [20:08:44] [DEBUG] local_x: torch.Size([64, 1024]), local_y: torch.Size([64, 1024]), num_steps: 6, per_gpu: 64, mbs_size: 12
+[GPU 0] [20:08:57] [INFO] New best validation loss: 2.6677 @ step 0
+[GPU 0] [20:09:11] [INFO] New best validation loss: 2.6632 @ step 1
+[GPU 0] [20:09:27] [INFO] New best validation loss: 2.6610 @ step 2
+[GPU 0] [20:09:40] [INFO] New best validation loss: 2.6596 @ step 3
+[GPU 0] [20:09:55] [INFO] New best validation loss: 2.6583 @ step 4
+[GPU 0] [20:10:12] [INFO] New best validation loss: 2.6574 @ step 5
+[GPU 0] [20:10:30] [INFO] New best validation loss: 2.6564 @ step 6
+[GPU 0] [20:10:44] [INFO] New best validation loss: 2.6554 @ step 7
+[GPU 0] [20:10:59] [INFO] New best validation loss: 2.6546 @ step 8
+[GPU 0] [20:11:16] [INFO] New best validation loss: 2.6541 @ step 9
+[GPU 0] [20:11:34] [INFO] New best validation loss: 2.6538 @ step 10
+[GPU 0] [20:11:51] [INFO] New best validation loss: 2.6536 @ step 11
+[GPU 0] [20:14:55] [INFO] Stop FT @ 23: no val improvement for 10 steps
+[GPU 0] [20:14:55] [INFO] Wrote stats.jsonl entries at FT step 11 
+[GPU 0] [20:15:15] [INFO] ----------------------------------------
+[GPU 0] [20:15:15] [INFO] Finished. See /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260527122922310033

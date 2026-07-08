@@ -1,0 +1,300 @@
+% This file was created with matplot2tikz v0.5.3.
+\begin{tikzpicture}
+  \pgfplotsset{legend image code/.code={\draw[#1] (0cm,-0.07cm) rectangle (0.25cm,0.07cm);}}
+  
+  \definecolor{crimson2143940}{RGB}{214,39,40}
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{darkorange25512714}{RGB}{255,127,14}
+  \definecolor{dimgray102}{RGB}{102,102,102}
+  \definecolor{forestgreen4416044}{RGB}{44,160,44}
+  \definecolor{gainsboro222209235}{RGB}{222,209,235}
+  \definecolor{gray}{RGB}{128,128,128}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+  \definecolor{lightpink242190190}{RGB}{242,190,190}
+  \definecolor{mediumpurple148103189}{RGB}{148,103,189}
+  \definecolor{peachpuff255216182}{RGB}{255,216,182}
+  \definecolor{steelblue31119180}{RGB}{31,119,180}
+  
+  \begin{groupplot}[group style={group size=1 by 2, vertical sep=1.5cm}, width=0.76\linewidth, height=0.234\linewidth, scale only axis=true, title style={font=\footnotesize}]
+  \nextgroupplot[
+  clip=false,
+  scaled x ticks=manual:{}{\pgfmathparse{#1}},
+  tick align=outside,
+  tick pos=left,
+  title={Virology Module Active (Seen in Training)},
+  x grid style={darkgray176},
+  xmin=-0.4775, xmax=1.5575,
+  xtick style={color=black},
+  xtick={0,1},
+  xticklabels={GRAM,FT-LoRA},
+  xticklabel style={font=\footnotesize},
+  y grid style={darkgray176, opacity=0.3},
+  ylabel={Compute Ratio},
+  ylabel style={font=\footnotesize},
+  ymajorgrids,
+  ymin=0, ymax=1.15,
+  ytick={0,0.25,0.5,0.75,1},
+  yticklabel style={font=\footnotesize, /pgf/number format/.cd, fixed, fixed zerofill, precision=2},
+  ytick style={color=black},
+  legend columns=-1,
+  legend style={font=\scriptsize, draw=lightgray204, at={(0.5,1.5)}, anchor=south, /tikz/every even column/.append style={column sep=0.7em}}
+  ]
+  \draw[draw=none,fill=steelblue31119180] (axis cs:-0.385,0) rectangle (axis cs:-0.231,0.960388639815578);
+  \addlegendimage{draw=none,fill=steelblue31119180}
+  \addlegendentry{Core}
+  
+  \draw[draw=none,fill=steelblue31119180] (axis cs:0.615,0) rectangle (axis cs:0.769,0.948241322064333);
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:-0.211,0) rectangle (axis cs:-0.057,0.0704443124665147);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=black,opacity=0.4] (axis cs:-0.211,0) rectangle (axis cs:-0.057,0.0704443124665147);
+  \addlegendimage{draw=none,fill=darkorange25512714}
+  \addlegendentry{Code}
+  
+  \draw[draw=none,fill=darkorange25512714,fill opacity=0.2] (axis cs:0.789,0) rectangle (axis cs:0.943,0.102591756250637);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=black,opacity=0.4] (axis cs:0.789,0) rectangle (axis cs:0.943,0.102591756250637);
+  \draw[draw=none,fill=forestgreen4416044] (axis cs:-0.037,0) rectangle (axis cs:0.117,0.985251018705603);
+  \addlegendimage{draw=none,fill=forestgreen4416044}
+  \addlegendentry{Virology}
+  
+  \draw[draw=none,fill=forestgreen4416044] (axis cs:0.963,0) rectangle (axis cs:1.117,0.951345008636723);
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:0.137,0) rectangle (axis cs:0.291,0.760400379375977);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=black,opacity=0.4] (axis cs:0.137,0) rectangle (axis cs:0.291,0.760400379375977);
+  \addlegendimage{draw=none,fill=crimson2143940}
+  \addlegendentry{Cyber}
+  
+  \draw[draw=none,fill=crimson2143940,fill opacity=0.2] (axis cs:1.137,0) rectangle (axis cs:1.291,0.723030256435652);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=black,opacity=0.4] (axis cs:1.137,0) rectangle (axis cs:1.291,0.723030256435652);
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:0.311,0) rectangle (axis cs:0.465,0.650147472873951);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=black,opacity=0.4] (axis cs:0.311,0) rectangle (axis cs:0.465,0.650147472873951);
+  \addlegendimage{draw=none,fill=mediumpurple148103189}
+  \addlegendentry{Nuclear}
+  \draw[draw=none,fill=mediumpurple148103189,fill opacity=0.2] (axis cs:1.311,0) rectangle (axis cs:1.465,0.601358996341852);
+  \draw[draw=none,pattern=diagonal lines wide,pattern color=black,opacity=0.4] (axis cs:1.311,0) rectangle (axis cs:1.465,0.601358996341852);
+  \path [draw=black, semithick]
+  (axis cs:-0.308,0.917993029827781)
+  --(axis cs:-0.308,1.00278424980337);
+  
+  \path [draw=black, semithick]
+  (axis cs:0.692,0.901762500361132)
+  --(axis cs:0.692,0.994720143767534);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.308 0.917993029827781
+  0.692 0.901762500361132
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.308 1.00278424980337
+  0.692 0.994720143767534
+  };
+  \path [draw=black, semithick]
+  (axis cs:-0.134,0.0384927770352155)
+  --(axis cs:-0.134,0.102395847897814);
+  
+  \path [draw=black, semithick]
+  (axis cs:0.866,0.0909679536966955)
+  --(axis cs:0.866,0.114215558804579);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.134 0.0384927770352155
+  0.866 0.0909679536966955
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.134 0.102395847897814
+  0.866 0.114215558804579
+  };
+  \path [draw=black, semithick]
+  (axis cs:0.04,0.958689580875743)
+  --(axis cs:0.04,1.01181245653546);
+  
+  \path [draw=black, semithick]
+  (axis cs:1.04,0.937470893839186)
+  --(axis cs:1.04,0.965219123434259);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.04 0.958689580875743
+  1.04 0.937470893839186
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.04 1.01181245653546
+  1.04 0.965219123434259
+  };
+  \path [draw=black, semithick]
+  (axis cs:0.214,0.734135259431762)
+  --(axis cs:0.214,0.786665499320191);
+  
+  \path [draw=black, semithick]
+  (axis cs:1.214,0.706621407464389)
+  --(axis cs:1.214,0.739439105406915);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.214 0.734135259431762
+  1.214 0.706621407464389
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.214 0.786665499320191
+  1.214 0.739439105406915
+  };
+  \path [draw=black, semithick]
+  (axis cs:0.388,0.633254133273652)
+  --(axis cs:0.388,0.667040812474251);
+  
+  \path [draw=black, semithick]
+  (axis cs:1.388,0.594258289876773)
+  --(axis cs:1.388,0.608459702806932);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.388 0.633254133273652
+  1.388 0.594258289876773
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.388 0.667040812474251
+  1.388 0.608459702806932
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.4775 1
+  1.5575 1
+  };
+  
+  \nextgroupplot[
+  tick align=outside,
+  tick pos=left,
+  title={All Modules Active (Not Seen in Training)},
+  x grid style={darkgray176},
+  xmin=-0.4775, xmax=1.5575,
+  xtick style={color=black},
+  xtick={0,1},
+  xticklabels={GRAM,FT-LoRA},
+  xticklabel style={font=\footnotesize},
+  y grid style={darkgray176, opacity=0.3},
+  ylabel={Compute Ratio},
+  ylabel style={font=\footnotesize},
+  ymajorgrids,
+  ymin=0, ymax=1.15,
+  ytick={0,0.25,0.5,0.75,1},
+  yticklabel style={font=\footnotesize, /pgf/number format/.cd, fixed, fixed zerofill, precision=2},
+  ytick style={color=black}
+  ]
+  \draw[draw=none,fill=steelblue31119180] (axis cs:-0.385,0) rectangle (axis cs:-0.231,0.902403571160392);
+  \draw[draw=none,fill=steelblue31119180] (axis cs:0.615,0) rectangle (axis cs:0.769,0.76060315666667);
+  \draw[draw=none,fill=darkorange25512714] (axis cs:-0.211,0) rectangle (axis cs:-0.057,0.842988057718866);
+  \draw[draw=none,fill=darkorange25512714] (axis cs:0.789,0) rectangle (axis cs:0.943,0.844110977488382);
+  \draw[draw=none,fill=forestgreen4416044] (axis cs:-0.037,0) rectangle (axis cs:0.117,0.948360664381946);
+  \draw[draw=none,fill=forestgreen4416044] (axis cs:0.963,0) rectangle (axis cs:1.117,0.780446898078909);
+  \draw[draw=none,fill=crimson2143940] (axis cs:0.137,0) rectangle (axis cs:0.291,0.94846242297628);
+  \draw[draw=none,fill=crimson2143940] (axis cs:1.137,0) rectangle (axis cs:1.291,0.790331994443033);
+  \draw[draw=none,fill=mediumpurple148103189] (axis cs:0.311,0) rectangle (axis cs:0.465,0.962894494895508);
+  \draw[draw=none,fill=mediumpurple148103189] (axis cs:1.311,0) rectangle (axis cs:1.465,0.829268952604674);
+  \path [draw=black, semithick]
+  (axis cs:-0.308,0.871983310391272)
+  --(axis cs:-0.308,0.932823831929513);
+  
+  \path [draw=black, semithick]
+  (axis cs:0.692,0.698632824191631)
+  --(axis cs:0.692,0.822573489141708);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.308 0.871983310391272
+  0.692 0.698632824191631
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.308 0.932823831929513
+  0.692 0.822573489141708
+  };
+  \path [draw=black, semithick]
+  (axis cs:-0.134,0.773564888067295)
+  --(axis cs:-0.134,0.912411227370437);
+  
+  \path [draw=black, semithick]
+  (axis cs:0.866,0.764660173857788)
+  --(axis cs:0.866,0.923561781118976);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.134 0.773564888067295
+  0.866 0.764660173857788
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  -0.134 0.912411227370437
+  0.866 0.923561781118976
+  };
+  \path [draw=black, semithick]
+  (axis cs:0.04,0.920847768419835)
+  --(axis cs:0.04,0.975873560344058);
+  
+  \path [draw=black, semithick]
+  (axis cs:1.04,0.735948585200073)
+  --(axis cs:1.04,0.824945210957745);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.04 0.920847768419835
+  1.04 0.735948585200073
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.04 0.975873560344058
+  1.04 0.824945210957745
+  };
+  \path [draw=black, semithick]
+  (axis cs:0.214,0.925902830605287)
+  --(axis cs:0.214,0.971022015347272);
+  
+  \path [draw=black, semithick]
+  (axis cs:1.214,0.752204504706579)
+  --(axis cs:1.214,0.828459484179487);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.214 0.925902830605287
+  1.214 0.752204504706579
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.214 0.971022015347272
+  1.214 0.828459484179487
+  };
+  \path [draw=black, semithick]
+  (axis cs:0.388,0.937906137685981)
+  --(axis cs:0.388,0.987882852105036);
+  
+  \path [draw=black, semithick]
+  (axis cs:1.388,0.813192457680805)
+  --(axis cs:1.388,0.845345447528543);
+  
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.388 0.937906137685981
+  1.388 0.813192457680805
+  };
+  \addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+  table {%
+  0.388 0.987882852105036
+  1.388 0.845345447528543
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.4775 1
+  1.5575 1
+  };
+  \end{groupplot}
+  
+  % Invisible right-side pad: mirrors the ylabel's horizontal extent so the
+  % bbox is left/right symmetric and `\centering` actually centers the panes.
+  \node[anchor=west, inner sep=0pt, outer sep=0pt]
+    at (group c1r2.east) {\rule[0pt]{0.85cm}{0pt}};
+  
+  \end{tikzpicture}
+  

@@ -1,0 +1,147 @@
+% This file was created with matplot2tikz v0.5.3.
+\begin{tikzpicture}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{darkslategray77}{RGB}{77,77,77}
+\definecolor{forestgreen4416044}{RGB}{44,160,44}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+label style={font=\footnotesize},
+tick label style={font=\scriptsize},
+title style={font=\footnotesize},
+height=3.57cm,
+legend cell align={left},
+legend columns=4,
+legend style={
+  font=\scriptsize,
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.5,1.16)},
+  anchor=south,
+  draw=lightgray204
+},
+tick align=outside,
+tick pos=left,
+width=0.5\linewidth,
+x grid style={darkgray176, opacity=0.3},
+xlabel={Core : Aux (\(\displaystyle p_{ca}\))},
+xmajorgrids,
+xmin=0, xmax=4,
+xtick style={color=black},
+xtick={0,1,2,3,4},
+xticklabels={0.25,0.5,1,2,4},
+y grid style={darkgray176, opacity=0.3},
+ylabel={Compute Ratio},
+ymajorgrids,
+ymin=0.635955953630404, ymax=1.14222792083479,
+ytick style={color=black}
+]
+\path [draw=steelblue31119180, fill=steelblue31119180, opacity=0.18, line width=0pt]
+(axis cs:0,0.845446790342822)
+--(axis cs:0,0.785482461893829)
+--(axis cs:1,0.823111833677897)
+--(axis cs:2,0.860380588403276)
+--(axis cs:3,0.880845042291259)
+--(axis cs:4,0.887809671507268)
+--(axis cs:4,0.911546995177113)
+--(axis cs:4,0.911546995177113)
+--(axis cs:3,0.916774987484503)
+--(axis cs:2,0.925116478737656)
+--(axis cs:1,0.897292977197986)
+--(axis cs:0,0.845446790342822)
+--cycle;
+
+\path [draw=forestgreen4416044, fill=forestgreen4416044, opacity=0.18, line width=0pt]
+(axis cs:0,1.10222014708266)
+--(axis cs:0,1.02264382939665)
+--(axis cs:1,1.01270906331275)
+--(axis cs:2,0.999607950606987)
+--(axis cs:3,0.947768330300142)
+--(axis cs:4,0.893511725660989)
+--(axis cs:4,0.908255592955808)
+--(axis cs:4,0.908255592955808)
+--(axis cs:3,0.990175769477967)
+--(axis cs:2,1.07169256036321)
+--(axis cs:1,1.11921555868914)
+--(axis cs:0,1.10222014708266)
+--cycle;
+
+\path [draw=crimson2143940, fill=crimson2143940, opacity=0.18, line width=0pt]
+(axis cs:0,0.710296281935289)
+--(axis cs:0,0.658968315776058)
+--(axis cs:1,0.68624556206436)
+--(axis cs:2,0.712004125402182)
+--(axis cs:3,0.72020051131627)
+--(axis cs:4,0.721535513619889)
+--(axis cs:4,0.750771384036322)
+--(axis cs:4,0.750771384036322)
+--(axis cs:3,0.757488970442246)
+--(axis cs:2,0.761958120371304)
+--(axis cs:1,0.747145543695684)
+--(axis cs:0,0.710296281935289)
+--cycle;
+
+\path [draw=darkorange25512714, fill=darkorange25512714, opacity=0.18, line width=0pt]
+(axis cs:0,0.81387239393742)
+--(axis cs:0,0.755252248640436)
+--(axis cs:1,0.778570206925379)
+--(axis cs:2,0.804545900626848)
+--(axis cs:3,0.807392996336518)
+--(axis cs:4,0.808706242483053)
+--(axis cs:4,0.832874626964497)
+--(axis cs:4,0.832874626964497)
+--(axis cs:3,0.84450365298651)
+--(axis cs:2,0.855958841197546)
+--(axis cs:1,0.847124900347882)
+--(axis cs:0,0.81387239393742)
+--cycle;
+
+\addplot [line width=0.32pt, darkslategray77, opacity=0.85, forget plot]
+table {%
+0 1
+4 1
+};
+\addplot [semithick, steelblue31119180, mark=*, mark size=2, mark options={solid}]
+table {%
+0 0.815464626118325
+1 0.860202405437941
+2 0.892748533570466
+3 0.898810014887881
+4 0.89967833334219
+};
+\addlegendentry{Core $\uparrow$}
+\addplot [semithick, forestgreen4416044, mark=*, mark size=2, mark options={solid}]
+table {%
+0 1.06243198823966
+1 1.06596231100094
+2 1.0356502554851
+3 0.968972049889054
+4 0.900883659308399
+};
+\addlegendentry{Retain $\uparrow$}
+\addplot [semithick, crimson2143940, mark=*, mark size=2, mark options={solid}]
+table {%
+0 0.684632298855674
+1 0.716695552880022
+2 0.736981122886743
+3 0.738844740879258
+4 0.736153448828106
+};
+\addlegendentry{Forget $\downarrow$}
+\addplot [semithick, darkorange25512714, mark=*, mark size=2, mark options={solid}]
+table {%
+0 0.784562321288928
+1 0.812847553636631
+2 0.830252370912197
+3 0.825948324661514
+4 0.820790434723775
+};
+\addlegendentry{Elicit $\downarrow$}
+\end{axis}
+
+\end{tikzpicture}

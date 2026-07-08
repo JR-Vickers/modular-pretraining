@@ -1,0 +1,17 @@
+{
+  "completed": true,
+  "completed_iterations": [],
+  "stage": {
+    "name": "baseline",
+    "num_checkpoints": 100,
+    "lr": 0.0004271833607529287,
+    "res_dir": "/home/ubuntu/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/2B/seed_1/20260422033518983413/baseline",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 100,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null
+  }
+}

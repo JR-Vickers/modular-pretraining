@@ -1,0 +1,122 @@
+{
+  "seed_1/core": {
+    "best_value": 0.005312948786646773,
+    "best_params": {
+      "lr": 0.0022189862020924062,
+      "alpha_retain": 263.60915197741275
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_a-deadline-or-time-limit": {
+    "best_value": 0.002043525072380837,
+    "best_params": {
+      "lr": 0.001886587216056274,
+      "alpha_retain": 188.86604633599768
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_alien-encounters": {
+    "best_value": 0.0012967467349146243,
+    "best_params": {
+      "lr": 0.0005018947832375017,
+      "alpha_retain": 32.23988545679535
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_bygone-eras": {
+    "best_value": 0.007048038694137272,
+    "best_params": {
+      "lr": 0.0021630926947772745,
+      "alpha_retain": 237.1747754716141
+    },
+    "n_trials": 30
+  },
+  "seed_1/core_cultural-traditions": {
+    "best_value": 0.00537602313193971,
+    "best_params": {
+      "lr": 0.0024190950069816505,
+      "alpha_retain": 224.83974810649372
+    },
+    "n_trials": 30
+  },
+  "seed_2/core": {
+    "best_value": 0.0035225227017170713,
+    "best_params": {
+      "lr": 0.0010680475574015157,
+      "alpha_retain": 82.40825986199067
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_a-deadline-or-time-limit": {
+    "best_value": 0.006617027665654672,
+    "best_params": {
+      "lr": 0.0017147402437502812,
+      "alpha_retain": 261.8986599810288
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_alien-encounters": {
+    "best_value": 0.008839116060247306,
+    "best_params": {
+      "lr": 0.0008579440924913449,
+      "alpha_retain": 83.71404615534566
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_bygone-eras": {
+    "best_value": 0.005548774987221522,
+    "best_params": {
+      "lr": 0.00046706794042406956,
+      "alpha_retain": 33.51580371966202
+    },
+    "n_trials": 30
+  },
+  "seed_2/core_cultural-traditions": {
+    "best_value": 0.006875172385423188,
+    "best_params": {
+      "lr": 0.00046706794042406956,
+      "alpha_retain": 33.51580371966202
+    },
+    "n_trials": 30
+  },
+  "seed_3/core": {
+    "best_value": 0.000433693024859478,
+    "best_params": {
+      "lr": 0.0022282602514318954,
+      "alpha_retain": 196.26178132008155
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_a-deadline-or-time-limit": {
+    "best_value": 0.0012549831107138097,
+    "best_params": {
+      "lr": 0.0017259728149071729,
+      "alpha_retain": 196.35223675681075
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_alien-encounters": {
+    "best_value": 0.012753719795942824,
+    "best_params": {
+      "lr": 0.0016421522640340906,
+      "alpha_retain": 294.7055359248314
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_bygone-eras": {
+    "best_value": 0.002934360787422291,
+    "best_params": {
+      "lr": 0.002122331729211636,
+      "alpha_retain": 249.89527811532025
+    },
+    "n_trials": 30
+  },
+  "seed_3/core_cultural-traditions": {
+    "best_value": 0.002454772959945081,
+    "best_params": {
+      "lr": 0.002122331729211636,
+      "alpha_retain": 249.89527811532025
+    },
+    "n_trials": 30
+  }
+}

@@ -1,0 +1,346 @@
+[GPU 0] [00:19:13] [INFO] Number of GPUs: 32
+[GPU 0] [00:19:14] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [00:19:14] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [00:19:46] [INFO] target effective batch size: 2770, actual effective batch size: 2752, micro batch size: 2, accumulation steps: 43, num gpus: 32
+[GPU 0] [00:19:46] [INFO] core total number of tokens: 124693822984
+[GPU 0] [00:19:46] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [00:19:46] [INFO] core: chinchilla optimal tokens: 99,354,862,080, requested proportion: 1.0000, requested number of tokens: 99,354,862,080.0, 
+[GPU 0] [00:19:46] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [00:19:46] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [00:19:46] [INFO] aux: chinchilla optimal tokens: 99,354,862,080, requested proportion: 0.0100, requested number of tokens: 993,548,620.8000001, 
+[GPU 0] [00:19:46] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/5B/seed_1/20260422001905455889/config.json
+[GPU 0] [00:19:46] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": 100,
+            "lr": 0.00032221152797331777,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/5B/seed_1/20260422001905455889/baseline",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 100,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 47,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 3072,
+        "mlp_dim": 12288
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 99354862080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 993548620.8000001
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 2770,
+        "effective_batch_size": 2752,
+        "micro_batch_size": 2,
+        "accumulation_steps": 43,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "is_ddp": true,
+        "optimize_routed": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 32,
+        "process_id": 0,
+        "num_base_params": 4967743104,
+        "device": "cuda",
+        "logger": "<Logger training_20260422001905455889 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=3790)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=227405)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=1273469)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=172)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=172)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=172)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=15160)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=172)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=1516034)",
+                "test": "InterleavedDataLoader(len=516)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=15160)",
+                "test": "InterleavedDataLoader(len=688)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=1531194)",
+                "test": "InterleavedDataLoader(len=1204)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/5B/seed_1",
+        "experiment_id": "20260422001905455889",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/base/5B/seed_1"
+    }
+}
+[GPU 0] [00:19:46] [INFO] Loader code-lisp train: 3790, test: 172
+[GPU 0] [00:19:46] [INFO] Loader code-other train: 227405, test: 172
+[GPU 0] [00:19:46] [INFO] Loader fineweb train: 1273469, test: 172
+[GPU 0] [00:19:46] [INFO] Loader papers-biology train: 3790, test: 172
+[GPU 0] [00:19:46] [INFO] Loader papers-cyber train: 3790, test: 172
+[GPU 0] [00:19:46] [INFO] Loader papers-nuclear train: 3790, test: 172
+[GPU 0] [00:19:46] [INFO] Loader papers-other train: 15160, test: 172
+[GPU 0] [00:19:46] [INFO] Loader core train: 1516034, test: 516
+[GPU 0] [00:19:46] [INFO] Loader aux train: 15160, test: 688
+[GPU 0] [00:19:46] [INFO] Loader all train: 1531194, test: 1204
+[GPU 0] [00:19:46] [INFO] Stage [baseline] start: {"name": "baseline", "num_checkpoints": 100, "lr": 0.00032221152797331777, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/5B/seed_1/20260422001905455889/baseline", "do_eval": true, "do_sample": false, "num_train_evals": 100, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100}
+[GPU 0] [00:19:46] [INFO] BASELINE START
+[GPU 0] [00:20:20] [INFO] Initialized BaseTransformer with 4,967,743,104 total parameters
+[GPU 0] [00:20:20] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [00:20:20] [INFO] torch.compile done
+[GPU 0] [00:20:33] [WARNING] restore_partial_state: no checkpoint found at /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/5B/seed_1/20260422001905455889/baseline
+[GPU 0] [00:20:33] [INFO] ---- Begin Train | Data Labels: ['all'] ----
+[GPU 0] [00:20:33] [INFO] Batch [all] count: 35609
+[GPU 0] [00:20:33] [INFO] warmup_steps: 712
+[GPU 0] [00:20:33] [INFO] constant_steps: 31336
+[GPU 0] [00:20:33] [INFO] decay_steps: 3561
+[GPU 0] [00:20:33] [INFO] LR Scheduler: Warmup Start
+[GPU 0] [00:21:58] [INFO] Step: 1, LR: 4.63e-07
+[GPU 0] [00:21:58] [INFO] Train Loss: CORE: 11.41 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [00:21:58] [INFO] Val Loss: CODE-LISP: nan CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan PAPERS-OTHER: nan CORE: nan AUX: nan ALL: nan 
+[GPU 0] [01:48:23] [INFO] LR Scheduler: Constant Start
+[GPU 0] [02:25:48] [INFO] Step: 1000, LR: 3.22e-04
+[GPU 0] [02:25:48] [INFO] Train Loss: CORE: 3.31 CODE-LISP: 1.46 PAPERS-BIOLOGY: 3.46 PAPERS-CYBER: 3.78 PAPERS-NUCLEAR: 3.94 
+[GPU 0] [02:25:48] [INFO] Val Loss: CODE-LISP: 2.38 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 4.51 PAPERS-CYBER: 4.63 PAPERS-NUCLEAR: 4.64 PAPERS-OTHER: nan CORE: 3.20 AUX: nan ALL: nan 
+[GPU 0] [04:33:50] [INFO] Step: 2000, LR: 3.22e-04
+[GPU 0] [04:33:50] [INFO] Train Loss: CORE: 3.09 CODE-LISP: 0.97 PAPERS-BIOLOGY: 2.88 PAPERS-CYBER: 3.04 PAPERS-NUCLEAR: 2.95 
+[GPU 0] [04:33:50] [INFO] Val Loss: CODE-LISP: 1.12 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.88 PAPERS-CYBER: 3.15 PAPERS-NUCLEAR: 3.21 PAPERS-OTHER: nan CORE: 2.42 AUX: nan ALL: nan 
+[GPU 0] [06:42:43] [INFO] Step: 3000, LR: 3.22e-04
+[GPU 0] [06:42:43] [INFO] Train Loss: CORE: 2.43 CODE-LISP: 0.83 PAPERS-BIOLOGY: 2.58 PAPERS-CYBER: 2.70 PAPERS-NUCLEAR: 3.00 
+[GPU 0] [06:42:43] [INFO] Val Loss: CODE-LISP: 0.95 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.61 PAPERS-CYBER: 2.86 PAPERS-NUCLEAR: 2.97 PAPERS-OTHER: nan CORE: 2.33 AUX: nan ALL: nan 
+[GPU 0] [08:51:36] [INFO] Step: 4000, LR: 3.22e-04
+[GPU 0] [08:51:36] [INFO] Train Loss: CORE: 2.27 CODE-LISP: 1.00 PAPERS-BIOLOGY: 2.25 PAPERS-CYBER: 2.74 PAPERS-NUCLEAR: 2.82 
+[GPU 0] [08:51:36] [INFO] Val Loss: CODE-LISP: 0.86 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.49 PAPERS-CYBER: 2.77 PAPERS-NUCLEAR: 2.85 PAPERS-OTHER: nan CORE: 2.03 AUX: nan ALL: nan 
+[GPU 0] [11:00:26] [INFO] Step: 5000, LR: 3.22e-04
+[GPU 0] [11:00:26] [INFO] Train Loss: CORE: 2.58 CODE-LISP: 0.56 PAPERS-BIOLOGY: 2.49 PAPERS-CYBER: 2.66 PAPERS-NUCLEAR: 2.77 
+[GPU 0] [11:00:26] [INFO] Val Loss: CODE-LISP: 0.80 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.41 PAPERS-CYBER: 2.70 PAPERS-NUCLEAR: 2.77 PAPERS-OTHER: nan CORE: 1.89 AUX: nan ALL: nan 
+[GPU 0] [13:05:11] [INFO] Step: 6000, LR: 3.22e-04
+[GPU 0] [13:05:11] [INFO] Train Loss: CORE: 2.22 CODE-LISP: 0.63 PAPERS-BIOLOGY: 2.33 PAPERS-CYBER: 2.68 PAPERS-NUCLEAR: 2.54 
+[GPU 0] [13:05:11] [INFO] Val Loss: CODE-LISP: 0.78 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.36 PAPERS-CYBER: 2.64 PAPERS-NUCLEAR: 2.71 PAPERS-OTHER: nan CORE: 1.99 AUX: nan ALL: nan 
+[GPU 0] [15:15:11] [INFO] Step: 7000, LR: 3.22e-04
+[GPU 0] [15:15:11] [INFO] Train Loss: CORE: 2.34 CODE-LISP: 0.66 PAPERS-BIOLOGY: 2.28 PAPERS-CYBER: 2.54 PAPERS-NUCLEAR: 2.52 
+[GPU 0] [15:15:11] [INFO] Val Loss: CODE-LISP: 0.74 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.33 PAPERS-CYBER: 2.61 PAPERS-NUCLEAR: 2.66 PAPERS-OTHER: nan CORE: 1.71 AUX: nan ALL: nan 
+[GPU 0] [17:25:06] [INFO] Step: 8000, LR: 3.22e-04
+[GPU 0] [17:25:06] [INFO] Train Loss: CORE: 2.61 CODE-LISP: 0.74 PAPERS-BIOLOGY: 2.28 PAPERS-CYBER: 2.46 PAPERS-NUCLEAR: 2.68 
+[GPU 0] [17:25:06] [INFO] Val Loss: CODE-LISP: 0.78 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.30 PAPERS-CYBER: 2.58 PAPERS-NUCLEAR: 2.64 PAPERS-OTHER: nan CORE: 1.80 AUX: nan ALL: nan 
+[GPU 0] [19:36:49] [INFO] Step: 9000, LR: 3.22e-04
+[GPU 0] [19:36:49] [INFO] Train Loss: CORE: 2.60 CODE-LISP: 0.65 PAPERS-BIOLOGY: 2.36 PAPERS-CYBER: 2.69 PAPERS-NUCLEAR: 2.82 
+[GPU 0] [19:36:49] [INFO] Val Loss: CODE-LISP: 0.75 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.28 PAPERS-CYBER: 2.54 PAPERS-NUCLEAR: 2.61 PAPERS-OTHER: nan CORE: 1.83 AUX: nan ALL: nan 
+[GPU 0] [21:47:37] [INFO] Step: 10000, LR: 3.22e-04
+[GPU 0] [21:47:37] [INFO] Train Loss: CORE: 2.42 CODE-LISP: 0.65 PAPERS-BIOLOGY: 2.20 PAPERS-CYBER: 2.51 PAPERS-NUCLEAR: 2.68 
+[GPU 0] [21:47:37] [INFO] Val Loss: CODE-LISP: 0.75 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.23 PAPERS-CYBER: 2.52 PAPERS-NUCLEAR: 2.60 PAPERS-OTHER: nan CORE: 1.94 AUX: nan ALL: nan 
+[GPU 0] [23:53:39] [INFO] Step: 11000, LR: 3.22e-04
+[GPU 0] [23:53:39] [INFO] Train Loss: CORE: 2.29 CODE-LISP: 0.62 PAPERS-BIOLOGY: 2.23 PAPERS-CYBER: 2.51 PAPERS-NUCLEAR: 2.46 
+[GPU 0] [23:53:39] [INFO] Val Loss: CODE-LISP: 0.75 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.23 PAPERS-CYBER: 2.50 PAPERS-NUCLEAR: 2.57 PAPERS-OTHER: nan CORE: 1.76 AUX: nan ALL: nan 
+[GPU 0] [02:04:05] [INFO] Step: 12000, LR: 3.22e-04
+[GPU 0] [02:04:05] [INFO] Train Loss: CORE: 2.21 CODE-LISP: 0.42 PAPERS-BIOLOGY: 2.16 PAPERS-CYBER: 2.44 PAPERS-NUCLEAR: 2.90 
+[GPU 0] [02:04:05] [INFO] Val Loss: CODE-LISP: 0.72 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.22 PAPERS-CYBER: 2.50 PAPERS-NUCLEAR: 2.56 PAPERS-OTHER: nan CORE: 1.61 AUX: nan ALL: nan 
+[GPU 0] [04:14:43] [INFO] Step: 13000, LR: 3.22e-04
+[GPU 0] [04:14:43] [INFO] Train Loss: CORE: 2.34 CODE-LISP: 0.54 PAPERS-BIOLOGY: 2.13 PAPERS-CYBER: 2.53 PAPERS-NUCLEAR: 2.64 
+[GPU 0] [04:14:43] [INFO] Val Loss: CODE-LISP: 0.72 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.21 PAPERS-CYBER: 2.48 PAPERS-NUCLEAR: 2.55 PAPERS-OTHER: nan CORE: 1.76 AUX: nan ALL: nan 
+[GPU 0] [06:24:34] [INFO] Step: 14000, LR: 3.22e-04
+[GPU 0] [06:24:34] [INFO] Train Loss: CORE: 2.27 CODE-LISP: 0.65 PAPERS-BIOLOGY: 2.35 PAPERS-CYBER: 2.29 PAPERS-NUCLEAR: 2.57 
+[GPU 0] [06:24:34] [INFO] Val Loss: CODE-LISP: 0.70 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.20 PAPERS-CYBER: 2.48 PAPERS-NUCLEAR: 2.51 PAPERS-OTHER: nan CORE: 1.75 AUX: nan ALL: nan 
+[GPU 0] [08:34:40] [INFO] Step: 15000, LR: 3.22e-04
+[GPU 0] [08:34:40] [INFO] Train Loss: CORE: 1.86 CODE-LISP: 0.46 PAPERS-BIOLOGY: 2.21 PAPERS-CYBER: 2.42 PAPERS-NUCLEAR: 2.44 
+[GPU 0] [08:34:40] [INFO] Val Loss: CODE-LISP: 0.70 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.19 PAPERS-CYBER: 2.46 PAPERS-NUCLEAR: 2.51 PAPERS-OTHER: nan CORE: 1.69 AUX: nan ALL: nan 
+[GPU 0] [10:40:28] [INFO] Step: 16000, LR: 3.22e-04
+[GPU 0] [10:40:28] [INFO] Train Loss: CORE: 2.05 CODE-LISP: 0.70 PAPERS-BIOLOGY: 2.17 PAPERS-CYBER: 2.54 PAPERS-NUCLEAR: 2.53 
+[GPU 0] [10:40:28] [INFO] Val Loss: CODE-LISP: 0.73 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.16 PAPERS-CYBER: 2.45 PAPERS-NUCLEAR: 2.51 PAPERS-OTHER: nan CORE: 1.67 AUX: nan ALL: nan 
+[GPU 0] [12:50:47] [INFO] Step: 17000, LR: 3.22e-04
+[GPU 0] [12:50:47] [INFO] Train Loss: CORE: 2.18 CODE-LISP: 0.65 PAPERS-BIOLOGY: 2.16 PAPERS-CYBER: 2.45 PAPERS-NUCLEAR: 2.67 
+[GPU 0] [12:50:47] [INFO] Val Loss: CODE-LISP: 0.73 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.16 PAPERS-CYBER: 2.43 PAPERS-NUCLEAR: 2.51 PAPERS-OTHER: nan CORE: 1.68 AUX: nan ALL: nan 
+[GPU 0] [15:01:51] [INFO] Step: 18000, LR: 3.22e-04
+[GPU 0] [15:01:51] [INFO] Train Loss: CORE: 2.43 CODE-LISP: 0.62 PAPERS-BIOLOGY: 2.06 PAPERS-CYBER: 2.52 PAPERS-NUCLEAR: 2.52 
+[GPU 0] [15:01:51] [INFO] Val Loss: CODE-LISP: 0.71 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.16 PAPERS-CYBER: 2.43 PAPERS-NUCLEAR: 2.48 PAPERS-OTHER: nan CORE: 1.77 AUX: nan ALL: nan 
+[GPU 0] [17:13:04] [INFO] Step: 19000, LR: 3.22e-04
+[GPU 0] [17:13:04] [INFO] Train Loss: CORE: 1.99 CODE-LISP: 0.83 PAPERS-BIOLOGY: 2.04 PAPERS-CYBER: 2.52 PAPERS-NUCLEAR: 2.41 
+[GPU 0] [17:13:04] [INFO] Val Loss: CODE-LISP: 0.70 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.15 PAPERS-CYBER: 2.42 PAPERS-NUCLEAR: 2.46 PAPERS-OTHER: nan CORE: 1.65 AUX: nan ALL: nan 
+[GPU 0] [19:23:48] [INFO] Step: 20000, LR: 3.22e-04
+[GPU 0] [19:23:48] [INFO] Train Loss: CORE: 2.44 CODE-LISP: 0.67 PAPERS-BIOLOGY: 2.14 PAPERS-CYBER: 2.41 PAPERS-NUCLEAR: 2.50 
+[GPU 0] [19:23:48] [INFO] Val Loss: CODE-LISP: 0.74 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.14 PAPERS-CYBER: 2.41 PAPERS-NUCLEAR: 2.48 PAPERS-OTHER: nan CORE: 1.54 AUX: nan ALL: nan 
+[GPU 0] [21:30:00] [INFO] Step: 21000, LR: 3.22e-04
+[GPU 0] [21:30:00] [INFO] Train Loss: CORE: 2.45 CODE-LISP: 0.67 PAPERS-BIOLOGY: 2.21 PAPERS-CYBER: 2.56 PAPERS-NUCLEAR: 2.45 
+[GPU 0] [21:30:00] [INFO] Val Loss: CODE-LISP: 0.68 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.13 PAPERS-CYBER: 2.42 PAPERS-NUCLEAR: 2.48 PAPERS-OTHER: nan CORE: 1.60 AUX: nan ALL: nan 
+[GPU 0] [23:41:02] [INFO] Step: 22000, LR: 3.22e-04
+[GPU 0] [23:41:02] [INFO] Train Loss: CORE: 2.21 CODE-LISP: 0.63 PAPERS-BIOLOGY: 2.13 PAPERS-CYBER: 2.31 PAPERS-NUCLEAR: 2.49 
+[GPU 0] [23:41:02] [INFO] Val Loss: CODE-LISP: 0.68 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.12 PAPERS-CYBER: 2.40 PAPERS-NUCLEAR: 2.47 PAPERS-OTHER: nan CORE: 1.72 AUX: nan ALL: nan 
+[GPU 0] [01:51:17] [INFO] Step: 23000, LR: 3.22e-04
+[GPU 0] [01:51:17] [INFO] Train Loss: CORE: 2.23 CODE-LISP: 0.48 PAPERS-BIOLOGY: 2.09 PAPERS-CYBER: 2.38 PAPERS-NUCLEAR: 2.37 
+[GPU 0] [01:51:17] [INFO] Val Loss: CODE-LISP: 0.70 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.11 PAPERS-CYBER: 2.40 PAPERS-NUCLEAR: 2.48 PAPERS-OTHER: nan CORE: 1.65 AUX: nan ALL: nan 
+[GPU 0] [04:02:22] [INFO] Step: 24000, LR: 3.22e-04
+[GPU 0] [04:02:22] [INFO] Train Loss: CORE: 2.30 CODE-LISP: 0.35 PAPERS-BIOLOGY: 2.20 PAPERS-CYBER: 2.44 PAPERS-NUCLEAR: 2.46 
+[GPU 0] [04:02:22] [INFO] Val Loss: CODE-LISP: 0.69 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.11 PAPERS-CYBER: 2.40 PAPERS-NUCLEAR: 2.44 PAPERS-OTHER: nan CORE: 1.57 AUX: nan ALL: nan 
+[GPU 0] [06:13:27] [INFO] Step: 25000, LR: 3.22e-04
+[GPU 0] [06:13:27] [INFO] Train Loss: CORE: 1.86 CODE-LISP: 0.50 PAPERS-BIOLOGY: 1.96 PAPERS-CYBER: 2.41 PAPERS-NUCLEAR: 2.56 
+[GPU 0] [06:13:27] [INFO] Val Loss: CODE-LISP: 0.65 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.11 PAPERS-CYBER: 2.39 PAPERS-NUCLEAR: 2.45 PAPERS-OTHER: nan CORE: 1.73 AUX: nan ALL: nan 
+[GPU 0] [08:24:33] [INFO] Step: 26000, LR: 3.22e-04
+[GPU 0] [08:24:33] [INFO] Train Loss: CORE: 2.22 CODE-LISP: 0.39 PAPERS-BIOLOGY: 2.01 PAPERS-CYBER: 2.48 PAPERS-NUCLEAR: 2.24 
+[GPU 0] [08:24:33] [INFO] Val Loss: CODE-LISP: 0.67 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.10 PAPERS-CYBER: 2.38 PAPERS-NUCLEAR: 2.44 PAPERS-OTHER: nan CORE: 1.70 AUX: nan ALL: nan 
+[GPU 0] [10:31:11] [INFO] Step: 27000, LR: 3.22e-04
+[GPU 0] [10:31:11] [INFO] Train Loss: CORE: 1.75 CODE-LISP: 0.58 PAPERS-BIOLOGY: 2.11 PAPERS-CYBER: 2.42 PAPERS-NUCLEAR: 2.71 
+[GPU 0] [10:31:11] [INFO] Val Loss: CODE-LISP: 0.68 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.10 PAPERS-CYBER: 2.38 PAPERS-NUCLEAR: 2.44 PAPERS-OTHER: nan CORE: 1.57 AUX: nan ALL: nan 
+[GPU 0] [12:41:50] [INFO] Step: 28000, LR: 3.22e-04
+[GPU 0] [12:41:50] [INFO] Train Loss: CORE: 1.64 CODE-LISP: 0.48 PAPERS-BIOLOGY: 2.01 PAPERS-CYBER: 2.45 PAPERS-NUCLEAR: 2.35 
+[GPU 0] [12:41:50] [INFO] Val Loss: CODE-LISP: 0.66 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.10 PAPERS-CYBER: 2.38 PAPERS-NUCLEAR: 2.43 PAPERS-OTHER: nan CORE: 1.78 AUX: nan ALL: nan 
+[GPU 0] [14:52:23] [INFO] Step: 29000, LR: 3.22e-04
+[GPU 0] [14:52:23] [INFO] Train Loss: CORE: 1.97 CODE-LISP: 0.46 PAPERS-BIOLOGY: 2.06 PAPERS-CYBER: 2.36 PAPERS-NUCLEAR: 2.56 
+[GPU 0] [14:52:23] [INFO] Val Loss: CODE-LISP: 0.66 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.09 PAPERS-CYBER: 2.37 PAPERS-NUCLEAR: 2.42 PAPERS-OTHER: nan CORE: 1.50 AUX: nan ALL: nan 
+[GPU 0] [17:06:51] [INFO] Step: 30000, LR: 3.22e-04
+[GPU 0] [17:06:51] [INFO] Train Loss: CORE: 1.99 CODE-LISP: 0.97 PAPERS-BIOLOGY: 2.05 PAPERS-CYBER: 2.42 PAPERS-NUCLEAR: 2.32 
+[GPU 0] [17:06:51] [INFO] Val Loss: CODE-LISP: 0.67 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.10 PAPERS-CYBER: 2.36 PAPERS-NUCLEAR: 2.42 PAPERS-OTHER: nan CORE: 1.74 AUX: nan ALL: nan 
+[GPU 0] [19:19:22] [INFO] Step: 31000, LR: 3.22e-04
+[GPU 0] [19:19:22] [INFO] Train Loss: CORE: 2.13 CODE-LISP: 0.56 PAPERS-BIOLOGY: 2.09 PAPERS-CYBER: 2.39 PAPERS-NUCLEAR: 2.11 
+[GPU 0] [19:19:22] [INFO] Val Loss: CODE-LISP: 0.70 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.09 PAPERS-CYBER: 2.37 PAPERS-NUCLEAR: 2.44 PAPERS-OTHER: nan CORE: 1.66 AUX: nan ALL: nan 
+[GPU 0] [21:25:44] [INFO] Step: 32000, LR: 3.22e-04
+[GPU 0] [21:25:44] [INFO] Train Loss: CORE: 2.12 CODE-LISP: 0.53 PAPERS-BIOLOGY: 2.14 PAPERS-CYBER: 2.30 PAPERS-NUCLEAR: 2.31 
+[GPU 0] [21:25:44] [INFO] Val Loss: CODE-LISP: 0.66 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.08 PAPERS-CYBER: 2.37 PAPERS-NUCLEAR: 2.44 PAPERS-OTHER: nan CORE: 1.58 AUX: nan ALL: nan 
+[GPU 0] [21:35:42] [INFO] LR Scheduler: Decay Start
+[GPU 0] [23:36:37] [INFO] Step: 33000, LR: 2.36e-04
+[GPU 0] [23:36:37] [INFO] Train Loss: CORE: 2.24 CODE-LISP: 0.63 PAPERS-BIOLOGY: 2.12 PAPERS-CYBER: 2.44 PAPERS-NUCLEAR: 1.99 
+[GPU 0] [23:36:37] [INFO] Val Loss: CODE-LISP: 0.67 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.06 PAPERS-CYBER: 2.34 PAPERS-NUCLEAR: 2.39 PAPERS-OTHER: nan CORE: 1.55 AUX: nan ALL: nan 
+[GPU 0] [01:47:02] [INFO] Step: 34000, LR: 1.46e-04
+[GPU 0] [01:47:02] [INFO] Train Loss: CORE: 2.14 CODE-LISP: 0.50 PAPERS-BIOLOGY: 1.95 PAPERS-CYBER: 2.38 PAPERS-NUCLEAR: 2.52 
+[GPU 0] [01:47:02] [INFO] Val Loss: CODE-LISP: 0.63 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.03 PAPERS-CYBER: 2.33 PAPERS-NUCLEAR: 2.37 PAPERS-OTHER: nan CORE: 1.64 AUX: nan ALL: nan 
+[GPU 0] [03:57:44] [INFO] Step: 35000, LR: 5.51e-05
+[GPU 0] [03:57:44] [INFO] Train Loss: CORE: 1.77 CODE-LISP: 0.55 PAPERS-BIOLOGY: 1.90 PAPERS-CYBER: 2.30 PAPERS-NUCLEAR: 2.39 
+[GPU 0] [03:57:44] [INFO] Val Loss: CODE-LISP: 0.62 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.01 PAPERS-CYBER: 2.30 PAPERS-NUCLEAR: 2.35 PAPERS-OTHER: nan CORE: 1.59 AUX: nan ALL: nan 
+[GPU 0] [05:17:58] [INFO] Step: 35609, LR: 1.00e-08
+[GPU 0] [05:17:58] [INFO] Train Loss: CORE: 1.99 CODE-LISP: 0.43 PAPERS-BIOLOGY: 1.99 PAPERS-CYBER: 2.26 PAPERS-NUCLEAR: 2.34 
+[GPU 0] [05:17:58] [INFO] Val Loss: CODE-LISP: 0.61 CODE-OTHER: nan FINEWEB: nan PAPERS-BIOLOGY: 2.01 PAPERS-CYBER: 2.30 PAPERS-NUCLEAR: 2.35 PAPERS-OTHER: nan CORE: 1.85 AUX: nan ALL: nan 
+[GPU 0] [05:21:54] [INFO] ---- Begin Eval ----
+[GPU 0] [05:21:54] [INFO] Data: core | Experts: None
+[GPU 0] [05:22:20] [INFO] loss: 1.58667386
+[GPU 0] [05:22:20] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [05:22:29] [INFO] loss: 0.62390721
+[GPU 0] [05:22:29] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [05:22:37] [INFO] loss: 2.01085019
+[GPU 0] [05:22:37] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [05:22:46] [INFO] loss: 2.35293221
+[GPU 0] [05:22:46] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [05:22:55] [INFO] loss: 2.29772949
+[GPU 0] [05:23:03] [INFO] BASELINE - ADVERSARIAL FT START
+[GPU 0] [05:23:10] [INFO] ---- Begin FT | Experts: None | Data: ['code-lisp'] ----
+[GPU 0] [05:23:10] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [05:23:10] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [05:25:11] [INFO] New best validation loss: 0.6573 @ step 0
+[GPU 0] [05:26:42] [INFO] Stop FT @ 12: no val improvement for 10 steps
+[GPU 0] [05:26:42] [INFO] Wrote stats.jsonl entries at FT step 0 
+[GPU 0] [05:26:50] [INFO] ---- Begin FT | Experts: None | Data: ['papers-biology'] ----
+[GPU 0] [05:26:50] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [05:26:50] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [05:26:58] [INFO] New best validation loss: 2.1059 @ step 0
+[GPU 0] [05:27:07] [INFO] New best validation loss: 2.0933 @ step 1
+[GPU 0] [05:28:39] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [05:28:39] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [05:28:46] [INFO] ---- Begin FT | Experts: None | Data: ['papers-cyber'] ----
+[GPU 0] [05:28:46] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [05:28:46] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [05:28:53] [INFO] New best validation loss: 2.3947 @ step 0
+[GPU 0] [05:29:02] [INFO] New best validation loss: 2.3815 @ step 1
+[GPU 0] [05:29:10] [INFO] New best validation loss: 2.3756 @ step 2
+[GPU 0] [05:29:18] [INFO] New best validation loss: 2.3750 @ step 3
+[GPU 0] [05:30:53] [INFO] Stop FT @ 15: no val improvement for 10 steps
+[GPU 0] [05:30:53] [INFO] Wrote stats.jsonl entries at FT step 3 
+[GPU 0] [05:31:02] [INFO] ---- Begin FT | Experts: None | Data: ['papers-nuclear'] ----
+[GPU 0] [05:31:02] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [05:31:02] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [05:31:11] [INFO] New best validation loss: 2.4671 @ step 0
+[GPU 0] [05:31:19] [INFO] New best validation loss: 2.4301 @ step 1
+[GPU 0] [05:32:52] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [05:32:52] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [05:32:56] [INFO] ----------------------------------------
+[GPU 0] [05:32:56] [INFO] Finished. See /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/base/5B/seed_1/20260422001905455889

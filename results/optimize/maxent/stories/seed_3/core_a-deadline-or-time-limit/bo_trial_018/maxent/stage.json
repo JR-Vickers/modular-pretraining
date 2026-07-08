@@ -1,0 +1,28 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core_a-deadline-or-time-limit"
+  ],
+  "stage": {
+    "name": "maxent",
+    "num_checkpoints": -1,
+    "lr": 0.002225715121916847,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent_stories/seed_3/core_a-deadline-or-time-limit/bo_trial_018/maxent",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": false,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core",
+        "a-deadline-or-time-limit"
+      ]
+    ],
+    "alpha_retain": 294.41572892721774,
+    "steps": 2000,
+    "early_stop_thresh": 2.0
+  }
+}

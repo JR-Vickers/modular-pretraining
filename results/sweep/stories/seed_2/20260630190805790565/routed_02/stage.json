@@ -1,0 +1,39 @@
+{
+  "completed": true,
+  "completed_iterations": [],
+  "stage": {
+    "name": "routed",
+    "num_checkpoints": -1,
+    "lr": 0.005,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/sweep/stories/seed_2/20260630190805790565/routed_02",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "model": {
+      "arch": "moe",
+      "tokenizer": "TokenizersBackend(name_or_path='SimpleStories/SimpleStories-1.25M', vocab_size=4096, model_max_length=1000000000000000019884624838656, padding_side='right', truncation_side='right', special_tokens={'eos_token': '[EOS]', 'unk_token': '[UNK]'}, added_tokens_decoder={\n\t0: AddedToken(\"[UNK]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n\t1: AddedToken(\"[EOS]\", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),\n}\n)",
+      "ctx_len": 256,
+      "vocab_size": 4096,
+      "num_layers": 8,
+      "num_heads": 8,
+      "num_key_value": 2,
+      "attn_bias": true,
+      "eos_token_id": 1,
+      "embed_dim": 512,
+      "mlp_dim": 2048,
+      "core_param_prc": 1.0,
+      "aux_param_prc": 0.1
+    },
+    "eval_arbsub": false,
+    "label_prc": 1.0,
+    "aux_factor": 1.0,
+    "robust_prc": 0.9,
+    "aux_route_prc": 0.3,
+    "equal_compute": true
+  }
+}

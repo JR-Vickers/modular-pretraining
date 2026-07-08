@@ -1,0 +1,246 @@
+[GPU 0] [06:15:33] [INFO] Git branch: arxiv-codebase, commit: 9b24315f2bfea330d3dad8afb633050bae1cf90a
+[GPU 0] [06:15:33] [INFO] Number of GPUs: 1
+[GPU 0] [06:15:34] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [06:15:34] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [06:15:44] [INFO] target effective batch size: 672, actual effective batch size: 672, micro batch size: 12, accumulation steps: 56, num gpus: 1
+[GPU 0] [06:15:44] [INFO] core total number of tokens: 66749057569
+[GPU 0] [06:15:44] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [06:15:44] [INFO] core: chinchilla optimal tokens: 16,130,190,080, requested proportion: 1.0000, requested number of tokens: 16,130,190,080.0, 
+[GPU 0] [06:15:44] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [06:15:44] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [06:15:44] [INFO] aux: chinchilla optimal tokens: 16,130,190,080, requested proportion: 0.0100, requested number of tokens: 161,301,900.8, 
+[GPU 0] [06:15:45] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/titration/lora/800M/seed_3/20260626061525847278/config.json
+[GPU 0] [06:15:45] [DEBUG] {
+    "stages": [
+        {
+            "name": "routed",
+            "num_checkpoints": -1,
+            "lr": 0.0005663534909876918,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/titration/lora/800M/seed_3/20260626061525847278/routed",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "lora",
+                "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+                "ctx_len": 1024,
+                "vocab_size": 50304,
+                "num_layers": 24,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 50256,
+                "embed_dim": 1600,
+                "mlp_dim": 6400,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "label_prc": 1.0,
+            "aux_factor": {
+                "code-lisp": 2.0,
+                "papers-biology": 1.0,
+                "papers-nuclear": 1.0,
+                "papers-cyber": 1.0
+            },
+            "core_aux_ratio": 1.0,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 24,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 1600,
+        "mlp_dim": 6400
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/src/data/fineweb",
+            "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/src/data/code",
+            "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 16130190080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 161301900.8
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 672,
+        "effective_batch_size": 672,
+        "micro_batch_size": 12,
+        "accumulation_steps": 56,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 3,
+        "compile": false,
+        "find_unused_parameters": true,
+        "is_ddp": false,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 1,
+        "process_id": 0,
+        "num_base_params": 806509504,
+        "device": "cuda",
+        "logger": "<Logger training_20260626061525847278 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=3281)",
+                "test": "InterleavedDataLoader(len=840)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=196901)",
+                "test": "InterleavedDataLoader(len=840)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=1102649)",
+                "test": "InterleavedDataLoader(len=840)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=3281)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=840)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=3281)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=840)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=3281)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=840)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=13126)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=840)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=1312676)",
+                "test": "InterleavedDataLoader(len=2520)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=13124)",
+                "test": "InterleavedDataLoader(len=3360)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=1325800)",
+                "test": "InterleavedDataLoader(len=5880)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/titration/lora/800M/seed_3",
+        "experiment_id": "20260626061525847278",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "titration/lora/800M/seed_3"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [06:15:45] [INFO] === titration eval: method=lora seed=3 ===
+[GPU 0] [06:15:45] [INFO] Source checkpoint: /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/scaling/realistic/lora/800M/seed_3/20260518174946809690/routed/checkpoint.pth
+[GPU 0] [06:15:56] [INFO] Initialized LoRATransformer with 1,003,117,504 total parameters
+[GPU 0] [06:15:56] [INFO]   Label 'core' has 806,509,504 parameters
+[GPU 0] [06:15:56] [INFO]   Label 'code-lisp' has 49,152,000 parameters
+[GPU 0] [06:15:56] [INFO]   Label 'papers-biology' has 49,152,000 parameters
+[GPU 0] [06:15:56] [INFO]   Label 'papers-cyber' has 49,152,000 parameters
+[GPU 0] [06:15:56] [INFO]   Label 'papers-nuclear' has 49,152,000 parameters
+[GPU 0] [06:18:00] [INFO] [lora] aux=code-lisp t=0.00 code-lisp loss=1.4283
+[GPU 0] [06:22:26] [INFO] [lora] aux=code-lisp t=0.00 core loss=1.8822
+[GPU 0] [06:24:09] [INFO] [lora] aux=code-lisp t=0.25 code-lisp loss=1.1840
+[GPU 0] [06:29:17] [INFO] [lora] aux=code-lisp t=0.25 core loss=1.8828
+[GPU 0] [06:30:59] [INFO] [lora] aux=code-lisp t=0.50 code-lisp loss=0.9611
+[GPU 0] [06:36:07] [INFO] [lora] aux=code-lisp t=0.50 core loss=1.8851
+[GPU 0] [06:37:50] [INFO] [lora] aux=code-lisp t=0.75 code-lisp loss=0.8389
+[GPU 0] [06:42:59] [INFO] [lora] aux=code-lisp t=0.75 core loss=1.8895
+[GPU 0] [06:44:36] [INFO] [lora] aux=code-lisp t=1.00 code-lisp loss=0.8104
+[GPU 0] [06:49:22] [INFO] [lora] aux=code-lisp t=1.00 core loss=1.8967
+[GPU 0] [06:50:50] [INFO] [lora] aux=papers-biology t=0.00 papers-biology loss=2.4710
+[GPU 0] [06:55:14] [INFO] [lora] aux=papers-biology t=0.00 core loss=1.8822
+[GPU 0] [06:57:00] [INFO] [lora] aux=papers-biology t=0.25 papers-biology loss=2.4345
+[GPU 0] [07:02:11] [INFO] [lora] aux=papers-biology t=0.25 core loss=1.8821
+[GPU 0] [07:03:53] [INFO] [lora] aux=papers-biology t=0.50 papers-biology loss=2.4064
+[GPU 0] [07:09:01] [INFO] [lora] aux=papers-biology t=0.50 core loss=1.8830
+[GPU 0] [07:10:44] [INFO] [lora] aux=papers-biology t=0.75 papers-biology loss=2.3869
+[GPU 0] [07:15:52] [INFO] [lora] aux=papers-biology t=0.75 core loss=1.8849
+[GPU 0] [07:17:27] [INFO] [lora] aux=papers-biology t=1.00 papers-biology loss=2.3759
+[GPU 0] [07:22:14] [INFO] [lora] aux=papers-biology t=1.00 core loss=1.8879
+[GPU 0] [07:23:43] [INFO] [lora] aux=papers-nuclear t=0.00 papers-nuclear loss=2.8460
+[GPU 0] [07:28:07] [INFO] [lora] aux=papers-nuclear t=0.00 core loss=1.8822
+[GPU 0] [07:29:49] [INFO] [lora] aux=papers-nuclear t=0.25 papers-nuclear loss=2.7934
+[GPU 0] [07:34:56] [INFO] [lora] aux=papers-nuclear t=0.25 core loss=1.8818
+[GPU 0] [07:36:38] [INFO] [lora] aux=papers-nuclear t=0.50 papers-nuclear loss=2.7528
+[GPU 0] [07:41:46] [INFO] [lora] aux=papers-nuclear t=0.50 core loss=1.8839
+[GPU 0] [07:43:28] [INFO] [lora] aux=papers-nuclear t=0.75 papers-nuclear loss=2.7252
+[GPU 0] [07:48:35] [INFO] [lora] aux=papers-nuclear t=0.75 core loss=1.8887
+[GPU 0] [07:50:10] [INFO] [lora] aux=papers-nuclear t=1.00 papers-nuclear loss=2.7112
+[GPU 0] [07:54:55] [INFO] [lora] aux=papers-nuclear t=1.00 core loss=1.8967
+[GPU 0] [07:56:24] [INFO] [lora] aux=papers-cyber t=0.00 papers-cyber loss=2.7097
+[GPU 0] [08:00:48] [INFO] [lora] aux=papers-cyber t=0.00 core loss=1.8822
+[GPU 0] [08:02:32] [INFO] [lora] aux=papers-cyber t=0.25 papers-cyber loss=2.6856
+[GPU 0] [08:07:42] [INFO] [lora] aux=papers-cyber t=0.25 core loss=1.8809
+[GPU 0] [08:09:24] [INFO] [lora] aux=papers-cyber t=0.50 papers-cyber loss=2.6660
+[GPU 0] [08:14:32] [INFO] [lora] aux=papers-cyber t=0.50 core loss=1.8809
+[GPU 0] [08:16:17] [INFO] [lora] aux=papers-cyber t=0.75 papers-cyber loss=2.6520
+[GPU 0] [08:21:25] [INFO] [lora] aux=papers-cyber t=0.75 core loss=1.8822
+[GPU 0] [08:23:00] [INFO] [lora] aux=papers-cyber t=1.00 papers-cyber loss=2.6428
+[GPU 0] [08:27:47] [INFO] [lora] aux=papers-cyber t=1.00 core loss=1.8849
+[GPU 0] [08:27:48] [INFO] Finished lora/seed_3. See /workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/titration/lora/800M/seed_3/20260626061525847278

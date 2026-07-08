@@ -1,0 +1,1711 @@
+[GPU 0] [05:54:47] [INFO] Number of GPUs: 32
+[GPU 0] [05:54:51] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [05:54:51] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [05:55:32] [INFO] target effective batch size: 2770, actual effective batch size: 2752, micro batch size: 2, accumulation steps: 43, num gpus: 32
+[GPU 0] [05:55:32] [INFO] core total number of tokens: 124693822984
+[GPU 0] [05:55:32] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [05:55:32] [INFO] core: chinchilla optimal tokens: 99,354,862,080, requested proportion: 1.0000, requested number of tokens: 99,354,862,080.0, 
+[GPU 0] [05:55:32] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [05:55:32] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [05:55:32] [INFO] aux: chinchilla optimal tokens: 99,354,862,080, requested proportion: 0.0100, requested number of tokens: 993,548,620.8000001, 
+[GPU 0] [05:55:32] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/config.json
+[GPU 0] [05:55:32] [DEBUG] {
+    "stages": [
+        {
+            "name": "routed",
+            "num_checkpoints": 100,
+            "lr": 0.00032221152797331777,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "moe",
+                "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+                "ctx_len": 1024,
+                "vocab_size": 50304,
+                "num_layers": 47,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 50256,
+                "embed_dim": 3072,
+                "mlp_dim": 12288,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "aux_factor": {
+                "code-lisp": 4.0,
+                "papers-biology": 3.0,
+                "papers-nuclear": 3.0,
+                "papers-cyber": 3.0
+            },
+            "robust_prc": 0.2,
+            "aux_route_prc": 0.5,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 47,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 3072,
+        "mlp_dim": 12288
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 99354862080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 993548620.8000001
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 2770,
+        "effective_batch_size": 2752,
+        "micro_batch_size": 2,
+        "accumulation_steps": 43,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "is_ddp": true,
+        "optimize_routed": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 32,
+        "process_id": 0,
+        "num_base_params": 4967743104,
+        "device": "cuda",
+        "logger": "<Logger training_run_1 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=3790)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=227405)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=1273469)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=172)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=172)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=172)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=15160)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=172)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=1516034)",
+                "test": "InterleavedDataLoader(len=516)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=15160)",
+                "test": "InterleavedDataLoader(len=688)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=1531194)",
+                "test": "InterleavedDataLoader(len=1204)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1",
+        "experiment_id": "run_1",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/grmoe/5B/seed_1"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [05:55:32] [INFO] Loader code-lisp train: 3790, test: 172
+[GPU 0] [05:55:32] [INFO] Loader code-other train: 227405, test: 172
+[GPU 0] [05:55:32] [INFO] Loader fineweb train: 1273469, test: 172
+[GPU 0] [05:55:32] [INFO] Loader papers-biology train: 3790, test: 172
+[GPU 0] [05:55:32] [INFO] Loader papers-cyber train: 3790, test: 172
+[GPU 0] [05:55:32] [INFO] Loader papers-nuclear train: 3790, test: 172
+[GPU 0] [05:55:32] [INFO] Loader papers-other train: 15160, test: 172
+[GPU 0] [05:55:32] [INFO] Loader core train: 1516034, test: 516
+[GPU 0] [05:55:32] [INFO] Loader aux train: 15160, test: 688
+[GPU 0] [05:55:32] [INFO] Loader all train: 1531194, test: 1204
+[GPU 0] [05:55:32] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": 100, "lr": 0.00032221152797331777, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "moe", "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)", "ctx_len": 1024, "vocab_size": 50304, "num_layers": 47, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 50256, "embed_dim": 3072, "mlp_dim": 12288, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "aux_factor": {"code-lisp": 4.0, "papers-biology": 3.0, "papers-nuclear": 3.0, "papers-cyber": 3.0}, "robust_prc": 0.2, "aux_route_prc": 0.5, "equal_compute": true}
+[GPU 0] [05:55:32] [INFO] ROUTED START
+[GPU 0] [05:56:28] [INFO] Initialized AltMoETransformer with 6,373,116,800 total parameters
+[GPU 0] [05:56:28] [INFO]   Label 'core' has 4,967,743,104 parameters
+[GPU 0] [05:56:28] [INFO]   Label 'code-lisp' has 351,343,424 parameters
+[GPU 0] [05:56:28] [INFO]   Label 'papers-biology' has 351,343,424 parameters
+[GPU 0] [05:56:28] [INFO]   Label 'papers-cyber' has 351,343,424 parameters
+[GPU 0] [05:56:28] [INFO]   Label 'papers-nuclear' has 351,343,424 parameters
+[GPU 0] [05:56:28] [INFO] Compiling AltMoETransformer with torch.compile...
+[GPU 0] [05:56:30] [INFO] torch.compile done
+[GPU 0] [05:56:44] [WARNING] restore_partial_state: no checkpoint found at /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed
+[GPU 0] [05:56:44] [INFO] ---- Begin Routed Unordered (Alt) ----
+[GPU 0] [05:56:44] [INFO] compute-equal: initial len_base: 1185539 & len_ft: 345655
+[GPU 0] [05:56:44] [INFO] compute-equal: flop_diff < 0, (-121443611222720.0 < 0), must truncate training
+[GPU 0] [05:56:44] [INFO] compute-equal: len_base: -12223 -> 1173316, len_ft: -11416 -> 334239
+[GPU 0] [05:56:44] [WARNING] utilized_aux > len_all_aux, (47643 > 15160), must resample aux
+[GPU 0] [05:56:44] [INFO] Batch [('core', ('core',), ('core',))] count: 1173316
+[GPU 0] [05:56:44] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('code-lisp',))] count: 12827
+[GPU 0] [05:56:44] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 1832
+[GPU 0] [05:56:44] [INFO] Batch [('core', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 88183
+[GPU 0] [05:56:44] [INFO] Batch [('core', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 66138
+[GPU 0] [05:56:44] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 1832
+[GPU 0] [05:56:44] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('papers-biology',))] count: 9163
+[GPU 0] [05:56:44] [INFO] Batch [('core', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 66138
+[GPU 0] [05:56:44] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 1832
+[GPU 0] [05:56:44] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('papers-cyber',))] count: 9163
+[GPU 0] [05:56:44] [INFO] Batch [('core', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 66138
+[GPU 0] [05:56:44] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 1832
+[GPU 0] [05:56:44] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('papers-nuclear',))] count: 9163
+[GPU 0] [05:56:44] [INFO] 
+len_all: 1531194, len_all_aux: 15160, len_all_core: 1516034,
+len_base: 1173316, len_ft: 334239,
+len_core_for_ft: 286596, len_aux_for_ft: 47643,
+aux_factor: {'code-lisp': 4.0, 'papers-biology': 3.0, 'papers-nuclear': 3.0, 'papers-cyber': 3.0}, robust_prc: 0.2,
+aux_route_prc: 0.5, equal_compute: True
+[GPU 0] [05:56:44] [WARNING] len(batches) != expected, (1507557 != 1507555), -2 length difference
+[GPU 0] [05:56:44] [INFO] ---- Begin Routed (Alt) ----
+[GPU 0] [05:56:45] [INFO] LR schedule group 0: steps [0, 35059), warmup=701, constant=30852, decay=3506
+[GPU 0] [05:56:45] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [05:56:45] [INFO] CUDA memory before training loop:
+[GPU 0] [05:56:45] [INFO] |===========================================================================|
+[GPU 0] [05:56:45] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [05:56:45] [INFO] |===========================================================================|
+[GPU 0] [05:56:45] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Allocated memory      |  26567 MiB |  26570 MiB |  40687 MiB |  14119 MiB |
+[GPU 0] [05:56:45] [INFO] |       from large pool |  26563 MiB |  26566 MiB |  40683 MiB |  14119 MiB |
+[GPU 0] [05:56:45] [INFO] |       from small pool |      4 MiB |      4 MiB |      4 MiB |      0 MiB |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Active memory         |  26567 MiB |  26570 MiB |  40687 MiB |  14119 MiB |
+[GPU 0] [05:56:45] [INFO] |       from large pool |  26563 MiB |  26566 MiB |  40683 MiB |  14119 MiB |
+[GPU 0] [05:56:45] [INFO] |       from small pool |      4 MiB |      4 MiB |      4 MiB |      0 MiB |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Requested memory      |  26567 MiB |  26570 MiB |  40687 MiB |  14119 MiB |
+[GPU 0] [05:56:45] [INFO] |       from large pool |  26563 MiB |  26566 MiB |  40683 MiB |  14119 MiB |
+[GPU 0] [05:56:45] [INFO] |       from small pool |      4 MiB |      4 MiB |      4 MiB |      0 MiB |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | GPU reserved memory   |  26586 MiB |  26586 MiB |  26586 MiB |      0 B   |
+[GPU 0] [05:56:45] [INFO] |       from large pool |  26580 MiB |  26580 MiB |  26580 MiB |      0 B   |
+[GPU 0] [05:56:45] [INFO] |       from small pool |      6 MiB |      6 MiB |      6 MiB |      0 B   |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [05:56:45] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [05:56:45] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Allocations           |    1513    |    1516    |    1620    |     107    |
+[GPU 0] [05:56:45] [INFO] |       from large pool |     804    |     805    |     858    |      54    |
+[GPU 0] [05:56:45] [INFO] |       from small pool |     709    |     742    |     762    |      53    |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Active allocs         |    1513    |    1516    |    1620    |     107    |
+[GPU 0] [05:56:45] [INFO] |       from large pool |     804    |     805    |     858    |      54    |
+[GPU 0] [05:56:45] [INFO] |       from small pool |     709    |     742    |     762    |      53    |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:56:45] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [05:56:45] [INFO] |===========================================================================|
+[GPU 0] [05:56:45] [INFO] 
+[GPU 0] [05:56:45] [INFO] Batch group start, LR: 1.0000e-08, batches: 1507557, epochs: 1
+[GPU 0] [05:57:24] [INFO] CUDA memory after first training step:
+[GPU 0] [05:57:24] [INFO] |===========================================================================|
+[GPU 0] [05:57:24] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [05:57:24] [INFO] |===========================================================================|
+[GPU 0] [05:57:24] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Allocated memory      |  49800 MiB |  49800 MiB |   1494 GiB |   1445 GiB |
+[GPU 0] [05:57:24] [INFO] |       from large pool |  49787 MiB |  49787 MiB |   1492 GiB |   1443 GiB |
+[GPU 0] [05:57:24] [INFO] |       from small pool |     13 MiB |     13 MiB |      1 GiB |      1 GiB |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Active memory         |  49800 MiB |  49800 MiB |   1494 GiB |   1445 GiB |
+[GPU 0] [05:57:24] [INFO] |       from large pool |  49787 MiB |  49787 MiB |   1492 GiB |   1443 GiB |
+[GPU 0] [05:57:24] [INFO] |       from small pool |     13 MiB |     13 MiB |      1 GiB |      1 GiB |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Requested memory      |  49800 MiB |  49800 MiB |   1494 GiB |   1445 GiB |
+[GPU 0] [05:57:24] [INFO] |       from large pool |  49787 MiB |  49787 MiB |   1492 GiB |   1443 GiB |
+[GPU 0] [05:57:24] [INFO] |       from small pool |     13 MiB |     13 MiB |      1 GiB |      1 GiB |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | GPU reserved memory   |  49814 MiB |  49814 MiB |  49814 MiB |      0 B   |
+[GPU 0] [05:57:24] [INFO] |       from large pool |  49800 MiB |  49800 MiB |  49800 MiB |      0 B   |
+[GPU 0] [05:57:24] [INFO] |       from small pool |     14 MiB |     14 MiB |     14 MiB |      0 B   |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [05:57:24] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [05:57:24] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Allocations           |    4918    |    4918    |  110150    |  105232    |
+[GPU 0] [05:57:24] [INFO] |       from large pool |    1845    |    1943    |   73748    |   71903    |
+[GPU 0] [05:57:24] [INFO] |       from small pool |    3073    |    3073    |   36402    |   33329    |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Active allocs         |    4918    |    4918    |  110150    |  105232    |
+[GPU 0] [05:57:24] [INFO] |       from large pool |    1845    |    1943    |   73748    |   71903    |
+[GPU 0] [05:57:24] [INFO] |       from small pool |    3073    |    3073    |   36402    |   33329    |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [05:57:24] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [05:57:24] [INFO] |===========================================================================|
+[GPU 0] [05:57:24] [INFO] 
+[GPU 0] [05:57:24] [INFO] Step: 1, LR: 4.6963e-07
+[GPU 0] [05:57:24] [INFO] Train Loss: CORE: 11.37 CODE-LISP: 11.19 PAPERS-BIOLOGY: nan PAPERS-CYBER: 11.44 PAPERS-NUCLEAR: nan 
+[GPU 0] [00:24:43] [INFO] Number of GPUs: 32
+[GPU 0] [00:24:47] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [00:24:47] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [00:25:20] [INFO] target effective batch size: 2770, actual effective batch size: 2752, micro batch size: 2, accumulation steps: 43, num gpus: 32
+[GPU 0] [00:25:20] [INFO] core total number of tokens: 124693822984
+[GPU 0] [00:25:20] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [00:25:20] [INFO] core: chinchilla optimal tokens: 99,354,862,080, requested proportion: 1.0000, requested number of tokens: 99,354,862,080.0, 
+[GPU 0] [00:25:20] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [00:25:20] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [00:25:20] [INFO] aux: chinchilla optimal tokens: 99,354,862,080, requested proportion: 0.0100, requested number of tokens: 993,548,620.8000001, 
+[GPU 0] [00:25:20] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/config.json
+[GPU 0] [00:25:20] [DEBUG] {
+    "stages": [
+        {
+            "name": "routed",
+            "num_checkpoints": 100,
+            "lr": 0.00032221152797331777,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "moe",
+                "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+                "ctx_len": 1024,
+                "vocab_size": 50304,
+                "num_layers": 47,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 50256,
+                "embed_dim": 3072,
+                "mlp_dim": 12288,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "aux_factor": {
+                "code-lisp": 4.0,
+                "papers-biology": 3.0,
+                "papers-nuclear": 3.0,
+                "papers-cyber": 3.0
+            },
+            "robust_prc": 0.2,
+            "aux_route_prc": 0.5,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 47,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 3072,
+        "mlp_dim": 12288
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 99354862080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 993548620.8000001
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 2770,
+        "effective_batch_size": 2752,
+        "micro_batch_size": 2,
+        "accumulation_steps": 43,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "is_ddp": true,
+        "optimize_routed": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 32,
+        "process_id": 0,
+        "num_base_params": 4967743104,
+        "device": "cuda",
+        "logger": "<Logger training_run_1 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=3790)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=227405)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=1273469)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=172)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=172)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=172)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=15160)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=172)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=1516034)",
+                "test": "InterleavedDataLoader(len=516)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=15160)",
+                "test": "InterleavedDataLoader(len=688)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=1531194)",
+                "test": "InterleavedDataLoader(len=1204)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1",
+        "experiment_id": "run_1",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/grmoe/5B/seed_1"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [00:25:20] [INFO] Loader code-lisp train: 3790, test: 172
+[GPU 0] [00:25:20] [INFO] Loader code-other train: 227405, test: 172
+[GPU 0] [00:25:20] [INFO] Loader fineweb train: 1273469, test: 172
+[GPU 0] [00:25:20] [INFO] Loader papers-biology train: 3790, test: 172
+[GPU 0] [00:25:20] [INFO] Loader papers-cyber train: 3790, test: 172
+[GPU 0] [00:25:20] [INFO] Loader papers-nuclear train: 3790, test: 172
+[GPU 0] [00:25:20] [INFO] Loader papers-other train: 15160, test: 172
+[GPU 0] [00:25:20] [INFO] Loader core train: 1516034, test: 516
+[GPU 0] [00:25:20] [INFO] Loader aux train: 15160, test: 688
+[GPU 0] [00:25:20] [INFO] Loader all train: 1531194, test: 1204
+[GPU 0] [00:25:20] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": 100, "lr": 0.00032221152797331777, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "moe", "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)", "ctx_len": 1024, "vocab_size": 50304, "num_layers": 47, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 50256, "embed_dim": 3072, "mlp_dim": 12288, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "aux_factor": {"code-lisp": 4.0, "papers-biology": 3.0, "papers-nuclear": 3.0, "papers-cyber": 3.0}, "robust_prc": 0.2, "aux_route_prc": 0.5, "equal_compute": true}
+[GPU 0] [00:25:20] [INFO] ROUTED START
+[GPU 0] [00:26:06] [INFO] Initialized AltMoETransformer with 6,373,116,800 total parameters
+[GPU 0] [00:26:06] [INFO]   Label 'core' has 4,967,743,104 parameters
+[GPU 0] [00:26:06] [INFO]   Label 'code-lisp' has 351,343,424 parameters
+[GPU 0] [00:26:06] [INFO]   Label 'papers-biology' has 351,343,424 parameters
+[GPU 0] [00:26:06] [INFO]   Label 'papers-cyber' has 351,343,424 parameters
+[GPU 0] [00:26:06] [INFO]   Label 'papers-nuclear' has 351,343,424 parameters
+[GPU 0] [00:26:06] [INFO] Compiling AltMoETransformer with torch.compile...
+[GPU 0] [00:26:07] [INFO] torch.compile done
+[GPU 0] [00:26:41] [INFO] ---- Begin Routed Unordered (Alt) ----
+[GPU 0] [00:26:41] [INFO] compute-equal: initial len_base: 1185539 & len_ft: 345655
+[GPU 0] [00:26:41] [INFO] compute-equal: flop_diff < 0, (-121443611222720.0 < 0), must truncate training
+[GPU 0] [00:26:41] [INFO] compute-equal: len_base: -12223 -> 1173316, len_ft: -11416 -> 334239
+[GPU 0] [00:26:41] [WARNING] utilized_aux > len_all_aux, (47643 > 15160), must resample aux
+[GPU 0] [00:26:41] [INFO] Batch [('core', ('core',), ('core',))] count: 1173316
+[GPU 0] [00:26:41] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('code-lisp',))] count: 12827
+[GPU 0] [00:26:41] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 1832
+[GPU 0] [00:26:41] [INFO] Batch [('core', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 88183
+[GPU 0] [00:26:41] [INFO] Batch [('core', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 66138
+[GPU 0] [00:26:41] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 1832
+[GPU 0] [00:26:41] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('papers-biology',))] count: 9163
+[GPU 0] [00:26:41] [INFO] Batch [('core', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 66138
+[GPU 0] [00:26:41] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 1832
+[GPU 0] [00:26:41] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('papers-cyber',))] count: 9163
+[GPU 0] [00:26:41] [INFO] Batch [('core', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 66138
+[GPU 0] [00:26:41] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 1832
+[GPU 0] [00:26:41] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('papers-nuclear',))] count: 9163
+[GPU 0] [00:26:41] [INFO] 
+len_all: 1531194, len_all_aux: 15160, len_all_core: 1516034,
+len_base: 1173316, len_ft: 334239,
+len_core_for_ft: 286596, len_aux_for_ft: 47643,
+aux_factor: {'code-lisp': 4.0, 'papers-biology': 3.0, 'papers-nuclear': 3.0, 'papers-cyber': 3.0}, robust_prc: 0.2,
+aux_route_prc: 0.5, equal_compute: True
+[GPU 0] [00:26:42] [WARNING] len(batches) != expected, (1507557 != 1507555), -2 length difference
+[GPU 0] [00:26:42] [INFO] ---- Begin Routed (Alt) ----
+[GPU 0] [00:26:46] [INFO] Restored 15050 train loss entries
+[GPU 0] [00:26:46] [INFO] Restored 0 val loss entries
+[GPU 0] [00:26:46] [INFO] LR schedule group 0: steps [0, 35059), warmup=701, constant=30852, decay=3506
+[GPU 0] [00:26:46] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [00:26:46] [INFO] Restored scheduler to step 350, LR: 1.6088e-04
+[GPU 0] [00:26:46] [INFO] CUDA memory before training loop:
+[GPU 0] [00:26:46] [INFO] |===========================================================================|
+[GPU 0] [00:26:46] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [00:26:46] [INFO] |===========================================================================|
+[GPU 0] [00:26:46] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Allocated memory      |  50879 MiB |  50879 MiB |  64999 MiB |  14119 MiB |
+[GPU 0] [00:26:46] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [00:26:46] [INFO] |       from small pool |     13 MiB |     13 MiB |     13 MiB |      0 MiB |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Active memory         |  50879 MiB |  50879 MiB |  64999 MiB |  14119 MiB |
+[GPU 0] [00:26:46] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [00:26:46] [INFO] |       from small pool |     13 MiB |     13 MiB |     13 MiB |      0 MiB |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Requested memory      |  50879 MiB |  50879 MiB |  64998 MiB |  14119 MiB |
+[GPU 0] [00:26:46] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [00:26:46] [INFO] |       from small pool |     12 MiB |     12 MiB |     12 MiB |      0 MiB |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | GPU reserved memory   |  50894 MiB |  50894 MiB |  50894 MiB |      0 B   |
+[GPU 0] [00:26:46] [INFO] |       from large pool |  50880 MiB |  50880 MiB |  50880 MiB |      0 B   |
+[GPU 0] [00:26:46] [INFO] |       from small pool |     14 MiB |     14 MiB |     14 MiB |      0 B   |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [00:26:46] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [00:26:46] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Allocations           |    5473    |    5473    |    5582    |     109    |
+[GPU 0] [00:26:46] [INFO] |       from large pool |    2030    |    2030    |    2084    |      54    |
+[GPU 0] [00:26:46] [INFO] |       from small pool |    3443    |    3443    |    3498    |      55    |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Active allocs         |    5473    |    5473    |    5582    |     109    |
+[GPU 0] [00:26:46] [INFO] |       from large pool |    2030    |    2030    |    2084    |      54    |
+[GPU 0] [00:26:46] [INFO] |       from small pool |    3443    |    3443    |    3498    |      55    |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:26:46] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [00:26:46] [INFO] |===========================================================================|
+[GPU 0] [00:26:46] [INFO] 
+[GPU 0] [00:26:46] [INFO] Batch group start, LR: 1.6088e-04, batches: 1507557, epochs: 1
+[GPU 0] [00:27:48] [INFO] CUDA memory after first training step:
+[GPU 0] [00:27:48] [INFO] |===========================================================================|
+[GPU 0] [00:27:48] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [00:27:48] [INFO] |===========================================================================|
+[GPU 0] [00:27:48] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Allocated memory      |  51141 MiB |  73635 MiB |   2907 GiB |   2857 GiB |
+[GPU 0] [00:27:48] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2903 GiB |   2853 GiB |
+[GPU 0] [00:27:48] [INFO] |       from small pool |     14 MiB |     22 MiB |      3 GiB |      3 GiB |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Active memory         |  51141 MiB |  73635 MiB |   2907 GiB |   2857 GiB |
+[GPU 0] [00:27:48] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2903 GiB |   2853 GiB |
+[GPU 0] [00:27:48] [INFO] |       from small pool |     14 MiB |     22 MiB |      3 GiB |      3 GiB |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Requested memory      |  51140 MiB |  73634 MiB |   2907 GiB |   2857 GiB |
+[GPU 0] [00:27:48] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2903 GiB |   2853 GiB |
+[GPU 0] [00:27:48] [INFO] |       from small pool |     13 MiB |     21 MiB |      3 GiB |      3 GiB |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | GPU reserved memory   |  74384 MiB |  74384 MiB |  74384 MiB |      0 B   |
+[GPU 0] [00:27:48] [INFO] |       from large pool |  74360 MiB |  74360 MiB |  74360 MiB |      0 B   |
+[GPU 0] [00:27:48] [INFO] |       from small pool |     24 MiB |     24 MiB |     24 MiB |      0 B   |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [00:27:48] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [00:27:48] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Allocations           |    5482    |    7564    |  232141    |  226659    |
+[GPU 0] [00:27:48] [INFO] |       from large pool |    2033    |    3263    |  145833    |  143800    |
+[GPU 0] [00:27:48] [INFO] |       from small pool |    3449    |    4771    |   86308    |   82859    |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Active allocs         |    5482    |    7564    |  232141    |  226659    |
+[GPU 0] [00:27:48] [INFO] |       from large pool |    2033    |    3263    |  145833    |  143800    |
+[GPU 0] [00:27:48] [INFO] |       from small pool |    3449    |    4771    |   86308    |   82859    |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [00:27:48] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [00:27:48] [INFO] |===========================================================================|
+[GPU 0] [00:27:48] [INFO] 
+[GPU 0] [01:50:07] [INFO] LR Scheduler: Group constant (step 701)
+[GPU 0] [02:54:49] [INFO] Step: 1000, LR: 3.2221e-04
+[GPU 0] [02:54:49] [INFO] Train Loss: CORE: 3.53 CODE-LISP: 1.57 PAPERS-BIOLOGY: 3.82 PAPERS-CYBER: 3.92 PAPERS-NUCLEAR: 3.98 
+[GPU 0] [06:52:08] [INFO] Step: 2000, LR: 3.2221e-04
+[GPU 0] [06:52:08] [INFO] Train Loss: CORE: 2.85 CODE-LISP: 0.80 PAPERS-BIOLOGY: 2.76 PAPERS-CYBER: 3.07 PAPERS-NUCLEAR: 3.01 
+[GPU 0] [19:50:36] [INFO] Number of GPUs: 32
+[GPU 0] [19:50:39] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [19:50:39] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [19:51:21] [INFO] target effective batch size: 2770, actual effective batch size: 2752, micro batch size: 2, accumulation steps: 43, num gpus: 32
+[GPU 0] [19:51:21] [INFO] core total number of tokens: 124693822984
+[GPU 0] [19:51:21] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [19:51:21] [INFO] core: chinchilla optimal tokens: 99,354,862,080, requested proportion: 1.0000, requested number of tokens: 99,354,862,080.0, 
+[GPU 0] [19:51:21] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [19:51:21] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [19:51:21] [INFO] aux: chinchilla optimal tokens: 99,354,862,080, requested proportion: 0.0100, requested number of tokens: 993,548,620.8000001, 
+[GPU 0] [19:51:21] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/config.json
+[GPU 0] [19:51:21] [DEBUG] {
+    "stages": [
+        {
+            "name": "routed",
+            "num_checkpoints": 100,
+            "lr": 0.00032221152797331777,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "moe",
+                "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+                "ctx_len": 1024,
+                "vocab_size": 50304,
+                "num_layers": 47,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 50256,
+                "embed_dim": 3072,
+                "mlp_dim": 12288,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "aux_factor": {
+                "code-lisp": 4.0,
+                "papers-biology": 3.0,
+                "papers-nuclear": 3.0,
+                "papers-cyber": 3.0
+            },
+            "robust_prc": 0.2,
+            "aux_route_prc": 0.5,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 47,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 3072,
+        "mlp_dim": 12288
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 99354862080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 993548620.8000001
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 2770,
+        "effective_batch_size": 2752,
+        "micro_batch_size": 2,
+        "accumulation_steps": 43,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "is_ddp": true,
+        "optimize_routed": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 32,
+        "process_id": 0,
+        "num_base_params": 4967743104,
+        "device": "cuda",
+        "logger": "<Logger training_run_1 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=3790)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=227405)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=1273469)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=172)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=172)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=172)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=15160)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=172)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=1516034)",
+                "test": "InterleavedDataLoader(len=516)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=15160)",
+                "test": "InterleavedDataLoader(len=688)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=1531194)",
+                "test": "InterleavedDataLoader(len=1204)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1",
+        "experiment_id": "run_1",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/grmoe/5B/seed_1"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [19:51:21] [INFO] Loader code-lisp train: 3790, test: 172
+[GPU 0] [19:51:21] [INFO] Loader code-other train: 227405, test: 172
+[GPU 0] [19:51:21] [INFO] Loader fineweb train: 1273469, test: 172
+[GPU 0] [19:51:21] [INFO] Loader papers-biology train: 3790, test: 172
+[GPU 0] [19:51:21] [INFO] Loader papers-cyber train: 3790, test: 172
+[GPU 0] [19:51:21] [INFO] Loader papers-nuclear train: 3790, test: 172
+[GPU 0] [19:51:21] [INFO] Loader papers-other train: 15160, test: 172
+[GPU 0] [19:51:21] [INFO] Loader core train: 1516034, test: 516
+[GPU 0] [19:51:21] [INFO] Loader aux train: 15160, test: 688
+[GPU 0] [19:51:21] [INFO] Loader all train: 1531194, test: 1204
+[GPU 0] [19:51:21] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": 100, "lr": 0.00032221152797331777, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "moe", "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)", "ctx_len": 1024, "vocab_size": 50304, "num_layers": 47, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 50256, "embed_dim": 3072, "mlp_dim": 12288, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "aux_factor": {"code-lisp": 4.0, "papers-biology": 3.0, "papers-nuclear": 3.0, "papers-cyber": 3.0}, "robust_prc": 0.2, "aux_route_prc": 0.5, "equal_compute": true}
+[GPU 0] [19:51:21] [INFO] ROUTED START
+[GPU 0] [19:52:16] [INFO] Initialized AltMoETransformer with 6,373,116,800 total parameters
+[GPU 0] [19:52:16] [INFO]   Label 'core' has 4,967,743,104 parameters
+[GPU 0] [19:52:16] [INFO]   Label 'code-lisp' has 351,343,424 parameters
+[GPU 0] [19:52:16] [INFO]   Label 'papers-biology' has 351,343,424 parameters
+[GPU 0] [19:52:16] [INFO]   Label 'papers-cyber' has 351,343,424 parameters
+[GPU 0] [19:52:16] [INFO]   Label 'papers-nuclear' has 351,343,424 parameters
+[GPU 0] [19:52:16] [INFO] Compiling AltMoETransformer with torch.compile...
+[GPU 0] [19:52:17] [INFO] torch.compile done
+[GPU 0] [19:53:07] [INFO] ---- Begin Routed Unordered (Alt) ----
+[GPU 0] [19:53:07] [INFO] compute-equal: initial len_base: 1185539 & len_ft: 345655
+[GPU 0] [19:53:07] [INFO] compute-equal: flop_diff < 0, (-121443611222720.0 < 0), must truncate training
+[GPU 0] [19:53:07] [INFO] compute-equal: len_base: -12223 -> 1173316, len_ft: -11416 -> 334239
+[GPU 0] [19:53:07] [WARNING] utilized_aux > len_all_aux, (47643 > 15160), must resample aux
+[GPU 0] [19:53:07] [INFO] Batch [('core', ('core',), ('core',))] count: 1173316
+[GPU 0] [19:53:07] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('code-lisp',))] count: 12827
+[GPU 0] [19:53:07] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 1832
+[GPU 0] [19:53:07] [INFO] Batch [('core', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 88183
+[GPU 0] [19:53:07] [INFO] Batch [('core', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 66138
+[GPU 0] [19:53:07] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 1832
+[GPU 0] [19:53:07] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('papers-biology',))] count: 9163
+[GPU 0] [19:53:07] [INFO] Batch [('core', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 66138
+[GPU 0] [19:53:07] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 1832
+[GPU 0] [19:53:07] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('papers-cyber',))] count: 9163
+[GPU 0] [19:53:07] [INFO] Batch [('core', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 66138
+[GPU 0] [19:53:07] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 1832
+[GPU 0] [19:53:07] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('papers-nuclear',))] count: 9163
+[GPU 0] [19:53:07] [INFO] 
+len_all: 1531194, len_all_aux: 15160, len_all_core: 1516034,
+len_base: 1173316, len_ft: 334239,
+len_core_for_ft: 286596, len_aux_for_ft: 47643,
+aux_factor: {'code-lisp': 4.0, 'papers-biology': 3.0, 'papers-nuclear': 3.0, 'papers-cyber': 3.0}, robust_prc: 0.2,
+aux_route_prc: 0.5, equal_compute: True
+[GPU 0] [19:53:08] [WARNING] len(batches) != expected, (1507557 != 1507555), -2 length difference
+[GPU 0] [19:53:08] [INFO] ---- Begin Routed (Alt) ----
+[GPU 0] [19:53:12] [INFO] Restored 90300 train loss entries
+[GPU 0] [19:53:12] [INFO] Restored 0 val loss entries
+[GPU 0] [19:53:12] [INFO] LR schedule group 0: steps [0, 35059), warmup=701, constant=30852, decay=3506
+[GPU 0] [19:53:12] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [19:53:12] [INFO] Restored scheduler to step 2100, LR: 3.2221e-04
+[GPU 0] [19:53:12] [INFO] CUDA memory before training loop:
+[GPU 0] [19:53:12] [INFO] |===========================================================================|
+[GPU 0] [19:53:12] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [19:53:12] [INFO] |===========================================================================|
+[GPU 0] [19:53:12] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Allocated memory      |  50879 MiB |  50879 MiB |  64999 MiB |  14119 MiB |
+[GPU 0] [19:53:12] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [19:53:12] [INFO] |       from small pool |     13 MiB |     13 MiB |     13 MiB |      0 MiB |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Active memory         |  50879 MiB |  50879 MiB |  64999 MiB |  14119 MiB |
+[GPU 0] [19:53:12] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [19:53:12] [INFO] |       from small pool |     13 MiB |     13 MiB |     13 MiB |      0 MiB |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Requested memory      |  50879 MiB |  50879 MiB |  64998 MiB |  14119 MiB |
+[GPU 0] [19:53:12] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [19:53:12] [INFO] |       from small pool |     12 MiB |     12 MiB |     12 MiB |      0 MiB |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | GPU reserved memory   |  50894 MiB |  50894 MiB |  50894 MiB |      0 B   |
+[GPU 0] [19:53:12] [INFO] |       from large pool |  50880 MiB |  50880 MiB |  50880 MiB |      0 B   |
+[GPU 0] [19:53:12] [INFO] |       from small pool |     14 MiB |     14 MiB |     14 MiB |      0 B   |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [19:53:12] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [19:53:12] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Allocations           |    5473    |    5473    |    5582    |     109    |
+[GPU 0] [19:53:12] [INFO] |       from large pool |    2030    |    2030    |    2084    |      54    |
+[GPU 0] [19:53:12] [INFO] |       from small pool |    3443    |    3443    |    3498    |      55    |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Active allocs         |    5473    |    5473    |    5582    |     109    |
+[GPU 0] [19:53:12] [INFO] |       from large pool |    2030    |    2030    |    2084    |      54    |
+[GPU 0] [19:53:12] [INFO] |       from small pool |    3443    |    3443    |    3498    |      55    |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:53:12] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [19:53:12] [INFO] |===========================================================================|
+[GPU 0] [19:53:12] [INFO] 
+[GPU 0] [19:53:12] [INFO] Batch group start, LR: 3.2221e-04, batches: 1507557, epochs: 1
+[GPU 0] [19:54:36] [INFO] CUDA memory after first training step:
+[GPU 0] [19:54:36] [INFO] |===========================================================================|
+[GPU 0] [19:54:36] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [19:54:36] [INFO] |===========================================================================|
+[GPU 0] [19:54:36] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Allocated memory      |  51141 MiB |  73635 MiB |   2919 GiB |   2869 GiB |
+[GPU 0] [19:54:36] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2914 GiB |   2864 GiB |
+[GPU 0] [19:54:36] [INFO] |       from small pool |     14 MiB |     22 MiB |      5 GiB |      5 GiB |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Active memory         |  51141 MiB |  73635 MiB |   2919 GiB |   2869 GiB |
+[GPU 0] [19:54:36] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2914 GiB |   2864 GiB |
+[GPU 0] [19:54:36] [INFO] |       from small pool |     14 MiB |     22 MiB |      5 GiB |      5 GiB |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Requested memory      |  51140 MiB |  73634 MiB |   2919 GiB |   2869 GiB |
+[GPU 0] [19:54:36] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2914 GiB |   2864 GiB |
+[GPU 0] [19:54:36] [INFO] |       from small pool |     13 MiB |     21 MiB |      4 GiB |      4 GiB |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | GPU reserved memory   |  74164 MiB |  74164 MiB |  74164 MiB |      0 B   |
+[GPU 0] [19:54:36] [INFO] |       from large pool |  74140 MiB |  74140 MiB |  74140 MiB |      0 B   |
+[GPU 0] [19:54:36] [INFO] |       from small pool |     24 MiB |     24 MiB |     24 MiB |      0 B   |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [19:54:36] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [19:54:36] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Allocations           |    5482    |    7564    |  307257    |  301775    |
+[GPU 0] [19:54:36] [INFO] |       from large pool |    2033    |    3263    |  145211    |  143178    |
+[GPU 0] [19:54:36] [INFO] |       from small pool |    3449    |    4771    |  162046    |  158597    |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Active allocs         |    5482    |    7564    |  307257    |  301775    |
+[GPU 0] [19:54:36] [INFO] |       from large pool |    2033    |    3263    |  145211    |  143178    |
+[GPU 0] [19:54:36] [INFO] |       from small pool |    3449    |    4771    |  162046    |  158597    |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [19:54:36] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [19:54:36] [INFO] |===========================================================================|
+[GPU 0] [19:54:36] [INFO] 
+[GPU 0] [23:24:55] [INFO] Step: 3000, LR: 3.2221e-04
+[GPU 0] [23:24:55] [INFO] Train Loss: CORE: 2.62 CODE-LISP: 0.68 PAPERS-BIOLOGY: 2.54 PAPERS-CYBER: 2.81 PAPERS-NUCLEAR: 2.84 
+[GPU 0] [03:25:09] [INFO] Step: 4000, LR: 3.2221e-04
+[GPU 0] [03:25:09] [INFO] Train Loss: CORE: 2.73 CODE-LISP: 0.60 PAPERS-BIOLOGY: 2.44 PAPERS-CYBER: 2.70 PAPERS-NUCLEAR: 2.66 
+[GPU 0] [07:25:15] [INFO] Step: 5000, LR: 3.2221e-04
+[GPU 0] [07:25:15] [INFO] Train Loss: CORE: 2.31 CODE-LISP: 0.65 PAPERS-BIOLOGY: 2.30 PAPERS-CYBER: 2.64 PAPERS-NUCLEAR: 2.62 
+[GPU 0] [11:25:10] [INFO] Step: 6000, LR: 3.2221e-04
+[GPU 0] [11:25:10] [INFO] Train Loss: CORE: 2.45 CODE-LISP: 0.52 PAPERS-BIOLOGY: 2.24 PAPERS-CYBER: 2.65 PAPERS-NUCLEAR: 2.57 
+[GPU 0] [15:18:53] [INFO] Step: 7000, LR: 3.2221e-04
+[GPU 0] [15:18:53] [INFO] Train Loss: CORE: 2.35 CODE-LISP: 0.52 PAPERS-BIOLOGY: 2.27 PAPERS-CYBER: 2.56 PAPERS-NUCLEAR: 2.52 
+[GPU 0] [19:18:33] [INFO] Step: 8000, LR: 3.2221e-04
+[GPU 0] [19:18:33] [INFO] Train Loss: CORE: 2.17 CODE-LISP: 0.55 PAPERS-BIOLOGY: 2.17 PAPERS-CYBER: 2.54 PAPERS-NUCLEAR: 2.46 
+[GPU 0] [23:18:26] [INFO] Step: 9000, LR: 3.2221e-04
+[GPU 0] [23:18:26] [INFO] Train Loss: CORE: 2.28 CODE-LISP: 0.51 PAPERS-BIOLOGY: 2.18 PAPERS-CYBER: 2.48 PAPERS-NUCLEAR: 2.50 
+[GPU 0] [03:18:22] [INFO] Step: 10000, LR: 3.2221e-04
+[GPU 0] [03:18:22] [INFO] Train Loss: CORE: 2.24 CODE-LISP: 0.46 PAPERS-BIOLOGY: 2.18 PAPERS-CYBER: 2.49 PAPERS-NUCLEAR: 2.43 
+[GPU 0] [07:18:47] [INFO] Step: 11000, LR: 3.2221e-04
+[GPU 0] [07:18:47] [INFO] Train Loss: CORE: 2.25 CODE-LISP: 0.51 PAPERS-BIOLOGY: 2.13 PAPERS-CYBER: 2.42 PAPERS-NUCLEAR: 2.43 
+[GPU 0] [11:18:35] [INFO] Step: 12000, LR: 3.2221e-04
+[GPU 0] [11:18:35] [INFO] Train Loss: CORE: 2.10 CODE-LISP: 0.49 PAPERS-BIOLOGY: 2.11 PAPERS-CYBER: 2.46 PAPERS-NUCLEAR: 2.42 
+[GPU 0] [15:17:55] [INFO] Step: 13000, LR: 3.2221e-04
+[GPU 0] [15:17:55] [INFO] Train Loss: CORE: 2.18 CODE-LISP: 0.49 PAPERS-BIOLOGY: 2.04 PAPERS-CYBER: 2.41 PAPERS-NUCLEAR: 2.48 
+[GPU 0] [19:11:37] [INFO] Step: 14000, LR: 3.2221e-04
+[GPU 0] [19:11:37] [INFO] Train Loss: CORE: 2.26 CODE-LISP: 0.46 PAPERS-BIOLOGY: 2.06 PAPERS-CYBER: 2.36 PAPERS-NUCLEAR: 2.37 
+[GPU 0] [23:10:38] [INFO] Step: 15000, LR: 3.2221e-04
+[GPU 0] [23:10:38] [INFO] Train Loss: CORE: 2.18 CODE-LISP: 0.52 PAPERS-BIOLOGY: 2.09 PAPERS-CYBER: 2.37 PAPERS-NUCLEAR: 2.36 
+[GPU 0] [03:09:54] [INFO] Step: 16000, LR: 3.2221e-04
+[GPU 0] [03:09:54] [INFO] Train Loss: CORE: 2.02 CODE-LISP: 0.44 PAPERS-BIOLOGY: 2.00 PAPERS-CYBER: 2.33 PAPERS-NUCLEAR: 2.36 
+[GPU 0] [07:10:06] [INFO] Step: 17000, LR: 3.2221e-04
+[GPU 0] [07:10:06] [INFO] Train Loss: CORE: 2.12 CODE-LISP: 0.44 PAPERS-BIOLOGY: 2.00 PAPERS-CYBER: 2.38 PAPERS-NUCLEAR: 2.29 
+[GPU 0] [11:10:54] [INFO] Step: 18000, LR: 3.2221e-04
+[GPU 0] [11:10:54] [INFO] Train Loss: CORE: 2.14 CODE-LISP: 0.48 PAPERS-BIOLOGY: 1.96 PAPERS-CYBER: 2.33 PAPERS-NUCLEAR: 2.35 
+[GPU 0] [15:10:53] [INFO] Step: 19000, LR: 3.2221e-04
+[GPU 0] [15:10:53] [INFO] Train Loss: CORE: 1.91 CODE-LISP: 0.43 PAPERS-BIOLOGY: 2.05 PAPERS-CYBER: 2.36 PAPERS-NUCLEAR: 2.33 
+[GPU 0] [19:11:30] [INFO] Step: 20000, LR: 3.2221e-04
+[GPU 0] [19:11:30] [INFO] Train Loss: CORE: 2.20 CODE-LISP: 0.45 PAPERS-BIOLOGY: 2.03 PAPERS-CYBER: 2.32 PAPERS-NUCLEAR: 2.26 
+[GPU 0] [23:05:45] [INFO] Step: 21000, LR: 3.2221e-04
+[GPU 0] [23:05:45] [INFO] Train Loss: CORE: 2.29 CODE-LISP: 0.47 PAPERS-BIOLOGY: 1.98 PAPERS-CYBER: 2.31 PAPERS-NUCLEAR: 2.34 
+[GPU 0] [03:06:49] [INFO] Step: 22000, LR: 3.2221e-04
+[GPU 0] [03:06:49] [INFO] Train Loss: CORE: 2.12 CODE-LISP: 0.40 PAPERS-BIOLOGY: 2.03 PAPERS-CYBER: 2.31 PAPERS-NUCLEAR: 2.27 
+[GPU 0] [07:08:08] [INFO] Step: 23000, LR: 3.2221e-04
+[GPU 0] [07:08:08] [INFO] Train Loss: CORE: 2.12 CODE-LISP: 0.42 PAPERS-BIOLOGY: 1.96 PAPERS-CYBER: 2.32 PAPERS-NUCLEAR: 2.25 
+[GPU 0] [11:09:54] [INFO] Step: 24000, LR: 3.2221e-04
+[GPU 0] [11:09:54] [INFO] Train Loss: CORE: 2.15 CODE-LISP: 0.44 PAPERS-BIOLOGY: 2.00 PAPERS-CYBER: 2.27 PAPERS-NUCLEAR: 2.29 
+[GPU 0] [15:11:23] [INFO] Step: 25000, LR: 3.2221e-04
+[GPU 0] [15:11:23] [INFO] Train Loss: CORE: 2.17 CODE-LISP: 0.41 PAPERS-BIOLOGY: 1.99 PAPERS-CYBER: 2.27 PAPERS-NUCLEAR: 2.26 
+[GPU 0] [19:13:30] [INFO] Step: 26000, LR: 3.2221e-04
+[GPU 0] [19:13:30] [INFO] Train Loss: CORE: 2.24 CODE-LISP: 0.40 PAPERS-BIOLOGY: 1.92 PAPERS-CYBER: 2.24 PAPERS-NUCLEAR: 2.23 
+[GPU 0] [23:15:42] [INFO] Step: 27000, LR: 3.2221e-04
+[GPU 0] [23:15:42] [INFO] Train Loss: CORE: 2.09 CODE-LISP: 0.35 PAPERS-BIOLOGY: 1.92 PAPERS-CYBER: 2.27 PAPERS-NUCLEAR: 2.31 
+[GPU 0] [02:51:01] [INFO] Number of GPUs: 32
+[GPU 0] [02:51:04] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [02:51:04] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [02:51:56] [INFO] target effective batch size: 2770, actual effective batch size: 2752, micro batch size: 2, accumulation steps: 43, num gpus: 32
+[GPU 0] [02:51:56] [INFO] core total number of tokens: 124693822984
+[GPU 0] [02:51:56] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [02:51:56] [INFO] core: chinchilla optimal tokens: 99,354,862,080, requested proportion: 1.0000, requested number of tokens: 99,354,862,080.0, 
+[GPU 0] [02:51:56] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [02:51:56] [INFO] Baseline model has 4,967,743,104 parameters
+[GPU 0] [02:51:56] [INFO] aux: chinchilla optimal tokens: 99,354,862,080, requested proportion: 0.0100, requested number of tokens: 993,548,620.8000001, 
+[GPU 0] [02:51:56] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/config.json
+[GPU 0] [02:51:56] [DEBUG] {
+    "stages": [
+        {
+            "name": "routed",
+            "num_checkpoints": 100,
+            "lr": 0.00032221152797331777,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "moe",
+                "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+                "ctx_len": 1024,
+                "vocab_size": 50304,
+                "num_layers": 47,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 50256,
+                "embed_dim": 3072,
+                "mlp_dim": 12288,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "aux_factor": {
+                "code-lisp": 4.0,
+                "papers-biology": 3.0,
+                "papers-nuclear": 3.0,
+                "papers-cyber": 3.0
+            },
+            "robust_prc": 0.2,
+            "aux_route_prc": 0.5,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 47,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 3072,
+        "mlp_dim": 12288
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 99354862080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 993548620.8000001
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 2770,
+        "effective_batch_size": 2752,
+        "micro_batch_size": 2,
+        "accumulation_steps": 43,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 1,
+        "compile": true,
+        "is_ddp": true,
+        "optimize_routed": true,
+        "cleanup_distributed": true,
+        "log_level": "DEBUG",
+        "num_gpus": 32,
+        "process_id": 0,
+        "num_base_params": 4967743104,
+        "device": "cuda",
+        "logger": "<Logger training_run_1 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=3790)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=227405)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=1273469)",
+                "test": "InterleavedDataLoader(len=172)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=172)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=172)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=3790)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=172)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=15160)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=172)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=1516034)",
+                "test": "InterleavedDataLoader(len=516)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=15160)",
+                "test": "InterleavedDataLoader(len=688)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=1531194)",
+                "test": "InterleavedDataLoader(len=1204)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1",
+        "experiment_id": "run_1",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/grmoe/5B/seed_1",
+        "chat_sft_label": null,
+        "find_unused_parameters": true
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [02:51:56] [INFO] Loader code-lisp train: 3790, test: 172
+[GPU 0] [02:51:56] [INFO] Loader code-other train: 227405, test: 172
+[GPU 0] [02:51:56] [INFO] Loader fineweb train: 1273469, test: 172
+[GPU 0] [02:51:56] [INFO] Loader papers-biology train: 3790, test: 172
+[GPU 0] [02:51:56] [INFO] Loader papers-cyber train: 3790, test: 172
+[GPU 0] [02:51:56] [INFO] Loader papers-nuclear train: 3790, test: 172
+[GPU 0] [02:51:56] [INFO] Loader papers-other train: 15160, test: 172
+[GPU 0] [02:51:56] [INFO] Loader core train: 1516034, test: 516
+[GPU 0] [02:51:56] [INFO] Loader aux train: 15160, test: 688
+[GPU 0] [02:51:56] [INFO] Loader all train: 1531194, test: 1204
+[GPU 0] [02:51:56] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": 100, "lr": 0.00032221152797331777, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/grmoe/5B/seed_1/run_1/routed", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "moe", "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)", "ctx_len": 1024, "vocab_size": 50304, "num_layers": 47, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 50256, "embed_dim": 3072, "mlp_dim": 12288, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "aux_factor": {"code-lisp": 4.0, "papers-biology": 3.0, "papers-nuclear": 3.0, "papers-cyber": 3.0}, "robust_prc": 0.2, "aux_route_prc": 0.5, "equal_compute": true}
+[GPU 0] [02:51:56] [INFO] ROUTED START
+[GPU 0] [02:52:51] [INFO] Initialized AltMoETransformer with 6,373,116,800 total parameters
+[GPU 0] [02:52:51] [INFO]   Label 'core' has 4,967,743,104 parameters
+[GPU 0] [02:52:51] [INFO]   Label 'code-lisp' has 351,343,424 parameters
+[GPU 0] [02:52:51] [INFO]   Label 'papers-biology' has 351,343,424 parameters
+[GPU 0] [02:52:51] [INFO]   Label 'papers-cyber' has 351,343,424 parameters
+[GPU 0] [02:52:51] [INFO]   Label 'papers-nuclear' has 351,343,424 parameters
+[GPU 0] [02:52:51] [INFO] Compiling AltMoETransformer with torch.compile...
+[GPU 0] [02:52:52] [INFO] torch.compile done
+[GPU 0] [02:53:22] [INFO] ---- Begin Routed Unordered (Alt) ----
+[GPU 0] [02:53:22] [INFO] compute-equal: initial len_base: 1185539 & len_ft: 345655
+[GPU 0] [02:53:22] [INFO] compute-equal: flop_diff < 0, (-121443611222720.0 < 0), must truncate training
+[GPU 0] [02:53:22] [INFO] compute-equal: len_base: -12223 -> 1173316, len_ft: -11416 -> 334239
+[GPU 0] [02:53:22] [WARNING] utilized_aux > len_all_aux, (47643 > 15160), must resample aux
+[GPU 0] [02:53:22] [INFO] Batch [('core', ('core',), ('core',))] count: 1173316
+[GPU 0] [02:53:22] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('code-lisp',))] count: 12827
+[GPU 0] [02:53:22] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 1832
+[GPU 0] [02:53:22] [INFO] Batch [('core', ('core', 'code-lisp'), ('core', 'code-lisp'))] count: 88183
+[GPU 0] [02:53:22] [INFO] Batch [('core', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 66138
+[GPU 0] [02:53:22] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('core', 'papers-biology'))] count: 1832
+[GPU 0] [02:53:22] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('papers-biology',))] count: 9163
+[GPU 0] [02:53:22] [INFO] Batch [('core', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 66138
+[GPU 0] [02:53:22] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('core', 'papers-cyber'))] count: 1832
+[GPU 0] [02:53:22] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('papers-cyber',))] count: 9163
+[GPU 0] [02:53:22] [INFO] Batch [('core', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 66138
+[GPU 0] [02:53:22] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('core', 'papers-nuclear'))] count: 1832
+[GPU 0] [02:53:22] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('papers-nuclear',))] count: 9163
+[GPU 0] [02:53:22] [INFO] 
+len_all: 1531194, len_all_aux: 15160, len_all_core: 1516034,
+len_base: 1173316, len_ft: 334239,
+len_core_for_ft: 286596, len_aux_for_ft: 47643,
+aux_factor: {'code-lisp': 4.0, 'papers-biology': 3.0, 'papers-nuclear': 3.0, 'papers-cyber': 3.0}, robust_prc: 0.2,
+aux_route_prc: 0.5, equal_compute: True
+[GPU 0] [02:53:23] [WARNING] len(batches) != expected, (1507557 != 1507555), -2 length difference
+[GPU 0] [02:53:23] [INFO] ---- Begin Routed (Alt) ----
+[GPU 0] [02:53:27] [INFO] Restored 1173900 train loss entries
+[GPU 0] [02:53:27] [INFO] Restored 0 val loss entries
+[GPU 0] [02:53:27] [INFO] LR schedule group 0: steps [0, 35059), warmup=701, constant=30852, decay=3506
+[GPU 0] [02:53:27] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [02:53:27] [INFO] Restored scheduler to step 27300, LR: 3.2221e-04
+[GPU 0] [02:53:27] [INFO] CUDA memory before training loop:
+[GPU 0] [02:53:27] [INFO] |===========================================================================|
+[GPU 0] [02:53:27] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [02:53:27] [INFO] |===========================================================================|
+[GPU 0] [02:53:27] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Allocated memory      |  50879 MiB |  50879 MiB |  64999 MiB |  14119 MiB |
+[GPU 0] [02:53:27] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [02:53:27] [INFO] |       from small pool |     13 MiB |     13 MiB |     13 MiB |      0 MiB |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Active memory         |  50879 MiB |  50879 MiB |  64999 MiB |  14119 MiB |
+[GPU 0] [02:53:27] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [02:53:27] [INFO] |       from small pool |     13 MiB |     13 MiB |     13 MiB |      0 MiB |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Requested memory      |  50879 MiB |  50879 MiB |  64998 MiB |  14119 MiB |
+[GPU 0] [02:53:27] [INFO] |       from large pool |  50866 MiB |  50866 MiB |  64986 MiB |  14119 MiB |
+[GPU 0] [02:53:27] [INFO] |       from small pool |     12 MiB |     12 MiB |     12 MiB |      0 MiB |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | GPU reserved memory   |  50894 MiB |  50894 MiB |  50894 MiB |      0 B   |
+[GPU 0] [02:53:27] [INFO] |       from large pool |  50880 MiB |  50880 MiB |  50880 MiB |      0 B   |
+[GPU 0] [02:53:27] [INFO] |       from small pool |     14 MiB |     14 MiB |     14 MiB |      0 B   |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:53:27] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:53:27] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Allocations           |    5473    |    5473    |    5582    |     109    |
+[GPU 0] [02:53:27] [INFO] |       from large pool |    2030    |    2030    |    2084    |      54    |
+[GPU 0] [02:53:27] [INFO] |       from small pool |    3443    |    3443    |    3498    |      55    |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Active allocs         |    5473    |    5473    |    5582    |     109    |
+[GPU 0] [02:53:27] [INFO] |       from large pool |    2030    |    2030    |    2084    |      54    |
+[GPU 0] [02:53:27] [INFO] |       from small pool |    3443    |    3443    |    3498    |      55    |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:53:27] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:53:27] [INFO] |===========================================================================|
+[GPU 0] [02:53:27] [INFO] 
+[GPU 0] [02:53:27] [INFO] Batch group start, LR: 3.2221e-04, batches: 1507557, epochs: 1
+[GPU 0] [02:58:33] [INFO] CUDA memory after first training step:
+[GPU 0] [02:58:33] [INFO] |===========================================================================|
+[GPU 0] [02:58:33] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [02:58:33] [INFO] |===========================================================================|
+[GPU 0] [02:58:33] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Allocated memory      |  51141 MiB |  73635 MiB |   2932 GiB |   2882 GiB |
+[GPU 0] [02:58:33] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2910 GiB |   2860 GiB |
+[GPU 0] [02:58:33] [INFO] |       from small pool |     14 MiB |     22 MiB |     22 GiB |     22 GiB |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Active memory         |  51141 MiB |  73635 MiB |   2932 GiB |   2882 GiB |
+[GPU 0] [02:58:33] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2910 GiB |   2860 GiB |
+[GPU 0] [02:58:33] [INFO] |       from small pool |     14 MiB |     22 MiB |     22 GiB |     22 GiB |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Requested memory      |  51140 MiB |  73634 MiB |   2931 GiB |   2882 GiB |
+[GPU 0] [02:58:33] [INFO] |       from large pool |  51126 MiB |  73612 MiB |   2910 GiB |   2860 GiB |
+[GPU 0] [02:58:33] [INFO] |       from small pool |     13 MiB |     21 MiB |     21 GiB |     21 GiB |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | GPU reserved memory   |  74204 MiB |  74204 MiB |  74204 MiB |      0 B   |
+[GPU 0] [02:58:33] [INFO] |       from large pool |  74180 MiB |  74180 MiB |  74180 MiB |      0 B   |
+[GPU 0] [02:58:33] [INFO] |       from small pool |     24 MiB |     24 MiB |     24 MiB |      0 B   |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:58:33] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:58:33] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Allocations           |    5482    |    7564    |    1391 K  |    1385 K  |
+[GPU 0] [02:58:33] [INFO] |       from large pool |    2033    |    3263    |     145 K  |     143 K  |
+[GPU 0] [02:58:33] [INFO] |       from small pool |    3449    |    4771    |    1245 K  |    1242 K  |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Active allocs         |    5482    |    7564    |    1391 K  |    1385 K  |
+[GPU 0] [02:58:33] [INFO] |       from large pool |    2033    |    3263    |     145 K  |     143 K  |
+[GPU 0] [02:58:33] [INFO] |       from small pool |    3449    |    4771    |    1245 K  |    1242 K  |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:58:33] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:58:33] [INFO] |===========================================================================|
+[GPU 0] [02:58:33] [INFO] 
+[GPU 0] [05:38:34] [INFO] Step: 28000, LR: 3.2221e-04
+[GPU 0] [05:38:34] [INFO] Train Loss: CORE: 2.17 CODE-LISP: 0.43 PAPERS-BIOLOGY: 1.95 PAPERS-CYBER: 2.25 PAPERS-NUCLEAR: 2.29 
+[GPU 0] [09:38:37] [INFO] Step: 29000, LR: 3.2221e-04
+[GPU 0] [09:38:37] [INFO] Train Loss: CORE: 2.14 CODE-LISP: 0.38 PAPERS-BIOLOGY: 1.92 PAPERS-CYBER: 2.25 PAPERS-NUCLEAR: 2.21 
+[GPU 0] [13:39:17] [INFO] Step: 30000, LR: 3.2221e-04
+[GPU 0] [13:39:17] [INFO] Train Loss: CORE: 2.14 CODE-LISP: 0.43 PAPERS-BIOLOGY: 1.94 PAPERS-CYBER: 2.20 PAPERS-NUCLEAR: 2.27 
+[GPU 0] [17:40:30] [INFO] Step: 31000, LR: 3.2221e-04
+[GPU 0] [17:40:30] [INFO] Train Loss: CORE: 2.18 CODE-LISP: 0.41 PAPERS-BIOLOGY: 1.89 PAPERS-CYBER: 2.21 PAPERS-NUCLEAR: 2.32 
+[GPU 0] [19:55:51] [INFO] LR Scheduler: Group decay (step 31553)
+[GPU 0] [21:41:59] [INFO] Step: 32000, LR: 2.8113e-04
+[GPU 0] [21:41:59] [INFO] Train Loss: CORE: 2.08 CODE-LISP: 0.39 PAPERS-BIOLOGY: 1.92 PAPERS-CYBER: 2.27 PAPERS-NUCLEAR: 2.23 
+[GPU 0] [01:42:48] [INFO] Step: 33000, LR: 1.8923e-04
+[GPU 0] [01:42:48] [INFO] Train Loss: CORE: 2.15 CODE-LISP: 0.38 PAPERS-BIOLOGY: 1.86 PAPERS-CYBER: 2.19 PAPERS-NUCLEAR: 2.25 
+[GPU 0] [05:45:39] [INFO] Step: 34000, LR: 9.7332e-05
+[GPU 0] [05:45:39] [INFO] Train Loss: CORE: 2.08 CODE-LISP: 0.36 PAPERS-BIOLOGY: 1.82 PAPERS-CYBER: 2.14 PAPERS-NUCLEAR: 2.18 
+[GPU 0] [09:40:01] [INFO] Step: 35000, LR: 5.4321e-06
+[GPU 0] [09:40:01] [INFO] Train Loss: CORE: 2.02 CODE-LISP: 0.37 PAPERS-BIOLOGY: 1.88 PAPERS-CYBER: 2.15 PAPERS-NUCLEAR: 2.24 
+[GPU 0] [10:00:57] [INFO] Step: 35059, LR: 1.0000e-08
+[GPU 0] [10:00:57] [INFO] Train Loss: CORE: 2.15 CODE-LISP: 0.37 PAPERS-BIOLOGY: 1.88 PAPERS-CYBER: 2.17 PAPERS-NUCLEAR: 2.25 
+[GPU 0] [10:07:36] [INFO] ---- Begin Eval ----
+[GPU 0] [10:07:36] [INFO] Data: core | Experts: ['core']
+[GPU 0] [10:08:08] [INFO] loss: 1.59424174
+[GPU 0] [10:08:08] [INFO] Data: code-lisp | Experts: ['core']
+[GPU 0] [10:08:18] [INFO] loss: 1.18000507
+[GPU 0] [10:08:18] [INFO] Data: papers-biology | Experts: ['core']
+[GPU 0] [10:08:27] [INFO] loss: 2.12095165
+[GPU 0] [10:08:27] [INFO] Data: papers-nuclear | Experts: ['core']
+[GPU 0] [10:08:37] [INFO] loss: 2.51922774
+[GPU 0] [10:08:37] [INFO] Data: papers-cyber | Experts: ['core']
+[GPU 0] [10:08:47] [INFO] loss: 2.37880540
+[GPU 0] [10:08:47] [INFO] ---- Begin Eval ----
+[GPU 0] [10:08:47] [INFO] Data: core | Experts: ['code-lisp', 'core']
+[GPU 0] [10:09:20] [INFO] loss: 1.59506917
+[GPU 0] [10:09:20] [INFO] Data: code-lisp | Experts: ['code-lisp', 'core']
+[GPU 0] [10:09:31] [INFO] loss: 0.54778332
+[GPU 0] [10:09:31] [INFO] Data: papers-biology | Experts: ['code-lisp', 'core']
+[GPU 0] [10:09:42] [INFO] loss: 2.12146974
+[GPU 0] [10:09:42] [INFO] Data: papers-nuclear | Experts: ['code-lisp', 'core']
+[GPU 0] [10:09:53] [INFO] loss: 2.51996136
+[GPU 0] [10:09:53] [INFO] Data: papers-cyber | Experts: ['code-lisp', 'core']
+[GPU 0] [10:10:04] [INFO] loss: 2.37926674
+[GPU 0] [10:10:04] [INFO] ---- Begin Eval ----
+[GPU 0] [10:10:04] [INFO] Data: core | Experts: ['core', 'papers-biology']
+[GPU 0] [10:10:37] [INFO] loss: 1.59527504
+[GPU 0] [10:10:37] [INFO] Data: code-lisp | Experts: ['core', 'papers-biology']
+[GPU 0] [10:10:48] [INFO] loss: 1.18085849
+[GPU 0] [10:10:48] [INFO] Data: papers-biology | Experts: ['core', 'papers-biology']
+[GPU 0] [10:10:58] [INFO] loss: 1.91967487
+[GPU 0] [10:10:58] [INFO] Data: papers-nuclear | Experts: ['core', 'papers-biology']
+[GPU 0] [10:11:09] [INFO] loss: 2.51361227
+[GPU 0] [10:11:09] [INFO] Data: papers-cyber | Experts: ['core', 'papers-biology']
+[GPU 0] [10:11:20] [INFO] loss: 2.37986851
+[GPU 0] [10:11:20] [INFO] ---- Begin Eval ----
+[GPU 0] [10:11:20] [INFO] Data: core | Experts: ['core', 'papers-nuclear']
+[GPU 0] [10:11:53] [INFO] loss: 1.59642529
+[GPU 0] [10:11:53] [INFO] Data: code-lisp | Experts: ['core', 'papers-nuclear']
+[GPU 0] [10:12:04] [INFO] loss: 1.18020773
+[GPU 0] [10:12:04] [INFO] Data: papers-biology | Experts: ['core', 'papers-nuclear']
+[GPU 0] [10:12:15] [INFO] loss: 2.11617112
+[GPU 0] [10:12:15] [INFO] Data: papers-nuclear | Experts: ['core', 'papers-nuclear']
+[GPU 0] [10:12:25] [INFO] loss: 2.24404907
+[GPU 0] [10:12:25] [INFO] Data: papers-cyber | Experts: ['core', 'papers-nuclear']
+[GPU 0] [10:12:36] [INFO] loss: 2.37725401
+[GPU 0] [10:12:36] [INFO] ---- Begin Eval ----
+[GPU 0] [10:12:36] [INFO] Data: core | Experts: ['core', 'papers-cyber']
+[GPU 0] [10:13:09] [INFO] loss: 1.59292781
+[GPU 0] [10:13:09] [INFO] Data: code-lisp | Experts: ['core', 'papers-cyber']
+[GPU 0] [10:13:20] [INFO] loss: 1.17931306
+[GPU 0] [10:13:20] [INFO] Data: papers-biology | Experts: ['core', 'papers-cyber']
+[GPU 0] [10:13:31] [INFO] loss: 2.12178087
+[GPU 0] [10:13:31] [INFO] Data: papers-nuclear | Experts: ['core', 'papers-cyber']
+[GPU 0] [10:13:42] [INFO] loss: 2.50876641
+[GPU 0] [10:13:42] [INFO] Data: papers-cyber | Experts: ['core', 'papers-cyber']
+[GPU 0] [10:13:53] [INFO] loss: 2.22185636
+[GPU 0] [10:14:00] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [10:14:11] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['code-lisp'] ----
+[GPU 0] [10:14:11] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:14:11] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:14:32] [INFO] New best validation loss: 1.3738 @ step 0
+[GPU 0] [10:14:53] [INFO] New best validation loss: 1.1944 @ step 2
+[GPU 0] [10:15:03] [INFO] New best validation loss: 1.1134 @ step 3
+[GPU 0] [10:15:13] [INFO] New best validation loss: 1.0786 @ step 4
+[GPU 0] [10:15:23] [INFO] New best validation loss: 1.0490 @ step 5
+[GPU 0] [10:15:33] [INFO] New best validation loss: 1.0285 @ step 6
+[GPU 0] [10:15:43] [INFO] New best validation loss: 1.0113 @ step 7
+[GPU 0] [10:15:53] [INFO] New best validation loss: 0.9950 @ step 8
+[GPU 0] [10:16:04] [INFO] New best validation loss: 0.9826 @ step 9
+[GPU 0] [10:16:14] [INFO] New best validation loss: 0.9710 @ step 10
+[GPU 0] [10:16:24] [INFO] New best validation loss: 0.9604 @ step 11
+[GPU 0] [10:16:34] [INFO] New best validation loss: 0.9509 @ step 12
+[GPU 0] [10:16:44] [INFO] New best validation loss: 0.9419 @ step 13
+[GPU 0] [10:16:54] [INFO] New best validation loss: 0.9342 @ step 14
+[GPU 0] [10:17:05] [INFO] New best validation loss: 0.9290 @ step 15
+[GPU 0] [10:17:15] [INFO] New best validation loss: 0.9255 @ step 16
+[GPU 0] [10:17:25] [INFO] New best validation loss: 0.9222 @ step 17
+[GPU 0] [10:17:35] [INFO] New best validation loss: 0.9195 @ step 18
+[GPU 0] [10:17:45] [INFO] New best validation loss: 0.9171 @ step 19
+[GPU 0] [10:17:56] [INFO] New best validation loss: 0.9163 @ step 20
+[GPU 0] [10:19:47] [INFO] Stop FT @ 32: no val improvement for 10 steps
+[GPU 0] [10:19:47] [INFO] Wrote stats.jsonl entries at FT step 20 
+[GPU 0] [10:19:58] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['papers-biology'] ----
+[GPU 0] [10:19:58] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:19:58] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:20:08] [INFO] New best validation loss: 2.3787 @ step 0
+[GPU 0] [10:20:18] [INFO] New best validation loss: 2.1829 @ step 1
+[GPU 0] [10:20:28] [INFO] New best validation loss: 2.1544 @ step 2
+[GPU 0] [10:22:20] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:22:20] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:22:29] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['papers-cyber'] ----
+[GPU 0] [10:22:29] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:22:29] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:22:39] [INFO] New best validation loss: 2.5784 @ step 0
+[GPU 0] [10:22:49] [INFO] New best validation loss: 2.4398 @ step 1
+[GPU 0] [10:22:59] [INFO] New best validation loss: 2.4377 @ step 2
+[GPU 0] [10:24:51] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:24:51] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:25:00] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['papers-nuclear'] ----
+[GPU 0] [10:25:00] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:25:01] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:25:10] [INFO] New best validation loss: 2.7926 @ step 0
+[GPU 0] [10:25:20] [INFO] New best validation loss: 2.5876 @ step 1
+[GPU 0] [10:25:31] [INFO] New best validation loss: 2.5549 @ step 2
+[GPU 0] [10:27:23] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:27:23] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:27:25] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [10:27:33] [INFO] ---- Begin FT | Experts: ['code-lisp', 'core'] | Data: ['papers-biology'] ----
+[GPU 0] [10:27:33] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:27:33] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:27:44] [INFO] New best validation loss: 2.3802 @ step 0
+[GPU 0] [10:27:55] [INFO] New best validation loss: 2.1827 @ step 1
+[GPU 0] [10:28:07] [INFO] New best validation loss: 2.1588 @ step 2
+[GPU 0] [10:30:11] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:30:11] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:30:22] [INFO] ---- Begin FT | Experts: ['code-lisp', 'core'] | Data: ['papers-cyber'] ----
+[GPU 0] [10:30:22] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:30:22] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:30:33] [INFO] New best validation loss: 2.5796 @ step 0
+[GPU 0] [10:30:45] [INFO] New best validation loss: 2.4421 @ step 1
+[GPU 0] [10:30:56] [INFO] New best validation loss: 2.4401 @ step 2
+[GPU 0] [10:33:01] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:33:01] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:33:10] [INFO] ---- Begin FT | Experts: ['code-lisp', 'core'] | Data: ['papers-nuclear'] ----
+[GPU 0] [10:33:10] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:33:10] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:33:21] [INFO] New best validation loss: 2.7874 @ step 0
+[GPU 0] [10:33:33] [INFO] New best validation loss: 2.5875 @ step 1
+[GPU 0] [10:33:44] [INFO] New best validation loss: 2.5580 @ step 2
+[GPU 0] [10:35:49] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:35:49] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:35:52] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [10:35:58] [INFO] ---- Begin FT | Experts: ['core', 'papers-biology'] | Data: ['code-lisp'] ----
+[GPU 0] [10:35:58] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:35:58] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:36:09] [INFO] New best validation loss: 1.3778 @ step 0
+[GPU 0] [10:36:31] [INFO] New best validation loss: 1.2215 @ step 2
+[GPU 0] [10:36:43] [INFO] New best validation loss: 1.1141 @ step 3
+[GPU 0] [10:36:54] [INFO] New best validation loss: 1.0871 @ step 4
+[GPU 0] [10:37:05] [INFO] New best validation loss: 1.0549 @ step 5
+[GPU 0] [10:37:17] [INFO] New best validation loss: 1.0315 @ step 6
+[GPU 0] [10:37:28] [INFO] New best validation loss: 1.0147 @ step 7
+[GPU 0] [10:37:39] [INFO] New best validation loss: 0.9981 @ step 8
+[GPU 0] [10:37:50] [INFO] New best validation loss: 0.9840 @ step 9
+[GPU 0] [10:38:02] [INFO] New best validation loss: 0.9727 @ step 10
+[GPU 0] [10:38:13] [INFO] New best validation loss: 0.9621 @ step 11
+[GPU 0] [10:38:24] [INFO] New best validation loss: 0.9514 @ step 12
+[GPU 0] [10:38:36] [INFO] New best validation loss: 0.9426 @ step 13
+[GPU 0] [10:38:48] [INFO] New best validation loss: 0.9347 @ step 14
+[GPU 0] [10:38:59] [INFO] New best validation loss: 0.9290 @ step 15
+[GPU 0] [10:39:10] [INFO] New best validation loss: 0.9256 @ step 16
+[GPU 0] [10:39:22] [INFO] New best validation loss: 0.9227 @ step 17
+[GPU 0] [10:39:33] [INFO] New best validation loss: 0.9200 @ step 18
+[GPU 0] [10:39:44] [INFO] New best validation loss: 0.9184 @ step 19
+[GPU 0] [10:39:56] [INFO] New best validation loss: 0.9173 @ step 20
+[GPU 0] [10:42:00] [INFO] Stop FT @ 32: no val improvement for 10 steps
+[GPU 0] [10:42:00] [INFO] Wrote stats.jsonl entries at FT step 20 
+[GPU 0] [10:42:09] [INFO] ---- Begin FT | Experts: ['core', 'papers-biology'] | Data: ['papers-cyber'] ----
+[GPU 0] [10:42:09] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:42:09] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:42:20] [INFO] New best validation loss: 2.5746 @ step 0
+[GPU 0] [10:42:32] [INFO] New best validation loss: 2.4363 @ step 1
+[GPU 0] [10:44:37] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [10:44:37] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [10:44:46] [INFO] ---- Begin FT | Experts: ['core', 'papers-biology'] | Data: ['papers-nuclear'] ----
+[GPU 0] [10:44:46] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:44:46] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:44:57] [INFO] New best validation loss: 2.7608 @ step 0
+[GPU 0] [10:45:08] [INFO] New best validation loss: 2.5647 @ step 1
+[GPU 0] [10:45:19] [INFO] New best validation loss: 2.5464 @ step 2
+[GPU 0] [10:47:25] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:47:25] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:47:27] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [10:47:35] [INFO] ---- Begin FT | Experts: ['core', 'papers-nuclear'] | Data: ['code-lisp'] ----
+[GPU 0] [10:47:35] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:47:35] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:47:45] [INFO] New best validation loss: 1.3938 @ step 0
+[GPU 0] [10:48:08] [INFO] New best validation loss: 1.2621 @ step 2
+[GPU 0] [10:48:19] [INFO] New best validation loss: 1.1291 @ step 3
+[GPU 0] [10:48:30] [INFO] New best validation loss: 1.0927 @ step 4
+[GPU 0] [10:48:41] [INFO] New best validation loss: 1.0652 @ step 5
+[GPU 0] [10:48:53] [INFO] New best validation loss: 1.0384 @ step 6
+[GPU 0] [10:49:04] [INFO] New best validation loss: 1.0190 @ step 7
+[GPU 0] [10:49:15] [INFO] New best validation loss: 1.0019 @ step 8
+[GPU 0] [10:49:26] [INFO] New best validation loss: 0.9883 @ step 9
+[GPU 0] [10:49:38] [INFO] New best validation loss: 0.9767 @ step 10
+[GPU 0] [10:49:49] [INFO] New best validation loss: 0.9653 @ step 11
+[GPU 0] [10:50:00] [INFO] New best validation loss: 0.9548 @ step 12
+[GPU 0] [10:50:12] [INFO] New best validation loss: 0.9453 @ step 13
+[GPU 0] [10:50:23] [INFO] New best validation loss: 0.9373 @ step 14
+[GPU 0] [10:50:35] [INFO] New best validation loss: 0.9310 @ step 15
+[GPU 0] [10:50:46] [INFO] New best validation loss: 0.9269 @ step 16
+[GPU 0] [10:50:57] [INFO] New best validation loss: 0.9241 @ step 17
+[GPU 0] [10:51:09] [INFO] New best validation loss: 0.9217 @ step 18
+[GPU 0] [10:51:20] [INFO] New best validation loss: 0.9200 @ step 19
+[GPU 0] [10:51:31] [INFO] New best validation loss: 0.9186 @ step 20
+[GPU 0] [10:53:36] [INFO] Stop FT @ 32: no val improvement for 10 steps
+[GPU 0] [10:53:36] [INFO] Wrote stats.jsonl entries at FT step 20 
+[GPU 0] [10:53:45] [INFO] ---- Begin FT | Experts: ['core', 'papers-nuclear'] | Data: ['papers-biology'] ----
+[GPU 0] [10:53:45] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:53:45] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:53:55] [INFO] New best validation loss: 2.4598 @ step 0
+[GPU 0] [10:54:07] [INFO] New best validation loss: 2.1611 @ step 1
+[GPU 0] [10:54:19] [INFO] New best validation loss: 2.1606 @ step 2
+[GPU 0] [10:56:23] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:56:23] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:56:33] [INFO] ---- Begin FT | Experts: ['core', 'papers-nuclear'] | Data: ['papers-cyber'] ----
+[GPU 0] [10:56:33] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:56:33] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:56:43] [INFO] New best validation loss: 2.5716 @ step 0
+[GPU 0] [10:56:55] [INFO] New best validation loss: 2.4352 @ step 1
+[GPU 0] [10:57:06] [INFO] New best validation loss: 2.4339 @ step 2
+[GPU 0] [10:59:10] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [10:59:10] [INFO] Wrote stats.jsonl entries at FT step 2 
+[GPU 0] [10:59:13] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [10:59:20] [INFO] ---- Begin FT | Experts: ['core', 'papers-cyber'] | Data: ['code-lisp'] ----
+[GPU 0] [10:59:20] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [10:59:20] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [10:59:31] [INFO] New best validation loss: 1.3910 @ step 0
+[GPU 0] [10:59:54] [INFO] New best validation loss: 1.2842 @ step 2
+[GPU 0] [11:00:05] [INFO] New best validation loss: 1.1456 @ step 3
+[GPU 0] [11:00:16] [INFO] New best validation loss: 1.0939 @ step 4
+[GPU 0] [11:00:28] [INFO] New best validation loss: 1.0677 @ step 5
+[GPU 0] [11:00:39] [INFO] New best validation loss: 1.0435 @ step 6
+[GPU 0] [11:00:50] [INFO] New best validation loss: 1.0219 @ step 7
+[GPU 0] [11:01:02] [INFO] New best validation loss: 1.0042 @ step 8
+[GPU 0] [11:01:13] [INFO] New best validation loss: 0.9913 @ step 9
+[GPU 0] [11:01:24] [INFO] New best validation loss: 0.9793 @ step 10
+[GPU 0] [11:01:35] [INFO] New best validation loss: 0.9675 @ step 11
+[GPU 0] [11:01:47] [INFO] New best validation loss: 0.9572 @ step 12
+[GPU 0] [11:01:58] [INFO] New best validation loss: 0.9478 @ step 13
+[GPU 0] [11:02:09] [INFO] New best validation loss: 0.9397 @ step 14
+[GPU 0] [11:02:21] [INFO] New best validation loss: 0.9333 @ step 15
+[GPU 0] [11:02:33] [INFO] New best validation loss: 0.9284 @ step 16
+[GPU 0] [11:02:44] [INFO] New best validation loss: 0.9254 @ step 17
+[GPU 0] [11:02:55] [INFO] New best validation loss: 0.9230 @ step 18
+[GPU 0] [11:03:07] [INFO] New best validation loss: 0.9208 @ step 19
+[GPU 0] [11:03:18] [INFO] New best validation loss: 0.9192 @ step 20
+[GPU 0] [11:03:29] [INFO] New best validation loss: 0.9189 @ step 21
+[GPU 0] [11:05:34] [INFO] Stop FT @ 33: no val improvement for 10 steps
+[GPU 0] [11:05:34] [INFO] Wrote stats.jsonl entries at FT step 21 
+[GPU 0] [11:05:42] [INFO] ---- Begin FT | Experts: ['core', 'papers-cyber'] | Data: ['papers-biology'] ----
+[GPU 0] [11:05:42] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [11:05:42] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [11:05:53] [INFO] New best validation loss: 2.3816 @ step 0
+[GPU 0] [11:06:04] [INFO] New best validation loss: 2.1598 @ step 1
+[GPU 0] [11:08:10] [INFO] Stop FT @ 13: no val improvement for 10 steps
+[GPU 0] [11:08:10] [INFO] Wrote stats.jsonl entries at FT step 1 
+[GPU 0] [11:08:18] [INFO] ---- Begin FT | Experts: ['core', 'papers-cyber'] | Data: ['papers-nuclear'] ----
+[GPU 0] [11:08:18] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [11:08:18] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [11:08:28] [INFO] New best validation loss: 2.7494 @ step 0
+[GPU 0] [11:08:40] [INFO] New best validation loss: 2.5621 @ step 1
+[GPU 0] [11:08:51] [INFO] New best validation loss: 2.5481 @ step 2
+[GPU 0] [11:10:56] [INFO] Stop FT @ 14: no val improvement for 10 steps
+[GPU 0] [11:10:56] [INFO] Wrote stats.jsonl entries at FT step 2 

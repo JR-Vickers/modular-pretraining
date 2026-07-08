@@ -1,0 +1,27 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core"
+  ],
+  "stage": {
+    "name": "maxent",
+    "num_checkpoints": -1,
+    "lr": 9.508736264131664e-05,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/maxent/800M/seed_3/20260504213914888636/maxent_01",
+    "acc_mode": "uniform",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core"
+      ]
+    ],
+    "steps": 2000,
+    "alpha_retain": 414.2694428844888,
+    "early_stop_thresh": 2.0
+  }
+}

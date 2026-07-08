@@ -1,0 +1,38 @@
+{
+  "completed": false,
+  "completed_iterations": [],
+  "stage": {
+    "name": "routed",
+    "num_checkpoints": -1,
+    "lr": 0.0005663534909876918,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/arXiv-Codebase/results/partial/800M/seed_1/20260707153033423599/routed_01",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "model": {
+      "arch": "lora",
+      "tokenizer": null,
+      "ctx_len": 1024,
+      "vocab_size": 50304,
+      "num_layers": 24,
+      "num_heads": 8,
+      "num_key_value": 2,
+      "attn_bias": true,
+      "eos_token_id": 50256,
+      "embed_dim": 1600,
+      "mlp_dim": 6400,
+      "core_param_prc": 1.0,
+      "aux_param_prc": 0.1
+    },
+    "eval_arbsub": false,
+    "label_prc": 1.0,
+    "aux_factor": 1.0,
+    "core_aux_ratio": 1.0,
+    "equal_compute": true
+  }
+}

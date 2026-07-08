@@ -1,0 +1,390 @@
+% scaling.tex — pgfplots port of scaling.png (figure*, full text width).
+% Shared legend across the four panes via `legend to name` + midpoint node.
+% Shared x-label placed via a separate node below the x-tick labels.
+\begin{tikzpicture}
+
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{darkseagreen121184155}{RGB}{74,171,137}
+  \definecolor{goldenrod18216845}{RGB}{230,194,0}
+  \definecolor{indianred18771113}{RGB}{187,71,113}
+  \definecolor{gray}{RGB}{128,128,128}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+  
+  \pgfplotsset{
+    every axis/.append style={
+      label style={font=\footnotesize},
+      tick label style={font=\scriptsize},
+      title style={font=\footnotesize},
+      legend cell align=left,
+      tick align=outside, tick pos=left,
+      x grid style={darkgray176, opacity=0.3},
+      y grid style={darkgray176, opacity=0.3},
+      xmajorgrids, ymajorgrids,
+      xmode=log, log basis x=10,
+      xmin=38046496.2703407, xmax=6307515895.67727,
+      xtick={50000000,100000000,200000000,400000000,800000000,2000000000,5000000000},
+      xticklabels={50,100,200,400,800,2000,5000},
+      ymin=0.3, ymax=1.3,
+      yticklabel style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1},
+    }
+  }
+  
+  \begin{groupplot}[
+    group style={group size=4 by 1, horizontal sep=0.4cm},
+    width=0.20\linewidth, height=0.15\linewidth,
+    scale only axis=true,
+  ]
+  % =============================== Pane 1: Core ===============================
+  \nextgroupplot[
+    title={Core $\uparrow$},
+    ylabel={Compute Ratio},
+    legend columns=-1,
+    legend to name=scalinglegend,
+    legend style={
+      font=\scriptsize, draw=lightgray204,
+      /tikz/every even column/.append style={column sep=8pt},
+    },
+  ]
+  \addlegendimage{goldenrod18216845, semithick, mark=*, mark size=2.5}
+  \addlegendentry{Filtering}
+  \addlegendimage{darkseagreen121184155, semithick, mark=square*, mark size=2}
+  \addlegendentry{GRAM}
+  \addlegendimage{indianred18771113, semithick, mark=triangle*, mark size=2.5}
+  \addlegendentry{FT-LoRA}
+  
+  % CI bands
+  \path [fill=goldenrod18216845, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.981412123723412)
+  --(axis cs:47995776,0.87178437522856)
+  --(axis cs:103201984,0.860342099320984)
+  --(axis cs:199891008,0.875134754021504)
+  --(axis cs:402064768,0.904379350762674)
+  --(axis cs:806509504,0.941436763502978)
+  --(axis cs:806509504,1.04046123605639)
+  --(axis cs:402064768,0.969020619726716)
+  --(axis cs:199891008,0.949880732342714)
+  --(axis cs:103201984,0.974257698855873)
+  --cycle;
+  \path [fill=darkseagreen121184155, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.99814045799029)
+  --(axis cs:47995776,0.843172897537265)
+  --(axis cs:103201984,0.827450212781226)
+  --(axis cs:199891008,0.848984047625857)
+  --(axis cs:402064768,0.87965443930981)
+  --(axis cs:806509504,0.918002228875309)
+  --(axis cs:806509504,1.00289290352684)
+  --(axis cs:402064768,0.946945734907291)
+  --(axis cs:199891008,0.950386941313451)
+  --(axis cs:103201984,0.967127345141064)
+  --cycle;
+  \path [fill=indianred18771113, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.948750935045656)
+  --(axis cs:47995776,0.865357147168576)
+  --(axis cs:103201984,0.835066744305632)
+  --(axis cs:199891008,0.835790087056472)
+  --(axis cs:402064768,0.864798814681567)
+  --(axis cs:806509504,0.901851915637543)
+  --(axis cs:806509504,0.99453035288413)
+  --(axis cs:402064768,0.944283213276668)
+  --(axis cs:199891008,0.923895311939938)
+  --(axis cs:103201984,0.935311288292745)
+  --cycle;
+  
+  % mean lines
+  \addplot [semithick, goldenrod18216845, mark=*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 0.926598249475986
+  103201984 0.917299899088429
+  199891008 0.912507743182109
+  402064768 0.936699985244695
+  806509504 0.990948999779683
+  2016181632 0.969049192764673
+  4967743104 0.977258510152803
+  };
+  \addplot [semithick, darkseagreen121184155, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  47995776 0.920656677763778
+  103201984 0.897288778961145
+  199891008 0.899685494469654
+  402064768 0.91330008710855
+  806509504 0.960447566201074
+  2016181632 0.942996549655488
+  4967743104 0.95680939380137
+  };
+  \addplot [semithick, indianred18771113, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 0.907054041107116
+  103201984 0.885189016299189
+  199891008 0.879842699498205
+  402064768 0.904541013979118
+  806509504 0.948191134260836
+  2016181632 0.934098731019248
+  4967743104 0.942160818381171
+  };
+  % Darker solid reference line at 1.0.
+  \addplot [line width=0.28pt, gray, opacity=0.6, forget plot]
+  table {%
+  38046496.2703407 1
+  6307515895.67727 1
+  };
+
+  % =========================== Pane 2: Retain – Bio ===========================
+  \nextgroupplot[
+    title={Retain (Virology) $\uparrow$},
+    yticklabels={},
+  ]
+  \path [fill=goldenrod18216845, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.971260438380557)
+  --(axis cs:47995776,0.833415024360346)
+  --(axis cs:103201984,0.897873589091109)
+  --(axis cs:199891008,0.907044990747311)
+  --(axis cs:402064768,0.84467551672087)
+  --(axis cs:806509504,0.83687335921651)
+  --(axis cs:806509504,0.977144872740372)
+  --(axis cs:402064768,0.925938356094312)
+  --(axis cs:199891008,0.954320848550179)
+  --(axis cs:103201984,0.931326914065238)
+  --cycle;
+  \path [fill=darkseagreen121184155, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.944708537757295)
+  --(axis cs:47995776,0.933429709945945)
+  --(axis cs:103201984,0.915327261823946)
+  --(axis cs:199891008,0.932091571773107)
+  --(axis cs:402064768,0.963498984784575)
+  --(axis cs:806509504,0.958896962231157)
+  --(axis cs:806509504,1.01175145039158)
+  --(axis cs:402064768,1.00509531863329)
+  --(axis cs:199891008,0.979197554481067)
+  --(axis cs:103201984,0.99100994615779)
+  --cycle;
+  \path [fill=indianred18771113, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.952673731869613)
+  --(axis cs:47995776,0.848214807644708)
+  --(axis cs:103201984,0.877133867370403)
+  --(axis cs:199891008,0.923992039954158)
+  --(axis cs:402064768,0.943711058075028)
+  --(axis cs:806509504,0.937449884803602)
+  --(axis cs:806509504,0.965335726118634)
+  --(axis cs:402064768,0.954951806330775)
+  --(axis cs:199891008,0.941066701823221)
+  --(axis cs:103201984,0.941647287188011)
+  --cycle;
+  
+  \addplot [semithick, goldenrod18216845, mark=*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 0.902337731370451
+  103201984 0.914600251578173
+  199891008 0.930682919648745
+  402064768 0.885306936407591
+  806509504 0.907009115978441
+  2016181632 0.962110059750714
+  4967743104 1.00626084579704
+  };
+  \addplot [semithick, darkseagreen121184155, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  47995776 0.93906912385162
+  103201984 0.953168603990868
+  199891008 0.955644563127087
+  402064768 0.984297151708933
+  806509504 0.985324206311368
+  2016181632 1.01844734703287
+  4967743104 1.50609865857308
+  };
+  \addplot [semithick, indianred18771113, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 0.900444269757161
+  103201984 0.909390577279207
+  199891008 0.93252937088869
+  402064768 0.949331432202902
+  806509504 0.951392805461118
+  2016181632 0.971472967356904
+  4967743104 1.0480085218525
+  };
+  % GRAM retain projection: dashed flat segment from 2B, tiny square at 5B.
+  \addplot [darkseagreen121184155, line width=1pt, dash pattern=on 2pt off 1.5pt, forget plot]
+  table {%
+  2016181632 1.01844734703287
+  5000000000 1.01844734703287
+  };
+  \addplot [darkseagreen121184155, only marks, mark=square*, mark size=0.9, forget plot]
+  table {%
+  5000000000 1.01844734703287
+  };
+  % Darker solid reference line at 1.0.
+  \addplot [line width=0.28pt, gray, opacity=0.6, forget plot]
+  table {%
+  38046496.2703407 1
+  6307515895.67727 1
+  };
+
+  % ========================= Pane 3: Forget – Not Bio =========================
+  \nextgroupplot[
+    title={Forget (Non-Virology) $\downarrow$},
+    yticklabels={},
+  ]
+  \path [fill=goldenrod18216845, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.703908932291062)
+  --(axis cs:47995776,0.627005407912739)
+  --(axis cs:103201984,0.566064965291175)
+  --(axis cs:199891008,0.523117918585543)
+  --(axis cs:402064768,0.492141014339994)
+  --(axis cs:806509504,0.479437555262313)
+  --(axis cs:806509504,0.50179046051232)
+  --(axis cs:402064768,0.507977514117498)
+  --(axis cs:199891008,0.557289129409699)
+  --(axis cs:103201984,0.596255318653991)
+  --cycle;
+  \path [fill=darkseagreen121184155, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.737739777664572)
+  --(axis cs:47995776,0.670043180469649)
+  --(axis cs:103201984,0.580146005982328)
+  --(axis cs:199891008,0.513405400569929)
+  --(axis cs:402064768,0.503808775640131)
+  --(axis cs:806509504,0.481047404203734)
+  --(axis cs:806509504,0.506162445283443)
+  --(axis cs:402064768,0.529920958591197)
+  --(axis cs:199891008,0.621230746255514)
+  --(axis cs:103201984,0.618637133039775)
+  --cycle;
+  \path [fill=indianred18771113, opacity=0.2, line width=0pt]
+  (axis cs:47995776,0.673943219824943)
+  --(axis cs:47995776,0.629718537051001)
+  --(axis cs:103201984,0.54485463015766)
+  --(axis cs:199891008,0.505224406274535)
+  --(axis cs:402064768,0.478123267581845)
+  --(axis cs:806509504,0.465031086908283)
+  --(axis cs:806509504,0.486247874089631)
+  --(axis cs:402064768,0.500189709350913)
+  --(axis cs:199891008,0.545634096147954)
+  --(axis cs:103201984,0.584639173128043)
+  --cycle;
+  
+  \addplot [semithick, goldenrod18216845, mark=*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 0.6654571701019
+  103201984 0.581160141972583
+  199891008 0.540203523997621
+  402064768 0.500059264228746
+  806509504 0.490614007887317
+  2016181632 0.426657178755765
+  4967743104 0.419418008528598
+  };
+  \addplot [semithick, darkseagreen121184155, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  47995776 0.70389147906711
+  103201984 0.599391569511052
+  199891008 0.567318073412722
+  402064768 0.516864867115664
+  806509504 0.493604924743588
+  2016181632 0.434460571803652
+  4967743104 0.419625984637803
+  };
+  \addplot [semithick, indianred18771113, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 0.651830878437972
+  103201984 0.564746901642852
+  199891008 0.525429251211245
+  402064768 0.489156488466379
+  806509504 0.475639480498957
+  2016181632 0.415021243518578
+  4967743104 0.409757100290783
+  };
+  % Darker solid reference line at 1.0.
+  \addplot [line width=0.28pt, gray, opacity=0.6, forget plot]
+  table {%
+  38046496.2703407 1
+  6307515895.67727 1
+  };
+
+  % ============================ Pane 4: Elicited ===============================
+  \nextgroupplot[
+    title={Elicited Forget $\downarrow$},
+    yticklabels={},
+  ]
+  \path [fill=goldenrod18216845, opacity=0.2, line width=0pt]
+  (axis cs:47995776,1.11496831314551)
+  --(axis cs:47995776,0.987912898881284)
+  --(axis cs:103201984,0.935836807316483)
+  --(axis cs:199891008,0.782738943034773)
+  --(axis cs:402064768,0.649479865045451)
+  --(axis cs:806509504,0.564258689819651)
+  --(axis cs:806509504,0.592800675269918)
+  --(axis cs:402064768,0.671837063929754)
+  --(axis cs:199891008,0.791166567016399)
+  --(axis cs:103201984,0.954585197700049)
+  --cycle;
+  \path [fill=darkseagreen121184155, opacity=0.2, line width=0pt]
+  (axis cs:47995776,1.09579933295455)
+  --(axis cs:47995776,1.08188881162872)
+  --(axis cs:103201984,0.946982811184803)
+  --(axis cs:199891008,0.797482123624017)
+  --(axis cs:402064768,0.70060890694717)
+  --(axis cs:806509504,0.593308156124034)
+  --(axis cs:806509504,0.633384924038591)
+  --(axis cs:402064768,0.736580547910348)
+  --(axis cs:199891008,0.887718769276253)
+  --(axis cs:103201984,1.02789618747417)
+  --cycle;
+  \path [fill=indianred18771113, opacity=0.2, line width=0pt]
+  (axis cs:47995776,1.05968106631124)
+  --(axis cs:47995776,0.987370189111998)
+  --(axis cs:103201984,0.905366080815412)
+  --(axis cs:199891008,0.765010213975856)
+  --(axis cs:402064768,0.65093389390481)
+  --(axis cs:806509504,0.553763036260489)
+  --(axis cs:806509504,0.577160839151075)
+  --(axis cs:402064768,0.665153601232247)
+  --(axis cs:199891008,0.795893659573019)
+  --(axis cs:103201984,0.96663066199944)
+  --cycle;
+  
+  \addplot [semithick, goldenrod18216845, mark=*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 1.0514406060134
+  103201984 0.945211002508266
+  199891008 0.786952755025586
+  402064768 0.660658464487602
+  806509504 0.578529682544784
+  2016181632 0.474009841267518
+  4967743104 0.449099235221399
+  };
+  \addplot [semithick, darkseagreen121184155, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  47995776 1.08884407229163
+  103201984 0.987439499329485
+  199891008 0.842600446450135
+  402064768 0.718594727428759
+  806509504 0.613346540081313
+  2016181632 0.501558843233898
+  4967743104 0.448044776984462
+  };
+  \addplot [semithick, indianred18771113, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  47995776 1.02352562771162
+  103201984 0.935998371407426
+  199891008 0.780451936774438
+  402064768 0.658043747568528
+  806509504 0.565461937705782
+  2016181632 0.459006808231562
+  4967743104 0.437243846836103
+  };
+  % Darker solid reference line at 1.0.
+  \addplot [line width=0.28pt, gray, opacity=0.6, forget plot]
+  table {%
+  38046496.2703407 1
+  6307515895.67727 1
+  };
+  \end{groupplot}
+  
+  % Shared legend, centered above the four panes (midpoint of pane 1 / pane 4).
+  \path (group c1r1.north) -- (group c4r1.north)
+    node[midway, anchor=south, yshift=25pt, font=\scriptsize]
+    {\pgfplotslegendfromname{scalinglegend}};
+  
+  % Shared x-label "Model Parameters (M)", placed below the x-tick labels.
+  \path (group c1r1.south) -- (group c4r1.south)
+    node[midway, anchor=north, yshift=-22pt, font=\footnotesize]
+    {Model Parameters (M)};
+  
+  \end{tikzpicture}
+  

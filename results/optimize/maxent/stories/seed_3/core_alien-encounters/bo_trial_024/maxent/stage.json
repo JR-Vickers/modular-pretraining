@@ -1,0 +1,28 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core_alien-encounters"
+  ],
+  "stage": {
+    "name": "maxent",
+    "num_checkpoints": -1,
+    "lr": 0.0011306756550271229,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent_stories/seed_3/core_alien-encounters/bo_trial_024/maxent",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": false,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core",
+        "alien-encounters"
+      ]
+    ],
+    "alpha_retain": 50.919667862569796,
+    "steps": 2000,
+    "early_stop_thresh": 2.0
+  }
+}

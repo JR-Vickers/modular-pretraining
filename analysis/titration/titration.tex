@@ -1,0 +1,445 @@
+% titration.tex -- pgfplots port of analysis/titration/titration.png (figure*, full width).
+% 4 columns (auxiliary capabilities) x 2 rows (top: target-aux CR, bottom: core CR).
+% Shared GRAM/FT-LoRA legend above the grid via `legend to name` + a midpoint node.
+\begin{tikzpicture}
+
+  \definecolor{gramgreen}{RGB}{74,171,137}
+  \definecolor{loraindian}{RGB}{187,71,113}
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{gray}{RGB}{128,128,128}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+
+  \pgfplotsset{
+    every axis/.append style={
+      label style={font=\footnotesize},
+      tick label style={font=\scriptsize},
+      title style={font=\footnotesize},
+      legend cell align=left,
+      tick align=outside, tick pos=left,
+      x grid style={darkgray176, opacity=0.3},
+      y grid style={darkgray176, opacity=0.3},
+      xmajorgrids, ymajorgrids,
+      xmin=-0.05, xmax=1.05,
+      xtick={0,0.25,0.5,0.75,1},
+      ymin=0, ymax=1.2,
+      ytick={0,0.2,0.4,0.6,0.8,1.0},
+      yticklabel style={/pgf/number format/.cd, fixed, fixed zerofill, precision=1},
+    }
+  }
+
+  \begin{groupplot}[
+    group style={group size=4 by 2, horizontal sep=0.35cm, vertical sep=0.45cm,
+      xticklabels at=edge bottom, yticklabels at=edge left},
+    width=0.19\linewidth, height=0.16\linewidth,
+    scale only axis=true,
+  ]
+  % ===== r1c1: Virology (target aux) =====
+  \nextgroupplot[
+    title={Virology},
+    ylabel={$\computeratio_{\text{Retain}}$},
+    legend columns=-1,
+    legend to name=titrationlegend,
+    legend style={font=\scriptsize, draw=lightgray204,
+      /tikz/every even column/.append style={column sep=8pt}},
+  ]
+  \addlegendimage{gramgreen, semithick, mark=square*, mark size=2}
+  \addlegendentry{GRAM}
+  \addlegendimage{loraindian, semithick, mark=triangle*, mark size=2.5}
+  \addlegendentry{FT-LoRA}
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,0.714064)
+  --(axis cs:0,0.678911)
+  --(axis cs:0.25,0.770231)
+  --(axis cs:0.5,0.855373)
+  --(axis cs:0.75,0.919490)
+  --(axis cs:1,0.958243)
+  --(axis cs:1,1.011769)
+  --(axis cs:0.75,0.968685)
+  --(axis cs:0.5,0.899749)
+  --(axis cs:0.25,0.813270)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,0.653001)
+  --(axis cs:0,0.646613)
+  --(axis cs:0.25,0.743761)
+  --(axis cs:0.5,0.830062)
+  --(axis cs:0.75,0.896878)
+  --(axis cs:1,0.937757)
+  --(axis cs:1,0.963547)
+  --(axis cs:0.75,0.923377)
+  --(axis cs:0.5,0.853923)
+  --(axis cs:0.25,0.759060)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.696488
+  0.25 0.791750
+  0.5 0.877561
+  0.75 0.944087
+  1 0.985006
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.649807
+  0.25 0.751410
+  0.5 0.841992
+  0.75 0.910128
+  1 0.950652
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r1c2: Cybersecurity (target aux) =====
+  \nextgroupplot[
+    title={Cybersecurity},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,0.788733)
+  --(axis cs:0,0.738247)
+  --(axis cs:0.25,0.822990)
+  --(axis cs:0.5,0.896993)
+  --(axis cs:0.75,0.953784)
+  --(axis cs:1,0.987383)
+  --(axis cs:1,1.024211)
+  --(axis cs:0.75,0.989821)
+  --(axis cs:0.5,0.937115)
+  --(axis cs:0.25,0.869160)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,0.763844)
+  --(axis cs:0,0.735768)
+  --(axis cs:0.25,0.815130)
+  --(axis cs:0.5,0.886277)
+  --(axis cs:0.75,0.942568)
+  --(axis cs:1,0.981607)
+  --(axis cs:1,1.009445)
+  --(axis cs:0.75,0.970722)
+  --(axis cs:0.5,0.915028)
+  --(axis cs:0.25,0.843668)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.763490
+  0.25 0.846075
+  0.5 0.917054
+  0.75 0.971803
+  1 1.005797
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.749806
+  0.25 0.829399
+  0.5 0.900652
+  0.75 0.956645
+  1 0.995526
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r1c3: Nuclear (target aux) =====
+  \nextgroupplot[
+    title={Nuclear},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,0.645439)
+  --(axis cs:0,0.620035)
+  --(axis cs:0.25,0.739337)
+  --(axis cs:0.5,0.848046)
+  --(axis cs:0.75,0.932370)
+  --(axis cs:1,0.983948)
+  --(axis cs:1,1.033302)
+  --(axis cs:0.75,0.969320)
+  --(axis cs:0.5,0.873192)
+  --(axis cs:0.25,0.759457)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,0.600340)
+  --(axis cs:0,0.585496)
+  --(axis cs:0.25,0.711171)
+  --(axis cs:0.5,0.821920)
+  --(axis cs:0.75,0.908230)
+  --(axis cs:1,0.965444)
+  --(axis cs:1,1.038230)
+  --(axis cs:0.75,0.978740)
+  --(axis cs:0.5,0.868796)
+  --(axis cs:0.25,0.732084)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.632737
+  0.25 0.749397
+  0.5 0.860619
+  0.75 0.950845
+  1 1.008625
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.592918
+  0.25 0.721628
+  0.5 0.845358
+  0.75 0.943485
+  1 1.001837
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r1c4: Lisp Code (target aux) =====
+  \nextgroupplot[
+    title={Lisp Code},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,0.100515)
+  --(axis cs:0,0.036792)
+  --(axis cs:0.25,0.140050)
+  --(axis cs:0.5,0.394653)
+  --(axis cs:0.75,0.705721)
+  --(axis cs:1,0.785466)
+  --(axis cs:1,0.931269)
+  --(axis cs:0.75,0.763018)
+  --(axis cs:0.5,0.440628)
+  --(axis cs:0.25,0.181995)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,0.115182)
+  --(axis cs:0,0.091208)
+  --(axis cs:0.25,0.190450)
+  --(axis cs:0.5,0.431214)
+  --(axis cs:0.75,0.760278)
+  --(axis cs:1,0.884186)
+  --(axis cs:1,1.047661)
+  --(axis cs:0.75,0.902361)
+  --(axis cs:0.5,0.520228)
+  --(axis cs:0.25,0.230294)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.068654
+  0.25 0.161023
+  0.5 0.417641
+  0.75 0.734370
+  1 0.858368
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.103195
+  0.25 0.210372
+  0.5 0.475721
+  0.75 0.831320
+  1 0.965924
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r2c1: Virology (core) =====
+  \nextgroupplot[
+    ylabel={$\computeratio_{\text{Core}}$},
+    xlabel={Titration $t$},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,1.011434)
+  --(axis cs:0,0.922286)
+  --(axis cs:0.25,0.923724)
+  --(axis cs:0.5,0.922892)
+  --(axis cs:0.75,0.920160)
+  --(axis cs:1,0.915112)
+  --(axis cs:1,1.003387)
+  --(axis cs:0.75,1.008583)
+  --(axis cs:0.5,1.011912)
+  --(axis cs:0.25,1.012692)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,1.033668)
+  --(axis cs:0,0.931263)
+  --(axis cs:0.25,0.931899)
+  --(axis cs:0.5,0.927153)
+  --(axis cs:0.75,0.916030)
+  --(axis cs:1,0.899425)
+  --(axis cs:1,0.994769)
+  --(axis cs:0.75,1.015882)
+  --(axis cs:0.5,1.028571)
+  --(axis cs:0.25,1.034563)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.966860
+  0.25 0.968208
+  0.5 0.967402
+  0.75 0.964371
+  1 0.959249
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.982465
+  0.25 0.983231
+  0.5 0.977862
+  0.75 0.965956
+  1 0.947097
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r2c2: Cybersecurity (core) =====
+  \nextgroupplot[
+    xlabel={Titration $t$},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,1.011434)
+  --(axis cs:0,0.922286)
+  --(axis cs:0.25,0.928428)
+  --(axis cs:0.5,0.929732)
+  --(axis cs:0.75,0.927387)
+  --(axis cs:1,0.919360)
+  --(axis cs:1,1.007258)
+  --(axis cs:0.75,1.013551)
+  --(axis cs:0.5,1.016909)
+  --(axis cs:0.25,1.016111)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,1.033668)
+  --(axis cs:0,0.931263)
+  --(axis cs:0.25,0.938166)
+  --(axis cs:0.5,0.937876)
+  --(axis cs:0.75,0.931098)
+  --(axis cs:1,0.917777)
+  --(axis cs:1,1.017097)
+  --(axis cs:0.75,1.033946)
+  --(axis cs:0.5,1.041710)
+  --(axis cs:0.25,1.041084)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.966860
+  0.25 0.972270
+  0.5 0.973320
+  0.75 0.970469
+  1 0.963309
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.982465
+  0.25 0.989625
+  0.5 0.989793
+  0.75 0.982522
+  1 0.967437
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r2c3: Nuclear (core) =====
+  \nextgroupplot[
+    xlabel={Titration $t$},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,1.011434)
+  --(axis cs:0,0.922286)
+  --(axis cs:0.25,0.923152)
+  --(axis cs:0.5,0.921088)
+  --(axis cs:0.75,0.915003)
+  --(axis cs:1,0.906034)
+  --(axis cs:1,0.986006)
+  --(axis cs:0.75,1.002520)
+  --(axis cs:0.5,1.011198)
+  --(axis cs:0.25,1.014859)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,1.033668)
+  --(axis cs:0,0.931263)
+  --(axis cs:0.25,0.932799)
+  --(axis cs:0.5,0.921300)
+  --(axis cs:0.75,0.894926)
+  --(axis cs:1,0.853978)
+  --(axis cs:1,0.985282)
+  --(axis cs:0.75,1.012044)
+  --(axis cs:0.5,1.029058)
+  --(axis cs:0.25,1.036148)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.966860
+  0.25 0.969005
+  0.5 0.966143
+  0.75 0.958762
+  1 0.946020
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.982465
+  0.25 0.984474
+  0.5 0.975179
+  0.75 0.953485
+  1 0.919630
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  % ===== r2c4: Lisp Code (core) =====
+  \nextgroupplot[
+    xlabel={Titration $t$},
+  ]
+  \path [fill=gramgreen, opacity=0.18, line width=0pt]
+  (axis cs:0,1.011434)
+  --(axis cs:0,0.922286)
+  --(axis cs:0.25,0.921932)
+  --(axis cs:0.5,0.919695)
+  --(axis cs:0.75,0.915406)
+  --(axis cs:1,0.907616)
+  --(axis cs:1,0.999528)
+  --(axis cs:0.75,1.005403)
+  --(axis cs:0.5,1.009558)
+  --(axis cs:0.25,1.011448)
+  --cycle;
+  \path [fill=loraindian, opacity=0.18, line width=0pt]
+  (axis cs:0,1.033668)
+  --(axis cs:0,0.931263)
+  --(axis cs:0.25,0.928466)
+  --(axis cs:0.5,0.916462)
+  --(axis cs:0.75,0.893435)
+  --(axis cs:1,0.858611)
+  --(axis cs:1,0.969465)
+  --(axis cs:0.75,0.999567)
+  --(axis cs:0.5,1.019719)
+  --(axis cs:0.25,1.030780)
+  --cycle;
+  \addplot [semithick, gramgreen, mark=square*, mark size=2, mark options={solid}]
+  table {%
+  0 0.966860
+  0.25 0.966690
+  0.5 0.964627
+  0.75 0.960405
+  1 0.953572
+  };
+  \addplot [semithick, loraindian, mark=triangle*, mark size=2.5, mark options={solid}]
+  table {%
+  0 0.982465
+  0.25 0.979623
+  0.5 0.968090
+  0.75 0.946501
+  1 0.914038
+  };
+  \addplot [line width=0.28pt, gray, opacity=0.6]
+  table {%
+  -0.05 1
+  1.05 1
+  };
+  \end{groupplot}
+
+  % Shared legend, centered above the top row.
+  \path (group c1r1.north) -- (group c4r1.north)
+    node[midway, anchor=south, yshift=20pt, font=\scriptsize]
+    {\pgfplotslegendfromname{titrationlegend}};
+
+  \end{tikzpicture}

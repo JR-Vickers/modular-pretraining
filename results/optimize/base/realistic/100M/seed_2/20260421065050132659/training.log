@@ -1,0 +1,222 @@
+[GPU 0] [06:50:57] [INFO] Number of GPUs: 8
+[GPU 0] [06:50:58] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [06:50:58] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [06:50:59] [INFO] target effective batch size: 256, actual effective batch size: 264, micro batch size: 33, accumulation steps: 1, num gpus: 8
+[GPU 0] [06:50:59] [INFO] core total number of tokens: 124693822984
+[GPU 0] [06:50:59] [INFO] Baseline model has 103,201,984 parameters
+[GPU 0] [06:50:59] [INFO] core: chinchilla optimal tokens: 2,064,039,680, requested proportion: 1.0000, requested number of tokens: 2,064,039,680.0, 
+[GPU 0] [06:50:59] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [06:50:59] [INFO] Baseline model has 103,201,984 parameters
+[GPU 0] [06:50:59] [INFO] aux: chinchilla optimal tokens: 2,064,039,680, requested proportion: 0.0100, requested number of tokens: 20,640,396.8, 
+[GPU 0] [06:50:59] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/base/realistic/100M/seed_2/20260421065050132659/config.json
+[GPU 0] [06:50:59] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": -1,
+            "lr": 0.0008,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/base/realistic/100M/seed_2/20260421065050132659/baseline",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 9,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 640,
+        "mlp_dim": 2560
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 2064039680.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 20640396.8
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 256,
+        "effective_batch_size": 264,
+        "micro_batch_size": 33,
+        "accumulation_steps": 1,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 2,
+        "compile": true,
+        "is_ddp": true,
+        "optimize_routed": true,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 8,
+        "process_id": 0,
+        "num_base_params": 103201984,
+        "device": "cuda",
+        "logger": "<Logger training_20260421065050132659 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=19)",
+                "test": "SingleDataLoader(code-lisp_test_001.bin, len=19)"
+            },
+            "code-other": {
+                "train": "SingleDataLoader(code-other_train_003.bin, len=1145)",
+                "test": "InterleavedDataLoader(len=38)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=6413)",
+                "test": "InterleavedDataLoader(len=38)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=19)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=19)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=19)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=19)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=19)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=19)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=76)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=38)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=7634)",
+                "test": "InterleavedDataLoader(len=114)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=76)",
+                "test": "InterleavedDataLoader(len=76)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=7710)",
+                "test": "InterleavedDataLoader(len=190)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/base/realistic/100M/seed_2",
+        "experiment_id": "20260421065050132659",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "optimize/base/realistic/100M/seed_2"
+    }
+}
+[GPU 0] [06:50:59] [INFO] Loader code-lisp train: 19, test: 19
+[GPU 0] [06:50:59] [INFO] Loader code-other train: 1145, test: 38
+[GPU 0] [06:50:59] [INFO] Loader fineweb train: 6413, test: 38
+[GPU 0] [06:50:59] [INFO] Loader papers-biology train: 19, test: 19
+[GPU 0] [06:50:59] [INFO] Loader papers-cyber train: 19, test: 19
+[GPU 0] [06:50:59] [INFO] Loader papers-nuclear train: 19, test: 19
+[GPU 0] [06:50:59] [INFO] Loader papers-other train: 76, test: 38
+[GPU 0] [06:50:59] [INFO] Loader core train: 7634, test: 114
+[GPU 0] [06:50:59] [INFO] Loader aux train: 76, test: 76
+[GPU 0] [06:50:59] [INFO] Loader all train: 7710, test: 190
+[GPU 0] [06:50:59] [INFO] Stage [baseline] start: {"name": "baseline", "num_checkpoints": -1, "lr": 0.0008, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/base/realistic/100M/seed_2/20260421065050132659/baseline", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100}
+[GPU 0] [06:50:59] [INFO] BASELINE START
+[GPU 0] [06:50:59] [INFO] Initialized BaseTransformer with 103,201,984 total parameters
+[GPU 0] [06:50:59] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [06:51:00] [INFO] torch.compile done
+[GPU 0] [06:51:00] [WARNING] restore_partial_state: no checkpoint found at /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/base/realistic/100M/seed_2/20260421065050132659/baseline
+[GPU 0] [06:51:00] [INFO] ---- Begin Train | Data Labels: ['all'] ----
+[GPU 0] [06:51:00] [INFO] warmup_steps: 154
+[GPU 0] [06:51:00] [INFO] constant_steps: 6785
+[GPU 0] [06:51:00] [INFO] decay_steps: 771
+[GPU 0] [06:51:00] [INFO] LR Scheduler: Warmup Start
+[GPU 0] [06:51:40] [INFO] Step: 1, LR: 5.20e-06
+[GPU 0] [06:51:40] [INFO] Train Loss: CORE: 10.94 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [06:51:55] [INFO] LR Scheduler: Constant Start
+[GPU 0] [06:53:18] [INFO] Step: 1000, LR: 8.00e-04
+[GPU 0] [06:53:18] [INFO] Train Loss: CORE: 4.32 CODE-LISP: 4.62 PAPERS-BIOLOGY: 5.77 PAPERS-CYBER: nan PAPERS-NUCLEAR: 5.25 
+[GPU 0] [06:54:57] [INFO] Step: 2000, LR: 8.00e-04
+[GPU 0] [06:54:57] [INFO] Train Loss: CORE: 3.35 CODE-LISP: 3.85 PAPERS-BIOLOGY: 5.51 PAPERS-CYBER: 4.12 PAPERS-NUCLEAR: 5.05 
+[GPU 0] [06:56:36] [INFO] Step: 3000, LR: 8.00e-04
+[GPU 0] [06:56:36] [INFO] Train Loss: CORE: 3.45 CODE-LISP: 3.21 PAPERS-BIOLOGY: 5.27 PAPERS-CYBER: 3.96 PAPERS-NUCLEAR: 5.05 
+[GPU 0] [06:58:15] [INFO] Step: 4000, LR: 8.00e-04
+[GPU 0] [06:58:15] [INFO] Train Loss: CORE: 3.12 CODE-LISP: 2.59 PAPERS-BIOLOGY: 5.27 PAPERS-CYBER: 3.85 PAPERS-NUCLEAR: 4.83 
+[GPU 0] [06:59:53] [INFO] Step: 5000, LR: 8.00e-04
+[GPU 0] [06:59:53] [INFO] Train Loss: CORE: 3.01 CODE-LISP: 1.95 PAPERS-BIOLOGY: 5.06 PAPERS-CYBER: 3.70 PAPERS-NUCLEAR: 4.38 
+[GPU 0] [07:01:32] [INFO] Step: 6000, LR: 8.00e-04
+[GPU 0] [07:01:32] [INFO] Train Loss: CORE: 3.03 CODE-LISP: 1.82 PAPERS-BIOLOGY: 4.88 PAPERS-CYBER: 3.70 PAPERS-NUCLEAR: 3.77 
+[GPU 0] [07:03:04] [INFO] LR Scheduler: Decay Start
+[GPU 0] [07:03:10] [INFO] Step: 7000, LR: 7.37e-04
+[GPU 0] [07:03:10] [INFO] Train Loss: CORE: 3.47 CODE-LISP: 1.76 PAPERS-BIOLOGY: 3.59 PAPERS-CYBER: 3.68 PAPERS-NUCLEAR: 3.68 
+[GPU 0] [07:04:20] [INFO] Step: 7710, LR: 1.00e-08
+[GPU 0] [07:04:20] [INFO] Train Loss: CORE: 3.12 CODE-LISP: 1.74 PAPERS-BIOLOGY: 3.16 PAPERS-CYBER: 3.60 PAPERS-NUCLEAR: 3.64 
+[GPU 0] [07:04:21] [INFO] ---- Begin Eval ----
+[GPU 0] [07:04:21] [INFO] Data: core | Experts: None
+[GPU 0] [07:04:41] [INFO] loss: 2.46686101
+[GPU 0] [07:04:41] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [07:04:42] [INFO] loss: 1.64890015
+[GPU 0] [07:04:42] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [07:04:42] [INFO] loss: 3.05252886
+[GPU 0] [07:04:42] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [07:04:43] [INFO] loss: 3.40748334
+[GPU 0] [07:04:43] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [07:04:44] [INFO] loss: 3.37099099
+[GPU 0] [07:04:45] [INFO] ----------------------------------------
+[GPU 0] [07:04:45] [INFO] Finished. See /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/base/realistic/100M/seed_2/20260421065050132659

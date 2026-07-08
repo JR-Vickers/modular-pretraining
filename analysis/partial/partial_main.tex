@@ -1,0 +1,241 @@
+% This file was created with matplot2tikz v0.5.3.
+\begin{tikzpicture}
+
+\pgfplotsset{legend image code/.code={\draw[#1] (0cm,-0.06cm) rectangle (0.25cm,0.06cm);}}
+
+\definecolor{crimson2143940}{RGB}{214,39,40}
+\definecolor{darkgray176}{RGB}{176,176,176}
+\definecolor{darkorange25512714}{RGB}{255,127,14}
+\definecolor{gray}{RGB}{128,128,128}
+\definecolor{lightgray204}{RGB}{204,204,204}
+\definecolor{steelblue31119180}{RGB}{31,119,180}
+
+\begin{axis}[
+scale only axis=true,
+tick label style={font=\footnotesize},
+label style={font=\footnotesize},
+height=0.234\linewidth,
+legend cell align={left},
+legend columns=3,
+legend style={
+  font=\scriptsize,
+  /tikz/every even column/.append style={column sep=8pt},
+  fill opacity=0.8,
+  draw opacity=1,
+  text opacity=1,
+  at={(0.5,1.16)},
+  anchor=south,
+  draw=lightgray204
+},
+tick align=outside,
+tick pos=left,
+width=0.76\linewidth,
+x grid style={darkgray176},
+xmin=-0.5475, xmax=2.5875,
+xtick style={color=black},
+xtick={0,1,2},
+xticklabels={GRAM,Filtering,FT-LoRA},
+y grid style={darkgray176},
+ylabel={Compute Ratio},
+ymin=0.4, ymax=1.15,
+ytick={0.4,0.6,0.8,1},
+yticklabels={0.4,0.6,0.8,1.0},
+ytick style={color=black}
+]
+\draw[draw=none,fill=steelblue31119180] (axis cs:-0.405,0) rectangle (axis cs:-0.135,0.956554500091221);
+\addlegendimage{draw=none,fill=steelblue31119180}
+\addlegendentry{Core $\uparrow$}
+
+\draw[draw=none,fill=steelblue31119180] (axis cs:0.595,0) rectangle (axis cs:0.865,0.985642892899399);
+\draw[draw=none,fill=steelblue31119180] (axis cs:1.595,0) rectangle (axis cs:1.865,0.985569865596572);
+\draw[draw=none,fill=crimson2143940] (axis cs:-0.115,0) rectangle (axis cs:0.155,0.599643902402252);
+\addlegendimage{draw=none,fill=crimson2143940}
+\addlegendentry{Forget $\downarrow$}
+
+\draw[draw=none,fill=crimson2143940] (axis cs:0.885,0) rectangle (axis cs:1.155,0.85103331203406);
+\draw[draw=none,fill=crimson2143940] (axis cs:1.885,0) rectangle (axis cs:2.155,0.854250433220036);
+\draw[draw=none,fill=darkorange25512714] (axis cs:0.175,0) rectangle (axis cs:0.445,0.759859199958449);
+\addlegendimage{draw=none,fill=darkorange25512714}
+\addlegendentry{Elicit $\downarrow$}
+
+\draw[draw=none,fill=darkorange25512714] (axis cs:1.175,0) rectangle (axis cs:1.445,0.849548915544174);
+\draw[draw=none,fill=darkorange25512714] (axis cs:2.175,0) rectangle (axis cs:2.445,0.856652078327302);
+\path [draw=black, semithick]
+(axis cs:-0.27,0.940757548636747)
+--(axis cs:-0.27,0.972351451545694);
+
+\path [draw=black, semithick]
+(axis cs:0.73,0.954557085959313)
+--(axis cs:0.73,1.01672869983948);
+
+\path [draw=black, semithick]
+(axis cs:1.73,0.968778832280486)
+--(axis cs:1.73,1.00236089891266);
+
+\addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+table {%
+-0.27 0.940757548636747
+0.73 0.954557085959313
+1.73 0.968778832280486
+};
+\addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+table {%
+-0.27 0.972351451545694
+0.73 1.01672869983948
+1.73 1.00236089891266
+};
+\path [draw=black, semithick]
+(axis cs:0.02,0.593220213518262)
+--(axis cs:0.02,0.606067591286241);
+
+\path [draw=black, semithick]
+(axis cs:1.02,0.841536152825519)
+--(axis cs:1.02,0.860530471242601);
+
+\path [draw=black, semithick]
+(axis cs:2.02,0.840945107944566)
+--(axis cs:2.02,0.867555758495506);
+
+\addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+table {%
+0.02 0.593220213518262
+1.02 0.841536152825519
+2.02 0.840945107944566
+};
+\addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+table {%
+0.02 0.606067591286241
+1.02 0.860530471242601
+2.02 0.867555758495506
+};
+\path [draw=black, semithick]
+(axis cs:0.31,0.748116482763705)
+--(axis cs:0.31,0.771601917153194);
+
+\path [draw=black, semithick]
+(axis cs:1.31,0.845431720677439)
+--(axis cs:1.31,0.853666110410909);
+
+\path [draw=black, semithick]
+(axis cs:2.31,0.847095513442829)
+--(axis cs:2.31,0.866208643211775);
+
+\addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+table {%
+0.31 0.748116482763705
+1.31 0.845431720677439
+2.31 0.847095513442829
+};
+\addplot [semithick, steelblue31119180, mark=-, mark size=3, mark options={solid,draw=black}, only marks]
+table {%
+0.31 0.771601917153194
+1.31 0.853666110410909
+2.31 0.866208643211775
+};
+\addplot [line width=0.28pt, gray, opacity=0.6, dashed, forget plot]
+table {%
+-0.5475 1
+2.5875 1
+};
+\draw (axis cs:-0.27,0.993702754242324) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.96};
+\draw (axis cs:0.73,1.03808000253611) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.99};
+\draw (axis cs:1.73,1.02371220160929) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.99};
+\draw (axis cs:0.02,0.62741889398287) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.60};
+\draw (axis cs:1.02,0.88188177393923) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.85};
+\draw (axis cs:2.02,0.888907061192135) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.85};
+\draw (axis cs:0.31,0.792953219849823) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.76};
+\draw (axis cs:1.31,0.875017413107538) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.85};
+\draw (axis cs:2.31,0.887559945908404) node[
+  font=\scriptsize,
+  fill=white,
+  draw=none,
+  line width=0.4pt,
+  inner sep=1.1pt,
+  fill opacity=0.85,
+  anchor=south,
+  text=black,
+  rotate=0.0
+]{0.86};
+\end{axis}
+
+\end{tikzpicture}

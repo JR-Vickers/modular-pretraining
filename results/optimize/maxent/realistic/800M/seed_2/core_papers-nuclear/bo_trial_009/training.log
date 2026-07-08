@@ -1,0 +1,439 @@
+[GPU 0] [14:25:00] [INFO] Git branch: AGI-1696-New-Dataset-Runs_ethan, commit: d373ba53f47a98d51cc1a959e63e01b4d20691e7
+[GPU 0] [14:25:00] [INFO] Number of GPUs: 8
+[GPU 0] [14:25:01] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [14:25:01] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [14:25:09] [INFO] target effective batch size: 641, actual effective batch size: 672, micro batch size: 12, accumulation steps: 7, num gpus: 8
+[GPU 0] [14:25:09] [INFO] core total number of tokens: 66749057569
+[GPU 0] [14:25:09] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [14:25:09] [INFO] core: chinchilla optimal tokens: 16,130,190,080, requested proportion: 1.0000, requested number of tokens: 16,130,190,080.0, 
+[GPU 0] [14:25:09] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [14:25:09] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [14:25:09] [INFO] aux: chinchilla optimal tokens: 16,130,190,080, requested proportion: 0.0100, requested number of tokens: 161,301,900.8, 
+[GPU 0] [14:25:09] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/config.json
+[GPU 0] [14:25:09] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": 100,
+            "lr": 0.0005663534909876918,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/baseline",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 100,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00016167795408594942,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/maxent",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-nuclear"
+                ]
+            ],
+            "alpha_retain": 93.80501235498355,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 24,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 1600,
+        "mlp_dim": 6400
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 16130190080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 161301900.8
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 641,
+        "effective_batch_size": 672,
+        "micro_batch_size": 12,
+        "accumulation_steps": 7,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 2,
+        "compile": true,
+        "find_unused_parameters": true,
+        "is_ddp": true,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 8,
+        "process_id": 0,
+        "num_base_params": 806509504,
+        "device": "cuda",
+        "logger": "<Logger training_bo_trial_009 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=410)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=24612)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=137831)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=105)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=105)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=105)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=1640)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=105)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=164083)",
+                "test": "InterleavedDataLoader(len=315)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=1640)",
+                "test": "InterleavedDataLoader(len=420)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=165723)",
+                "test": "InterleavedDataLoader(len=735)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear",
+        "experiment_id": "bo_trial_009",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "optimize/maxent/800M/seed_2/core_papers-nuclear"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [14:25:09] [INFO] Loader code-lisp train: 410, test: 105
+[GPU 0] [14:25:09] [INFO] Loader code-other train: 24612, test: 105
+[GPU 0] [14:25:09] [INFO] Loader fineweb train: 137831, test: 105
+[GPU 0] [14:25:09] [INFO] Loader papers-biology train: 410, test: 105
+[GPU 0] [14:25:09] [INFO] Loader papers-cyber train: 410, test: 105
+[GPU 0] [14:25:09] [INFO] Loader papers-nuclear train: 410, test: 105
+[GPU 0] [14:25:09] [INFO] Loader papers-other train: 1640, test: 105
+[GPU 0] [14:25:09] [INFO] Loader core train: 164083, test: 315
+[GPU 0] [14:25:10] [INFO] Loader aux train: 1640, test: 420
+[GPU 0] [14:25:10] [INFO] Loader all train: 165723, test: 735
+[GPU 0] [14:25:10] [INFO] Skipping completed stage baseline @ /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/baseline
+[GPU 0] [14:25:10] [INFO] Loading baseline model from /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/baseline/checkpoint.pth for downstream stages
+[GPU 0] [14:25:18] [INFO] Initialized BaseTransformer with 806,509,504 total parameters
+[GPU 0] [14:25:18] [INFO] Compiling BaseTransformer with torch.compile...
+[GPU 0] [14:25:18] [INFO] torch.compile done
+[GPU 0] [14:25:23] [INFO] Stage [maxent] start: {"name": "maxent", "num_checkpoints": -1, "lr": 0.00016167795408594942, "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/maxent", "acc_mode": "uniform", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": false, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": [["core", "papers-nuclear"]], "alpha_retain": 93.80501235498355, "steps": 2000, "early_stop_thresh": 2.0}
+[GPU 0] [14:25:23] [INFO] Using stage-level retain_targets override (1 targets)
+[GPU 0] [14:25:23] [INFO] UNLEARNING - maxent START
+[GPU 0] [14:25:23] [INFO] Unlearning: retaining ['core', 'papers-nuclear'], removing ['code-lisp', 'papers-biology', 'papers-cyber']
+[GPU 0] [14:25:23] [INFO] ---- Begin MaxEnt | Data Labels: ['code-lisp', 'papers-biology', 'papers-cyber'] ----
+[GPU 0] [14:25:23] [DEBUG] alpha_retain: 93.80501235498355, lr: 0.00016167795408594942, steps: 2000, early_stop_thresh: 2.0
+[GPU 0] [14:25:23] [DEBUG] retain_labels: ['code-other', 'fineweb', 'papers-nuclear', 'papers-other']
+[GPU 0] [14:27:11] [INFO] Early stop MAXENT at step 87: KL→U ≤ 2.0
+[GPU 0] [14:27:11] [INFO] Finished MaxEnt — Avg KL→U: 8.126, Avg Retain CE: 2.338
+[GPU 0] [14:27:11] [INFO] ---- Begin Eval ----
+[GPU 0] [14:27:11] [INFO] Data: core | Experts: None
+[GPU 0] [14:28:05] [INFO] loss: 1.92567348
+[GPU 0] [14:28:05] [INFO] Data: code-lisp | Experts: None
+[GPU 0] [14:28:11] [INFO] loss: 6.45639944
+[GPU 0] [14:28:11] [INFO] Data: papers-biology | Experts: None
+[GPU 0] [14:28:17] [INFO] loss: 3.14222455
+[GPU 0] [14:28:17] [INFO] Data: papers-nuclear | Experts: None
+[GPU 0] [14:28:24] [INFO] loss: 2.75636148
+[GPU 0] [14:28:24] [INFO] Data: papers-cyber | Experts: None
+[GPU 0] [14:28:30] [INFO] loss: 2.76449013
+[GPU 0] [23:37:30] [INFO] Git branch: AGI-1696-New-Dataset-Runs_ethan, commit: f448ed3211e374c38706ba59c9017a4b860c4d29
+[GPU 0] [23:37:30] [INFO] Number of GPUs: 8
+[GPU 0] [23:37:31] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [23:37:31] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [23:37:41] [INFO] target effective batch size: 641, actual effective batch size: 672, micro batch size: 12, accumulation steps: 7, num gpus: 8
+[GPU 0] [23:37:41] [INFO] core total number of tokens: 66749057569
+[GPU 0] [23:37:41] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [23:37:41] [INFO] core: chinchilla optimal tokens: 16,130,190,080, requested proportion: 1.0000, requested number of tokens: 16,130,190,080.0, 
+[GPU 0] [23:37:41] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [23:37:41] [INFO] Baseline model has 806,509,504 parameters
+[GPU 0] [23:37:41] [INFO] aux: chinchilla optimal tokens: 16,130,190,080, requested proportion: 0.0100, requested number of tokens: 161,301,900.8, 
+[GPU 0] [23:37:42] [DEBUG] Saved config to /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/config.json
+[GPU 0] [23:37:42] [DEBUG] {
+    "stages": [
+        {
+            "name": "baseline",
+            "num_checkpoints": 100,
+            "lr": 0.0005663534909876918,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/baseline",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 100,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "label_prc": 1.0
+        },
+        {
+            "name": "maxent",
+            "num_checkpoints": -1,
+            "lr": 0.00016167795408594942,
+            "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/maxent",
+            "acc_mode": "uniform",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": false,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": [
+                [
+                    "core",
+                    "papers-nuclear"
+                ]
+            ],
+            "alpha_retain": 93.80501235498355,
+            "steps": 2000,
+            "early_stop_thresh": 2.0
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 24,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 1600,
+        "mlp_dim": 6400
+    },
+    "data": {
+        "dirs": [
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 16130190080.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 161301900.8
+        }
+    },
+    "run": {
+        "target_effective_batch_size": 641,
+        "effective_batch_size": 672,
+        "micro_batch_size": 12,
+        "accumulation_steps": 7,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 2,
+        "compile": true,
+        "find_unused_parameters": true,
+        "is_ddp": true,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 8,
+        "process_id": 0,
+        "num_base_params": 806509504,
+        "device": "cuda",
+        "logger": "<Logger training_bo_trial_009 (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_001.bin, len=410)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "code-other": {
+                "train": "InterleavedDataLoader(len=24612)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=137831)",
+                "test": "InterleavedDataLoader(len=105)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=105)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=105)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=410)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=105)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=1640)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=105)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=164083)",
+                "test": "InterleavedDataLoader(len=315)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=1640)",
+                "test": "InterleavedDataLoader(len=420)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=165723)",
+                "test": "InterleavedDataLoader(len=735)"
+            }
+        },
+        "res_root": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear",
+        "experiment_id": "bo_trial_009",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "optimize/maxent/800M/seed_2/core_papers-nuclear"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [23:37:42] [INFO] Loader code-lisp train: 410, test: 105
+[GPU 0] [23:37:42] [INFO] Loader code-other train: 24612, test: 105
+[GPU 0] [23:37:42] [INFO] Loader fineweb train: 137831, test: 105
+[GPU 0] [23:37:42] [INFO] Loader papers-biology train: 410, test: 105
+[GPU 0] [23:37:42] [INFO] Loader papers-cyber train: 410, test: 105
+[GPU 0] [23:37:42] [INFO] Loader papers-nuclear train: 410, test: 105
+[GPU 0] [23:37:42] [INFO] Loader papers-other train: 1640, test: 105
+[GPU 0] [23:37:42] [INFO] Loader core train: 164083, test: 315
+[GPU 0] [23:37:42] [INFO] Loader aux train: 1640, test: 420
+[GPU 0] [23:37:42] [INFO] Loader all train: 165723, test: 735
+[GPU 0] [23:37:42] [INFO] Skipping completed stage baseline @ /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/baseline
+[GPU 0] [23:37:42] [INFO] Skipping completed stage maxent @ /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009/maxent
+[GPU 0] [23:37:42] [INFO] ----------------------------------------
+[GPU 0] [23:37:42] [INFO] Finished. See /workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/optimize/maxent/800M/seed_2/core_papers-nuclear/bo_trial_009

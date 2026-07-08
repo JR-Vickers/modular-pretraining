@@ -1,0 +1,28 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core",
+    "core_code-lisp",
+    "core_papers-biology",
+    "core_papers-cyber",
+    "core_papers-nuclear"
+  ],
+  "stage": {
+    "name": "coreftaux",
+    "num_checkpoints": -1,
+    "lr": 0.0005663534909876918,
+    "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/coreftaux/800M/seed_1/20260526204750347853/coreftaux",
+    "acc_mode": "uniform",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "aux_factor": 1.0,
+    "core_aux_ratio": 4.0,
+    "label_prc": 1.0,
+    "ft_lr_factor": 0.2
+  }
+}

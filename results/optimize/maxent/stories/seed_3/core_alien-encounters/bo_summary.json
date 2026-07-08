@@ -1,0 +1,286 @@
+{
+  "seed": 3,
+  "retain_target": [
+    "core",
+    "alien-encounters"
+  ],
+  "run_dir": "20260615031712440049",
+  "best_value": 0.012753719795942824,
+  "best_params": {
+    "lr": 0.0016421522640340906,
+    "alpha_retain": 294.7055359248314
+  },
+  "n_trials": 30,
+  "all_trials": [
+    {
+      "number": 0,
+      "state": "COMPLETE",
+      "value": 0.03876109394936743,
+      "params": {
+        "lr": 0.002069758493728007,
+        "alpha_retain": 213.9036076723409
+      }
+    },
+    {
+      "number": 1,
+      "state": "COMPLETE",
+      "value": 0.020101413539666952,
+      "params": {
+        "lr": 0.0008320202539869284,
+        "alpha_retain": 155.69414353331058
+      }
+    },
+    {
+      "number": 2,
+      "state": "COMPLETE",
+      "value": 0.31687917591492354,
+      "params": {
+        "lr": 0.006870228665540841,
+        "alpha_retain": 269.40646123536425
+      }
+    },
+    {
+      "number": 3,
+      "state": "COMPLETE",
+      "value": 0.019950249511402614,
+      "params": {
+        "lr": 0.00046598555549367583,
+        "alpha_retain": 66.1366490507651
+      }
+    },
+    {
+      "number": 4,
+      "state": "COMPLETE",
+      "value": 0.02111444815791542,
+      "params": {
+        "lr": 0.0003593350365927734,
+        "alpha_retain": 135.03890387693775
+      }
+    },
+    {
+      "number": 5,
+      "state": "COMPLETE",
+      "value": 0.021025203554365754,
+      "params": {
+        "lr": 0.0003331341087395277,
+        "alpha_retain": 139.76580119643978
+      }
+    },
+    {
+      "number": 6,
+      "state": "COMPLETE",
+      "value": 0.08755710435010662,
+      "params": {
+        "lr": 0.002922058642227931,
+        "alpha_retain": 87.15374838115271
+      }
+    },
+    {
+      "number": 7,
+      "state": "COMPLETE",
+      "value": 0.09191162679679821,
+      "params": {
+        "lr": 0.0032134790383585078,
+        "alpha_retain": 179.3045311378235
+      }
+    },
+    {
+      "number": 8,
+      "state": "COMPLETE",
+      "value": 0.021112128975555974,
+      "params": {
+        "lr": 0.00032631929472180446,
+        "alpha_retain": 169.8619559573102
+      }
+    },
+    {
+      "number": 9,
+      "state": "COMPLETE",
+      "value": 0.020247103374454074,
+      "params": {
+        "lr": 0.0007446141686222367,
+        "alpha_retain": 127.45485311797054
+      }
+    },
+    {
+      "number": 10,
+      "state": "COMPLETE",
+      "value": 0.142669164984294,
+      "params": {
+        "lr": 0.0009838768294002124,
+        "alpha_retain": 18.92242913285253
+      }
+    },
+    {
+      "number": 11,
+      "state": "COMPLETE",
+      "value": 0.041608899952720484,
+      "params": {
+        "lr": 0.0008614447343129237,
+        "alpha_retain": 61.3132844974178
+      }
+    },
+    {
+      "number": 12,
+      "state": "COMPLETE",
+      "value": 0.01962031137264769,
+      "params": {
+        "lr": 0.0006191902239799621,
+        "alpha_retain": 77.70188802289151
+      }
+    },
+    {
+      "number": 13,
+      "state": "COMPLETE",
+      "value": 0.23935030226896128,
+      "params": {
+        "lr": 0.0005370707473892787,
+        "alpha_retain": 8.210057063217846
+      }
+    },
+    {
+      "number": 14,
+      "state": "COMPLETE",
+      "value": 0.04131476337743594,
+      "params": {
+        "lr": 0.0012172203764710704,
+        "alpha_retain": 76.16801876059273
+      }
+    },
+    {
+      "number": 15,
+      "state": "COMPLETE",
+      "value": 0.016051080529183626,
+      "params": {
+        "lr": 0.0005109954283782712,
+        "alpha_retain": 47.764875163689425
+      }
+    },
+    {
+      "number": 16,
+      "state": "COMPLETE",
+      "value": 0.08246537588848012,
+      "params": {
+        "lr": 0.0014737189278413137,
+        "alpha_retain": 37.48967920128484
+      }
+    },
+    {
+      "number": 17,
+      "state": "COMPLETE",
+      "value": 0.020816867009066778,
+      "params": {
+        "lr": 0.0005927148770828292,
+        "alpha_retain": 102.2117320769743
+      }
+    },
+    {
+      "number": 18,
+      "state": "COMPLETE",
+      "value": 0.4603578679791034,
+      "params": {
+        "lr": 0.009079419243862233,
+        "alpha_retain": 33.4169950742532
+      }
+    },
+    {
+      "number": 19,
+      "state": "COMPLETE",
+      "value": 0.047418293761869186,
+      "params": {
+        "lr": 0.0021135396265402257,
+        "alpha_retain": 104.11708387886054
+      }
+    },
+    {
+      "number": 20,
+      "state": "COMPLETE",
+      "value": 0.017639117840789423,
+      "params": {
+        "lr": 0.0004759107482707343,
+        "alpha_retain": 48.24200594466238
+      }
+    },
+    {
+      "number": 21,
+      "state": "COMPLETE",
+      "value": 0.016973902610037478,
+      "params": {
+        "lr": 0.000505659411088768,
+        "alpha_retain": 49.406071596044335
+      }
+    },
+    {
+      "number": 22,
+      "state": "COMPLETE",
+      "value": 0.01767763177769286,
+      "params": {
+        "lr": 0.00045562626454839295,
+        "alpha_retain": 46.25906047663099
+      }
+    },
+    {
+      "number": 23,
+      "state": "COMPLETE",
+      "value": 0.16546066015245967,
+      "params": {
+        "lr": 0.0004143754328109456,
+        "alpha_retain": 11.450405799915416
+      }
+    },
+    {
+      "number": 24,
+      "state": "COMPLETE",
+      "value": 0.04786331076593189,
+      "params": {
+        "lr": 0.0011306756550271229,
+        "alpha_retain": 50.919667862569796
+      }
+    },
+    {
+      "number": 25,
+      "state": "COMPLETE",
+      "value": 0.020259328023144774,
+      "params": {
+        "lr": 0.0006770275529775803,
+        "alpha_retain": 108.1172919945003
+      }
+    },
+    {
+      "number": 26,
+      "state": "COMPLETE",
+      "value": 0.021139755438655733,
+      "params": {
+        "lr": 0.00031048631772049977,
+        "alpha_retain": 213.5958962329139
+      }
+    },
+    {
+      "number": 27,
+      "state": "COMPLETE",
+      "value": 0.06820430472308509,
+      "params": {
+        "lr": 0.00050910429874884,
+        "alpha_retain": 22.96229838950467
+      }
+    },
+    {
+      "number": 28,
+      "state": "COMPLETE",
+      "value": 0.2107749810087931,
+      "params": {
+        "lr": 0.0045396019423439415,
+        "alpha_retain": 88.70322153306184
+      }
+    },
+    {
+      "number": 29,
+      "state": "COMPLETE",
+      "value": 0.012753719795942824,
+      "params": {
+        "lr": 0.0016421522640340906,
+        "alpha_retain": 294.7055359248314
+      }
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "seed": 1,
+  "retain_target": [
+    "core",
+    "papers-biology"
+  ],
+  "baseline_experiment_id": "20260422084509038162",
+  "filtering_experiment_id": "20260422075140031197",
+  "best_value": 0.0023729751809946358,
+  "best_params": {
+    "lr": 0.00010509448271309035,
+    "alpha_retain": 212.97713366991653
+  },
+  "n_trials": 30,
+  "all_trials": [
+    {
+      "number": 0,
+      "state": "COMPLETE",
+      "value": 0.025910208303093808,
+      "params": {
+        "lr": 8.913376857339895e-05,
+        "alpha_retain": 446.17847139318695
+      }
+    },
+    {
+      "number": 1,
+      "state": "COMPLETE",
+      "value": 0.06652833864941349,
+      "params": {
+        "lr": 5.000792848675955e-05,
+        "alpha_retain": 216.28291494751187
+      }
+    },
+    {
+      "number": 2,
+      "state": "COMPLETE",
+      "value": 0.0031510100539029703,
+      "params": {
+        "lr": 6.128100156217453e-05,
+        "alpha_retain": 100.7862271228388
+      }
+    },
+    {
+      "number": 3,
+      "state": "COMPLETE",
+      "value": 0.006994689158300318,
+      "params": {
+        "lr": 6.473062876467906e-05,
+        "alpha_retain": 240.05839987367625
+      }
+    },
+    {
+      "number": 4,
+      "state": "COMPLETE",
+      "value": 0.015515328502677228,
+      "params": {
+        "lr": 8.666581519533166e-05,
+        "alpha_retain": 346.3492037018463
+      }
+    },
+    {
+      "number": 5,
+      "state": "COMPLETE",
+      "value": 0.02156155402458285,
+      "params": {
+        "lr": 8.940262077959859e-05,
+        "alpha_retain": 426.87072521821773
+      }
+    },
+    {
+      "number": 6,
+      "state": "COMPLETE",
+      "value": 0.09451303366134577,
+      "params": {
+        "lr": 6.638386343223491e-05,
+        "alpha_retain": 532.9645900150199
+      }
+    },
+    {
+      "number": 7,
+      "state": "COMPLETE",
+      "value": 0.12056056624581966,
+      "params": {
+        "lr": 5.193486158111661e-05,
+        "alpha_retain": 418.75713059812125
+      }
+    },
+    {
+      "number": 8,
+      "state": "COMPLETE",
+      "value": 0.015388367235949038,
+      "params": {
+        "lr": 8.916871949867128e-05,
+        "alpha_retain": 357.2794056451634
+      }
+    },
+    {
+      "number": 9,
+      "state": "COMPLETE",
+      "value": 0.004509482424328518,
+      "params": {
+        "lr": 6.074231831753995e-05,
+        "alpha_retain": 158.95581899668332
+      }
+    },
+    {
+      "number": 10,
+      "state": "COMPLETE",
+      "value": 0.021268059641805847,
+      "params": {
+        "lr": 0.000177050530331966,
+        "alpha_retain": 95.56505034946981
+      }
+    },
+    {
+      "number": 11,
+      "state": "COMPLETE",
+      "value": 0.020861471121260435,
+      "params": {
+        "lr": 0.00013937173508749413,
+        "alpha_retain": 65.46910080251601
+      }
+    },
+    {
+      "number": 12,
+      "state": "COMPLETE",
+      "value": 0.004694809878892929,
+      "params": {
+        "lr": 6.721230942660664e-05,
+        "alpha_retain": 163.1166559254059
+      }
+    },
+    {
+      "number": 13,
+      "state": "COMPLETE",
+      "value": 0.0031290269827478137,
+      "params": {
+        "lr": 0.00011329690714893534,
+        "alpha_retain": 142.41780282535075
+      }
+    },
+    {
+      "number": 14,
+      "state": "COMPLETE",
+      "value": 0.0063449968613195585,
+      "params": {
+        "lr": 0.00011838075289004602,
+        "alpha_retain": 261.7939102713691
+      }
+    },
+    {
+      "number": 15,
+      "state": "COMPLETE",
+      "value": 0.012501500071211402,
+      "params": {
+        "lr": 0.00011790604891327192,
+        "alpha_retain": 122.45038105960498
+      }
+    },
+    {
+      "number": 16,
+      "state": "COMPLETE",
+      "value": 0.29276727807859076,
+      "params": {
+        "lr": 0.00019294881310260583,
+        "alpha_retain": 54.67012440916215
+      }
+    },
+    {
+      "number": 17,
+      "state": "COMPLETE",
+      "value": 0.0035820822512434678,
+      "params": {
+        "lr": 0.0001467175003854335,
+        "alpha_retain": 283.1156962324411
+      }
+    },
+    {
+      "number": 18,
+      "state": "COMPLETE",
+      "value": 0.0030610380817221623,
+      "params": {
+        "lr": 0.00011018217619462291,
+        "alpha_retain": 180.99917004157794
+      }
+    },
+    {
+      "number": 19,
+      "state": "COMPLETE",
+      "value": 0.006048706806702591,
+      "params": {
+        "lr": 0.00011385285542049172,
+        "alpha_retain": 183.7176067483036
+      }
+    },
+    {
+      "number": 20,
+      "state": "COMPLETE",
+      "value": 0.00854513321970637,
+      "params": {
+        "lr": 0.00014398122749338776,
+        "alpha_retain": 304.54174341055386
+      }
+    },
+    {
+      "number": 21,
+      "state": "COMPLETE",
+      "value": 0.004929612324374132,
+      "params": {
+        "lr": 7.901558328323062e-05,
+        "alpha_retain": 137.15778707121157
+      }
+    },
+    {
+      "number": 22,
+      "state": "COMPLETE",
+      "value": 0.0052111695758097565,
+      "params": {
+        "lr": 0.00010401043381073861,
+        "alpha_retain": 204.83857692343298
+      }
+    },
+    {
+      "number": 23,
+      "state": "COMPLETE",
+      "value": 0.006315744761936758,
+      "params": {
+        "lr": 7.662681628161563e-05,
+        "alpha_retain": 115.18697953106435
+      }
+    },
+    {
+      "number": 24,
+      "state": "COMPLETE",
+      "value": 0.0050418184346618655,
+      "params": {
+        "lr": 0.0001289559094751455,
+        "alpha_retain": 93.94737252295157
+      }
+    },
+    {
+      "number": 25,
+      "state": "COMPLETE",
+      "value": 0.0023729751809946358,
+      "params": {
+        "lr": 0.00010509448271309035,
+        "alpha_retain": 212.97713366991653
+      }
+    },
+    {
+      "number": 26,
+      "state": "COMPLETE",
+      "value": 0.009940137749093322,
+      "params": {
+        "lr": 9.851074519618646e-05,
+        "alpha_retain": 235.7809002971342
+      }
+    },
+    {
+      "number": 27,
+      "state": "COMPLETE",
+      "value": 0.02794095321012158,
+      "params": {
+        "lr": 0.00010435009613235266,
+        "alpha_retain": 591.8030111743172
+      }
+    },
+    {
+      "number": 28,
+      "state": "COMPLETE",
+      "value": 0.016039867480081373,
+      "params": {
+        "lr": 0.00016392537730706985,
+        "alpha_retain": 187.80128830846687
+      }
+    },
+    {
+      "number": 29,
+      "state": "COMPLETE",
+      "value": 0.008826548844993105,
+      "params": {
+        "lr": 9.592906969383365e-05,
+        "alpha_retain": 270.6956469709835
+      }
+    }
+  ]
+}

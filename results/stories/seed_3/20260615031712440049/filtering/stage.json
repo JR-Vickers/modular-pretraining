@@ -1,0 +1,25 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core",
+    "core_a-deadline-or-time-limit",
+    "core_alien-encounters",
+    "core_bygone-eras",
+    "core_cultural-traditions"
+  ],
+  "stage": {
+    "name": "filtering",
+    "num_checkpoints": -1,
+    "lr": 0.005,
+    "res_dir": "/workspace-vast/ethanr/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/stories/seed_3/20260615031712440049/filtering",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "label_prc": 1.0
+  }
+}

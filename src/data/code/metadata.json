@@ -1,0 +1,96 @@
+{
+  "code-lisp": {
+    "train": {
+      "total_tokens": 1657444518,
+      "num_shards": 2,
+      "shard_files": [
+        "code-lisp_train_000.bin",
+        "code-lisp_train_001.bin"
+      ]
+    },
+    "test": {
+      "total_tokens": 18066770,
+      "num_shards": 2,
+      "shard_files": [
+        "code-lisp_test_000.bin",
+        "code-lisp_test_001.bin"
+      ]
+    }
+  },
+  "code-other": {
+    "train": {
+      "total_tokens": 25339572358,
+      "num_shards": 25,
+      "shard_files": [
+        "code-other_train_000.bin",
+        "code-other_train_001.bin",
+        "code-other_train_002.bin",
+        "code-other_train_003.bin",
+        "code-other_train_004.bin",
+        "code-other_train_005.bin",
+        "code-other_train_006.bin",
+        "code-other_train_007.bin",
+        "code-other_train_008.bin",
+        "code-other_train_009.bin",
+        "code-other_train_010.bin",
+        "code-other_train_011.bin",
+        "code-other_train_012.bin",
+        "code-other_train_013.bin",
+        "code-other_train_014.bin",
+        "code-other_train_015.bin",
+        "code-other_train_016.bin",
+        "code-other_train_017.bin",
+        "code-other_train_018.bin",
+        "code-other_train_019.bin",
+        "code-other_train_020.bin",
+        "code-other_train_021.bin",
+        "code-other_train_022.bin",
+        "code-other_train_023.bin",
+        "code-other_train_024.bin"
+      ]
+    },
+    "test": {
+      "total_tokens": 254029201,
+      "num_shards": 25,
+      "shard_files": [
+        "code-other_test_000.bin",
+        "code-other_test_001.bin",
+        "code-other_test_002.bin",
+        "code-other_test_003.bin",
+        "code-other_test_004.bin",
+        "code-other_test_005.bin",
+        "code-other_test_006.bin",
+        "code-other_test_007.bin",
+        "code-other_test_008.bin",
+        "code-other_test_009.bin",
+        "code-other_test_010.bin",
+        "code-other_test_011.bin",
+        "code-other_test_012.bin",
+        "code-other_test_013.bin",
+        "code-other_test_014.bin",
+        "code-other_test_015.bin",
+        "code-other_test_016.bin",
+        "code-other_test_017.bin",
+        "code-other_test_018.bin",
+        "code-other_test_019.bin",
+        "code-other_test_020.bin",
+        "code-other_test_021.bin",
+        "code-other_test_022.bin",
+        "code-other_test_023.bin",
+        "code-other_test_024.bin"
+      ]
+    }
+  },
+  "all": {
+    "total_tokens_train": 26997016876,
+    "total_tokens_test": 272095971,
+    "tokenizer": "EleutherAI/gpt-neo-125M",
+    "labels": [
+      "code-lisp",
+      "code-other"
+    ],
+    "lisp_token_budget": 1000000000,
+    "other_token_budget": 24000000000,
+    "total_examples_consumed": 31000000
+  }
+}

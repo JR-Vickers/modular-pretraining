@@ -1,0 +1,761 @@
+[GPU 0] [02:39:49] [INFO] Git branch: AGI-1696-New-Dataset-Runs_ethan, commit: 13fa9a4e868fb8d88e799f20a2ad180a3ab58912
+[GPU 0] [02:39:49] [INFO] Number of GPUs: 32
+[GPU 0] [02:39:51] [INFO] Tokenizer vocabulary: 50257
+[GPU 0] [02:39:51] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 50304
+[GPU 0] [02:39:52] [INFO] target effective batch size: -1, actual effective batch size: 384, micro batch size: 2, accumulation steps: 6, num gpus: 32
+[GPU 0] [02:39:52] [INFO] core total number of tokens: 124693822984
+[GPU 0] [02:39:52] [INFO] Baseline model has 199,891,008 parameters
+[GPU 0] [02:39:52] [INFO] core: chinchilla optimal tokens: 3,997,820,160, requested proportion: 1.0000, requested number of tokens: 3,997,820,160.0, 
+[GPU 0] [02:39:52] [INFO] aux total number of tokens: 4835776549
+[GPU 0] [02:39:52] [INFO] Baseline model has 199,891,008 parameters
+[GPU 0] [02:39:52] [INFO] aux: chinchilla optimal tokens: 3,997,820,160, requested proportion: 0.0100, requested number of tokens: 39,978,201.6, 
+[GPU 0] [02:39:52] [DEBUG] Saved config to /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/lora/200M/seed_5/acc_mode_heterogeneous/config.json
+[GPU 0] [02:39:52] [DEBUG] {
+    "stages": [
+        {
+            "name": "routed",
+            "num_checkpoints": -1,
+            "lr": 0.0008677257023958782,
+            "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/lora/200M/seed_5/acc_mode_heterogeneous/routed",
+            "acc_mode": "heterogeneous",
+            "do_eval": true,
+            "do_sample": false,
+            "num_train_evals": 0,
+            "do_elicit": true,
+            "elicit_eval_prc": 0.5,
+            "elicit_num_evals": 100,
+            "retain_targets": null,
+            "model": {
+                "arch": "lora",
+                "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+                "ctx_len": 1024,
+                "vocab_size": 50304,
+                "num_layers": 13,
+                "num_heads": 8,
+                "num_key_value": 2,
+                "attn_bias": true,
+                "eos_token_id": 50256,
+                "embed_dim": 896,
+                "mlp_dim": 3584,
+                "core_param_prc": 1.0,
+                "aux_param_prc": 0.1
+            },
+            "eval_arbsub": false,
+            "label_prc": 1.0,
+            "aux_factor": {
+                "code-lisp": 2.0,
+                "papers-biology": 1.0,
+                "papers-nuclear": 1.0,
+                "papers-cyber": 1.0
+            },
+            "core_aux_ratio": 1.0,
+            "equal_compute": true
+        }
+    ],
+    "model": {
+        "arch": "base",
+        "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)",
+        "ctx_len": 1024,
+        "vocab_size": 50304,
+        "num_layers": 13,
+        "num_heads": 8,
+        "num_key_value": 2,
+        "attn_bias": true,
+        "eos_token_id": 50256,
+        "embed_dim": 896,
+        "mlp_dim": 3584
+    },
+    "data": {
+        "dirs": [
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/fineweb",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/code",
+            "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/src/data/papers"
+        ],
+        "core": {
+            "labels": [
+                "fineweb",
+                "code-other",
+                "papers-other"
+            ],
+            "method": "optimal",
+            "limit": 1.0,
+            "dist": {
+                "fineweb": 0.84,
+                "code-other": 0.15,
+                "papers-other": 0.01
+            },
+            "num_tok": 3997820160.0
+        },
+        "aux": {
+            "labels": [
+                "code-lisp",
+                "papers-biology",
+                "papers-nuclear",
+                "papers-cyber"
+            ],
+            "method": "optimal",
+            "limit": 0.01,
+            "dist": {
+                "code-lisp": 0.25,
+                "papers-biology": 0.25,
+                "papers-nuclear": 0.25,
+                "papers-cyber": 0.25
+            },
+            "num_tok": 39978201.6
+        }
+    },
+    "run": {
+        "target_effective_batch_size": -1,
+        "effective_batch_size": 384,
+        "micro_batch_size": 2,
+        "accumulation_steps": 6,
+        "max_num_test_sequences": 10000,
+        "eval_all_labels": false,
+        "micro_batch_anchors": [
+            [
+                400000000.0,
+                23
+            ],
+            [
+                5000000000.0,
+                2
+            ]
+        ],
+        "epochs": 1,
+        "adam_betas": [
+            0.9,
+            0.95
+        ],
+        "warmup_prc": 0.02,
+        "decay_prc": 0.1,
+        "seed": 5,
+        "compile": true,
+        "find_unused_parameters": true,
+        "is_ddp": true,
+        "cleanup_distributed": false,
+        "log_level": "DEBUG",
+        "num_gpus": 32,
+        "process_id": 0,
+        "num_base_params": 199891008,
+        "device": "cuda",
+        "logger": "<Logger training_acc_mode_heterogeneous (DEBUG)>",
+        "labels": [
+            "core",
+            "code-lisp",
+            "papers-biology",
+            "papers-cyber",
+            "papers-nuclear"
+        ],
+        "loaders": {
+            "code-lisp": {
+                "train": "SingleDataLoader(code-lisp_train_000.bin, len=152)",
+                "test": "InterleavedDataLoader(len=152)"
+            },
+            "code-other": {
+                "train": "SingleDataLoader(code-other_train_002.bin, len=9150)",
+                "test": "InterleavedDataLoader(len=162)"
+            },
+            "fineweb": {
+                "train": "InterleavedDataLoader(len=51241)",
+                "test": "InterleavedDataLoader(len=162)"
+            },
+            "papers-biology": {
+                "train": "SingleDataLoader(papers-biology_train.bin, len=152)",
+                "test": "SingleDataLoader(papers-biology_test.bin, len=152)"
+            },
+            "papers-cyber": {
+                "train": "SingleDataLoader(papers-cyber_train.bin, len=152)",
+                "test": "SingleDataLoader(papers-cyber_test.bin, len=152)"
+            },
+            "papers-nuclear": {
+                "train": "SingleDataLoader(papers-nuclear_train.bin, len=152)",
+                "test": "SingleDataLoader(papers-nuclear_test.bin, len=152)"
+            },
+            "papers-other": {
+                "train": "SingleDataLoader(papers-other_train.bin, len=610)",
+                "test": "SingleDataLoader(papers-other_test.bin, len=162)"
+            },
+            "core": {
+                "train": "InterleavedDataLoader(len=61001)",
+                "test": "InterleavedDataLoader(len=486)"
+            },
+            "aux": {
+                "train": "InterleavedDataLoader(len=608)",
+                "test": "InterleavedDataLoader(len=608)"
+            },
+            "all": {
+                "train": "InterleavedDataLoader(len=61609)",
+                "test": "InterleavedDataLoader(len=1094)"
+            }
+        },
+        "res_root": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/lora/200M/seed_5",
+        "experiment_id": "acc_mode_heterogeneous",
+        "s3_bucket": "ae-gradient-routing-results",
+        "s3_prefix": "scaling/realistic/lora/200M/seed_5"
+    },
+    "label_prc": 1.0
+}
+[GPU 0] [02:39:52] [INFO] Loader code-lisp train: 152, test: 152
+[GPU 0] [02:39:52] [INFO] Loader code-other train: 9150, test: 162
+[GPU 0] [02:39:52] [INFO] Loader fineweb train: 51241, test: 162
+[GPU 0] [02:39:52] [INFO] Loader papers-biology train: 152, test: 152
+[GPU 0] [02:39:52] [INFO] Loader papers-cyber train: 152, test: 152
+[GPU 0] [02:39:52] [INFO] Loader papers-nuclear train: 152, test: 152
+[GPU 0] [02:39:52] [INFO] Loader papers-other train: 610, test: 162
+[GPU 0] [02:39:52] [INFO] Loader core train: 61001, test: 486
+[GPU 0] [02:39:52] [INFO] Loader aux train: 608, test: 608
+[GPU 0] [02:39:52] [INFO] Loader all train: 61609, test: 1094
+[GPU 0] [02:39:52] [INFO] Stage [routed] start: {"name": "routed", "num_checkpoints": -1, "lr": 0.0008677257023958782, "res_dir": "/workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/lora/200M/seed_5/acc_mode_heterogeneous/routed", "acc_mode": "heterogeneous", "do_eval": true, "do_sample": false, "num_train_evals": 0, "do_elicit": true, "elicit_eval_prc": 0.5, "elicit_num_evals": 100, "retain_targets": null, "model": {"arch": "lora", "tokenizer": "GPT2Tokenizer(name_or_path='EleutherAI/gpt-neo-125M', vocab_size=50257, model_max_length=2048, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>'}, added_tokens_decoder={\n\t50256: AddedToken(\"<|endoftext|>\", rstrip=False, lstrip=False, single_word=False, normalized=True, special=True),\n}\n)", "ctx_len": 1024, "vocab_size": 50304, "num_layers": 13, "num_heads": 8, "num_key_value": 2, "attn_bias": true, "eos_token_id": 50256, "embed_dim": 896, "mlp_dim": 3584, "core_param_prc": 1.0, "aux_param_prc": 0.1}, "eval_arbsub": false, "label_prc": 1.0, "aux_factor": {"code-lisp": 2.0, "papers-biology": 1.0, "papers-nuclear": 1.0, "papers-cyber": 1.0}, "core_aux_ratio": 1.0, "equal_compute": true}
+[GPU 0] [02:39:52] [INFO] ROUTED START
+[GPU 0] [02:39:54] [INFO] Initialized LoRATransformer with 235,766,848 total parameters
+[GPU 0] [02:39:54] [INFO]   Label 'core' has 199,891,008 parameters
+[GPU 0] [02:39:54] [INFO]   Label 'code-lisp' has 8,968,960 parameters
+[GPU 0] [02:39:54] [INFO]   Label 'papers-biology' has 8,968,960 parameters
+[GPU 0] [02:39:54] [INFO]   Label 'papers-cyber' has 8,968,960 parameters
+[GPU 0] [02:39:54] [INFO]   Label 'papers-nuclear' has 8,968,960 parameters
+[GPU 0] [02:39:54] [INFO] Compiling LoRATransformer with torch.compile...
+[GPU 0] [02:39:54] [INFO] torch.compile done
+[GPU 0] [02:40:10] [WARNING] restore_partial_state: no checkpoint found at /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/lora/200M/seed_5/acc_mode_heterogeneous/routed
+[GPU 0] [02:40:10] [INFO] ---- Begin Routed Ordered (Alt) ----
+[GPU 0] [02:40:10] [INFO] initial len_all: 61609, len_all_labeled: 61609, len_all_unlabeled: 0, len_ft: 1520, len_base: 60089, label_prc: 1.0
+[GPU 0] [02:40:10] [INFO] compute-equal: -13632819200.0 <= 0, must truncate training
+[GPU 0] [02:40:10] [INFO] compute-equal: len_base: -66 -> 60023, len_ft: -2 -> 1518, len_all_unlabeled: 0 -> 0
+[GPU 0] [02:40:10] [INFO] 
+len_all: 61609, len_all_labeled: 61609, len_all_unlabeled: 0,
+len_base: 60023, len_ft: 1518,
+len_core_for_ft: 759, len_aux_for_ft: 759,
+aux_factor: {'code-lisp': 2.0, 'papers-biology': 1.0, 'papers-nuclear': 1.0, 'papers-cyber': 1.0}, core_aux_ratio: 1.0,
+equal_compute: True
+[GPU 0] [02:40:10] [INFO] count_by_label: {'core': 60783, 'code-lisp': 304, 'papers-biology': 152, 'papers-cyber': 152, 'papers-nuclear': 152}
+[GPU 0] [02:40:10] [WARNING] len_batches != expected, (61543 != 61541), -2 length difference
+[GPU 0] [02:40:10] [INFO] Batch [('core', ('core',), ('core',))] count: 60023
+[GPU 0] [02:40:10] [INFO] Batch [('code-lisp', ('core', 'code-lisp'), ('code-lisp',))] count: 304
+[GPU 0] [02:40:10] [INFO] Batch [('core', ('core', 'code-lisp'), ('code-lisp',))] count: 304
+[GPU 0] [02:40:10] [INFO] Batch [('core', ('core', 'papers-biology'), ('papers-biology',))] count: 152
+[GPU 0] [02:40:10] [INFO] Batch [('papers-biology', ('core', 'papers-biology'), ('papers-biology',))] count: 152
+[GPU 0] [02:40:10] [INFO] Batch [('core', ('core', 'papers-nuclear'), ('papers-nuclear',))] count: 152
+[GPU 0] [02:40:10] [INFO] Batch [('papers-nuclear', ('core', 'papers-nuclear'), ('papers-nuclear',))] count: 152
+[GPU 0] [02:40:10] [INFO] Batch [('core', ('core', 'papers-cyber'), ('papers-cyber',))] count: 152
+[GPU 0] [02:40:10] [INFO] Batch [('papers-cyber', ('core', 'papers-cyber'), ('papers-cyber',))] count: 152
+[GPU 0] [02:40:10] [INFO] ---- Begin Routed ----
+[GPU 0] [02:40:10] [DEBUG] acc_mode: heterogeneous
+[GPU 0] [02:40:10] [INFO] num_total_steps: 10254
+[GPU 0] [02:40:10] [INFO] LR schedule group 0: steps [0, 10003), warmup=200, constant=8803, decay=1000
+[GPU 0] [02:40:10] [INFO] LR schedule group 1: steps [10003, 10104), warmup=2, constant=89, decay=10
+[GPU 0] [02:40:10] [INFO] LR schedule group 2: steps [10104, 10154), warmup=1, constant=44, decay=5
+[GPU 0] [02:40:10] [INFO] LR schedule group 3: steps [10154, 10204), warmup=1, constant=44, decay=5
+[GPU 0] [02:40:10] [INFO] LR schedule group 4: steps [10204, 10254), warmup=1, constant=44, decay=5
+[GPU 0] [02:40:10] [INFO] LR Scheduler: Group warmup (step 0)
+[GPU 0] [02:40:10] [INFO] CUDA memory before training loop:
+[GPU 0] [02:40:10] [INFO] |===========================================================================|
+[GPU 0] [02:40:10] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [02:40:10] [INFO] |===========================================================================|
+[GPU 0] [02:40:10] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Allocated memory      |   1146 MiB |   3864 MiB | 354236 GiB | 354235 GiB |
+[GPU 0] [02:40:10] [INFO] |       from large pool |   1066 MiB |   3753 MiB | 352623 GiB | 352622 GiB |
+[GPU 0] [02:40:10] [INFO] |       from small pool |     79 MiB |    264 MiB |   1613 GiB |   1612 GiB |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Active memory         |   1146 MiB |   3864 MiB | 354236 GiB | 354235 GiB |
+[GPU 0] [02:40:10] [INFO] |       from large pool |   1066 MiB |   3753 MiB | 352623 GiB | 352622 GiB |
+[GPU 0] [02:40:10] [INFO] |       from small pool |     79 MiB |    264 MiB |   1613 GiB |   1612 GiB |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Requested memory      |   1146 MiB |   3864 MiB | 354233 GiB | 354232 GiB |
+[GPU 0] [02:40:10] [INFO] |       from large pool |   1066 MiB |   3753 MiB | 352623 GiB | 352622 GiB |
+[GPU 0] [02:40:10] [INFO] |       from small pool |     79 MiB |    264 MiB |   1609 GiB |   1609 GiB |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | GPU reserved memory   |   1320 MiB |   4088 MiB | 757298 MiB | 755978 MiB |
+[GPU 0] [02:40:10] [INFO] |       from large pool |   1240 MiB |   3820 MiB | 742180 MiB | 740940 MiB |
+[GPU 0] [02:40:10] [INFO] |       from small pool |     80 MiB |    268 MiB |  15118 MiB |  15038 MiB |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:40:10] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:40:10] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Allocations           |     403    |    1759    |   61139 K  |   61138 K  |
+[GPU 0] [02:40:10] [INFO] |       from large pool |      86    |     407    |   40665 K  |   40665 K  |
+[GPU 0] [02:40:10] [INFO] |       from small pool |     317    |    1437    |   20473 K  |   20473 K  |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Active allocs         |     403    |    1759    |   61139 K  |   61138 K  |
+[GPU 0] [02:40:10] [INFO] |       from large pool |      86    |     407    |   40665 K  |   40665 K  |
+[GPU 0] [02:40:10] [INFO] |       from small pool |     317    |    1437    |   20473 K  |   20473 K  |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:10] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:10] [INFO] |===========================================================================|
+[GPU 0] [02:40:10] [INFO] 
+[GPU 0] [02:40:10] [INFO] Batch group start, LR: 1.0000e-08, batches: 60018, epochs: 1, group_total_steps: 10003
+[GPU 0] [02:40:13] [INFO] CUDA memory after first training step:
+[GPU 0] [02:40:13] [INFO] |===========================================================================|
+[GPU 0] [02:40:13] [INFO] |                  PyTorch CUDA memory summary, device ID 0                 |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] |            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+[GPU 0] [02:40:13] [INFO] |===========================================================================|
+[GPU 0] [02:40:13] [INFO] |        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Allocated memory      |   2311 MiB |   3864 MiB | 354262 GiB | 354259 GiB |
+[GPU 0] [02:40:13] [INFO] |       from large pool |   2210 MiB |   3753 MiB | 352648 GiB | 352646 GiB |
+[GPU 0] [02:40:13] [INFO] |       from small pool |    100 MiB |    264 MiB |   1613 GiB |   1613 GiB |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Active memory         |   2311 MiB |   3864 MiB | 354262 GiB | 354259 GiB |
+[GPU 0] [02:40:13] [INFO] |       from large pool |   2210 MiB |   3753 MiB | 352648 GiB | 352646 GiB |
+[GPU 0] [02:40:13] [INFO] |       from small pool |    100 MiB |    264 MiB |   1613 GiB |   1613 GiB |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Requested memory      |   2310 MiB |   3864 MiB | 354259 GiB | 354256 GiB |
+[GPU 0] [02:40:13] [INFO] |       from large pool |   2210 MiB |   3753 MiB | 352648 GiB | 352646 GiB |
+[GPU 0] [02:40:13] [INFO] |       from small pool |    100 MiB |    264 MiB |   1610 GiB |   1609 GiB |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | GPU reserved memory   |   3362 MiB |   4088 MiB | 759340 MiB | 755978 MiB |
+[GPU 0] [02:40:13] [INFO] |       from large pool |   3260 MiB |   3820 MiB | 744200 MiB | 740940 MiB |
+[GPU 0] [02:40:13] [INFO] |       from small pool |    102 MiB |    268 MiB |  15140 MiB |  15038 MiB |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:40:13] [INFO] |       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:40:13] [INFO] |       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Allocations           |     897    |    1759    |   61144 K  |   61143 K  |
+[GPU 0] [02:40:13] [INFO] |       from large pool |     199    |     407    |   40668 K  |   40668 K  |
+[GPU 0] [02:40:13] [INFO] |       from small pool |     698    |    1437    |   20475 K  |   20475 K  |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Active allocs         |     897    |    1759    |   61144 K  |   61143 K  |
+[GPU 0] [02:40:13] [INFO] |       from large pool |     199    |     407    |   40668 K  |   40668 K  |
+[GPU 0] [02:40:13] [INFO] |       from small pool |     698    |    1437    |   20475 K  |   20475 K  |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | GPU reserved segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Non-releasable allocs |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |       from large pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |       from small pool |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Oversize allocations  |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |---------------------------------------------------------------------------|
+[GPU 0] [02:40:13] [INFO] | Oversize GPU segments |       0    |       0    |       0    |       0    |
+[GPU 0] [02:40:13] [INFO] |===========================================================================|
+[GPU 0] [02:40:13] [INFO] 
+[GPU 0] [02:40:13] [INFO] Step: 1, LR: 4.3486e-06
+[GPU 0] [02:40:13] [INFO] Train Loss: CORE: 10.94 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:40:47] [INFO] LR Scheduler: Group constant (step 200)
+[GPU 0] [02:43:03] [INFO] Step: 1000, LR: 8.6773e-04
+[GPU 0] [02:43:03] [INFO] Train Loss: CORE: 3.48 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:45:49] [INFO] Step: 2000, LR: 8.6773e-04
+[GPU 0] [02:45:49] [INFO] Train Loss: CORE: 3.09 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:48:39] [INFO] Step: 3000, LR: 8.6773e-04
+[GPU 0] [02:48:39] [INFO] Train Loss: CORE: 2.95 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:51:27] [INFO] Step: 4000, LR: 8.6773e-04
+[GPU 0] [02:51:27] [INFO] Train Loss: CORE: 2.97 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:54:17] [INFO] Step: 5000, LR: 8.6773e-04
+[GPU 0] [02:54:17] [INFO] Train Loss: CORE: 3.02 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:57:02] [INFO] Step: 6000, LR: 8.6773e-04
+[GPU 0] [02:57:02] [INFO] Train Loss: CORE: 2.93 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [02:59:53] [INFO] Step: 7000, LR: 8.6773e-04
+[GPU 0] [02:59:53] [INFO] Train Loss: CORE: 2.93 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [03:02:38] [INFO] Step: 8000, LR: 8.6773e-04
+[GPU 0] [03:02:38] [INFO] Train Loss: CORE: 2.80 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [03:05:32] [INFO] Step: 9000, LR: 8.6773e-04
+[GPU 0] [03:05:32] [INFO] Train Loss: CORE: 2.87 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [03:05:33] [INFO] LR Scheduler: Group decay (step 9003)
+[GPU 0] [03:08:19] [INFO] Step: 10000, LR: 2.6131e-06
+[GPU 0] [03:08:19] [INFO] Train Loss: CORE: 2.79 CODE-LISP: nan PAPERS-BIOLOGY: nan PAPERS-CYBER: nan PAPERS-NUCLEAR: nan 
+[GPU 0] [03:08:20] [INFO] LR Scheduler: Group warmup (step 10003)
+[GPU 0] [03:08:20] [INFO] Batch group start, LR: 1.0000e-08, batches: 606, epochs: 1, group_total_steps: 101
+[GPU 0] [03:08:27] [INFO] LR Scheduler: Group constant (step 10005)
+[GPU 0] [03:08:48] [INFO] LR Scheduler: Group decay (step 10094)
+[GPU 0] [03:08:50] [INFO] LR Scheduler: Group warmup (step 10104)
+[GPU 0] [03:08:50] [INFO] Batch group start, LR: 1.0000e-08, batches: 300, epochs: 1, group_total_steps: 50
+[GPU 0] [03:08:50] [INFO] LR Scheduler: Group constant (step 10105)
+[GPU 0] [03:09:01] [INFO] LR Scheduler: Group decay (step 10149)
+[GPU 0] [03:09:02] [INFO] LR Scheduler: Group warmup (step 10154)
+[GPU 0] [03:09:02] [INFO] Batch group start, LR: 1.0000e-08, batches: 300, epochs: 1, group_total_steps: 50
+[GPU 0] [03:09:02] [INFO] LR Scheduler: Group constant (step 10155)
+[GPU 0] [03:09:13] [INFO] LR Scheduler: Group decay (step 10199)
+[GPU 0] [03:09:14] [INFO] LR Scheduler: Group warmup (step 10204)
+[GPU 0] [03:09:14] [INFO] Batch group start, LR: 1.0000e-08, batches: 300, epochs: 1, group_total_steps: 50
+[GPU 0] [03:09:14] [INFO] LR Scheduler: Group constant (step 10205)
+[GPU 0] [03:09:25] [INFO] LR Scheduler: Group decay (step 10249)
+[GPU 0] [03:09:26] [INFO] Step: 10254, LR: 1.0000e-08
+[GPU 0] [03:09:26] [INFO] Train Loss: CORE: 2.83 CODE-LISP: 0.95 PAPERS-BIOLOGY: 2.81 PAPERS-CYBER: 3.07 PAPERS-NUCLEAR: 3.23 
+[GPU 0] [03:09:44] [INFO] ---- Begin Eval ----
+[GPU 0] [03:09:44] [INFO] Data: core | Experts: ['core']
+[GPU 0] [03:09:54] [INFO] loss: 2.21345425
+[GPU 0] [03:09:54] [INFO] Data: code-lisp | Experts: ['core']
+[GPU 0] [03:09:56] [INFO] loss: 1.41499686
+[GPU 0] [03:09:56] [INFO] Data: papers-biology | Experts: ['core']
+[GPU 0] [03:09:57] [INFO] loss: 2.88028431
+[GPU 0] [03:09:57] [INFO] Data: papers-nuclear | Experts: ['core']
+[GPU 0] [03:09:59] [INFO] loss: 3.22048640
+[GPU 0] [03:09:59] [INFO] Data: papers-cyber | Experts: ['core']
+[GPU 0] [03:10:00] [INFO] loss: 3.09951472
+[GPU 0] [03:10:00] [INFO] ---- Begin Eval ----
+[GPU 0] [03:10:00] [INFO] Data: core | Experts: ['code-lisp', 'core']
+[GPU 0] [03:10:07] [INFO] loss: 2.23607779
+[GPU 0] [03:10:07] [INFO] Data: code-lisp | Experts: ['code-lisp', 'core']
+[GPU 0] [03:10:10] [INFO] loss: 0.99191308
+[GPU 0] [03:10:10] [INFO] Data: papers-biology | Experts: ['code-lisp', 'core']
+[GPU 0] [03:10:12] [INFO] loss: 2.90110874
+[GPU 0] [03:10:12] [INFO] Data: papers-nuclear | Experts: ['code-lisp', 'core']
+[GPU 0] [03:10:14] [INFO] loss: 3.24354172
+[GPU 0] [03:10:14] [INFO] Data: papers-cyber | Experts: ['code-lisp', 'core']
+[GPU 0] [03:10:16] [INFO] loss: 3.12232733
+[GPU 0] [03:10:16] [INFO] ---- Begin Eval ----
+[GPU 0] [03:10:16] [INFO] Data: core | Experts: ['core', 'papers-biology']
+[GPU 0] [03:10:23] [INFO] loss: 2.21986723
+[GPU 0] [03:10:23] [INFO] Data: code-lisp | Experts: ['core', 'papers-biology']
+[GPU 0] [03:10:25] [INFO] loss: 1.41798425
+[GPU 0] [03:10:25] [INFO] Data: papers-biology | Experts: ['core', 'papers-biology']
+[GPU 0] [03:10:27] [INFO] loss: 2.79696345
+[GPU 0] [03:10:27] [INFO] Data: papers-nuclear | Experts: ['core', 'papers-biology']
+[GPU 0] [03:10:29] [INFO] loss: 3.21738791
+[GPU 0] [03:10:29] [INFO] Data: papers-cyber | Experts: ['core', 'papers-biology']
+[GPU 0] [03:10:31] [INFO] loss: 3.10614800
+[GPU 0] [03:10:31] [INFO] ---- Begin Eval ----
+[GPU 0] [03:10:31] [INFO] Data: core | Experts: ['core', 'papers-nuclear']
+[GPU 0] [03:10:38] [INFO] loss: 2.22220922
+[GPU 0] [03:10:38] [INFO] Data: code-lisp | Experts: ['core', 'papers-nuclear']
+[GPU 0] [03:10:40] [INFO] loss: 1.41772521
+[GPU 0] [03:10:40] [INFO] Data: papers-biology | Experts: ['core', 'papers-nuclear']
+[GPU 0] [03:10:42] [INFO] loss: 2.88198543
+[GPU 0] [03:10:42] [INFO] Data: papers-nuclear | Experts: ['core', 'papers-nuclear']
+[GPU 0] [03:10:44] [INFO] loss: 3.12742686
+[GPU 0] [03:10:44] [INFO] Data: papers-cyber | Experts: ['core', 'papers-nuclear']
+[GPU 0] [03:10:46] [INFO] loss: 3.10878873
+[GPU 0] [03:10:46] [INFO] ---- Begin Eval ----
+[GPU 0] [03:10:46] [INFO] Data: core | Experts: ['core', 'papers-cyber']
+[GPU 0] [03:10:53] [INFO] loss: 2.21416330
+[GPU 0] [03:10:53] [INFO] Data: code-lisp | Experts: ['core', 'papers-cyber']
+[GPU 0] [03:10:56] [INFO] loss: 1.41701365
+[GPU 0] [03:10:56] [INFO] Data: papers-biology | Experts: ['core', 'papers-cyber']
+[GPU 0] [03:10:58] [INFO] loss: 2.88271618
+[GPU 0] [03:10:58] [INFO] Data: papers-nuclear | Experts: ['core', 'papers-cyber']
+[GPU 0] [03:11:00] [INFO] loss: 3.22084284
+[GPU 0] [03:11:00] [INFO] Data: papers-cyber | Experts: ['core', 'papers-cyber']
+[GPU 0] [03:11:02] [INFO] loss: 3.04390669
+[GPU 0] [03:11:03] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [03:11:10] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['code-lisp'] ----
+[GPU 0] [03:11:10] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:11:10] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:11:13] [INFO] New best validation loss: 1.4010 @ step 0
+[GPU 0] [03:11:14] [INFO] New best validation loss: 1.3502 @ step 1
+[GPU 0] [03:11:16] [INFO] New best validation loss: 1.3017 @ step 2
+[GPU 0] [03:11:17] [INFO] New best validation loss: 1.2681 @ step 3
+[GPU 0] [03:11:19] [INFO] New best validation loss: 1.2440 @ step 4
+[GPU 0] [03:11:20] [INFO] New best validation loss: 1.2286 @ step 5
+[GPU 0] [03:11:22] [INFO] New best validation loss: 1.2115 @ step 6
+[GPU 0] [03:11:23] [INFO] New best validation loss: 1.1944 @ step 7
+[GPU 0] [03:11:25] [INFO] New best validation loss: 1.1824 @ step 8
+[GPU 0] [03:11:26] [INFO] New best validation loss: 1.1713 @ step 9
+[GPU 0] [03:11:28] [INFO] New best validation loss: 1.1591 @ step 10
+[GPU 0] [03:11:29] [INFO] New best validation loss: 1.1499 @ step 11
+[GPU 0] [03:11:31] [INFO] New best validation loss: 1.1425 @ step 12
+[GPU 0] [03:11:32] [INFO] New best validation loss: 1.1345 @ step 13
+[GPU 0] [03:11:34] [INFO] New best validation loss: 1.1274 @ step 14
+[GPU 0] [03:11:35] [INFO] New best validation loss: 1.1210 @ step 15
+[GPU 0] [03:11:37] [INFO] New best validation loss: 1.1151 @ step 16
+[GPU 0] [03:11:38] [INFO] New best validation loss: 1.1095 @ step 17
+[GPU 0] [03:11:40] [INFO] New best validation loss: 1.1046 @ step 18
+[GPU 0] [03:11:41] [INFO] New best validation loss: 1.1005 @ step 19
+[GPU 0] [03:11:43] [INFO] New best validation loss: 1.0971 @ step 20
+[GPU 0] [03:11:44] [INFO] New best validation loss: 1.0941 @ step 21
+[GPU 0] [03:11:46] [INFO] New best validation loss: 1.0921 @ step 22
+[GPU 0] [03:11:47] [INFO] New best validation loss: 1.0901 @ step 23
+[GPU 0] [03:11:49] [INFO] New best validation loss: 1.0879 @ step 24
+[GPU 0] [03:11:50] [INFO] New best validation loss: 1.0854 @ step 25
+[GPU 0] [03:11:52] [INFO] New best validation loss: 1.0831 @ step 26
+[GPU 0] [03:11:53] [INFO] New best validation loss: 1.0814 @ step 27
+[GPU 0] [03:11:55] [INFO] New best validation loss: 1.0805 @ step 28
+[GPU 0] [03:12:11] [INFO] Stop FT @ 40: no val improvement for 10 steps
+[GPU 0] [03:12:11] [INFO] Wrote stats.jsonl entries at FT step 28 
+[GPU 0] [03:12:16] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['papers-biology'] ----
+[GPU 0] [03:12:16] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:12:16] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:12:18] [INFO] New best validation loss: 2.9272 @ step 0
+[GPU 0] [03:12:19] [INFO] New best validation loss: 2.8800 @ step 1
+[GPU 0] [03:12:21] [INFO] New best validation loss: 2.8722 @ step 2
+[GPU 0] [03:12:22] [INFO] New best validation loss: 2.8588 @ step 3
+[GPU 0] [03:12:24] [INFO] New best validation loss: 2.8478 @ step 4
+[GPU 0] [03:12:25] [INFO] New best validation loss: 2.8419 @ step 5
+[GPU 0] [03:12:27] [INFO] New best validation loss: 2.8384 @ step 6
+[GPU 0] [03:12:31] [INFO] New best validation loss: 2.8384 @ step 9
+[GPU 0] [03:12:33] [INFO] New best validation loss: 2.8379 @ step 10
+[GPU 0] [03:12:50] [INFO] Stop FT @ 22: no val improvement for 10 steps
+[GPU 0] [03:12:50] [INFO] Wrote stats.jsonl entries at FT step 10 
+[GPU 0] [03:12:54] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['papers-cyber'] ----
+[GPU 0] [03:12:54] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:12:54] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:12:56] [INFO] New best validation loss: 3.1931 @ step 0
+[GPU 0] [03:12:58] [INFO] New best validation loss: 3.1104 @ step 1
+[GPU 0] [03:12:59] [INFO] New best validation loss: 3.1046 @ step 2
+[GPU 0] [03:13:01] [INFO] New best validation loss: 3.1008 @ step 3
+[GPU 0] [03:13:02] [INFO] New best validation loss: 3.0960 @ step 4
+[GPU 0] [03:13:04] [INFO] New best validation loss: 3.0909 @ step 5
+[GPU 0] [03:13:05] [INFO] New best validation loss: 3.0896 @ step 6
+[GPU 0] [03:13:22] [INFO] Stop FT @ 18: no val improvement for 10 steps
+[GPU 0] [03:13:22] [INFO] Wrote stats.jsonl entries at FT step 6 
+[GPU 0] [03:13:27] [INFO] ---- Begin FT | Experts: ['core'] | Data: ['papers-nuclear'] ----
+[GPU 0] [03:13:27] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:13:27] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:13:28] [INFO] New best validation loss: 3.2967 @ step 0
+[GPU 0] [03:13:30] [INFO] New best validation loss: 3.2060 @ step 1
+[GPU 0] [03:13:31] [INFO] New best validation loss: 3.1974 @ step 2
+[GPU 0] [03:13:33] [INFO] New best validation loss: 3.1937 @ step 3
+[GPU 0] [03:13:34] [INFO] New best validation loss: 3.1877 @ step 4
+[GPU 0] [03:13:36] [INFO] New best validation loss: 3.1799 @ step 5
+[GPU 0] [03:13:37] [INFO] New best validation loss: 3.1733 @ step 6
+[GPU 0] [03:13:39] [INFO] New best validation loss: 3.1703 @ step 7
+[GPU 0] [03:13:40] [INFO] New best validation loss: 3.1699 @ step 8
+[GPU 0] [03:13:57] [INFO] Stop FT @ 20: no val improvement for 10 steps
+[GPU 0] [03:13:57] [INFO] Wrote stats.jsonl entries at FT step 8 
+[GPU 0] [03:13:57] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [03:14:01] [INFO] ---- Begin FT | Experts: ['code-lisp', 'core'] | Data: ['papers-biology'] ----
+[GPU 0] [03:14:01] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:14:01] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:14:03] [INFO] New best validation loss: 2.9674 @ step 0
+[GPU 0] [03:14:05] [INFO] New best validation loss: 2.9218 @ step 1
+[GPU 0] [03:14:07] [INFO] New best validation loss: 2.8972 @ step 2
+[GPU 0] [03:14:09] [INFO] New best validation loss: 2.8868 @ step 3
+[GPU 0] [03:14:11] [INFO] New best validation loss: 2.8738 @ step 4
+[GPU 0] [03:14:13] [INFO] New best validation loss: 2.8641 @ step 5
+[GPU 0] [03:14:15] [INFO] New best validation loss: 2.8565 @ step 6
+[GPU 0] [03:14:17] [INFO] New best validation loss: 2.8527 @ step 7
+[GPU 0] [03:14:19] [INFO] New best validation loss: 2.8526 @ step 8
+[GPU 0] [03:14:23] [INFO] New best validation loss: 2.8515 @ step 10
+[GPU 0] [03:14:25] [INFO] New best validation loss: 2.8493 @ step 11
+[GPU 0] [03:14:27] [INFO] New best validation loss: 2.8490 @ step 12
+[GPU 0] [03:14:49] [INFO] Stop FT @ 24: no val improvement for 10 steps
+[GPU 0] [03:14:49] [INFO] Wrote stats.jsonl entries at FT step 12 
+[GPU 0] [03:14:53] [INFO] ---- Begin FT | Experts: ['code-lisp', 'core'] | Data: ['papers-cyber'] ----
+[GPU 0] [03:14:53] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:14:53] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:14:55] [INFO] New best validation loss: 3.2267 @ step 0
+[GPU 0] [03:14:57] [INFO] New best validation loss: 3.1290 @ step 1
+[GPU 0] [03:14:59] [INFO] New best validation loss: 3.1193 @ step 2
+[GPU 0] [03:15:01] [INFO] New best validation loss: 3.1165 @ step 3
+[GPU 0] [03:15:03] [INFO] New best validation loss: 3.1098 @ step 4
+[GPU 0] [03:15:05] [INFO] New best validation loss: 3.1048 @ step 5
+[GPU 0] [03:15:07] [INFO] New best validation loss: 3.1035 @ step 6
+[GPU 0] [03:15:13] [INFO] New best validation loss: 3.1034 @ step 9
+[GPU 0] [03:15:34] [INFO] Stop FT @ 21: no val improvement for 10 steps
+[GPU 0] [03:15:34] [INFO] Wrote stats.jsonl entries at FT step 9 
+[GPU 0] [03:15:38] [INFO] ---- Begin FT | Experts: ['code-lisp', 'core'] | Data: ['papers-nuclear'] ----
+[GPU 0] [03:15:38] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:15:38] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:15:40] [INFO] New best validation loss: 3.3092 @ step 0
+[GPU 0] [03:15:43] [INFO] New best validation loss: 3.2260 @ step 1
+[GPU 0] [03:15:45] [INFO] New best validation loss: 3.2153 @ step 2
+[GPU 0] [03:15:47] [INFO] New best validation loss: 3.2073 @ step 3
+[GPU 0] [03:15:49] [INFO] New best validation loss: 3.1982 @ step 4
+[GPU 0] [03:15:51] [INFO] New best validation loss: 3.1900 @ step 5
+[GPU 0] [03:15:52] [INFO] New best validation loss: 3.1848 @ step 6
+[GPU 0] [03:15:54] [INFO] New best validation loss: 3.1828 @ step 7
+[GPU 0] [03:16:16] [INFO] Stop FT @ 19: no val improvement for 10 steps
+[GPU 0] [03:16:16] [INFO] Wrote stats.jsonl entries at FT step 7 
+[GPU 0] [03:16:17] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [03:16:20] [INFO] ---- Begin FT | Experts: ['core', 'papers-biology'] | Data: ['code-lisp'] ----
+[GPU 0] [03:16:20] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:16:20] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:16:22] [INFO] New best validation loss: 1.4180 @ step 0
+[GPU 0] [03:16:24] [INFO] New best validation loss: 1.3808 @ step 1
+[GPU 0] [03:16:26] [INFO] New best validation loss: 1.3304 @ step 2
+[GPU 0] [03:16:28] [INFO] New best validation loss: 1.2821 @ step 3
+[GPU 0] [03:16:30] [INFO] New best validation loss: 1.2555 @ step 4
+[GPU 0] [03:16:32] [INFO] New best validation loss: 1.2391 @ step 5
+[GPU 0] [03:16:34] [INFO] New best validation loss: 1.2226 @ step 6
+[GPU 0] [03:16:36] [INFO] New best validation loss: 1.2050 @ step 7
+[GPU 0] [03:16:38] [INFO] New best validation loss: 1.1901 @ step 8
+[GPU 0] [03:16:40] [INFO] New best validation loss: 1.1783 @ step 9
+[GPU 0] [03:16:42] [INFO] New best validation loss: 1.1672 @ step 10
+[GPU 0] [03:16:44] [INFO] New best validation loss: 1.1565 @ step 11
+[GPU 0] [03:16:46] [INFO] New best validation loss: 1.1477 @ step 12
+[GPU 0] [03:16:48] [INFO] New best validation loss: 1.1406 @ step 13
+[GPU 0] [03:16:50] [INFO] New best validation loss: 1.1338 @ step 14
+[GPU 0] [03:16:52] [INFO] New best validation loss: 1.1266 @ step 15
+[GPU 0] [03:16:54] [INFO] New best validation loss: 1.1199 @ step 16
+[GPU 0] [03:16:56] [INFO] New best validation loss: 1.1139 @ step 17
+[GPU 0] [03:16:58] [INFO] New best validation loss: 1.1084 @ step 18
+[GPU 0] [03:17:00] [INFO] New best validation loss: 1.1034 @ step 19
+[GPU 0] [03:17:02] [INFO] New best validation loss: 1.0993 @ step 20
+[GPU 0] [03:17:04] [INFO] New best validation loss: 1.0961 @ step 21
+[GPU 0] [03:17:06] [INFO] New best validation loss: 1.0937 @ step 22
+[GPU 0] [03:17:08] [INFO] New best validation loss: 1.0918 @ step 23
+[GPU 0] [03:17:10] [INFO] New best validation loss: 1.0899 @ step 24
+[GPU 0] [03:17:12] [INFO] New best validation loss: 1.0875 @ step 25
+[GPU 0] [03:17:14] [INFO] New best validation loss: 1.0850 @ step 26
+[GPU 0] [03:17:16] [INFO] New best validation loss: 1.0828 @ step 27
+[GPU 0] [03:17:18] [INFO] New best validation loss: 1.0813 @ step 28
+[GPU 0] [03:17:20] [INFO] New best validation loss: 1.0805 @ step 29
+[GPU 0] [03:17:22] [INFO] New best validation loss: 1.0805 @ step 30
+[GPU 0] [03:17:44] [INFO] Stop FT @ 42: no val improvement for 10 steps
+[GPU 0] [03:17:44] [INFO] Wrote stats.jsonl entries at FT step 30 
+[GPU 0] [03:17:48] [INFO] ---- Begin FT | Experts: ['core', 'papers-biology'] | Data: ['papers-cyber'] ----
+[GPU 0] [03:17:48] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:17:48] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:17:50] [INFO] New best validation loss: 3.1785 @ step 0
+[GPU 0] [03:17:52] [INFO] New best validation loss: 3.1361 @ step 1
+[GPU 0] [03:17:54] [INFO] New best validation loss: 3.1145 @ step 2
+[GPU 0] [03:17:56] [INFO] New best validation loss: 3.1050 @ step 3
+[GPU 0] [03:17:58] [INFO] New best validation loss: 3.0982 @ step 4
+[GPU 0] [03:18:00] [INFO] New best validation loss: 3.0938 @ step 5
+[GPU 0] [03:18:02] [INFO] New best validation loss: 3.0925 @ step 6
+[GPU 0] [03:18:06] [INFO] New best validation loss: 3.0923 @ step 8
+[GPU 0] [03:18:08] [INFO] New best validation loss: 3.0917 @ step 9
+[GPU 0] [03:18:33] [INFO] Stop FT @ 21: no val improvement for 10 steps
+[GPU 0] [03:18:33] [INFO] Wrote stats.jsonl entries at FT step 9 
+[GPU 0] [03:18:37] [INFO] ---- Begin FT | Experts: ['core', 'papers-biology'] | Data: ['papers-nuclear'] ----
+[GPU 0] [03:18:37] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:18:37] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:18:39] [INFO] New best validation loss: 3.2679 @ step 0
+[GPU 0] [03:18:41] [INFO] New best validation loss: 3.2077 @ step 1
+[GPU 0] [03:18:43] [INFO] New best validation loss: 3.1951 @ step 2
+[GPU 0] [03:18:45] [INFO] New best validation loss: 3.1891 @ step 3
+[GPU 0] [03:18:47] [INFO] New best validation loss: 3.1798 @ step 4
+[GPU 0] [03:18:49] [INFO] New best validation loss: 3.1728 @ step 5
+[GPU 0] [03:18:51] [INFO] New best validation loss: 3.1702 @ step 6
+[GPU 0] [03:18:53] [INFO] New best validation loss: 3.1694 @ step 7
+[GPU 0] [03:19:15] [INFO] Stop FT @ 19: no val improvement for 10 steps
+[GPU 0] [03:19:15] [INFO] Wrote stats.jsonl entries at FT step 7 
+[GPU 0] [03:19:15] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [03:19:19] [INFO] ---- Begin FT | Experts: ['core', 'papers-nuclear'] | Data: ['code-lisp'] ----
+[GPU 0] [03:19:19] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:19:19] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:19:21] [INFO] New best validation loss: 1.4198 @ step 0
+[GPU 0] [03:19:23] [INFO] New best validation loss: 1.3650 @ step 1
+[GPU 0] [03:19:25] [INFO] New best validation loss: 1.3147 @ step 2
+[GPU 0] [03:19:27] [INFO] New best validation loss: 1.2747 @ step 3
+[GPU 0] [03:19:29] [INFO] New best validation loss: 1.2481 @ step 4
+[GPU 0] [03:19:31] [INFO] New best validation loss: 1.2331 @ step 5
+[GPU 0] [03:19:33] [INFO] New best validation loss: 1.2148 @ step 6
+[GPU 0] [03:19:35] [INFO] New best validation loss: 1.1970 @ step 7
+[GPU 0] [03:19:37] [INFO] New best validation loss: 1.1845 @ step 8
+[GPU 0] [03:19:39] [INFO] New best validation loss: 1.1730 @ step 9
+[GPU 0] [03:19:41] [INFO] New best validation loss: 1.1614 @ step 10
+[GPU 0] [03:19:43] [INFO] New best validation loss: 1.1522 @ step 11
+[GPU 0] [03:19:45] [INFO] New best validation loss: 1.1448 @ step 12
+[GPU 0] [03:19:47] [INFO] New best validation loss: 1.1371 @ step 13
+[GPU 0] [03:19:49] [INFO] New best validation loss: 1.1295 @ step 14
+[GPU 0] [03:19:51] [INFO] New best validation loss: 1.1228 @ step 15
+[GPU 0] [03:19:53] [INFO] New best validation loss: 1.1162 @ step 16
+[GPU 0] [03:19:55] [INFO] New best validation loss: 1.1098 @ step 17
+[GPU 0] [03:19:57] [INFO] New best validation loss: 1.1047 @ step 18
+[GPU 0] [03:19:59] [INFO] New best validation loss: 1.1005 @ step 19
+[GPU 0] [03:20:01] [INFO] New best validation loss: 1.0972 @ step 20
+[GPU 0] [03:20:02] [INFO] New best validation loss: 1.0949 @ step 21
+[GPU 0] [03:20:04] [INFO] New best validation loss: 1.0929 @ step 22
+[GPU 0] [03:20:06] [INFO] New best validation loss: 1.0907 @ step 23
+[GPU 0] [03:20:08] [INFO] New best validation loss: 1.0881 @ step 24
+[GPU 0] [03:20:10] [INFO] New best validation loss: 1.0856 @ step 25
+[GPU 0] [03:20:12] [INFO] New best validation loss: 1.0835 @ step 26
+[GPU 0] [03:20:14] [INFO] New best validation loss: 1.0817 @ step 27
+[GPU 0] [03:20:16] [INFO] New best validation loss: 1.0811 @ step 28
+[GPU 0] [03:20:38] [INFO] Stop FT @ 40: no val improvement for 10 steps
+[GPU 0] [03:20:38] [INFO] Wrote stats.jsonl entries at FT step 28 
+[GPU 0] [03:20:42] [INFO] ---- Begin FT | Experts: ['core', 'papers-nuclear'] | Data: ['papers-biology'] ----
+[GPU 0] [03:20:42] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:20:42] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:20:44] [INFO] New best validation loss: 3.0754 @ step 0
+[GPU 0] [03:20:46] [INFO] New best validation loss: 2.9013 @ step 1
+[GPU 0] [03:20:48] [INFO] New best validation loss: 2.8959 @ step 2
+[GPU 0] [03:20:50] [INFO] New best validation loss: 2.8899 @ step 3
+[GPU 0] [03:20:52] [INFO] New best validation loss: 2.8785 @ step 4
+[GPU 0] [03:20:53] [INFO] New best validation loss: 2.8673 @ step 5
+[GPU 0] [03:20:55] [INFO] New best validation loss: 2.8586 @ step 6
+[GPU 0] [03:20:57] [INFO] New best validation loss: 2.8528 @ step 7
+[GPU 0] [03:20:59] [INFO] New best validation loss: 2.8498 @ step 8
+[GPU 0] [03:21:01] [INFO] New best validation loss: 2.8484 @ step 9
+[GPU 0] [03:21:03] [INFO] New best validation loss: 2.8473 @ step 10
+[GPU 0] [03:21:05] [INFO] New best validation loss: 2.8458 @ step 11
+[GPU 0] [03:21:07] [INFO] New best validation loss: 2.8451 @ step 12
+[GPU 0] [03:21:29] [INFO] Stop FT @ 24: no val improvement for 10 steps
+[GPU 0] [03:21:29] [INFO] Wrote stats.jsonl entries at FT step 12 
+[GPU 0] [03:21:32] [INFO] ---- Begin FT | Experts: ['core', 'papers-nuclear'] | Data: ['papers-cyber'] ----
+[GPU 0] [03:21:32] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:21:32] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:21:34] [INFO] New best validation loss: 3.2516 @ step 0
+[GPU 0] [03:21:36] [INFO] New best validation loss: 3.1198 @ step 1
+[GPU 0] [03:21:38] [INFO] New best validation loss: 3.1062 @ step 2
+[GPU 0] [03:21:40] [INFO] New best validation loss: 3.1050 @ step 3
+[GPU 0] [03:21:42] [INFO] New best validation loss: 3.0991 @ step 4
+[GPU 0] [03:21:44] [INFO] New best validation loss: 3.0921 @ step 5
+[GPU 0] [03:21:46] [INFO] New best validation loss: 3.0889 @ step 6
+[GPU 0] [03:21:48] [INFO] New best validation loss: 3.0885 @ step 7
+[GPU 0] [03:22:10] [INFO] Stop FT @ 19: no val improvement for 10 steps
+[GPU 0] [03:22:10] [INFO] Wrote stats.jsonl entries at FT step 7 
+[GPU 0] [03:22:10] [INFO] ROUTED - ADVERSARIAL FT START
+[GPU 0] [03:22:14] [INFO] ---- Begin FT | Experts: ['core', 'papers-cyber'] | Data: ['code-lisp'] ----
+[GPU 0] [03:22:14] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:22:14] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:22:16] [INFO] New best validation loss: 1.4195 @ step 0
+[GPU 0] [03:22:18] [INFO] New best validation loss: 1.3710 @ step 1
+[GPU 0] [03:22:20] [INFO] New best validation loss: 1.3192 @ step 2
+[GPU 0] [03:22:22] [INFO] New best validation loss: 1.2764 @ step 3
+[GPU 0] [03:22:24] [INFO] New best validation loss: 1.2520 @ step 4
+[GPU 0] [03:22:26] [INFO] New best validation loss: 1.2349 @ step 5
+[GPU 0] [03:22:28] [INFO] New best validation loss: 1.2180 @ step 6
+[GPU 0] [03:22:30] [INFO] New best validation loss: 1.2007 @ step 7
+[GPU 0] [03:22:32] [INFO] New best validation loss: 1.1864 @ step 8
+[GPU 0] [03:22:34] [INFO] New best validation loss: 1.1750 @ step 9
+[GPU 0] [03:22:36] [INFO] New best validation loss: 1.1636 @ step 10
+[GPU 0] [03:22:38] [INFO] New best validation loss: 1.1526 @ step 11
+[GPU 0] [03:22:40] [INFO] New best validation loss: 1.1446 @ step 12
+[GPU 0] [03:22:42] [INFO] New best validation loss: 1.1376 @ step 13
+[GPU 0] [03:22:44] [INFO] New best validation loss: 1.1303 @ step 14
+[GPU 0] [03:22:46] [INFO] New best validation loss: 1.1233 @ step 15
+[GPU 0] [03:22:48] [INFO] New best validation loss: 1.1170 @ step 16
+[GPU 0] [03:22:50] [INFO] New best validation loss: 1.1109 @ step 17
+[GPU 0] [03:22:52] [INFO] New best validation loss: 1.1055 @ step 18
+[GPU 0] [03:22:54] [INFO] New best validation loss: 1.1012 @ step 19
+[GPU 0] [03:22:56] [INFO] New best validation loss: 1.0975 @ step 20
+[GPU 0] [03:22:58] [INFO] New best validation loss: 1.0947 @ step 21
+[GPU 0] [03:23:00] [INFO] New best validation loss: 1.0924 @ step 22
+[GPU 0] [03:23:02] [INFO] New best validation loss: 1.0905 @ step 23
+[GPU 0] [03:23:04] [INFO] New best validation loss: 1.0886 @ step 24
+[GPU 0] [03:23:06] [INFO] New best validation loss: 1.0863 @ step 25
+[GPU 0] [03:23:08] [INFO] New best validation loss: 1.0837 @ step 26
+[GPU 0] [03:23:10] [INFO] New best validation loss: 1.0816 @ step 27
+[GPU 0] [03:23:12] [INFO] New best validation loss: 1.0801 @ step 28
+[GPU 0] [03:23:14] [INFO] New best validation loss: 1.0797 @ step 29
+[GPU 0] [03:23:36] [INFO] Stop FT @ 41: no val improvement for 10 steps
+[GPU 0] [03:23:36] [INFO] Wrote stats.jsonl entries at FT step 29 
+[GPU 0] [03:23:41] [INFO] ---- Begin FT | Experts: ['core', 'papers-cyber'] | Data: ['papers-biology'] ----
+[GPU 0] [03:23:41] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:23:41] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:23:43] [INFO] New best validation loss: 3.0203 @ step 0
+[GPU 0] [03:23:45] [INFO] New best validation loss: 2.9087 @ step 1
+[GPU 0] [03:23:47] [INFO] New best validation loss: 2.8900 @ step 2
+[GPU 0] [03:23:49] [INFO] New best validation loss: 2.8808 @ step 3
+[GPU 0] [03:23:51] [INFO] New best validation loss: 2.8701 @ step 4
+[GPU 0] [03:23:53] [INFO] New best validation loss: 2.8603 @ step 5
+[GPU 0] [03:23:55] [INFO] New best validation loss: 2.8536 @ step 6
+[GPU 0] [03:23:57] [INFO] New best validation loss: 2.8487 @ step 7
+[GPU 0] [03:23:59] [INFO] New best validation loss: 2.8449 @ step 8
+[GPU 0] [03:24:01] [INFO] New best validation loss: 2.8432 @ step 9
+[GPU 0] [03:24:03] [INFO] New best validation loss: 2.8430 @ step 10
+[GPU 0] [03:24:25] [INFO] Stop FT @ 22: no val improvement for 10 steps
+[GPU 0] [03:24:25] [INFO] Wrote stats.jsonl entries at FT step 10 
+[GPU 0] [03:24:31] [INFO] ---- Begin FT | Experts: ['core', 'papers-cyber'] | Data: ['papers-nuclear'] ----
+[GPU 0] [03:24:31] [DEBUG] num_seq: 512, num_rounds: 200, patience: 10
+[GPU 0] [03:24:31] [DEBUG] local_x: torch.Size([16, 1024]), local_y: torch.Size([16, 1024]), num_steps: 8, per_gpu: 16, mbs_size: 2
+[GPU 0] [03:24:33] [INFO] New best validation loss: 3.3076 @ step 0
+[GPU 0] [03:24:35] [INFO] New best validation loss: 3.2190 @ step 1
+[GPU 0] [03:24:37] [INFO] New best validation loss: 3.2012 @ step 2
+[GPU 0] [03:24:39] [INFO] New best validation loss: 3.1940 @ step 3
+[GPU 0] [03:24:41] [INFO] New best validation loss: 3.1879 @ step 4
+[GPU 0] [03:24:43] [INFO] New best validation loss: 3.1807 @ step 5
+[GPU 0] [03:24:45] [INFO] New best validation loss: 3.1741 @ step 6
+[GPU 0] [03:24:47] [INFO] New best validation loss: 3.1707 @ step 7
+[GPU 0] [03:24:49] [INFO] New best validation loss: 3.1697 @ step 8
+[GPU 0] [03:25:11] [INFO] Stop FT @ 20: no val improvement for 10 steps
+[GPU 0] [03:25:11] [INFO] Wrote stats.jsonl entries at FT step 8 
+[GPU 0] [03:25:13] [INFO] ----------------------------------------
+[GPU 0] [03:25:13] [INFO] Finished. See /workspace/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/lora/200M/seed_5/acc_mode_heterogeneous

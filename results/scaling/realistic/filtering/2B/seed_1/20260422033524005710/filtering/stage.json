@@ -1,0 +1,24 @@
+{
+  "completed": true,
+  "completed_iterations": [
+    "core_papers-biology"
+  ],
+  "stage": {
+    "name": "filtering",
+    "num_checkpoints": 100,
+    "lr": 0.0004271833607529287,
+    "res_dir": "/home/ubuntu/gradient-routing/experiments/AGI-1699-New-Dataset-Runs/results/scaling/realistic/filtering/2B/seed_1/20260422033524005710/filtering",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": true,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": [
+      [
+        "core",
+        "papers-biology"
+      ]
+    ]
+  }
+}

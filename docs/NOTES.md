@@ -277,18 +277,19 @@ validated as 48 non-empty train/test pairs with vocabulary 4,096, 547,853,673 re
 training tokens, and 60,763,919 recorded test tokens. The bins remain ignored by Git. No
 `AE-data/dual-use-papers` path was accessed.
 
-This execution sandbox reports PyTorch 2.13.0 with MPS built but unavailable and CUDA
-unavailable. The required MPS benchmark therefore failed immediately with the intended
-explicit unavailable-device error. No honest six-hour shape selection can be made here,
-and neither the 10M-token training run nor `smoke_summary.json` has been produced. Run the
-benchmark on the M4 Max host, apply the rule above, run the selected shape, then check it:
+The benchmark and smoke run were subsequently executed on the M4 Max host. The paper-shape
+benchmark projected 0.101 hours for the nominal 10M-token budget, so the paper shape was
+selected under the six-hour rule. The routed training loop took approximately 6m44s and the
+complete command, including setup and evaluation, took approximately 7m07s.
 
-```bash
-python -m src.run.experiment.stories.smoke.run --model-shape paper --device mps --dtype float32
-python -m analysis.stories.smoke_check results/stories_smoke/seed_1/<run_timestamp>
-```
+The run passed the Phase 1 gate: all losses were finite, median training loss fell from
+5.849 to 3.834, and all four auxiliary ablations had a positive own-topic loss increase
+larger than the median delta on core and the other auxiliary topics. Three of the four
+effects were small, so this is evidence of pipeline correctness rather than a strong paper
+replication. Phase 1 is complete. Full provenance, commands, environment details, exact
+metrics, and limitations are recorded in [`docs/RESULTS.md`](RESULTS.md).
 
-Replace `paper` with `small` only if the saved benchmark projection exceeds six hours. The
-checker fails unless every loss is finite, the final-10%-median training loss is lower than
-the first-10%-median, and all four own-topic ablation deltas are positive and larger than
-the median delta on core plus the other auxiliary topics.
+The run used a 32,571,904-parameter GRAM and a nominal 10,000,000-token training budget;
+these figures describe model capacity and training data respectively. Batch alignment
+produced 9,535,488 processed token positions. The training code recorded commit
+`526ef78cc7f0af66c40096aa0c9769f33f77d260`.

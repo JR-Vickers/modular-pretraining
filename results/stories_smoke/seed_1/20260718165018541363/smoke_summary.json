@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "finite_losses": true,
+  "training_loss": {
+    "num_observations": 2328,
+    "first_10_percent_median": 5.849294662475586,
+    "final_10_percent_median": 3.8335514068603516,
+    "decreased": true
+  },
+  "auxiliary_ablations": {
+    "a-deadline-or-time-limit": {
+      "own_topic_signed_loss_increase": 0.0029609203338623047,
+      "other_topics_and_core_median_signed_delta": -0.000978708267211914,
+      "passed": true
+    },
+    "alien-encounters": {
+      "own_topic_signed_loss_increase": 0.027960538864135742,
+      "other_topics_and_core_median_signed_delta": -0.0027990341186523438,
+      "passed": true
+    },
+    "bygone-eras": {
+      "own_topic_signed_loss_increase": 0.00153350830078125,
+      "other_topics_and_core_median_signed_delta": 0.0002123117446899414,
+      "passed": true
+    },
+    "cultural-traditions": {
+      "own_topic_signed_loss_increase": 0.002130270004272461,
+      "other_topics_and_core_median_signed_delta": -0.0006619691848754883,
+      "passed": true
+    }
+  },
+  "all_four_auxiliaries_passed": true
+}

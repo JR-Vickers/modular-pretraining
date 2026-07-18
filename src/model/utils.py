@@ -56,7 +56,7 @@ def make_model(
         extra_args = dict()
 
     model = model_class(model_config, **extra_args)
-    model = model.to(device, dtype=torch.bfloat16)
+    model = model.to(device, dtype=run_config.dtype)
 
     log_model_params(model, logger)
 
@@ -94,7 +94,7 @@ def copy_model(
 
     model = get_raw_model(model)
     copied_model = deepcopy(model)
-    copied_model = copied_model.to(device, dtype=torch.bfloat16)
+    copied_model = copied_model.to(device, dtype=run_config.dtype)
 
     if compile:
         copied_model = torch.compile(copied_model, dynamic=True)

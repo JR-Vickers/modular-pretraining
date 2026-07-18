@@ -24,7 +24,7 @@ from src.model.utils import find_base_params
 # Experiment templates                                                         #
 # --------------------------------------------------------------------------- #
 
-root_dir = Path("src").absolute()
+root_dir = Path(__file__).resolve().parents[2]
 
 def GetStoriesConfig(num_aux: int = 4) -> ExperimentConfig:
     """Small-scale TinyStories experiment for fast iteration and debugging."""

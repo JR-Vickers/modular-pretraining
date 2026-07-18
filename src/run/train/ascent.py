@@ -6,7 +6,7 @@ import torch
 
 from src.model.base import BaseTransformer
 from src.run.eval import eval_loss
-from src.run.util.config import ExperimentConfig, StageConfig
+from src.run.util.config import ExperimentConfig, StageConfig, use_fused_adamw
 from src.run.util.tools import get_batch
 from src.run.util.dataloader import InterleavedDataLoader
 from tqdm import tqdm
@@ -77,7 +77,9 @@ def do_gradient_ascent(
     retain_loader.reset()
     forget_loader.reset()
 
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, fused=True)
+    opt = torch.optim.AdamW(
+        model.parameters(), lr=lr, fused=use_fused_adamw(config.run.device)
+    )
 
     total_ga_loss = 0.0
     total_forget_loss = 0.0

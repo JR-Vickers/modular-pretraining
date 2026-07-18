@@ -6,7 +6,7 @@ import contextlib
 import torch
 
 from src.model.base import BaseTransformer
-from src.run.util.config import ExperimentConfig, StageConfig
+from src.run.util.config import ExperimentConfig, StageConfig, use_fused_adamw
 from src.run.util.tools import get_batch
 from src.run.util.dataloader import InterleavedDataLoader
 from tqdm import tqdm
@@ -96,12 +96,14 @@ def do_rmu(
     forget_loader.reset()
     retain_loader.reset()
 
-    opt = torch.optim.AdamW(params, lr=lr, fused=True)
+    opt = torch.optim.AdamW(params, lr=lr, fused=use_fused_adamw(config.run.device))
 
     # one control vector per label to unlearn (synced across GPUs)
     control_vecs = {}
     for label in data_labels:
-        random_vec = torch.rand(raw_model.config.embed_dim, device=device, dtype=torch.bfloat16)
+        random_vec = torch.rand(
+            raw_model.config.embed_dim, device=device, dtype=config.run.dtype
+        )
         # Broadcast from rank 0 to ensure all GPUs use the same control vector
         if is_distributed():
             dist.broadcast(random_vec, src=0)

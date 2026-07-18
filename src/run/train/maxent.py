@@ -28,7 +28,7 @@ import torch
 import torch.nn.functional as F
 
 from src.model.base import BaseTransformer
-from src.run.util.config import ExperimentConfig, StageConfig
+from src.run.util.config import ExperimentConfig, StageConfig, use_fused_adamw
 from src.run.util.tools import get_batch
 from src.run.util.dataloader import InterleavedDataLoader
 from src.run.util.logger import get_tqdm_kwargs
@@ -132,7 +132,9 @@ def do_maxent(
     V = raw_model.config.vocab_size
     logV_const = log(V)
 
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, fused=True)
+    opt = torch.optim.AdamW(
+        model.parameters(), lr=lr, fused=use_fused_adamw(config.run.device)
+    )
 
     tot_me_loss = 0.0
     tot_unif_loss = 0.0

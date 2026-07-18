@@ -1,4 +1,5 @@
 from __future__ import annotations
+import math
 import torch
 from typing import Any, Iterable, Optional
 from tqdm import tqdm
@@ -44,6 +45,9 @@ def eval_loss(
     max_batches = len(loader)
     if num_batches is None:
         num_batches = max_batches
+        if config.run.limit_eval_sequences:
+            requested_sequences = config.run.max_num_test_sequences
+            num_batches = min(num_batches, math.ceil(requested_sequences / loader.B))
     num_batches = min(num_batches, max_batches)
     
     # Guard against empty loaders (e.g., test split smaller than batch size)

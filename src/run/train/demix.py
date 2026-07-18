@@ -47,7 +47,7 @@ from src.model.config import ModelConfig, RoutedModelConfig, Transformer
 from src.model.demix import DemixTransformer
 from src.run.eval import eval_loss
 from src.run.train.routed import RoutedConfig
-from src.run.util.config import ExperimentConfig
+from src.run.util.config import ExperimentConfig, use_fused_adamw
 from src.run.util.distributed import (
     barrier,
     broadcast_object,
@@ -205,7 +205,9 @@ def do_demix(
     opts = {}
     for label in opt_labels:
         params = list(raw_model.get_params(label))
-        opts[label] = torch.optim.AdamW(params, lr=lr, fused=True, betas=adam_betas)
+        opts[label] = torch.optim.AdamW(
+            params, lr=lr, fused=use_fused_adamw(config.run.device), betas=adam_betas
+        )
 
     # restore optimizers
     if "opts" in state:
@@ -271,7 +273,7 @@ def do_demix(
         logger.info(f"Restored scheduler to step {resume_step}, LR: {cur_lr:.4e}")
 
     # memory diagnostics (before first training step)
-    if is_main_process():
+    if is_main_process() and config.run.device.type == "cuda":
         mem_summary = torch.cuda.memory_summary()
         logger.info("CUDA memory before training loop:")
         for line in mem_summary.split("\n"):
@@ -396,7 +398,11 @@ def do_demix(
                         model.train()
 
                     # memory diagnostics (after first step)
-                    if step == resume_step + 2 and is_main_process():
+                    if (
+                        step == resume_step + 2
+                        and is_main_process()
+                        and config.run.device.type == "cuda"
+                    ):
                         mem_summary = torch.cuda.memory_summary()
                         logger.info("CUDA memory after first training step:")
                         for line in mem_summary.split("\n"):

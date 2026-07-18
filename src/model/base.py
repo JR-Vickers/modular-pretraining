@@ -4,6 +4,50 @@ import torch.nn as nn
 import torch.nn.functional as F
 from src.model.config import ModelConfig, Transformer
 
+
+def repeat_kv_heads(x: torch.Tensor, num_heads: int) -> torch.Tensor:
+    """Expand grouped K/V heads explicitly for non-CUDA SDPA backends."""
+    if x.size(1) == num_heads:
+        return x
+    if num_heads % x.size(1) != 0:
+        raise ValueError(f"Cannot expand {x.size(1)} K/V heads to {num_heads} query heads")
+    return x.repeat_interleave(num_heads // x.size(1), dim=1)
+
+
+def grouped_query_attention(
+    q: torch.Tensor,
+    k: torch.Tensor,
+    v: torch.Tensor,
+    attn_mask: torch.Tensor | None = None,
+) -> torch.Tensor:
+    """Use native CUDA GQA and an explicit repeated-K/V equivalent elsewhere."""
+    if q.device.type == "cuda":
+        return F.scaled_dot_product_attention(
+            q, k, v, attn_mask=attn_mask, enable_gqa=True
+        )
+    k = repeat_kv_heads(k, q.size(1))
+    v = repeat_kv_heads(v, q.size(1))
+    return F.scaled_dot_product_attention(q, k, v, attn_mask=attn_mask)
+
+
+def assert_cuda_gqa_equivalence(device: torch.device) -> None:
+    """Cheap startup guard that checks native GQA against repeated-K/V SDPA."""
+    if device.type != "cuda":
+        return
+    generator = torch.Generator(device=device).manual_seed(0)
+    q = torch.randn(2, 8, 8, 16, device=device, dtype=torch.float32, generator=generator)
+    k = torch.randn(2, 2, 8, 16, device=device, dtype=torch.float32, generator=generator)
+    v = torch.randn(2, 2, 8, 16, device=device, dtype=torch.float32, generator=generator)
+    mask = torch.ones(2, 1, 8, 8, device=device, dtype=torch.bool).tril()
+    from torch.nn.attention import SDPBackend, sdpa_kernel
+
+    with sdpa_kernel(SDPBackend.MATH):
+        native = F.scaled_dot_product_attention(q, k, v, attn_mask=mask, enable_gqa=True)
+        repeated = F.scaled_dot_product_attention(
+            q, repeat_kv_heads(k, 8), repeat_kv_heads(v, 8), attn_mask=mask
+        )
+    torch.testing.assert_close(native, repeated, atol=1e-5, rtol=1e-5)
+
 class Rotary(nn.Module):
     def __init__(self, dim: int, max_seq_len: int = 65536) -> None:
         super().__init__()
@@ -76,7 +120,7 @@ class Attention(nn.Module):
 
         q, k, v = q.transpose(1, 2), k.transpose(1, 2), v.transpose(1, 2)
 
-        y = F.scaled_dot_product_attention(q, k, v, attn_mask=attn_mask, enable_gqa=True)
+        y = grouped_query_attention(q, k, v, attn_mask=attn_mask)
         y = y.transpose(1, 2).contiguous().view(B, T, E)
         y = self.c_proj(y)
 

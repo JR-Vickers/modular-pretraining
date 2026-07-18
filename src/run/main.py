@@ -151,7 +151,7 @@ def run_elicitation(
 ) -> Transformer:
     """Elicitation: copy model per label, finetune, eval, cleanup."""
 
-    model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+    model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
     save_dir = cur_dir / "elicit"
     save_dir.mkdir(parents=True, exist_ok=True)
 
@@ -181,6 +181,21 @@ def run_elicitation(
 def get_retain_targets(aux_labels: list[str]) -> list[list[str]]:
     """Get the list of retain targets for the auxiliary labels."""
     return [["core"]] + [["core", x] for x in aux_labels]
+
+
+def get_routed_retain_targets(stage: RoutedConfig, config: ExperimentConfig) -> list[list[str]]:
+    """Resolve routed evaluation profiles, including explicit smoke overrides."""
+    labels = config.run.labels
+    if stage.retain_targets is not None:
+        return stage.retain_targets
+    if stage.model.arch == "demix":
+        return [["core"]] + [[x] for x in sorted(config.data.aux.labels)]
+    retain_targets = get_retain_targets(config.data.aux.labels)
+    if stage.eval_arbsub:
+        retain_targets += [
+            sorted(set(labels) - {x}) for x in config.data.aux.labels
+        ] + [labels]
+    return retain_targets
     
 
 # ---------------------------------------------------------------------------
@@ -221,7 +236,7 @@ def run_baseline(
         import gc
         # Free GPU memory before elicitation (state holds checkpoint optimizer states)
         del state
-        model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+        model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
         gc.collect()
         torch.cuda.empty_cache()
 
@@ -316,7 +331,7 @@ def run_unlearning(
         barrier()
 
         if stage.do_elicit:
-            model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+            model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
             gc.collect()
             torch.cuda.empty_cache()
 
@@ -329,7 +344,7 @@ def run_unlearning(
                 data_labels=removed,
                 log_extra={"retained": sorted(retained)},
             )
-            model = model.to(config.run.device, dtype=torch.bfloat16)
+            model = model.to(config.run.device, dtype=config.run.dtype)
 
         barrier()
 
@@ -400,7 +415,7 @@ def run_filtering(
             import gc
             # Free ALL GPU memory: optimizer state, DDP buffers, model
             del state
-            model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+            model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
             del model
             gc.collect()
             torch.cuda.empty_cache()
@@ -413,7 +428,7 @@ def run_filtering(
             del ckpt_state  # discard optimizer state — not needed for elicitation
             gc.collect()
             torch.cuda.empty_cache()
-            model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+            model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
 
             logger.info("FILTERING - ADVERSARIAL FT START")
             model = run_elicitation(
@@ -477,7 +492,7 @@ def run_coreftaux(
         )
 
         if core_stage.do_elicit:
-            model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+            model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
             gc.collect()
             torch.cuda.empty_cache()
 
@@ -494,7 +509,7 @@ def run_coreftaux(
         mark_iteration_completed(stage, "core", config)
         barrier()
 
-    model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+    model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
 
     for label in aux_labels:
 
@@ -532,7 +547,7 @@ def run_coreftaux(
         )
 
         if stage.do_elicit:
-            ft_model = get_raw_model(ft_model).to("cpu", dtype=torch.bfloat16)
+            ft_model = get_raw_model(ft_model).to("cpu", dtype=config.run.dtype)
             gc.collect()
             torch.cuda.empty_cache()
 
@@ -596,16 +611,9 @@ def run_routed(
     else:
         raise ValueError(f"Unknown routed config type: {type(stage).__name__}")
 
-    if stage.model.arch == "demix":
-        # DEMix: assess exactly one expert at a time
-        retain_targets = [["core"]] + [[x] for x in sorted(config.data.aux.labels)]
-    else:
-        retain_targets = get_retain_targets(config.data.aux.labels)
-        if stage.eval_arbsub:
-             # With eval_arbsub, also add (N-1)/N aux combos & all-on.
-            aux_labels = config.data.aux.labels
-            extra = [sorted(set(labels) - {x}) for x in aux_labels] + [labels]
-            retain_targets += extra
+    retain_targets = get_routed_retain_targets(stage, config)
+    if stage.retain_targets is not None:
+        logger.info(f"Using stage-level retain_targets override ({len(retain_targets)} targets)")
 
     eval_configs = []
     for retained in retain_targets:
@@ -630,7 +638,7 @@ def run_routed(
 
     # Adversarial FT: separate loop because it involves model copies and cleanup
     if stage.do_elicit:
-        model = get_raw_model(model).to("cpu", dtype=torch.bfloat16)
+        model = get_raw_model(model).to("cpu", dtype=config.run.dtype)
         gc.collect()
         torch.cuda.empty_cache()
 

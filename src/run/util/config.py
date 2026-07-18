@@ -56,10 +56,11 @@ from src.run.util.distributed import (
     broadcast_object,
     is_distributed,
     setup_distributed,
+    is_distributed_launch,
 )
 from src.run.util.preemption import setup_preemption
 from src.run.util.s3 import setup_s3, sync_from_s3, start_watcher
-from src.model.base import BaseTransformer
+from src.model.base import BaseTransformer, assert_cuda_gqa_equivalence
 
 # --------------------------------------------------------------------------- #
 # global log suppression for TorchDynamo recompilation warnings               #
@@ -143,6 +144,7 @@ class RunConfig:
     micro_batch_size: int = -1
     accumulation_steps: int = -1
     max_num_test_sequences: int = 10000
+    limit_eval_sequences: bool = False
     eval_all_labels: bool = False #eval every loader label?
     micro_batch_anchors: tuple[tuple[float, int], tuple[float, int]] = ((400e6, 23), (5e9, 2))
     epochs: int = 1
@@ -158,7 +160,8 @@ class RunConfig:
     num_gpus: int = 1
     process_id: int = -1
     num_base_params: int = -1
-    device: torch.device = torch.device("cuda")
+    device: str | torch.device = "auto"
+    dtype: str | torch.dtype = "auto"
     logger: logging.Logger = field(default_factory=logging.getLogger)
     labels: list[str] = field(default_factory=list)
     loaders: dict[str, DataLoader] = field(default_factory=dict)
@@ -166,6 +169,9 @@ class RunConfig:
     experiment_id: str = field(default_factory=get_timestamp)
     s3_bucket: str | None = None
     s3_prefix: str | None = None
+    model_shape: str | None = None
+    model_shape_note: str | None = None
+    nominal_token_budget: int | None = None
 
     @property
     def res_dir(self) -> Path:
@@ -191,6 +197,58 @@ class ExperimentConfig:
 # --------------------------------------------------------------------------- #
 # helpers                                                                     #
 # --------------------------------------------------------------------------- #
+
+_DTYPE_NAMES = {
+    "float32": torch.float32,
+    "fp32": torch.float32,
+    "bfloat16": torch.bfloat16,
+    "bf16": torch.bfloat16,
+    "float16": torch.float16,
+    "fp16": torch.float16,
+}
+
+
+def resolve_device(requested: str | torch.device) -> torch.device:
+    """Resolve a requested runtime device without silently changing it."""
+    name = str(requested).lower()
+    if name == "auto":
+        if torch.cuda.is_available():
+            return torch.device("cuda")
+        if torch.backends.mps.is_available():
+            return torch.device("mps")
+        return torch.device("cpu")
+
+    device = torch.device(name)
+    if device.type == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA was requested but is not available")
+    if device.type == "mps" and not torch.backends.mps.is_available():
+        raise RuntimeError("MPS was requested but is not available")
+    if device.type not in {"cuda", "mps", "cpu"}:
+        raise ValueError(f"Unsupported device: {requested!r}")
+    return device
+
+
+def resolve_dtype(requested: str | torch.dtype, device: torch.device) -> torch.dtype:
+    """Resolve the model dtype; automatic mode preserves CUDA BF16 behavior."""
+    if isinstance(requested, torch.dtype):
+        dtype = requested
+    else:
+        name = requested.lower()
+        if name == "auto":
+            return torch.bfloat16 if device.type == "cuda" else torch.float32
+        try:
+            dtype = _DTYPE_NAMES[name]
+        except KeyError as exc:
+            raise ValueError(f"Unsupported dtype: {requested!r}") from exc
+
+    if device.type == "cpu" and dtype == torch.float16:
+        raise ValueError("float16 training is not supported on CPU; use float32 or bfloat16")
+    return dtype
+
+
+def use_fused_adamw(device: str | torch.device) -> bool:
+    """The fused AdamW implementation is retained only for CUDA runs."""
+    return torch.device(device).type == "cuda"
 
 
 def validate_stages(stages: list[StageConfig]) -> None:
@@ -293,6 +351,11 @@ def setup(config: ExperimentConfig) -> ExperimentConfig:
     """
     load_dotenv(override=True)
 
+    device = resolve_device(config.run.device)
+    dtype = resolve_dtype(config.run.dtype, device)
+    if device.type != "cuda" and is_distributed_launch():
+        raise RuntimeError("MPS and CPU runs must be launched as a single process (without torchrun)")
+
     setup_distributed()
     setup_preemption()
     setup_s3(config)
@@ -314,14 +377,15 @@ def setup(config: ExperimentConfig) -> ExperimentConfig:
 
     set_seeds(config.run.seed)
 
-    # CUDA setup
-    assert torch.cuda.is_available(), "CUDA is not available"
-    torch.backends.cuda.matmul.allow_tf32 = True
-    torch.backends.cudnn.allow_tf32 = True
-    torch.backends.cuda.enable_cudnn_sdp(False)
-    torch.set_float32_matmul_precision("high")
-    device = torch.device("cuda")
+    # Backend setup. Keep the existing CUDA settings unchanged.
+    if device.type == "cuda":
+        torch.backends.cuda.matmul.allow_tf32 = True
+        torch.backends.cudnn.allow_tf32 = True
+        torch.backends.cuda.enable_cudnn_sdp(False)
+        torch.set_float32_matmul_precision("high")
+        assert_cuda_gqa_equivalence(device)
     config.run.device = device
+    config.run.dtype = dtype
     config.run.is_ddp = is_distributed()
 
     # Only create directory on main process to avoid duplicates in multigpu mode
@@ -370,7 +434,8 @@ def setup(config: ExperimentConfig) -> ExperimentConfig:
 
     # Get number of GPUs
     config.run.num_gpus = get_world_size()
-    logger.info(f"Number of GPUs: {config.run.num_gpus}")
+    logger.info(f"Number of processes: {config.run.num_gpus}")
+    logger.info(f"Runtime device: {config.run.device}, dtype: {config.run.dtype}")
 
     # Setup tokenizer
     dataset_metadata_path = config.data.dirs[0] / "metadata.json"
@@ -576,6 +641,7 @@ def setup(config: ExperimentConfig) -> ExperimentConfig:
         num_processes=config.run.num_gpus,
         seed=config.run.seed,
         device=device,
+        pin_memory=device.type == "cuda",
         label_token_counts=label_counts,
         max_num_test=max_test_tokens,
         upsample_labels=upsample_labels,

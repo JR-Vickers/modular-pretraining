@@ -179,7 +179,7 @@ class SingleDataLoader(DataLoader):
             batch = next(self.iterator)
 
         if self.device is not None:
-            batch = batch.to(self.device, non_blocking=True)
+            batch = batch.to(self.device, non_blocking=self.dataloader.pin_memory)
 
         return batch, self.label
 
@@ -443,6 +443,7 @@ def make_loaders(
     T: int, #sequence length
     seed: int,
     device: torch.device,
+    pin_memory: bool = True,
     max_num_test: int = -1, #max test tokens per label
     upsample_labels: set[str] = frozenset(), #train labels allowed to repeat past avail
 ) -> dict[str, DataLoader]:
@@ -510,6 +511,7 @@ def make_loaders(
                     label=label if label in aux_labels else "core",
                     seed=seed,
                     device=device,
+                    pin_memory=pin_memory,
                     drop_last=True,
                 )
 
@@ -555,6 +557,7 @@ def make_loaders(
                             label=label if label in aux_labels else "core",
                             seed=seed,
                             device=device,
+                            pin_memory=pin_memory,
                             drop_last=True,
                         )
                         shard_tokens = len(loader) * B * num_processes * T

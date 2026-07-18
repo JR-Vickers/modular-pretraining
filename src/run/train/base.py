@@ -32,7 +32,7 @@ from torch.optim.lr_scheduler import LambdaLR
 from collections import Counter
 
 from src.model.base import BaseTransformer
-from src.run.util.config import ExperimentConfig, StageConfig
+from src.run.util.config import ExperimentConfig, StageConfig, use_fused_adamw
 from src.run.util.tools import get_batch, log_batch_counts, set_seeds
 from src.run.util.logger import get_tqdm_kwargs
 from src.run.util.distributed import broadcast_object, is_main_process, barrier, get_rank
@@ -155,7 +155,9 @@ def do_train(
         return model
 
     # setup optimizer
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, fused=True, betas=adam_betas)
+    opt = torch.optim.AdamW(
+        model.parameters(), lr=lr, fused=use_fused_adamw(config.run.device), betas=adam_betas
+    )
 
     # restore optimizer
     if "opts" in state:

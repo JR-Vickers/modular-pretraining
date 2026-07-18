@@ -235,3 +235,60 @@ The exact configuration, routing semantics, launcher stages, result/resume behav
 corrected two-protocol matrix, analysis dependency, and stories-path portability risks are
 now recorded. Phase 0 is complete; the next allowed work is the small Phase 1 port and smoke
 setup, still without the dual-use dataset.
+
+## Phase 1 implementation and execution status (2026-07-18)
+
+The training path now accepts `device=auto|cuda|mps|cpu` and
+`dtype=auto|float32|bfloat16|float16`. Automatic device selection is CUDA, then MPS, then
+CPU; automatic dtype is BF16 on CUDA and FP32 elsewhere. Explicit unavailable devices fail
+instead of falling back. CUDA retains its TF32/cuDNN settings, native GQA, fused AdamW,
+pinned nonblocking loader transfers, memory diagnostics, compilation option, and NCCL/DDP
+path. MPS/CPU use explicit repeated K/V heads for ordinary SDPA, unfused AdamW, unpinned
+blocking transfers, and single-process execution. CUDA startup also compares native FP32
+GQA with repeated-K/V SDPA before training. The stories data path is now relative to the
+source file instead of the process working directory.
+
+The Phase 1 launcher is `python -m src.run.experiment.stories.smoke.run`. It fixes seed 1,
+eager FP32, one epoch, LR `5e-3`, effective batch 128 as micro-batch 16 × accumulation 8,
+`p_cr=0.5`, `p_as=0.3`, two intermediate checkpoint intervals, at most 128 test sequences
+per evaluated label, no S3, no elicitation, and no DDP. The nominal 10M-token budget is split
+as 9,156,912 core and 843,088 auxiliary tokens. Evaluation uses all five experts active and
+each of the four auxiliary experts ablated individually. Resolved configs record the shape,
+nominal token budget, and whether the shape is the paper configuration or a timed fallback.
+
+The benchmark command is:
+
+```bash
+python -m src.run.experiment.stories.smoke.run \
+  --benchmark-only --model-shape paper --device mps --dtype float32
+```
+
+It warms up once, times ten synthetic effective training batches with device
+synchronization, and writes `benchmark_projection.json` below
+`results/stories_smoke/seed_1/<timestamp>/`. Select `--model-shape paper` only when the
+projected 10M-token runtime is at most six hours. Otherwise select `--model-shape small`;
+that fallback has four layers, width 256, MLP width 1,024, auxiliary width 128, and exactly
+5,918,464 GRAM parameters. It is a port-validation run and must not be reported as a paper
+replication.
+
+The public `erol-AE/GR-MoE` stories directory was inspected and contained 96 `.bin` files
+plus metadata. All 96 missing bins (1.134 GiB) were downloaded into `src/data/stories/` and
+validated as 48 non-empty train/test pairs with vocabulary 4,096, 547,853,673 recorded
+training tokens, and 60,763,919 recorded test tokens. The bins remain ignored by Git. No
+`AE-data/dual-use-papers` path was accessed.
+
+This execution sandbox reports PyTorch 2.13.0 with MPS built but unavailable and CUDA
+unavailable. The required MPS benchmark therefore failed immediately with the intended
+explicit unavailable-device error. No honest six-hour shape selection can be made here,
+and neither the 10M-token training run nor `smoke_summary.json` has been produced. Run the
+benchmark on the M4 Max host, apply the rule above, run the selected shape, then check it:
+
+```bash
+python -m src.run.experiment.stories.smoke.run --model-shape paper --device mps --dtype float32
+python -m analysis.stories.smoke_check results/stories_smoke/seed_1/<run_timestamp>
+```
+
+Replace `paper` with `small` only if the saved benchmark projection exceeds six hours. The
+checker fails unless every loss is finite, the final-10%-median training loss is lower than
+the first-10%-median, and all four own-topic ablation deltas are positive and larger than
+the median delta on core plus the other auxiliary topics.

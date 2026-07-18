@@ -29,7 +29,7 @@ from tqdm.auto import tqdm
 
 from src.model.config import Transformer
 from src.run.eval import eval_loss
-from src.run.util.config import ExperimentConfig, StageConfig
+from src.run.util.config import ExperimentConfig, StageConfig, use_fused_adamw
 from src.run.util.tools import get_batch, get_exp_mask, log_line
 from src.run.util.tools import json_safe, labels_to_str
 from src.run.util.logger import get_tqdm_kwargs
@@ -73,7 +73,9 @@ def do_finetune(
     model_type = type(raw_model).__name__
     model.train()
 
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, fused=True)
+    opt = torch.optim.AdamW(
+        model.parameters(), lr=lr, fused=use_fused_adamw(config.run.device)
+    )
 
     loaders = [config.run.loaders[label]["train"] for label in data_labels]
     loader = InterleavedDataLoader(loaders, weighted=False)
@@ -222,7 +224,9 @@ def do_finetune_old(
     raw_model = get_raw_model(model)
     model.train()
 
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, fused=True)
+    opt = torch.optim.AdamW(
+        model.parameters(), lr=lr, fused=use_fused_adamw(config.run.device)
+    )
 
     loaders = [config.run.loaders[label]["train"] for label in data_labels]
     loader = InterleavedDataLoader(loaders, weighted=False)

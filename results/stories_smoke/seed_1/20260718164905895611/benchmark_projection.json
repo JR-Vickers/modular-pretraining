@@ -1,0 +1,16 @@
+{
+  "device": "mps",
+  "dtype": "torch.float32",
+  "model_shape": "paper",
+  "model_parameters": 32571904,
+  "synthetic_routing": "91.6/8.4 core/aux mix with p_cr=0.5 and p_as=0.3",
+  "warmup_effective_batches": 1,
+  "timed_effective_batches": 10,
+  "timed_seconds": 11.950352624990046,
+  "seconds_per_effective_batch": 1.1950352624990046,
+  "tokens_per_effective_batch": 32768,
+  "nominal_token_budget": 10000000,
+  "projected_seconds": 364.69581985443256,
+  "projected_hours": 0.10130439440400904,
+  "paper_shape_allowed_by_six_hour_rule": true
+}

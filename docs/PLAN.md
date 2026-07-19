@@ -149,6 +149,26 @@ Retained topics are core plus alien, bygone, and cultural. Deadline and alien re
 normalized isolation reports; bygone and cultural remain raw curves because their fp32
 gaps are too small. Per-tensor results are sensitivity evidence only.
 
+#### Phase 3 execution checklist
+
+- Implementation and tests: commit `255d4808fcb2adbcab5c035082fac266e8ee2729`.
+- CPU smoke matrix: complete, 290/290 unique records, all finite; this validates the
+  matrix, resume behavior, provenance, and compiler but is not the scientific result.
+- Full matrix: launched on Apple MPS with the command below; records are written
+  atomically under `results/stories_phase3/20260718174851965051/full/`.
+
+```bash
+source .venv/bin/activate
+caffeinate -i python -m src.run.experiment.stories.quantization.run --device mps \
+  && python -m analysis.stories_phase3.compile
+```
+
+Before accepting the full result, require the manifest to report 290 unique records and
+all 27 canonical condition families; validate finite losses, exact expert masks, source
+checkpoint SHA-256 hashes, and git provenance; then inspect `phase3_report.json`,
+`phase3_records.csv`, and `phase3_summary.md`. A rerun of the same command is the
+documented resume path after interruption.
+
 Implement **hand-rolled fake-quant in pure PyTorch** (works on MPS and CUDA; no
 bitsandbytes — CUDA-only; no GPTQ/AWQ — won't ingest a custom arch). Per-tensor or
 per-channel symmetric quantization of Linear weights to a k-bit grid, then dequantize;

@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "completed_iterations": [],
+  "stage": {
+    "name": "baseline",
+    "num_checkpoints": 2,
+    "lr": 0.005,
+    "res_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266/baseline",
+    "acc_mode": "heterogeneous",
+    "do_eval": true,
+    "do_sample": false,
+    "num_train_evals": 0,
+    "do_elicit": false,
+    "elicit_eval_prc": 0.5,
+    "elicit_num_evals": 100,
+    "retain_targets": null,
+    "label_prc": 1.0
+  }
+}

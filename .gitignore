@@ -16,6 +16,7 @@ __pycache__/
 *.safetensors
 results/stories_smoke/**/stage.json
 results/stories_smoke/**/training.log
+results/stories_phase2/evaluations/**/training.log
 
 # HuggingFace download cache sidecars
 **/.cache/

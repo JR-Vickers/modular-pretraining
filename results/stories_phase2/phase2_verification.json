@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "failures": [],
+  "runs": {
+    "gram": {
+      "kind": "gram",
+      "run_id": "20260718174851965051",
+      "run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051",
+      "artifact_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed",
+      "checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed/checkpoint.pth",
+      "final_step": 16048,
+      "total_steps": 16048,
+      "parameter_count": 32571904,
+      "evaluation_count": 35,
+      "passed": true,
+      "failures": []
+    },
+    "baseline": {
+      "kind": "baseline",
+      "run_id": "20260719012010132266",
+      "run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266",
+      "artifact_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266/baseline",
+      "checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266/baseline/checkpoint.pth",
+      "final_step": 16571,
+      "total_steps": 16571,
+      "parameter_count": 26257920,
+      "evaluation_count": 5,
+      "passed": true,
+      "failures": []
+    },
+    "filtered": {
+      "kind": "filtered",
+      "run_id": "20260719070035561998",
+      "run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998",
+      "artifact_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998/filtering/core_alien-encounters_bygone-eras_cultural-traditions",
+      "checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998/filtering/core_alien-encounters_bygone-eras_cultural-traditions/checkpoint.pth",
+      "final_step": 16219,
+      "total_steps": 16219,
+      "parameter_count": 26257920,
+      "evaluation_count": 5,
+      "passed": true,
+      "failures": []
+    }
+  }
+}

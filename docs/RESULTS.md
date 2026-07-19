@@ -1,5 +1,78 @@
 # Results
 
+## Phase 2 — Full training and leave-one-out evaluation
+
+**Decision: PASS (2026-07-19). Proceed to quantization.** The completed GRAM, dense
+baseline, and deadline-filtered runs all passed artifact and configuration verification.
+Checkpoint-only eager FP32 MPS evaluation of all-on GRAM and all four leave-one-out masks
+produced 25 full-test records. The rerun all-on and deadline-off losses reproduced all ten
+original reference values exactly (absolute difference `0.0`, tolerance `1e-5`).
+
+All four pre-registered directional conditions passed for the primary
+`a-deadline-or-time-limit` module:
+
+| Gate condition | Measurement | Result |
+|---|---:|:---:|
+| Primary forget effect | deadline loss `+0.11411285` | Pass |
+| Selectivity | `0.11411285` vs. median absolute off-topic change `0.00218302` | Pass |
+| Filter alignment | ablated/filter distance `0.02480924` vs. all-on/filter `0.08930361` | Pass |
+| Retain preservation | mean absolute retained change `0.00221005` vs. forget effect `0.11411285` | Pass |
+
+### Primary full-test losses
+
+| Label | Baseline | GRAM all-on | Deadline off | Deadline-filtered |
+|---|---:|---:|---:|---:|
+| `core` | 1.63167393 | 1.65065944 | 1.64733434 | 1.63246596 |
+| `a-deadline-or-time-limit` | 1.71857691 | 1.72407925 | 1.83819211 | 1.81338286 |
+| `alien-encounters` | 1.60794282 | 1.61175525 | 1.60993826 | 1.60726237 |
+| `bygone-eras` | 1.65203333 | 1.67120099 | 1.66865194 | 1.65447843 |
+| `cultural-traditions` | 1.68839550 | 1.70479941 | 1.70365036 | 1.69228470 |
+
+### All auxiliary leave-one-out effects
+
+| Ablated module | Own-topic signed loss change | Mean absolute retained-label change |
+|---|---:|---:|
+| `a-deadline-or-time-limit` | +0.11411285 | 0.00221005 |
+| `alien-encounters` | +0.09043288 | 0.00180209 |
+| `bygone-eras` | +0.00427902 | 0.00120521 |
+| `cultural-traditions` | +0.01942885 | 0.00111687 |
+
+The deadline and alien modules show the clearest isolation. Bygone and cultural remain
+directionally correct but have smaller own-topic effects. These secondary modules were
+reported consistently but were not required to pass the primary gate.
+
+### Run identity and evidence
+
+| Run | ID | Final optimizer step | Parameters |
+|---|---|---:|---:|
+| GRAM | `20260718174851965051` | 16,048 | 32,571,904 |
+| Dense baseline | `20260719012010132266` | 16,571 | 26,257,920 |
+| Deadline-filtered | `20260719070035561998` | 16,219 | 26,257,920 |
+
+All runs use seed 1, the paper model shape, eager FP32 on Apple MPS, micro-batch 16,
+accumulation 8, and effective batch 128. The GRAM and baseline nominal corpus budget is
+547,853,673 tokens; the filtered budget is 536,228,665 tokens after excluding the
+11,625,008-token deadline topic.
+
+```bash
+source .venv/bin/activate
+python -m analysis.stories_phase2.verify
+python -m analysis.stories_phase2.evaluate --smoke
+python -m analysis.stories_phase2.evaluate
+python -m analysis.stories_phase2.compile
+```
+
+- [Gate report](../results/stories_phase2/phase2_gate.json)
+- [Compact summary](../results/stories_phase2/phase2_summary.md)
+- [Primary comparison](../results/stories_phase2/phase2_primary.csv)
+- [All ablation effects](../results/stories_phase2/phase2_ablations.csv)
+- [Full evaluation manifest](../results/stories_phase2/evaluations/20260718174851965051/manifest.json)
+- [Full checkpoint-only evaluation records](../results/stories_phase2/evaluations/20260718174851965051/stats.jsonl)
+
+This remains a one-seed replication on a 26M dense-core model and synthetic stories data.
+It establishes the qualitative Phase 2 effect needed for this study; it does not estimate
+confidence intervals or establish transfer to realistic data and larger models.
+
 ## Phase 1 — MPS port and GRAM smoke test
 
 **Decision: PASS (2026-07-18).** A paper-shaped GRAM with 32,571,904 parameters was

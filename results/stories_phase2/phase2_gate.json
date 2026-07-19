@@ -1,0 +1,218 @@
+{
+  "status": "PASS",
+  "gate": {
+    "passed": true,
+    "conditions": {
+      "primary_forget_effect": true,
+      "selectivity": true,
+      "filter_alignment": true,
+      "retain_preservation": true
+    },
+    "forget_effect": 0.11411285400390625,
+    "median_absolute_off_topic_change": 0.0021830201148986816,
+    "mean_absolute_retained_change": 0.0022100508213043213,
+    "all_on_filter_distance": 0.08930361270904541,
+    "ablated_filter_distance": 0.02480924129486084,
+    "verification_passed": true
+  },
+  "verification": {
+    "passed": true,
+    "failures": [],
+    "runs": {
+      "gram": {
+        "kind": "gram",
+        "run_id": "20260718174851965051",
+        "run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051",
+        "artifact_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed",
+        "checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed/checkpoint.pth",
+        "final_step": 16048,
+        "total_steps": 16048,
+        "parameter_count": 32571904,
+        "evaluation_count": 35,
+        "passed": true,
+        "failures": []
+      },
+      "baseline": {
+        "kind": "baseline",
+        "run_id": "20260719012010132266",
+        "run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266",
+        "artifact_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266/baseline",
+        "checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266/baseline/checkpoint.pth",
+        "final_step": 16571,
+        "total_steps": 16571,
+        "parameter_count": 26257920,
+        "evaluation_count": 5,
+        "passed": true,
+        "failures": []
+      },
+      "filtered": {
+        "kind": "filtered",
+        "run_id": "20260719070035561998",
+        "run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998",
+        "artifact_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998/filtering/core_alien-encounters_bygone-eras_cultural-traditions",
+        "checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998/filtering/core_alien-encounters_bygone-eras_cultural-traditions/checkpoint.pth",
+        "final_step": 16219,
+        "total_steps": 16219,
+        "parameter_count": 26257920,
+        "evaluation_count": 5,
+        "passed": true,
+        "failures": []
+      }
+    }
+  },
+  "evaluation_manifest": {
+    "created_at": "2026-07-19T06:11:08.002209+00:00",
+    "source_run_id": "20260718174851965051",
+    "source_run_dir": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051",
+    "source_checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed/checkpoint.pth",
+    "source_checkpoint_step": 16048,
+    "device": "mps",
+    "dtype": "torch.float32",
+    "micro_batch_size": 16,
+    "max_sequences_per_label": null,
+    "full_test": true,
+    "profiles": [
+      {
+        "profile_id": "all_on",
+        "omitted_label": null,
+        "expert_labels": [
+          "core",
+          "a-deadline-or-time-limit",
+          "alien-encounters",
+          "bygone-eras",
+          "cultural-traditions"
+        ]
+      },
+      {
+        "profile_id": "leave_out__a-deadline-or-time-limit",
+        "omitted_label": "a-deadline-or-time-limit",
+        "expert_labels": [
+          "core",
+          "alien-encounters",
+          "bygone-eras",
+          "cultural-traditions"
+        ]
+      },
+      {
+        "profile_id": "leave_out__alien-encounters",
+        "omitted_label": "alien-encounters",
+        "expert_labels": [
+          "core",
+          "a-deadline-or-time-limit",
+          "bygone-eras",
+          "cultural-traditions"
+        ]
+      },
+      {
+        "profile_id": "leave_out__bygone-eras",
+        "omitted_label": "bygone-eras",
+        "expert_labels": [
+          "core",
+          "a-deadline-or-time-limit",
+          "alien-encounters",
+          "cultural-traditions"
+        ]
+      },
+      {
+        "profile_id": "leave_out__cultural-traditions",
+        "omitted_label": "cultural-traditions",
+        "expert_labels": [
+          "core",
+          "a-deadline-or-time-limit",
+          "alien-encounters",
+          "bygone-eras"
+        ]
+      }
+    ],
+    "record_count": 25,
+    "records_path": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/evaluations/20260718174851965051/stats.jsonl",
+    "reproduction": {
+      "tolerance": 1e-05,
+      "comparisons": [
+        {
+          "profile_id": "all_on",
+          "data_label": "core",
+          "original_loss": 1.650659441947937,
+          "rerun_loss": 1.650659441947937,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "all_on",
+          "data_label": "a-deadline-or-time-limit",
+          "original_loss": 1.7240792512893677,
+          "rerun_loss": 1.7240792512893677,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "all_on",
+          "data_label": "alien-encounters",
+          "original_loss": 1.6117552518844604,
+          "rerun_loss": 1.6117552518844604,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "all_on",
+          "data_label": "bygone-eras",
+          "original_loss": 1.6712009906768799,
+          "rerun_loss": 1.6712009906768799,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "all_on",
+          "data_label": "cultural-traditions",
+          "original_loss": 1.7047994136810303,
+          "rerun_loss": 1.7047994136810303,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "leave_out__a-deadline-or-time-limit",
+          "data_label": "core",
+          "original_loss": 1.647334337234497,
+          "rerun_loss": 1.647334337234497,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "leave_out__a-deadline-or-time-limit",
+          "data_label": "a-deadline-or-time-limit",
+          "original_loss": 1.838192105293274,
+          "rerun_loss": 1.838192105293274,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "leave_out__a-deadline-or-time-limit",
+          "data_label": "alien-encounters",
+          "original_loss": 1.6099382638931274,
+          "rerun_loss": 1.6099382638931274,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "leave_out__a-deadline-or-time-limit",
+          "data_label": "bygone-eras",
+          "original_loss": 1.6686519384384155,
+          "rerun_loss": 1.6686519384384155,
+          "absolute_difference": 0.0,
+          "passed": true
+        },
+        {
+          "profile_id": "leave_out__a-deadline-or-time-limit",
+          "data_label": "cultural-traditions",
+          "original_loss": 1.7036503553390503,
+          "rerun_loss": 1.7036503553390503,
+          "absolute_difference": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "applicable": true
+    },
+    "accepted": true
+  }
+}

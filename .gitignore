@@ -17,6 +17,7 @@ __pycache__/
 results/stories_smoke/**/stage.json
 results/stories_smoke/**/training.log
 results/stories_phase2/evaluations/**/training.log
+results/stories_phase3/**/smoke/
 
 # HuggingFace download cache sidecars
 **/.cache/

@@ -118,6 +118,37 @@ and debug/report — the quantization study is meaningless on a broken replicati
 
 ### Phase 3 — Quantization experiments (the actual contribution)
 
+#### Pre-registered Phase 3 protocol (2026-07-19, before checkpoint evaluation)
+
+The primary perturbation is pure-PyTorch weight-only fake quantization. Only matrix
+weights are quantized; biases and RMSNorm weights remain fp32. For bit width \(k\), use
+the narrow symmetric integer range \([-q_{max},q_{max}]\), where
+\(q_{max}=2^{k-1}-1\), and compute \(s=\max(|W|)/q_{max}\),
+\(\hat W=s\,\mathrm{clamp}(\mathrm{round}(W/s),-q_{max},q_{max})\). The primary
+granularity is one scale per output row (including one scale per embedding vocabulary
+row); per-tensor scaling is a focused sensitivity test. All-zero rows/tensors remain
+exactly zero.
+
+The fixed matrix is: per-channel fp32/int8/int6/int4 GRAM across all five capability
+profiles and five topics; int8/int6/int4 singleton parameter-group diagnostics across
+all-on and deadline-off; fp32/int8/int6/int4 dense and deadline-filtered controls;
+and int8/int6/int4 per-tensor GRAM across all-on and deadline-off. Existing accepted
+Phase 2 records supply equivalent fp32 conditions. Groups are core MLP, auxiliary
+modules, attention, and input/output embeddings. Int3/int2 and adversarial finetuning
+are excluded.
+
+For deadline loss define \(G_{32}=L_{off,32}-L_{on,32}\),
+\(G_k=L_{off,k}-L_{on,k}\), absolute recovery
+\(A_k=(L_{off,32}-L_{off,k})/G_{32}\), and isolation erosion
+\(E_k=1-G_k/G_{32}\). Ratios are signed and never clipped. The pre-registered verdict
+uses all-weight per-channel int4: capability recovery if \(A_4\ge20\%\); isolation
+erosion without recovery if \(E_4\ge20\%\) and \(A_4<20\%\); robust if both are below
+20%. The result is inconclusive due to general degradation if a required loss is
+non-finite or all-on int4 mean retained-topic loss rises by at least 10% from fp32.
+Retained topics are core plus alien, bygone, and cultural. Deadline and alien receive
+normalized isolation reports; bygone and cultural remain raw curves because their fp32
+gaps are too small. Per-tensor results are sensitivity evidence only.
+
 Implement **hand-rolled fake-quant in pure PyTorch** (works on MPS and CUDA; no
 bitsandbytes — CUDA-only; no GPTQ/AWQ — won't ingest a custom arch). Per-tensor or
 per-channel symmetric quantization of Linear weights to a k-bit grid, then dequantize;

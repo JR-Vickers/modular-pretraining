@@ -1,0 +1,37 @@
+{
+  "condition_index": 0,
+  "created_at": "2026-07-19T07:55:40.023651+00:00",
+  "device": "mps",
+  "dtype": "torch.float32",
+  "evidence": "primary",
+  "expert_labels": [
+    "core",
+    "a-deadline-or-time-limit",
+    "alien-encounters",
+    "bygone-eras"
+  ],
+  "git_commit": "255d4808fcb2adbcab5c035082fac266e8ee2729",
+  "identity": {
+    "bit_width": null,
+    "checkpoint_sha256": "a83eeac3ae77c09a166e363c7b475dd1ef4a1765662acc5440260313f637429d",
+    "checkpoint_step": 16048,
+    "data_label": "a-deadline-or-time-limit",
+    "expert_mask": [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "granularity": "fp32",
+    "max_sequences": null,
+    "model_kind": "gram",
+    "profile_id": "leave_out__cultural-traditions",
+    "selected_groups": [],
+    "source_run_id": "20260718174851965051"
+  },
+  "loss": 1.7238987684249878,
+  "provenance": "phase2_reuse",
+  "quantization_statistics": null,
+  "source_checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed/checkpoint.pth"
+}

@@ -1,0 +1,3187 @@
+{
+  "manifest": {
+    "canonical_condition_count": 27,
+    "canonical_record_count": 290,
+    "complete": true,
+    "created_at": "2026-07-20T03:13:57.342537+00:00",
+    "created_records": 30,
+    "device": "mps",
+    "dtype": "torch.float32",
+    "expected_selected_record_count": 290,
+    "git_commit": "1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817",
+    "gram_run_id": "20260718174851965051",
+    "max_sequences_per_label": null,
+    "record_count": 290,
+    "selected_condition_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "skipped_records": 260,
+    "smoke": false,
+    "source_checkpoint_sha256": {
+      "baseline": "7a64a49450867b7ce6d8497452ac2de908fe1521c3f2d55c9b13b1707182c037",
+      "filtered": "501b12683bf307e67e956efd87c905cc3c49b339dca76a49e4dc598a005e0c44",
+      "gram": "a83eeac3ae77c09a166e363c7b475dd1ef4a1765662acc5440260313f637429d"
+    },
+    "source_runs": {
+      "baseline": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266",
+      "filtered": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719070035561998",
+      "gram": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051"
+    }
+  },
+  "headline_series": {
+    "precision_order": [
+      "FP32",
+      "int8",
+      "int6",
+      "int4"
+    ],
+    "raw_deadline_loss": {
+      "gram_all_on": [
+        1.7240792512893677,
+        1.7243866920471191,
+        1.727091670036316,
+        1.8147469758987427
+      ],
+      "gram_deadline_off": [
+        1.838192105293274,
+        1.838618516921997,
+        1.8411591053009033,
+        1.9266088008880615
+      ],
+      "dense_baseline": [
+        1.7185769081115723,
+        1.718733787536621,
+        1.721505045890808,
+        1.806850790977478
+      ],
+      "deadline_filtered": [
+        1.813382863998413,
+        1.8137212991714478,
+        1.816859245300293,
+        1.9015240669250488
+      ]
+    },
+    "signed_percent": {
+      "capability_recovery": [
+        0.0,
+        -0.3736753693922578,
+        -2.600057665307214,
+        -77.48180199906399
+      ],
+      "isolation_erosion": [
+        0.0,
+        -0.1042572039847478,
+        0.03980159791402427,
+        1.9726340509460427
+      ]
+    },
+    "mean_retained_topic_relative_degradation_percent": {
+      "gram_all_on": [
+        0.0,
+        0.010158553525418945,
+        0.1707524092400492,
+        5.462927816159513
+      ],
+      "dense_baseline": [
+        0.0,
+        0.010377296056018892,
+        0.17391935127115676,
+        5.392711902510383
+      ],
+      "deadline_filtered": [
+        0.0,
+        0.013402352280245111,
+        0.17832820632275315,
+        5.691026098026852
+      ]
+    }
+  },
+  "primary_int4_verdict": {
+    "all_on_fp32_loss": 1.7240792512893677,
+    "off_fp32_loss": 1.838192105293274,
+    "all_on_quantized_loss": 1.8147469758987427,
+    "off_quantized_loss": 1.9266088008880615,
+    "fp32_isolation_gap": 0.11411285400390625,
+    "quantized_isolation_gap": 0.11186182498931885,
+    "absolute_capability_recovery": -0.7748180199906398,
+    "isolation_gap_erosion": 0.019726340509460427,
+    "mean_retained_fp32_loss": 1.659603774547577,
+    "mean_retained_quantized_loss": 1.7502667307853699,
+    "mean_retained_relative_change": 0.05462927816159513,
+    "utility_guard_failed": false,
+    "verdict": "robust"
+  },
+  "normalized_isolation": {
+    "a-deadline-or-time-limit": {
+      "8": {
+        "all_on_fp32_loss": 1.7240792512893677,
+        "off_fp32_loss": 1.838192105293274,
+        "all_on_quantized_loss": 1.7243866920471191,
+        "off_quantized_loss": 1.838618516921997,
+        "fp32_isolation_gap": 0.11411285400390625,
+        "quantized_isolation_gap": 0.11423182487487793,
+        "absolute_capability_recovery": -0.003736753693922578,
+        "isolation_gap_erosion": -0.001042572039847478,
+        "mean_retained_fp32_loss": 1.659603774547577,
+        "mean_retained_quantized_loss": 1.659603774547577,
+        "mean_retained_relative_change": 0.0,
+        "utility_guard_failed": false,
+        "verdict": "robust"
+      },
+      "6": {
+        "all_on_fp32_loss": 1.7240792512893677,
+        "off_fp32_loss": 1.838192105293274,
+        "all_on_quantized_loss": 1.727091670036316,
+        "off_quantized_loss": 1.8411591053009033,
+        "fp32_isolation_gap": 0.11411285400390625,
+        "quantized_isolation_gap": 0.1140674352645874,
+        "absolute_capability_recovery": -0.02600057665307214,
+        "isolation_gap_erosion": 0.00039801597914024267,
+        "mean_retained_fp32_loss": 1.659603774547577,
+        "mean_retained_quantized_loss": 1.659603774547577,
+        "mean_retained_relative_change": 0.0,
+        "utility_guard_failed": false,
+        "verdict": "robust"
+      },
+      "4": {
+        "all_on_fp32_loss": 1.7240792512893677,
+        "off_fp32_loss": 1.838192105293274,
+        "all_on_quantized_loss": 1.8147469758987427,
+        "off_quantized_loss": 1.9266088008880615,
+        "fp32_isolation_gap": 0.11411285400390625,
+        "quantized_isolation_gap": 0.11186182498931885,
+        "absolute_capability_recovery": -0.7748180199906398,
+        "isolation_gap_erosion": 0.019726340509460427,
+        "mean_retained_fp32_loss": 1.659603774547577,
+        "mean_retained_quantized_loss": 1.659603774547577,
+        "mean_retained_relative_change": 0.0,
+        "utility_guard_failed": false,
+        "verdict": "robust"
+      }
+    },
+    "alien-encounters": {
+      "8": {
+        "all_on_fp32_loss": 1.6117552518844604,
+        "off_fp32_loss": 1.7021881341934204,
+        "all_on_quantized_loss": 1.611889123916626,
+        "off_quantized_loss": 1.7022217512130737,
+        "fp32_isolation_gap": 0.09043288230895996,
+        "quantized_isolation_gap": 0.09033262729644775,
+        "absolute_capability_recovery": -0.0003717344708583903,
+        "isolation_gap_erosion": 0.0011086123758577981,
+        "mean_retained_fp32_loss": 1.659603774547577,
+        "mean_retained_quantized_loss": 1.659603774547577,
+        "mean_retained_relative_change": 0.0,
+        "utility_guard_failed": false,
+        "verdict": "robust"
+      },
+      "6": {
+        "all_on_fp32_loss": 1.6117552518844604,
+        "off_fp32_loss": 1.7021881341934204,
+        "all_on_quantized_loss": 1.6141542196273804,
+        "off_quantized_loss": 1.7051273584365845,
+        "fp32_isolation_gap": 0.09043288230895996,
+        "quantized_isolation_gap": 0.0909731388092041,
+        "absolute_capability_recovery": -0.032501720260583226,
+        "isolation_gap_erosion": -0.005974115680603687,
+        "mean_retained_fp32_loss": 1.659603774547577,
+        "mean_retained_quantized_loss": 1.659603774547577,
+        "mean_retained_relative_change": 0.0,
+        "utility_guard_failed": false,
+        "verdict": "robust"
+      },
+      "4": {
+        "all_on_fp32_loss": 1.6117552518844604,
+        "off_fp32_loss": 1.7021881341934204,
+        "all_on_quantized_loss": 1.7018555402755737,
+        "off_quantized_loss": 1.7944194078445435,
+        "fp32_isolation_gap": 0.09043288230895996,
+        "quantized_isolation_gap": 0.09256386756896973,
+        "absolute_capability_recovery": -1.0198864759835804,
+        "isolation_gap_erosion": -0.02356427447186027,
+        "mean_retained_fp32_loss": 1.659603774547577,
+        "mean_retained_quantized_loss": 1.659603774547577,
+        "mean_retained_relative_change": 0.0,
+        "utility_guard_failed": false,
+        "verdict": "robust"
+      }
+    }
+  },
+  "secondary_raw_isolation": {
+    "bygone-eras": [
+      {
+        "bit_width": 8,
+        "all_on_loss": 1.6714402437210083,
+        "off_loss": 1.6757234334945679
+      },
+      {
+        "bit_width": 6,
+        "all_on_loss": 1.6742268800735474,
+        "off_loss": 1.678541660308838
+      },
+      {
+        "bit_width": 4,
+        "all_on_loss": 1.7619110345840454,
+        "off_loss": 1.7665081024169922
+      }
+    ],
+    "cultural-traditions": [
+      {
+        "bit_width": 8,
+        "all_on_loss": 1.7049293518066406,
+        "off_loss": 1.7243582010269165
+      },
+      {
+        "bit_width": 6,
+        "all_on_loss": 1.7077277898788452,
+        "off_loss": 1.727131962776184
+      },
+      {
+        "bit_width": 4,
+        "all_on_loss": 1.7962641716003418,
+        "off_loss": 1.8169304132461548
+      }
+    ]
+  },
+  "same_bit_filtered_distance": [
+    {
+      "precision": "FP32",
+      "bit_width": null,
+      "gram_deadline_off_loss": 1.838192105293274,
+      "filtered_loss": 1.813382863998413,
+      "signed_distance": 0.02480924129486084,
+      "absolute_distance": 0.02480924129486084
+    },
+    {
+      "precision": "int8",
+      "bit_width": 8,
+      "gram_deadline_off_loss": 1.838618516921997,
+      "filtered_loss": 1.8137212991714478,
+      "signed_distance": 0.024897217750549316,
+      "absolute_distance": 0.024897217750549316
+    },
+    {
+      "precision": "int6",
+      "bit_width": 6,
+      "gram_deadline_off_loss": 1.8411591053009033,
+      "filtered_loss": 1.816859245300293,
+      "signed_distance": 0.02429986000061035,
+      "absolute_distance": 0.02429986000061035
+    },
+    {
+      "precision": "int4",
+      "bit_width": 4,
+      "gram_deadline_off_loss": 1.9266088008880615,
+      "filtered_loss": 1.9015240669250488,
+      "signed_distance": 0.025084733963012695,
+      "absolute_distance": 0.025084733963012695
+    }
+  ],
+  "all_on_degradation": [
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "data_label": "core",
+      "fp32_loss": 1.650659441947937,
+      "quantized_loss": 1.6508307456970215,
+      "signed_change": 0.00017130374908447266,
+      "relative_change": 0.000103778977499136
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.7240792512893677,
+      "quantized_loss": 1.7243866920471191,
+      "signed_change": 0.00030744075775146484,
+      "relative_change": 0.00017832170854181761
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.6117552518844604,
+      "quantized_loss": 1.611889123916626,
+      "signed_change": 0.00013387203216552734,
+      "relative_change": 8.305977722677937e-05
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6712009906768799,
+      "quantized_loss": 1.6714402437210083,
+      "signed_change": 0.00023925304412841797,
+      "relative_change": 0.0001431623398162607
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.7047994136810303,
+      "quantized_loss": 1.7049293518066406,
+      "signed_change": 0.00012993812561035156,
+      "relative_change": 7.621901120313801e-05
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "data_label": "core",
+      "fp32_loss": 1.650659441947937,
+      "quantized_loss": 1.6536414623260498,
+      "signed_change": 0.002982020378112793,
+      "relative_change": 0.0018065630634225283
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.7240792512893677,
+      "quantized_loss": 1.727091670036316,
+      "signed_change": 0.003012418746948242,
+      "relative_change": 0.0017472623399970022
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.6117552518844604,
+      "quantized_loss": 1.6141542196273804,
+      "signed_change": 0.002398967742919922,
+      "relative_change": 0.0014884193739186369
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6712009906768799,
+      "quantized_loss": 1.6742268800735474,
+      "signed_change": 0.0030258893966674805,
+      "relative_change": 0.0018106077087962635
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.7047994136810303,
+      "quantized_loss": 1.7077277898788452,
+      "signed_change": 0.0029283761978149414,
+      "relative_change": 0.0017177247800033157
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "data_label": "core",
+      "fp32_loss": 1.650659441947937,
+      "quantized_loss": 1.7410361766815186,
+      "signed_change": 0.09037673473358154,
+      "relative_change": 0.05475189638568234
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.7240792512893677,
+      "quantized_loss": 1.8147469758987427,
+      "signed_change": 0.090667724609375,
+      "relative_change": 0.05258907010311065
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.6117552518844604,
+      "quantized_loss": 1.7018555402755737,
+      "signed_change": 0.09010028839111328,
+      "relative_change": 0.05590196668245273
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6712009906768799,
+      "quantized_loss": 1.7619110345840454,
+      "signed_change": 0.09071004390716553,
+      "relative_change": 0.05427835695000738
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.7047994136810303,
+      "quantized_loss": 1.7962641716003418,
+      "signed_change": 0.09146475791931152,
+      "relative_change": 0.05365133116852694
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 8,
+      "data_label": "core",
+      "fp32_loss": 1.6316739320755005,
+      "quantized_loss": 1.6318546533584595,
+      "signed_change": 0.00018072128295898438,
+      "relative_change": 0.0001107582093495818
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 8,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.7185769081115723,
+      "quantized_loss": 1.718733787536621,
+      "signed_change": 0.00015687942504882812,
+      "relative_change": 9.128449492612489e-05
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 8,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.607942819595337,
+      "quantized_loss": 1.608135461807251,
+      "signed_change": 0.0001926422119140625,
+      "relative_change": 0.00011980663091160082
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 8,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6520333290100098,
+      "quantized_loss": 1.6522091627120972,
+      "signed_change": 0.00017583370208740234,
+      "relative_change": 0.00010643471835569684
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 8,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.6883955001831055,
+      "quantized_loss": 1.688529133796692,
+      "signed_change": 0.00013363361358642578,
+      "relative_change": 7.914828816590891e-05
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 6,
+      "data_label": "core",
+      "fp32_loss": 1.6316739320755005,
+      "quantized_loss": 1.634527325630188,
+      "signed_change": 0.0028533935546875,
+      "relative_change": 0.0017487523080410572
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 6,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.7185769081115723,
+      "quantized_loss": 1.721505045890808,
+      "signed_change": 0.00292813777923584,
+      "relative_change": 0.0017038153866812955
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 6,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.607942819595337,
+      "quantized_loss": 1.610917091369629,
+      "signed_change": 0.002974271774291992,
+      "relative_change": 0.0018497372779964216
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 6,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6520333290100098,
+      "quantized_loss": 1.654689073562622,
+      "signed_change": 0.0026557445526123047,
+      "relative_change": 0.0016075611223920205
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 6,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.6883955001831055,
+      "quantized_loss": 1.6913560628890991,
+      "signed_change": 0.0029605627059936523,
+      "relative_change": 0.001753477017483407
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 4,
+      "data_label": "core",
+      "fp32_loss": 1.6316739320755005,
+      "quantized_loss": 1.7189948558807373,
+      "signed_change": 0.08732092380523682,
+      "relative_change": 0.053516160360645104
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 4,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.7185769081115723,
+      "quantized_loss": 1.806850790977478,
+      "signed_change": 0.08827388286590576,
+      "relative_change": 0.05136452284984094
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 4,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.607942819595337,
+      "quantized_loss": 1.6972613334655762,
+      "signed_change": 0.08931851387023926,
+      "relative_change": 0.055548314767012386
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 4,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6520333290100098,
+      "quantized_loss": 1.740208625793457,
+      "signed_change": 0.08817529678344727,
+      "relative_change": 0.0533738001740478
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 4,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.6883955001831055,
+      "quantized_loss": 1.7784236669540405,
+      "signed_change": 0.09002816677093506,
+      "relative_change": 0.05332172868333962
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 8,
+      "data_label": "core",
+      "fp32_loss": 1.6324659585952759,
+      "quantized_loss": 1.6326662302017212,
+      "signed_change": 0.0002002716064453125,
+      "relative_change": 0.00012268041816798636
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 8,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.813382863998413,
+      "quantized_loss": 1.8137212991714478,
+      "signed_change": 0.00033843517303466797,
+      "relative_change": 0.00018663194615631262
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 8,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.607262372970581,
+      "quantized_loss": 1.6075111627578735,
+      "signed_change": 0.00024878978729248047,
+      "relative_change": 0.00015479102321824811
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 8,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6544784307479858,
+      "quantized_loss": 1.6547530889511108,
+      "signed_change": 0.000274658203125,
+      "relative_change": 0.00016600893551732554
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 8,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.6922847032546997,
+      "quantized_loss": 1.6924437284469604,
+      "signed_change": 0.0001590251922607422,
+      "relative_change": 9.3970708329838e-05
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 6,
+      "data_label": "core",
+      "fp32_loss": 1.6324659585952759,
+      "quantized_loss": 1.6354502439498901,
+      "signed_change": 0.002984285354614258,
+      "relative_change": 0.0018280842788183094
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 6,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.813382863998413,
+      "quantized_loss": 1.816859245300293,
+      "signed_change": 0.003476381301879883,
+      "relative_change": 0.0019170696772852214
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 6,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.607262372970581,
+      "quantized_loss": 1.6106979846954346,
+      "signed_change": 0.0034356117248535156,
+      "relative_change": 0.002137555001989977
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 6,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6544784307479858,
+      "quantized_loss": 1.6572479009628296,
+      "signed_change": 0.00276947021484375,
+      "relative_change": 0.0016739234331339947
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 6,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.6922847032546997,
+      "quantized_loss": 1.694840908050537,
+      "signed_change": 0.0025562047958374023,
+      "relative_change": 0.0015105051714532358
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 4,
+      "data_label": "core",
+      "fp32_loss": 1.6324659585952759,
+      "quantized_loss": 1.7248276472091675,
+      "signed_change": 0.0923616886138916,
+      "relative_change": 0.056578018137277475
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 4,
+      "data_label": "a-deadline-or-time-limit",
+      "fp32_loss": 1.813382863998413,
+      "quantized_loss": 1.9015240669250488,
+      "signed_change": 0.08814120292663574,
+      "relative_change": 0.048605953368440424
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 4,
+      "data_label": "alien-encounters",
+      "fp32_loss": 1.607262372970581,
+      "quantized_loss": 1.704043984413147,
+      "signed_change": 0.09678161144256592,
+      "relative_change": 0.06021519141500953
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 4,
+      "data_label": "bygone-eras",
+      "fp32_loss": 1.6544784307479858,
+      "quantized_loss": 1.7478916645050049,
+      "signed_change": 0.09341323375701904,
+      "relative_change": 0.05646083504079713
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 4,
+      "data_label": "cultural-traditions",
+      "fp32_loss": 1.6922847032546997,
+      "quantized_loss": 1.78456711769104,
+      "signed_change": 0.09228241443634033,
+      "relative_change": 0.05453125839810369
+    }
+  ],
+  "quantization_error": [
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "aux_modules",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 32505856,
+        "mae": 0.0026657070214447056,
+        "max_absolute_error": 0.05777239799499512,
+        "parameter_count": 106,
+        "relative_l2_error": 0.00808154113277657,
+        "rmse": 0.0032270340138610986,
+        "scale_count": 61440,
+        "scale_max": 0.11558756977319717,
+        "scale_mean": 0.009737484177943163,
+        "scale_min": 0.00018798741803038865
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.002584917115746066,
+          "max_absolute_error": 0.029818058013916016,
+          "parameter_count": 24,
+          "relative_l2_error": 0.007642977856198288,
+          "rmse": 0.0030817900171623545,
+          "scale_count": 10240,
+          "scale_max": 0.060022931545972824,
+          "scale_mean": 0.010358425602316857,
+          "scale_min": 0.003543111262843013
+        },
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.0019056064168883797,
+          "max_absolute_error": 0.018429279327392578,
+          "parameter_count": 64,
+          "relative_l2_error": 0.007623302887486699,
+          "rmse": 0.0022776946460086275,
+          "scale_count": 22528,
+          "scale_max": 0.03710827976465225,
+          "scale_mean": 0.007620976363382811,
+          "scale_min": 0.003307020990177989
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.002955501273390837,
+          "max_absolute_error": 0.05777239799499512,
+          "parameter_count": 16,
+          "relative_l2_error": 0.008251571375700035,
+          "rmse": 0.0035394829068347068,
+          "scale_count": 20480,
+          "scale_max": 0.11558756977319717,
+          "scale_mean": 0.011244836542755366,
+          "scale_min": 0.004461098928004503
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.002747668302617967,
+          "max_absolute_error": 0.025362245738506317,
+          "parameter_count": 2,
+          "relative_l2_error": 0.00820287015034148,
+          "rmse": 0.003307743581679348,
+          "scale_count": 8192,
+          "scale_max": 0.05072569102048874,
+          "scale_mean": 0.011013322975486517,
+          "scale_min": 0.00018798741803038865
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "overall": {
+        "element_count": 16777216,
+        "mae": 0.05363316833972931,
+        "max_absolute_error": 1.048283338546753,
+        "parameter_count": 16,
+        "relative_l2_error": 0.14973064727518096,
+        "rmse": 0.06422644253637962,
+        "scale_count": 20480,
+        "scale_max": 2.0970888137817383,
+        "scale_mean": 0.20401346273720264,
+        "scale_min": 0.08093708008527756
+      },
+      "per_group": {
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.05363316833972931,
+          "max_absolute_error": 1.048283338546753,
+          "parameter_count": 16,
+          "relative_l2_error": 0.14973064727518096,
+          "rmse": 0.06422644253637962,
+          "scale_count": 20480,
+          "scale_max": 2.0970888137817383,
+          "scale_mean": 0.20401346273720264,
+          "scale_min": 0.08093708008527756
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "aux_modules",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 32505856,
+        "mae": 0.04833602574804137,
+        "max_absolute_error": 1.048283338546753,
+        "parameter_count": 106,
+        "relative_l2_error": 0.14650440160559597,
+        "rmse": 0.05850056114855635,
+        "scale_count": 61440,
+        "scale_max": 2.0970888137817383,
+        "scale_mean": 0.17666578496185442,
+        "scale_min": 0.0034106287639588118
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.04689022749662399,
+          "max_absolute_error": 0.5441854000091553,
+          "parameter_count": 24,
+          "relative_l2_error": 0.1386730062230099,
+          "rmse": 0.05591552048277429,
+          "scale_count": 10240,
+          "scale_max": 1.0889874696731567,
+          "scale_mean": 0.1879314322024584,
+          "scale_min": 0.06428216397762299
+        },
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.03455045477797588,
+          "max_absolute_error": 0.3349483907222748,
+          "parameter_count": 64,
+          "relative_l2_error": 0.13823900602162256,
+          "rmse": 0.04130312671876076,
+          "scale_count": 22528,
+          "scale_max": 0.6732501983642578,
+          "scale_mean": 0.13826628465374763,
+          "scale_min": 0.05999881029129028
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.05363316833972931,
+          "max_absolute_error": 1.048283338546753,
+          "parameter_count": 16,
+          "relative_l2_error": 0.14973064727518096,
+          "rmse": 0.06422644253637962,
+          "scale_count": 20480,
+          "scale_max": 2.0970888137817383,
+          "scale_mean": 0.20401346273720264,
+          "scale_min": 0.08093708008527756
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.04963305965065956,
+          "max_absolute_error": 0.4585387110710144,
+          "parameter_count": 2,
+          "relative_l2_error": 0.14787558124947536,
+          "rmse": 0.05962967748265042,
+          "scale_count": 8192,
+          "scale_max": 0.9203090071678162,
+          "scale_mean": 0.19981315732002258,
+          "scale_min": 0.0034106287639588118
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "attention"
+      ],
+      "overall": {
+        "element_count": 5242880,
+        "mae": 0.002584917115746066,
+        "max_absolute_error": 0.029818058013916016,
+        "parameter_count": 24,
+        "relative_l2_error": 0.007642977856198288,
+        "rmse": 0.0030817900171623545,
+        "scale_count": 10240,
+        "scale_max": 0.060022931545972824,
+        "scale_mean": 0.010358425602316857,
+        "scale_min": 0.003543111262843013
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.002584917115746066,
+          "max_absolute_error": 0.029818058013916016,
+          "parameter_count": 24,
+          "relative_l2_error": 0.007642977856198288,
+          "rmse": 0.0030817900171623545,
+          "scale_count": 10240,
+          "scale_max": 0.060022931545972824,
+          "scale_mean": 0.010358425602316857,
+          "scale_min": 0.003543111262843013
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "granularity": "per_tensor",
+      "selected_groups": [
+        "core_mlp",
+        "aux_modules",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 32505856,
+        "mae": 0.1607628374871227,
+        "max_absolute_error": 1.0485438108444214,
+        "parameter_count": 106,
+        "relative_l2_error": 0.5466332056086207,
+        "rmse": 0.21827569135076264,
+        "scale_count": 106,
+        "scale_max": 2.0970888137817383,
+        "scale_mean": 0.44814757665373245,
+        "scale_min": 0.183591827750206
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.12482173647731543,
+          "max_absolute_error": 0.544492244720459,
+          "parameter_count": 24,
+          "relative_l2_error": 0.3854202129438439,
+          "rmse": 0.15540855829376915,
+          "scale_count": 24,
+          "scale_max": 1.0889874696731567,
+          "scale_mean": 0.5138920595248541,
+          "scale_min": 0.2798786163330078
+        },
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.07280164367208879,
+          "max_absolute_error": 0.3366216719150543,
+          "parameter_count": 64,
+          "relative_l2_error": 0.29530767251330164,
+          "rmse": 0.08823219066123208,
+          "scale_count": 64,
+          "scale_max": 0.6732501983642578,
+          "scale_mean": 0.2950842548161745,
+          "scale_min": 0.183591827750206
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.20506687927991152,
+          "max_absolute_error": 1.0485438108444214,
+          "parameter_count": 16,
+          "relative_l2_error": 0.6247881067330402,
+          "rmse": 0.2680006969411789,
+          "scale_count": 16,
+          "scale_max": 2.0970888137817383,
+          "scale_mean": 0.9341673646122217,
+          "scale_min": 0.33634093403816223
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.16041483730077744,
+          "max_absolute_error": 0.4601544141769409,
+          "parameter_count": 2,
+          "relative_l2_error": 0.4964662708559487,
+          "rmse": 0.20019615801190724,
+          "scale_count": 2,
+          "scale_max": 0.9203090071678162,
+          "scale_mean": 0.6690817773342133,
+          "scale_min": 0.41785454750061035
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "attention"
+      ],
+      "overall": {
+        "element_count": 5242880,
+        "mae": 0.04689022749662399,
+        "max_absolute_error": 0.5441854000091553,
+        "parameter_count": 24,
+        "relative_l2_error": 0.1386730062230099,
+        "rmse": 0.05591552048277429,
+        "scale_count": 10240,
+        "scale_max": 1.0889874696731567,
+        "scale_mean": 0.1879314322024584,
+        "scale_min": 0.06428216397762299
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.04689022749662399,
+          "max_absolute_error": 0.5441854000091553,
+          "parameter_count": 24,
+          "relative_l2_error": 0.1386730062230099,
+          "rmse": 0.05591552048277429,
+          "scale_count": 10240,
+          "scale_max": 1.0889874696731567,
+          "scale_mean": 0.1879314322024584,
+          "scale_min": 0.06428216397762299
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "overall": {
+        "element_count": 16777216,
+        "mae": 0.012111001764424145,
+        "max_absolute_error": 0.23648181557655334,
+        "parameter_count": 16,
+        "relative_l2_error": 0.033812630333051076,
+        "rmse": 0.014503810603862537,
+        "scale_count": 20480,
+        "scale_max": 0.4735361933708191,
+        "scale_mean": 0.046067556273192166,
+        "scale_min": 0.018276114016771317
+      },
+      "per_group": {
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.012111001764424145,
+          "max_absolute_error": 0.23648181557655334,
+          "parameter_count": 16,
+          "relative_l2_error": 0.033812630333051076,
+          "rmse": 0.014503810603862537,
+          "scale_count": 20480,
+          "scale_max": 0.4735361933708191,
+          "scale_mean": 0.046067556273192166,
+          "scale_min": 0.018276114016771317
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "overall": {
+        "element_count": 6291456,
+        "mae": 0.0019056064168883797,
+        "max_absolute_error": 0.018429279327392578,
+        "parameter_count": 64,
+        "relative_l2_error": 0.007623302887486699,
+        "rmse": 0.0022776946460086275,
+        "scale_count": 22528,
+        "scale_max": 0.03710827976465225,
+        "scale_mean": 0.007620976363382811,
+        "scale_min": 0.003307020990177989
+      },
+      "per_group": {
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.0019056064168883797,
+          "max_absolute_error": 0.018429279327392578,
+          "parameter_count": 64,
+          "relative_l2_error": 0.007623302887486699,
+          "rmse": 0.0022776946460086275,
+          "scale_count": 22528,
+          "scale_max": 0.03710827976465225,
+          "scale_mean": 0.007620976363382811,
+          "scale_min": 0.003307020990177989
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 4194304,
+        "mae": 0.002747668302617967,
+        "max_absolute_error": 0.025362245738506317,
+        "parameter_count": 2,
+        "relative_l2_error": 0.00820287015034148,
+        "rmse": 0.003307743581679348,
+        "scale_count": 8192,
+        "scale_max": 0.05072569102048874,
+        "scale_mean": 0.011013322975486517,
+        "scale_min": 0.00018798741803038865
+      },
+      "per_group": {
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.002747668302617967,
+          "max_absolute_error": 0.025362245738506317,
+          "parameter_count": 2,
+          "relative_l2_error": 0.00820287015034148,
+          "rmse": 0.003307743581679348,
+          "scale_count": 8192,
+          "scale_max": 0.05072569102048874,
+          "scale_mean": 0.011013322975486517,
+          "scale_min": 0.00018798741803038865
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "aux_modules",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 32505856,
+        "mae": 0.010921823655089905,
+        "max_absolute_error": 0.23648181557655334,
+        "parameter_count": 106,
+        "relative_l2_error": 0.033111374112756324,
+        "rmse": 0.01322167761412004,
+        "scale_count": 61440,
+        "scale_max": 0.4735361933708191,
+        "scale_mean": 0.03989227444981225,
+        "scale_min": 0.0007701420108787715
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.010584880248643458,
+          "max_absolute_error": 0.1229250431060791,
+          "parameter_count": 24,
+          "relative_l2_error": 0.03130249658572336,
+          "rmse": 0.012621745586945055,
+          "scale_count": 10240,
+          "scale_max": 0.24590040743350983,
+          "scale_mean": 0.042436130344867706,
+          "scale_min": 0.014515327289700508
+        },
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.00780885469672891,
+          "max_absolute_error": 0.07592661678791046,
+          "parameter_count": 64,
+          "relative_l2_error": 0.031236357650919443,
+          "rmse": 0.009332816267610969,
+          "scale_count": 22528,
+          "scale_max": 0.15202423930168152,
+          "scale_mean": 0.031221419482872905,
+          "scale_min": 0.013548118062317371
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.012111001764424145,
+          "max_absolute_error": 0.23648181557655334,
+          "parameter_count": 16,
+          "relative_l2_error": 0.033812630333051076,
+          "rmse": 0.014503810603862537,
+          "scale_count": 20480,
+          "scale_max": 0.4735361933708191,
+          "scale_mean": 0.046067556273192166,
+          "scale_min": 0.018276114016771317
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.01125574391335249,
+          "max_absolute_error": 0.10375064611434937,
+          "parameter_count": 2,
+          "relative_l2_error": 0.03359956870749755,
+          "rmse": 0.013548764788184835,
+          "scale_count": 8192,
+          "scale_max": 0.20781171321868896,
+          "scale_mean": 0.04511910118162632,
+          "scale_min": 0.0007701420108787715
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 4194304,
+        "mae": 0.04963305965065956,
+        "max_absolute_error": 0.4585387110710144,
+        "parameter_count": 2,
+        "relative_l2_error": 0.14787558124947536,
+        "rmse": 0.05962967748265042,
+        "scale_count": 8192,
+        "scale_max": 0.9203090071678162,
+        "scale_mean": 0.19981315732002258,
+        "scale_min": 0.0034106287639588118
+      },
+      "per_group": {
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.04963305965065956,
+          "max_absolute_error": 0.4585387110710144,
+          "parameter_count": 2,
+          "relative_l2_error": 0.14787558124947536,
+          "rmse": 0.05962967748265042,
+          "scale_count": 8192,
+          "scale_max": 0.9203090071678162,
+          "scale_mean": 0.19981315732002258,
+          "scale_min": 0.0034106287639588118
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 4194304,
+        "mae": 0.01125574391335249,
+        "max_absolute_error": 0.10375064611434937,
+        "parameter_count": 2,
+        "relative_l2_error": 0.03359956870749755,
+        "rmse": 0.013548764788184835,
+        "scale_count": 8192,
+        "scale_max": 0.20781171321868896,
+        "scale_mean": 0.04511910118162632,
+        "scale_min": 0.0007701420108787715
+      },
+      "per_group": {
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.01125574391335249,
+          "max_absolute_error": 0.10375064611434937,
+          "parameter_count": 2,
+          "relative_l2_error": 0.03359956870749755,
+          "rmse": 0.013548764788184835,
+          "scale_count": 8192,
+          "scale_max": 0.20781171321868896,
+          "scale_mean": 0.04511910118162632,
+          "scale_min": 0.0007701420108787715
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "granularity": "per_tensor",
+      "selected_groups": [
+        "core_mlp",
+        "aux_modules",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 32505856,
+        "mae": 0.009751631517804438,
+        "max_absolute_error": 0.057793714106082916,
+        "parameter_count": 106,
+        "relative_l2_error": 0.03392410941258685,
+        "rmse": 0.013546210528765259,
+        "scale_count": 106,
+        "scale_max": 0.11558756977319717,
+        "scale_mean": 0.02470104746907106,
+        "scale_min": 0.010119234211742878
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.007061661465559155,
+          "max_absolute_error": 0.03001117706298828,
+          "parameter_count": 24,
+          "relative_l2_error": 0.021969025398924966,
+          "rmse": 0.008858317496994303,
+          "scale_count": 24,
+          "scale_max": 0.060022931545972824,
+          "scale_mean": 0.0283247590996325,
+          "scale_min": 0.015426380559802055
+        },
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.004065144370542839,
+          "max_absolute_error": 0.018554076552391052,
+          "parameter_count": 64,
+          "relative_l2_error": 0.01644933073255637,
+          "rmse": 0.004914740121845136,
+          "scale_count": 64,
+          "scale_max": 0.03710827976465225,
+          "scale_mean": 0.016264486461295746,
+          "scale_min": 0.010119234211742878
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.012868989229900762,
+          "max_absolute_error": 0.057793714106082916,
+          "parameter_count": 16,
+          "relative_l2_error": 0.039693041136849364,
+          "rmse": 0.017026192738334025,
+          "scale_count": 16,
+          "scale_max": 0.11558756977319717,
+          "scale_mean": 0.05148953979369253,
+          "scale_min": 0.018538476899266243
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.009174393955618143,
+          "max_absolute_error": 0.025362849235534668,
+          "parameter_count": 2,
+          "relative_l2_error": 0.028083080493233114,
+          "rmse": 0.011324283824957291,
+          "scale_count": 2,
+          "scale_max": 0.05072569102048874,
+          "scale_mean": 0.03687852155417204,
+          "scale_min": 0.02303135208785534
+        }
+      }
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 26214400,
+        "mae": 0.0028240198420826346,
+        "max_absolute_error": 0.0568699836730957,
+        "parameter_count": 42,
+        "relative_l2_error": 0.008094487654880573,
+        "rmse": 0.003377107621354747,
+        "scale_count": 38912,
+        "scale_max": 0.11374276876449585,
+        "scale_mean": 0.01084954735185755,
+        "scale_min": 0.0001868449035100639
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.0025747624516952784,
+          "max_absolute_error": 0.034442417323589325,
+          "parameter_count": 24,
+          "relative_l2_error": 0.0076414250589666305,
+          "rmse": 0.003069972709019867,
+          "scale_count": 10240,
+          "scale_max": 0.0692860409617424,
+          "scale_mean": 0.010320543916895986,
+          "scale_min": 0.003491004230454564
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.002934318603365682,
+          "max_absolute_error": 0.0568699836730957,
+          "parameter_count": 16,
+          "relative_l2_error": 0.0082299813356382,
+          "rmse": 0.00350410548701173,
+          "scale_count": 20480,
+          "scale_max": 0.11374276876449585,
+          "scale_mean": 0.011135645234026015,
+          "scale_min": 0.00571999978274107
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.00269439653493464,
+          "max_absolute_error": 0.022697314620018005,
+          "parameter_count": 2,
+          "relative_l2_error": 0.008030750791753336,
+          "rmse": 0.0032224854832482424,
+          "scale_count": 8192,
+          "scale_max": 0.04541716352105141,
+          "scale_mean": 0.01079555694013834,
+          "scale_min": 0.0001868449035100639
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "granularity": "per_tensor",
+      "selected_groups": [
+        "core_mlp",
+        "aux_modules",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 32505856,
+        "mae": 0.039900327488149125,
+        "max_absolute_error": 0.23676709830760956,
+        "parameter_count": 106,
+        "relative_l2_error": 0.1388885938324912,
+        "rmse": 0.05545949931740533,
+        "scale_count": 106,
+        "scale_max": 0.4735361933708191,
+        "scale_mean": 0.10119461475537633,
+        "scale_min": 0.04145621880888939
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.028932411083951594,
+          "max_absolute_error": 0.12295019626617432,
+          "parameter_count": 24,
+          "relative_l2_error": 0.08997410124006827,
+          "rmse": 0.036279222116418985,
+          "scale_count": 24,
+          "scale_max": 0.24590040743350983,
+          "scale_mean": 0.1160401434948047,
+          "scale_min": 0.06319839507341385
+        },
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.0166636139814121,
+          "max_absolute_error": 0.07601121068000793,
+          "parameter_count": 64,
+          "relative_l2_error": 0.06743350639702314,
+          "rmse": 0.020147820317053308,
+          "scale_count": 64,
+          "scale_max": 0.15202423930168152,
+          "scale_mean": 0.06663192837731913,
+          "scale_min": 0.04145621880888939
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.052733578253537416,
+          "max_absolute_error": 0.23676709830760956,
+          "parameter_count": 16,
+          "relative_l2_error": 0.16263160511352448,
+          "rmse": 0.06976026420876079,
+          "scale_count": 16,
+          "scale_max": 0.4735361933708191,
+          "scale_mean": 0.21094102133065462,
+          "scale_min": 0.07594795525074005
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.037132290191948414,
+          "max_absolute_error": 0.10390573740005493,
+          "parameter_count": 2,
+          "relative_l2_error": 0.11410236681169661,
+          "rmse": 0.04601089227836715,
+          "scale_count": 2,
+          "scale_max": 0.20781171321868896,
+          "scale_mean": 0.15108298137784004,
+          "scale_min": 0.09435424953699112
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "overall": {
+        "element_count": 6291456,
+        "mae": 0.00780885469672891,
+        "max_absolute_error": 0.07592661678791046,
+        "parameter_count": 64,
+        "relative_l2_error": 0.031236357650919443,
+        "rmse": 0.009332816267610969,
+        "scale_count": 22528,
+        "scale_max": 0.15202423930168152,
+        "scale_mean": 0.031221419482872905,
+        "scale_min": 0.013548118062317371
+      },
+      "per_group": {
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.00780885469672891,
+          "max_absolute_error": 0.07592661678791046,
+          "parameter_count": 64,
+          "relative_l2_error": 0.031236357650919443,
+          "rmse": 0.009332816267610969,
+          "scale_count": 22528,
+          "scale_max": 0.15202423930168152,
+          "scale_mean": 0.031221419482872905,
+          "scale_min": 0.013548118062317371
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "overall": {
+        "element_count": 6291456,
+        "mae": 0.03455045477797588,
+        "max_absolute_error": 0.3349483907222748,
+        "parameter_count": 64,
+        "relative_l2_error": 0.13823900602162256,
+        "rmse": 0.04130312671876076,
+        "scale_count": 22528,
+        "scale_max": 0.6732501983642578,
+        "scale_mean": 0.13826628465374763,
+        "scale_min": 0.05999881029129028
+      },
+      "per_group": {
+        "aux_modules": {
+          "element_count": 6291456,
+          "mae": 0.03455045477797588,
+          "max_absolute_error": 0.3349483907222748,
+          "parameter_count": 64,
+          "relative_l2_error": 0.13823900602162256,
+          "rmse": 0.04130312671876076,
+          "scale_count": 22528,
+          "scale_max": 0.6732501983642578,
+          "scale_mean": 0.13826628465374763,
+          "scale_min": 0.05999881029129028
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "overall": {
+        "element_count": 16777216,
+        "mae": 0.002955501273390837,
+        "max_absolute_error": 0.05777239799499512,
+        "parameter_count": 16,
+        "relative_l2_error": 0.008251571375700035,
+        "rmse": 0.0035394829068347068,
+        "scale_count": 20480,
+        "scale_max": 0.11558756977319717,
+        "scale_mean": 0.011244836542755366,
+        "scale_min": 0.004461098928004503
+      },
+      "per_group": {
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.002955501273390837,
+          "max_absolute_error": 0.05777239799499512,
+          "parameter_count": 16,
+          "relative_l2_error": 0.008251571375700035,
+          "rmse": 0.0035394829068347068,
+          "scale_count": 20480,
+          "scale_max": 0.11558756977319717,
+          "scale_mean": 0.011244836542755366,
+          "scale_min": 0.004461098928004503
+        }
+      }
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 26214400,
+        "mae": 0.01157044324092567,
+        "max_absolute_error": 0.2328963279724121,
+        "parameter_count": 42,
+        "relative_l2_error": 0.03316772767622316,
+        "rmse": 0.013837934087317908,
+        "scale_count": 38912,
+        "scale_max": 0.4659784436225891,
+        "scale_mean": 0.04444814573875383,
+        "scale_min": 0.0007654613582417369
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.010550452535972,
+          "max_absolute_error": 0.1414053589105606,
+          "parameter_count": 24,
+          "relative_l2_error": 0.03131095894259141,
+          "rmse": 0.012579301449273536,
+          "scale_count": 10240,
+          "scale_max": 0.2838492691516876,
+          "scale_mean": 0.04228093745186925,
+          "scale_min": 0.01430185604840517
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.012022789684124291,
+          "max_absolute_error": 0.2328963279724121,
+          "parameter_count": 16,
+          "relative_l2_error": 0.03372447141421712,
+          "rmse": 0.014358976181575106,
+          "scale_count": 20480,
+          "scale_max": 0.4659784436225891,
+          "scale_mean": 0.04562022443860769,
+          "scale_min": 0.023433547466993332
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.011036045849323273,
+          "max_absolute_error": 0.09293483942747116,
+          "parameter_count": 2,
+          "relative_l2_error": 0.03289978531729676,
+          "rmse": 0.013201640226092517,
+          "scale_count": 8192,
+          "scale_max": 0.18606385588645935,
+          "scale_mean": 0.044226959347724915,
+          "scale_min": 0.0007654613582417369
+        }
+      }
+    },
+    {
+      "model_kind": "gram",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "attention"
+      ],
+      "overall": {
+        "element_count": 5242880,
+        "mae": 0.010584880248643458,
+        "max_absolute_error": 0.1229250431060791,
+        "parameter_count": 24,
+        "relative_l2_error": 0.03130249658572336,
+        "rmse": 0.012621745586945055,
+        "scale_count": 10240,
+        "scale_max": 0.24590040743350983,
+        "scale_mean": 0.042436130344867706,
+        "scale_min": 0.014515327289700508
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.010584880248643458,
+          "max_absolute_error": 0.1229250431060791,
+          "parameter_count": 24,
+          "relative_l2_error": 0.03130249658572336,
+          "rmse": 0.012621745586945055,
+          "scale_count": 10240,
+          "scale_max": 0.24590040743350983,
+          "scale_mean": 0.042436130344867706,
+          "scale_min": 0.014515327289700508
+        }
+      }
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 26214400,
+        "mae": 0.05109040601179004,
+        "max_absolute_error": 0.9653037786483765,
+        "parameter_count": 42,
+        "relative_l2_error": 0.14527586637421316,
+        "rmse": 0.060884154162871344,
+        "scale_count": 38912,
+        "scale_max": 1.9312115907669067,
+        "scale_mean": 0.19614690218709016,
+        "scale_min": 0.0033365804702043533
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.04660556530579925,
+          "max_absolute_error": 0.5965026021003723,
+          "parameter_count": 24,
+          "relative_l2_error": 0.13744815069777494,
+          "rmse": 0.05536495404709609,
+          "scale_count": 10240,
+          "scale_max": 1.199478030204773,
+          "scale_mean": 0.1867253568023443,
+          "scale_min": 0.06628338247537613
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.05333347572013736,
+          "max_absolute_error": 0.9653037786483765,
+          "parameter_count": 16,
+          "relative_l2_error": 0.14873477564842413,
+          "rmse": 0.06348981982493561,
+          "scale_count": 20480,
+          "scale_max": 1.9312115907669067,
+          "scale_mean": 0.20278526097536087,
+          "scale_min": 0.09217019379138947
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.047724178060889244,
+          "max_absolute_error": 0.45246294140815735,
+          "parameter_count": 2,
+          "relative_l2_error": 0.13908477958995147,
+          "rmse": 0.05667958070940806,
+          "scale_count": 8192,
+          "scale_max": 0.9208179116249084,
+          "scale_mean": 0.19132793694734573,
+          "scale_min": 0.0033365804702043533
+        }
+      }
+    },
+    {
+      "model_kind": "filtered",
+      "bit_width": 4,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 26214400,
+        "mae": 0.05122766273096204,
+        "max_absolute_error": 1.0317424535751343,
+        "parameter_count": 42,
+        "relative_l2_error": 0.14680517699979012,
+        "rmse": 0.06124870449493052,
+        "scale_count": 38912,
+        "scale_max": 2.0636188983917236,
+        "scale_mean": 0.1968417864684996,
+        "scale_min": 0.003389900317415595
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.04669199297204614,
+          "max_absolute_error": 0.627302885055542,
+          "parameter_count": 24,
+          "relative_l2_error": 0.13858168282860486,
+          "rmse": 0.05567573881868635,
+          "scale_count": 10240,
+          "scale_max": 1.2570466995239258,
+          "scale_mean": 0.18724415339529515,
+          "scale_min": 0.06333678960800171
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.05324504035525024,
+          "max_absolute_error": 1.0317424535751343,
+          "parameter_count": 16,
+          "relative_l2_error": 0.1493004360921188,
+          "rmse": 0.06356812484894972,
+          "scale_count": 20480,
+          "scale_max": 2.0636188983917236,
+          "scale_mean": 0.20203241817653178,
+          "scale_min": 0.10377713292837143
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.04882773943245411,
+          "max_absolute_error": 0.4105800986289978,
+          "parameter_count": 2,
+          "relative_l2_error": 0.14548205868462474,
+          "rmse": 0.05837733216682577,
+          "scale_count": 8192,
+          "scale_max": 0.8239970803260803,
+          "scale_mean": 0.19586224853992462,
+          "scale_min": 0.003389900317415595
+        }
+      }
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 6,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 26214400,
+        "mae": 0.011531739518977702,
+        "max_absolute_error": 0.21803736686706543,
+        "parameter_count": 42,
+        "relative_l2_error": 0.03279506068106587,
+        "rmse": 0.0137441928133032,
+        "scale_count": 38912,
+        "scale_max": 0.43608003854751587,
+        "scale_mean": 0.04429123709958635,
+        "scale_min": 0.0007534213946200907
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.010519963060505687,
+          "max_absolute_error": 0.13498982787132263,
+          "parameter_count": 24,
+          "relative_l2_error": 0.03103237831564271,
+          "rmse": 0.012500031205088065,
+          "scale_count": 10240,
+          "scale_max": 0.27084988355636597,
+          "scale_mean": 0.042163790483027694,
+          "scale_min": 0.014967215247452259
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.012036720174364746,
+          "max_absolute_error": 0.21803736686706543,
+          "parameter_count": 16,
+          "relative_l2_error": 0.03356474374247401,
+          "rmse": 0.014327647836487682,
+          "scale_count": 20480,
+          "scale_max": 0.43608003854751587,
+          "scale_mean": 0.045790220983326434,
+          "scale_min": 0.0208126250654459
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.010776537470519543,
+          "max_absolute_error": 0.10395559668540955,
+          "parameter_count": 2,
+          "relative_l2_error": 0.031444439327202825,
+          "rmse": 0.012814182778936225,
+          "scale_count": 8192,
+          "scale_max": 0.20792663097381592,
+          "scale_mean": 0.04320308566093445,
+          "scale_min": 0.0007534213946200907
+        }
+      }
+    },
+    {
+      "model_kind": "baseline",
+      "bit_width": 8,
+      "granularity": "per_channel",
+      "selected_groups": [
+        "core_mlp",
+        "attention",
+        "embeddings"
+      ],
+      "overall": {
+        "element_count": 26214400,
+        "mae": 0.0028151601389981807,
+        "max_absolute_error": 0.053207457065582275,
+        "parameter_count": 42,
+        "relative_l2_error": 0.008005921183283643,
+        "rmse": 0.003355228526814586,
+        "scale_count": 38912,
+        "scale_max": 0.10644473135471344,
+        "scale_mean": 0.010811246527162822,
+        "scale_min": 0.00018390601326245815
+      },
+      "per_group": {
+        "attention": {
+          "element_count": 5242880,
+          "mae": 0.0025676573743112384,
+          "max_absolute_error": 0.03305172920227051,
+          "parameter_count": 24,
+          "relative_l2_error": 0.007572534841994826,
+          "rmse": 0.0030502632735788233,
+          "scale_count": 10240,
+          "scale_max": 0.0661129578948021,
+          "scale_mean": 0.010291948867961764,
+          "scale_min": 0.0036534147802740335
+        },
+        "core_mlp": {
+          "element_count": 16777216,
+          "mae": 0.002938513149274513,
+          "max_absolute_error": 0.053207457065582275,
+          "parameter_count": 16,
+          "relative_l2_error": 0.008194488188828187,
+          "rmse": 0.003497948357842243,
+          "scale_count": 20480,
+          "scale_max": 0.10644473135471344,
+          "scale_mean": 0.011177140101790429,
+          "scale_min": 0.0050802468322217464
+        },
+        "embeddings": {
+          "element_count": 4194304,
+          "mae": 0.0026311265537515283,
+          "max_absolute_error": 0.025308549404144287,
+          "parameter_count": 2,
+          "relative_l2_error": 0.007676771076064112,
+          "rmse": 0.0031284240466223742,
+          "scale_count": 8192,
+          "scale_max": 0.05075374245643616,
+          "scale_mean": 0.010545634664595127,
+          "scale_min": 0.00018390601326245815
+        }
+      }
+    }
+  ],
+  "group_diagnostic_losses": [
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.865508794784546
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7048139572143555
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6211044788360596
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6108887195587158
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6126787662506104
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7036471366882324
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6713207960128784
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.839574933052063
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.691314935684204
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8392494916915894
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6098768711090088
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6712658405303955
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6232799291610718
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6509543657302856
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.64741051197052
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7049673795700073
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.725128173828125
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6724051237106323
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6806936264038086
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6719326972961426
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8386926651000977
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.668756127357483
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8382247686386108
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7048629522323608
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.724653720855713
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6836113929748535
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7241116762161255
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6099414825439453
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.652998447418213
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6111353635787964
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.705289363861084
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6544736623764038
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7254279851913452
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6507335901260376
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6118055582046509
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7036240100860596
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7472033500671387
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6712210178375244
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6686538457870483
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6099907159805298
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.724552869796753
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.647405743598938
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6117342710494995
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7242071628570557
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6687631607055664
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6696099042892456
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.612355351448059
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.676627516746521
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.70468270778656
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.735756516456604
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6687074899673462
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6686861515045166
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6686738729476929
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6368629932403564
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7047984600067139
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.612959384918213
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7165236473083496
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6478967666625977
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.650726079940796
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6518349647521973
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6721969842910767
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7240773439407349
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7041163444519043
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7036798000335693
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6712924242019653
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7317944765090942
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8381898403167725
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.715049386024475
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7310703992843628
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.647331953048706
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.7098973989486694
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6118308305740356
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7061289548873901
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6484687328338623
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6117634773254395
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7048499584197998
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.64850652217865
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7241779565811157
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6100081205368042
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7058696746826172
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6117525100708008
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6735020875930786
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6699260473251343
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7037049531936646
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.750962257385254
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6593519449234009
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7048171758651733
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.609947919845581
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6506603956222534
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6974515914916992
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6517720222473145
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6506837606430054
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7037190198898315
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6475136280059814
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.66305673122406
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8383301496505737
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7036280632019043
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6507359743118286
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6712064743041992
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.746579885482788
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6951665878295898
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.83834969997406
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8489439487457275
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6351187229156494
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.7121593952178955
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8787133693695068
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6713881492614746
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6473767757415771
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8382296562194824
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6693416833877563
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6512585878372192
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6120249032974243
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8383231163024902
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6473723649978638
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "aux_modules"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6103798151016235
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.765007734298706
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6101659536361694
+    },
+    {
+      "bit_width": 4,
+      "selected_groups": [
+        "embeddings"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6881980895996094
+    },
+    {
+      "bit_width": 6,
+      "selected_groups": [
+        "core_mlp"
+      ],
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7050529718399048
+    },
+    {
+      "bit_width": 8,
+      "selected_groups": [
+        "attention"
+      ],
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.724159598350525
+    }
+  ],
+  "per_tensor_sensitivity": [
+    {
+      "bit_width": 4,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 4.538784980773926
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8403717279434204
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.687320590019226
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 4.501693248748779
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "core",
+      "loss": 1.6496738195419312
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7263782024383545
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.649832010269165
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "alien-encounters",
+      "loss": 1.6119582653045654
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.613814115524292
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 4.603458881378174
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.6710187196731567
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 4.544320106506348
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 1.6516711711883545
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.7056012153625488
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7442706823349
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 4.506303787231445
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.7641137838363647
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.6735888719558716
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6907304525375366
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "all_on",
+      "data_label": "alien-encounters",
+      "loss": 4.552384853363037
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "bygone-eras",
+      "loss": 1.7092760801315308
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 1.743094801902771
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 4.581221103668213
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "all_on",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 4.5629425048828125
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "a-deadline-or-time-limit",
+      "loss": 1.8783259391784668
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "leave_out__a-deadline-or-time-limit",
+      "data_label": "cultural-traditions",
+      "loss": 4.467528820037842
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "all_on",
+      "data_label": "core",
+      "loss": 1.6530030965805054
+    },
+    {
+      "bit_width": 4,
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 4.500497341156006
+    },
+    {
+      "bit_width": 6,
+      "profile_id": "all_on",
+      "data_label": "bygone-eras",
+      "loss": 1.7118412256240845
+    },
+    {
+      "bit_width": 8,
+      "profile_id": "all_on",
+      "data_label": "cultural-traditions",
+      "loss": 1.7067960500717163
+    }
+  ],
+  "group_diagnostic_record_count": 120,
+  "per_tensor_sensitivity_record_count": 30
+}

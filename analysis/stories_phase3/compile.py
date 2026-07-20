@@ -10,7 +10,7 @@ import statistics
 from pathlib import Path
 from typing import Any
 
-from analysis.stories_phase2.common import AUX_LABELS, DATA_LABELS, PRIMARY_AUX_LABEL
+from analysis.stories_phase2.common import DATA_LABELS, PRIMARY_AUX_LABEL
 from src.run.experiment.stories.quantization.run import (
     DEADLINE_OFF,
     DEFAULT_OUTPUT_ROOT,
@@ -20,6 +20,9 @@ from src.run.experiment.stories.quantization.run import (
 
 
 RETAINED_LABELS = tuple(label for label in DATA_LABELS if label != PRIMARY_AUX_LABEL)
+PRECISIONS = (("FP32", None), ("int8", 8), ("int6", 6), ("int4", 4))
+ALL_GROUPS = ("core_mlp", "aux_modules", "attention", "embeddings")
+DENSE_GROUPS = ("core_mlp", "attention", "embeddings")
 
 
 def calculate_primary_metrics(
@@ -75,6 +78,7 @@ def calculate_primary_metrics(
 def load_and_validate(result_dir: Path, require_complete: bool = True) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     manifest = json.loads((result_dir / "manifest.json").read_text())
     rows = [json.loads(path.read_text()) for path in sorted((result_dir / "conditions").glob("*.json"))]
+    conditions = canonical_conditions()
     identities = [json.dumps(row.get("identity"), sort_keys=True) for row in rows]
     failures: list[str] = []
     if len(identities) != len(set(identities)):
@@ -83,9 +87,15 @@ def load_and_validate(result_dir: Path, require_complete: bool = True) -> tuple[
         failures.append(f"expected {expected_record_count()} records, found {len(rows)}")
     if require_complete and not manifest.get("complete"):
         failures.append("manifest does not mark the canonical matrix complete")
+    if require_complete and manifest.get("canonical_condition_count") != len(conditions):
+        failures.append("manifest canonical condition count is invalid")
+    if require_complete and manifest.get("canonical_record_count") != expected_record_count():
+        failures.append("manifest canonical record count is invalid")
+    if require_complete and manifest.get("record_count") != len(rows):
+        failures.append("manifest record count does not match condition files")
     expected_by_index = {
         index: len(condition.profile_ids) * len(DATA_LABELS)
-        for index, condition in enumerate(canonical_conditions())
+        for index, condition in enumerate(conditions)
     }
     actual_by_index = {
         index: sum(row.get("condition_index") == index for row in rows)
@@ -93,6 +103,8 @@ def load_and_validate(result_dir: Path, require_complete: bool = True) -> tuple[
     }
     if require_complete and actual_by_index != expected_by_index:
         failures.append("records do not match the canonical per-condition matrix")
+    manifest_hashes = manifest.get("source_checkpoint_sha256", {})
+    manifest_runs = manifest.get("source_runs", {})
     for row in rows:
         identity = row.get("identity", {})
         required = ("model_kind", "source_run_id", "checkpoint_step", "checkpoint_sha256",
@@ -103,12 +115,44 @@ def load_and_validate(result_dir: Path, require_complete: bool = True) -> tuple[
             continue
         if identity["data_label"] not in DATA_LABELS:
             failures.append(f"unknown data label {identity['data_label']}")
-        expected_mask_length = len(DATA_LABELS) if identity["model_kind"] == "gram" else 0
-        if len(identity["expert_mask"]) != expected_mask_length or any(value not in (0, 1) for value in identity["expert_mask"]):
+        condition_index = row.get("condition_index")
+        if not isinstance(condition_index, int) or not 0 <= condition_index < len(conditions):
+            failures.append("invalid condition index")
+        else:
+            condition = conditions[condition_index]
+            condition_fields = (
+                identity["model_kind"] == condition.model_kind,
+                identity["bit_width"] == condition.bit_width,
+                identity["granularity"] == condition.granularity,
+                tuple(identity["selected_groups"]) == condition.selected_groups,
+                identity["profile_id"] in condition.profile_ids,
+                row.get("evidence") == condition.evidence,
+            )
+            if not all(condition_fields):
+                failures.append("record does not match its canonical condition")
+        if identity["model_kind"] == "gram":
+            omitted = identity["profile_id"].removeprefix("leave_out__")
+            expected_mask = [
+                0 if identity["profile_id"] != "all_on" and label == omitted else 1
+                for label in DATA_LABELS
+            ]
+        else:
+            expected_mask = []
+        if identity["expert_mask"] != expected_mask:
             failures.append("invalid expert mask")
         if not isinstance(row.get("loss"), (int, float)) or not math.isfinite(row["loss"]):
             failures.append("non-finite loss")
-        if len(identity["checkpoint_sha256"]) != 64 or not row.get("git_commit"):
+        model_kind = identity["model_kind"]
+        expected_hash = manifest_hashes.get(model_kind)
+        expected_run_id = Path(manifest_runs.get(model_kind, "")).name
+        record_commit = row.get("git_commit")
+        manifest_commit = manifest.get("git_commit")
+        if (len(identity["checkpoint_sha256"]) != 64
+                or identity["checkpoint_sha256"] != expected_hash
+                or identity["source_run_id"] != expected_run_id
+                or not isinstance(record_commit, str) or len(record_commit) != 40
+                or not isinstance(manifest_commit, str) or len(manifest_commit) != 40
+                or row.get("provenance") not in ("evaluated", "phase2_reuse")):
             failures.append("invalid provenance")
     if failures:
         raise ValueError("Phase 3 validation failed: " + "; ".join(sorted(set(failures))))
@@ -129,17 +173,64 @@ def _find(rows: list[dict[str, Any]], model_kind: str, bit_width: int | None,
     return matches[0]
 
 
+def build_headline_series(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Build the stable, all-precision data contract consumed by the headline plot."""
+
+    def loss(kind: str, bit: int | None, profile: str, label: str) -> float:
+        granularity = "fp32" if bit is None else "per_channel"
+        groups = () if bit is None else (ALL_GROUPS if kind == "gram" else DENSE_GROUPS)
+        return _find(rows, kind, bit, granularity, groups, profile, label)["loss"]
+
+    gram_on = [loss("gram", bit, "all_on", PRIMARY_AUX_LABEL) for _, bit in PRECISIONS]
+    gram_off = [loss("gram", bit, DEADLINE_OFF, PRIMARY_AUX_LABEL) for _, bit in PRECISIONS]
+    baseline = [loss("baseline", bit, "dense", PRIMARY_AUX_LABEL) for _, bit in PRECISIONS]
+    filtered = [loss("filtered", bit, "dense", PRIMARY_AUX_LABEL) for _, bit in PRECISIONS]
+
+    fp32_gap = gram_off[0] - gram_on[0]
+    recovery_percent = [0.0]
+    erosion_percent = [0.0]
+    for on_loss, off_loss in zip(gram_on[1:], gram_off[1:]):
+        recovery_percent.append(100 * (gram_off[0] - off_loss) / fp32_gap)
+        erosion_percent.append(100 * (1 - (off_loss - on_loss) / fp32_gap))
+
+    retained_degradation: dict[str, list[float]] = {}
+    for key, kind, profile in (
+        ("gram_all_on", "gram", "all_on"),
+        ("dense_baseline", "baseline", "dense"),
+        ("deadline_filtered", "filtered", "dense"),
+    ):
+        means = [
+            statistics.mean(loss(kind, bit, profile, label) for label in RETAINED_LABELS)
+            for _, bit in PRECISIONS
+        ]
+        retained_degradation[key] = [100 * (mean / means[0] - 1) for mean in means]
+
+    return {
+        "precision_order": [label for label, _ in PRECISIONS],
+        "raw_deadline_loss": {
+            "gram_all_on": gram_on,
+            "gram_deadline_off": gram_off,
+            "dense_baseline": baseline,
+            "deadline_filtered": filtered,
+        },
+        "signed_percent": {
+            "capability_recovery": recovery_percent,
+            "isolation_erosion": erosion_percent,
+        },
+        "mean_retained_topic_relative_degradation_percent": retained_degradation,
+    }
+
+
 def compile_results(result_dir: Path) -> dict[str, Any]:
     manifest, rows = load_and_validate(result_dir)
-    all_groups = ("core_mlp", "aux_modules", "attention", "embeddings")
-    dense_groups = ("core_mlp", "attention", "embeddings")
     on32 = _find(rows, "gram", None, "fp32", (), "all_on", PRIMARY_AUX_LABEL)["loss"]
     off32 = _find(rows, "gram", None, "fp32", (), DEADLINE_OFF, PRIMARY_AUX_LABEL)["loss"]
-    on4 = _find(rows, "gram", 4, "per_channel", all_groups, "all_on", PRIMARY_AUX_LABEL)["loss"]
-    off4 = _find(rows, "gram", 4, "per_channel", all_groups, DEADLINE_OFF, PRIMARY_AUX_LABEL)["loss"]
+    on4 = _find(rows, "gram", 4, "per_channel", ALL_GROUPS, "all_on", PRIMARY_AUX_LABEL)["loss"]
+    off4 = _find(rows, "gram", 4, "per_channel", ALL_GROUPS, DEADLINE_OFF, PRIMARY_AUX_LABEL)["loss"]
     retained32 = [_find(rows, "gram", None, "fp32", (), "all_on", label)["loss"] for label in RETAINED_LABELS]
-    retained4 = [_find(rows, "gram", 4, "per_channel", all_groups, "all_on", label)["loss"] for label in RETAINED_LABELS]
+    retained4 = [_find(rows, "gram", 4, "per_channel", ALL_GROUPS, "all_on", label)["loss"] for label in RETAINED_LABELS]
     primary = calculate_primary_metrics(on32, off32, on4, off4, retained32, retained4)
+    headline_series = build_headline_series(rows)
 
     normalized: dict[str, dict[str, Any]] = {}
     for label in (PRIMARY_AUX_LABEL, "alien-encounters"):
@@ -148,15 +239,15 @@ def compile_results(result_dir: Path) -> dict[str, Any]:
         label_off32 = _find(rows, "gram", None, "fp32", (), off_profile, label)["loss"]
         normalized[label] = {}
         for bit in (8, 6, 4):
-            label_on = _find(rows, "gram", bit, "per_channel", all_groups, "all_on", label)["loss"]
-            label_off = _find(rows, "gram", bit, "per_channel", all_groups, off_profile, label)["loss"]
+            label_on = _find(rows, "gram", bit, "per_channel", ALL_GROUPS, "all_on", label)["loss"]
+            label_off = _find(rows, "gram", bit, "per_channel", ALL_GROUPS, off_profile, label)["loss"]
             normalized[label][str(bit)] = calculate_primary_metrics(
                 label_on32, label_off32, label_on, label_off, retained32, retained32
             )
 
     degradations: list[dict[str, Any]] = []
-    for kind, groups, profile in (("gram", all_groups, "all_on"), ("baseline", dense_groups, "dense"),
-                                  ("filtered", dense_groups, "dense")):
+    for kind, groups, profile in (("gram", ALL_GROUPS, "all_on"), ("baseline", DENSE_GROUPS, "dense"),
+                                  ("filtered", DENSE_GROUPS, "dense")):
         for bit in (8, 6, 4):
             for label in DATA_LABELS:
                 fp = _find(rows, kind, None, "fp32", (), profile, label)["loss"]
@@ -166,10 +257,14 @@ def compile_results(result_dir: Path) -> dict[str, Any]:
                                      "signed_change": quantized - fp,
                                      "relative_change": quantized / fp - 1})
     filtered_distances = []
-    for bit in (8, 6, 4):
-        gram_off = _find(rows, "gram", bit, "per_channel", all_groups, DEADLINE_OFF, PRIMARY_AUX_LABEL)["loss"]
-        filtered = _find(rows, "filtered", bit, "per_channel", dense_groups, "dense", PRIMARY_AUX_LABEL)["loss"]
-        filtered_distances.append({"bit_width": bit, "gram_deadline_off_loss": gram_off,
+    for precision, bit in PRECISIONS:
+        granularity = "fp32" if bit is None else "per_channel"
+        gram_groups = () if bit is None else ALL_GROUPS
+        filtered_groups = () if bit is None else DENSE_GROUPS
+        gram_off = _find(rows, "gram", bit, granularity, gram_groups, DEADLINE_OFF, PRIMARY_AUX_LABEL)["loss"]
+        filtered = _find(rows, "filtered", bit, granularity, filtered_groups, "dense", PRIMARY_AUX_LABEL)["loss"]
+        filtered_distances.append({"precision": precision, "bit_width": bit,
+                                   "gram_deadline_off_loss": gram_off,
                                    "filtered_loss": filtered, "signed_distance": gram_off - filtered,
                                    "absolute_distance": abs(gram_off - filtered)})
 
@@ -197,13 +292,14 @@ def compile_results(result_dir: Path) -> dict[str, Any]:
         })
     secondary_raw = {
         label: [
-            {"bit_width": bit, "all_on_loss": _find(rows, "gram", bit, "per_channel", all_groups, "all_on", label)["loss"],
-             "off_loss": _find(rows, "gram", bit, "per_channel", all_groups, f"leave_out__{label}", label)["loss"]}
+             {"bit_width": bit, "all_on_loss": _find(rows, "gram", bit, "per_channel", ALL_GROUPS, "all_on", label)["loss"],
+             "off_loss": _find(rows, "gram", bit, "per_channel", ALL_GROUPS, f"leave_out__{label}", label)["loss"]}
             for bit in (8, 6, 4)
         ] for label in ("bygone-eras", "cultural-traditions")
     }
     report = {
         "manifest": manifest,
+        "headline_series": headline_series,
         "primary_int4_verdict": primary,
         "normalized_isolation": normalized,
         "secondary_raw_isolation": secondary_raw,
@@ -240,19 +336,70 @@ def compile_results(result_dir: Path) -> dict[str, Any]:
                              "expert_mask": ";".join(map(str, identity["expert_mask"])),
                              "loss": row["loss"], "git_commit": row["git_commit"],
                              "provenance": row["provenance"]})
-    markdown = [
-        "# Phase 3 Quantization Summary", "",
-        f"**Pre-registered int4 verdict: {primary['verdict'].replace('_', ' ')}.**", "",
-        "| Metric | Value |", "|---|---:|",
-        f"| FP32 deadline isolation gap | {primary['fp32_isolation_gap']:+.8f} |",
-        f"| Int4 deadline isolation gap | {primary['quantized_isolation_gap']:+.8f} |",
-        f"| Absolute capability recovery | {primary['absolute_capability_recovery']:+.2%} |",
-        f"| Isolation-gap erosion | {primary['isolation_gap_erosion']:+.2%} |",
-        f"| Mean retained loss change | {primary['mean_retained_relative_change']:+.2%} |",
-        f"| Utility guard failed | {primary['utility_guard_failed']} |", "",
-        "Ratios are signed and un-clipped. Deadline and alien normalized results are in `phase3_report.json`; bygone and cultural are reported there as raw secondary curves. Per-tensor conditions are sensitivity evidence only.", "",
-        "Limitations: one seed, a 26M dense-core/32.57M GRAM model, synthetic SimpleStories data, and fake weight quantization rather than packed integer deployment.",
-    ]
+    headline = report["headline_series"]
+    precision_order = headline["precision_order"]
+    raw = headline["raw_deadline_loss"]
+    signed = headline["signed_percent"]
+    retained = headline["mean_retained_topic_relative_degradation_percent"]
+    is_smoke = bool(manifest.get("smoke"))
+    markdown = ["# Phase 3 Quantization Summary", ""]
+    if is_smoke:
+        markdown.extend([
+            "> **SMOKE-ONLY PIPELINE VALIDATION.** These 128-sequence CPU results must not be used for scientific claims or copied into `docs/RESULTS.md`.",
+            "",
+        ])
+    markdown.extend([
+        "## Pre-registered decision rules", "",
+        "The authoritative int4 verdict is *capability recovery* when signed recovery is at least 20%; *isolation erosion without recovery* when signed erosion is at least 20% but recovery is below 20%; and *robust* when both are below 20%. A non-finite required loss or at least 10% degradation in GRAM's int4 mean retained-topic loss makes the result inconclusive due to general degradation. Ratios are signed and never clipped.",
+        "",
+        f"## Result: {primary['verdict'].replace('_', ' ')}", "",
+        "| Precision | GRAM all-on loss | GRAM deadline-off loss | Signed isolation gap | Recovery | Erosion |",
+        "|---|---:|---:|---:|---:|---:|",
+    ])
+    for index, precision in enumerate(precision_order):
+        gap = raw["gram_deadline_off"][index] - raw["gram_all_on"][index]
+        markdown.append(
+            f"| {precision} | {raw['gram_all_on'][index]:+.8f} | {raw['gram_deadline_off'][index]:+.8f} | "
+            f"{gap:+.8f} | {signed['capability_recovery'][index]:+.2f}% | "
+            f"{signed['isolation_erosion'][index]:+.2f}% |"
+        )
+    markdown.extend([
+        "",
+        "Recovery measures movement of deadline-off loss toward the FP32 all-on model; erosion measures shrinkage of the on/off isolation gap. Negative values therefore mean movement away from recovery or a widening gap, not zero effect.",
+        "",
+        "## Retained-topic utility guard", "",
+        "Retained topics are core, alien encounters, bygone eras, and cultural traditions. Values are the signed relative change in their mean loss from each model's own FP32 value; lower is better.",
+        "",
+        "| Precision | GRAM all-on | Dense baseline | Deadline-filtered |",
+        "|---|---:|---:|---:|",
+    ])
+    for index, precision in enumerate(precision_order):
+        markdown.append(
+            f"| {precision} | {retained['gram_all_on'][index]:+.2f}% | "
+            f"{retained['dense_baseline'][index]:+.2f}% | "
+            f"{retained['deadline_filtered'][index]:+.2f}% |"
+        )
+    markdown.extend([
+        "",
+        f"GRAM's int4 retained-topic change was {primary['mean_retained_relative_change']:+.2%}; the pre-registered 10% utility guard {'failed' if primary['utility_guard_failed'] else 'passed'}.",
+        "",
+        "## Deadline-off distance from the filtered control", "",
+        "| Precision | GRAM deadline-off | Deadline-filtered | Signed distance | Absolute distance |",
+        "|---|---:|---:|---:|---:|",
+    ])
+    for item in filtered_distances:
+        markdown.append(
+            f"| {item['precision']} | {item['gram_deadline_off_loss']:+.8f} | "
+            f"{item['filtered_loss']:+.8f} | {item['signed_distance']:+.8f} | "
+            f"{item['absolute_distance']:.8f} |"
+        )
+    markdown.extend([
+        "",
+        "## Secondary evidence and limitations", "",
+        "Deadline and alien normalized isolation, bygone/cultural raw curves, singleton parameter-group diagnostics, quantization error, and per-tensor sensitivity remain in `phase3_report.json` and `phase3_records.csv`. They are secondary evidence and do not alter the pre-registered verdict; per-tensor quantization is a sensitivity analysis only.",
+        "",
+        "This is one seed on synthetic SimpleStories data, using a 26M-parameter dense-core model and a 32.57M-parameter GRAM model. Fake weight quantization measures weight-grid perturbation while inference remains floating point; it is not a benchmark of packed integer kernels. The study does not establish transfer to larger models, realistic domains, other quantizers, activation quantization, or adversarial finetuning.",
+    ])
     (result_dir / "phase3_summary.md").write_text("\n".join(markdown) + "\n")
     return report
 

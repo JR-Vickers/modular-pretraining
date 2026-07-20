@@ -185,6 +185,24 @@ def _load_model(kind: str, run_dir: Path, output_dir: Path, device: str,
     return config, model, int(checkpoint["step"]), checkpoint_path, _sha256(checkpoint_path)
 
 
+def _close_config_loaders(config: Any) -> None:
+    """Release memmap-backed shard files before constructing another model config."""
+    loaders = getattr(getattr(config, "run", None), "loaders", {})
+    closed: set[int] = set()
+    for split_loaders in loaders.values():
+        for loader in split_loaders.values():
+            dataset = getattr(loader, "dataset", None)
+            while hasattr(dataset, "dataset"):
+                dataset = dataset.dataset
+            tokens = getattr(dataset, "tokens", None)
+            mmap_handle = getattr(tokens, "_mmap", None)
+            if mmap_handle is not None and id(mmap_handle) not in closed:
+                mmap_handle.close()
+                closed.add(id(mmap_handle))
+    if hasattr(config, "run"):
+        config.run.loaders = {}
+
+
 def _phase2_fp32_rows(kind: str, run_dir: Path, results_root: Path) -> list[dict[str, Any]]:
     if kind == "gram":
         evaluation_dir = results_root / "evaluations" / run_dir.name
@@ -228,11 +246,19 @@ def run_matrix(results_root: Path = DEFAULT_RESULTS_ROOT, output_root: Path = DE
         raise ValueError("Condition index is outside the canonical matrix")
     created = skipped = 0
     runtimes: dict[str, Any] = {}
+    checkpoint_hashes: dict[str, str] = {}
     try:
         for index, condition in enumerate(all_conditions):
             if index not in selected_indices:
                 continue
             if condition.model_kind not in runtimes:
+                for kind, runtime in list(runtimes.items()):
+                    current_hash = _sha256(runtime[3])
+                    if current_hash != runtime[4]:
+                        raise RuntimeError(f"Source checkpoint changed during evaluation: {runtime[3]}")
+                    checkpoint_hashes[kind] = current_hash
+                    _close_config_loaders(runtime[0])
+                    del runtimes[kind]
                 runtimes[condition.model_kind] = _load_model(
                     condition.model_kind, runs[condition.model_kind], output_dir,
                     device, max_sequences,
@@ -305,8 +331,8 @@ def run_matrix(results_root: Path = DEFAULT_RESULTS_ROOT, output_root: Path = DE
                 if torch.backends.mps.is_available():
                     torch.mps.empty_cache()
     finally:
-        checkpoint_hashes = {}
         for kind, runtime in runtimes.items():
+            _close_config_loaders(runtime[0])
             checkpoint_path = runtime[3]
             original_hash = runtime[4]
             current_hash = _sha256(checkpoint_path)

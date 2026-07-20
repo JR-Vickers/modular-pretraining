@@ -1,0 +1,26 @@
+{
+  "condition_index": 16,
+  "created_at": "2026-07-19T17:25:47.306887+00:00",
+  "device": "mps",
+  "dtype": "torch.float32",
+  "evidence": "control",
+  "expert_labels": [],
+  "git_commit": "255d4808fcb2adbcab5c035082fac266e8ee2729",
+  "identity": {
+    "bit_width": null,
+    "checkpoint_sha256": "7a64a49450867b7ce6d8497452ac2de908fe1521c3f2d55c9b13b1707182c037",
+    "checkpoint_step": 16571,
+    "data_label": "alien-encounters",
+    "expert_mask": [],
+    "granularity": "fp32",
+    "max_sequences": null,
+    "model_kind": "baseline",
+    "profile_id": "dense",
+    "selected_groups": [],
+    "source_run_id": "20260719012010132266"
+  },
+  "loss": 1.607942819595337,
+  "provenance": "phase2_reuse",
+  "quantization_statistics": null,
+  "source_checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260719012010132266/baseline/checkpoint.pth"
+}

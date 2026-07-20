@@ -1,0 +1,105 @@
+{
+  "condition_index": 11,
+  "created_at": "2026-07-19T15:35:39.761900+00:00",
+  "device": "mps",
+  "dtype": "torch.float32",
+  "evidence": "group_diagnostic",
+  "expert_labels": [
+    "core",
+    "alien-encounters",
+    "bygone-eras",
+    "cultural-traditions"
+  ],
+  "git_commit": "255d4808fcb2adbcab5c035082fac266e8ee2729",
+  "identity": {
+    "bit_width": 6,
+    "checkpoint_sha256": "a83eeac3ae77c09a166e363c7b475dd1ef4a1765662acc5440260313f637429d",
+    "checkpoint_step": 16048,
+    "data_label": "a-deadline-or-time-limit",
+    "expert_mask": [
+      1,
+      0,
+      1,
+      1,
+      1
+    ],
+    "granularity": "per_channel",
+    "max_sequences": null,
+    "model_kind": "gram",
+    "profile_id": "leave_out__a-deadline-or-time-limit",
+    "selected_groups": [
+      "embeddings"
+    ],
+    "source_run_id": "20260718174851965051"
+  },
+  "loss": 1.8392494916915894,
+  "provenance": "evaluated",
+  "quantization_statistics": {
+    "bit_width": 6,
+    "granularity": "per_channel",
+    "overall": {
+      "element_count": 4194304,
+      "mae": 0.01125574391335249,
+      "max_absolute_error": 0.10375064611434937,
+      "parameter_count": 2,
+      "relative_l2_error": 0.03359956870749755,
+      "rmse": 0.013548764788184835,
+      "scale_count": 8192,
+      "scale_max": 0.20781171321868896,
+      "scale_mean": 0.04511910118162632,
+      "scale_min": 0.0007701420108787715
+    },
+    "per_group": {
+      "embeddings": {
+        "element_count": 4194304,
+        "mae": 0.01125574391335249,
+        "max_absolute_error": 0.10375064611434937,
+        "parameter_count": 2,
+        "relative_l2_error": 0.03359956870749755,
+        "rmse": 0.013548764788184835,
+        "scale_count": 8192,
+        "scale_max": 0.20781171321868896,
+        "scale_mean": 0.04511910118162632,
+        "scale_min": 0.0007701420108787715
+      }
+    },
+    "per_parameter": {
+      "embed.weight": {
+        "absolute_error_sum": 23963.28515625,
+        "element_count": 2097152,
+        "error_l2": 19.88738441467285,
+        "group": "embeddings",
+        "mae": 0.011426584795117378,
+        "max_absolute_error": 0.10375064611434937,
+        "relative_l2_error": 0.031219085678458214,
+        "rmse": 0.013732914812862873,
+        "scale_count": 4096,
+        "scale_max": 0.20781171321868896,
+        "scale_mean": 0.04578851908445358,
+        "scale_min": 0.0007701420108787715,
+        "source_l2": 637.0264892578125,
+        "squared_error_sum": 395.508056640625
+      },
+      "unembed.weight": {
+        "absolute_error_sum": 23246.7265625,
+        "element_count": 2097152,
+        "error_l2": 19.35035514831543,
+        "group": "embeddings",
+        "mae": 0.0110849030315876,
+        "max_absolute_error": 0.04716283082962036,
+        "relative_l2_error": 0.03681882843375206,
+        "rmse": 0.013362077996134758,
+        "scale_count": 4096,
+        "scale_max": 0.09435424953699112,
+        "scale_mean": 0.04444968327879906,
+        "scale_min": 0.01941724307835102,
+        "source_l2": 525.5559692382812,
+        "squared_error_sum": 374.4362487792969
+      }
+    },
+    "selected_groups": [
+      "embeddings"
+    ]
+  },
+  "source_checkpoint": "/Users/jarrett/dev/gram-quant/modular-pretraining/results/stories_phase2/seed_1/20260718174851965051/routed/checkpoint.pth"
+}

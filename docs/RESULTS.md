@@ -1,5 +1,70 @@
 # Results
 
+## Phase 3 — Quantization robustness
+
+**Decision: ROBUST (2026-07-20).** The complete MPS matrix for GRAM run
+`20260718174851965051` passed validation: 290 unique finite records across all 27 canonical
+condition families, exact capability masks, valid provenance, and unchanged source
+checkpoint hashes. The authoritative endpoint is all-weight, per-channel int4 fake
+quantization. The pre-registered 20% recovery and 20% erosion thresholds were both below
+threshold, and the 10% retained-utility guard passed.
+
+### Headline endpoint
+
+| Metric | FP32 | Per-channel int4 | Interpretation |
+|---|---:|---:|---|
+| GRAM all-on deadline loss | 1.72407925 | 1.81474698 | General degradation at int4 |
+| GRAM deadline-off loss | 1.83819211 | 1.92660880 | No movement toward FP32 all-on |
+| Deadline isolation gap | +0.11411285 | +0.11186182 | +1.97% signed erosion |
+| Capability recovery | — | −77.48% | Below 20% threshold |
+| Mean retained-topic loss change | — | +5.46% | Below 10% utility guard |
+
+Recovery and erosion are signed and unclipped. Negative recovery means that the quantized
+deadline-off loss moved farther from the FP32 all-on reference; it is not interpreted as
+stronger knowledge removal. Same-bit int4 GRAM deadline-off versus deadline-filtered loss
+distance was `+0.02508473`, compared with `+0.02480924` at FP32.
+
+![Phase 3 headline figure](../results/stories_phase3/20260718174851965051/full/phase3_headline.png)
+
+The headline figure shows raw deadline-topic loss, signed recovery/erosion, and retained
+utility across FP32, int8, int6, and int4. The complete compiled report and generated
+summary retain the secondary diagnostics rather than crowding the figure:
+
+- [Manifest](../results/stories_phase3/20260718174851965051/full/manifest.json)
+- [Compiled report](../results/stories_phase3/20260718174851965051/full/phase3_report.json)
+- [Flat records](../results/stories_phase3/20260718174851965051/full/phase3_records.csv)
+- [Generated summary](../results/stories_phase3/20260718174851965051/full/phase3_summary.md)
+- [Headline PNG](../results/stories_phase3/20260718174851965051/full/phase3_headline.png)
+
+### Secondary diagnostics
+
+The alien profile showed the same qualitative direction at int4: −101.99% signed recovery
+and −2.36% signed erosion. Bygone and cultural curves remain raw because their FP32 gaps
+are too small for stable normalized ratios. Singleton group diagnostics and quantization
+error statistics are in the compiled JSON. Per-tensor conditions are sensitivity evidence
+only: int4 per-tensor losses rose to roughly 4.5, demonstrating that scale granularity is
+important even though the primary per-channel result remained robust.
+
+### Matrix identity and limitations
+
+The study uses one seed, synthetic SimpleStories data, a 26M-parameter dense core and
+32.57M-parameter GRAM, eager FP32 MPS evaluation, and fake weight-only quantization rather
+than packed integer deployment. Biases and RMSNorm weights remain FP32. This does not
+establish transfer to larger or realistic models, activation quantization, hardware
+kernel behavior, or adversarial finetuning. The matrix resumed safely after an open-file
+loader failure; the 240 initial records and 50 resumed records use two valid repository
+commits, while all records share the same source checkpoint hashes.
+
+```bash
+source .venv/bin/activate
+python -m src.run.experiment.stories.quantization.run --device mps
+python -m analysis.stories_phase3.compile \
+  --result-dir results/stories_phase3/20260718174851965051/full
+python -m analysis.stories_phase3.plot \
+  --result-dir results/stories_phase3/20260718174851965051/full \
+  --output results/stories_phase3/20260718174851965051/full/phase3_headline.png
+```
+
 ## Phase 2 — Full training and leave-one-out evaluation
 
 **Decision: PASS (2026-07-19). Proceed to quantization.** The completed GRAM, dense

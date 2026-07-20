@@ -1,0 +1,100 @@
+[GPU 0] [15:55:36] [INFO] Git branch: main, commit: 255d4808fcb2adbcab5c035082fac266e8ee2729
+[GPU 0] [15:55:36] [INFO] Number of processes: 1
+[GPU 0] [15:55:36] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [15:55:39] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [15:55:39] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [15:55:39] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [15:55:39] [INFO] core total number of tokens: 501664802
+[GPU 0] [15:55:39] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [15:55:39] [INFO] aux total number of tokens: 46188871
+[GPU 0] [15:55:39] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [01:23:46] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [01:23:46] [INFO] Number of processes: 1
+[GPU 0] [01:23:46] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [01:25:46] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [01:25:46] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [01:25:46] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [01:25:46] [INFO] core total number of tokens: 501664802
+[GPU 0] [01:25:46] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [01:25:46] [INFO] aux total number of tokens: 46188871
+[GPU 0] [01:25:46] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [01:52:50] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [01:52:50] [INFO] Number of processes: 1
+[GPU 0] [01:52:50] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [01:54:50] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [01:54:50] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [01:54:50] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [01:54:50] [INFO] core total number of tokens: 501664802
+[GPU 0] [01:54:50] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [01:54:50] [INFO] aux total number of tokens: 46188871
+[GPU 0] [01:54:50] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:09:57] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:09:57] [INFO] Number of processes: 1
+[GPU 0] [09:09:57] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:09:59] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:09:59] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:09:59] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:09:59] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:09:59] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:09:59] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:09:59] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:10:02] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:10:02] [INFO] Number of processes: 1
+[GPU 0] [09:10:02] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:10:05] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:10:05] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:10:05] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:10:05] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:10:05] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:10:05] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:10:05] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:10:06] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:10:06] [INFO] Number of processes: 1
+[GPU 0] [09:10:06] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:10:08] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:10:08] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:10:08] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:10:08] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:10:08] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:10:08] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:10:08] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:45:07] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:45:07] [INFO] Number of processes: 1
+[GPU 0] [09:45:07] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:45:08] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:45:08] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:45:09] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:45:09] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:45:09] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:45:09] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:45:09] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:45:12] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:45:12] [INFO] Number of processes: 1
+[GPU 0] [09:45:12] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:45:13] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:45:13] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:45:14] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:45:14] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:45:14] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:45:14] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:45:14] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:45:15] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:45:15] [INFO] Number of processes: 1
+[GPU 0] [09:45:15] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:45:17] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:45:17] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:45:17] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:45:17] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:45:17] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:45:17] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:45:17] [INFO] aux: 1.0000 x 46188871 = 46188871
+[GPU 0] [09:45:19] [INFO] Git branch: main, commit: 1d8a749f8cb5ca7367d3197e0d1bc276d7a0a817
+[GPU 0] [09:45:19] [INFO] Number of processes: 1
+[GPU 0] [09:45:19] [INFO] Runtime device: mps, dtype: torch.float32
+[GPU 0] [09:45:20] [INFO] Tokenizer vocabulary: 4096
+[GPU 0] [09:45:20] [INFO] Set model vocab size to nearest multiple of 64 of tokenizer size: 4096
+[GPU 0] [09:45:20] [INFO] target effective batch size: -1, actual effective batch size: 128, micro batch size: 16, accumulation steps: 8, num gpus: 1
+[GPU 0] [09:45:20] [INFO] core total number of tokens: 501664802
+[GPU 0] [09:45:20] [INFO] core: 1.0000 x 501664802 = 501664802
+[GPU 0] [09:45:20] [INFO] aux total number of tokens: 46188871
+[GPU 0] [09:45:20] [INFO] aux: 1.0000 x 46188871 = 46188871

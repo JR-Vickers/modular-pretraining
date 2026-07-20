@@ -21,3 +21,6 @@ results/stories_phase3/**/smoke/
 
 # HuggingFace download cache sidecars
 **/.cache/
+
+# Other
+**/.DS_Store
